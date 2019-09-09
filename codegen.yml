@@ -1,0 +1,26 @@
+schema: src/graphql/schema/schema.ts
+
+generates:
+  ./src/graphql/gen-server-types.ts:
+    plugins:
+      - add: /* eslint-disable */
+      - typescript
+      - typescript-resolvers
+    config:
+      defaultMapper: any
+
+  ./types/graphql.d.ts:
+    plugins:
+      - typescript-graphql-files-modules
+
+  ./src/graphql/gen-client-types.tsx:
+    documents: ./src/graphql/**/*.ts
+    plugins:
+      - add: /* eslint-disable */
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      withComponent: false
+      withHOC: false

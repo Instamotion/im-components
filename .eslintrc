@@ -1,0 +1,61 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier", "react-hooks", "@typescript-eslint"],
+  "extends": ["airbnb", "plugin:@typescript-eslint/recommended", "prettier"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "alias": {
+        "map": [
+          ["@components", "./src/components"],
+          ["@lib", "./src/lib"],
+          ["@themes", "./src/themes"],
+          ["@graphql", "./src/graphql"],
+          ["@screens", "./src/screens"],
+          ["@views", "./src/views"]
+        ],
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "rules": {
+    "max-len": 0,
+    "quotes": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/indent": "off", // prettier is handling that
+    "@typescript-eslint/prefer-interface": 0,
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowTypedFunctionExpressions": true,
+        "allowExpressions": true
+      }
+    ],
+    "@typescript-eslint/no-var-requires": 0,
+    "prettier/prettier": ["error"],
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-one-expression-per-line": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.tsx", "**/*.stories.tsx"] }
+    ],
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }]
+  },
+  "globals": {
+    "document": true,
+    "window": true,
+    "Request": true,
+    "SERVER": true,
+    "GRAPHQL": true,
+    "WS_SUBSCRIPTIONS": true,
+    "LOCAL_STORAGE_KEY": true,
+    "fetch": true
+  }
+}

@@ -1,0 +1,13 @@
+git
+.DS_Store
+.gitignore
+node_modules
+README.md
+.dockerignore
+Dockerfile
+npm-debug.log
+.vscode
+.devcontainer
+coverage
+storybook-static
+junit.xml

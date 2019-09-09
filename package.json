@@ -1,0 +1,87 @@
+{
+  "name": "erlking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest",
+    "generate:component": "hygen component new",
+    "lint": "eslint . --fix",
+    "clean": "bolt ws exec -- rm -rf dist && bolt ws exec -- rm -rf node_modules",
+    "prettier:base": "prettier --parser typescript",
+    "prettier:check": "npm run prettier:base -- --list-different \"src/**/*.{ts,tsx}\"",
+    "prettier:write": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\"",
+    "build:storybook": "build-storybook",
+    "build": "bolt workspaces run build",
+    "start": "start-storybook -p 6006"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Instamotion/erlking.git"
+  },
+  "keywords": [],
+  "author": "InstaMotion Retail GmbH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Instamotion/erlking/issues"
+  },
+  "homepage": "https://github.com/Instamotion/erlking#readme",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-alice-carousel": "^1.15.3",
+    "react-swipeable": "^5.4.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@storybook/addon-a11y": "^5.1.11",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-knobs": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-to-json": "^1.5.3",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.4",
+    "@types/react": "^16.9.2",
+    "@types/storybook__addon-knobs": "^5.0.3",
+    "@types/storybook__react": "^4.0.2",
+    "@types/styled-components": "^4.1.19",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-inline-json-import": "^0.3.2",
+    "babel-plugin-styled-components": "^1.10.6",
+    "babel-polyfill": "^6.26.0",
+    "bolt": "^0.23.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "hygen": "^4.0.9",
+    "jest": "^24.9.0",
+    "jest-junit": "^8.0.0",
+    "jest-styled-components": "^6.3.3",
+    "prettier": "^1.18.2",
+    "react-dom": "^16.9.0",
+    "react-hot-loader": "^4.12.12",
+    "typescript": "^3.6.2"
+  },
+  "bolt": {
+    "workspaces": [
+      "packages/*"
+    ]
+  }
+}
