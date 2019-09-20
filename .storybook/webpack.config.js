@@ -1,11 +1,9 @@
-var path = require('path');
+const { join } = require('path');
+
 module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    loader: 'awesome-typescript-loader',
-    options: {
-      configFileName: path.join(__dirname, '..', 'tsconfig.sb.json')
-    }
+    loader: 'awesome-typescript-loader'
   });
   config.resolve.extensions.push('.ts', '.tsx');
   return config;

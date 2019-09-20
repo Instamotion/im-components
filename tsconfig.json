@@ -1,10 +1,10 @@
 {
-  "extends": "./tsconfig.build.json",
+  "extends": "./configs/tsconfig.json",
 
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@insta-ui/*": ["packages/*/src"]
+      "@insta-ui/*": ["../packages/*/src"]
     }
   }
 }

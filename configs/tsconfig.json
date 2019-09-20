@@ -15,5 +15,6 @@
       "es2015"
     ]
   },
-  "exclude": ["node_modules", "dist"]
+  "include": ["../packages/**/*"],
+  "exclude": ["../node_modules", "../dist", "../build", "../scripts"]
 }
