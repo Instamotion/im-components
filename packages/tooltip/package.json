@@ -1,5 +1,5 @@
 {
-  "name": "@insta-ui/icon",
+  "name": "@insta-ui/tooltip",
   "version": "0.1.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -22,6 +22,7 @@
     "dist"
   ],
   "devDependencies": {
+    "@insta-ui/icon": "^0.1.0",
     "@storybook/react": "^5.1.11",
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
@@ -34,5 +35,9 @@
     "@types/styled-components": "^4.1.19",
     "react": "^16.9.0",
     "styled-components": "^4.3.2"
+  },
+  "dependencies": {
+    "@insta-ui/theme": "^0.1.0",
+    "@insta-ui/utils": "^0.1.0"
   }
 }
