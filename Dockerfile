@@ -13,4 +13,5 @@ RUN bolt build
 
 FROM nginx:alpine
 COPY --from=0 /app/storybook-dist /usr/share/nginx/html
+COPY --from=0 /app/configs/nginx /etc/nginx/conf.d
 EXPOSE 80
