@@ -1,22 +1,16 @@
-FROM node:lts-alpine
-
-# Set the working directory to /app
+FROM node:lts-alpine as base
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+RUN yarn global add bolt --prefix /app/.yarn-global
+ENV PATH="/app/.yarn-global/bin/:$PATH"
 
-# Installing dependencies
-RUN cp .env.example .env && \
-    apk update && \
-    apk upgrade --no-cache && \
-    apk add --no-cache openssl ca-certificates bash && \
-    wget -O /bin/aws-env https://github.com/Droplr/aws-env/raw/master/bin/aws-env-linux-amd64 && \
-    chmod +x /bin/aws-env && \
-    npm i && \
-    npm run build
+COPY package.json .
+COPY yarn.lock .
+RUN bolt
+COPY . .
+RUN bolt build
 
-EXPOSE 3000
 
-# Running the app
-CMD [ "sh", "./run.sh" ]
+FROM nginx:alpine
+COPY --from=0 /app/storybook-dist /usr/share/nginx/html
+EXPOSE 80

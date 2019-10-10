@@ -10,11 +10,12 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "..",
     "lib": [
       "dom",
       "es2015"
     ]
   },
-  "include": ["../packages/**/*"],
+  "include": ["../packages/**/*", "../types"],
   "exclude": ["../node_modules", "../dist", "../build", "../scripts"]
 }
