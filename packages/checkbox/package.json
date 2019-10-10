@@ -1,5 +1,5 @@
 {
-  "name": "@insta-ui/accordion",
+  "name": "@insta-ui/checkbox",
   "version": "0.1.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -8,8 +8,8 @@
   "scripts": {
     "build": "npm run clean && npm run compile:esm && npm run compile:cjs",
     "clean": "rm -rf ./dist",
-    "compile:esm": "tsc -p build/tsconfig.esm.json",
-    "compile:cjs": "tsc -p build/tsconfig.cjs.json",
+    "compile:esm": "tsc --module esnext --outDir dist/esm -p tsconfig.json",
+    "compile:cjs": "tsc --module commonjs --outDir dist/cjs -p tsconfig.json",
     "prepublishOnly": "npm run build"
   },
   "maintainers": [
@@ -22,20 +22,19 @@
     "dist"
   ],
   "devDependencies": {
-    "@storybook/react": "^5.1.11",
-    "@types/jest": "^24.0.18",
-    "@types/react": "^16.9.2",
-    "@types/storybook__addon-knobs": "^5.0.3",
-    "@types/storybook__react": "^4.0.2",
+    "@types/styled-components": "^4.1.19",
     "jest": "^24.9.0",
     "typescript": "^3.6.3"
   },
   "peerDependencies": {
-    "@types/styled-components": "^4.1.19",
     "react": "^16.9.0",
+    "react-intl": "^3.3.1",
     "styled-components": "^4.3.2"
   },
   "dependencies": {
+    "@insta-ui/error-message": "^0.1.0",
+    "@insta-ui/label": "^0.1.0",
+    "@insta-ui/theme": "^0.1.0",
     "@insta-ui/utils": "^0.2.0"
   }
 }
