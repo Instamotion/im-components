@@ -4,7 +4,7 @@
     "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
-    "declaration": true,
+    "declaration": false,
     "target": "es5",
     "module": "esnext",
     "sourceMap": true,

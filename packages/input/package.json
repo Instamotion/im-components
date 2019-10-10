@@ -8,8 +8,8 @@
   "scripts": {
     "build": "npm run clean && npm run compile:esm && npm run compile:cjs",
     "clean": "rm -rf ./dist",
-    "compile:esm": "tsc --module esnext --outDir dist/esm -p tsconfig.json",
-    "compile:cjs": "tsc --module commonjs --outDir dist/cjs -p tsconfig.json",
+    "compile:esm": "tsc -p build/tsconfig.esm.json",
+    "compile:cjs": "tsc -p build/tsconfig.cjs.json",
     "prepublishOnly": "npm run build"
   },
   "maintainers": [
