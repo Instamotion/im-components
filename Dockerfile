@@ -6,8 +6,8 @@ ENV PATH="/app/.yarn-global/bin/:$PATH"
 
 COPY package.json .
 COPY yarn.lock .
-RUN bolt
 COPY . .
+RUN bolt
 RUN bolt build
 
 

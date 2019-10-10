@@ -8,8 +8,8 @@
   "scripts": {
     "build": "npm run clean && npm run compile:esm && npm run compile:cjs",
     "clean": "rm -rf ./dist",
-    "compile:esm": "tsc -p build/tsconfig.esm.json",
-    "compile:cjs": "tsc -p build/tsconfig.cjs.json",
+    "compile:esm": "tsc --module esnext --outDir dist/esm -p tsconfig.json",
+    "compile:cjs": "tsc --module commonjs --outDir dist/cjs -p tsconfig.json",
     "prepublishOnly": "npm run build"
   },
   "maintainers": [
@@ -22,18 +22,15 @@
     "dist"
   ],
   "devDependencies": {
+    "@types/styled-components": "^4.1.19",
     "jest": "^24.9.0",
-    "react-intl": "^3.3.1",
     "typescript": "^3.6.3"
   },
   "peerDependencies": {
-    "@types/styled-components": "^4.1.19",
     "react": "^16.9.0",
     "styled-components": "^4.3.2"
   },
   "dependencies": {
-    "@insta-ui/theme": "^0.1.0",
-    "react": "^16.9.0",
-    "styled-components": "^4.3.2"
+    "@insta-ui/theme": "^0.1.0"
   }
 }
