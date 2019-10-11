@@ -6,7 +6,7 @@
   "scripts": {
     "test": "NODE_ENV=test jest --config=./configs/jest.config.js",
     "generate:component": "hygen component new",
-    "clean": "bolt ws exec -- rm -rf dist && bolt ws exec -- rm -rf node_modules",
+    "clean": "rm -r storybook-dist && bolt ws exec -- rm -r dist && bolt ws exec -- rm -r node_modules",
     "prettier:base": "prettier --parser typescript",
     "prettier:check": "npm run prettier:base -- --list-different \"src/**/*.{ts,tsx}\"",
     "prettier:write": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\"",
