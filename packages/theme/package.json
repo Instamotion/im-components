@@ -1,5 +1,5 @@
 {
-  "name": "@insta-ui/theme",
+  "name": "@instamotion/theme",
   "version": "0.1.0",
   "types": "dist/cjs/index.d.ts",
   "module": "dist/esm/index.js",
@@ -12,6 +12,8 @@
     "compile:cjs": "tsc -p build/tsconfig.cjs.json",
     "prepublishOnly": "npm run build"
   },
+  "repository": "git@github.com:Instamotion/im-components.git",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "maintainers": [
     "Ivan D",
     "Oleg P",
