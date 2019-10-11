@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { renderWithThemeAdnI18n } from '@insta-ui/utils';
-import Label from '@insta-ui/label';
+import { renderWithThemeAdnI18n } from '@instamotion/utils';
+import Label from '@instamotion/label';
 import Dropdown, { DropdownOptionProps, DropdownProps } from '../src';
 
 const options: DropdownOptionProps[] = [

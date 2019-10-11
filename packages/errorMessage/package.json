@@ -33,6 +33,6 @@
     "styled-components": "^4.3.2"
   },
   "dependencies": {
-    "@insta-ui/theme": "^0.1.0"
+    "@instamotion/theme": "^0.1.0"
   }
 }

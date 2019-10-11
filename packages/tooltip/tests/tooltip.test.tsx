@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import { renderWithThemeAdnI18n } from '@insta-ui/utils';
+import { renderWithThemeAdnI18n } from '@instamotion/utils';
 import toJson from 'enzyme-to-json';
 import Tooltip from '../src';
 

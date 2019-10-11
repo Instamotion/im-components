@@ -6,8 +6,8 @@ import { action } from '@storybook/addon-actions';
 import { IntlProvider } from 'react-intl';
 // import deLocaleData from 'react-intl/locale-data/de';
 // import enLocaleData from 'react-intl/locale-data/en';
-import Checkbox from '@insta-ui/checkbox';
-import { renderWithThemeAdnI18n } from '@insta-ui/utils';
+import Checkbox from '@instamotion/checkbox';
+import { renderWithThemeAdnI18n } from '@instamotion/utils';
 import Input, { InputProps } from '../src';
 // import translations from '../../i18n';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icon, { AvailableIcons } from '@insta-ui/icon';
+import Icon, { AvailableIcons } from '@instamotion/icon';
 import Button from './button';
 
 export type IconButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {

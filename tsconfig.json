@@ -16,7 +16,7 @@
       "es2015"
     ],
     "paths": {
-      "@insta-ui/*": ["packages/*"]
+      "@instamotion/*": ["packages/*"]
     }
   },
   "include": ["./packages/**/*", "./types"],

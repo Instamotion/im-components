@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import ErrorMessage from '@insta-ui/error-message';
-import Label from '@insta-ui/label';
-import theme from '@insta-ui/theme';
-import { px2rem } from '@insta-ui/utils';
+import ErrorMessage from '@instamotion/error-message';
+import Label from '@instamotion/label';
+import theme from '@instamotion/theme';
+import { px2rem } from '@instamotion/utils';
 
 export type ClickChangeEvent =
   | React.ChangeEvent<HTMLInputElement>

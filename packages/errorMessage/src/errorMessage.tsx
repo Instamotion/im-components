@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '@insta-ui/theme';
+import theme from '@instamotion/theme';
 
 export default styled.span`
   color: ${theme.color.flamePea};

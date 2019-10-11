@@ -1,6 +1,6 @@
 import React from 'react';
-import Label from '@insta-ui/label';
-import ErrorMessage from '@insta-ui/error-message';
+import Label from '@instamotion/label';
+import ErrorMessage from '@instamotion/error-message';
 import { FormattedMessage } from 'react-intl';
 import { AngleIcon, DropdownContainer, DropdownSelect, DropdownComponent } from './dropdownStyles';
 

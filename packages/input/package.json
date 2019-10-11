@@ -24,7 +24,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@insta-ui/checkbox": "^0.1.0",
+    "@instamotion/checkbox": "^0.1.0",
     "@types/styled-components": "^4.1.19",
     "jest": "^24.9.0",
     "typescript": "^3.6.3"
@@ -35,9 +35,9 @@
     "styled-components": "^4.3.2"
   },
   "dependencies": {
-    "@insta-ui/error-message": "^0.1.0",
-    "@insta-ui/label": "^0.1.0",
-    "@insta-ui/theme": "^0.1.0",
-    "@insta-ui/utils": "^0.2.0"
+    "@instamotion/error-message": "^0.1.0",
+    "@instamotion/label": "^0.1.0",
+    "@instamotion/theme": "^0.1.0",
+    "@instamotion/utils": "^0.2.0"
   }
 }

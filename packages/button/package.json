@@ -28,8 +28,8 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@insta-ui/icon": "^0.1.0",
-    "@insta-ui/theme": "^0.1.0"
+    "@instamotion/icon": "^0.1.0",
+    "@instamotion/theme": "^0.1.0"
   },
   "peerDependencies": {
     "styled-components": "^4.3.2"

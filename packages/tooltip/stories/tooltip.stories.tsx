@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import Tooltip, { TooltipProps } from '../src';
-import Icon from '@insta-ui/icon';
+import Icon from '@instamotion/icon';
 
 const story = storiesOf('General | Tooltip', module);
 
