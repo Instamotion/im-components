@@ -1,0 +1,273 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip renders 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "button": Object {
+        "primary": Object {
+          "background": "#75dfc0",
+          "border": Object {
+            "color": "#75dfc0",
+            "radius": 4,
+            "width": 2,
+          },
+          "color": "#313330",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "size": 16,
+            "spacing": 0,
+            "weight": 500,
+          },
+          "hover": Object {
+            "shadow": "0 4px 4px rgba(0, 0 ,0, 0.1)",
+          },
+        },
+      },
+      "card": Object {
+        "border": Object {
+          "color": "#C4C4C4",
+          "radius": 4,
+          "width": 2,
+        },
+      },
+      "color": Object {
+        "brightGrey": "#606164",
+        "downy": "#75DFC0",
+        "flamePea": "#B75C50",
+        "lightGrey": "#FAFAFA",
+        "niagara": "#20AD90",
+        "oil": "#313330",
+        "parisDaisy": "#FFE44C",
+        "silver": "#C4C4C4",
+        "white": "#FFFFFF",
+      },
+      "font": Object {
+        "sans": Object {
+          "family": "Roboto, sans-serif",
+        },
+      },
+      "footer": Object {
+        "maxWidth": 1320,
+      },
+      "heading": Object {
+        "l": Object {
+          "size": 36,
+        },
+        "m": Object {
+          "size": 32,
+        },
+        "s": Object {
+          "size": 24,
+        },
+        "xl": Object {
+          "size": 48,
+        },
+        "xs": Object {
+          "size": 20,
+        },
+        "xxl": Object {
+          "size": 60,
+        },
+        "xxs": Object {
+          "size": 18,
+        },
+      },
+      "input": Object {
+        "border": Object {
+          "color": "#C4C4C4",
+          "width": 1,
+        },
+        "font": Object {
+          "family": "Roboto, sans-serif",
+          "size": 16,
+        },
+      },
+      "label": Object {
+        "font": Object {
+          "family": "Roboto, sans-serif",
+          "size": 1,
+          "weight": 600,
+        },
+        "letter": Object {
+          "spacing": 0.01,
+        },
+        "line": Object {
+          "height": 1.15,
+        },
+      },
+      "mediaQueries": Object {
+        "whenDesktop": "@media (min-width: 1024px)",
+        "whenDesktopXL": "@media (min-width: 1440px)",
+        "whenMobileL": "@media (min-width: 425px)",
+        "whenTablet": "@media (min-width: 768px)",
+      },
+      "name": "default",
+      "table": Object {
+        "body": Object {
+          "background": "#FFFFFF",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "height": 28,
+            "size": 12,
+            "spacing": 0.4,
+          },
+        },
+        "foot": Object {
+          "background": "#FFFFFF",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "height": 28,
+            "size": 12,
+            "spacing": 0.4,
+            "weight": 500,
+          },
+        },
+        "head": Object {
+          "background": "#FFFFFF",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "height": 28,
+            "size": 12,
+            "spacing": 0.4,
+            "weight": 500,
+          },
+        },
+        "innerBorder": Object {
+          "color": "#C4C4C4",
+          "radius": 0,
+          "width": 1,
+        },
+        "outerBorder": Object {
+          "color": "#C4C4C4",
+          "radius": 4,
+          "width": 2,
+        },
+      },
+    }
+  }
+>
+  <IntlProvider
+    defaultFormats={Object {}}
+    defaultLocale="en"
+    formats={Object {}}
+    locale="de"
+    messages={Object {}}
+    onError={[Function]}
+    textComponent={Symbol(react.fragment)}
+  >
+    <Component
+      icon={<i />}
+    >
+      <styled.div>
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bwzfXH",
+                "isStatic": true,
+                "lastClassName": "eYTwFP",
+                "rules": Array [
+                  "
+  position: relative;
+  display: inline-block;
+
+  :hover ",
+                  ".sc-bdVaJa",
+                  " {
+    display: block;
+  }
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bwzfXH",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <div
+            className="sc-bwzfXH eYTwFP"
+          >
+            <i />
+            <styled.div>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bdVaJa",
+                      "isStatic": true,
+                      "lastClassName": "gLKrLC",
+                      "rules": Array [
+                        "
+  min-width: 12rem;
+  max-width: 22rem;
+  color: ",
+                        "#313330",
+                        ";
+  border: solid 1px ",
+                        "#20AD90",
+                        ";
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: 12px;
+  display: none;
+  background-color: ",
+                        "#FFFFFF",
+                        ";
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -11px;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent ",
+                        "#20AD90",
+                        " transparent transparent;
+  }
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bdVaJa",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <div
+                  className="sc-bdVaJa gLKrLC"
+                >
+                  Test
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </Component>
+  </IntlProvider>
+</ThemeProvider>
+`;

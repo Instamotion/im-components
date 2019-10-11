@@ -30,10 +30,10 @@
     "@types/storybook__addon-knobs": "^5.0.3",
     "@types/storybook__react": "^4.0.2",
     "jest": "^24.9.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.3",
+    "@types/styled-components": "^4.1.19"
   },
   "peerDependencies": {
-    "@types/styled-components": "^4.1.19",
     "react": "^16.9.0",
     "styled-components": "^4.3.2"
   }

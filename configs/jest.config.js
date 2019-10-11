@@ -1,14 +1,15 @@
-const { join } = require('path');
+const { resolve } = require('path');
 
 module.exports = {
-  rootDir: join(__dirname, '..'),
+  rootDir: resolve(__dirname, '..'),
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFiles: ['<rootDir>/configs/jest.setup.js'],
+  setupFiles: [resolve(__dirname, 'jest.setup.js')],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '.+.stories.tsx$',
+    '.+node_modules.+',
     '.+dist.+'
   ],
   collectCoverage: true,
@@ -16,6 +17,7 @@ module.exports = {
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '.+.stories.tsx$',
+    '.+node_modules.+',
     '.+dist.+'
   ],
   coverageThreshold: {
