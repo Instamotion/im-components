@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/Instamotion/im-components#readme",
   "dependencies": {
+    "@svgr/webpack": "^4.3.3",
     "react": "^16.9.0",
     "react-alice-carousel": "^1.15.3",
     "react-gtm-module": "^2.0.8",
@@ -35,9 +36,12 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
     "@storybook/addon-a11y": "^5.1.11",
-    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-actions": "^5.2.3",
     "@storybook/addon-knobs": "^5.1.11",
     "@storybook/addons": "^5.1.11",
     "@storybook/react": "^5.1.11",
@@ -50,6 +54,7 @@
     "@types/storybook__addon-knobs": "^5.0.3",
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.19",
+    "@types/webpack": "^4.39.3",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "bolt": "^0.23.6",
@@ -61,10 +66,14 @@
     "jest-junit": "^8.0.0",
     "jest-styled-components": "^6.3.3",
     "prettier": "^1.18.2",
+    "prop-types": "^15.7.2",
     "react-dom": "^16.9.0",
     "react-intl": "^3.3.1",
+    "react-svg-loader": "^3.0.3",
     "ts-jest": "^24.1.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.3",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
   },
   "bolt": {
     "workspaces": [

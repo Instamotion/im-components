@@ -1,6 +1,6 @@
 {
   "name": "@instamotion/utils",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -13,7 +13,9 @@
     "prepublishOnly": "npm run build"
   },
   "repository": "git@github.com:Instamotion/im-components.git",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "maintainers": [
     "Ivan D",
     "Oleg P",
@@ -24,7 +26,10 @@
     "dist"
   ],
   "devDependencies": {
+    "@types/node": "^12.7.4",
     "@types/styled-components": "^4.1.19",
+    "@types/webpack": "^4.39.3",
+    "awesome-typescript-loader": "^5.2.1",
     "jest": "^24.9.0",
     "typescript": "^3.6.3"
   },

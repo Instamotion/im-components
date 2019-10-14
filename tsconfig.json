@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "declaration": false,
     "target": "es5",
-    "module": "esnext",
+    "module": "es2015",
     "sourceMap": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
@@ -19,6 +19,6 @@
       "@instamotion/*": ["packages/*"]
     }
   },
-  "include": ["./packages/**/*", "./types"],
+  "include": ["./packages/**/*"],
   "exclude": ["node_modules"]
 }

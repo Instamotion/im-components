@@ -1,17 +1,19 @@
 {
   "extends": "../../../tsconfig.json",
   "compilerOptions": {
-    "declaration": true,
     "module": "commonjs",
     "outDir": "../dist/cjs",
-    "rootDirs": ["../src", "../stories"]
+    "declaration": true,
+    "rootDirs": ["../src"]
   },
   "exclude": [
     "../node_modules",
+    "../stories",
     "../dist"
   ],
   "include": [
     "../src/**/*.ts",
-    "../src/**/*.tsx"
+    "../src/**/*.tsx",
+    "../types"
   ]
 }
