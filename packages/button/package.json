@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@instamotion/icon": "^0.1.0",
-    "@instamotion/theme": "^0.1.0"
+    "@instamotion/theme": "^0.2.0"
   },
   "peerDependencies": {
     "react": "^16.9.0",

@@ -39,7 +39,7 @@
   "dependencies": {
     "@instamotion/error-message": "^0.1.0",
     "@instamotion/label": "^0.1.0",
-    "@instamotion/theme": "^0.1.0",
+    "@instamotion/theme": "^0.2.0",
     "@instamotion/utils": "^0.3.0"
   }
 }
