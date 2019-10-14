@@ -34,5 +34,28 @@ Components live as separate packages under `/packages` directory
 
 4. Copy over component's source, test and story to the respective directories and update imports
 
-5. Run `bolt build` 
+5. Run `bolt build`
 
+## How to use
+
+1. Generate a "Personal access token".
+
+  - In GitHub go to `Settings -> Developer settings -> Personal access tokens`
+  - Click "Generate new token"
+  - Tick all the `*:package` checkboxes as well as `repo` checkbox;
+
+2. `touch ~/.npmrc` with the following content:
+
+```
+@instamotion:registry=https://npm.pkg.github.com/instamotion
+//npm.pkg.github.com/:_authToken=TOKEN
+//npm.pkg.github.com/instamotion/:_authToken=TOKEN
+always-auth=true
+```
+
+3. In the root of your project: `touch .npmrc` with the following content:
+
+```
+scripts-prepend-node-path=true
+@instamotion:registry=https://npm.pkg.github.com/instamotion
+```
