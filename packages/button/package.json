@@ -14,7 +14,9 @@
     "test": "jest"
   },
   "repository": "git@github.com:Instamotion/im-components.git",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "maintainers": [
     "Ivan D",
     "Oleg P",
@@ -33,6 +35,7 @@
     "@instamotion/theme": "^0.1.0"
   },
   "peerDependencies": {
+    "react": "^16.9.0",
     "styled-components": "^4.3.2"
   }
 }
