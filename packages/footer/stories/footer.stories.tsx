@@ -20,7 +20,6 @@ import SocialContainerWithScript from '../src/social/socialContanerWithScript';
 
 import messages from './locales';
 
-
 storiesOf('Global | Footer', module)
   .add('for Checkout', () => {
     const items = [

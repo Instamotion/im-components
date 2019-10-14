@@ -27,7 +27,7 @@ const renderTrustfulLogo = (logoName: string): React.ReactNode => {
 };
 
 export interface TrustfulLogoProps {
-    className?: string;
+  className?: string;
   logoName: string;
   link?: string;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;

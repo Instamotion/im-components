@@ -4,7 +4,7 @@ import DefaultFooter from './defaultFooter';
 import TrustfulSection from './trustfulSection';
 
 export interface FooterProps {
-    className?: string;
+  className?: string;
   variant: string;
 }
 

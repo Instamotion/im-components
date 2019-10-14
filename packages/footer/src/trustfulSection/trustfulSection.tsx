@@ -30,7 +30,7 @@ const slides = [
 ];
 
 interface TrustfulSectionComponentProps {
-    className?: string;
+  className?: string;
 }
 
 const TrustfulSectionComponent: React.FC<TrustfulSectionComponentProps> = ({ className }) => {

@@ -3,8 +3,8 @@ import React from 'react';
 import theme from '@instamotion/theme';
 
 interface NavDotProps {
-    className?: string;
-    children?: JSX.Element | string;
+  className?: string;
+  children?: JSX.Element | string;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 

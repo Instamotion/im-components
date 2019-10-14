@@ -4,7 +4,7 @@ import theme from '@instamotion/theme';
 
 export type TooltipProps = {
   icon: JSX.Element;
-  className?: string
+  className?: string;
 };
 
 const TooltipContent = styled.div`

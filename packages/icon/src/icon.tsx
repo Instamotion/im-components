@@ -138,11 +138,7 @@ export const IconWrapper = styled.span<IconsWrapperProps>`
   `}
 `;
 
-export const Icon: React.FC<IconsProps> = ({
-  size = 20,
-  color = 'silver',
-  iconName
-}) => (
+export const Icon: React.FC<IconsProps> = ({ size = 20, color = 'silver', iconName }) => (
   <IconWrapper size={size}>{Icons[iconName](size, color)}</IconWrapper>
 );
 

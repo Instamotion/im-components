@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface NavArrowProps {
-    className?: string;
-    children?: JSX.Element | string;
+  className?: string;
+  children?: JSX.Element | string;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
 }

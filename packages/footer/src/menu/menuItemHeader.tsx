@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '@instamotion/theme';
 
 interface Props {
-    children?: JSX.Element | string;
+  children?: JSX.Element | string;
 }
 
 const MenuItemHeader = styled.div`
@@ -23,6 +23,5 @@ const MenuItemHeader = styled.div`
 const MenuItemHeaderComponent: React.FC<Props> = ({ children }) => (
   <MenuItemHeader>{children}</MenuItemHeader>
 );
-
 
 export default MenuItemHeaderComponent;

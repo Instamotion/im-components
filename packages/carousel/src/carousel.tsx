@@ -6,7 +6,7 @@ import NavArrow from './navArrow';
 import { useSwipeable } from 'react-swipeable';
 
 export interface CarouselProps {
-    className?: string;
+  className?: string;
   heading?: ReactElement;
   slides: { slideName: string; slide: ReactElement }[];
 }

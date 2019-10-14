@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '@instamotion/theme';
 
 interface TrustfulHeadingComponentProps {
-    className?: string;
+  className?: string;
 }
 
 const TrustfulHeadingComponent: React.FC<TrustfulHeadingComponentProps> = ({ className }) => (

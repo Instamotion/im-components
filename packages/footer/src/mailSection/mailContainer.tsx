@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '@instamotion/theme';
 
 interface Props {
-    children?: JSX.Element;
+  children?: JSX.Element;
 }
 
 const MailContainerComponent: React.FC<Props> = ({ children }) => (

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '@instamotion/theme';
 
 interface TrustfulContainerComponentProps {
-    children?: JSX.Element;
+  children?: JSX.Element;
 }
 
 const TrustfulContainer = styled.div`
@@ -17,6 +17,5 @@ const TrustfulContainer = styled.div`
 const TrustfulContainerComponent: React.FC<TrustfulContainerComponentProps> = ({ children }) => (
   <TrustfulContainer>{children}</TrustfulContainer>
 );
-
 
 export default TrustfulContainerComponent;

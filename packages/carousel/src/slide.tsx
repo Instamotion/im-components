@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import React from 'react';
 
 interface SlideProps {
-    className?: string;
-    children?: JSX.Element | string;
+  className?: string;
+  children?: JSX.Element | string;
   style?: object;
 }
 

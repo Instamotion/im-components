@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '@instamotion/theme';
 
 interface Props {
-    children?: (JSX.Element | null)[];
+  children?: (JSX.Element | null)[];
 }
 
 const MenuItem = styled.div`

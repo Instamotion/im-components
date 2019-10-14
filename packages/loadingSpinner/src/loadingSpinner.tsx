@@ -19,9 +19,9 @@ const positionCenter = (): FlattenSimpleInterpolation => css`
 const Spinner = styled.div<LoadingSpinnerProps>`
   display: inline-block;
   ${({ centered }) =>
-  centered
-    ? positionCenter()
-    : css`
+    centered
+      ? positionCenter()
+      : css`
           position: relative;
         `}
   ${({ size = 64 }) => css`

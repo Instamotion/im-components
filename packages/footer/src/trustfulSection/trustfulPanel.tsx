@@ -14,7 +14,7 @@ const trustfulLogos: { name: string }[] = [
 ];
 
 interface TrustfulPanelComponentProps {
-    className?: string;
+  className?: string;
 }
 
 const TrustfulPanelComponent: React.FC<TrustfulPanelComponentProps> = ({ className }) => (

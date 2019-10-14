@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
 interface Props {
-    className?: string;
+  className?: string;
 }
 
 export const FooterComponent: React.FC<Props> = ({ className }) => (

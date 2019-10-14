@@ -2,8 +2,8 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 
 export interface HeadingProps {
-    className?: string;
-    children?: JSX.Element | string;
+  className?: string;
+  children?: JSX.Element | string;
   size: 'xxl' | 'xl' | 'l' | 'm' | 's' | 'xs' | 'xxs';
   inline?: boolean;
 }

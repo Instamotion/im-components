@@ -3,8 +3,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 export interface TextProps {
-    className?: string;
-    children?: JSX.Element | string;
+  className?: string;
+  children?: JSX.Element | string;
   tag?: 'p' | 'span';
 }
 
