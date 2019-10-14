@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
-import Link from '@instmotion/typography/link';
+import { Link } from '@instamotion/typography';
 
 import MailContainer from '../src/mailSection/mailContainer';
 import MailContent from '../src/mailSection/mailContent';
 
 import Copyrights from '../src/copyrights';
-import AllianzLogo from '../assets/AllianzLogo.svg';
+import AllianzLogo from '../src/assets/AllianzLogo';
 import DefaultFooter, { renderMenu } from '../src/defaultFooter';
 import { IntlProvider } from 'react-intl';
 import { ThemeProvider } from 'styled-components';

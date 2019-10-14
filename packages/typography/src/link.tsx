@@ -1,5 +1,4 @@
-import * as React from 'react';
-
+import React from 'react';
 import styled from 'styled-components';
 
 export interface LinkProps {
@@ -8,14 +7,12 @@ export interface LinkProps {
   href: string;
 }
 
-export const LinkComponent: React.FC<LinkProps> = ({ href, className, children }) => (
+const LinkComponent: React.FC<LinkProps> = ({ href, className, children }) => (
   <a className={className} href={href}>
     {children}
   </a>
 );
 
-const Link = styled(LinkComponent)`
+export const Link = styled(LinkComponent)`
   font-size: 16px;
 `;
-
-export default Link;

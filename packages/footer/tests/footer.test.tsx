@@ -3,14 +3,14 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { renderIcon } from '../src/defaultFooter';
 import TrustfulSection from '../src/trustfulSection';
-import TrustfulHeading from '../src/trustfulHeading';
-import MenuItem from '../src/menuItem';
-import SocialContainer from './src./socialContainer';
-import Copyrights from './src./copyrights';
+import TrustfulHeading from '../src/trustfulSection/trustfulHeading';
+import MenuItem from '../src/menu/menuItem';
+import SocialContainer from '../src/social/socialContainer';
+import Copyrights from '../src/copyrights';
 import { renderWithThemeAdnI18n } from '@instamotion/utils';
-import CheckoutFooter from './src/checkoutFooter';
-import Footer from './footer';
-import AllianzLogo from '../src/assets/AllianzLogo.svg';
+import CheckoutFooter from '../src/checkoutFooter';
+import Footer from '../src';
+import AllianzLogo from '../src/assets/AllianzLogo';
 
 describe('Global | Footer', () => {
   it('renders correct variant', () => {

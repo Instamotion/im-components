@@ -1,11 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Autobild from '../../assets/autobild-logo.svg';
-import Rtl from '../../assets/rtl-logo.svg';
-import Welt from '../../assets/welt-logo.svg';
-import Servus from '../../assets/servus-logo.svg';
-import Autohaus from '../../assets/autohaus-logo.svg';
-import Dmax from '../../assets/dmax-logo.svg';
+import Autobild from '../assets/autobild-logo';
+import Rtl from '../assets/rtl-logo';
+import Welt from '../assets/welt-logo';
+import Servus from '../assets/servus-logo';
+import Autohaus from '../assets/autohaus-logo';
+import Dmax from '../assets/dmax-logo';
 
 const renderTrustfulLogo = (logoName: string): React.ReactNode => {
   switch (logoName) {

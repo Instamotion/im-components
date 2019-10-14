@@ -1,9 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-
-import { ThemeProvider } from 'styled-component';
-import theme from '@instamotion/theme';
+import { renderWithThemeAdnI18n } from '@instamotion/utils';
 import Slide from '../src/slide';
 import NavDot from '../src/navDot';
 import NavArrow from '../src/navArrow';
@@ -28,9 +26,7 @@ describe('Common | Carousel', () => {
     };
 
     const wrapper = mount(
-      <ThemeProvider theme={theme}>
-        <Carousel {...props} />
-      </ThemeProvider>
+      renderWithThemeAdnI18n(<Carousel {...props} />)
     );
     expect(wrapper.find(Carousel).length).toEqual(1);
     expect(wrapper.find(Slide).length).toEqual(2);

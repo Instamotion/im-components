@@ -1,12 +1,8 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-
 import theme from '@instamotion/theme';
-
-import Heading from '../src/heading';
-import Text from '../src/text';
-import Link from '../src/link';
+import {Heading, Text, Link} from '../src';
 
 describe('Heading component', () => {
   it('renders a h1', () => {

@@ -1,24 +1,9 @@
 {
+  "extends": "./configs/tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "react",
-    "moduleResolution": "node",
-    "strict": true,
-    "esModuleInterop": true,
-    "declaration": false,
-    "target": "es5",
-    "module": "es2015",
-    "sourceMap": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "lib": [
-      "dom",
-      "es2015"
-    ],
     "paths": {
       "@instamotion/*": ["packages/*"]
     }
   },
-  "include": ["./packages/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["./packages/**/*", "types"]
 }

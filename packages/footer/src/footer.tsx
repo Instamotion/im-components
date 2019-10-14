@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import CheckoutFooter from './checkoutFooter';
 import DefaultFooter from './defaultFooter';
 import TrustfulSection from './trustfulSection';

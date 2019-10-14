@@ -1,5 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
+import theme from '@instamotion/theme';
 
 export interface HeadingProps {
   className?: string;
@@ -8,7 +9,7 @@ export interface HeadingProps {
   inline?: boolean;
 }
 
-export const HeadingComponent: React.FC<HeadingProps> = ({ size, className, children }) => {
+const HeadingComponent: React.FC<HeadingProps> = ({ size, className, children }) => {
   const levels = {
     xxl: 'h1',
     xl: 'h2',
@@ -22,8 +23,8 @@ export const HeadingComponent: React.FC<HeadingProps> = ({ size, className, chil
   return <Tag className={className}>{children}</Tag>;
 };
 
-const Heading = styled(HeadingComponent)`
-  ${({ theme, size, inline }) => css`
+export const Heading = styled(HeadingComponent)`
+  ${({ size, inline }) => css`
     font-size: ${theme.heading[size].size}px;
     font-weight: normal;
     ${inline &&
@@ -32,5 +33,3 @@ const Heading = styled(HeadingComponent)`
       `}
   `}
 `;
-
-export default Heading;

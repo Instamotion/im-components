@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Carousel from '../src/carousel';
+import Carousel, { CarouselProps } from '../src';
 
 storiesOf('Common | Carousel', module).add('Carousel component', () => {
   const slides = [
@@ -26,12 +26,12 @@ storiesOf('Common | Carousel', module).add('Carousel component', () => {
     }
   ];
 
+  const props: CarouselProps = {
+    heading: <span>Test Carousel</span>,
+    slides
+  }
+
   return (
-    <Carousel
-      heading={<h1>Carousel title</h1>}
-      slideWidth={90}
-      sliderHeight={100}
-      slides={slides}
-    />
+    <Carousel {...props} />
   );
 });

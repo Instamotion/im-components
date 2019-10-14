@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import TrustfulContainer from './trustfulSection/trustfulContainer';
@@ -13,7 +13,7 @@ import FooterWrapper from './footerWrapper';
 import FooterContent from './footerContainer';
 import Copyrights from './copyrights';
 
-import AllianzLogo from '../assets/AllianzLogo.svg';
+import AllianzLogo from './assets/AllianzLogo';
 import SocialContainerWithScript from './social/socialContanerWithScript';
 
 export const renderIcon = (iconName?: string): React.ReactNode => {

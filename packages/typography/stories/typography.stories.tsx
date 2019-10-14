@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, select } from '@storybook/addon-knobs';
 
-import Heading, { HeadingProps } from '../src/heading';
-import Link, { LinkProps } from '../src/link';
-import Text, { TextProps } from '../src/text';
+import { Heading, HeadingProps } from '../src/heading';
+import { Link, LinkProps } from '../src/link';
+import { Text, TextProps } from '../src/text';
 
 storiesOf('General | Typography', module)
   .add('Heading', () => {
