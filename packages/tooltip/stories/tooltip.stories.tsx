@@ -4,7 +4,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 import Tooltip, { TooltipProps } from '../src';
 import Icon from '@instamotion/icon';
 
-const story = storiesOf('General | Tooltip', module);
+const story = storiesOf('Tooltip', module);
 
 story.addDecorator(withKnobs);
 

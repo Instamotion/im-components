@@ -5,7 +5,7 @@ import { boolean, text } from '@storybook/addon-knobs';
 import Accordion from '../src';
 import { AccordionItem } from '../src';
 
-storiesOf('Controls | Accordion', module).add('default', () => {
+storiesOf('Accordion', module).add('default', () => {
   const props = {
     onClick: action('onClick'),
     onHeadingClick: action('onHeadingClick')

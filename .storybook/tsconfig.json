@@ -1,4 +1,7 @@
 {
+  "compilerOptions": {
+    "strict": false
+  },
   "extends": "../configs/tsconfig.base.json",
   "include": ["./packages/**/stories/**/*", "../types"]
 }

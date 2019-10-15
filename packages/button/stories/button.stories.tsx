@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import Button, { IconButton } from '../src/';
 
-storiesOf('Controls | Button', module)
+storiesOf('Button', module)
   .add('with text', () => {
     const props: React.ButtonHTMLAttributes<any> = {
       onClick: action('Button click')

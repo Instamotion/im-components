@@ -11,7 +11,7 @@ const options: DropdownOptionProps[] = [
   { value: 'ch', label: 'Switzerland' }
 ];
 
-storiesOf('Controls | Dropdown', module)
+storiesOf('Dropdown', module)
   .add('with label', () => {
     const props: DropdownProps = {
       id: 'dropdown-1',

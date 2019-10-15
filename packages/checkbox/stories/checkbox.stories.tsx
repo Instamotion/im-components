@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import Checkbox, { CheckboxProps } from '../src';
 
-const stories = storiesOf('Controls | Checkbox', module);
+const stories = storiesOf('Checkbox', module);
 
 stories.addDecorator(withKnobs);
 

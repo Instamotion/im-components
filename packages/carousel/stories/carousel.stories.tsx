@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Carousel, { CarouselProps } from '../src';
 
-storiesOf('Common | Carousel', module).add('Carousel component', () => {
+storiesOf('Carousel', module).add('Carousel component', () => {
   const slides = [
     {
       slideName: 'slide#1',

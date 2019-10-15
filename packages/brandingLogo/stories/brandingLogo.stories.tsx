@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import BrandingLogo, { BrandingLogoProps } from '../src';
 
-storiesOf('General | Branding Logo', module)
+storiesOf('Branding Logo', module)
   .add('Instamotion', () => {
     const props: BrandingLogoProps = {
       link: '#',

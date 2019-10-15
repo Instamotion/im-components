@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import BrandingLogo from '@instamotion/branding-logo';
 import Header from '../src';
 
-storiesOf('Global | Header', module).add('default', () => (
+storiesOf('Header', module).add('default', () => (
   <Header
     onTheLeft={<BrandingLogo color="#fff" brandingHolder="Instamotion" link="/" />}
     inTheMiddle={<div> Some contacts </div>}

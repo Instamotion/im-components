@@ -210,7 +210,7 @@ const InputCustomValidation = (): React.ReactElement => {
   );
 };
 
-storiesOf('Controls | Input', module)
+storiesOf('Input', module)
   .add('text', () => <TextInputDemo />)
   .add('validation', () => <TextInputValidationDemo />)
   .add('overwrite html5 validation', () => <InputCustomValidation />)

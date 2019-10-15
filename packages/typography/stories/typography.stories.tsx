@@ -6,7 +6,7 @@ import { Heading, HeadingProps } from '../src/heading';
 import { Link, LinkProps } from '../src/link';
 import { Text, TextProps } from '../src/text';
 
-storiesOf('General | Typography', module)
+storiesOf('Typography', module)
   .add('Heading', () => {
     const props: HeadingProps = {
       className: text('className', ''),
