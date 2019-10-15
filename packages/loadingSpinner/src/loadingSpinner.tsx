@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 import { FlattenSimpleInterpolation } from 'styled-components';
 
 export type LoadingSpinnerProps = {

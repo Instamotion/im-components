@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import TrustfulContainer from './trustfulSection/trustfulContainer';
-import Icon from '@instamotion/icon';
+import Icon from '@im-ui/icon';
 
 import MailContainer from './mailSection/mailContainer';
 import MailContent from './mailSection/mailContent';

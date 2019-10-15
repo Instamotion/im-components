@@ -1,5 +1,5 @@
 import React from 'react';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 import { ThemeProvider } from 'styled-components';
 import { IntlProvider } from 'react-intl';
 import { AvailableLocales, AdditionalTranslation } from './i18n';

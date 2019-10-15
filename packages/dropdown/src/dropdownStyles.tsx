@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 
 export const DropdownComponent = styled.span`
   display: flex;

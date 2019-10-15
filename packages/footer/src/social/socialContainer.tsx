@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 import SocialItem from './socialItem';
 import TagManager, { DataLayerArgs } from 'react-gtm-module';
 

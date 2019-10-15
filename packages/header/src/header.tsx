@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 
 export interface HeaderProps {
   className?: string;

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Carousel from '@instamotion/carousel';
+import Carousel from '@im-ui/carousel';
 import TrustfulLogo from './trustfulLogo';
 import TrustfulPanel from './trustfulPanel';
 import TrustfulHeading from './trustfulHeading';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 
 const slides = [
   {

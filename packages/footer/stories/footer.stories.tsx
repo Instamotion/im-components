@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
-import { Link } from '@instamotion/typography';
+import { Link } from '@im-ui/typography';
 
 import MailContainer from '../src/mailSection/mailContainer';
 import MailContent from '../src/mailSection/mailContent';
@@ -11,7 +11,7 @@ import AllianzLogo from '../src/assets/AllianzLogo';
 import DefaultFooter, { renderMenu } from '../src/defaultFooter';
 import { IntlProvider } from 'react-intl';
 import { ThemeProvider } from 'styled-components';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 import FooterContentComponent from '../src/footerContainer';
 import CheckoutFooter from '../src/checkoutFooter';
 

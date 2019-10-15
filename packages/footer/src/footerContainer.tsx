@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 
 const FooterContentComponent: React.FC = ({ children }) => (
   <FooterContainer>{children}</FooterContainer>

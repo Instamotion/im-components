@@ -32,8 +32,8 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@instamotion/icon": "^0.1.0",
-    "@instamotion/theme": "^0.3.0"
+    "@im-ui/icon": "^0.1.0",
+    "@im-ui/theme": "^0.3.0"
   },
   "peerDependencies": {
     "react": "^16.9.0",

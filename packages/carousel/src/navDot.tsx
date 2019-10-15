@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 
 interface NavDotProps {
   className?: string;

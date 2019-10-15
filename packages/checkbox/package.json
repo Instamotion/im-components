@@ -37,9 +37,9 @@
     "styled-components": "^4.3.2"
   },
   "dependencies": {
-    "@instamotion/error-message": "^0.1.0",
-    "@instamotion/label": "^0.1.0",
-    "@instamotion/theme": "^0.3.0",
-    "@instamotion/utils": "^0.3.0"
+    "@im-ui/error-message": "^0.1.0",
+    "@im-ui/label": "^0.1.0",
+    "@im-ui/theme": "^0.3.0",
+    "@im-ui/utils": "^0.3.0"
   }
 }

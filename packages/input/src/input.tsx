@@ -1,9 +1,9 @@
 /* istanbul ignore file */
 import React from 'react';
 import styled from 'styled-components';
-import Label from '@instamotion/label';
-import ErrorMessage from '@instamotion/error-message';
-import theme from '@instamotion/theme';
+import Label from '@im-ui/label';
+import ErrorMessage from '@im-ui/error-message';
+import theme from '@im-ui/theme';
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label?: JSX.Element | string;

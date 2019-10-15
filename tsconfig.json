@@ -2,7 +2,7 @@
   "extends": "./configs/tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "@instamotion/*": ["packages/*"]
+      "@im-ui/*": ["packages/*"]
     }
   },
   "include": ["./packages/**/*", "types"]

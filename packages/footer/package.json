@@ -40,10 +40,10 @@
     "styled-components": "^4.3.2"
   },
   "dependencies": {
-    "@instamotion/carousel": "^0.1.0",
-    "@instamotion/icon": "^0.1.0",
-    "@instamotion/theme": "^0.3.0",
-    "@instamotion/typography": "^0.2.0",
-    "@instamotion/utils": "^0.3.0"
+    "@im-ui/carousel": "^0.1.0",
+    "@im-ui/icon": "^0.1.0",
+    "@im-ui/theme": "^0.3.0",
+    "@im-ui/typography": "^0.2.0",
+    "@im-ui/utils": "^0.3.0"
   }
 }

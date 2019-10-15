@@ -2,8 +2,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
-import theme from '@instamotion/theme';
-import BrandingLogo from '@instamotion/branding-logo';
+import theme from '@im-ui/theme';
+import BrandingLogo from '@im-ui/branding-logo';
 import Header from '../src';
 
 describe('Header', () => {

@@ -7,7 +7,7 @@ import TrustfulHeading from '../src/trustfulSection/trustfulHeading';
 import MenuItem from '../src/menu/menuItem';
 import SocialContainer from '../src/social/socialContainer';
 import Copyrights from '../src/copyrights';
-import { renderWithThemeAdnI18n } from '@instamotion/utils';
+import { renderWithThemeAdnI18n } from '@im-ui/utils';
 import CheckoutFooter from '../src/checkoutFooter';
 import Footer from '../src';
 import AllianzLogo from '../src/assets/AllianzLogo';

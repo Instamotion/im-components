@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 
 export const Button = styled.button`
   background-color: ${theme.button.primary.background};

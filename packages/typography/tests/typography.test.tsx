@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 import {Heading, Text, Link} from '../src';
 
 describe('Heading component', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import TrustfulLogo from './trustfulLogo';
 import TrustfulHeading from './trustfulHeading';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 
 const trustfulLogos: { name: string }[] = [
   { name: 'autobild' },

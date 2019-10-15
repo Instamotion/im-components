@@ -2,7 +2,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
-import theme from '@instamotion/theme';
+import theme from '@im-ui/theme';
 import BrandingLogo from '../src';
 
 describe('BrandingLogo', () => {

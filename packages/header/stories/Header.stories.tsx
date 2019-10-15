@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import BrandingLogo from '@instamotion/branding-logo';
+import BrandingLogo from '@im-ui/branding-logo';
 import Header from '../src';
 
 storiesOf('Header', module).add('default', () => (
