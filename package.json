@@ -1,5 +1,5 @@
 {
-  "name": "@instamotion/im-components",
+  "name": "@im-ui/im-components",
   "version": "1.0.0",
   "description": "The components library for the instamotion website",
   "main": "index.js",

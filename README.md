@@ -28,7 +28,7 @@ Components live as separate packages under `/packages` directory
 
 1. Make a copy of any existing component directory, for example `cp -R packages/loadingSpinner packages/new-component`.
 
-2. Update component's name in it's `package.json`, for example `"name": "@instamotion/new-component"`
+2. Update component's name in it's `package.json`, for example `"name": "@im-ui/new-component"`
 
 3. Update dependencies list in it's `package.json`
 
