@@ -1,11 +1,10 @@
 {
   "name": "@im-ui/error-message",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
   "author": "InstaMotion Retail GmbH",
-
   "scripts": {
     "build": "npm run clean && npm run compile:esm && npm run compile:cjs",
     "clean": "rm -rf ./dist",
@@ -14,7 +13,6 @@
     "prepublishOnly": "bolt build"
   },
   "repository": "git@github.com:Instamotion/im-components.git",
-
   "maintainers": [
     "Ivan D",
     "Oleg P",
@@ -36,6 +34,6 @@
     "styled-components": "^4.3.2"
   },
   "dependencies": {
-    "@im-ui/theme": "^0.3.0"
+    "@im-ui/theme": "^0.3.1"
   }
 }

@@ -1,11 +1,10 @@
 {
   "name": "@im-ui/button",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
   "author": "InstaMotion Retail GmbH",
-
   "scripts": {
     "build": "npm run clean && npm run compile:esm && npm run compile:cjs",
     "clean": "rm -rf ./dist",
@@ -15,7 +14,6 @@
     "test": "jest"
   },
   "repository": "git@github.com:Instamotion/im-components.git",
-
   "maintainers": [
     "Ivan D",
     "Oleg P",
@@ -32,8 +30,8 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@im-ui/icon": "^0.1.0",
-    "@im-ui/theme": "^0.3.0"
+    "@im-ui/icon": "^0.1.1",
+    "@im-ui/theme": "^0.3.1"
   },
   "peerDependencies": {
     "react": "^16.9.0",
