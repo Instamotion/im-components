@@ -14,7 +14,8 @@
     "build:storybook": "build-storybook -c .storybook -o ./storybook-dist",
     "build:components": "bolt workspaces run build",
     "build": "bolt build:components && bolt build:storybook",
-    "start": "start-storybook -p 6006"
+    "start": "start-storybook -p 6006",
+    "version:bump": "node ./lib/bumpVersion.js"
   },
   "repository": {
     "type": "git",
@@ -58,10 +59,12 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "bolt": "^0.23.6",
+    "bolt-query": "^1.1.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
     "hygen": "^4.0.9",
+    "inquirer": "^7.0.0",
     "jest": "^24.9.0",
     "jest-junit": "^8.0.0",
     "jest-styled-components": "^6.3.3",

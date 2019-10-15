@@ -10,7 +10,7 @@
     "clean": "rm -rf ./dist",
     "compile:esm": "tsc -p build/tsconfig.esm.json",
     "compile:cjs": "tsc -p build/tsconfig.cjs.json",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "bolt build"
   },
   "repository": "git@github.com:Instamotion/im-components.git",
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },

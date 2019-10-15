@@ -36,6 +36,17 @@ Components live as separate packages under `/packages` directory
 
 5. Run `bolt build`
 
+## How to update the version of a package
+
+Run the following command:
+
+```
+bolt version:bump
+```
+
+It will ask you what package's version you want to bump and what would be the new version.
+It will bump the version of the package you've selected, and will find all the dependant packages and bump the version for them as well
+
 ## How to use
 
 1. Generate a "Personal access token".

@@ -10,10 +10,12 @@
     "clean": "rm -rf ./dist",
     "compile:esm": "tsc -p build/tsconfig.esm.json",
     "compile:cjs": "tsc -p build/tsconfig.cjs.json",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "bolt build"
   },
   "repository": "git@github.com:Instamotion/im-components.git",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "maintainers": [
     "Ivan D",
     "Oleg P",
@@ -36,7 +38,7 @@
   },
   "dependencies": {
     "@instamotion/icon": "^0.1.0",
-    "@instamotion/theme": "^0.2.0",
+    "@instamotion/theme": "^0.3.0",
     "@instamotion/utils": "^0.3.0"
   }
 }
