@@ -2,14 +2,14 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import theme from '@themes/default';
+import theme from '@im-ui/theme';
 
-import Table from './Table';
-import TableBody from './TableBody';
-import TableCell from './TableCell';
-import TableHead from './TableHead';
-import TableFoot from './TableFoot';
-import TableRow from './TableRow';
+import Table from '../src';
+import TableBody from '../src';
+import TableCell from '../src';
+import TableHead from '../src';
+import TableFoot from '../src';
+import TableRow from '../src';
 
 describe('Table', () => {
   it('renders', () => {
