@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css, ThemedStyledProps, FlattenInterpolation } from 'styled-components';
-import InstamotionLogo from './assets/im-logo';
-import AllianzLogo from './assets/allianz';
+import InstamotionLogo from './assets/im-logo.svg';
+import AllianzLogo from './assets/allianz.svg';
 
 const InstamotionWrapper = styled.div`
   width: 127px;
