@@ -3,5 +3,5 @@
     "strict": false
   },
   "extends": "../configs/tsconfig.base.json",
-  "include": ["./packages/**/stories/**/*", "../types"]
+  "include": ["./packages/**/stories/**/*", "./types"]
 }

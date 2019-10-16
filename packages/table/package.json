@@ -1,7 +1,7 @@
 {
-  "name": "@im-ui/branding-logo",
-  "version": "0.1.1",
-  "main": "dist/cjs/main.js",
+  "name": "@im-ui/table",
+  "version": "0.1.0",
+  "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
   "author": "InstaMotion Retail GmbH",
@@ -16,25 +16,28 @@
   "maintainers": [
     "Ivan D",
     "Oleg P",
-    "Dmytro B",
-    "Giovanni E"
+    "Dmytro B"
   ],
   "license": "MIT",
   "files": [
     "dist"
   ],
   "devDependencies": {
+    "@types/faker": "^4.1.6",
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
     "@types/styled-components": "^4.1.19",
+    "faker": "^4.1.0",
     "jest": "^24.9.0",
     "typescript": "^3.6.3"
   },
   "peerDependencies": {
     "react": "^16.9.0",
+    "react-intl": "^3.3.1",
     "styled-components": "^4.3.2"
   },
   "dependencies": {
-    "@im-ui/theme": "^0.3.1"
+    "@im-ui/theme": "^0.3.1",
+    "@im-ui/utils": "^0.3.1"
   }
 }
