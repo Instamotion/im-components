@@ -50,7 +50,7 @@ export type BrandingLogoProps = {
   color?: string;
   link: string;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
-}
+};
 
 export const BrandingLogoComponent: React.FC<BrandingLogoProps> = ({
   onClick,

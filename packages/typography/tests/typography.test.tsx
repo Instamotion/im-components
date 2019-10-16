@@ -2,7 +2,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import theme from '@im-ui/theme';
-import {Heading, Text, Link} from '../src';
+import { Heading, Text, Link } from '../src';
 
 describe('Heading component', () => {
   it('renders a h1', () => {

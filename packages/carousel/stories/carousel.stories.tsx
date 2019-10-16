@@ -29,9 +29,7 @@ storiesOf('Carousel', module).add('Carousel component', () => {
   const props: CarouselProps = {
     heading: <span>Test Carousel</span>,
     slides
-  }
+  };
 
-  return (
-    <Carousel {...props} />
-  );
+  return <Carousel {...props} />;
 });

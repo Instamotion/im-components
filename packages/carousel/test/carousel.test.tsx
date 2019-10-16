@@ -25,9 +25,7 @@ describe('Common | Carousel', () => {
       slides
     };
 
-    const wrapper = mount(
-      renderWithThemeAdnI18n(<Carousel {...props} />)
-    );
+    const wrapper = mount(renderWithThemeAdnI18n(<Carousel {...props} />));
     expect(wrapper.find(Carousel).length).toEqual(1);
     expect(wrapper.find(Slide).length).toEqual(2);
 

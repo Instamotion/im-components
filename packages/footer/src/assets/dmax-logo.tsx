@@ -1,13 +1,8 @@
-import React from "react";
+import React from 'react';
 
 function Icon() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="72"
-      height="17"
-      viewBox="0 0 1671 400"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="17" viewBox="0 0 1671 400">
       <path
         fill="#606164"
         fillRule="evenodd"

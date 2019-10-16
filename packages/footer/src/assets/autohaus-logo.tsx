@@ -1,13 +1,8 @@
-import React from "react";
+import React from 'react';
 
 function Icon() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="72"
-      height="37"
-      viewBox="0 0 1478 400"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="37" viewBox="0 0 1478 400">
       <g
         fill="none"
         fillRule="evenodd"
@@ -15,11 +10,7 @@ function Icon() {
         strokeWidth="1"
         transform="translate(-3821) translate(3821)"
       >
-        <path
-          fill="#606164"
-          stroke="#606164"
-          d="M0.5 0.5H1477.5V399.5H0.5z"
-        ></path>
+        <path fill="#606164" stroke="#606164" d="M0.5 0.5H1477.5V399.5H0.5z"></path>
         <g fill="#FFF" fillRule="nonzero" transform="translate(37.043 37.037)">
           <path d="M59.268 8.519L0 310.37h25.93l14.817-82.963H87.79l14.447 82.963h53.34L100.386 8.52H59.268zm5.557 81.851L84.087 208.52H44.822L64.825 90.37z"></path>
           <path d="M393.392481 310L393.392481 29.6296296 345.977945 29.6296296 345.977945 8.51851852 484.146867 8.51851852 484.146867 29.6296296 436.361905 29.6296296 436.361905 310z"></path>
