@@ -59,13 +59,13 @@
     "@types/styled-components": "^4.1.19",
     "@types/webpack": "^4.39.3",
     "awesome-typescript-loader": "^5.2.1",
-    "babel-loader": "^8.0.6",
     "bolt": "^0.23.6",
     "bolt-query": "^1.1.4",
     "enhanced-resolve": "^4.1.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
+    "husky": "^3.0.9",
     "hygen": "^4.0.9",
     "inquirer": "^7.0.0",
     "jest": "^24.9.0",
@@ -83,9 +83,19 @@
     "rollup-plugin-terser": "^5.1.2",
     "rollup-plugin-typescript2": "^0.24.3",
     "ts-jest": "^24.1.0",
-    "typescript": "^3.6.3",
-    "webpack": "^4.41.1",
-    "webpack-cli": "^3.3.9"
+    "typescript": "^3.6.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.tsx": [
+      "npm run prettier:write",
+      "git add"
+    ]
   },
   "bolt": {
     "workspaces": [
