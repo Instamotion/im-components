@@ -13,7 +13,7 @@ describe('BrandingLogo', () => {
       </ThemeProvider>
     );
 
-    expect(wrapper.html().includes('test-file-stub')).toBe(true);
+    expect(wrapper.html().includes('svg')).toBe(true);
   });
 
   it('renders Instamotion logo properly', () => {
@@ -23,7 +23,7 @@ describe('BrandingLogo', () => {
       </ThemeProvider>
     );
 
-    expect(wrapper.html().includes('test-file-stub')).toBe(true);
+    expect(wrapper.html().includes('svg')).toBe(true);
   });
 
   it('renders colored Instamotion logo', () => {

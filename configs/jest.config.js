@@ -6,14 +6,18 @@ module.exports = {
   testEnvironment: 'jsdom',
   setupFiles: [resolve(__dirname, 'jest.setup.js')],
   snapshotSerializers: ['enzyme-to-json/serializer'],
+  resolver: `${__dirname}/resolver.js`,
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '.+.stories.tsx$',
     '.+node_modules.+',
     '.+dist.+'
   ],
-  collectCoverage: true,
+  transform: {
+    "^.+\\.svg$": "jest-svg-transformer"
+  },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'svg'],
+  collectCoverage: true,
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '.+.stories.tsx$',
