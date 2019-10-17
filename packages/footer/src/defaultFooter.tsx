@@ -323,12 +323,13 @@ export const renderMenu = (): React.ReactNode => {
 };
 
 export interface DefaultFooterProps {
+  className?: string;
   onTop?: React.ReactElement;
 }
 
-const DefaultFooter: React.FC<DefaultFooterProps> = ({ onTop }) => {
+const DefaultFooter: React.FC<DefaultFooterProps> = ({ onTop, className }) => {
   return (
-    <FooterWrapper>
+    <FooterWrapper className={className}>
       <TrustfulContainer>{onTop}</TrustfulContainer>
       <FooterContent>
         {renderMenu()}

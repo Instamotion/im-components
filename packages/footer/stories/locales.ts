@@ -1,6 +1,5 @@
 /* eslint-disable */
 const de = {
-  powered: 'InstaMotion - Auto Online Bestellung powered by Allianz',
   'checkout.footer.about_us': 'Über uns',
   'checkout.footer.agb': 'AGB',
   'checkout.footer.imprint': 'Impressum',
@@ -51,5 +50,5 @@ const de = {
     '* Weitere Informationen zum offiziellen Kraftstoffverbrauch und den offiziellen spezifischen CO2-Emissionen neuer Personenkraftwagen können dem "Leitfaden über den Kraftstoffverbrauch, die CO2-Emissionen und den Stromverbrauch neuer Personenkraftwagen" entnommen werden, der an allen Verkaufsstellen und bei der Deutsche Automobil Treuhand GmbH (DAT), Hellmuth-Hirth-Straße 1, 73760 Ostfildern-Scharnhausen bzw. im Internet unter <a href="www.dat.de/angebote/verlagsprodukte/leitfaden-kraftstoffverbrauch.html" target="_blank">www.dat.de/angebote/verlagsprodukte/leitfaden-kraftstoffverbrauch.html</a> unentgeltlich erhältlich ist.'
 };
 
-export default de;
+export default { de };
 /* eslint-enable */

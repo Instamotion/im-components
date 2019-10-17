@@ -2,26 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
 import { Link } from '@im-ui/typography';
-
-import MailContainer from '../src/mailSection/mailContainer';
-import MailContent from '../src/mailSection/mailContent';
-
-import Copyrights from '../src/copyrights';
-import AllianzLogo from '../src/assets/AllianzLogo';
-import DefaultFooter, { renderMenu } from '../src/defaultFooter';
-import { IntlProvider } from 'react-intl';
-import { ThemeProvider } from 'styled-components';
-import theme from '@im-ui/theme';
-import FooterContentComponent from '../src/footerContainer';
-import CheckoutFooter from '../src/checkoutFooter';
-
-import TrustfulSection from '../src/trustfulSection';
-import SocialContainerWithScript from '../src/social/socialContanerWithScript';
+import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { Footer } from '../src';
 
 import messages from './locales';
 
-storiesOf('Footer', module)
-  .add('for Checkout', () => {
+storiesOf('Footer | Variants', module)
+  .add('minimal', () => {
     const items = [
       { text: text('home', 'home'), href: '#' },
       { text: text('test', 'test'), href: '#' },
@@ -30,51 +17,16 @@ storiesOf('Footer', module)
       { text: text('test3', 'test3'), href: '#' }
     ];
 
-    return (
-      <IntlProvider locale="de" messages={messages}>
-        <ThemeProvider theme={theme}>
-          <CheckoutFooter>
-            {items.map(item => (
-              <Link href={item.href} key={item.text}>
-                {item.text}
-              </Link>
-            ))}
-          </CheckoutFooter>
-        </ThemeProvider>
-      </IntlProvider>
+    return renderWithThemeAdnI18n(
+      <Footer variant="minimal">
+        {items.map(item => (
+          <Link href={item.href} key={item.text}>
+            {item.text}
+          </Link>
+        ))}
+      </Footer>,
+      'de',
+      messages
     );
   })
-  .add('Default', () => {
-    return (
-      <IntlProvider locale="de" messages={messages}>
-        <ThemeProvider theme={theme}>
-          <FooterContentComponent>
-            <DefaultFooter onTop={<TrustfulSection />} />
-          </FooterContentComponent>
-        </ThemeProvider>
-      </IntlProvider>
-    );
-  })
-  .add('newsletterForm', () => {
-    return (
-      <MailContainer>
-        <MailContent linkHref="#" />
-      </MailContainer>
-    );
-  })
-  .add('Reviews', () => (
-    <SocialContainerWithScript
-      googleToken="KAnr6RCfHhQhdhBIHsVWRA8wBJR0zei0pvb0SL7wHB0W3OehKM"
-      facebookToken="DzdTsLezppdIprrI4naOCMH63tLvloWbJFYNczHvtpEPIfZsRs"
-    />
-  ))
-  .add('AllianzLogo', () => (
-    <Copyrights logo={<AllianzLogo />} title="Eine Beteiligungs gesellschaft der" />
-  ))
-  .add('Menu', () => (
-    <IntlProvider locale="de" messages={messages}>
-      <ThemeProvider theme={theme}>
-        <FooterContentComponent>{renderMenu()}</FooterContentComponent>
-      </ThemeProvider>
-    </IntlProvider>
-  ));
+  .add('full', () => renderWithThemeAdnI18n(<Footer />, 'de', messages));

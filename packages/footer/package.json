@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/footer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -24,20 +24,21 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/react-gtm-module": "^2.0.0",
-    "@types/styled-components": "^4.1.19",
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
+    "@types/react-gtm-module": "^2.0.0",
+    "@types/react-intl": "^3.0.0",
+    "@types/styled-components": "^4.1.19",
     "jest": "^24.9.0",
     "typescript": "^3.6.3"
   },
   "peerDependencies": {
     "react": "^16.9.0",
     "react-gtm-module": "^2.0.8",
-    "react-intl": "^3.3.1",
     "styled-components": "^4.3.2"
   },
   "dependencies": {
+    "react-intl": "^3.3.1",
     "@im-ui/carousel": "^0.1.1",
     "@im-ui/icon": "^0.1.1",
     "@im-ui/theme": "^0.3.1",

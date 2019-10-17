@@ -5,16 +5,16 @@ import TrustfulSection from './trustfulSection';
 
 export interface FooterProps {
   className?: string;
-  variant: string;
+  variant?: 'minimal' | 'full';
 }
 
 export const Footer: React.FC<FooterProps> = ({ className, variant }) => {
   switch (variant) {
-    case 'checkout': {
+    case 'minimal': {
       return <CheckoutFooter className={className} />;
     }
     default:
-      return <DefaultFooter onTop={<TrustfulSection />} />;
+      return <DefaultFooter className={className} onTop={<TrustfulSection />} />;
   }
 };
 
