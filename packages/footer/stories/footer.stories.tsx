@@ -5,7 +5,7 @@ import { Link } from '@im-ui/typography';
 import { renderWithThemeAdnI18n } from '@im-ui/utils';
 import { Footer } from '../src';
 
-import messages from './locales';
+import messages from '../utils/locales';
 
 storiesOf('Footer | Variants', module)
   .add('minimal', () => {

@@ -10,7 +10,7 @@ import { renderMenu } from '../src/defaultFooter';
 import FooterContentComponent from '../src/footerContainer';
 import SocialContainerWithScript from '../src/social/socialContanerWithScript';
 
-import messages from './locales';
+import messages from '../utils/locales';
 
 storiesOf('Footer | Components', module)
   .add('newsletterForm', () =>
