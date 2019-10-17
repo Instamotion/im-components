@@ -13,28 +13,28 @@ import AllianzLogo from '../src/assets/AllianzLogo';
 
 describe('Global | Footer', () => {
   it('renders correct variant', () => {
-    const wrapper = mount(<Footer variant="minimal" locale="de" />);
+    const wrapper = mount(<Footer variant="minimal" />);
     expect(wrapper.find(CheckoutFooter).length).toEqual(1);
   });
 
   it('renders default variant', () => {
-    const wrapper = mount(<Footer locale="de" />);
+    const wrapper = mount(<Footer />);
     expect(wrapper.find(TrustfulSection).length).toEqual(1);
     expect(wrapper.find(TrustfulHeading).length).toEqual(2);
   });
 
   it('default variant have menu items', () => {
-    const wrapper = mount(<Footer locale="de" />);
+    const wrapper = mount(<Footer />);
     expect(wrapper.find(MenuItem)).toHaveLength(6);
   });
 
   it('default variant has social container', () => {
-    const wrapper = mount(<Footer locale="de" />);
+    const wrapper = mount(<Footer />);
     expect(wrapper.find(SocialContainer)).toHaveLength(1);
   });
 
   it('default variant has copyrights section', () => {
-    const wrapper = mount(<Footer locale="de" />);
+    const wrapper = mount(<Footer />);
     expect(wrapper.find(Copyrights)).toHaveLength(1);
   });
 
