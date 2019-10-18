@@ -11,15 +11,25 @@ npm install @im-ui/footer
 ## API
 
 ```
-className?: string;
-variant?: 'minimal' | 'full';
-locale: 'de' | 'en';
+type FooterProps = FullFooterProps | MinimalFooterProps;
+
+type FullFooterProps = {
+  className?: string;
+  variant: 'full';
+  googleToken: string;
+  facebookToken: string;
+}
+
+type MinimalFooterProps = {
+  className?: string;
+  variant: 'minimal';
+}
 ```
 
 It has two variants:
 
-- `minimal` : `<Footer variant='minimal' locale="de" />`
-- `full` : `<Footer locale="de" />`
+- `minimal` : `<Footer variant='minimal' />`
+- `full` : `<Footer variant='full' googleToken={googleToken} facebookToken={facebookToken} />`
 
 
 ## Required translations keys
@@ -73,5 +83,4 @@ default.footer.guide_funding
 default.footer.guide_leasing
 default.footer.advice_leasing
 default.footer.financing
-checkout.finePrint
 ```

@@ -16,17 +16,17 @@ import SocialContainerWithScript from './social/socialContanerWithScript';
 export const renderIcon = (iconName?: string): React.ReactNode => {
   switch (iconName) {
     case 'PhoneSVG':
-      return <Icon iconName="phone" color="lightGrey" />;
+      return <Icon iconName="phone" color="silver" />;
     case 'EnvelopeSVG':
-      return <Icon iconName="envelope" color="lightGrey" />;
+      return <Icon iconName="envelope" color="silver" />;
     case 'FacebookSVG':
-      return <Icon iconName="facebook" color="lightGrey" />;
+      return <Icon iconName="facebook" color="silver" />;
     case 'LinkedSVG':
-      return <Icon iconName="linkedIn" color="lightGrey" />;
+      return <Icon iconName="linkedIn" color="silver" />;
     case 'TwitterSVG':
-      return <Icon iconName="twitter" color="lightGrey" />;
+      return <Icon iconName="twitter" color="silver" />;
     case 'YoutubeSVG':
-      return <Icon iconName="youtube" color="lightGrey" />;
+      return <Icon iconName="youtube" color="silver" />;
     case 'AllianzLogo':
       return <AllianzLogo />;
     default:
@@ -322,18 +322,22 @@ export const renderMenu = (): React.ReactNode => {
 export interface DefaultFooterProps {
   className?: string;
   onTop?: React.ReactElement;
+  googleToken: string;
+  facebookToken: string;
 }
 
-const DefaultFooter: React.FC<DefaultFooterProps> = ({ onTop, className }) => {
+const DefaultFooter: React.FC<DefaultFooterProps> = ({
+  onTop,
+  className,
+  googleToken,
+  facebookToken
+}) => {
   return (
     <FooterWrapper className={className}>
       <TrustfulContainer>{onTop}</TrustfulContainer>
       <FooterContent>
         {renderMenu()}
-        <SocialContainerWithScript
-          googleToken="KAnr6RCfHhQhdhBIHsVWRA8wBJR0zei0pvb0SL7wHB0W3OehKM"
-          facebookToken="DzdTsLezppdIprrI4naOCMH63tLvloWbJFYNczHvtpEPIfZsRs"
-        />
+        <SocialContainerWithScript googleToken={googleToken} facebookToken={facebookToken} />
         <MailContainer>
           <MailContent
             title={<FormattedMessage id="default.footer.newsletter.title" />}

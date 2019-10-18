@@ -3,18 +3,34 @@ import CheckoutFooter from './checkoutFooter';
 import DefaultFooter from './defaultFooter';
 import TrustfulSection from './trustfulSection';
 
-export interface FooterProps {
+type FullFooterProps = {
   className?: string;
-  variant?: 'minimal' | 'full';
-}
+  variant: 'full';
+  googleToken: string;
+  facebookToken: string;
+};
 
-export const Footer: React.FC<FooterProps> = ({ className, variant }) => {
-  switch (variant) {
+type MinimalFooterProps = {
+  className?: string;
+  variant: 'minimal';
+};
+
+export type FooterProps = FullFooterProps | MinimalFooterProps;
+
+const Footer: React.FC<FooterProps> = props => {
+  switch (props.variant) {
     case 'minimal': {
-      return <CheckoutFooter className={className} />;
+      return <CheckoutFooter className={props.className} />;
     }
     default:
-      return <DefaultFooter className={className} onTop={<TrustfulSection />} />;
+      return (
+        <DefaultFooter
+          googleToken={props.googleToken}
+          facebookToken={props.facebookToken}
+          className={props.className}
+          onTop={<TrustfulSection />}
+        />
+      );
   }
 };
 

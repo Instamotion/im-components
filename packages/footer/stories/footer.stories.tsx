@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
 import { Link } from '@im-ui/typography';
 import { renderWithThemeAdnI18n } from '@im-ui/utils';
-import { Footer } from '../src';
+import Footer from '../src';
 
 import messages from '../utils/locales';
 
@@ -29,4 +29,10 @@ storiesOf('Footer | Variants', module)
       messages
     );
   })
-  .add('full', () => renderWithThemeAdnI18n(<Footer />, 'de', messages));
+  .add('full', () =>
+    renderWithThemeAdnI18n(
+      <Footer variant="full" googleToken="123" facebookToken="qwe" />,
+      'de',
+      messages
+    )
+  );

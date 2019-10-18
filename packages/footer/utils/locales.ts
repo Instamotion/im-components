@@ -1,4 +1,3 @@
-/* eslint-disable */
 const de = {
   'checkout.footer.about_us': 'Über uns',
   'checkout.footer.agb': 'AGB',
@@ -45,10 +44,7 @@ const de = {
   'default.footer.guide_funding': 'Ratgeber Finanzierung',
   'default.footer.guide_leasing': 'Ratgeber Leasing',
   'default.footer.advice_leasing': 'Ratgeber Leasing oder',
-  'default.footer.financing': 'Finanzierung',
-  'checkout.finePrint':
-    '* Weitere Informationen zum offiziellen Kraftstoffverbrauch und den offiziellen spezifischen CO2-Emissionen neuer Personenkraftwagen können dem "Leitfaden über den Kraftstoffverbrauch, die CO2-Emissionen und den Stromverbrauch neuer Personenkraftwagen" entnommen werden, der an allen Verkaufsstellen und bei der Deutsche Automobil Treuhand GmbH (DAT), Hellmuth-Hirth-Straße 1, 73760 Ostfildern-Scharnhausen bzw. im Internet unter <a href="www.dat.de/angebote/verlagsprodukte/leitfaden-kraftstoffverbrauch.html" target="_blank">www.dat.de/angebote/verlagsprodukte/leitfaden-kraftstoffverbrauch.html</a> unentgeltlich erhältlich ist.'
+  'default.footer.financing': 'Finanzierung'
 };
 
 export default { de };
-/* eslint-enable */
