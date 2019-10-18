@@ -10,6 +10,7 @@ storiesOf('Branding Logo', module)
     const props: BrandingLogoProps = {
       link: '#',
       color: color('Logo color', '#000'),
+      colorTwo: color('Logo second color', '#000'),
       brandingHolder: 'Instamotion',
       onClick: action('BrandingLogo click')
     };

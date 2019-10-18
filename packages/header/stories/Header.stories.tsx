@@ -1,12 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import BrandingLogo from '@im-ui/branding-logo';
 import Header from '../src';
+// import { AvailableColors } from '@im-ui/theme';
 
-storiesOf('Header', module).add('default', () => (
-  <Header
-    onTheLeft={<BrandingLogo color="#fff" brandingHolder="Instamotion" link="/" />}
-    inTheMiddle={<div> Some contacts </div>}
-    onTheRight={<BrandingLogo color="#fff" brandingHolder="Allianz" link="/" />}
-  />
-));
+storiesOf('Header', module)
+  .add('default', () => <Header variant="transparent" />)
+  .add('black', () => <Header variant="black" />);
