@@ -3,10 +3,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
-import PaginationItem from './views/PaginationItem';
-import PaginationPrev from './views/PaginationPrev';
-import PaginationNext from './views/PaginationNext';
-import PaginationGap from './views/PaginationGap';
+import PaginationItem from './views/paginationItem';
+import PaginationPrev from './views/paginationPrev';
+import PaginationNext from './views/paginationNext';
+import PaginationGap from './views/paginationGap';
 import theme from '@im-ui/theme';
 
 export interface PaginationProps {
@@ -48,7 +48,7 @@ const StyledList = styled.ul`
   text-align: center;
   cursor: pointer;
   list-style: none;
-  ${theme.mediaQueries.whenMobile} {
+  ${theme.mediaQueries.whenMobileL} {
     flex: 1 1 auto;
   }
 `;
@@ -124,11 +124,19 @@ const PaginationComponent: React.FC<PaginationProps> = ({
 
   return (
     <StyledPagination>
-      <PaginationPrev display={!isFirstPageSelected} onClick={() => changePage(currentPage - 1)}>
+      <PaginationPrev
+        className="pgn-prev"
+        display={!isFirstPageSelected}
+        onClick={() => changePage(currentPage - 1)}
+      >
         <FormattedMessage id="pagination.previous" />
       </PaginationPrev>
       <StyledList>{renderPages()}</StyledList>
-      <PaginationNext display={!isLastPageSelected} onClick={() => changePage(currentPage + 1)}>
+      <PaginationNext
+        className="pgn-next"
+        display={!isLastPageSelected}
+        onClick={() => changePage(currentPage + 1)}
+      >
         <FormattedMessage id="pagination.next" />
       </PaginationNext>
     </StyledPagination>

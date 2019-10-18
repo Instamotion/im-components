@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import IconButton from '@im-ui/button';
+import { IconButton } from '@im-ui/button';
 import theme from '@im-ui/theme';
 
 interface PaginationPrevProps {
@@ -12,7 +12,7 @@ interface PaginationPrevProps {
 const Spacer = styled.div`
   display: flex;
   width: 5.5rem;
-  ${theme.mediaQueries.whenMobile} {
+  ${theme.mediaQueries.whenMobileL} {
     width: 2rem;
   }
 `;
@@ -39,7 +39,7 @@ const StyledButton = styled(IconButton)`
   svg {
     fill: #fff;
   }
-  ${theme.mediaQueries.whenMobile} {
+  ${theme.mediaQueries.whenMobileL} {
     min-width: auto;
     span {
       &:last-child {
@@ -56,7 +56,7 @@ const PaginationPrev: React.FC<PaginationPrevProps> = ({
   children
 }) => {
   return display ? (
-    <StyledButton className={className} onClick={onClick} icon="chevronLeft" size={16}>
+    <StyledButton className={className} onClick={onClick} icon="chevronLeft">
       {children}
     </StyledButton>
   ) : (
