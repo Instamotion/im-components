@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/footer",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -40,9 +40,9 @@
   "dependencies": {
     "react-intl": "^3.3.1",
     "@im-ui/carousel": "^0.1.1",
-    "@im-ui/icon": "^0.1.1",
+    "@im-ui/icon": "^0.2.0",
     "@im-ui/theme": "^0.3.1",
     "@im-ui/typography": "^0.2.1",
-    "@im-ui/utils": "^0.3.1"
+    "@im-ui/utils": "^0.4.0"
   }
 }

@@ -34,8 +34,8 @@
     "styled-components": "^4.3.2"
   },
   "dependencies": {
-    "@im-ui/icon": "^0.1.1",
+    "@im-ui/icon": "^0.2.0",
     "@im-ui/theme": "^0.3.1",
-    "@im-ui/utils": "^0.3.1"
+    "@im-ui/utils": "^0.4.0"
   }
 }

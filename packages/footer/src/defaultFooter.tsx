@@ -1,9 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-
 import TrustfulContainer from './trustfulSection/trustfulContainer';
 import Icon from '@im-ui/icon';
-
 import MailContainer from './mailSection/mailContainer';
 import MailContent from './mailSection/mailContent';
 import MenuItemLink from './menu/menuItemLink';
@@ -12,24 +10,23 @@ import MenuItemHeader from './menu/menuItemHeader';
 import FooterWrapper from './footerWrapper';
 import FooterContent from './footerContainer';
 import Copyrights from './copyrights';
-
 import AllianzLogo from './assets/AllianzLogo';
 import SocialContainerWithScript from './social/socialContanerWithScript';
 
 export const renderIcon = (iconName?: string): React.ReactNode => {
   switch (iconName) {
     case 'PhoneSVG':
-      return <Icon iconName="phone" color="grey" />;
+      return <Icon iconName="phone" color="lightGrey" />;
     case 'EnvelopeSVG':
-      return <Icon iconName="envelope" color="grey" />;
+      return <Icon iconName="envelope" color="lightGrey" />;
     case 'FacebookSVG':
-      return <Icon iconName="facebook" color="grey" />;
+      return <Icon iconName="facebook" color="lightGrey" />;
     case 'LinkedSVG':
-      return <Icon iconName="linkedIn" color="grey" />;
+      return <Icon iconName="linkedIn" color="lightGrey" />;
     case 'TwitterSVG':
-      return <Icon iconName="twitter" color="grey" />;
+      return <Icon iconName="twitter" color="lightGrey" />;
     case 'YoutubeSVG':
-      return <Icon iconName="youtube" color="grey" />;
+      return <Icon iconName="youtube" color="lightGrey" />;
     case 'AllianzLogo':
       return <AllianzLogo />;
     default:

@@ -30,7 +30,7 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@im-ui/icon": "^0.1.1",
+    "@im-ui/icon": "^0.2.0",
     "@im-ui/theme": "^0.3.1"
   },
   "peerDependencies": {
