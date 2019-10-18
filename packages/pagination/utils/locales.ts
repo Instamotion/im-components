@@ -1,6 +1,6 @@
 const de = {
   'pagination.previous': 'Zurück',
-  'pagination.next': 'Weiter',
+  'pagination.next': 'Weiter'
 };
 
 export default { de };
