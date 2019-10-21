@@ -165,7 +165,7 @@ const Icons = {
       />
     </svg>
   ),
-  gearBox: (size: number, colorName: AvailableColors = 'downy') => (
+  gearbox: (size: number, colorName: AvailableColors = 'downy') => (
     <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
       <path
         fill={theme.color[colorName]}

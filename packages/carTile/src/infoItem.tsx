@@ -7,13 +7,13 @@ import { converter } from '@im-ui/utils';
 import { CarInfoModel } from './carTile';
 
 export const transformInfo = (type: string, value: number | string): object => {
-  if (!value) {
+  if (!value || value === '. ') {
     return {
       id: 'car.tile.not_available'
     };
   }
   const props = {
-    defaultMessage: 'car.tile.not_available'
+    defaultMessage: 'Nicht verfügbar'
   };
   switch (type) {
     case 'power': {
@@ -33,7 +33,7 @@ export const transformInfo = (type: string, value: number | string): object => {
         values: { val: value }
       };
     case 'fuel':
-    case 'gearBox':
+    case 'gearbox':
     case 'condition':
       return {
         ...props,
@@ -52,16 +52,14 @@ interface InfoItemProps extends CarInfoModel {
 
 const InfoItemComponent: React.FC<InfoItemProps> = props => (
   <AdditionalInfo>
-    {Object.keys(props).map((key: any) => {
-      return (
-        <InfoItem key={`ii-${key}`}>
-          <Icon iconName={key} size={18} color={props[key] ? 'downy' : 'silver'} />
-          <InfoLabel available={!!props[key]}>
-            <FormattedMessage id={key} {...transformInfo(key, props[key])} />
-          </InfoLabel>
-        </InfoItem>
-      );
-    })}
+    {Object.keys(props).map((key: any) => (
+      <InfoItem key={`ii-${key}`}>
+        <Icon iconName={key} size={18} color={props[key] ? 'downy' : 'silver'} />
+        <InfoLabel available={!!props[key]}>
+          <FormattedMessage id={key} {...transformInfo(key, props[key])} />
+        </InfoLabel>
+      </InfoItem>
+    ))}
   </AdditionalInfo>
 );
 

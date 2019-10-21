@@ -15,19 +15,17 @@ storiesOf('Car tile', module).add('Common car tile', () => {
     ),
     make: text('make', 'Nissan'),
     model: text('model', 'Juke'),
-    modelDescription: text('modelDescription', 'Juke 1.2 DIG-T Acenta 4x2 StartStop Euro 6 Klima'),
+    variant: text('variant', 'Juke 1.2 DIG-T Acenta 4x2 StartStop Euro 6 Klima'),
     price: text('price', '26928'),
     monthlyInstallment: number('monthlyInstallment', 106),
-    info: {
-      mileage: text('mileage', '1519'),
-      power: number('power', 44),
-      firstRegistration: text('firstRegistration', '2019.02'),
-      fuel: text('fuel', 'DIESEL'),
-      gearBox: text('gearBox', 'MANUAL_GEAR'),
-      condition: text('condition', 'USED'),
-      consumptionCombined: text('consumptionCombined', '6.9'),
-      co2: text('co2', '105')
-    }
+    mileage: text('mileage', '1519'),
+    power: number('power', 44),
+    firstRegistration: text('firstRegistration', '2019.02'),
+    fuel: text('fuel', 'DIESEL'),
+    gearbox: text('gearbox', 'MANUAL_GEAR'),
+    condition: text('condition', 'USED'),
+    consumptionCombined: text('consumptionCombined', '6.9'),
+    co2: text('co2', '105')
   };
 
   return renderWithThemeAdnI18n(<CarTile {...carDetails} />, 'de', messages);

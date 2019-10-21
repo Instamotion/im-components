@@ -4,6 +4,7 @@ import theme from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 import { FormattedMessage } from 'react-intl';
 import { formatting } from '@im-ui/utils';
+import { pick } from 'lodash';
 import InfoItemComponent from './infoItem';
 
 export interface CarInfoModel {
@@ -11,34 +12,43 @@ export interface CarInfoModel {
   power: number;
   firstRegistration: string;
   fuel: string;
-  gearBox: string;
+  gearbox: string;
   condition: string;
   consumptionCombined: string;
   co2: string;
 }
 
-export interface CarTileProps {
+export interface CarTileProps extends CarInfoModel {
   className?: string;
   id: string;
   image: string;
   make: string;
   model: string;
-  modelDescription: string;
+  variant: string;
   price: string;
   monthlyInstallment: number;
-  info: CarInfoModel;
 }
 
 const CarTileComponent: React.FC<CarTileProps> = ({
   className,
   make,
   model,
-  modelDescription,
+  variant,
   image,
   monthlyInstallment,
   price,
-  info
+  ...props
 }) => {
+  const info = pick(props, [
+    'mileage',
+    'power',
+    'firstRegistration',
+    'fuel',
+    'gearbox',
+    'condition',
+    'consumptionCombined',
+    'co2'
+  ]);
   const imageWidth = 286;
   return (
     <Tile className={className} onClick={() => {}}>
@@ -47,8 +57,8 @@ const CarTileComponent: React.FC<CarTileProps> = ({
           <Icon iconName="star" size={16} color="downy" />
         </Favorite>
         <Name>{`${make} ${model}`}</Name>
-        <ModelDescription>{modelDescription}</ModelDescription>
-        <Tooltip>{modelDescription}</Tooltip>
+        <ModelDescription>{variant}</ModelDescription>
+        <Tooltip>{variant}</Tooltip>
       </CarTileTop>
       {image ? (
         <CarImage url={image} />
@@ -149,7 +159,7 @@ export const AlternativePrice = styled.div`
 `;
 
 export const Tooltip = styled.div`
-  width: 14.5rem;
+  max-width: 14.5rem;
   min-height: 1.125rem;
   max-height: 2rem;
   position: absolute;

@@ -13,19 +13,17 @@ const carDetails = {
   image: '',
   make: '',
   model: '',
-  modelDescription: '',
+  variant: '',
   price: '',
   monthlyInstallment: 0,
-  info: {
-    power: 51,
-    firstRegistration: '02.2016',
-    fuel: 'DIESEL',
-    mileage: '15.600',
-    gearBox: 'MANUAL_GEAR',
-    condition: 'NEW',
-    consumptionCombined: '4.5',
-    co2: '107'
-  }
+  power: 51,
+  firstRegistration: '02.2016',
+  fuel: 'DIESEL',
+  mileage: '15.600',
+  gearbox: 'MANUAL_GEAR',
+  condition: 'NEW',
+  consumptionCombined: '4.5',
+  co2: '107'
 };
 
 describe('CarTile', () => {
@@ -70,7 +68,7 @@ describe('CarTile', () => {
         <CarTile
           {...{
             ...carDetails,
-            modelDescription: 'model description'
+            variant: 'model description'
           }}
         />,
         'de',
@@ -85,7 +83,7 @@ describe('CarTile', () => {
         <CarTile
           {...{
             ...carDetails,
-            modelDescription: 'very very very very very very very very long description'
+            variant: 'very very very very very very very very long description'
           }}
         />,
         'de',
@@ -119,16 +117,14 @@ describe('CarTile', () => {
         <CarTile
           {...{
             ...carDetails,
-            info: {
-              power: 0,
-              firstRegistration: '',
-              fuel: '',
-              mileage: '',
-              gearBox: '',
-              condition: '',
-              consumptionCombined: '',
-              co2: ''
-            }
+            power: 0,
+            firstRegistration: '',
+            fuel: '',
+            mileage: '',
+            gearbox: '',
+            condition: '',
+            consumptionCombined: '',
+            co2: ''
           }}
         />,
         'de',
