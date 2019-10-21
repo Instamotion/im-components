@@ -368,7 +368,7 @@ exports[`Pagination renders 1`] = `
               "attrs": Array [],
               "componentStyle": ComponentStyle {
                 "componentId": "sc-dnqmqq",
-                "isStatic": true,
+                "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
                   "
@@ -387,6 +387,7 @@ exports[`Pagination renders 1`] = `
               "styledComponentId": "sc-dnqmqq",
               "target": "div",
               "toString": [Function],
+              "usesTheme": false,
               "warnTooManyClasses": [Function],
               "withComponent": [Function],
             }
@@ -409,7 +410,7 @@ exports[`Pagination renders 1`] = `
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-ifAKCX",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c1",
                         "rules": Array [
                           "
@@ -429,6 +430,7 @@ exports[`Pagination renders 1`] = `
                       "styledComponentId": "sc-ifAKCX",
                       "target": "div",
                       "toString": [Function],
+                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -449,7 +451,7 @@ exports[`Pagination renders 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-iwsKbI",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
                         "
@@ -472,6 +474,7 @@ exports[`Pagination renders 1`] = `
                     "styledComponentId": "sc-iwsKbI",
                     "target": "ul",
                     "toString": [Function],
+                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -525,6 +528,7 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
+                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -584,6 +588,7 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
+                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -643,6 +648,7 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
+                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -702,6 +708,7 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
+                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -761,6 +768,7 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
+                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -820,6 +828,7 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
+                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -879,6 +888,7 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
+                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -906,7 +916,7 @@ exports[`Pagination renders 1`] = `
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htoDjs",
-                            "isStatic": true,
+                            "isStatic": false,
                             "lastClassName": "c5",
                             "rules": Array [
                               "
@@ -922,6 +932,7 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-htoDjs",
                           "target": "li",
                           "toString": [Function],
+                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -977,6 +988,7 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
+                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -1015,7 +1027,7 @@ exports[`Pagination renders 1`] = `
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-gzVnrw",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c6",
                         "rules": Array [
                           "
@@ -1059,6 +1071,7 @@ exports[`Pagination renders 1`] = `
                       "styledComponentId": "sc-gzVnrw",
                       "target": [Function],
                       "toString": [Function],
+                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -1068,24 +1081,24 @@ exports[`Pagination renders 1`] = `
                   onClick={[Function]}
                 >
                   <Component
-                    className="pgn-next c6"
+                    className="c6 pgn-next"
                     icon="chevronRight"
                     onClick={[Function]}
                   >
                     <styled.button
-                      className="pgn-next c6"
+                      className="c6 pgn-next"
                       icon="chevronRight"
                       onClick={[Function]}
                     >
                       <StyledComponent
-                        className="pgn-next c6"
+                        className="c6 pgn-next"
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-bwzfXH",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c7",
                               "rules": Array [
                                 "
@@ -1149,6 +1162,7 @@ exports[`Pagination renders 1`] = `
                             "styledComponentId": "sc-bwzfXH",
                             "target": "button",
                             "toString": [Function],
+                            "usesTheme": false,
                             "warnTooManyClasses": [Function],
                             "withComponent": [Function],
                           }
@@ -1158,7 +1172,7 @@ exports[`Pagination renders 1`] = `
                         onClick={[Function]}
                       >
                         <button
-                          className="pgn-next c6 c7"
+                          className="c7 c6 pgn-next"
                           onClick={[Function]}
                         >
                           <Styled(Component)
@@ -1173,7 +1187,7 @@ exports[`Pagination renders 1`] = `
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-bxivhb",
-                                    "isStatic": true,
+                                    "isStatic": false,
                                     "lastClassName": "c8",
                                     "rules": Array [
                                       "
@@ -1189,6 +1203,7 @@ exports[`Pagination renders 1`] = `
                                   "styledComponentId": "sc-bxivhb",
                                   "target": [Function],
                                   "toString": [Function],
+                                  "usesTheme": false,
                                   "warnTooManyClasses": [Function],
                                   "withComponent": [Function],
                                 }
@@ -1230,6 +1245,7 @@ exports[`Pagination renders 1`] = `
                                         "styledComponentId": "sc-htpNat",
                                         "target": "span",
                                         "toString": [Function],
+                                        "usesTheme": false,
                                         "warnTooManyClasses": [Function],
                                         "withComponent": [Function],
                                       }
