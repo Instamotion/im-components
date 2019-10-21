@@ -2,6 +2,14 @@
 
 We use [bolt](https://www.npmjs.com/package/bolt) to manage workspaces in this repository
 
+## Using components
+
+Because of the way `npm` resolves the dependencies, when runnning `npm install` it is better to omit cache by specifying `--cache=/tmp/npm_$(date +%s)`
+
+```
+npm i @im-ui/... --cache=/tmp/npm_$(date +%s)
+```
+
 ## Contributing
 
 ### First things first

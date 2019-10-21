@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/header",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -35,7 +35,7 @@
     "styled-components": "^4.3.2"
   },
   "dependencies": {
-    "@im-ui/branding-logo": "^0.1.1",
-    "@im-ui/theme": "^0.3.1"
+    "@im-ui/branding-logo": "0.1.2",
+    "@im-ui/theme": "0.3.1"
   }
 }
