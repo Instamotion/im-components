@@ -42,7 +42,7 @@ export const StyledInput = styled.input`
   }
 `;
 
-export const InputComponent = styled.div`
+export const InputComponentWrapper = styled.div`
   display: flex;
   flex-flow: column;
   width: 100%;
@@ -59,7 +59,7 @@ export const Input: React.FC<InputProps> = props => {
   };
 
   return (
-    <InputComponent style={{ width }}>
+    <InputComponentWrapper style={{ width }}>
       {label && (
         <Label required={required} htmlFor={id}>
           {label}
@@ -67,7 +67,7 @@ export const Input: React.FC<InputProps> = props => {
       )}
       <StyledInput {...props} id={id} onChange={handleOnChange} />
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
-    </InputComponent>
+    </InputComponentWrapper>
   );
 };
 
