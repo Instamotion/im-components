@@ -1,1 +1,1 @@
-export { default, RadioButtonGroupProps, RadioButtonGroupOrientation } from './radioButtonGroup';
+export { default, RadioButtonGroupProps, RadioButtonGroupOrientation, RadioButtonsProps } from './radioButtonGroup';
