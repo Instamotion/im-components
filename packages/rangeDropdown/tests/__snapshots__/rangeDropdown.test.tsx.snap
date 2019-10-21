@@ -1,0 +1,2064 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RangeDropdown Input component renders correctly 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "button": Object {
+        "primary": Object {
+          "background": "#75dfc0",
+          "border": Object {
+            "color": "#75dfc0",
+            "radius": 4,
+            "width": 2,
+          },
+          "color": "#313330",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "size": 16,
+            "spacing": 0,
+            "weight": 500,
+          },
+          "hover": Object {
+            "shadow": "0 4px 4px rgba(0, 0 ,0, 0.1)",
+          },
+        },
+      },
+      "card": Object {
+        "border": Object {
+          "color": "#C4C4C4",
+          "radius": 4,
+          "width": 2,
+        },
+      },
+      "color": Object {
+        "brightGrey": "#606164",
+        "downy": "#75DFC0",
+        "flamePea": "#B75C50",
+        "lightGrey": "#FAFAFA",
+        "niagara": "#20AD90",
+        "oil": "#313330",
+        "parisDaisy": "#FFE44C",
+        "silver": "#C4C4C4",
+        "white": "#FFFFFF",
+      },
+      "font": Object {
+        "sans": Object {
+          "family": "Roboto, sans-serif",
+        },
+      },
+      "footer": Object {
+        "maxWidth": 1320,
+      },
+      "heading": Object {
+        "l": Object {
+          "size": 36,
+        },
+        "m": Object {
+          "size": 32,
+        },
+        "s": Object {
+          "size": 24,
+        },
+        "xl": Object {
+          "size": 48,
+        },
+        "xs": Object {
+          "size": 20,
+        },
+        "xxl": Object {
+          "size": 60,
+        },
+        "xxs": Object {
+          "size": 18,
+        },
+      },
+      "input": Object {
+        "border": Object {
+          "color": "#C4C4C4",
+          "width": 1,
+        },
+        "font": Object {
+          "family": "Roboto, sans-serif",
+          "size": 16,
+        },
+      },
+      "label": Object {
+        "font": Object {
+          "family": "Roboto, sans-serif",
+          "size": 1,
+          "weight": 600,
+        },
+        "letter": Object {
+          "spacing": 0.01,
+        },
+        "line": Object {
+          "height": 1.15,
+        },
+      },
+      "mediaQueries": Object {
+        "whenDesktop": "@media (min-width: 1024px)",
+        "whenDesktopXL": "@media (min-width: 1440px)",
+        "whenMobileL": "@media (min-width: 425px)",
+        "whenTablet": "@media (min-width: 768px)",
+      },
+      "name": "default",
+      "table": Object {
+        "body": Object {
+          "background": "#FFFFFF",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "height": 28,
+            "size": 12,
+            "spacing": 0.4,
+          },
+        },
+        "foot": Object {
+          "background": "#FFFFFF",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "height": 28,
+            "size": 12,
+            "spacing": 0.4,
+            "weight": 500,
+          },
+        },
+        "head": Object {
+          "background": "#FFFFFF",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "height": 28,
+            "size": 12,
+            "spacing": 0.4,
+            "weight": 500,
+          },
+        },
+        "innerBorder": Object {
+          "color": "#C4C4C4",
+          "radius": 0,
+          "width": 1,
+        },
+        "outerBorder": Object {
+          "color": "#C4C4C4",
+          "radius": 4,
+          "width": 2,
+        },
+      },
+    }
+  }
+>
+  <IntlProvider
+    defaultFormats={Object {}}
+    defaultLocale="en"
+    formats={Object {}}
+    locale="de"
+    messages={Object {}}
+    onError={[Function]}
+    textComponent={Symbol(react.fragment)}
+  >
+    <Component
+      id="dropdown-1"
+      label="RangeDropdownMain"
+      optionsFrom={
+        Array [
+          Object {
+            "label": "from",
+            "value": "from",
+          },
+          Object {
+            "label": "100",
+            "value": "100",
+          },
+          Object {
+            "label": "200",
+            "value": "200",
+          },
+          Object {
+            "label": "300",
+            "value": "300",
+          },
+        ]
+      }
+      optionsTo={
+        Array [
+          Object {
+            "label": "to",
+            "value": "to",
+          },
+          Object {
+            "label": "100",
+            "value": "100",
+          },
+          Object {
+            "label": "200",
+            "value": "200",
+          },
+          Object {
+            "label": "300",
+            "value": "300",
+          },
+        ]
+      }
+      placeholderFrom="from"
+      placeholderTo="to"
+    >
+      <styled.div
+        id="dropdown-1"
+      >
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-iwsKbI",
+                "isStatic": false,
+                "lastClassName": "dRZuUw",
+                "rules": Array [
+                  "
+  display: flex;
+  flex-direction: column;
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-iwsKbI",
+              "target": "div",
+              "toString": [Function],
+              "usesTheme": false,
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          id="dropdown-1"
+        >
+          <div
+            className="sc-iwsKbI dRZuUw"
+            id="dropdown-1"
+          >
+            <Component
+              id="rangeDropdown dropdown-1 label"
+            >
+              <styled.label>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "buHnlq",
+                        "rules": Array [
+                          "
+  display: flex;
+  cursor: pointer;
+  padding: 0 1rem 0.5rem;
+",
+                        ],
+                      },
+                      "displayName": "styled.label",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "label",
+                      "toString": [Function],
+                      "usesTheme": false,
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <label
+                    className="sc-bwzfXH buHnlq"
+                  >
+                    RangeDropdownMain
+                  </label>
+                </StyledComponent>
+              </styled.label>
+            </Component>
+            <styled.div>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-gZMcBi",
+                      "isStatic": false,
+                      "lastClassName": "dcMSXI",
+                      "rules": Array [
+                        "
+  display: flex;
+  justify-content: space-between;
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-gZMcBi",
+                    "target": "div",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <div
+                  className="sc-gZMcBi dcMSXI"
+                >
+                  <styled.div>
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-dnqmqq",
+                            "isStatic": false,
+                            "lastClassName": "dGHRLs",
+                            "rules": Array [
+                              "
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  height: 100%;
+  position: relative;
+
+  ",
+                              ".sc-htoDjs",
+                              " {
+    position: absolute;
+    z-index: 1;
+    width: calc(100% - 2.5rem);
+    & > input {
+      -moz-appearance: textfield;
+      &::placeholder {
+        color: ",
+                              "#313330",
+                              ";
+      }
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-dnqmqq",
+                          "target": "div",
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <div
+                        className="sc-dnqmqq dGHRLs"
+                      >
+                        <Component
+                          aria-label="input-from"
+                          id="from-input-dropdown-1"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="from"
+                          type="number"
+                          value="from"
+                        >
+                          <styled.div
+                            style={
+                              Object {
+                                "width": undefined,
+                              }
+                            }
+                          >
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-htoDjs",
+                                    "isStatic": false,
+                                    "lastClassName": "exfrZi",
+                                    "rules": Array [
+                                      "
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 1rem;
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.div",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-htoDjs",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "usesTheme": false,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              style={
+                                Object {
+                                  "width": undefined,
+                                }
+                              }
+                            >
+                              <div
+                                className="sc-htoDjs exfrZi"
+                                style={
+                                  Object {
+                                    "width": undefined,
+                                  }
+                                }
+                              >
+                                <styled.input
+                                  aria-label="input-from"
+                                  id="from-input-dropdown-1"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  placeholder="from"
+                                  type="number"
+                                  value="from"
+                                >
+                                  <StyledComponent
+                                    aria-label="input-from"
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-gzVnrw",
+                                          "isStatic": false,
+                                          "lastClassName": "dnuwiZ",
+                                          "rules": Array [
+                                            "
+  border-radius: 4px;
+  border: ",
+                                            "1",
+                                            "px solid ",
+                                            "#C4C4C4",
+                                            ";
+  font-family: ",
+                                            "Roboto, sans-serif",
+                                            ";
+  font-size: ",
+                                            "16",
+                                            "px;
+  padding: 1rem 0.5rem;
+  color: ",
+                                            "#313330",
+                                            ";
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+
+  :focus {
+    outline: none;
+  }
+
+  &[type='text'],
+  &[type='password'],
+  &[type='email'],
+  &[type='tel'],
+  &[type='url'],
+  &[type='number'] {
+    :focus {
+      border-color: ",
+                                            "#75DFC0",
+                                            ";
+    }
+  }
+
+  ",
+                                            "@media (min-width: 768px)",
+                                            " {
+    padding: 1rem;
+  }
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.input",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-gzVnrw",
+                                        "target": "input",
+                                        "toString": [Function],
+                                        "usesTheme": false,
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                    id="from-input-dropdown-1"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="from"
+                                    type="number"
+                                    value="from"
+                                  >
+                                    <input
+                                      aria-label="input-from"
+                                      className="sc-gzVnrw dnuwiZ"
+                                      id="from-input-dropdown-1"
+                                      onBlur={[Function]}
+                                      onChange={[Function]}
+                                      placeholder="from"
+                                      type="number"
+                                      value="from"
+                                    />
+                                  </StyledComponent>
+                                </styled.input>
+                              </div>
+                            </StyledComponent>
+                          </styled.div>
+                        </Component>
+                        <Component
+                          id="from-dropdown-dropdown-1"
+                          onChange={[Function]}
+                          options={
+                            Array [
+                              Object {
+                                "label": "from",
+                                "value": "from",
+                              },
+                              Object {
+                                "label": "100",
+                                "value": "100",
+                              },
+                              Object {
+                                "label": "200",
+                                "value": "200",
+                              },
+                              Object {
+                                "label": "300",
+                                "value": "300",
+                              },
+                            ]
+                          }
+                          value="from"
+                        >
+                          <styled.span
+                            style={
+                              Object {
+                                "width": undefined,
+                              }
+                            }
+                          >
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-bxivhb",
+                                    "isStatic": false,
+                                    "lastClassName": "ffXmyh",
+                                    "rules": Array [
+                                      "
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 2rem;
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.span",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-bxivhb",
+                                  "target": "span",
+                                  "toString": [Function],
+                                  "usesTheme": false,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              style={
+                                Object {
+                                  "width": undefined,
+                                }
+                              }
+                            >
+                              <span
+                                className="sc-bxivhb ffXmyh"
+                                style={
+                                  Object {
+                                    "width": undefined,
+                                  }
+                                }
+                              >
+                                <styled.div>
+                                  <StyledComponent
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-EHOje",
+                                          "isStatic": false,
+                                          "lastClassName": "eQMpHY",
+                                          "rules": Array [
+                                            "
+  position: relative;
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.div",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-EHOje",
+                                        "target": "div",
+                                        "toString": [Function],
+                                        "usesTheme": false,
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                  >
+                                    <div
+                                      className="sc-EHOje eQMpHY"
+                                    >
+                                      <styled.select
+                                        aria-label="from-dropdown-dropdown-1"
+                                        disabled={false}
+                                        id="from-dropdown-dropdown-1"
+                                        onChange={[Function]}
+                                        value="from"
+                                      >
+                                        <StyledComponent
+                                          aria-label="from-dropdown-dropdown-1"
+                                          disabled={false}
+                                          forwardedComponent={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-bZQynM",
+                                                "isStatic": false,
+                                                "lastClassName": "ITLML",
+                                                "rules": Array [
+                                                  "
+  appearance: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: ",
+                                                  "1",
+                                                  "px solid ",
+                                                  "#C4C4C4",
+                                                  ";
+  border-radius: 4px;
+  font-family: ",
+                                                  "Roboto, sans-serif",
+                                                  ";
+  font-size: ",
+                                                  "16",
+                                                  "px;
+  background-color: ",
+                                                  "#FFFFFF",
+                                                  ";
+  color: ",
+                                                  "#313330",
+                                                  ";
+  width: 100%;
+  padding: 1rem 0.5rem;
+  margin: 0;
+  outline: 0;
+
+  &:focus {
+    border-color: ",
+                                                  "#75DFC0",
+                                                  ";
+  }
+
+  &.touched:invalid {
+    border-color: ",
+                                                  "#B75C50",
+                                                  ";
+  }
+
+  ",
+                                                  "@media (min-width: 768px)",
+                                                  " {
+    padding: 1rem;
+  }
+",
+                                                ],
+                                              },
+                                              "displayName": "styled.select",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-bZQynM",
+                                              "target": "select",
+                                              "toString": [Function],
+                                              "usesTheme": false,
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
+                                            }
+                                          }
+                                          forwardedRef={null}
+                                          id="from-dropdown-dropdown-1"
+                                          onChange={[Function]}
+                                          value="from"
+                                        >
+                                          <select
+                                            aria-label="from-dropdown-dropdown-1"
+                                            className="sc-bZQynM ITLML"
+                                            disabled={false}
+                                            id="from-dropdown-dropdown-1"
+                                            onChange={[Function]}
+                                            value="from"
+                                          >
+                                            <FormattedMessage
+                                              id="from"
+                                              key="from"
+                                              values={Object {}}
+                                            >
+                                              <option
+                                                key="from"
+                                                value="from"
+                                              >
+                                                from
+                                              </option>
+                                            </FormattedMessage>
+                                            <FormattedMessage
+                                              id="100"
+                                              key="100"
+                                              values={Object {}}
+                                            >
+                                              <option
+                                                key="100"
+                                                value="100"
+                                              >
+                                                100
+                                              </option>
+                                            </FormattedMessage>
+                                            <FormattedMessage
+                                              id="200"
+                                              key="200"
+                                              values={Object {}}
+                                            >
+                                              <option
+                                                key="200"
+                                                value="200"
+                                              >
+                                                200
+                                              </option>
+                                            </FormattedMessage>
+                                            <FormattedMessage
+                                              id="300"
+                                              key="300"
+                                              values={Object {}}
+                                            >
+                                              <option
+                                                key="300"
+                                                value="300"
+                                              >
+                                                300
+                                              </option>
+                                            </FormattedMessage>
+                                          </select>
+                                        </StyledComponent>
+                                      </styled.select>
+                                      <styled.span>
+                                        <StyledComponent
+                                          forwardedComponent={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-ifAKCX",
+                                                "isStatic": false,
+                                                "lastClassName": "dZQlBY",
+                                                "rules": Array [
+                                                  "
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  right: 0.75rem;
+  top: 25%;
+  color: ",
+                                                  "#20AD90",
+                                                  ";
+  &::before {
+    content: '';
+    width: 0.0625rem;
+    height: 0.5rem;
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 0.5rem;
+    right: 0.7rem;
+    background-color: ",
+                                                  "#20AD90",
+                                                  ";
+  }
+  &::after {
+    content: '';
+    width: 0.0625rem;
+    height: 0.5rem;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 0.5rem;
+    right: 0.35rem;
+    background-color: ",
+                                                  "#20AD90",
+                                                  ";
+  }
+",
+                                                ],
+                                              },
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-ifAKCX",
+                                              "target": "span",
+                                              "toString": [Function],
+                                              "usesTheme": false,
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
+                                            }
+                                          }
+                                          forwardedRef={null}
+                                        >
+                                          <span
+                                            className="sc-ifAKCX dZQlBY"
+                                          />
+                                        </StyledComponent>
+                                      </styled.span>
+                                    </div>
+                                  </StyledComponent>
+                                </styled.div>
+                              </span>
+                            </StyledComponent>
+                          </styled.span>
+                        </Component>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div>
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-dnqmqq",
+                            "isStatic": false,
+                            "lastClassName": "dGHRLs",
+                            "rules": Array [
+                              "
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  height: 100%;
+  position: relative;
+
+  ",
+                              ".sc-htoDjs",
+                              " {
+    position: absolute;
+    z-index: 1;
+    width: calc(100% - 2.5rem);
+    & > input {
+      -moz-appearance: textfield;
+      &::placeholder {
+        color: ",
+                              "#313330",
+                              ";
+      }
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-dnqmqq",
+                          "target": "div",
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <div
+                        className="sc-dnqmqq dGHRLs"
+                      >
+                        <Component
+                          aria-label="input-to"
+                          id="to-input-dropdown-1"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="to"
+                          type="number"
+                          value="to"
+                        >
+                          <styled.div
+                            style={
+                              Object {
+                                "width": undefined,
+                              }
+                            }
+                          >
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-htoDjs",
+                                    "isStatic": false,
+                                    "lastClassName": "exfrZi",
+                                    "rules": Array [
+                                      "
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 1rem;
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.div",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-htoDjs",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "usesTheme": false,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              style={
+                                Object {
+                                  "width": undefined,
+                                }
+                              }
+                            >
+                              <div
+                                className="sc-htoDjs exfrZi"
+                                style={
+                                  Object {
+                                    "width": undefined,
+                                  }
+                                }
+                              >
+                                <styled.input
+                                  aria-label="input-to"
+                                  id="to-input-dropdown-1"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  placeholder="to"
+                                  type="number"
+                                  value="to"
+                                >
+                                  <StyledComponent
+                                    aria-label="input-to"
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-gzVnrw",
+                                          "isStatic": false,
+                                          "lastClassName": "dnuwiZ",
+                                          "rules": Array [
+                                            "
+  border-radius: 4px;
+  border: ",
+                                            "1",
+                                            "px solid ",
+                                            "#C4C4C4",
+                                            ";
+  font-family: ",
+                                            "Roboto, sans-serif",
+                                            ";
+  font-size: ",
+                                            "16",
+                                            "px;
+  padding: 1rem 0.5rem;
+  color: ",
+                                            "#313330",
+                                            ";
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+
+  :focus {
+    outline: none;
+  }
+
+  &[type='text'],
+  &[type='password'],
+  &[type='email'],
+  &[type='tel'],
+  &[type='url'],
+  &[type='number'] {
+    :focus {
+      border-color: ",
+                                            "#75DFC0",
+                                            ";
+    }
+  }
+
+  ",
+                                            "@media (min-width: 768px)",
+                                            " {
+    padding: 1rem;
+  }
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.input",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-gzVnrw",
+                                        "target": "input",
+                                        "toString": [Function],
+                                        "usesTheme": false,
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                    id="to-input-dropdown-1"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="to"
+                                    type="number"
+                                    value="to"
+                                  >
+                                    <input
+                                      aria-label="input-to"
+                                      className="sc-gzVnrw dnuwiZ"
+                                      id="to-input-dropdown-1"
+                                      onBlur={[Function]}
+                                      onChange={[Function]}
+                                      placeholder="to"
+                                      type="number"
+                                      value="to"
+                                    />
+                                  </StyledComponent>
+                                </styled.input>
+                              </div>
+                            </StyledComponent>
+                          </styled.div>
+                        </Component>
+                        <Component
+                          id="from-dropdown-dropdown-1"
+                          onChange={[Function]}
+                          options={
+                            Array [
+                              Object {
+                                "label": "to",
+                                "value": "to",
+                              },
+                              Object {
+                                "label": "100",
+                                "value": "100",
+                              },
+                              Object {
+                                "label": "200",
+                                "value": "200",
+                              },
+                              Object {
+                                "label": "300",
+                                "value": "300",
+                              },
+                            ]
+                          }
+                          value="to"
+                        >
+                          <styled.span
+                            style={
+                              Object {
+                                "width": undefined,
+                              }
+                            }
+                          >
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-bxivhb",
+                                    "isStatic": false,
+                                    "lastClassName": "ffXmyh",
+                                    "rules": Array [
+                                      "
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 2rem;
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.span",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-bxivhb",
+                                  "target": "span",
+                                  "toString": [Function],
+                                  "usesTheme": false,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              style={
+                                Object {
+                                  "width": undefined,
+                                }
+                              }
+                            >
+                              <span
+                                className="sc-bxivhb ffXmyh"
+                                style={
+                                  Object {
+                                    "width": undefined,
+                                  }
+                                }
+                              >
+                                <styled.div>
+                                  <StyledComponent
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-EHOje",
+                                          "isStatic": false,
+                                          "lastClassName": "eQMpHY",
+                                          "rules": Array [
+                                            "
+  position: relative;
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.div",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-EHOje",
+                                        "target": "div",
+                                        "toString": [Function],
+                                        "usesTheme": false,
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                  >
+                                    <div
+                                      className="sc-EHOje eQMpHY"
+                                    >
+                                      <styled.select
+                                        aria-label="from-dropdown-dropdown-1"
+                                        disabled={false}
+                                        id="from-dropdown-dropdown-1"
+                                        onChange={[Function]}
+                                        value="to"
+                                      >
+                                        <StyledComponent
+                                          aria-label="from-dropdown-dropdown-1"
+                                          disabled={false}
+                                          forwardedComponent={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-bZQynM",
+                                                "isStatic": false,
+                                                "lastClassName": "ITLML",
+                                                "rules": Array [
+                                                  "
+  appearance: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: ",
+                                                  "1",
+                                                  "px solid ",
+                                                  "#C4C4C4",
+                                                  ";
+  border-radius: 4px;
+  font-family: ",
+                                                  "Roboto, sans-serif",
+                                                  ";
+  font-size: ",
+                                                  "16",
+                                                  "px;
+  background-color: ",
+                                                  "#FFFFFF",
+                                                  ";
+  color: ",
+                                                  "#313330",
+                                                  ";
+  width: 100%;
+  padding: 1rem 0.5rem;
+  margin: 0;
+  outline: 0;
+
+  &:focus {
+    border-color: ",
+                                                  "#75DFC0",
+                                                  ";
+  }
+
+  &.touched:invalid {
+    border-color: ",
+                                                  "#B75C50",
+                                                  ";
+  }
+
+  ",
+                                                  "@media (min-width: 768px)",
+                                                  " {
+    padding: 1rem;
+  }
+",
+                                                ],
+                                              },
+                                              "displayName": "styled.select",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-bZQynM",
+                                              "target": "select",
+                                              "toString": [Function],
+                                              "usesTheme": false,
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
+                                            }
+                                          }
+                                          forwardedRef={null}
+                                          id="from-dropdown-dropdown-1"
+                                          onChange={[Function]}
+                                          value="to"
+                                        >
+                                          <select
+                                            aria-label="from-dropdown-dropdown-1"
+                                            className="sc-bZQynM ITLML"
+                                            disabled={false}
+                                            id="from-dropdown-dropdown-1"
+                                            onChange={[Function]}
+                                            value="to"
+                                          >
+                                            <FormattedMessage
+                                              id="to"
+                                              key="to"
+                                              values={Object {}}
+                                            >
+                                              <option
+                                                key="to"
+                                                value="to"
+                                              >
+                                                to
+                                              </option>
+                                            </FormattedMessage>
+                                            <FormattedMessage
+                                              id="100"
+                                              key="100"
+                                              values={Object {}}
+                                            >
+                                              <option
+                                                key="100"
+                                                value="100"
+                                              >
+                                                100
+                                              </option>
+                                            </FormattedMessage>
+                                            <FormattedMessage
+                                              id="200"
+                                              key="200"
+                                              values={Object {}}
+                                            >
+                                              <option
+                                                key="200"
+                                                value="200"
+                                              >
+                                                200
+                                              </option>
+                                            </FormattedMessage>
+                                            <FormattedMessage
+                                              id="300"
+                                              key="300"
+                                              values={Object {}}
+                                            >
+                                              <option
+                                                key="300"
+                                                value="300"
+                                              >
+                                                300
+                                              </option>
+                                            </FormattedMessage>
+                                          </select>
+                                        </StyledComponent>
+                                      </styled.select>
+                                      <styled.span>
+                                        <StyledComponent
+                                          forwardedComponent={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-ifAKCX",
+                                                "isStatic": false,
+                                                "lastClassName": "dZQlBY",
+                                                "rules": Array [
+                                                  "
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  right: 0.75rem;
+  top: 25%;
+  color: ",
+                                                  "#20AD90",
+                                                  ";
+  &::before {
+    content: '';
+    width: 0.0625rem;
+    height: 0.5rem;
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 0.5rem;
+    right: 0.7rem;
+    background-color: ",
+                                                  "#20AD90",
+                                                  ";
+  }
+  &::after {
+    content: '';
+    width: 0.0625rem;
+    height: 0.5rem;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 0.5rem;
+    right: 0.35rem;
+    background-color: ",
+                                                  "#20AD90",
+                                                  ";
+  }
+",
+                                                ],
+                                              },
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-ifAKCX",
+                                              "target": "span",
+                                              "toString": [Function],
+                                              "usesTheme": false,
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
+                                            }
+                                          }
+                                          forwardedRef={null}
+                                        >
+                                          <span
+                                            className="sc-ifAKCX dZQlBY"
+                                          />
+                                        </StyledComponent>
+                                      </styled.span>
+                                    </div>
+                                  </StyledComponent>
+                                </styled.div>
+                              </span>
+                            </StyledComponent>
+                          </styled.span>
+                        </Component>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </Component>
+  </IntlProvider>
+</ThemeProvider>
+`;
+
+exports[`RangeDropdown Input renderSelector renders 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "button": Object {
+        "primary": Object {
+          "background": "#75dfc0",
+          "border": Object {
+            "color": "#75dfc0",
+            "radius": 4,
+            "width": 2,
+          },
+          "color": "#313330",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "size": 16,
+            "spacing": 0,
+            "weight": 500,
+          },
+          "hover": Object {
+            "shadow": "0 4px 4px rgba(0, 0 ,0, 0.1)",
+          },
+        },
+      },
+      "card": Object {
+        "border": Object {
+          "color": "#C4C4C4",
+          "radius": 4,
+          "width": 2,
+        },
+      },
+      "color": Object {
+        "brightGrey": "#606164",
+        "downy": "#75DFC0",
+        "flamePea": "#B75C50",
+        "lightGrey": "#FAFAFA",
+        "niagara": "#20AD90",
+        "oil": "#313330",
+        "parisDaisy": "#FFE44C",
+        "silver": "#C4C4C4",
+        "white": "#FFFFFF",
+      },
+      "font": Object {
+        "sans": Object {
+          "family": "Roboto, sans-serif",
+        },
+      },
+      "footer": Object {
+        "maxWidth": 1320,
+      },
+      "heading": Object {
+        "l": Object {
+          "size": 36,
+        },
+        "m": Object {
+          "size": 32,
+        },
+        "s": Object {
+          "size": 24,
+        },
+        "xl": Object {
+          "size": 48,
+        },
+        "xs": Object {
+          "size": 20,
+        },
+        "xxl": Object {
+          "size": 60,
+        },
+        "xxs": Object {
+          "size": 18,
+        },
+      },
+      "input": Object {
+        "border": Object {
+          "color": "#C4C4C4",
+          "width": 1,
+        },
+        "font": Object {
+          "family": "Roboto, sans-serif",
+          "size": 16,
+        },
+      },
+      "label": Object {
+        "font": Object {
+          "family": "Roboto, sans-serif",
+          "size": 1,
+          "weight": 600,
+        },
+        "letter": Object {
+          "spacing": 0.01,
+        },
+        "line": Object {
+          "height": 1.15,
+        },
+      },
+      "mediaQueries": Object {
+        "whenDesktop": "@media (min-width: 1024px)",
+        "whenDesktopXL": "@media (min-width: 1440px)",
+        "whenMobileL": "@media (min-width: 425px)",
+        "whenTablet": "@media (min-width: 768px)",
+      },
+      "name": "default",
+      "table": Object {
+        "body": Object {
+          "background": "#FFFFFF",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "height": 28,
+            "size": 12,
+            "spacing": 0.4,
+          },
+        },
+        "foot": Object {
+          "background": "#FFFFFF",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "height": 28,
+            "size": 12,
+            "spacing": 0.4,
+            "weight": 500,
+          },
+        },
+        "head": Object {
+          "background": "#FFFFFF",
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "height": 28,
+            "size": 12,
+            "spacing": 0.4,
+            "weight": 500,
+          },
+        },
+        "innerBorder": Object {
+          "color": "#C4C4C4",
+          "radius": 0,
+          "width": 1,
+        },
+        "outerBorder": Object {
+          "color": "#C4C4C4",
+          "radius": 4,
+          "width": 2,
+        },
+      },
+    }
+  }
+>
+  <IntlProvider
+    defaultFormats={Object {}}
+    defaultLocale="en"
+    formats={Object {}}
+    locale="de"
+    messages={Object {}}
+    onError={[Function]}
+    textComponent={Symbol(react.fragment)}
+  >
+    <styled.div>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-dnqmqq",
+              "isStatic": false,
+              "lastClassName": "dGHRLs",
+              "rules": Array [
+                "
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  height: 100%;
+  position: relative;
+
+  ",
+                ".sc-htoDjs",
+                " {
+    position: absolute;
+    z-index: 1;
+    width: calc(100% - 2.5rem);
+    & > input {
+      -moz-appearance: textfield;
+      &::placeholder {
+        color: ",
+                "#313330",
+                ";
+      }
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-dnqmqq",
+            "target": "div",
+            "toString": [Function],
+            "usesTheme": false,
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <div
+          className="sc-dnqmqq dGHRLs"
+        >
+          <Component
+            aria-label="input-from"
+            id="from-input-test-1"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="from"
+            type="number"
+            value={1}
+          >
+            <styled.div
+              style={
+                Object {
+                  "width": undefined,
+                }
+              }
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-htoDjs",
+                      "isStatic": false,
+                      "lastClassName": "exfrZi",
+                      "rules": Array [
+                        "
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 1rem;
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-htoDjs",
+                    "target": "div",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <div
+                  className="sc-htoDjs exfrZi"
+                  style={
+                    Object {
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <styled.input
+                    aria-label="input-from"
+                    id="from-input-test-1"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="from"
+                    type="number"
+                    value={1}
+                  >
+                    <StyledComponent
+                      aria-label="input-from"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-gzVnrw",
+                            "isStatic": false,
+                            "lastClassName": "dnuwiZ",
+                            "rules": Array [
+                              "
+  border-radius: 4px;
+  border: ",
+                              "1",
+                              "px solid ",
+                              "#C4C4C4",
+                              ";
+  font-family: ",
+                              "Roboto, sans-serif",
+                              ";
+  font-size: ",
+                              "16",
+                              "px;
+  padding: 1rem 0.5rem;
+  color: ",
+                              "#313330",
+                              ";
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+
+  :focus {
+    outline: none;
+  }
+
+  &[type='text'],
+  &[type='password'],
+  &[type='email'],
+  &[type='tel'],
+  &[type='url'],
+  &[type='number'] {
+    :focus {
+      border-color: ",
+                              "#75DFC0",
+                              ";
+    }
+  }
+
+  ",
+                              "@media (min-width: 768px)",
+                              " {
+    padding: 1rem;
+  }
+",
+                            ],
+                          },
+                          "displayName": "styled.input",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-gzVnrw",
+                          "target": "input",
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      id="from-input-test-1"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="from"
+                      type="number"
+                      value={1}
+                    >
+                      <input
+                        aria-label="input-from"
+                        className="sc-gzVnrw dnuwiZ"
+                        id="from-input-test-1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="from"
+                        type="number"
+                        value={1}
+                      />
+                    </StyledComponent>
+                  </styled.input>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </Component>
+          <Component
+            id="from-dropdown-test-1"
+            onChange={[Function]}
+            options={
+              Array [
+                Object {
+                  "label": "This is one",
+                  "value": 1,
+                },
+              ]
+            }
+            value={1}
+          >
+            <styled.span
+              style={
+                Object {
+                  "width": undefined,
+                }
+              }
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bxivhb",
+                      "isStatic": false,
+                      "lastClassName": "ffXmyh",
+                      "rules": Array [
+                        "
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 2rem;
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bxivhb",
+                    "target": "span",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              >
+                <span
+                  className="sc-bxivhb ffXmyh"
+                  style={
+                    Object {
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <styled.div>
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-EHOje",
+                            "isStatic": false,
+                            "lastClassName": "eQMpHY",
+                            "rules": Array [
+                              "
+  position: relative;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-EHOje",
+                          "target": "div",
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <div
+                        className="sc-EHOje eQMpHY"
+                      >
+                        <styled.select
+                          aria-label="from-dropdown-test-1"
+                          disabled={false}
+                          id="from-dropdown-test-1"
+                          onChange={[Function]}
+                          value={1}
+                        >
+                          <StyledComponent
+                            aria-label="from-dropdown-test-1"
+                            disabled={false}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bZQynM",
+                                  "isStatic": false,
+                                  "lastClassName": "ITLML",
+                                  "rules": Array [
+                                    "
+  appearance: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: ",
+                                    "1",
+                                    "px solid ",
+                                    "#C4C4C4",
+                                    ";
+  border-radius: 4px;
+  font-family: ",
+                                    "Roboto, sans-serif",
+                                    ";
+  font-size: ",
+                                    "16",
+                                    "px;
+  background-color: ",
+                                    "#FFFFFF",
+                                    ";
+  color: ",
+                                    "#313330",
+                                    ";
+  width: 100%;
+  padding: 1rem 0.5rem;
+  margin: 0;
+  outline: 0;
+
+  &:focus {
+    border-color: ",
+                                    "#75DFC0",
+                                    ";
+  }
+
+  &.touched:invalid {
+    border-color: ",
+                                    "#B75C50",
+                                    ";
+  }
+
+  ",
+                                    "@media (min-width: 768px)",
+                                    " {
+    padding: 1rem;
+  }
+",
+                                  ],
+                                },
+                                "displayName": "styled.select",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-bZQynM",
+                                "target": "select",
+                                "toString": [Function],
+                                "usesTheme": false,
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            id="from-dropdown-test-1"
+                            onChange={[Function]}
+                            value={1}
+                          >
+                            <select
+                              aria-label="from-dropdown-test-1"
+                              className="sc-bZQynM ITLML"
+                              disabled={false}
+                              id="from-dropdown-test-1"
+                              onChange={[Function]}
+                              value={1}
+                            >
+                              <FormattedMessage
+                                id="This is one"
+                                key="1"
+                                values={Object {}}
+                              >
+                                <option
+                                  key="1"
+                                  value={1}
+                                >
+                                  This is one
+                                </option>
+                              </FormattedMessage>
+                            </select>
+                          </StyledComponent>
+                        </styled.select>
+                        <styled.span>
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-ifAKCX",
+                                  "isStatic": false,
+                                  "lastClassName": "dZQlBY",
+                                  "rules": Array [
+                                    "
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  right: 0.75rem;
+  top: 25%;
+  color: ",
+                                    "#20AD90",
+                                    ";
+  &::before {
+    content: '';
+    width: 0.0625rem;
+    height: 0.5rem;
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 0.5rem;
+    right: 0.7rem;
+    background-color: ",
+                                    "#20AD90",
+                                    ";
+  }
+  &::after {
+    content: '';
+    width: 0.0625rem;
+    height: 0.5rem;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 0.5rem;
+    right: 0.35rem;
+    background-color: ",
+                                    "#20AD90",
+                                    ";
+  }
+",
+                                  ],
+                                },
+                                "displayName": "styled.span",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-ifAKCX",
+                                "target": "span",
+                                "toString": [Function],
+                                "usesTheme": false,
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                          >
+                            <span
+                              className="sc-ifAKCX dZQlBY"
+                            />
+                          </StyledComponent>
+                        </styled.span>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Component>
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </IntlProvider>
+</ThemeProvider>
+`;
