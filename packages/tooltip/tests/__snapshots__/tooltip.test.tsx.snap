@@ -167,7 +167,7 @@ exports[`Tooltip renders 1`] = `
               "attrs": Array [],
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bwzfXH",
-                "isStatic": true,
+                "isStatic": false,
                 "lastClassName": "eYTwFP",
                 "rules": Array [
                   "
@@ -188,6 +188,7 @@ exports[`Tooltip renders 1`] = `
               "styledComponentId": "sc-bwzfXH",
               "target": "div",
               "toString": [Function],
+              "usesTheme": false,
               "warnTooManyClasses": [Function],
               "withComponent": [Function],
             }
@@ -206,7 +207,7 @@ exports[`Tooltip renders 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bdVaJa",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "gLKrLC",
                       "rules": Array [
                         "
@@ -251,6 +252,7 @@ exports[`Tooltip renders 1`] = `
                     "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
+                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }

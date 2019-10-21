@@ -20,23 +20,47 @@ describe('Global | Footer', () => {
   });
 
   it('renders default variant', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<Footer />, 'de', messages));
+    const wrapper = mount(
+      renderWithThemeAdnI18n(
+        <Footer variant="full" googleToken="" facebookToken="" />,
+        'de',
+        messages
+      )
+    );
     expect(wrapper.find(TrustfulSection).length).toEqual(1);
     expect(wrapper.find(TrustfulHeading).length).toEqual(2);
   });
 
   it('default variant have menu items', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<Footer />, 'de', messages));
+    const wrapper = mount(
+      renderWithThemeAdnI18n(
+        <Footer variant="full" googleToken="" facebookToken="" />,
+        'de',
+        messages
+      )
+    );
     expect(wrapper.find(MenuItem)).toHaveLength(6);
   });
 
   it('default variant has social container', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<Footer />, 'de', messages));
+    const wrapper = mount(
+      renderWithThemeAdnI18n(
+        <Footer variant="full" googleToken="" facebookToken="" />,
+        'de',
+        messages
+      )
+    );
     expect(wrapper.find(SocialContainer)).toHaveLength(1);
   });
 
   it('default variant has copyrights section', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<Footer />, 'de', messages));
+    const wrapper = mount(
+      renderWithThemeAdnI18n(
+        <Footer variant="full" googleToken="" facebookToken="" />,
+        'de',
+        messages
+      )
+    );
     expect(wrapper.find(Copyrights)).toHaveLength(1);
   });
 
