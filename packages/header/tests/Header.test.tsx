@@ -10,11 +10,7 @@ describe('Header', () => {
   it('default', () => {
     const wrapper = mount(
       <ThemeProvider theme={theme}>
-        <Header
-          onTheLeft={<BrandingLogo brandingHolder="Instamotion" link="/" />}
-          inTheMiddle={<div> Some contacts </div>}
-          onTheRight={<BrandingLogo brandingHolder="Allianz" link="/" />}
-        />
+        <Header variant="black" imgPath="" />
       </ThemeProvider>
     );
 

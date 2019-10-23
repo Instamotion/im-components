@@ -6,39 +6,35 @@ import Icon, { AvailableIcons } from '@im-ui/icon';
 interface Props {
   className?: string;
   text?: string;
+  color: AvailableColors;
+  colorHover: AvailableColors;
   path?: string;
   icon?: AvailableIcons;
 }
 
 export const LinkComponent: React.FC<Props> = ({ className, path, text, icon }) => {
   return (
-    <MenuItemLink>
-      <a href={path} className={className}>
-        {icon && <Icon iconName={icon} size={14} color={AvailableColors.downy} />}
-        {text}
-      </a>
-    </MenuItemLink>
+    <a href={path} className={className}>
+      {icon && <Icon iconName={icon} size={16} color={AvailableColors.downy} />}
+      {text}
+    </a>
   );
 };
 
-const MenuItemLink = styled.div`
-  height: 16px;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: white;
+const Link = styled(LinkComponent)`
+  font-weight: 500;
+  color: ${({ color }) => AvailableColors[color]};
   text-transform: uppercase;
-
-  a {
-    color: white;
-    text-decoration: none;
-    &:hover {
-      cursor: pointer;
-    }
+  margin-right: 1.5rem;
+  transition: color 0.2s ease;
+  text-decoration: none;
+  span {
+    margin-right: 0.25rem;
+    transition: color 0.2s ease;
+  }
+  &:hover {
+    color: ${({ colorHover }) => AvailableColors[colorHover]};
   }
 `;
 
-export default LinkComponent;
+export default Link;
