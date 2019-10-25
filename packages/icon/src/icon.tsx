@@ -267,13 +267,14 @@ export const IconWrapper = styled.span<IconsWrapperProps>`
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
+  margin: 0 0.5rem;
   ${({ size = 16 }) => css`
     width: ${size}px;
   `}
 `;
 
-export const Icon: React.FC<IconsProps> = ({ size = 20, color = 'silver', iconName }) => (
-  <IconWrapper size={size}>{Icons[iconName](size, color)}</IconWrapper>
-);
+export const Icon: React.FC<IconsProps> = ({ size = 20, color = 'oil', iconName }) => {
+  return <IconWrapper size={size}>{Icons[iconName](size, color)}</IconWrapper>;
+};
 
 export default Icon;
