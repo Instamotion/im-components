@@ -29,7 +29,7 @@ const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, link
         <a href={linkHref}>{linkText}</a>
       </FooterMailSubTitle>
       <form
-        action="https://www.instamotion.com/component/70/data/subscribe"
+        action="/component/70/data/subscribe"
         method="post"
         style={{ display: 'flex' }}
         onSubmit={tag}
