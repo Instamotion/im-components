@@ -8,16 +8,14 @@ export type IconButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const ButtonIcon = styled(Icon)`
-  font-size: 14px;
-  padding: 0 8px;
-  margin-left: -30px;
+  padding-right: 0.5rem;
 `;
 
 export const IconButton: React.FC<IconButtonProps> = (props: IconButtonProps) => {
   const { icon, children } = props;
   return (
     <Button {...props}>
-      <ButtonIcon iconName={icon} color="white" />
+      <ButtonIcon iconName={icon} color="oil" />
       {children}
     </Button>
   );

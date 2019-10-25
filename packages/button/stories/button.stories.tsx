@@ -15,7 +15,7 @@ storiesOf('Button', module)
   })
   .add('with text and icon', () => (
     <>
-      <div style={{ width: 300 }}>
+      <div>
         <IconButton icon="envelope">Icon Test</IconButton>
       </div>
     </>

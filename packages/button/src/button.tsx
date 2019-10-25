@@ -17,7 +17,7 @@ export const Button = styled.button`
   margin-top: 3rem;
   padding: 1rem;
   text-align: center;
-  width: 100%;
+  width: 17.5rem;
 
   transition: all 0.2s linear;
 
