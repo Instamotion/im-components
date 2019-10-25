@@ -117,16 +117,3 @@ always-auth=true
 scripts-prepend-node-path=true
 @instamotion:registry=https://npm.pkg.github.com/instamotion
 ```
-
-## Component development notes
-
-1. To add component dependency on another component:
-$ bolt w @im-ui/{component_1} add @im-ui/{compoent_2}
-
-2. Do not make import code directly:
-import {...} from '@im-ui/icon/src/file'
-
-instead use following:
-import {...} from '@im-ui/icon'
-
-if component requires something what is not exposed, expose it manually in `index.ts` of corresponding component

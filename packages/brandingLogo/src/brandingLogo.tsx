@@ -27,13 +27,13 @@ const AllianzHorizontalLogo = () => (
 );
 
 const InstamotionWrapper = styled.div`
-  width: 159px;
-  height: 32px;
+  width: 9.9375rem;
+  height: 2rem;
 `;
 
 const AllianzWrapper = styled.div`
-  width: 78px;
-  height: 32px;
+  width: 4.875rem;
+  height: 2rem;
 `;
 
 const AllianzHorizontalWrapper = styled.div`

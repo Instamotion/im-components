@@ -5,6 +5,7 @@ import CallerImg from './items/caller-img';
 import Link from './items/link';
 import theme, { AvailableColors } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
+import { FormattedMessage } from 'react-intl';
 
 export interface HeaderProps {
   variant: 'transparent' | 'dark';
@@ -46,10 +47,12 @@ export const HeaderComponent: React.FC<HeaderProps> = ({ variant, className, img
           />
         </LogoDesktopWrapper>
         <PhoneWrapper>
-          <span>Wir helfen Dir weiter!</span>
+          <HelpWrapper>
+            <FormattedMessage id="header.menu.help" />
+          </HelpWrapper>
           <CallerImg imgPath={imgPath} />
           <Link
-            text="089 411151-100"
+            text={<FormattedMessage id="header.menu.phone_number" />}
             color={textColor}
             colorHover={textColorHover}
             icon="phone"
@@ -58,21 +61,21 @@ export const HeaderComponent: React.FC<HeaderProps> = ({ variant, className, img
         </PhoneWrapper>
         <NavWrapper>
           <Link
-            text="Suchen"
+            text={<FormattedMessage id="header.menu.search" />}
             color={textColor}
             colorHover={textColorHover}
             icon="search"
             path="/todo-suchen"
           />
           <Link
-            text="Topangebote"
+            text={<FormattedMessage id="header.menu.top_offers" />}
             color={textColor}
             colorHover={textColorHover}
             icon="trophy"
             path="/todo-top"
           />
           <Link
-            text="Merkzettel"
+            text={<FormattedMessage id="header.menu.wish_list" />}
             color={textColor}
             colorHover={textColorHover}
             icon="star"
@@ -83,6 +86,7 @@ export const HeaderComponent: React.FC<HeaderProps> = ({ variant, className, img
       <AllianzBar>
         <BrandingLogo color={allianzColor} brandingHolder="Allianz" link="/" />
       </AllianzBar>
+      <Background></Background>
     </header>
   );
 };
@@ -95,9 +99,9 @@ const Header = styled(HeaderComponent)`
   justify-content: space-between;
   align-items: center;
   font-family: ${theme.font.sans.family};
-  height: 48px;
+  height: 3rem;
   ${theme.mediaQueries.whenDesktop} {
-    height: 64px;
+    height: 4rem;
   }
 `;
 
@@ -111,7 +115,7 @@ const BurgerWrapper = styled.div`
 const LogoWrapper = styled.div`
   display: block;
   width: 96px;
-  height: 34px;
+  height: 2rem;
   ${theme.mediaQueries.whenDesktop} {
     display: none;
   }
@@ -132,15 +136,16 @@ const LogoDesktopWrapper = styled.div`
 `;
 
 const PhoneWrapper = styled.div`
-  flex: 0.6;
+  flex-shring: 0;
   align-items: center;
   display: none;
   ${theme.mediaQueries.whenDesktop} {
     display: inline-flex;
   }
-  ${CallerImg} {
-    margin: 0 1rem;
-  }
+`;
+
+const HelpWrapper = styled.span`
+  margin-left: 1.5rem;
 `;
 
 const NavWrapper = styled.div`
@@ -177,5 +182,7 @@ const HeaderBar = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
+
+const Background = styled.div``;
 
 export default Header;

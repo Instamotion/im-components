@@ -11,12 +11,14 @@ export const IconComponent: React.FC<Props> = ({ className, imgPath }) => {
 };
 
 const Icon = styled(IconComponent)`
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
   background-image: url("${({ imgPath }) => imgPath}");
   object-fit: contain;
-  border-radius: 16px;
+  border-radius: 1rem;
   background-position: center;
+  margin: 0 1rem;
 `;
 
 export default Icon;

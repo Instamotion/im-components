@@ -5,7 +5,7 @@ import Icon, { AvailableIcons } from '@im-ui/icon';
 
 interface Props {
   className?: string;
-  text?: string;
+  text?: JSX.Element | string;
   color: AvailableColors;
   colorHover: AvailableColors;
   path?: string;
@@ -15,7 +15,7 @@ interface Props {
 export const LinkComponent: React.FC<Props> = ({ className, path, text, icon }) => {
   return (
     <a href={path} className={className}>
-      {icon && <Icon iconName={icon} size={16} color={AvailableColors.downy} />}
+      {icon && <Icon iconName={icon} size={16} color={'downy'} />}
       {text}
     </a>
   );
