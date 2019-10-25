@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css, ThemedStyledProps, FlattenInterpolation } from 'styled-components';
+import { AvailableColors } from '@im-ui/theme';
 
 const InstamotionLogo = () => (
   <svg viewBox="0 0 159 32">
@@ -37,19 +38,19 @@ const AllianzWrapper = styled.div`
 `;
 
 const AllianzHorizontalWrapper = styled.div`
-  width: 77px;
-  height: 12px;
+  width: 4.8125rem;
+  height: 0.75rem;
 `;
 
 const InstamotionAllianzWrapper = styled.div`
-  width: 96px;
-  height: 34px;
+  width: 6rem;
+  height: 2.125rem;
   & div:nth-child(1) {
-    height: 20px;
+    height: 1.25rem;
   }
   & div:nth-child(2) {
-    width: 77px;
-    margin-left: 19px;
+    width: 4.8125rem;
+    margin-left: 1.1875rem;
   }
 `;
 
@@ -103,10 +104,10 @@ export const BrandingLogoComponent: React.FC<BrandingLogoProps> = ({
 
 const BrandingLogo = styled(BrandingLogoComponent)`
   g path {
-    fill: ${({ color }) => color || '#fff'};
+    fill: ${({ color }) => color || AvailableColors.white};
   }
   g path:nth-child(2) {
-    fill: ${({ colorTwo }) => colorTwo || '#fff'};
+    fill: ${({ colorTwo }) => colorTwo || AvailableColors.white};
   }
 `;
 

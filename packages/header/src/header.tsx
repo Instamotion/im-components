@@ -25,7 +25,7 @@ export const HeaderComponent: React.FC<HeaderProps> = ({ variant, className, img
     <header className={className}>
       <HeaderBar>
         <BurgerWrapper>
-          <Icon iconName={'bars'} size={18} color={textColor} />
+          <Icon iconName={'bars'} size={16} color={textColor} />
         </BurgerWrapper>
         <LogoWrapper>
           <BrandingLogo
@@ -36,7 +36,7 @@ export const HeaderComponent: React.FC<HeaderProps> = ({ variant, className, img
           />
         </LogoWrapper>
         <SearchWrapper>
-          <Icon iconName={'search'} size={18} color={textColor} />
+          <Icon iconName={'search'} size={16} color={textColor} />
         </SearchWrapper>
         <LogoDesktopWrapper>
           <BrandingLogo
@@ -146,6 +146,10 @@ const PhoneWrapper = styled.div`
 
 const HelpWrapper = styled.span`
   margin-left: 1.5rem;
+  display: none;
+  ${theme.mediaQueries.whenDesktopXL} {
+    display: inline;
+  }
 `;
 
 const NavWrapper = styled.div`
