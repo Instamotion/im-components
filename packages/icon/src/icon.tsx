@@ -197,9 +197,22 @@ const Icons = {
       />
     </svg>
   ),
-
-  //  TODO: add 2 icons here  //
-
+  home: (size: number, colorName: AvailableColors = 'downy') => (
+    <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+      <path
+        fill={theme.color[colorName]}
+        d="M541 229.16l-61-49.83v-77.4a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v51.33L308.19 39.14a32.16 32.16 0 0 0-40.38 0L35 229.16a8 8 0 0 0-1.16 11.24l10.1 12.41a8 8 0 0 0 11.2 1.19L96 220.62v243a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-128l64 .3V464a16 16 0 0 0 16 16l128-.33a16 16 0 0 0 16-16V220.62L520.86 254a8 8 0 0 0 11.25-1.16l10.1-12.41a8 8 0 0 0-1.21-11.27zm-93.11 218.59h.1l-96 .3V319.88a16.05 16.05 0 0 0-15.95-16l-96-.27a16 16 0 0 0-16.05 16v128.14H128V194.51L288 63.94l160 130.57z"
+      ></path>
+    </svg>
+  ),
+  carSide: (size: number, colorName: AvailableColors = 'downy') => (
+    <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+      <path
+        fill={theme.color[colorName]}
+        d="M544 192h-16L419.21 56.02A63.99 63.99 0 0 0 369.24 32H171.33c-26.17 0-49.7 15.93-59.42 40.23L64 192c-35.35 0-64 28.65-64 64v112c0 8.84 7.16 16 16 16h48c0 53.02 42.98 96 96 96s96-42.98 96-96h128c0 53.02 42.98 96 96 96s96-42.98 96-96h48c8.84 0 16-7.16 16-16v-80c0-53.02-42.98-96-96-96zM288 64h81.24c9.77 0 18.88 4.38 24.99 12.01L487.02 192H288V64zM141.62 84.12C146.51 71.89 158.17 64 171.33 64H256v128H98.46l43.16-107.88zM160 448c-35.35 0-64-28.65-64-64s28.65-64 64-64 64 28.65 64 64-28.65 64-64 64zm320 0c-35.35 0-64-28.65-64-64s28.65-64 64-64 64 28.65 64 64-28.65 64-64 64zm128-96h-37.88c-13.22-37.2-48.38-64-90.12-64s-76.9 26.8-90.12 64H250.12c-13.22-37.2-48.38-64-90.12-64s-76.9 26.8-90.12 64H32v-96c0-17.64 14.36-32 32-32h480c35.29 0 64 28.71 64 64v64z"
+      ></path>
+    </svg>
+  ),
   tilePlaceholder: (size: number, colorName: AvailableColors = 'silver') => (
     <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 271 160">
       <g fill={theme.color[colorName]} fillRule="evenodd" clipRule="evenodd" mask="url(#a)">
