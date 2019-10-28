@@ -40,7 +40,7 @@
   "dependencies": {
     "react-intl": "^3.3.1",
     "@im-ui/carousel": "0.1.2",
-    "@im-ui/icon": "0.2.2",
+    "@im-ui/icon": "0.2.3",
     "@im-ui/theme": "0.3.1",
     "@im-ui/typography": "0.2.2",
     "@im-ui/utils": "0.4.1"
