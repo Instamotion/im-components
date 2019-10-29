@@ -37,7 +37,7 @@
   "dependencies": {
     "@im-ui/button": "0.1.3",
     "@im-ui/label": "0.1.2",
-    "@im-ui/theme": "0.3.2",
+    "@im-ui/theme": "0.3.3",
     "@im-ui/utils": "0.4.1"
   }
 }

@@ -34,6 +34,6 @@
     "styled-components": "^4.4.0"
   },
   "dependencies": {
-    "@im-ui/theme": "0.3.2"
+    "@im-ui/theme": "0.3.3"
   }
 }
