@@ -13,7 +13,7 @@ interface Props {
 
 export const BurgerComponent: React.FC<Props> = ({ className, isOpen, textColor, clickedCb }) => {
   return (
-    <div onClick={() => clickedCb()} className={className}>
+    <div className={className} onClick={() => clickedCb()}>
       <MenuIconWrapped
         isVisible={!isOpen}
         icon={<Icon iconName={'bars'} size={16} color={textColor} />}

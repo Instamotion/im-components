@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import BrandingLogo from '@im-ui/branding-logo';
 import CallerImg from './items/caller-img';
 import Link from './items/link';
-import BurgerWrapper from './items/burger';
+import Burger from './items/burger';
 import MobileMenu from './items/mobile-menu';
 import theme, { AvailableColors } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
@@ -36,11 +36,7 @@ export const HeaderComponent: React.FC<HeaderProps> = ({
   return (
     <header className={className}>
       <HeaderBar>
-        <BurgerWrapper
-          clickedCb={() => burgerClicked()}
-          isOpen={isOpen}
-          textColor={textColor}
-        ></BurgerWrapper>
+        <Burger clickedCb={() => burgerClicked()} isOpen={isOpen} textColor={textColor}></Burger>
         <LogoWrapper>
           <BrandingLogo
             color={brandColor}
