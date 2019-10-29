@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import BrandingLogo from '@im-ui/branding-logo';
-import CallerImg from './items/caller-img';
+import CallerImg from './items/callerImg';
 import Link from './items/link';
 import Burger from './items/burger';
-import MobileMenu from './items/mobile-menu';
+import MobileMenu from './items/mobileMenu';
 import theme, { AvailableColors } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 import { FormattedMessage } from 'react-intl';
@@ -13,6 +13,7 @@ export interface HeaderWrapperProps {
   variant: 'transparent' | 'dark';
   imgPath: string;
   className?: string;
+  phoneNumber: string;
 }
 
 export interface HeaderProps extends HeaderWrapperProps {
@@ -25,6 +26,7 @@ export const HeaderComponent: React.FC<HeaderProps> = ({
   className,
   imgPath,
   burgerClicked,
+  phoneNumber,
   isOpen
 }) => {
   const brandColor = variant === 'dark' ? AvailableColors.white : AvailableColors.oil;
@@ -64,11 +66,11 @@ export const HeaderComponent: React.FC<HeaderProps> = ({
           </HelpWrapper>
           <CallerImg imgPath={imgPath} />
           <Link
-            text={<FormattedMessage id="header.menu.phone_number" />}
+            text={phoneNumber}
             color={textColor}
             colorHover={textColorHover}
             icon="phone"
-            path="tel:089-411151-100"
+            path={`tel:${phoneNumber}`}
           />
         </PhoneWrapper>
         <NavWrapper>
@@ -84,21 +86,21 @@ export const HeaderComponent: React.FC<HeaderProps> = ({
             color={textColor}
             colorHover={textColorHover}
             icon="trophy"
-            path="/top-offers"
+            path="/angebote"
           />
           <Link
             text={<FormattedMessage id="header.menu.wish_list" />}
             color={textColor}
             colorHover={textColorHover}
             icon="star"
-            path="/wish-list"
+            path="/favoriten"
           />
         </NavWrapper>
       </HeaderBar>
       <AllianzBar>
         <BrandingLogo color={allianzColor} brandingHolder="Allianz" link="/" />
       </AllianzBar>
-      <MobileMenu isOpen={isOpen}></MobileMenu>
+      <MobileMenu isOpen={isOpen} phoneNumber={phoneNumber}></MobileMenu>
     </header>
   );
 };
@@ -123,7 +125,7 @@ const Header = styled(HeaderComponent)`
 
 const LogoWrapper = styled.div`
   display: block;
-  width: 96px;
+  width: 6rem;
   height: 2rem;
   ${theme.mediaQueries.whenDesktop} {
     display: none;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Icon from '@im-ui/icon';
 import theme, { AvailableColors } from '@im-ui/theme';
-import MenuIconWrapped from './menu-icon-wrapper';
+import BurgerIcon from './burgerIconWrapper';
 
 interface Props {
   className?: string;
@@ -14,14 +14,14 @@ interface Props {
 export const BurgerComponent: React.FC<Props> = ({ className, isOpen, textColor, clickedCb }) => {
   return (
     <div className={className} onClick={() => clickedCb()}>
-      <MenuIconWrapped
+      <BurgerIcon
         isVisible={!isOpen}
         icon={<Icon iconName={'bars'} size={16} color={textColor} />}
-      ></MenuIconWrapped>
-      <MenuIconWrapped
+      ></BurgerIcon>
+      <BurgerIcon
         isVisible={isOpen}
         icon={<Icon iconName={'times'} size={16} color={textColor} />}
-      ></MenuIconWrapped>
+      ></BurgerIcon>
     </div>
   );
 };
@@ -33,7 +33,7 @@ const Burger = styled(BurgerComponent)`
   ${theme.mediaQueries.whenDesktop} {
     display: none;
   }
-  ${MenuIconWrapped}:nth-child (2) {
+  ${BurgerIcon}:last-child {
     position: absolute;
     top: 0;
   }

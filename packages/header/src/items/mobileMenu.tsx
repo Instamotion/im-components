@@ -7,32 +7,33 @@ import { FormattedMessage } from 'react-intl';
 interface Props {
   className?: string;
   isOpen: boolean;
+  phoneNumber: string;
 }
 
-export const MobileMenu: React.FC<Props> = ({ className, isOpen }) => {
+export const MobileMenu: React.FC<Props> = ({ className, phoneNumber }) => {
   return (
     <div className={className}>
       <MobileItems>
         <Link
-          text={<FormattedMessage id="header.menu.phone_number" />}
+          text={phoneNumber}
           color={'white'}
           colorHover={'downy'}
           icon="phone"
-          path="tel:089-411151-100"
+          path={`tel:${phoneNumber}`}
         />
         <Link
           text={<FormattedMessage id="header.menu.top_offers" />}
           color={'white'}
           colorHover={'downy'}
           icon="trophy"
-          path="/top-offers"
+          path="/angebote"
         />
         <Link
           text={<FormattedMessage id="header.menu.wish_list" />}
           color={'white'}
           colorHover={'downy'}
           icon="star"
-          path="/wish-list"
+          path="/favoriten"
         />
       </MobileItems>
     </div>
@@ -49,7 +50,7 @@ const MobileItems = styled.div`
   height: 100%;
   box-sizing: border-box;
   opacity: 1;
-  max-width: 425px;
+  max-width: 27rem;
   padding-left: 1.5rem;
   background-color: ${theme.color.oil};
   text-align: left;

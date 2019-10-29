@@ -11,20 +11,32 @@ import { AvailableColors } from '@im-ui/theme';
 describe('Header', () => {
   it('header rendered', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<HeaderWrapper variant="dark" imgPath="" />, 'de', messages)
+      renderWithThemeAdnI18n(
+        <HeaderWrapper variant="dark" imgPath="" phoneNumber="089-411151-100" />,
+        'de',
+        messages
+      )
     );
     expect(wrapper.find(HeaderWrapper).length).toEqual(1);
   });
   it('all logos rendered', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<HeaderWrapper variant="dark" imgPath="" />, 'de', messages)
+      renderWithThemeAdnI18n(
+        <HeaderWrapper variant="dark" imgPath="" phoneNumber="089-411151-100" />,
+        'de',
+        messages
+      )
     );
     expect(wrapper.find(BrandingLogo).length).toEqual(3);
   });
 
   it('tramsparent variant applied', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<HeaderWrapper variant="transparent" imgPath="" />, 'de', messages)
+      renderWithThemeAdnI18n(
+        <HeaderWrapper variant="transparent" imgPath="" phoneNumber="089-411151-100" />,
+        'de',
+        messages
+      )
     );
     expect(
       wrapper
@@ -47,7 +59,11 @@ describe('Header', () => {
   });
   it('tramsparent variant applied', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<HeaderWrapper variant="dark" imgPath="" />, 'de', messages)
+      renderWithThemeAdnI18n(
+        <HeaderWrapper variant="dark" imgPath="" phoneNumber="089-411151-100" />,
+        'de',
+        messages
+      )
     );
     expect(
       wrapper
