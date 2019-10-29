@@ -3,30 +3,44 @@ import styled from 'styled-components';
 import BrandingLogo from '@im-ui/branding-logo';
 import CallerImg from './items/caller-img';
 import Link from './items/link';
+import BurgerWrapper from './items/burger';
+import MobileMenu from './items/mobile-menu';
 import theme, { AvailableColors } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 import { FormattedMessage } from 'react-intl';
 
-export interface HeaderProps {
+export interface HeaderWrapperProps {
   variant: 'transparent' | 'dark';
   imgPath: string;
   className?: string;
 }
 
-export const HeaderComponent: React.FC<HeaderProps> = ({ variant, className, imgPath }) => {
-  const brandColor = variant === 'transparent' ? AvailableColors.oil : AvailableColors.white;
-  const brandColorTwo = variant === 'transparent' ? AvailableColors.oil : AvailableColors.downy;
-  const allianzColor = variant === 'transparent' ? AvailableColors.oil : '#138';
-  const textColor: keyof typeof AvailableColors = variant === 'transparent' ? 'oil' : 'white';
-  const textColorHover: keyof typeof AvailableColors =
-    variant === 'transparent' ? 'brightGrey' : 'silver';
+export interface HeaderProps extends HeaderWrapperProps {
+  burgerClicked(): void;
+  isOpen: boolean;
+}
+
+export const HeaderComponent: React.FC<HeaderProps> = ({
+  variant,
+  className,
+  imgPath,
+  burgerClicked,
+  isOpen
+}) => {
+  const brandColor = variant === 'dark' ? AvailableColors.white : AvailableColors.oil;
+  const brandColorTwo = variant === 'dark' ? AvailableColors.downy : AvailableColors.oil;
+  const allianzColor = variant === 'dark' ? '#138' : AvailableColors.oil;
+  const textColor: keyof typeof AvailableColors = variant === 'dark' ? 'white' : 'oil';
+  const textColorHover: keyof typeof AvailableColors = variant === 'dark' ? 'silver' : 'brightGrey';
 
   return (
     <header className={className}>
       <HeaderBar>
-        <BurgerWrapper>
-          <Icon iconName={'bars'} size={16} color={textColor} />
-        </BurgerWrapper>
+        <BurgerWrapper
+          clickedCb={() => burgerClicked()}
+          isOpen={isOpen}
+          textColor={textColor}
+        ></BurgerWrapper>
         <LogoWrapper>
           <BrandingLogo
             color={brandColor}
@@ -36,7 +50,9 @@ export const HeaderComponent: React.FC<HeaderProps> = ({ variant, className, img
           />
         </LogoWrapper>
         <SearchWrapper>
-          <Icon iconName={'search'} size={16} color={textColor} />
+          <a href="/autos">
+            <Icon iconName={'search'} size={16} color={textColor} />
+          </a>
         </SearchWrapper>
         <LogoDesktopWrapper>
           <BrandingLogo
@@ -65,50 +81,47 @@ export const HeaderComponent: React.FC<HeaderProps> = ({ variant, className, img
             color={textColor}
             colorHover={textColorHover}
             icon="search"
-            path="/todo-suchen"
+            path="/autos"
           />
           <Link
             text={<FormattedMessage id="header.menu.top_offers" />}
             color={textColor}
             colorHover={textColorHover}
             icon="trophy"
-            path="/todo-top"
+            path="/top-offers"
           />
           <Link
             text={<FormattedMessage id="header.menu.wish_list" />}
             color={textColor}
             colorHover={textColorHover}
             icon="star"
-            path="todo-merk"
+            path="/wish-list"
           />
         </NavWrapper>
       </HeaderBar>
       <AllianzBar>
         <BrandingLogo color={allianzColor} brandingHolder="Allianz" link="/" />
       </AllianzBar>
-      <Background></Background>
+      <MobileMenu isOpen={isOpen}></MobileMenu>
     </header>
   );
 };
 
 const Header = styled(HeaderComponent)`
-  background: ${props => (props.variant === 'transparent' ? 'transparent' : AvailableColors.oil)};
+  background: ${props => (props.variant === 'transparent' ? 'transparent' : theme.color.oil)};
   transition: all 0.3s ease;
   color: ${props => (props.variant === 'transparent' ? 'black' : 'white')};
   display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   justify-content: space-between;
   align-items: center;
   font-family: ${theme.font.sans.family};
   height: 3rem;
   ${theme.mediaQueries.whenDesktop} {
     height: 4rem;
-  }
-`;
-
-const BurgerWrapper = styled.div`
-  display: block;
-  ${theme.mediaQueries.whenDesktop} {
-    display: none;
   }
 `;
 
@@ -122,6 +135,7 @@ const LogoWrapper = styled.div`
 `;
 
 const SearchWrapper = styled.div`
+  cursor: pointer;
   display: block;
   ${theme.mediaQueries.whenDesktop} {
     display: none;
@@ -172,7 +186,7 @@ const AllianzBar = styled.div`
   align-items: center;
   padding: 0 1.6rem;
   transition: background-color 0.3s ease;
-  background-color: #fff;
+  background-color: ${theme.color.white};
   height: 100%;
 `;
 
@@ -187,6 +201,20 @@ const HeaderBar = styled.div`
   justify-content: space-between;
 `;
 
-const Background = styled.div``;
+export const HeaderWrapper: React.FC<HeaderWrapperProps> = props => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const clicked = () => {
+    setIsOpen(!isOpen);
+  };
+  return (
+    <Header
+      {...props}
+      burgerClicked={clicked}
+      variant={isOpen ? 'dark' : props.variant}
+      isOpen={isOpen}
+    ></Header>
+  );
+};
 
 export default Header;

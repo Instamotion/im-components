@@ -23,6 +23,7 @@ export const LinkComponent: React.FC<Props> = ({ className, path, text, icon }) 
 
 const Link = styled(LinkComponent)`
   font-weight: 500;
+  display: flex;
   color: ${({ color }) => AvailableColors[color]};
   text-transform: uppercase;
   margin-right: 1.5rem;

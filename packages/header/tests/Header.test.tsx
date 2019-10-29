@@ -3,35 +3,28 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { renderWithThemeAdnI18n } from '@im-ui/utils';
 import BrandingLogo from '@im-ui/branding-logo';
-import Header from '../src';
+import { HeaderWrapper } from '../src';
 import Link from '../src/items/link';
 import messages from '../utils/locales';
-import theme, { AvailableColors } from '@im-ui/theme';
-
-function strEnum<T extends string>(o: Array<T>): { [K in T]: K } {
-  return o.reduce((res, key) => {
-    res[key] = key;
-    return res;
-  }, Object.create(null));
-}
+import { AvailableColors } from '@im-ui/theme';
 
 describe('Header', () => {
   it('header rendered', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<Header variant="dark" imgPath="" />, 'de', messages)
+      renderWithThemeAdnI18n(<HeaderWrapper variant="dark" imgPath="" />, 'de', messages)
     );
-    expect(wrapper.find(Header).length).toEqual(1);
+    expect(wrapper.find(HeaderWrapper).length).toEqual(1);
   });
   it('all logos rendered', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<Header variant="dark" imgPath="" />, 'de', messages)
+      renderWithThemeAdnI18n(<HeaderWrapper variant="dark" imgPath="" />, 'de', messages)
     );
     expect(wrapper.find(BrandingLogo).length).toEqual(3);
   });
 
   it('tramsparent variant applied', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<Header variant="transparent" imgPath="" />, 'de', messages)
+      renderWithThemeAdnI18n(<HeaderWrapper variant="transparent" imgPath="" />, 'de', messages)
     );
     expect(
       wrapper
@@ -54,7 +47,7 @@ describe('Header', () => {
   });
   it('tramsparent variant applied', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<Header variant="dark" imgPath="" />, 'de', messages)
+      renderWithThemeAdnI18n(<HeaderWrapper variant="dark" imgPath="" />, 'de', messages)
     );
     expect(
       wrapper

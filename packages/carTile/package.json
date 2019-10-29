@@ -41,7 +41,7 @@
     "@im-ui/error-message": "0.1.2",
     "@im-ui/icon": "0.2.3",
     "@im-ui/label": "0.1.2",
-    "@im-ui/theme": "0.3.1",
+    "@im-ui/theme": "0.3.2",
     "@im-ui/utils": "0.4.1"
   }
 }

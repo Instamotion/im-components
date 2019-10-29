@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Header, { HeaderProps } from '../src';
+import { HeaderWrapper, HeaderWrapperProps } from '../src';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import messages from '../utils/locales';
 import { renderWithThemeAdnI18n } from '@im-ui/utils';
@@ -13,9 +13,9 @@ stories.addDecorator(withKnobs);
 const Variants: Array<'transparent' | 'dark'> = ['transparent', 'dark'];
 
 storiesOf('Header', module).add('Default', () => {
-  const props: HeaderProps = {
+  const props: HeaderWrapperProps = {
     variant: select('variant', Variants, Variants[0]),
     imgPath: image
   };
-  return renderWithThemeAdnI18n(<Header {...props} />, 'de', messages);
+  return renderWithThemeAdnI18n(<HeaderWrapper {...props} />, 'de', messages);
 });
