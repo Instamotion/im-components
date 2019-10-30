@@ -1,12 +1,22 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import BrandingLogo from '@im-ui/branding-logo';
-import Header from '../src';
+import { HeaderWrapper, HeaderWrapperProps } from '../src';
+import { withKnobs, select, text } from '@storybook/addon-knobs';
+import messages from '../utils/locales';
+import { renderWithThemeAdnI18n } from '@im-ui/utils';
 
-storiesOf('Header', module).add('default', () => (
-  <Header
-    onTheLeft={<BrandingLogo color="#fff" brandingHolder="Instamotion" link="/" />}
-    inTheMiddle={<div> Some contacts </div>}
-    onTheRight={<BrandingLogo color="#fff" brandingHolder="Allianz" link="/" />}
-  />
-));
+const image = require('../src/assets/header-img.png');
+
+const stories = storiesOf('Header', module);
+stories.addDecorator(withKnobs);
+
+const Variants: Array<'transparent' | 'dark'> = ['transparent', 'dark'];
+
+storiesOf('Header', module).add('Default', () => {
+  const props: HeaderWrapperProps = {
+    variant: select('variant', Variants, Variants[0]),
+    imgPath: image,
+    phoneNumber: text('phone number', '089-411151-100')
+  };
+  return renderWithThemeAdnI18n(<HeaderWrapper {...props} />, 'de', messages);
+});

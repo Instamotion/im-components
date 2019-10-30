@@ -93,3 +93,27 @@ bolt version:bump
 
 It will ask you what package's version you want to bump and what would be the new version.
 It will bump the version of the package you've selected, and will find all the dependant packages and bump the version for them as well
+
+## How to use
+
+1. Generate a "Personal access token".
+
+  - In GitHub go to `Settings -> Developer settings -> Personal access tokens`
+  - Click "Generate new token"
+  - Tick all the `*:package` checkboxes as well as `repo` checkbox;
+
+2. `touch ~/.npmrc` with the following content:
+
+```
+@instamotion:registry=https://npm.pkg.github.com/instamotion
+//npm.pkg.github.com/:_authToken=TOKEN
+//npm.pkg.github.com/instamotion/:_authToken=TOKEN
+always-auth=true
+```
+
+3. In the root of your project: `touch .npmrc` with the following content:
+
+```
+scripts-prepend-node-path=true
+@instamotion:registry=https://npm.pkg.github.com/instamotion
+```

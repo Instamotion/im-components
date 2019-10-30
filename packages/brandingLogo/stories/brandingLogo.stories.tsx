@@ -10,10 +10,10 @@ storiesOf('Branding Logo', module)
     const props: BrandingLogoProps = {
       link: '#',
       color: color('Logo color', '#000'),
+      colorTwo: color('Logo second color', '#000'),
       brandingHolder: 'Instamotion',
       onClick: action('BrandingLogo click')
     };
-
     return <BrandingLogo {...props} />;
   })
   .add('Allianz', () => {
@@ -23,6 +23,24 @@ storiesOf('Branding Logo', module)
       brandingHolder: 'Allianz',
       onClick: action('BrandingLogo click')
     };
-
+    return <BrandingLogo {...props} />;
+  })
+  .add('AllianzHorizontal', () => {
+    const props: BrandingLogoProps = {
+      link: '#',
+      color: color('Logo color', '#000'),
+      brandingHolder: 'AllianzHorizontal',
+      onClick: action('BrandingLogo click')
+    };
+    return <BrandingLogo {...props} />;
+  })
+  .add('InstamotionAllianz', () => {
+    const props: BrandingLogoProps = {
+      link: '#',
+      color: color('Logo color', '#000'),
+      colorTwo: color('Logo second color', '#000'),
+      brandingHolder: 'InstamotionAllianz',
+      onClick: action('BrandingLogo click')
+    };
     return <BrandingLogo {...props} />;
   });

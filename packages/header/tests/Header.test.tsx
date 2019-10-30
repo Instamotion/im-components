@@ -1,23 +1,87 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import { ThemeProvider } from 'styled-components';
-import theme from '@im-ui/theme';
+import { renderWithThemeAdnI18n } from '@im-ui/utils';
 import BrandingLogo from '@im-ui/branding-logo';
-import Header from '../src';
+import { HeaderWrapper } from '../src';
+import Link from '../src/items/link';
+import messages from '../utils/locales';
+import { AvailableColors } from '@im-ui/theme';
 
 describe('Header', () => {
-  it('default', () => {
+  it('header rendered', () => {
     const wrapper = mount(
-      <ThemeProvider theme={theme}>
-        <Header
-          onTheLeft={<BrandingLogo brandingHolder="Instamotion" link="/" />}
-          inTheMiddle={<div> Some contacts </div>}
-          onTheRight={<BrandingLogo brandingHolder="Allianz" link="/" />}
-        />
-      </ThemeProvider>
+      renderWithThemeAdnI18n(
+        <HeaderWrapper variant="dark" imgPath="" phoneNumber="089-411151-100" />,
+        'de',
+        messages
+      )
     );
+    expect(wrapper.find(HeaderWrapper).length).toEqual(1);
+  });
+  it('all logos rendered', () => {
+    const wrapper = mount(
+      renderWithThemeAdnI18n(
+        <HeaderWrapper variant="dark" imgPath="" phoneNumber="089-411151-100" />,
+        'de',
+        messages
+      )
+    );
+    expect(wrapper.find(BrandingLogo).length).toEqual(3);
+  });
 
-    expect(wrapper.find(BrandingLogo).length).toEqual(2);
+  it('tramsparent variant applied', () => {
+    const wrapper = mount(
+      renderWithThemeAdnI18n(
+        <HeaderWrapper variant="transparent" imgPath="" phoneNumber="089-411151-100" />,
+        'de',
+        messages
+      )
+    );
+    expect(
+      wrapper
+        .find(BrandingLogo)
+        .at(0)
+        .prop('color')
+    ).toEqual(AvailableColors.oil);
+    expect(
+      wrapper
+        .find(BrandingLogo)
+        .at(2)
+        .prop('color')
+    ).toEqual(AvailableColors.oil);
+    expect(
+      wrapper
+        .find(Link)
+        .at(0)
+        .prop('color')
+    ).toEqual('oil');
+  });
+  it('tramsparent variant applied', () => {
+    const wrapper = mount(
+      renderWithThemeAdnI18n(
+        <HeaderWrapper variant="dark" imgPath="" phoneNumber="089-411151-100" />,
+        'de',
+        messages
+      )
+    );
+    expect(
+      wrapper
+        .find(BrandingLogo)
+        .at(0)
+        .prop('color')
+    ).toEqual(AvailableColors.white);
+    expect(
+      wrapper
+        .find(BrandingLogo)
+        .at(2)
+        .prop('color')
+    ).toEqual('#138');
+    expect(
+      wrapper
+        .find(Link)
+        .at(0)
+        .prop('color')
+    ).toEqual('white');
   });
 });
