@@ -67,6 +67,7 @@ export const HeaderComponent: React.FC<HeaderProps> = ({
           <CallerImg imgPath={imgPath} />
           <Link
             text={phoneNumber}
+            track="callFromHeader"
             color={textColor}
             colorHover={textColorHover}
             icon="phone"

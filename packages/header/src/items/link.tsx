@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { AvailableColors } from '@im-ui/theme';
 import Icon, { AvailableIcons } from '@im-ui/icon';
+import TagManager, { DataLayerArgs } from 'react-gtm-module';
 
 interface Props {
   className?: string;
@@ -10,11 +11,22 @@ interface Props {
   colorHover: AvailableColors;
   path?: string;
   icon?: AvailableIcons;
+  track?: string;
 }
 
-export const LinkComponent: React.FC<Props> = ({ className, path, text, icon }) => {
+export const LinkComponent: React.FC<Props> = ({ className, path, text, icon, track }) => {
+  const tag = (): void => {
+    if (!track) return;
+    const dataLayer: DataLayerArgs = {
+      dataLayer: {
+        event: track
+      }
+    };
+    TagManager.dataLayer(dataLayer);
+  };
+
   return (
-    <a href={path} className={className}>
+    <a href={path} className={className} onClick={() => tag()}>
       {icon && <Icon iconName={icon} size={16} color={'downy'} />}
       {text}
     </a>
