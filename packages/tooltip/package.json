@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/tooltip",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -34,8 +34,8 @@
     "styled-components": "^4.4.1"
   },
   "dependencies": {
-    "@im-ui/icon": "0.2.4",
-    "@im-ui/theme": "0.3.3",
-    "@im-ui/utils": "0.4.1"
+    "@im-ui/icon": "^0.2.5",
+    "@im-ui/theme": "^0.3.4",
+    "@im-ui/utils": "^0.4.2"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/error-message",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -34,6 +34,6 @@
     "styled-components": "^4.4.1"
   },
   "dependencies": {
-    "@im-ui/theme": "0.3.3"
+    "@im-ui/theme": "^0.3.4"
   }
 }

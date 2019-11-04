@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/dropdown",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -36,9 +36,9 @@
     "styled-components": "^4.4.1"
   },
   "dependencies": {
-    "@im-ui/error-message": "0.1.2",
-    "@im-ui/label": "0.1.2",
-    "@im-ui/theme": "0.3.3",
-    "@im-ui/utils": "0.4.1"
+    "@im-ui/error-message": "^0.1.3",
+    "@im-ui/label": "^0.1.3",
+    "@im-ui/theme": "^0.3.4",
+    "@im-ui/utils": "^0.4.2"
   }
 }
