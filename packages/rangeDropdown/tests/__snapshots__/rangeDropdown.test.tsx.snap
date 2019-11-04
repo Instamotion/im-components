@@ -227,7 +227,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
               "styledComponentId": "sc-iwsKbI",
               "target": "div",
               "toString": [Function],
-              "usesTheme": false,
               "warnTooManyClasses": [Function],
               "withComponent": [Function],
             }
@@ -266,7 +265,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       "styledComponentId": "sc-bwzfXH",
                       "target": "label",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -304,7 +302,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                     "styledComponentId": "sc-gZMcBi",
                     "target": "div",
                     "toString": [Function],
-                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -361,7 +358,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "styledComponentId": "sc-dnqmqq",
                           "target": "div",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -411,7 +407,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "styledComponentId": "sc-htoDjs",
                                   "target": "div",
                                   "toString": [Function],
-                                  "usesTheme": false,
                                   "warnTooManyClasses": [Function],
                                   "withComponent": [Function],
                                 }
@@ -503,7 +498,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "styledComponentId": "sc-gzVnrw",
                                         "target": "input",
                                         "toString": [Function],
-                                        "usesTheme": false,
                                         "warnTooManyClasses": [Function],
                                         "withComponent": [Function],
                                       }
@@ -588,7 +582,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "styledComponentId": "sc-bxivhb",
                                   "target": "span",
                                   "toString": [Function],
-                                  "usesTheme": false,
                                   "warnTooManyClasses": [Function],
                                   "withComponent": [Function],
                                 }
@@ -630,7 +623,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "styledComponentId": "sc-EHOje",
                                         "target": "div",
                                         "toString": [Function],
-                                        "usesTheme": false,
                                         "warnTooManyClasses": [Function],
                                         "withComponent": [Function],
                                       }
@@ -712,7 +704,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "styledComponentId": "sc-bZQynM",
                                               "target": "select",
                                               "toString": [Function],
-                                              "usesTheme": false,
                                               "warnTooManyClasses": [Function],
                                               "withComponent": [Function],
                                             }
@@ -834,7 +825,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "styledComponentId": "sc-ifAKCX",
                                               "target": "span",
                                               "toString": [Function],
-                                              "usesTheme": false,
                                               "warnTooManyClasses": [Function],
                                               "withComponent": [Function],
                                             }
@@ -903,7 +893,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "styledComponentId": "sc-dnqmqq",
                           "target": "div",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -953,7 +942,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "styledComponentId": "sc-htoDjs",
                                   "target": "div",
                                   "toString": [Function],
-                                  "usesTheme": false,
                                   "warnTooManyClasses": [Function],
                                   "withComponent": [Function],
                                 }
@@ -1045,7 +1033,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "styledComponentId": "sc-gzVnrw",
                                         "target": "input",
                                         "toString": [Function],
-                                        "usesTheme": false,
                                         "warnTooManyClasses": [Function],
                                         "withComponent": [Function],
                                       }
@@ -1130,7 +1117,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "styledComponentId": "sc-bxivhb",
                                   "target": "span",
                                   "toString": [Function],
-                                  "usesTheme": false,
                                   "warnTooManyClasses": [Function],
                                   "withComponent": [Function],
                                 }
@@ -1172,7 +1158,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "styledComponentId": "sc-EHOje",
                                         "target": "div",
                                         "toString": [Function],
-                                        "usesTheme": false,
                                         "warnTooManyClasses": [Function],
                                         "withComponent": [Function],
                                       }
@@ -1254,7 +1239,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "styledComponentId": "sc-bZQynM",
                                               "target": "select",
                                               "toString": [Function],
-                                              "usesTheme": false,
                                               "warnTooManyClasses": [Function],
                                               "withComponent": [Function],
                                             }
@@ -1376,7 +1360,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "styledComponentId": "sc-ifAKCX",
                                               "target": "span",
                                               "toString": [Function],
-                                              "usesTheme": false,
                                               "warnTooManyClasses": [Function],
                                               "withComponent": [Function],
                                             }
@@ -1612,7 +1595,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
             "styledComponentId": "sc-dnqmqq",
             "target": "div",
             "toString": [Function],
-            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -1662,7 +1644,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                     "styledComponentId": "sc-htoDjs",
                     "target": "div",
                     "toString": [Function],
-                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -1754,7 +1735,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           "styledComponentId": "sc-gzVnrw",
                           "target": "input",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -1827,7 +1807,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                     "styledComponentId": "sc-bxivhb",
                     "target": "span",
                     "toString": [Function],
-                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -1869,7 +1848,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           "styledComponentId": "sc-EHOje",
                           "target": "div",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -1951,7 +1929,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                 "styledComponentId": "sc-bZQynM",
                                 "target": "select",
                                 "toString": [Function],
-                                "usesTheme": false,
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }
@@ -2037,7 +2014,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                 "styledComponentId": "sc-ifAKCX",
                                 "target": "span",
                                 "toString": [Function],
-                                "usesTheme": false,
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }

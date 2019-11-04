@@ -386,7 +386,6 @@ exports[`Pagination renders 1`] = `
               "styledComponentId": "sc-dnqmqq",
               "target": "div",
               "toString": [Function],
-              "usesTheme": false,
               "warnTooManyClasses": [Function],
               "withComponent": [Function],
             }
@@ -429,7 +428,6 @@ exports[`Pagination renders 1`] = `
                       "styledComponentId": "sc-ifAKCX",
                       "target": "div",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -473,7 +471,6 @@ exports[`Pagination renders 1`] = `
                     "styledComponentId": "sc-iwsKbI",
                     "target": "ul",
                     "toString": [Function],
-                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -527,7 +524,6 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -587,7 +583,6 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -647,7 +642,6 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -707,7 +701,6 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -767,7 +760,6 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -827,7 +819,6 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -887,7 +878,6 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -931,7 +921,6 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-htoDjs",
                           "target": "li",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -987,7 +976,6 @@ exports[`Pagination renders 1`] = `
                           "styledComponentId": "sc-bdVaJa",
                           "target": "li",
                           "toString": [Function],
-                          "usesTheme": false,
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
                         }
@@ -1070,7 +1058,6 @@ exports[`Pagination renders 1`] = `
                       "styledComponentId": "sc-gzVnrw",
                       "target": [Function],
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -1161,7 +1148,6 @@ exports[`Pagination renders 1`] = `
                             "styledComponentId": "sc-bwzfXH",
                             "target": "button",
                             "toString": [Function],
-                            "usesTheme": false,
                             "warnTooManyClasses": [Function],
                             "withComponent": [Function],
                           }
@@ -1200,7 +1186,6 @@ exports[`Pagination renders 1`] = `
                                   "styledComponentId": "sc-bxivhb",
                                   "target": [Function],
                                   "toString": [Function],
-                                  "usesTheme": false,
                                   "warnTooManyClasses": [Function],
                                   "withComponent": [Function],
                                 }
@@ -1243,7 +1228,6 @@ exports[`Pagination renders 1`] = `
                                         "styledComponentId": "sc-htpNat",
                                         "target": "span",
                                         "toString": [Function],
-                                        "usesTheme": false,
                                         "warnTooManyClasses": [Function],
                                         "withComponent": [Function],
                                       }
