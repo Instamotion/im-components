@@ -188,7 +188,6 @@ exports[`Tooltip renders 1`] = `
               "styledComponentId": "sc-bwzfXH",
               "target": "div",
               "toString": [Function],
-              "usesTheme": false,
               "warnTooManyClasses": [Function],
               "withComponent": [Function],
             }
@@ -252,7 +251,6 @@ exports[`Tooltip renders 1`] = `
                     "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
-                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
