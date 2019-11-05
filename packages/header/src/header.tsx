@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import BrandingLogo from '@im-ui/branding-logo';
 import CallerImg from './items/callerImg';
@@ -8,15 +8,16 @@ import MobileMenu from './items/mobileMenu';
 import theme, { AvailableColors } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 import { FormattedMessage } from 'react-intl';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 export interface HeaderWrapperProps {
-  variant: 'transparent' | 'dark';
   imgPath: string;
   className?: string;
   phoneNumber: string;
 }
 
 export interface HeaderProps extends HeaderWrapperProps {
+  variant: 'transparent' | 'dark';
   burgerClicked(): void;
   isOpen: boolean;
 }
@@ -112,6 +113,7 @@ const Header = styled(HeaderComponent)`
   color: ${props => (props.variant === 'transparent' ? 'black' : 'white')};
   display: flex;
   position: fixed;
+  z-index: 10;
   top: 0;
   right: 0;
   left: 0;
@@ -200,19 +202,37 @@ const HeaderBar = styled.div`
   justify-content: space-between;
 `;
 
+type VariantType = 'transparent' | 'dark';
+
 export const HeaderWrapper: React.FC<HeaderWrapperProps> = props => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [variant, setVariant] = React.useState<VariantType>('dark');
 
   const clicked = () => {
     setIsOpen(!isOpen);
   };
-  return (
-    <Header
-      {...props}
-      burgerClicked={clicked}
-      variant={isOpen ? 'dark' : props.variant}
-      isOpen={isOpen}
-    ></Header>
+
+  useScrollPosition(
+    (props: any) => {
+      const newVariant = props.currPos.y < 0 ? 'dark' : 'transparent';
+      if (newVariant !== variant) setVariant(newVariant);
+    },
+    [variant],
+    undefined,
+    false,
+    50
+  );
+
+  return useMemo(
+    () => (
+      <Header
+        {...props}
+        burgerClicked={clicked}
+        variant={isOpen ? 'dark' : variant}
+        isOpen={isOpen}
+      ></Header>
+    ),
+    [isOpen, variant]
   );
 };
 
