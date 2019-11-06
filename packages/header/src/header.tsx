@@ -224,7 +224,7 @@ export const HeaderWrapper: React.FC<HeaderWrapperProps> = props => {
   };
 
   useScrollPosition(
-    ({ prevPos, currPos }: ScrollProps) => {
+    ({ currPos }: ScrollProps) => {
       const newVariant = currPos.y < 0 ? 'dark' : 'transparent';
       if (newVariant !== variant) setVariant(newVariant);
     },
