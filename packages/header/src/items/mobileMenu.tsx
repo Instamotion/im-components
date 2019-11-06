@@ -19,6 +19,7 @@ export const MobileMenu: React.FC<Props> = ({ className, phoneNumber }) => {
           color={'white'}
           colorHover={'downy'}
           icon="phone"
+          track="callFromHeader"
           path={`tel:${phoneNumber}`}
         />
         <Link

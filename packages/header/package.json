@@ -33,7 +33,8 @@
   "peerDependencies": {
     "react": "^16.11.0",
     "styled-components": "^4.4.1",
-    "react-intl": "^3.4.0"
+    "react-intl": "^3.4.0",
+    "react-gtm-module": "^2.0.0"
   },
   "dependencies": {
     "@im-ui/branding-logo": "^0.1.3",
