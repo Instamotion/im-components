@@ -85,7 +85,7 @@ Components live as separate packages under `/packages` directory
 
 ## How to create a new component
 
-[Hygen](https://www.hygen.io/) is used to generate new IM components.
+We are using [Hygen](https://www.hygen.io/) to generate new IM components.
 
 Run the following command passing newComponent's name in the end:
 
