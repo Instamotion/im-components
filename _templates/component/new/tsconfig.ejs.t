@@ -2,11 +2,8 @@
 to: packages/<%= name %>/tsconfig.json
 ---
 {
-  "extends": "../../base.json",
-  "compilerOptions": {
-    "outDir": "dist/"
-  },
+  "extends": "../../tsconfig.json",
   "include": [
-    "./src/**/*.ts"
+    "src/**/*"
   ]
 }

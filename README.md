@@ -83,6 +83,19 @@ Components live as separate packages under `/packages` directory
 
 5. Run `bolt build`
 
+## How to create a new component
+
+We are using [Hygen](https://www.hygen.io/) to generate new IM components.
+
+Run the following command passing newComponent's name in the end:
+
+```
+bolt generate:component
+```
+
+Our custom template is located in `/_templates/component/new` folder of the repo. Feel free to contribute.
+
+
 ## How to update the version of a package
 
 Run the following command:

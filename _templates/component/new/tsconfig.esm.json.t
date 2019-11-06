@@ -1,0 +1,20 @@
+---
+to: packages/<%= name %>/build/tsconfig.esm.json
+---
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "module": "esnext",
+    "outDir": "../dist/esm",
+    "rootDirs": ["../src", "../stories"]
+  },
+  "exclude": [
+    "../node_modules",
+    "../dist"
+  ],
+  "include": [
+    "../src/**/*.ts",
+    "../src/**/*.tsx"
+  ]
+}
