@@ -204,6 +204,17 @@ const HeaderBar = styled.div`
 
 type VariantType = 'transparent' | 'dark';
 
+interface ScrollProps {
+  prevPos: {
+    x: Number;
+    y: Number;
+  };
+  currPos: {
+    x: Number;
+    y: Number;
+  };
+}
+
 export const HeaderWrapper: React.FC<HeaderWrapperProps> = props => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [variant, setVariant] = React.useState<VariantType>('dark');
@@ -213,8 +224,8 @@ export const HeaderWrapper: React.FC<HeaderWrapperProps> = props => {
   };
 
   useScrollPosition(
-    (props: any) => {
-      const newVariant = props.currPos.y < 0 ? 'dark' : 'transparent';
+    ({ prevPos, currPos }: ScrollProps) => {
+      const newVariant = currPos.y < 0 ? 'dark' : 'transparent';
       if (newVariant !== variant) setVariant(newVariant);
     },
     [variant],
