@@ -34,7 +34,7 @@
     "react": "^16.11.0",
     "styled-components": "^4.4.1",
     "react-intl": "^3.4.0",
-    "react-gtm-module": "^2.0.0"
+    "react-gtm-module": "^2.0.8"
   },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "1.0.40",
