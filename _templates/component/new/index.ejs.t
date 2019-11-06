@@ -1,4 +1,4 @@
 ---
 to: packages/<%= name %>/src/index.ts
 ---
-export { default } from './src/<%= name %>';
+export { default, <%= h.changeCase.pascalCase(name) %>Props } from './<%= name %>';
