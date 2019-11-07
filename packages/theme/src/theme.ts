@@ -80,10 +80,9 @@ export const theme: Theme = {
   },
   card: {
     border: {
-      color: '#C4C4C4',
-      radius: 4,
-      width: 2
-    }
+      radius: 4
+    },
+    shadow: '0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.1)'
   },
   button: {
     primary: {
@@ -101,10 +100,10 @@ export const theme: Theme = {
         spacing: 0
       },
       hover: {
-        shadow: '0 4px 4px rgba(0, 0 ,0, 0.1)'
+        shadow: '0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)'
       },
       active: {
-        shadow: 'inset 0px 2px 2px rgba(0, 0, 0, 0.05);'
+        shadow: 'inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);'
       },
       disabled: {
         opacity: 0.5
@@ -125,10 +124,10 @@ export const theme: Theme = {
         spacing: 0
       },
       hover: {
-        shadow: '0 4px 4px rgba(0, 0 ,0, 0.1)'
+        shadow: '0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)'
       },
       active: {
-        shadow: 'inset 0px 2px 2px rgba(0, 0, 0, 0.05);'
+        shadow: 'inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);'
       },
       disabled: {
         opacity: 0.5
