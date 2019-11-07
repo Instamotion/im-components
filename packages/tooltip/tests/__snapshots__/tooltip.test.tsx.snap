@@ -6,30 +6,59 @@ exports[`Tooltip renders 1`] = `
     Object {
       "button": Object {
         "primary": Object {
+          "active": Object {
+            "shadow": "inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);",
+          },
           "background": "#75dfc0",
           "border": Object {
             "color": "#75dfc0",
             "radius": 4,
-            "width": 2,
+            "width": 0,
           },
           "color": "#313330",
+          "disabled": Object {
+            "opacity": 0.5,
+          },
           "font": Object {
             "family": "Roboto, sans-serif",
             "size": 16,
             "spacing": 0,
-            "weight": 500,
+            "weight": 600,
           },
           "hover": Object {
-            "shadow": "0 4px 4px rgba(0, 0 ,0, 0.1)",
+            "shadow": "0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)",
+          },
+        },
+        "secondary": Object {
+          "active": Object {
+            "shadow": "inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);",
+          },
+          "background": "#fff",
+          "border": Object {
+            "color": "#75dfc0",
+            "radius": 4,
+            "width": 1,
+          },
+          "color": "#75dfc0",
+          "disabled": Object {
+            "opacity": 0.5,
+          },
+          "font": Object {
+            "family": "Roboto, sans-serif",
+            "size": 16,
+            "spacing": 0,
+            "weight": 600,
+          },
+          "hover": Object {
+            "shadow": "0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)",
           },
         },
       },
       "card": Object {
         "border": Object {
-          "color": "#C4C4C4",
           "radius": 4,
-          "width": 2,
         },
+        "shadow": "0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.1)",
       },
       "color": Object {
         "brightGrey": "#606164",
@@ -98,8 +127,8 @@ exports[`Tooltip renders 1`] = `
       },
       "mediaQueries": Object {
         "whenDesktop": "@media (min-width: 1024px)",
-        "whenDesktopXL": "@media (min-width: 1440px)",
-        "whenMobileL": "@media (min-width: 425px)",
+        "whenDesktopXL": "@media (min-width: 1280px)",
+        "whenMobileL": "@media (min-width: 320px)",
         "whenTablet": "@media (min-width: 768px)",
       },
       "name": "default",

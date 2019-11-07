@@ -39,6 +39,12 @@ interface Button {
   hover: {
     shadow: string;
   };
+  active: {
+    shadow: string;
+  };
+  disabled: {
+    opacity: number;
+  };
 }
 
 export default interface Theme {
@@ -68,7 +74,10 @@ export default interface Theme {
     foot: TableSection;
   };
   card: {
-    border: Border;
+    border: {
+      radius: number;
+    };
+    shadow: string;
   };
   heading: {
     xxl: Heading;
@@ -81,6 +90,7 @@ export default interface Theme {
   };
   button: {
     primary: Button;
+    secondary: Button;
   };
   input: {
     border: Border;
