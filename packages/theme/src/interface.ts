@@ -64,7 +64,6 @@ export default interface Theme {
     whenTablet: string;
     whenDesktop: string;
     whenMobileL: string;
-    whenDesktopL: string;
     whenDesktopXL: string;
   };
   table: {

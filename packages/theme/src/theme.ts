@@ -31,11 +31,10 @@ export const theme: Theme = {
   name: 'default',
   color: AvailableColors,
   mediaQueries: {
-    whenMobileL: '@media (min-width: 425px)',
+    whenMobileL: '@media (min-width: 320px)',
     whenTablet: '@media (min-width: 768px)',
     whenDesktop: '@media (min-width: 1024px)',
-    whenDesktopL: '@media (min-width: 1280px)',
-    whenDesktopXL: '@media (min-width: 1440px)'
+    whenDesktopXL: '@media (min-width: 1280px)'
   },
   table: {
     outerBorder: {
