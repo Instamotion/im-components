@@ -127,9 +127,8 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
       },
       "mediaQueries": Object {
         "whenDesktop": "@media (min-width: 1024px)",
-        "whenDesktopL": "@media (min-width: 1280px)",
-        "whenDesktopXL": "@media (min-width: 1440px)",
-        "whenMobileL": "@media (min-width: 425px)",
+        "whenDesktopXL": "@media (min-width: 1280px)",
+        "whenMobileL": "@media (min-width: 320px)",
         "whenTablet": "@media (min-width: 768px)",
       },
       "name": "default",
@@ -1549,9 +1548,8 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
       },
       "mediaQueries": Object {
         "whenDesktop": "@media (min-width: 1024px)",
-        "whenDesktopL": "@media (min-width: 1280px)",
-        "whenDesktopXL": "@media (min-width: 1440px)",
-        "whenMobileL": "@media (min-width: 425px)",
+        "whenDesktopXL": "@media (min-width: 1280px)",
+        "whenMobileL": "@media (min-width: 320px)",
         "whenTablet": "@media (min-width: 768px)",
       },
       "name": "default",

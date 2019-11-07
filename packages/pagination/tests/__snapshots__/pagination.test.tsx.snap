@@ -174,13 +174,13 @@ exports[`Pagination renders 1`] = `
   list-style: none;
 }
 
-@media (min-width:425px) {
+@media (min-width:320px) {
   .c1 {
     width: 2rem;
   }
 }
 
-@media (min-width:425px) {
+@media (min-width:320px) {
   .c6 {
     min-width: auto;
   }
@@ -190,7 +190,7 @@ exports[`Pagination renders 1`] = `
   }
 }
 
-@media (min-width:425px) {
+@media (min-width:320px) {
   .c2 {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
@@ -324,9 +324,8 @@ exports[`Pagination renders 1`] = `
       },
       "mediaQueries": Object {
         "whenDesktop": "@media (min-width: 1024px)",
-        "whenDesktopL": "@media (min-width: 1280px)",
-        "whenDesktopXL": "@media (min-width: 1440px)",
-        "whenMobileL": "@media (min-width: 425px)",
+        "whenDesktopXL": "@media (min-width: 1280px)",
+        "whenMobileL": "@media (min-width: 320px)",
         "whenTablet": "@media (min-width: 768px)",
       },
       "name": "default",
@@ -445,7 +444,7 @@ exports[`Pagination renders 1`] = `
   display: flex;
   width: 5.5rem;
   ",
-                          "@media (min-width: 425px)",
+                          "@media (min-width: 320px)",
                           " {
     width: 2rem;
   }
@@ -488,7 +487,7 @@ exports[`Pagination renders 1`] = `
   cursor: pointer;
   list-style: none;
   ",
-                        "@media (min-width: 425px)",
+                        "@media (min-width: 320px)",
                         " {
     flex: 1 1 auto;
   }
@@ -1070,7 +1069,7 @@ exports[`Pagination renders 1`] = `
     fill: #fff;
   }
   ",
-                          "@media (min-width: 425px)",
+                          "@media (min-width: 320px)",
                           " {
     min-width: auto;
     span {
