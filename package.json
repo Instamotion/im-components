@@ -33,8 +33,9 @@
     "react-alice-carousel": "^1.15.3",
     "react-gtm-module": "^2.0.8",
     "react-swipeable": "^5.4.0",
+    "semver": "^6.3.0",
     "styled-components": "^4.4.1",
-    "semver": "^6.3.0"
+    "@n8tb1t/use-scroll-position": "1.0.40"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",

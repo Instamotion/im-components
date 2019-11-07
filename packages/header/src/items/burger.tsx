@@ -43,7 +43,6 @@ export const BurgerComponent: React.FC<Props> = ({ className, isOpen, textColor,
 const Burger = styled(BurgerComponent)`
   display: block;
   position: relative;
-  cursor: pointer;
   ${theme.mediaQueries.whenDesktop} {
     display: none;
   }

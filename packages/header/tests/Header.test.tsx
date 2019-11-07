@@ -3,7 +3,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { renderWithThemeAdnI18n } from '@im-ui/utils';
 import BrandingLogo from '@im-ui/branding-logo';
-import { HeaderWrapper } from '../src';
+import Header, { HeaderWrapper, AvailableVariants } from '../src';
 import Link from '../src/items/link';
 import messages from '../utils/locales';
 import { AvailableColors } from '@im-ui/theme';
@@ -12,7 +12,7 @@ describe('Header', () => {
   it('header rendered', () => {
     const wrapper = mount(
       renderWithThemeAdnI18n(
-        <HeaderWrapper variant="dark" imgPath="" phoneNumber="089-411151-100" />,
+        <HeaderWrapper imgPath="" phoneNumber="089-411151-100" />,
         'de',
         messages
       )
@@ -22,7 +22,7 @@ describe('Header', () => {
   it('all logos rendered', () => {
     const wrapper = mount(
       renderWithThemeAdnI18n(
-        <HeaderWrapper variant="dark" imgPath="" phoneNumber="089-411151-100" />,
+        <HeaderWrapper imgPath="" phoneNumber="089-411151-100" />,
         'de',
         messages
       )
@@ -33,7 +33,13 @@ describe('Header', () => {
   it('tramsparent variant applied', () => {
     const wrapper = mount(
       renderWithThemeAdnI18n(
-        <HeaderWrapper variant="transparent" imgPath="" phoneNumber="089-411151-100" />,
+        <Header
+          variant="Transparent"
+          isOpen={false}
+          burgerClicked={() => {}}
+          imgPath=""
+          phoneNumber="089-411151-100"
+        />,
         'de',
         messages
       )
@@ -60,7 +66,13 @@ describe('Header', () => {
   it('tramsparent variant applied', () => {
     const wrapper = mount(
       renderWithThemeAdnI18n(
-        <HeaderWrapper variant="dark" imgPath="" phoneNumber="089-411151-100" />,
+        <Header
+          variant={AvailableVariants.Dark}
+          isOpen={false}
+          burgerClicked={() => {}}
+          imgPath=""
+          phoneNumber="089-411151-100"
+        />,
         'de',
         messages
       )
