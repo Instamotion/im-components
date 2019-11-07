@@ -3,7 +3,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { renderWithThemeAdnI18n } from '@im-ui/utils';
 import BrandingLogo from '@im-ui/branding-logo';
-import Header, { HeaderWrapper } from '../src';
+import Header, { HeaderWrapper, AvailableVariants } from '../src';
 import Link from '../src/items/link';
 import messages from '../utils/locales';
 import { AvailableColors } from '@im-ui/theme';
@@ -34,7 +34,7 @@ describe('Header', () => {
     const wrapper = mount(
       renderWithThemeAdnI18n(
         <Header
-          variant="transparent"
+          variant="Transparent"
           isOpen={false}
           burgerClicked={() => {}}
           imgPath=""
@@ -67,7 +67,7 @@ describe('Header', () => {
     const wrapper = mount(
       renderWithThemeAdnI18n(
         <Header
-          variant="dark"
+          variant={AvailableVariants.Dark}
           isOpen={false}
           burgerClicked={() => {}}
           imgPath=""

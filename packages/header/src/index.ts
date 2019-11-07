@@ -1,1 +1,1 @@
-export { default, HeaderProps, HeaderWrapper, HeaderWrapperProps } from './header';
+export { default, HeaderProps, AvailableVariants, HeaderWrapper, HeaderWrapperProps } from './header';

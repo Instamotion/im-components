@@ -10,6 +10,13 @@ import Icon from '@im-ui/icon';
 import { FormattedMessage } from 'react-intl';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
+export enum AvailableVariants {
+  Dark = 'Dark',
+  Transparent = 'Transparent'
+}
+
+export type VariantTypes = keyof typeof AvailableVariants;
+
 export interface HeaderWrapperProps {
   imgPath: string;
   className?: string;
@@ -17,7 +24,7 @@ export interface HeaderWrapperProps {
 }
 
 export interface HeaderProps extends HeaderWrapperProps {
-  variant: 'transparent' | 'dark';
+  variant: VariantTypes;
   burgerClicked(): void;
   isOpen: boolean;
 }
@@ -30,11 +37,15 @@ export const HeaderComponent: React.FC<HeaderProps> = ({
   phoneNumber,
   isOpen
 }) => {
-  const brandColor = variant === 'dark' ? AvailableColors.white : AvailableColors.oil;
-  const brandColorTwo = variant === 'dark' ? AvailableColors.downy : AvailableColors.oil;
-  const allianzColor = variant === 'dark' ? '#138' : AvailableColors.oil;
-  const textColor: keyof typeof AvailableColors = variant === 'dark' ? 'white' : 'oil';
-  const textColorHover: keyof typeof AvailableColors = variant === 'dark' ? 'silver' : 'brightGrey';
+  const brandColor =
+    variant === AvailableVariants.Dark ? AvailableColors.white : AvailableColors.oil;
+  const brandColorTwo =
+    variant === AvailableVariants.Dark ? AvailableColors.downy : AvailableColors.oil;
+  const allianzColor = variant === AvailableVariants.Dark ? '#138' : AvailableColors.oil;
+  const textColor: keyof typeof AvailableColors =
+    variant === AvailableVariants.Dark ? 'white' : 'oil';
+  const textColorHover: keyof typeof AvailableColors =
+    variant === AvailableVariants.Dark ? 'silver' : 'brightGrey';
 
   return (
     <header className={className}>
@@ -108,9 +119,10 @@ export const HeaderComponent: React.FC<HeaderProps> = ({
 };
 
 const Header = styled(HeaderComponent)`
-  background: ${props => (props.variant === 'transparent' ? 'transparent' : theme.color.oil)};
+  background: ${props =>
+    props.variant === AvailableVariants.Transparent ? 'transparent' : theme.color.oil};
   transition: all 0.3s ease;
-  color: ${props => (props.variant === 'transparent' ? 'black' : 'white')};
+  color: ${props => (props.variant === AvailableVariants.Transparent ? 'black' : 'white')};
   display: flex;
   position: fixed;
   z-index: 10;
@@ -202,8 +214,6 @@ const HeaderBar = styled.div`
   justify-content: space-between;
 `;
 
-type VariantType = 'transparent' | 'dark';
-
 interface ScrollProps {
   prevPos: {
     x: Number;
@@ -217,7 +227,7 @@ interface ScrollProps {
 
 export const HeaderWrapper: React.FC<HeaderWrapperProps> = props => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [variant, setVariant] = React.useState<VariantType>('dark');
+  const [variant, setVariant] = React.useState<VariantTypes>(AvailableVariants.Dark);
 
   const clicked = () => {
     setIsOpen(!isOpen);
@@ -225,7 +235,7 @@ export const HeaderWrapper: React.FC<HeaderWrapperProps> = props => {
 
   useScrollPosition(
     ({ currPos }: ScrollProps) => {
-      const newVariant = currPos.y < 0 ? 'dark' : 'transparent';
+      const newVariant = currPos.y < 0 ? AvailableVariants.Dark : AvailableVariants.Transparent;
       if (newVariant !== variant) setVariant(newVariant);
     },
     [variant],
@@ -239,7 +249,7 @@ export const HeaderWrapper: React.FC<HeaderWrapperProps> = props => {
       <Header
         {...props}
         burgerClicked={clicked}
-        variant={isOpen ? 'dark' : variant}
+        variant={isOpen ? AvailableVariants.Dark : variant}
         isOpen={isOpen}
       ></Header>
     ),
