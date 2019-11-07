@@ -39,6 +39,12 @@ interface Button {
   hover: {
     shadow: string;
   };
+  active: {
+    shadow: string;
+  };
+  disabled: {
+    opacity: number;
+  };
 }
 
 export default interface Theme {
@@ -58,6 +64,7 @@ export default interface Theme {
     whenTablet: string;
     whenDesktop: string;
     whenMobileL: string;
+    whenDesktopL: string;
     whenDesktopXL: string;
   };
   table: {
@@ -81,6 +88,7 @@ export default interface Theme {
   };
   button: {
     primary: Button;
+    secondary: Button;
   };
   input: {
     border: Border;

@@ -34,6 +34,7 @@ export const theme: Theme = {
     whenMobileL: '@media (min-width: 425px)',
     whenTablet: '@media (min-width: 768px)',
     whenDesktop: '@media (min-width: 1024px)',
+    whenDesktopL: '@media (min-width: 1280px)',
     whenDesktopXL: '@media (min-width: 1440px)'
   },
   table: {
@@ -89,18 +90,48 @@ export const theme: Theme = {
       border: {
         color: '#75dfc0',
         radius: 4,
-        width: 2
+        width: 0
       },
       color: '#313330',
       background: '#75dfc0',
       font: {
         ...sansSerifFont,
         size: 16,
-        weight: 500,
+        weight: 600,
         spacing: 0
       },
       hover: {
         shadow: '0 4px 4px rgba(0, 0 ,0, 0.1)'
+      },
+      active: {
+        shadow: 'inset 0px 2px 2px rgba(0, 0, 0, 0.05);'
+      },
+      disabled: {
+        opacity: 0.5
+      }
+    },
+    secondary: {
+      border: {
+        color: '#75dfc0',
+        radius: 4,
+        width: 1
+      },
+      color: '#75dfc0',
+      background: '#fff',
+      font: {
+        ...sansSerifFont,
+        size: 16,
+        weight: 600,
+        spacing: 0
+      },
+      hover: {
+        shadow: '0 4px 4px rgba(0, 0 ,0, 0.1)'
+      },
+      active: {
+        shadow: 'inset 0px 2px 2px rgba(0, 0, 0, 0.05);'
+      },
+      disabled: {
+        opacity: 0.5
       }
     }
   },
