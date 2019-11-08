@@ -85,52 +85,12 @@ export const theme: Theme = {
   },
   button: {
     primary: {
-      border: {
-        color: '#75dfc0',
-        radius: 4,
-        width: 0
-      },
       color: '#313330',
       background: '#75dfc0',
-      font: {
-        ...sansSerifFont,
-        size: 16,
-        weight: 600,
-        spacing: 0
-      },
-      hover: {
-        shadow: '0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)'
-      },
-      active: {
-        shadow: 'inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);'
-      },
-      disabled: {
-        opacity: 0.5
-      }
     },
     secondary: {
-      border: {
-        color: '#75dfc0',
-        radius: 4,
-        width: 1
-      },
       color: '#75dfc0',
       background: '#fff',
-      font: {
-        ...sansSerifFont,
-        size: 16,
-        weight: 600,
-        spacing: 0
-      },
-      hover: {
-        shadow: '0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)'
-      },
-      active: {
-        shadow: 'inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);'
-      },
-      disabled: {
-        opacity: 0.5
-      }
     }
   },
   input: {

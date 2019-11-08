@@ -1,34 +1,49 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import React from 'react';
 import theme from '@im-ui/theme';
 
-export const Button = styled.button`
-  background-color: ${theme.button.primary.background};
-  border: ${`${theme.button.primary.border.width}px solid ${theme.button.primary.border.color}`};
-  border-radius: ${`${theme.button.primary.border.radius}px`};
+export const AvailableButtonTypes = {
+  primary: 'primary',
+  secondary: 'secondary'
+};
 
-  color: ${theme.button.primary.color};
-  font-size: ${`${theme.button.primary.font.size}px`};
-  letter-spacing: ${`${theme.button.primary.font.spacing}px`};
-  font-weight: ${theme.button.primary.font.weight};
+export type ButtonTypes = keyof typeof AvailableButtonTypes;
 
-  text-transform: uppercase;
+export type ButtonProps = React.ButtonHTMLAttributes<any> & {
+  buttonType?: ButtonTypes;
+};
+
+const Button = styled.button<ButtonProps>`
+  ${props => {
+    const buttonType: ButtonTypes = props.buttonType || 'primary';
+    return css`
+      background-color: ${theme.button[buttonType].background};
+      color: ${theme.button[buttonType].color};
+    `;
+  }}
+  border-width: ${props => (props.buttonType === 'primary' ? 0 : 0.0625)}rem;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: ${theme.color.downy};
+  box-sizing: border-box;
   cursor: pointer;
-
-  margin-top: 3rem;
-  padding: 1rem;
+  font-weight: 600;
+  font-family: ${theme.font.sans.family};  
+  text-transform: uppercase;
   text-align: center;
-  width: 17.5rem;
-
   transition: all 0.2s linear;
-
+  height: 2.5rem;
+  width: 100%;
+  letter-spacing: 0.025rem;
   &:hover {
-    box-shadow: ${theme.button.primary.hover.shadow};
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1);
   }
-
-  :disabled {
-    border-color: ${theme.color.silver};
-    background-color: ${theme.button.primary.background};
-    color: ${theme.color.silver};
+  &:active {
+    box-shadow: inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);
+  }
+  &:disabled {
+    opacity: 0.5;
+    box-shadow: none;
     cursor: no-drop;
   }
 `;
