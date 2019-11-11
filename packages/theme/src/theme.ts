@@ -86,11 +86,11 @@ export const theme: Theme = {
   button: {
     primary: {
       color: '#313330',
-      background: '#75dfc0',
+      background: '#75dfc0'
     },
     secondary: {
       color: '#75dfc0',
-      background: '#fff',
+      background: '#fff'
     }
   },
   input: {

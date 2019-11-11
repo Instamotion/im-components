@@ -7,13 +7,14 @@ import { converter } from '@im-ui/utils';
 import { CarInfoModel } from './carTile';
 
 export const transformInfo = (type: string, value: number | string): object => {
-  if (!value) {
+  // todo: check it on backend
+  if (!value || value === '. ') {
     return {
       id: 'car.tile.not_available'
     };
   }
   const props = {
-    defaultMessage: 'car.tile.not_available'
+    defaultMessage: 'Nicht verfügbar'
   };
   switch (type) {
     case 'power': {
@@ -33,7 +34,7 @@ export const transformInfo = (type: string, value: number | string): object => {
         values: { val: value }
       };
     case 'fuel':
-    case 'gearBox':
+    case 'gearbox':
     case 'condition':
       return {
         ...props,
@@ -52,16 +53,14 @@ interface InfoItemProps extends CarInfoModel {
 
 const InfoItemComponent: React.FC<InfoItemProps> = props => (
   <AdditionalInfo>
-    {Object.keys(props).map((key: any) => {
-      return (
-        <InfoItem key={`ii-${key}`}>
-          <Icon iconName={key} size={18} color={props[key] ? 'downy' : 'silver'} />
-          <InfoLabel available={!!props[key]}>
-            <FormattedMessage id={key} {...transformInfo(key, props[key])} />
-          </InfoLabel>
-        </InfoItem>
-      );
-    })}
+    {Object.keys(props).map((key: any) => (
+      <InfoItem key={`ii-${key}`}>
+        <Icon iconName={key} size={18} color={props[key] ? 'brightGrey' : 'silver'} />
+        <InfoLabel available={!!props[key]}>
+          <FormattedMessage id={key} {...transformInfo(key, props[key])} />
+        </InfoLabel>
+      </InfoItem>
+    ))}
   </AdditionalInfo>
 );
 
@@ -84,17 +83,13 @@ export const InfoLabel = styled.div`
   ${(props: { available: boolean }) =>
     !props.available &&
     css`
-      font-family: ${theme.font.sans.family};
-      font-size: 0.75rem;
       color: ${theme.color.silver};
-      margin-left: 0.5rem;
-      text-overflow: ellipsis;
-      overflow: hidden;
     `}
 `;
 
 export const InfoItem = styled.li`
-  width: 7.5rem;
+  width: 7rem;
+  flex-basis: 50%;
   padding-top: 0.4375rem;
   padding-bottom: 0.4375rem;
   border-top: 0.0625rem solid ${theme.color.silver};
