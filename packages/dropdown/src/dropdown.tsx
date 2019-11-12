@@ -9,18 +9,20 @@ export type DropdownValue = number | string;
 export interface DropdownOptionProps {
   value: DropdownValue;
   label: string;
+  defaultMessage?: string;
 }
 
 export type DropdownProps = React.SelectHTMLAttributes<HTMLSelectElement> & {
   id?: string;
   options: DropdownOptionProps[];
-  label?: JSX.Element | string;
+  label?: string;
   disabled?: boolean;
   selected?: string;
   value?: DropdownValue;
   width?: string;
   errorMessage?: JSX.Element;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  defaultExist?: boolean;
 };
 
 export interface InputValidationResult {
@@ -39,7 +41,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
   width,
   label,
   errorMessage,
-  value
+  value,
+  defaultExist = true
 }) => {
   const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     if (onChange && !disabled) {
@@ -50,11 +53,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <DropdownComponent style={{ width }}>
-      {label && (
-        <Label required={required} htmlFor={id}>
-          {label}
-        </Label>
-      )}
+      {label && <Label messageId={label} />}
       <DropdownContainer>
         <DropdownSelect
           id={id}
@@ -66,15 +65,29 @@ export const Dropdown: React.FC<DropdownProps> = ({
           required={required}
           value={value}
         >
-          {options.map(option => (
-            <FormattedMessage id={option.label} key={option.value}>
+          {defaultExist && (
+            <FormattedMessage id="serp.filters.selectOptionText" defaultMessage="Beliebig">
               {txt => (
-                <option key={option.value} value={option.value}>
+                <option key="serp.filters.selectOptionText" value="">
                   {txt}
                 </option>
               )}
             </FormattedMessage>
-          ))}
+          )}
+          {options &&
+            options.map(option => (
+              <FormattedMessage
+                id={option.label}
+                key={option.value}
+                defaultMessage={option.defaultMessage}
+              >
+                {txt => (
+                  <option key={option.value} value={option.value}>
+                    {txt}
+                  </option>
+                )}
+              </FormattedMessage>
+            ))}
         </DropdownSelect>
         <AngleIcon />
       </DropdownContainer>

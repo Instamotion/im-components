@@ -4,12 +4,11 @@ import theme from '@im-ui/theme';
 
 export interface HeadingProps {
   className?: string;
-  children?: JSX.Element | string;
   size: 'xxl' | 'xl' | 'l' | 'm' | 's' | 'xs' | 'xxs';
   inline?: boolean;
 }
 
-const HeadingComponent: React.FC<HeadingProps> = ({ size, className, children }) => {
+export const HeadingComponent: React.FC<HeadingProps> = ({ size, className, children }) => {
   const levels = {
     xxl: 'h1',
     xl: 'h2',

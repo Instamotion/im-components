@@ -28,7 +28,7 @@ const TextInputDemo = (): React.ReactElement => {
     }
   };
 
-  return (
+  return renderWithThemeAdnI18n(
     <div style={{ fontSize: '16px' }}>
       <Input {...props} />
     </div>
@@ -157,7 +157,7 @@ const RangeInputDemo = (): React.ReactElement => {
     }
   };
 
-  return (
+  return renderWithThemeAdnI18n(
     <div style={{ fontSize: '16px' }}>
       <Input {...props} />
     </div>
@@ -179,14 +179,16 @@ const InputCustomValidation = (): React.ReactElement => {
           id="overwrite-validation"
           checked={withCustomValid}
           onChange={i => setWithCustomValid(i)}
-        >
-          Use additional validation
-        </Checkbox>
+          messageId="Use additional validation"
+        />
       </div>
       <div>
-        <Checkbox id="is-it-valid" checked={isValid} onChange={i => setIsValid(i)}>
-          Is input valid
-        </Checkbox>
+        <Checkbox
+          id="is-it-valid"
+          checked={isValid}
+          onChange={i => setIsValid(i)}
+          messageId="Is input valid"
+        />
       </div>
       <Input
         required
@@ -196,7 +198,7 @@ const InputCustomValidation = (): React.ReactElement => {
       <p>Here, email is valid according to HTML5 validation rules:</p>
       <Input
         required
-        value="test.email@localhost"
+        value="test.email@localhost.com"
         errorMessage={withCustomValid ? <div>You input is not correct.</div> : undefined}
         type="email"
       />

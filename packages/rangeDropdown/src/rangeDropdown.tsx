@@ -131,7 +131,7 @@ export const RangeDropdown: React.FC<RangeDropdownProps> = ({
   const [valueFrom, valueTo] = range;
   return (
     <RangeSelectContainer id={id} className={className}>
-      {label && <Label id={`rangeDropdown ${id} label`}>{label}</Label>}
+      {label && <Label messageId={label} />}
       <RangeSelectsWrapper>
         {renderSelector(
           id,

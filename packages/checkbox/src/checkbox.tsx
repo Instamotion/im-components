@@ -12,6 +12,7 @@ export type ClickChangeEvent =
 export interface CheckboxProps {
   className?: string;
   id: string;
+  messageId?: string;
   name?: string;
   value?: string;
   checked?: boolean;
@@ -75,7 +76,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   disabled = false,
   onChange,
   className,
-  children,
+  messageId,
   required,
   value,
   errorMessage
@@ -100,9 +101,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         required={required}
       />
       <Checkmark htmlFor={id} />
-      <Label required={required} htmlFor={id}>
-        {children}
-      </Label>
+      <Label required={required} messageId={messageId || ''} />
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </CheckboxControl>
   );

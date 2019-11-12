@@ -7,8 +7,8 @@ import MailContent from './mailSection/mailContent';
 import MenuItemLink from './menu/menuItemLink';
 import MenuItem from './menu/menuItem';
 import MenuItemHeader from './menu/menuItemHeader';
-import FooterWrapper from './footerWrapper';
 import FooterContent from './footerContainer';
+import Envkv from './envkv';
 import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
 import SocialContainerWithScript from './social/socialContanerWithScript';
@@ -333,7 +333,8 @@ const DefaultFooter: React.FC<DefaultFooterProps> = ({
   facebookToken
 }) => {
   return (
-    <FooterWrapper className={className}>
+    <footer className={className}>
+      <Envkv />
       <TrustfulContainer>{onTop}</TrustfulContainer>
       <FooterContent>
         {renderMenu()}
@@ -351,7 +352,7 @@ const DefaultFooter: React.FC<DefaultFooterProps> = ({
           title={<FormattedMessage id="default.footer.copyrights.text" />}
         />
       </FooterContent>
-    </FooterWrapper>
+    </footer>
   );
 };
 
