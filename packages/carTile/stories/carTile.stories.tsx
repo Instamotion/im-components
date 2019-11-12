@@ -4,8 +4,8 @@ import { text, number } from '@storybook/addon-knobs';
 import { renderWithThemeAdnI18n } from '@im-ui/utils';
 import CarTile, { CarTileProps } from '../src';
 
-storiesOf('General | CarTile', module).add('Common car tile', () => {
-  const carDetails = {
+storiesOf('CarTile', module).add('Common car tile', () => {
+  const carDetails: CarTileProps = {
     id: 'SJNFEAF15U7135383',
     className: 'SJNFEAF15U7135383',
     image: text(
