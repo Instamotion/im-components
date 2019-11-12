@@ -42,33 +42,38 @@ exports[`Pagination renders 1`] = `
 
 .c7 {
   background-color: #75dfc0;
-  border: 0px solid #75dfc0;
-  border-radius: 4px;
   color: #313330;
-  font-size: 16px;
-  -webkit-letter-spacing: 0px;
-  -moz-letter-spacing: 0px;
-  -ms-letter-spacing: 0px;
-  letter-spacing: 0px;
-  font-weight: 600;
-  text-transform: uppercase;
+  border-width: 0rem;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #75DFC0;
+  box-sizing: border-box;
   cursor: pointer;
-  margin-top: 3rem;
-  padding: 1rem;
+  font-weight: 600;
+  font-family: Roboto,sans-serif;
+  text-transform: uppercase;
   text-align: center;
-  width: 17.5rem;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  height: 2.5rem;
+  width: 100%;
+  -webkit-letter-spacing: 0.025rem;
+  -moz-letter-spacing: 0.025rem;
+  -ms-letter-spacing: 0.025rem;
+  letter-spacing: 0.025rem;
 }
 
 .c7:hover {
   box-shadow: 0 0.25rem 0.25rem rgba(0,0 ,0,0.1);
 }
 
+.c7:active {
+  box-shadow: inset 0px 0.125rem 0.125rem rgba(0,0,0,0.05);
+}
+
 .c7:disabled {
-  border-color: #C4C4C4;
-  background-color: #75dfc0;
-  color: #C4C4C4;
+  opacity: 0.5;
+  box-shadow: none;
   cursor: no-drop;
 }
 
@@ -82,12 +87,13 @@ exports[`Pagination renders 1`] = `
   -ms-flex-align: center;
   align-items: center;
   vertical-align: middle;
-  margin: 0 0.5rem;
   width: 20px;
 }
 
 .c8 {
-  padding-right: 0.5rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  margin-left: 2rem;
 }
 
 .c1 {
@@ -203,52 +209,12 @@ exports[`Pagination renders 1`] = `
     Object {
       "button": Object {
         "primary": Object {
-          "active": Object {
-            "shadow": "inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);",
-          },
           "background": "#75dfc0",
-          "border": Object {
-            "color": "#75dfc0",
-            "radius": 4,
-            "width": 0,
-          },
           "color": "#313330",
-          "disabled": Object {
-            "opacity": 0.5,
-          },
-          "font": Object {
-            "family": "Roboto, sans-serif",
-            "size": 16,
-            "spacing": 0,
-            "weight": 600,
-          },
-          "hover": Object {
-            "shadow": "0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)",
-          },
         },
         "secondary": Object {
-          "active": Object {
-            "shadow": "inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);",
-          },
           "background": "#fff",
-          "border": Object {
-            "color": "#75dfc0",
-            "radius": 4,
-            "width": 1,
-          },
           "color": "#75dfc0",
-          "disabled": Object {
-            "opacity": 0.5,
-          },
-          "font": Object {
-            "family": "Roboto, sans-serif",
-            "size": 16,
-            "spacing": 0,
-            "weight": 600,
-          },
-          "hover": Object {
-            "shadow": "0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)",
-          },
         },
       },
       "card": Object {
@@ -1101,11 +1067,12 @@ exports[`Pagination renders 1`] = `
                     onClick={[Function]}
                   >
                     <styled.button
+                      buttonType="primary"
                       className="c6 pgn-next"
-                      icon="chevronRight"
                       onClick={[Function]}
                     >
                       <StyledComponent
+                        buttonType="primary"
                         className="c6 pgn-next"
                         forwardedComponent={
                           Object {
@@ -1117,55 +1084,38 @@ exports[`Pagination renders 1`] = `
                               "lastClassName": "c7",
                               "rules": Array [
                                 "
-  background-color: ",
-                                "#75dfc0",
+  ",
+                                [Function],
+                                "
+  border-width: ",
+                                [Function],
+                                "rem;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: ",
+                                "#75DFC0",
                                 ";
-  border: ",
-                                "0px solid #75dfc0",
-                                ";
-  border-radius: ",
-                                "4px",
-                                ";
-
-  color: ",
-                                "#313330",
-                                ";
-  font-size: ",
-                                "16px",
-                                ";
-  letter-spacing: ",
-                                "0px",
-                                ";
-  font-weight: ",
-                                "600",
-                                ";
-
-  text-transform: uppercase;
+  box-sizing: border-box;
   cursor: pointer;
-
-  margin-top: 3rem;
-  padding: 1rem;
+  font-weight: 600;
+  font-family: ",
+                                "Roboto, sans-serif",
+                                ";  
+  text-transform: uppercase;
   text-align: center;
-  width: 17.5rem;
-
   transition: all 0.2s linear;
-
+  height: 2.5rem;
+  width: 100%;
+  letter-spacing: 0.025rem;
   &:hover {
-    box-shadow: ",
-                                "0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)",
-                                ";
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1);
   }
-
-  :disabled {
-    border-color: ",
-                                "#C4C4C4",
-                                ";
-    background-color: ",
-                                "#75dfc0",
-                                ";
-    color: ",
-                                "#C4C4C4",
-                                ";
+  &:active {
+    box-shadow: inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);
+  }
+  &:disabled {
+    opacity: 0.5;
+    box-shadow: none;
     cursor: no-drop;
   }
 ",
@@ -1182,7 +1132,6 @@ exports[`Pagination renders 1`] = `
                           }
                         }
                         forwardedRef={null}
-                        icon="chevronRight"
                         onClick={[Function]}
                       >
                         <button
@@ -1205,7 +1154,9 @@ exports[`Pagination renders 1`] = `
                                     "lastClassName": "c8",
                                     "rules": Array [
                                       "
-  padding-right: 0.5rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  margin-left: 2rem;
 ",
                                     ],
                                   },
@@ -1228,9 +1179,11 @@ exports[`Pagination renders 1`] = `
                                 iconName="chevronRight"
                               >
                                 <styled.span
+                                  className="c8"
                                   size={20}
                                 >
                                   <StyledComponent
+                                    className="c8"
                                     forwardedComponent={
                                       Object {
                                         "$$typeof": Symbol(react.forward_ref),
@@ -1244,7 +1197,6 @@ exports[`Pagination renders 1`] = `
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
-  margin: 0 0.5rem;
   ",
                                             [Function],
                                             "
@@ -1265,7 +1217,7 @@ exports[`Pagination renders 1`] = `
                                     size={20}
                                   >
                                     <span
-                                      className="c9"
+                                      className="c9 c8"
                                       size={20}
                                     >
                                       <svg

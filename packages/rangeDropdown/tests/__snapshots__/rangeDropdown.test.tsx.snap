@@ -6,52 +6,12 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
     Object {
       "button": Object {
         "primary": Object {
-          "active": Object {
-            "shadow": "inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);",
-          },
           "background": "#75dfc0",
-          "border": Object {
-            "color": "#75dfc0",
-            "radius": 4,
-            "width": 0,
-          },
           "color": "#313330",
-          "disabled": Object {
-            "opacity": 0.5,
-          },
-          "font": Object {
-            "family": "Roboto, sans-serif",
-            "size": 16,
-            "spacing": 0,
-            "weight": 600,
-          },
-          "hover": Object {
-            "shadow": "0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)",
-          },
         },
         "secondary": Object {
-          "active": Object {
-            "shadow": "inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);",
-          },
           "background": "#fff",
-          "border": Object {
-            "color": "#75dfc0",
-            "radius": 4,
-            "width": 1,
-          },
           "color": "#75dfc0",
-          "disabled": Object {
-            "opacity": 0.5,
-          },
-          "font": Object {
-            "family": "Roboto, sans-serif",
-            "size": 16,
-            "spacing": 0,
-            "weight": 600,
-          },
-          "hover": Object {
-            "shadow": "0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)",
-          },
         },
       },
       "card": Object {
@@ -240,9 +200,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-iwsKbI",
+                "componentId": "sc-dnqmqq",
                 "isStatic": false,
-                "lastClassName": "dRZuUw",
+                "lastClassName": "iSdCun",
                 "rules": Array [
                   "
   display: flex;
@@ -253,7 +213,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-iwsKbI",
+              "styledComponentId": "sc-dnqmqq",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -264,11 +224,11 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
           id="dropdown-1"
         >
           <div
-            className="sc-iwsKbI dRZuUw"
+            className="sc-dnqmqq iSdCun"
             id="dropdown-1"
           >
-            <Component
-              id="rangeDropdown dropdown-1 label"
+            <Label
+              messageId="RangeDropdownMain"
             >
               <styled.label>
                 <StyledComponent
@@ -277,21 +237,34 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
+                        "componentId": "sc-bdVaJa",
                         "isStatic": false,
-                        "lastClassName": "buHnlq",
+                        "lastClassName": "lcLGwi",
                         "rules": Array [
                           "
+  font-size: 0.75rem;
+  font-family: ",
+                          "Roboto, sans-serif",
+                          ";
+  color: ",
+                          "#606164",
+                          ";
+  font-weight: bold;
   display: flex;
   cursor: pointer;
-  padding: 0 1rem 0.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  user-select: none;
+  ",
+                          [Function],
+                          "
 ",
                         ],
                       },
                       "displayName": "styled.label",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
+                      "styledComponentId": "sc-bdVaJa",
                       "target": "label",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -301,13 +274,18 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                   forwardedRef={null}
                 >
                   <label
-                    className="sc-bwzfXH buHnlq"
+                    className="sc-bdVaJa lcLGwi"
                   >
-                    RangeDropdownMain
+                    <FormattedMessage
+                      id="RangeDropdownMain"
+                      values={Object {}}
+                    >
+                      RangeDropdownMain
+                    </FormattedMessage>
                   </label>
                 </StyledComponent>
               </styled.label>
-            </Component>
+            </Label>
             <styled.div>
               <StyledComponent
                 forwardedComponent={
@@ -315,9 +293,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gZMcBi",
+                      "componentId": "sc-iwsKbI",
                       "isStatic": false,
-                      "lastClassName": "dcMSXI",
+                      "lastClassName": "cFpGCb",
                       "rules": Array [
                         "
   display: flex;
@@ -328,7 +306,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gZMcBi",
+                    "styledComponentId": "sc-iwsKbI",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -338,7 +316,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="sc-gZMcBi dcMSXI"
+                  className="sc-iwsKbI cFpGCb"
                 >
                   <styled.div>
                     <StyledComponent
@@ -347,9 +325,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-dnqmqq",
+                            "componentId": "sc-htoDjs",
                             "isStatic": false,
-                            "lastClassName": "dGHRLs",
+                            "lastClassName": "xXEFx",
                             "rules": Array [
                               "
   display: flex;
@@ -359,7 +337,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   position: relative;
 
   ",
-                              ".sc-htoDjs",
+                              ".sc-gzVnrw",
                               " {
     position: absolute;
     z-index: 1;
@@ -384,7 +362,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-dnqmqq",
+                          "styledComponentId": "sc-htoDjs",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -394,7 +372,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="sc-dnqmqq dGHRLs"
+                        className="sc-htoDjs xXEFx"
                       >
                         <Component
                           aria-label="input-from"
@@ -418,9 +396,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-htoDjs",
+                                    "componentId": "sc-gzVnrw",
                                     "isStatic": false,
-                                    "lastClassName": "exfrZi",
+                                    "lastClassName": "eZAIXH",
                                     "rules": Array [
                                       "
   display: flex;
@@ -433,7 +411,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "displayName": "styled.div",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-htoDjs",
+                                  "styledComponentId": "sc-gzVnrw",
                                   "target": "div",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -448,7 +426,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                               }
                             >
                               <div
-                                className="sc-htoDjs exfrZi"
+                                className="sc-gzVnrw eZAIXH"
                                 style={
                                   Object {
                                     "width": undefined,
@@ -471,9 +449,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-gzVnrw",
+                                          "componentId": "sc-bZQynM",
                                           "isStatic": false,
-                                          "lastClassName": "dnuwiZ",
+                                          "lastClassName": "eTQuWM",
                                           "rules": Array [
                                             "
   border-radius: 4px;
@@ -524,7 +502,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "displayName": "styled.input",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-gzVnrw",
+                                        "styledComponentId": "sc-bZQynM",
                                         "target": "input",
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -541,7 +519,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   >
                                     <input
                                       aria-label="input-from"
-                                      className="sc-gzVnrw dnuwiZ"
+                                      className="sc-bZQynM eTQuWM"
                                       id="from-input-dropdown-1"
                                       onBlur={[Function]}
                                       onChange={[Function]}
@@ -593,9 +571,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-bxivhb",
+                                    "componentId": "sc-htpNat",
                                     "isStatic": false,
-                                    "lastClassName": "ffXmyh",
+                                    "lastClassName": "bTvfOA",
                                     "rules": Array [
                                       "
   display: flex;
@@ -608,7 +586,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "displayName": "styled.span",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-bxivhb",
+                                  "styledComponentId": "sc-htpNat",
                                   "target": "span",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -623,7 +601,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                               }
                             >
                               <span
-                                className="sc-bxivhb ffXmyh"
+                                className="sc-htpNat bTvfOA"
                                 style={
                                   Object {
                                     "width": undefined,
@@ -637,9 +615,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-EHOje",
+                                          "componentId": "sc-ifAKCX",
                                           "isStatic": false,
-                                          "lastClassName": "eQMpHY",
+                                          "lastClassName": "bqyzQp",
                                           "rules": Array [
                                             "
   position: relative;
@@ -649,7 +627,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "displayName": "styled.div",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-EHOje",
+                                        "styledComponentId": "sc-ifAKCX",
                                         "target": "div",
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -659,7 +637,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                     forwardedRef={null}
                                   >
                                     <div
-                                      className="sc-EHOje eQMpHY"
+                                      className="sc-ifAKCX bqyzQp"
                                     >
                                       <styled.select
                                         aria-label="from-dropdown-dropdown-1"
@@ -676,9 +654,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "ITLML",
+                                                "lastClassName": "fgWCLJ",
                                                 "rules": Array [
                                                   "
   appearance: none;
@@ -730,7 +708,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "displayName": "styled.select",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "select",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -744,12 +722,24 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         >
                                           <select
                                             aria-label="from-dropdown-dropdown-1"
-                                            className="sc-bZQynM ITLML"
+                                            className="sc-EHOje fgWCLJ"
                                             disabled={false}
                                             id="from-dropdown-dropdown-1"
                                             onChange={[Function]}
                                             value="from"
                                           >
+                                            <FormattedMessage
+                                              defaultMessage="Beliebig"
+                                              id="serp.filters.selectOptionText"
+                                              values={Object {}}
+                                            >
+                                              <option
+                                                key="serp.filters.selectOptionText"
+                                                value=""
+                                              >
+                                                Beliebig
+                                              </option>
+                                            </FormattedMessage>
                                             <FormattedMessage
                                               id="from"
                                               key="from"
@@ -808,9 +798,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-ifAKCX",
+                                                "componentId": "sc-bxivhb",
                                                 "isStatic": false,
-                                                "lastClassName": "dZQlBY",
+                                                "lastClassName": "dRlhGf",
                                                 "rules": Array [
                                                   "
   display: block;
@@ -851,7 +841,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "displayName": "styled.span",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-ifAKCX",
+                                              "styledComponentId": "sc-bxivhb",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -861,7 +851,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           forwardedRef={null}
                                         >
                                           <span
-                                            className="sc-ifAKCX dZQlBY"
+                                            className="sc-bxivhb dRlhGf"
                                           />
                                         </StyledComponent>
                                       </styled.span>
@@ -882,9 +872,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-dnqmqq",
+                            "componentId": "sc-htoDjs",
                             "isStatic": false,
-                            "lastClassName": "dGHRLs",
+                            "lastClassName": "xXEFx",
                             "rules": Array [
                               "
   display: flex;
@@ -894,7 +884,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   position: relative;
 
   ",
-                              ".sc-htoDjs",
+                              ".sc-gzVnrw",
                               " {
     position: absolute;
     z-index: 1;
@@ -919,7 +909,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-dnqmqq",
+                          "styledComponentId": "sc-htoDjs",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -929,7 +919,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="sc-dnqmqq dGHRLs"
+                        className="sc-htoDjs xXEFx"
                       >
                         <Component
                           aria-label="input-to"
@@ -953,9 +943,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-htoDjs",
+                                    "componentId": "sc-gzVnrw",
                                     "isStatic": false,
-                                    "lastClassName": "exfrZi",
+                                    "lastClassName": "eZAIXH",
                                     "rules": Array [
                                       "
   display: flex;
@@ -968,7 +958,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "displayName": "styled.div",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-htoDjs",
+                                  "styledComponentId": "sc-gzVnrw",
                                   "target": "div",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -983,7 +973,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                               }
                             >
                               <div
-                                className="sc-htoDjs exfrZi"
+                                className="sc-gzVnrw eZAIXH"
                                 style={
                                   Object {
                                     "width": undefined,
@@ -1006,9 +996,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-gzVnrw",
+                                          "componentId": "sc-bZQynM",
                                           "isStatic": false,
-                                          "lastClassName": "dnuwiZ",
+                                          "lastClassName": "eTQuWM",
                                           "rules": Array [
                                             "
   border-radius: 4px;
@@ -1059,7 +1049,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "displayName": "styled.input",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-gzVnrw",
+                                        "styledComponentId": "sc-bZQynM",
                                         "target": "input",
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -1076,7 +1066,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   >
                                     <input
                                       aria-label="input-to"
-                                      className="sc-gzVnrw dnuwiZ"
+                                      className="sc-bZQynM eTQuWM"
                                       id="to-input-dropdown-1"
                                       onBlur={[Function]}
                                       onChange={[Function]}
@@ -1128,9 +1118,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-bxivhb",
+                                    "componentId": "sc-htpNat",
                                     "isStatic": false,
-                                    "lastClassName": "ffXmyh",
+                                    "lastClassName": "bTvfOA",
                                     "rules": Array [
                                       "
   display: flex;
@@ -1143,7 +1133,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "displayName": "styled.span",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-bxivhb",
+                                  "styledComponentId": "sc-htpNat",
                                   "target": "span",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -1158,7 +1148,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                               }
                             >
                               <span
-                                className="sc-bxivhb ffXmyh"
+                                className="sc-htpNat bTvfOA"
                                 style={
                                   Object {
                                     "width": undefined,
@@ -1172,9 +1162,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-EHOje",
+                                          "componentId": "sc-ifAKCX",
                                           "isStatic": false,
-                                          "lastClassName": "eQMpHY",
+                                          "lastClassName": "bqyzQp",
                                           "rules": Array [
                                             "
   position: relative;
@@ -1184,7 +1174,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "displayName": "styled.div",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-EHOje",
+                                        "styledComponentId": "sc-ifAKCX",
                                         "target": "div",
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -1194,7 +1184,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                     forwardedRef={null}
                                   >
                                     <div
-                                      className="sc-EHOje eQMpHY"
+                                      className="sc-ifAKCX bqyzQp"
                                     >
                                       <styled.select
                                         aria-label="from-dropdown-dropdown-1"
@@ -1211,9 +1201,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "ITLML",
+                                                "lastClassName": "fgWCLJ",
                                                 "rules": Array [
                                                   "
   appearance: none;
@@ -1265,7 +1255,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "displayName": "styled.select",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "select",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -1279,12 +1269,24 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         >
                                           <select
                                             aria-label="from-dropdown-dropdown-1"
-                                            className="sc-bZQynM ITLML"
+                                            className="sc-EHOje fgWCLJ"
                                             disabled={false}
                                             id="from-dropdown-dropdown-1"
                                             onChange={[Function]}
                                             value="to"
                                           >
+                                            <FormattedMessage
+                                              defaultMessage="Beliebig"
+                                              id="serp.filters.selectOptionText"
+                                              values={Object {}}
+                                            >
+                                              <option
+                                                key="serp.filters.selectOptionText"
+                                                value=""
+                                              >
+                                                Beliebig
+                                              </option>
+                                            </FormattedMessage>
                                             <FormattedMessage
                                               id="to"
                                               key="to"
@@ -1343,9 +1345,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-ifAKCX",
+                                                "componentId": "sc-bxivhb",
                                                 "isStatic": false,
-                                                "lastClassName": "dZQlBY",
+                                                "lastClassName": "dRlhGf",
                                                 "rules": Array [
                                                   "
   display: block;
@@ -1386,7 +1388,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "displayName": "styled.span",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-ifAKCX",
+                                              "styledComponentId": "sc-bxivhb",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -1396,7 +1398,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           forwardedRef={null}
                                         >
                                           <span
-                                            className="sc-ifAKCX dZQlBY"
+                                            className="sc-bxivhb dRlhGf"
                                           />
                                         </StyledComponent>
                                       </styled.span>
@@ -1427,52 +1429,12 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
     Object {
       "button": Object {
         "primary": Object {
-          "active": Object {
-            "shadow": "inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);",
-          },
           "background": "#75dfc0",
-          "border": Object {
-            "color": "#75dfc0",
-            "radius": 4,
-            "width": 0,
-          },
           "color": "#313330",
-          "disabled": Object {
-            "opacity": 0.5,
-          },
-          "font": Object {
-            "family": "Roboto, sans-serif",
-            "size": 16,
-            "spacing": 0,
-            "weight": 600,
-          },
-          "hover": Object {
-            "shadow": "0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)",
-          },
         },
         "secondary": Object {
-          "active": Object {
-            "shadow": "inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);",
-          },
           "background": "#fff",
-          "border": Object {
-            "color": "#75dfc0",
-            "radius": 4,
-            "width": 1,
-          },
           "color": "#75dfc0",
-          "disabled": Object {
-            "opacity": 0.5,
-          },
-          "font": Object {
-            "family": "Roboto, sans-serif",
-            "size": 16,
-            "spacing": 0,
-            "weight": 600,
-          },
-          "hover": Object {
-            "shadow": "0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)",
-          },
         },
       },
       "card": Object {
@@ -1613,9 +1575,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-dnqmqq",
+              "componentId": "sc-htoDjs",
               "isStatic": false,
-              "lastClassName": "dGHRLs",
+              "lastClassName": "xXEFx",
               "rules": Array [
                 "
   display: flex;
@@ -1625,7 +1587,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
   position: relative;
 
   ",
-                ".sc-htoDjs",
+                ".sc-gzVnrw",
                 " {
     position: absolute;
     z-index: 1;
@@ -1650,7 +1612,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-dnqmqq",
+            "styledComponentId": "sc-htoDjs",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -1660,7 +1622,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
         forwardedRef={null}
       >
         <div
-          className="sc-dnqmqq dGHRLs"
+          className="sc-htoDjs xXEFx"
         >
           <Component
             aria-label="input-from"
@@ -1684,9 +1646,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htoDjs",
+                      "componentId": "sc-gzVnrw",
                       "isStatic": false,
-                      "lastClassName": "exfrZi",
+                      "lastClassName": "eZAIXH",
                       "rules": Array [
                         "
   display: flex;
@@ -1699,7 +1661,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htoDjs",
+                    "styledComponentId": "sc-gzVnrw",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1714,7 +1676,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                 }
               >
                 <div
-                  className="sc-htoDjs exfrZi"
+                  className="sc-gzVnrw eZAIXH"
                   style={
                     Object {
                       "width": undefined,
@@ -1737,9 +1699,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-gzVnrw",
+                            "componentId": "sc-bZQynM",
                             "isStatic": false,
-                            "lastClassName": "dnuwiZ",
+                            "lastClassName": "eTQuWM",
                             "rules": Array [
                               "
   border-radius: 4px;
@@ -1790,7 +1752,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           "displayName": "styled.input",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-gzVnrw",
+                          "styledComponentId": "sc-bZQynM",
                           "target": "input",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1807,7 +1769,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                     >
                       <input
                         aria-label="input-from"
-                        className="sc-gzVnrw dnuwiZ"
+                        className="sc-bZQynM eTQuWM"
                         id="from-input-test-1"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -1847,9 +1809,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bxivhb",
+                      "componentId": "sc-htpNat",
                       "isStatic": false,
-                      "lastClassName": "ffXmyh",
+                      "lastClassName": "bTvfOA",
                       "rules": Array [
                         "
   display: flex;
@@ -1862,7 +1824,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bxivhb",
+                    "styledComponentId": "sc-htpNat",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1877,7 +1839,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                 }
               >
                 <span
-                  className="sc-bxivhb ffXmyh"
+                  className="sc-htpNat bTvfOA"
                   style={
                     Object {
                       "width": undefined,
@@ -1891,9 +1853,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "sc-ifAKCX",
                             "isStatic": false,
-                            "lastClassName": "eQMpHY",
+                            "lastClassName": "bqyzQp",
                             "rules": Array [
                               "
   position: relative;
@@ -1903,7 +1865,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "sc-ifAKCX",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1913,7 +1875,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="sc-EHOje eQMpHY"
+                        className="sc-ifAKCX bqyzQp"
                       >
                         <styled.select
                           aria-label="from-dropdown-test-1"
@@ -1930,9 +1892,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bZQynM",
+                                  "componentId": "sc-EHOje",
                                   "isStatic": false,
-                                  "lastClassName": "ITLML",
+                                  "lastClassName": "fgWCLJ",
                                   "rules": Array [
                                     "
   appearance: none;
@@ -1984,7 +1946,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                 "displayName": "styled.select",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-bZQynM",
+                                "styledComponentId": "sc-EHOje",
                                 "target": "select",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -1998,12 +1960,24 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           >
                             <select
                               aria-label="from-dropdown-test-1"
-                              className="sc-bZQynM ITLML"
+                              className="sc-EHOje fgWCLJ"
                               disabled={false}
                               id="from-dropdown-test-1"
                               onChange={[Function]}
                               value={1}
                             >
+                              <FormattedMessage
+                                defaultMessage="Beliebig"
+                                id="serp.filters.selectOptionText"
+                                values={Object {}}
+                              >
+                                <option
+                                  key="serp.filters.selectOptionText"
+                                  value=""
+                                >
+                                  Beliebig
+                                </option>
+                              </FormattedMessage>
                               <FormattedMessage
                                 id="This is one"
                                 key="1"
@@ -2026,9 +2000,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-ifAKCX",
+                                  "componentId": "sc-bxivhb",
                                   "isStatic": false,
-                                  "lastClassName": "dZQlBY",
+                                  "lastClassName": "dRlhGf",
                                   "rules": Array [
                                     "
   display: block;
@@ -2069,7 +2043,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                 "displayName": "styled.span",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-ifAKCX",
+                                "styledComponentId": "sc-bxivhb",
                                 "target": "span",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -2079,7 +2053,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                             forwardedRef={null}
                           >
                             <span
-                              className="sc-ifAKCX dZQlBY"
+                              className="sc-bxivhb dRlhGf"
                             />
                           </StyledComponent>
                         </styled.span>

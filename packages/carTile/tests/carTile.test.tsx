@@ -20,8 +20,9 @@ const carDetails = {
   firstRegistration: '02.2016',
   fuel: 'DIESEL',
   mileage: '15.600',
-  gearBox: 'MANUAL_GEAR',
+  gearbox: 'MANUAL_GEAR',
   condition: 'NEW',
+  order: 1,
   consumptionCombined: '4.5',
   co2: '107'
 };
@@ -128,7 +129,9 @@ describe('CarTile', () => {
             consumptionCombined: '',
             co2: ''
           }}
-        />
+        />,
+        'de',
+        messages
       )
     );
     expect(
