@@ -4,11 +4,9 @@ import { mount } from 'enzyme';
 import { renderWithThemeAdnI18n } from '@im-ui/utils';
 import toJson from 'enzyme-to-json';
 import 'jest-styled-components';
-
 import Pagination from '../src';
 import PaginationPrev from '../src/views/paginationPrev';
 import PaginationNext from '../src/views/paginationNext';
-
 import messages from '../utils/locales';
 
 describe('Pagination', () => {
