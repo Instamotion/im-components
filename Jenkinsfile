@@ -31,20 +31,25 @@ pipeline {
   }
 
   stages {
-    stage('Prepare and Build') {
+    stage('Test') {
+      steps {
+        sh 'yarn && yarn bootstrap && yarn build:components && yarn test'
+        junit 'junit.xml'
+      }
+    }
+
+    stage ('Docker login') {
       when { branch 'master' }
-      parallel {
-        stage ('Build') {
-          steps {
-            script {
-              serviceApp = docker.build("${NAMESPACE}/${SERVICE_NAME}:${DEPLOY_VERSION}")
-            }
-          }
-        }
-        stage ('Docker login') {
-          steps {
-            dockerLogin()
-          }
+      steps {
+        dockerLogin()
+      }
+    }
+
+    stage('Build') {
+      when { branch 'master' }
+      steps {
+        script {
+          serviceApp = docker.build("${NAMESPACE}/${SERVICE_NAME}:${DEPLOY_VERSION}")
         }
       }
     }
@@ -60,31 +65,6 @@ pipeline {
       }
     }
 
-    stage('Deploy to Development') {
-      when { branch 'master' }
-      steps {
-        script {
-          ecsDeploy("${SERVICE_NAME}", "${DEPLOY_VERSION}", "${NAMESPACE}")
-        }
-      }
-    }
-
-    stage("Development autotests") {
-      when { branch 'master' }
-      steps {
-        echo "Get service heath"
-        sh "for i in \$(seq 1 5); do [ \$i -gt 1 ] && sleep 15; curl -sSf https://\${SERVICE_NAME}.dev.instamotion.com/health && s=0 && break || s=\$?; done; (exit \$s)"
-      }
-      post {
-        success {
-          echo "[INFO] Smoke tests was successful."
-        }
-        unsuccessful {
-          ecsDeploy("${SERVICE_NAME}", "latest", "${NAMESPACE}")
-        }
-      }
-    }
-
     stage("Deploy to Production") {
       when { branch 'master' }
       steps {
@@ -93,33 +73,9 @@ pipeline {
         }
       }
     }
-
-    stage("Production autotests") {
-      when { branch 'master' }
-      steps {
-        echo "Get service heath"
-        sh "for i in \$(seq 1 5); do [ \$i -gt 1 ] && sleep 25; curl -sSf https://\${SERVICE_NAME}.instamotion.com/health && s=0 && break || s=\$?; done; (exit \$s)"
-      }
-      post {
-        success {
-          echo "[INFO] Smoke tests was successful. Promoting image with latest tag"
-          script {
-            docker.withRegistry("${env.ECR_REGISTRY_URL}") {
-              serviceApp.push("latest")
-            }
-          }
-        }
-        unsuccessful {
-          ecsDeploy("prod", "${SERVICE_NAME}", "latest", "${NAMESPACE}")
-        }
-      }
-    }
   }
 
   post {
-    success {
-        slackSend(channel: '#team-hulk-alerts', color: 'good', message: "Build finished successfully : ${env.JOB_NAME} [${env.BUILD_NUMBER}] (<${env.RUN_DISPLAY_URL}|Open>) :thumbsup:")
-    }
     failure {
         slackSend(channel: '#team-hulk-alerts', color: 'danger', message: "Huh, not good... Build failed : ${env.JOB_NAME} [${env.BUILD_NUMBER}] (<${env.RUN_DISPLAY_URL}|Open>) :man-shrugging::shrug:")
     }
