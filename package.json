@@ -97,7 +97,7 @@
     }
   },
   "lint-staged": {
-    "*.tsx": [
+    "*.{ts,tsx,md}": [
       "yarn prettier:write",
       "git add"
     ]
