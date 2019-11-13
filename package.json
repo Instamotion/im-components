@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/Instamotion/im-components#readme",
   "dependencies": {
+    "@atlaskit/build-releases": "^3.0.8",
     "@n8tb1t/use-scroll-position": "1.0.40",
     "react": "^16.11.0",
     "react-alice-carousel": "^1.15.3",
