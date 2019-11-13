@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, number } from '@storybook/addon-knobs';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import CarTile, { CarTileProps } from '../src';
 import messages from '../utils/locales';
 
@@ -30,5 +30,5 @@ storiesOf('Car tile', module).add('Common car tile', () => {
     }
   };
 
-  return renderWithThemeAdnI18n(<CarTile {...carDetails} />, 'de', messages);
+  return renderWithThemeAndI18n(<CarTile {...carDetails} />, 'de', messages);
 });

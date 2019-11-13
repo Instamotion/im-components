@@ -2,7 +2,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { text } from '@storybook/addon-knobs';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import RadioButtonGroup, { RadioButtonGroupProps } from '../src';
 import { RadioButtonsProps, RadioButtonGroupOrientation } from '../src/radioButtonGroup';
 
@@ -27,7 +27,7 @@ const props: RadioButtonGroupProps<FinancingType> = {
 describe('RadioButtonGroup', () => {
   it('renders with 2 radio buttons', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <RadioButtonGroup {...props}>{text('Label', 'RadioButtonGroupComponent')}</RadioButtonGroup>
       )
     );
@@ -37,7 +37,7 @@ describe('RadioButtonGroup', () => {
 
   it('switch selected element', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <RadioButtonGroup {...props}>{text('Label', 'RadioButtonGroupComponent')}</RadioButtonGroup>
       )
     );

@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/dropdown",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -39,6 +39,6 @@
     "@im-ui/error-message": "^0.1.3",
     "@im-ui/label": "^0.1.3",
     "@im-ui/theme": "^0.3.5",
-    "@im-ui/utils": "^0.4.2"
+    "@im-ui/utils": "^0.5.0"
   }
 }

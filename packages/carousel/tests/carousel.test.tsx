@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import Slide from '../src/slide';
 import NavDot from '../src/navDot';
 import NavArrow from '../src/navArrow';
@@ -25,7 +25,7 @@ describe('Common | Carousel', () => {
       slides
     };
 
-    const wrapper = mount(renderWithThemeAdnI18n(<Carousel {...props} />));
+    const wrapper = mount(renderWithThemeAndI18n(<Carousel {...props} />));
     expect(wrapper.find(Carousel).length).toEqual(1);
     expect(wrapper.find(Slide).length).toEqual(2);
 

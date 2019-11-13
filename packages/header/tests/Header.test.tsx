@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import BrandingLogo from '@im-ui/branding-logo';
 import Header, { HeaderWrapper, AvailableVariants } from '../src';
 import Link from '../src/items/link';
@@ -11,7 +11,7 @@ import { AvailableColors } from '@im-ui/theme';
 describe('Header', () => {
   it('header rendered', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <HeaderWrapper imgPath="" phoneNumber="089-411151-100" />,
         'de',
         messages
@@ -21,7 +21,7 @@ describe('Header', () => {
   });
   it('all logos rendered', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <HeaderWrapper imgPath="" phoneNumber="089-411151-100" />,
         'de',
         messages
@@ -32,7 +32,7 @@ describe('Header', () => {
 
   it('tramsparent variant applied', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <Header
           variant="Transparent"
           isOpen={false}
@@ -65,7 +65,7 @@ describe('Header', () => {
   });
   it('tramsparent variant applied', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <Header
           variant={AvailableVariants.Dark}
           isOpen={false}
