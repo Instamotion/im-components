@@ -18,7 +18,8 @@
     "build:components": "bolt workspaces run build",
     "build": "bolt build:components && bolt build:storybook",
     "start": "start-storybook -p 6006",
-    "version:bump": "node ./lib/bumpVersion.js"
+    "bump:changeset": "yarn build-releases changeset",
+    "bump:version": "yarn build-releases version"
   },
   "repository": {
     "type": "git",
