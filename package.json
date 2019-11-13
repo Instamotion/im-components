@@ -63,6 +63,8 @@
     "babel-loader": "^8.0.6",
     "bolt": "^0.24.3",
     "bolt-query": "^1.1.4",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.0.2",
     "enhanced-resolve": "^4.1.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
@@ -89,13 +91,14 @@
   },
   "husky": {
     "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
       "pre-commit": "lint-staged",
-      "pre-push": "npm test"
+      "pre-push": "yarn test"
     }
   },
   "lint-staged": {
     "*.tsx": [
-      "npm run prettier:write",
+      "yarn prettier:write",
       "git add"
     ]
   },
@@ -104,5 +107,10 @@
       "packages/*"
     ]
   },
-  "peerDependencies": {}
+  "peerDependencies": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
