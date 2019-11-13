@@ -35,7 +35,8 @@ bolt start
 
 ### Bump the version
 
-... to be updated ...
+1. `bolt bump:changeset` - pick the packages to include in the changeset
+2. `bump:version` - generate changelog fiels and bump versions
 
 ### Adding dependency to a package
 
