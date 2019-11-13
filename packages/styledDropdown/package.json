@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/styled-dropdown",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "types": "dist/cjs/index.d.ts",
   "module": "dist/esm/index.js",
   "main": "dist/cjs/index.js",
@@ -18,8 +18,8 @@
   ],
   "dependencies": {
     "@im-ui/theme": "^0.3.4",
-    "@im-ui/icon": "^0.2.6",
-    "@im-ui/label": "^0.1.4",
+    "@im-ui/icon": "^0.2.7",
+    "@im-ui/label": "^0.1.5",
     "downshift": "^3.3.5"
   },
   "devDependencies": {
