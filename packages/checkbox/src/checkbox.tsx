@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import ErrorMessage from '@im-ui/error-message';
 import Label from '@im-ui/label';
 import theme from '@im-ui/theme';
-import { px2rem } from '@im-ui/utils';
+import { css } from '@im-ui/utils';
+
+const { px2rem } = css;
 
 export type ClickChangeEvent =
   | React.ChangeEvent<HTMLInputElement>

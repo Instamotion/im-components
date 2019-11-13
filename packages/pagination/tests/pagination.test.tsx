@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import toJson from 'enzyme-to-json';
 import 'jest-styled-components';
 
@@ -21,7 +21,7 @@ describe('Pagination', () => {
       onPageChange: () => cb
     };
 
-    const wrapper = mount(renderWithThemeAdnI18n(<Pagination {...props} />));
+    const wrapper = mount(renderWithThemeAndI18n(<Pagination {...props} />));
 
     expect(wrapper.find('li')).toHaveLength(9);
     expect(toJson(wrapper)).toMatchSnapshot();
@@ -35,7 +35,7 @@ describe('Pagination', () => {
       onPageChange: jest.fn()
     };
 
-    const wrapper = mount(renderWithThemeAdnI18n(<Pagination {...props} />));
+    const wrapper = mount(renderWithThemeAndI18n(<Pagination {...props} />));
     const firstPage = wrapper.find('li').at(0);
 
     firstPage.simulate('click');
@@ -51,7 +51,7 @@ describe('Pagination', () => {
       onPageChange: jest.fn()
     };
 
-    const wrapper = mount(renderWithThemeAdnI18n(<Pagination {...props} />));
+    const wrapper = mount(renderWithThemeAndI18n(<Pagination {...props} />));
     const PrevButton = wrapper.find(PaginationPrev);
 
     PrevButton.simulate('click');
@@ -67,7 +67,7 @@ describe('Pagination', () => {
       onPageChange: jest.fn()
     };
 
-    const wrapper = mount(renderWithThemeAdnI18n(<Pagination {...props} />));
+    const wrapper = mount(renderWithThemeAndI18n(<Pagination {...props} />));
     const NextButton = wrapper.find(PaginationNext);
 
     NextButton.simulate('click');
@@ -83,7 +83,7 @@ describe('Pagination', () => {
       onPageChange: jest.fn()
     };
 
-    const wrapper = mount(renderWithThemeAdnI18n(<Pagination {...props} />));
+    const wrapper = mount(renderWithThemeAndI18n(<Pagination {...props} />));
 
     expect(wrapper.find('button')).toHaveLength(1);
   });
@@ -96,7 +96,7 @@ describe('Pagination', () => {
       onPageChange: jest.fn()
     };
 
-    const wrapper = mount(renderWithThemeAdnI18n(<Pagination {...props} />, 'de', messages));
+    const wrapper = mount(renderWithThemeAndI18n(<Pagination {...props} />, 'de', messages));
 
     // Previous button
     expect(

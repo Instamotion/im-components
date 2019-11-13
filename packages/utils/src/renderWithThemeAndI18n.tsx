@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { IntlProvider } from 'react-intl';
 import { AvailableLocales, AdditionalTranslation } from './i18n';
 
-export const renderWithThemeAdnI18n = (
+export default (
   element: JSX.Element,
   locale: AvailableLocales = 'de',
   additionalTranslations: AdditionalTranslation = {}
