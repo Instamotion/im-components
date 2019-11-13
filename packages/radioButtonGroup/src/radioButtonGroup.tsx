@@ -2,7 +2,9 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import RadioButton, { RadioButtonLabel } from '@im-ui/radio-button';
 import theme from '@im-ui/theme';
-import { px2rem } from '@im-ui/utils';
+import { css as utilsCSS } from '@im-ui/utils';
+
+const { px2rem } = utilsCSS;
 
 export interface RadioButtonsProps<T> {
   label: JSX.Element | string;
