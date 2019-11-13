@@ -13,6 +13,6 @@ describe('Formatting', () => {
   });
 
   it('should format number in de locale', () => {
-    expect(formatNumber(1000, 'de-DE')).toBe('1,000');
+    expect(formatNumber(1000, 'de-DE')).toBe('1.000');
   });
 });

@@ -39,7 +39,7 @@ const de = {
   'default.footer.advisor_novice_driver': 'Ratgeber Fahranfänger',
   'default.footer.part_exchange': 'Inzahlungnahme',
   'default.footer.guide_for_owners': 'Ratgeber für Hundebesitzer',
-  'default.footer.fold_us': 'Foldge uns',
+  'default.footer.fold_us': 'Folge uns',
   'default.footer.free_advice': 'Kostenlose Beratung',
   'default.footer.guide_funding': 'Ratgeber Finanzierung',
   'default.footer.guide_leasing': 'Ratgeber Leasing',
