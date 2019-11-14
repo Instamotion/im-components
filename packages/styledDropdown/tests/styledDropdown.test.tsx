@@ -3,7 +3,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import 'jest-styled-components';
 import StyledDropdown, { OptionType, DropdownButton, Item } from '../src';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import theme from '@im-ui/theme';
 
 const options: OptionType[] = [
@@ -31,31 +31,31 @@ const optionWithEditions: OptionType[] = [
 
 describe('Styled dropdown', () => {
   it('renders', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<StyledDropdown options={options} />));
+    const wrapper = mount(renderWithThemeAndI18n(<StyledDropdown options={options} />));
     expect(wrapper.find(StyledDropdown)).toHaveLength(1);
   });
   it('default value test', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<StyledDropdown options={options} defaultItem={options[0]} />)
+      renderWithThemeAndI18n(<StyledDropdown options={options} defaultItem={options[0]} />)
     );
     expect(wrapper.find('input').prop('value')).toEqual(options[0].label);
   });
   it('items render', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<StyledDropdown options={options} defaultItem={options[0]} />)
+      renderWithThemeAndI18n(<StyledDropdown options={options} defaultItem={options[0]} />)
     );
     wrapper.find(DropdownButton).simulate('click');
     expect(wrapper.find(Item)).toHaveLength(2);
   });
   it('check label', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<StyledDropdown options={options} label="im a label!" />)
+      renderWithThemeAndI18n(<StyledDropdown options={options} label="im a label!" />)
     );
     expect(wrapper.find('label').text()).toEqual('im a label!');
   });
   it('items render', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<StyledDropdown options={options} defaultItem={options[0]} />)
+      renderWithThemeAndI18n(<StyledDropdown options={options} defaultItem={options[0]} />)
     );
     expect(
       wrapper
@@ -67,7 +67,7 @@ describe('Styled dropdown', () => {
 
   it('disabled items render', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<StyledDropdown options={options} disabled defaultItem={options[0]} />)
+      renderWithThemeAndI18n(<StyledDropdown options={options} disabled defaultItem={options[0]} />)
     );
     expect(
       wrapper
@@ -77,7 +77,7 @@ describe('Styled dropdown', () => {
     ).toEqual(theme.color.silver);
   });
   it('items width editions', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<StyledDropdown options={optionWithEditions} />));
+    const wrapper = mount(renderWithThemeAndI18n(<StyledDropdown options={optionWithEditions} />));
     wrapper.find(DropdownButton).simulate('click');
     expect(wrapper.find(Item).at(0)).toHaveStyleRule('padding-left', '1.125rem');
     expect(wrapper.find(Item).at(1)).toHaveStyleRule('padding-left', '2.125rem');

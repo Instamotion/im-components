@@ -28,7 +28,7 @@ const TextInputDemo = (): React.ReactElement => {
     }
   };
 
-  return renderWithThemeAdnI18n(
+  return renderWithThemeAndI18n(
     <div style={{ fontSize: '16px' }}>
       <Input {...props} />
     </div>
@@ -157,7 +157,7 @@ const RangeInputDemo = (): React.ReactElement => {
     }
   };
 
-  return renderWithThemeAdnI18n(
+  return renderWithThemeAndI18n(
     <div style={{ fontSize: '16px' }}>
       <Input {...props} />
     </div>

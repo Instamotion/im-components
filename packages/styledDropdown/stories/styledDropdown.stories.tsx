@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, select, boolean } from '@storybook/addon-knobs';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import { AvailableIcons } from '@im-ui/icon';
 import StyledDropdown, { OptionType } from '../src';
 
@@ -21,7 +21,7 @@ storiesOf('Styled dropdown', module)
         iconName: select<AvailableIcons>('iconName2', iconOptions, 'condition', 'non default item')
       }
     ];
-    return renderWithThemeAdnI18n(
+    return renderWithThemeAndI18n(
       <div style={{ width: '280px' }}>
         <StyledDropdown
           options={options}
@@ -45,7 +45,7 @@ storiesOf('Styled dropdown', module)
       }
     ];
 
-    return renderWithThemeAdnI18n(
+    return renderWithThemeAndI18n(
       <StyledDropdown
         options={optionsWithoutIcons}
         placeholder={text('placeholder', 'Choose value')}

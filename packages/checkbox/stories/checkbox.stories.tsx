@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import Checkbox, { CheckboxProps } from '../src';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 
 const stories = storiesOf('Checkbox', module);
 
@@ -18,7 +18,7 @@ stories
         action('clicked')(checked);
       }
     };
-    return renderWithThemeAdnI18n(<Checkbox {...props} />);
+    return renderWithThemeAndI18n(<Checkbox {...props} />);
   })
 
   .add('checked by default', () => {
@@ -30,5 +30,5 @@ stories
         action('clicked')(checked);
       }
     };
-    return renderWithThemeAdnI18n(<Checkbox {...props} />);
+    return renderWithThemeAndI18n(<Checkbox {...props} />);
   });

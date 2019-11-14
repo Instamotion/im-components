@@ -103,7 +103,7 @@ describe('CarTile', () => {
   });
   it('Check monthly rate with empty/zero value', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <CarTile
           {...{
             ...carDetails,

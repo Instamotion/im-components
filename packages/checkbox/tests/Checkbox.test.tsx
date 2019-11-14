@@ -2,7 +2,7 @@
 import React from 'react';
 import 'jest-styled-components';
 import { mount } from 'enzyme';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import Checkbox, { CheckboxInput } from '../src';
 
 const mockedOnChange = jest.fn();
@@ -15,13 +15,13 @@ const props = {
 
 describe('Checkbox', () => {
   it('renders Checkbox component', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<Checkbox {...props} />));
+    const wrapper = mount(renderWithThemeAndI18n(<Checkbox {...props} />));
     expect(wrapper).toBeDefined();
   });
 
   it('check event is triggered', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(<Checkbox {...props} onChange={mockedOnChange} />)
+      renderWithThemeAndI18n(<Checkbox {...props} onChange={mockedOnChange} />)
     );
     expect(wrapper).toBeDefined();
 
