@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { text, number } from '@storybook/addon-knobs';
 import { renderWithThemeAdnI18n } from '@im-ui/utils';
 import CarTile, { CarTileProps } from '../src';
+import messages from '../utils/locales';
 
 storiesOf('CarTile', module).add('Common car tile', () => {
   const carDetails: CarTileProps = {
@@ -27,5 +28,6 @@ storiesOf('CarTile', module).add('Common car tile', () => {
     co2: text('co2', '105'),
     order: 1
   };
-  return renderWithThemeAdnI18n(<CarTile {...carDetails} />);
+
+  return renderWithThemeAdnI18n(<CarTile {...carDetails} />, 'de', messages);
 });

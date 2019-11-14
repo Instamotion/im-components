@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '@im-ui/theme';
-import { px2rem } from '@im-ui/utils';
+import { css } from '@im-ui/utils';
+
+const { px2rem } = css;
 
 export interface RadioButtonProps {
   className?: string;

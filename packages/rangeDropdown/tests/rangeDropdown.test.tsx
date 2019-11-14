@@ -3,7 +3,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { DropdownOptionProps } from '@im-ui/dropdown';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import { RangeDropdownProps } from '../src';
 import { RangeDropdown, renderSelector, formRange, sendData } from '../src/rangeDropdown';
 
@@ -34,7 +34,7 @@ const props: RangeDropdownProps = {
 
 describe('RangeDropdown Input', () => {
   it('component renders correctly', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<RangeDropdown {...props} />, 'de'));
+    const wrapper = mount(renderWithThemeAndI18n(<RangeDropdown {...props} />, 'de'));
 
     expect(toJson(wrapper)).toMatchSnapshot();
   });
@@ -125,7 +125,7 @@ describe('RangeDropdown Input', () => {
         setRange,
         propagateRange
       );
-      const wrapper = mount(renderWithThemeAdnI18n(component));
+      const wrapper = mount(renderWithThemeAndI18n(component));
       expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -143,7 +143,7 @@ describe('RangeDropdown Input', () => {
         setRange,
         propagateRange
       );
-      const wrapper = mount(renderWithThemeAdnI18n(component));
+      const wrapper = mount(renderWithThemeAndI18n(component));
       const input = wrapper.find('input');
       input.simulate('change', { target: { value: '100' } });
       expect(setRange).toBeCalledWith(['100', 2]);
@@ -163,7 +163,7 @@ describe('RangeDropdown Input', () => {
         setRange,
         propagateRange
       );
-      const wrapper = mount(renderWithThemeAdnI18n(component));
+      const wrapper = mount(renderWithThemeAndI18n(component));
       const input = wrapper.find('input');
       input.simulate('blur');
       expect(propagateRange).toBeCalledWith(['1', 2]);
@@ -183,14 +183,14 @@ describe('RangeDropdown Input', () => {
         setRange,
         propagateRange
       );
-      const wrapper = mount(renderWithThemeAdnI18n(component));
+      const wrapper = mount(renderWithThemeAndI18n(component));
       wrapper.find('select').simulate('change', { target: { value: '100' } });
       expect(propagateRange).toBeCalledWith(['100', 2]);
     });
   });
 
   it('have 2 inputs with correct id', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<RangeDropdown {...props} />));
+    const wrapper = mount(renderWithThemeAndI18n(<RangeDropdown {...props} />));
     const input = wrapper.find('input');
     expect(input.first().props().id).toEqual('from-input-dropdown-1');
     expect(input.last().props().id).toEqual('to-input-dropdown-1');

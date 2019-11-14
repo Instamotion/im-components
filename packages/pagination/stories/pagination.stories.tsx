@@ -9,7 +9,7 @@ const updateKnob = (name: string, value: any): void => {
 };
 
 import Pagination, { PaginationProps } from '../src';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 
 const story = storiesOf('Pagination', module);
 
@@ -20,5 +20,5 @@ story.add('pagination (clickable)', () => {
     pagePadding: number('pagePadding', 2, {}),
     onPageChange: idx => updateKnob('currentPage', idx)
   };
-  return renderWithThemeAdnI18n(<Pagination {...props} />);
+  return renderWithThemeAndI18n(<Pagination {...props} />);
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import { DropdownOptionProps } from '@im-ui/dropdown';
 import { action } from '@storybook/addon-actions';
 import RangeDropdown, { RangeDropdownProps } from '../src';
@@ -28,7 +28,7 @@ storiesOf('Range Dropdown', module).add('default', () => {
     placeholderFrom: 'from',
     label: 'Select the range'
   };
-  return renderWithThemeAdnI18n(
+  return renderWithThemeAndI18n(
     <RangeDropdown {...props} onChange={r => action(`new range ${r[0]} - ${r[1]}`)(r)} />
   );
 });

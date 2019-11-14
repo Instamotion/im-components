@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { HeaderWrapper, HeaderWrapperProps } from '../src';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import messages from '../utils/locales';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import TagManager from 'react-gtm-module';
 
 const image = require('../src/assets/header-img.png');
@@ -23,7 +23,7 @@ storiesOf('Header', module).add('Default', () => {
     imgPath: image,
     phoneNumber: text('phone number', '089-411151-100')
   };
-  return renderWithThemeAdnI18n(
+  return renderWithThemeAndI18n(
     <GtmWrapper>
       <HeaderWrapper {...props} />
     </GtmWrapper>,

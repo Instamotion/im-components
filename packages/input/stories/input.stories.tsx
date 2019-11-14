@@ -7,7 +7,7 @@ import { IntlProvider } from 'react-intl';
 // import deLocaleData from 'react-intl/locale-data/de';
 // import enLocaleData from 'react-intl/locale-data/en';
 import Checkbox from '@im-ui/checkbox';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import Input, { InputProps } from '../src';
 // import translations from '../../i18n';
 
@@ -167,7 +167,7 @@ const RangeInputDemo = (): React.ReactElement => {
 const InputCustomValidation = (): React.ReactElement => {
   const [withCustomValid, setWithCustomValid] = React.useState(true);
   const [isValid, setIsValid] = React.useState(false);
-  return renderWithThemeAdnI18n(
+  return renderWithThemeAndI18n(
     <div>
       <h3>How it works</h3>
       <p>

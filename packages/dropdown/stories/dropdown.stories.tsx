@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import Label from '@im-ui/label';
 import Dropdown, { DropdownOptionProps, DropdownProps } from '../src';
 
@@ -21,7 +21,7 @@ storiesOf('Dropdown', module)
       }
     };
 
-    return renderWithThemeAdnI18n(
+    return renderWithThemeAndI18n(
       <Fragment>
         <Label messageId="label" />
         <Dropdown {...props} />
@@ -46,7 +46,7 @@ storiesOf('Dropdown', module)
       }
     };
 
-    return renderWithThemeAdnI18n(<Dropdown {...props} />, 'de', {
+    return renderWithThemeAndI18n(<Dropdown {...props} />, 'de', {
       de: {
         Germany: 'Germany',
         Austria: 'Austria',

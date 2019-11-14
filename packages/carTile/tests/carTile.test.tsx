@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import CarTile from '../src';
 import { Name, ModelDescription, Price, Tooltip, CarImage } from '../src/carTile';
 import { InfoLabel, transformInfo } from '../src/infoItem';
@@ -29,12 +29,12 @@ const carDetails = {
 
 describe('CarTile', () => {
   it('renders', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<CarTile {...carDetails} />));
+    const wrapper = mount(renderWithThemeAndI18n(<CarTile {...carDetails} />));
     expect(wrapper).toBeDefined();
   });
   it('the name is displayed correctly', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <CarTile
           {...{
             ...carDetails,
@@ -48,7 +48,7 @@ describe('CarTile', () => {
   });
   it('the image has correct path', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <CarTile
           {...{
             ...carDetails,
@@ -61,7 +61,7 @@ describe('CarTile', () => {
   });
   it('the model description is displayed correctly', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <CarTile
           {...{
             ...carDetails,
@@ -74,7 +74,7 @@ describe('CarTile', () => {
   });
   it('the long model description is displayed in tooltip', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <CarTile
           {...{
             ...carDetails,
@@ -90,7 +90,7 @@ describe('CarTile', () => {
   });
   it('correct monthly rate format', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <CarTile
           {...{
             ...carDetails,
@@ -116,7 +116,7 @@ describe('CarTile', () => {
   });
   it('additional info empty value', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <CarTile
           {...{
             ...carDetails,
@@ -142,7 +142,7 @@ describe('CarTile', () => {
     ).toEqual('Nicht verfügbar');
   });
   it('all icons displayed', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<CarTile {...carDetails} />));
+    const wrapper = mount(renderWithThemeAndI18n(<CarTile {...carDetails} />));
     expect(wrapper.find('svg').length).toBeGreaterThan(8);
   });
   it('switch case default value', () => {

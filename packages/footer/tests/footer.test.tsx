@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 import { renderIcon } from '../src/defaultFooter';
 import TrustfulSection from '../src/trustfulSection';
 import TrustfulHeading from '../src/trustfulSection/trustfulHeading';
@@ -15,13 +15,13 @@ import messages from '../utils/locales';
 
 describe('Global | Footer', () => {
   it('renders correct variant', () => {
-    const wrapper = mount(renderWithThemeAdnI18n(<Footer variant="minimal" />, 'de', messages));
+    const wrapper = mount(renderWithThemeAndI18n(<Footer variant="minimal" />, 'de', messages));
     expect(wrapper.find(CheckoutFooter).length).toEqual(1);
   });
 
   it('renders default variant', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <Footer variant="full" googleToken="" facebookToken="" />,
         'de',
         messages
@@ -33,7 +33,7 @@ describe('Global | Footer', () => {
 
   it('default variant have menu items', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <Footer variant="full" googleToken="" facebookToken="" />,
         'de',
         messages
@@ -44,7 +44,7 @@ describe('Global | Footer', () => {
 
   it('default variant has social container', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <Footer variant="full" googleToken="" facebookToken="" />,
         'de',
         messages
@@ -55,7 +55,7 @@ describe('Global | Footer', () => {
 
   it('default variant has copyrights section', () => {
     const wrapper = mount(
-      renderWithThemeAdnI18n(
+      renderWithThemeAndI18n(
         <Footer variant="full" googleToken="" facebookToken="" />,
         'de',
         messages
