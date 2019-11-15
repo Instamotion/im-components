@@ -1,1 +1,0 @@
-- renderWithThemeAndI18n typo fixed

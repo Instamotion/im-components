@@ -1,5 +1,13 @@
 # @im-ui/checkbox
 
+## 0.1.7
+- [patch] 938f5d6:
+
+  - renderWithThemeAndI18n typo fixed
+- [patch] :
+
+  - Transfer reusable components from witcher-switcher
+
 ## 0.1.6
 - [patch] :
 

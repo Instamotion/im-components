@@ -1,5 +1,10 @@
 # @im-ui/header
 
+## 0.2.4
+- [patch] :
+
+  - Transfer reusable components from witcher-switcher
+
 ## 0.2.3
 - [patch] :
 
