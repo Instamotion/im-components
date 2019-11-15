@@ -6,7 +6,7 @@ import ErrorMessage from '@im-ui/error-message';
 import theme from '@im-ui/theme';
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
-  label?: JSX.Element | string;
+  label?: string;
   errorMessage?: JSX.Element;
   width?: string;
 };
@@ -60,11 +60,7 @@ export const Input: React.FC<InputProps> = props => {
 
   return (
     <InputComponentWrapper style={{ width }}>
-      {label && (
-        <Label required={required} htmlFor={id}>
-          {label}
-        </Label>
-      )}
+      {label && <Label required={required} messageId={label} />}
       <StyledInput {...props} id={id} onChange={handleOnChange} />
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </InputComponentWrapper>

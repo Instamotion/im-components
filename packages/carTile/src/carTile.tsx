@@ -11,7 +11,7 @@ export interface CarInfoModel {
   power: number;
   firstRegistration: string;
   fuel: string;
-  gearBox: string;
+  gearbox: string;
   condition: string;
   consumptionCombined: string;
   co2: string;
@@ -20,68 +20,120 @@ export interface CarInfoModel {
 export interface CarTileProps {
   className?: string;
   id: string;
+  order: number;
   image: string;
   make: string;
   model: string;
   modelDescription: string;
   price: string;
   monthlyInstallment: number;
-  info: CarInfoModel;
+  mileage: string;
+  power: number;
+  firstRegistration: string;
+  fuel: string;
+  gearbox: string;
+  condition: string;
+  consumptionCombined: string;
+  co2: string;
+}
+
+export interface TileProps {
+  order: number;
 }
 
 const CarTileComponent: React.FC<CarTileProps> = ({
   className,
+  order,
   make,
   model,
   modelDescription,
   image,
   monthlyInstallment,
   price,
-  info
+  mileage,
+  power,
+  firstRegistration,
+  fuel,
+  gearbox,
+  condition,
+  consumptionCombined,
+  co2
 }) => {
   const imageWidth = 286;
+  const info: CarInfoModel = {
+    mileage,
+    power,
+    firstRegistration,
+    fuel,
+    gearbox,
+    condition,
+    consumptionCombined,
+    co2
+  };
+
   return (
-    <Tile className={className} onClick={() => {}}>
-      <CarTileTop>
-        <Favorite>
-          <Icon iconName="star" size={16} color="downy" />
-        </Favorite>
-        <Name>{`${make} ${model}`}</Name>
-        <ModelDescription>{modelDescription}</ModelDescription>
-        <Tooltip>{modelDescription}</Tooltip>
-      </CarTileTop>
-      {image ? (
-        <CarImage url={image} />
-      ) : (
-        <CarPlaceholder>
-          <Icon iconName="tilePlaceholder" size={imageWidth} />
-        </CarPlaceholder>
-      )}
-      <CarPrice>
-        <Price>{`${monthlyInstallment} € p.M.`}</Price>
-        <AlternativePrice>
-          <FormattedMessage id="car.tile.or" />
-          {` ${formatting.formatNumber(+price, 'de-DE')},– €`}
-        </AlternativePrice>
-      </CarPrice>
-      <InfoItemComponent {...info} />
-    </Tile>
+    <CarTileWrapper order={order}>
+      <Tile className={className}>
+        <CarTileTop>
+          <Favorite>
+            <Icon iconName="star" size={16} color="downy" />
+          </Favorite>
+          <Name>{`${make} ${model}`}</Name>
+          <ModelDescription>{modelDescription}</ModelDescription>
+          <Tooltip>{modelDescription}</Tooltip>
+        </CarTileTop>
+        {image ? (
+          <CarImage url={image} />
+        ) : (
+          <CarPlaceholder>
+            <Icon iconName="tilePlaceholder" size={imageWidth} />
+          </CarPlaceholder>
+        )}
+        <CarPrice>
+          <Price>{`${formatting.formatNumber(+monthlyInstallment, 'de-DE')},– € p.M.`}</Price>
+          <AlternativePrice>
+            <FormattedMessage id="car.tile.or" />
+            {` ${formatting.formatNumber(+price, 'de-DE')},– €`}
+          </AlternativePrice>
+        </CarPrice>
+        <InfoItemComponent {...info} />
+      </Tile>
+    </CarTileWrapper>
   );
 };
 
+const CarTileWrapper = styled.div<TileProps>`
+  display: flex;
+  order: ${props => props.order};
+  flex-basis: 100%;
+  justify-content: center;
+  ${theme.mediaQueries.whenMobileL} {
+    flex-basis: 33%;
+  }
+  ${theme.mediaQueries.whenDesktop} {
+    display: flex;
+    flex-basis: 25%;
+    justify-content: flex-start;
+  }
+`;
+
 export const Tile = styled.div`
-  margin: 1rem;
   width: 18rem;
   height: 34.75rem;
+  border: solid 0.0625rem transparent;
   border-radius: 0.25rem;
   box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0, 0, 0.9, 0.9) 0s, outline 0s;
   &:hover {
     box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.1);
-    outline: solid 0.03125rem ${theme.color.downy};
+    border: solid 0.0625rem ${theme.color.downy};
     transform: translateY(-0.5rem);
     cursor: pointer;
+  }
+  margin: 0.5rem 0;
+  ${theme.mediaQueries.whenDesktop} {
+    margin: 1rem 0;
   }
 `;
 
@@ -144,12 +196,12 @@ export const AlternativePrice = styled.div`
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25;
-  color: ${theme.color.brightGrey};
+  color: ${theme.color.brightGrey}
   margin-top: 0.25rem;
 `;
 
 export const Tooltip = styled.div`
-  width: 14.5rem;
+  max-width: 14.5rem;
   min-height: 1.125rem;
   max-height: 2rem;
   position: absolute;

@@ -16,16 +16,15 @@ const carDetails = {
   modelDescription: '',
   price: '',
   monthlyInstallment: 0,
-  info: {
-    power: 51,
-    firstRegistration: '02.2016',
-    fuel: 'DIESEL',
-    mileage: '15.600',
-    gearBox: 'MANUAL_GEAR',
-    condition: 'NEW',
-    consumptionCombined: '4.5',
-    co2: '107'
-  }
+  power: 51,
+  firstRegistration: '02.2016',
+  fuel: 'DIESEL',
+  mileage: '15.600',
+  gearbox: 'MANUAL_GEAR',
+  condition: 'NEW',
+  order: 1,
+  consumptionCombined: '4.5',
+  co2: '107'
 };
 
 describe('CarTile', () => {
@@ -42,9 +41,7 @@ describe('CarTile', () => {
             make: 'Nissan',
             model: 'Juke'
           }}
-        />,
-        'de',
-        messages
+        />
       )
     );
     expect(wrapper.find(Name).text()).toEqual('Nissan Juke');
@@ -57,9 +54,7 @@ describe('CarTile', () => {
             ...carDetails,
             image: 'correct_path'
           }}
-        />,
-        'de',
-        messages
+        />
       )
     );
     expect(wrapper.find(CarImage)).toBeDefined();
@@ -72,9 +67,7 @@ describe('CarTile', () => {
             ...carDetails,
             modelDescription: 'model description'
           }}
-        />,
-        'de',
-        messages
+        />
       )
     );
     expect(wrapper.find(ModelDescription).text()).toEqual('model description');
@@ -87,9 +80,7 @@ describe('CarTile', () => {
             ...carDetails,
             modelDescription: 'very very very very very very very very long description'
           }}
-        />,
-        'de',
-        messages
+        />
       )
     );
     wrapper.find(ModelDescription).simulate('mouseover');
@@ -105,30 +96,38 @@ describe('CarTile', () => {
             ...carDetails,
             monthlyInstallment: 106
           }}
-        />,
-        'de',
-        messages
+        />
       )
     );
-    expect(wrapper.find(Price).text()).toEqual('106 € p.M.');
+    expect(wrapper.find(Price).text()).toEqual('106,– € p.M.');
   });
-
+  it('Check monthly rate with empty/zero value', () => {
+    const wrapper = mount(
+      renderWithThemeAndI18n(
+        <CarTile
+          {...{
+            ...carDetails,
+            monthlyInstallment: 0
+          }}
+        />
+      )
+    );
+    expect(wrapper.find(Price).text()).toEqual('0,– € p.M.');
+  });
   it('additional info empty value', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
         <CarTile
           {...{
             ...carDetails,
-            info: {
-              power: 0,
-              firstRegistration: '',
-              fuel: '',
-              mileage: '',
-              gearBox: '',
-              condition: '',
-              consumptionCombined: '',
-              co2: ''
-            }
+            power: 0,
+            firstRegistration: '',
+            fuel: '',
+            mileage: '',
+            gearBox: '',
+            condition: '',
+            consumptionCombined: '',
+            co2: ''
           }}
         />,
         'de',
@@ -142,7 +141,6 @@ describe('CarTile', () => {
         .text()
     ).toEqual('Nicht verfügbar');
   });
-
   it('all icons displayed', () => {
     const wrapper = mount(renderWithThemeAndI18n(<CarTile {...carDetails} />));
     expect(wrapper.find('svg').length).toBeGreaterThan(8);

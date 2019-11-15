@@ -1,18 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import theme from '@im-ui/theme';
 
 export interface LinkProps {
   className?: string;
-  children?: JSX.Element | string;
   href: string;
+  target?: string;
 }
 
-const LinkComponent: React.FC<LinkProps> = ({ href, className, children }) => (
-  <a className={className} href={href}>
+export const LinkComponent: React.FC<LinkProps> = ({ href, target, className, children }) => (
+  <a className={className} target={target} href={href}>
     {children}
   </a>
 );
 
 export const Link = styled(LinkComponent)`
-  font-size: 16px;
+  font-size: 1rem;
+  color: ${theme.color.brightGrey};
+  :hover {
+    color: ${theme.color.downy};
+  }
 `;

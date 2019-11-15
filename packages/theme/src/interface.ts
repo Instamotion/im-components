@@ -32,19 +32,8 @@ interface TableSection {
 }
 
 interface Button {
-  border: Border;
-  font: Font;
   color: HexColor;
   background: HexColor;
-  hover: {
-    shadow: string;
-  };
-  active: {
-    shadow: string;
-  };
-  disabled: {
-    opacity: number;
-  };
 }
 
 export default interface Theme {

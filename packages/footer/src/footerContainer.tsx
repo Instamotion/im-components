@@ -12,6 +12,7 @@ const FooterContainer = styled.div`
   padding-left: 1rem;
   padding-right: 1rem;
   display: grid;
+  background-color: ${theme.color.lightGrey};
   color: ${theme.color.oil};
   grid-template-areas:
     'menu1'
