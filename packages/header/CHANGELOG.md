@@ -1,5 +1,10 @@
 # @im-ui/header
 
+## 0.2.5
+- [patch] :
+
+  - Fix missing search link on mobile
+
 ## 0.2.4
 - [patch] :
 
