@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '@im-ui/theme';
+import theme, { AvailableColors } from '@im-ui/theme';
 import Link from './link';
 import { FormattedMessage } from 'react-intl';
 
@@ -10,29 +10,39 @@ interface Props {
   phoneNumber: string;
 }
 
+const textColor: AvailableColors = 'white';
+const textHoverColor: AvailableColors = 'downy';
+
 export const MobileMenu: React.FC<Props> = ({ className, phoneNumber }) => {
   return (
     <div className={className}>
       <MobileItems>
         <Link
           text={phoneNumber}
-          color={'white'}
-          colorHover={'downy'}
+          color={textColor}
+          colorHover={textHoverColor}
           icon="phone"
           track="callFromHeader"
           path={`tel:${phoneNumber}`}
         />
         <Link
+          text={<FormattedMessage id="header.menu.search" />}
+          color={textColor}
+          colorHover={textHoverColor}
+          icon="search"
+          path="/autos"
+        />
+        <Link
           text={<FormattedMessage id="header.menu.top_offers" />}
-          color={'white'}
-          colorHover={'downy'}
+          color={textColor}
+          colorHover={textHoverColor}
           icon="trophy"
           path="/angebote"
         />
         <Link
           text={<FormattedMessage id="header.menu.wish_list" />}
-          color={'white'}
-          colorHover={'downy'}
+          color={textColor}
+          colorHover={textHoverColor}
           icon="star"
           path="/favoriten"
         />
