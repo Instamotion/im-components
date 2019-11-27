@@ -33,7 +33,11 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'yarn && yarn bootstrap && yarn build:components && yarn test'
+        sh 'yarn'
+        sh 'yarn bootstrap'
+        sh 'yarn build:components'
+        sh 'yarn typecheck'
+        sh 'yarn test'
         junit 'junit.xml'
       }
     }
