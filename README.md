@@ -52,7 +52,7 @@ Note: *Our custom template is located in `/_templates/component/new` folder. Ple
 After you have added or modified a package, you should run the following commands:
 
 1.  `bolt bump:changeset` - pick the packages to include in a new changeset;
-2.  `bump:version` - generates/appends to `changelog.md` filed and bump versions;
+2.  `bolt bump:version` - generates/appends to `changelog.md` filed and bump versions;
 3. run `bolt` again just to varify that everything is fine.
 
 ### Run Storybook
