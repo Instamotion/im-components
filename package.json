@@ -19,8 +19,8 @@
     "build:components": "bolt workspaces run build",
     "build": "bolt build:components && bolt build:storybook",
     "start": "start-storybook -p 6006",
-    "bump:changeset": "yarn build-releases changeset",
-    "bump:version": "yarn build-releases version"
+    "bump:changeset": "yarn changeset",
+    "bump:version": "yarn changeset version"
   },
   "repository": {
     "type": "git",
@@ -34,18 +34,18 @@
   },
   "homepage": "https://github.com/Instamotion/im-components#readme",
   "dependencies": {
-    "@atlaskit/build-releases": "^3.0.8",
     "@n8tb1t/use-scroll-position": "1.0.40",
+    "downshift": "^3.3.5",
     "react": "^16.11.0",
     "react-alice-carousel": "^1.15.3",
     "react-gtm-module": "^2.0.8",
     "react-swipeable": "^5.4.0",
     "semver": "^6.3.0",
-    "styled-components": "^4.4.1",
-    "downshift": "^3.3.5"
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
+    "@changesets/cli": "^2.4.0",
     "@storybook/addon-a11y": "^5.2.5",
     "@storybook/addon-actions": "^5.2.5",
     "@storybook/addon-knobs": "^5.2.5",
