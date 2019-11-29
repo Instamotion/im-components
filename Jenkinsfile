@@ -31,17 +31,6 @@ pipeline {
   }
 
   stages {
-    stage('Test') {
-      steps {
-        sh 'yarn'
-        sh 'yarn bootstrap'
-        sh 'yarn build:components'
-        sh 'yarn typecheck'
-        sh 'yarn test'
-        junit 'junit.xml'
-      }
-    }
-
     stage ('Docker login') {
       when { branch 'master' }
       steps {
@@ -49,11 +38,13 @@ pipeline {
       }
     }
 
-    stage('Build') {
+    stage('Build and publish') {
       when { branch 'master' }
       steps {
         script {
-          serviceApp = docker.build("${NAMESPACE}/${SERVICE_NAME}:${DEPLOY_VERSION}")
+          withCredentials([string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN')]) {
+            serviceApp = docker.build("${NAMESPACE}/${SERVICE_NAME}:${DEPLOY_VERSION}", ". --build-arg NPM_PUB_TOKEN=$NPM_PUB_TOKEN")
+          }
         }
       }
     }

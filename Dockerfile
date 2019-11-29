@@ -1,20 +1,35 @@
 FROM node:lts-alpine as base
-WORKDIR /app
 
-RUN yarn global add bolt --prefix /app/.yarn-global
-ENV PATH="/app/.yarn-global/bin/:$PATH"
+ARG NPM_PUB_TOKEN
+
+RUN echo "Setting up the npm to be able to publish"
+
+RUN npm set //registry.npmjs.org/:_authToken=$NPM_PUB_TOKEN
+RUN npm set //registry.yarnpkg.com/:_authToken=$NPM_PUB_TOKEN
+RUN yarn config set _authToken $NPM_PUB_TOKEN
+RUN yarn config set registry https://registry.npmjs.org/
+
+WORKDIR /app
 
 COPY package.json .
 COPY yarn.lock .
 COPY . .
-RUN bolt
-RUN bolt build
+
+RUN echo "Install and check"
+
+RUN yarn
+RUN yarn bootstrap
+RUN yarn build
+RUN yarn typecheck
+RUN yarn test
+
+RUN echo "Publish the components"
 
 # Generate changelog and bumpe versions
-RUN bolt bump:version
+RUN yarn changeset version
 
 # Publish the components
-RUN bolt publish
+RUN yarn changeset publish
 
 # Server static
 FROM nginx:alpine
