@@ -2,6 +2,10 @@ FROM node:lts-alpine as base
 
 ARG NPM_PUB_TOKEN
 
+RUN echo "Adding Git"
+
+RUN apk --no-cache add git
+
 RUN echo "Setting up the npm to be able to publish"
 
 RUN npm set //registry.npmjs.org/:_authToken=$NPM_PUB_TOKEN
