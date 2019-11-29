@@ -56,7 +56,6 @@ exports[`Pagination renders 1`] = `
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   height: 2.5rem;
-  width: 100%;
   -webkit-letter-spacing: 0.025rem;
   -moz-letter-spacing: 0.025rem;
   -ms-letter-spacing: 0.025rem;
@@ -1100,12 +1099,14 @@ exports[`Pagination renders 1`] = `
   font-weight: 600;
   font-family: ",
                                 "Roboto, sans-serif",
-                                ";  
+                                ";
   text-transform: uppercase;
   text-align: center;
   transition: all 0.2s linear;
   height: 2.5rem;
-  width: 100%;
+  ",
+                                [Function],
+                                "
   letter-spacing: 0.025rem;
   &:hover {
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1);

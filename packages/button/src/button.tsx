@@ -9,7 +9,10 @@ export const AvailableButtonTypes = {
 
 export type ButtonTypes = keyof typeof AvailableButtonTypes;
 
+export type ButtonSizing = 'full-width' | 'auto';
+
 export type ButtonProps = React.ButtonHTMLAttributes<any> & {
+  sizing?: ButtonSizing;
   buttonType?: ButtonTypes;
 };
 
@@ -28,12 +31,16 @@ const Button = styled.button<ButtonProps>`
   box-sizing: border-box;
   cursor: pointer;
   font-weight: 600;
-  font-family: ${theme.font.sans.family};  
+  font-family: ${theme.font.sans.family};
   text-transform: uppercase;
   text-align: center;
   transition: all 0.2s linear;
   height: 2.5rem;
-  width: 100%;
+  ${props =>
+    props.sizing === 'full-width' &&
+    css`
+      width: 100%;
+    `}
   letter-spacing: 0.025rem;
   &:hover {
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1);

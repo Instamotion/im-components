@@ -22,6 +22,15 @@ storiesOf('Button', module)
     };
     return <Button {...props}>{text('Label', 'Hello World')}</Button>;
   })
+  .add('full width ', () => {
+    const props: ButtonProps = {
+      sizing: 'full-width',
+      onClick: action('Button click'),
+      disabled: boolean('Disabled', false),
+      buttonType: select('variant', buttonVariants, buttonVariants[0])
+    };
+    return <Button {...props}>{text('Label', 'Hello World')}</Button>;
+  })
   .add('with text and icon', () => {
     const props: IconButtonProps = {
       onClick: action('Button click'),
