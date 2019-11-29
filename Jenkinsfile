@@ -31,7 +31,22 @@ pipeline {
   }
 
   stages {
-    stage ('Docker login') {
+    stage('Test branch') {
+      when {
+        not {
+          branch 'master'
+        }
+      }
+      steps {
+        sh 'yarn'
+        sh 'yarn bootstrap'
+        sh 'yarn build:components'
+        sh 'yarn typecheck'
+        sh 'yarn test'
+      }
+    }
+
+    stage('Docker login') {
       when { branch 'master' }
       steps {
         dockerLogin()
