@@ -32,50 +32,44 @@ pipeline {
 
   stages {
     stage('Test branch') {
-      when {
-        not {
-          branch 'master'
-        }
-      }
       steps {
-        sh 'yarn'
-        sh 'yarn bootstrap'
-        sh 'yarn build:components'
-        sh 'yarn typecheck'
-        sh 'yarn test'
+        withCredentials([string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN')]) {
+          sh 'yarn'
+          sh 'yarn bootstrap'
+          sh 'yarn build:components'
+          sh 'yarn typecheck'
+          sh 'yarn test'
+        }
       }
     }
 
-    stage('Docker login') {
+    stage('Publish components') {
+      when { branch 'master' }
+      steps {
+        withCredentials([string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN')]) {
+          sh './configs/setup-npm.sh'
+          sh 'yarn changeset version'
+          sh 'git add -A && git commit --amend -C HEAD'
+          sh 'yarn changeset publish'
+        }
+      }
+    }
+
+    stage('Build docker') {
       when { branch 'master' }
       steps {
         dockerLogin()
-      }
-    }
-
-    stage('Build and publish') {
-      when { branch 'master' }
-      steps {
-        script {
-          withCredentials([string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN')]) {
-            serviceApp = docker.build("${NAMESPACE}/${SERVICE_NAME}:${DEPLOY_VERSION}", ". --build-arg NPM_PUB_TOKEN=$NPM_PUB_TOKEN")
-          }
-        }
-      }
-    }
-
-    stage('Publish Docker') {
-      when { branch 'master' }
-      steps {
+        sh 'yarn build:storybook'
         script {
           docker.withRegistry("${env.ECR_REGISTRY_URL}") {
+            serviceApp = docker.build("${NAMESPACE}/${SERVICE_NAME}:${DEPLOY_VERSION}")
             serviceApp.push()
           }
         }
       }
     }
 
-    stage("Deploy to Production") {
+    stage("Deploy storybook") {
       when { branch 'master' }
       steps {
         script {
