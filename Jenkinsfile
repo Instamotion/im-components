@@ -46,10 +46,13 @@ pipeline {
     stage('Publish components') {
       when { branch 'master' }
       steps {
-        withCredentials([string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN')]) {
+        withCredentials([
+          string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN')
+          string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN')
+        ]) {
           sh './configs/setup-npm.sh'
           sh 'yarn changeset version'
-          sh 'git add -A && git commit --amend -C HEAD'
+          sh 'git add -A && git commit --amend -C HEAD && git push'
           sh 'yarn changeset publish'
         }
       }
