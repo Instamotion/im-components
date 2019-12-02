@@ -47,7 +47,7 @@ pipeline {
       when { branch 'master' }
       steps {
         withCredentials([
-          string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN')
+          string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN'),
           string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN')
         ]) {
           sh './configs/setup-npm.sh'
