@@ -48,11 +48,16 @@ pipeline {
       steps {
         withCredentials([
           string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN'),
-          string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN')
+          string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN'),
+          usernamePassword(
+            credentialsId: 'github_bot_credentials',
+            usernameVariable: 'GH_USER',
+            passwordVariable: 'GH_PASS'
+          )
         ]) {
           sh './configs/setup-npm.sh'
           sh 'yarn changeset version'
-          sh "git add -A && (git commit -m \$'New release.\n\nBuild: ${BUILD_URL}') && git push origin master"
+          sh "git add -A && (git commit -m \"New release. Build: ${BUILD_URL}\") && git push github master"
           sh 'yarn changeset publish'
         }
       }
