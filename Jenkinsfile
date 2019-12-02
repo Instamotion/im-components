@@ -59,7 +59,7 @@ pipeline {
                 #!/usr/bin/env bash
                 set +x
                 export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
-                git push github master
+                git push origin master
                 yarn changeset publish
             """)
           }
