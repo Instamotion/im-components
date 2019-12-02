@@ -49,16 +49,20 @@ pipeline {
         withCredentials([
           string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN'),
           string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN'),
-          usernamePassword(
-            credentialsId: 'github_bot_credentials',
-            usernameVariable: 'GH_USER',
-            passwordVariable: 'GH_PASS'
-          )
+          string(credentialsId: 'github_token', variable: 'GH_TOKEN')
         ]) {
           sh './configs/setup-npm.sh'
           sh 'yarn changeset version'
-          sh "git add -A && (git commit -m \"New release. Build: ${BUILD_URL}\") && git push github master"
-          sh 'yarn changeset publish'
+          sh "git add . && (git commit -m \"New release. Build: ${BUILD_URL}\")"
+          sshagent(['github_token']) {
+            sh("""
+                #!/usr/bin/env bash
+                set +x
+                export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
+                git push github master
+                yarn changeset publish
+            """)
+          }
         }
       }
     }
