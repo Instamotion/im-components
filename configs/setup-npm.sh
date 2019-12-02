@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo "Setting up the npm to be able to publish"
 
 npm set //registry.npmjs.org/:_authToken=$NPM_PUB_TOKEN
