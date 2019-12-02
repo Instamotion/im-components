@@ -52,7 +52,7 @@ pipeline {
         ]) {
           sh './configs/setup-npm.sh'
           sh 'yarn changeset version'
-          sh 'git add -A && git commit -m "Release new version" && git push origin master'
+          sh "git add -A && (git commit -m $'New release.\n\nBuild: ${BUILD_URL}') && git push origin master"
           sh 'yarn changeset publish'
         }
       }
