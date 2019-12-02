@@ -1,5 +1,10 @@
 # @im-ui/header
 
+## 0.2.6
+- [patch] :
+
+  - Update branding logo dependency
+
 ## 0.2.5
 - [patch] :
 

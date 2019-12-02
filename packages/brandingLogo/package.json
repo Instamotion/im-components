@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/branding-logo",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "dist/cjs/main.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
