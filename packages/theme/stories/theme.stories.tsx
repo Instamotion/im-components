@@ -13,6 +13,9 @@ storiesOf('Theme', module).add('colors', () => {
       {keysOf(theme.color).map((colorName: AvailableColors) => (
         <div
           style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             height: '10rem',
             margin: '1rem',
             backgroundColor: theme.color[colorName]

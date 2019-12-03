@@ -13,7 +13,6 @@ export interface LabelProps {
 
 export const LabelComponent = styled.label`
   font-size: 0.75rem;
-  font-family: ${theme.font.sans.family};
   color: ${theme.color.brightGrey};
   font-weight: bold;
   display: flex;
