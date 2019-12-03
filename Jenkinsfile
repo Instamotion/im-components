@@ -55,13 +55,8 @@ pipeline {
           sh 'yarn changeset version'
           sh "git add . && (git commit -m \"New release. Build: ${BUILD_URL}\")"
           sshagent(['github_token']) {
-            sh("""
-                #!/usr/bin/env bash
-                set +x
-                export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
-                git push origin master
-                yarn changeset publish
-            """)
+            sh 'git push origin master'
+            sh 'yarn changeset publish'
           }
         }
       }
