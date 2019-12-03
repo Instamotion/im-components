@@ -3,13 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import Button, {
-  IconButton,
-  IconButtonProps,
-  ButtonProps,
-  AvailableButtonTypes,
-  ButtonTypes
-} from '../src/';
+import Button, { IconButton, IconButtonProps, ButtonProps, ButtonTypes } from '../src/';
 
 const buttonVariants: Array<ButtonTypes> = ['primary', 'secondary'];
 

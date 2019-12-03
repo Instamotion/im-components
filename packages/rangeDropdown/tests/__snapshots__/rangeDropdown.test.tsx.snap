@@ -239,13 +239,10 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bdVaJa",
                         "isStatic": false,
-                        "lastClassName": "lcLGwi",
+                        "lastClassName": "dGjtog",
                         "rules": Array [
                           "
   font-size: 0.75rem;
-  font-family: ",
-                          "Roboto, sans-serif",
-                          ";
   color: ",
                           "#606164",
                           ";
@@ -274,7 +271,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                   forwardedRef={null}
                 >
                   <label
-                    className="sc-bdVaJa lcLGwi"
+                    className="sc-bdVaJa dGjtog"
                   >
                     <FormattedMessage
                       id="RangeDropdownMain"
