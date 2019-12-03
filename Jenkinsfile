@@ -31,23 +31,6 @@ pipeline {
   }
 
   stages {
-    stage('Testing push to master') {
-      when { branch 'master' }
-      steps {
-        withCredentials([
-          string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN'),
-          string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN'),
-          string(credentialsId: 'github_token', variable: 'GH_TOKEN')
-        ]) {
-          sh './configs/setup-npm.sh'
-          sh "echo 'build is ${BUILD_URL}' >> a_file.txt"
-          sh "git add . && (git commit -m \"New release. Build: ${BUILD_URL}\")"
-          sh 'git push github master'
-          sh 'yarn changeset publish'
-        }
-      }
-    }
-
     stage('Test branch') {
       steps {
         withCredentials([string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN')]) {
@@ -70,8 +53,8 @@ pipeline {
         ]) {
           sh './configs/setup-npm.sh'
           sh 'yarn changeset version'
-          sh "git add . && (git commit -m \"New release. Build: ${BUILD_URL}\")"
-          sh 'git push origin master'
+          sh "git add . && (git commit -m \"[Jenkins]: New release. Build: ${BUILD_URL}\")"
+          sh 'git push github master'
           sh 'yarn changeset publish'
         }
       }
