@@ -64,7 +64,9 @@ pipeline {
       when { branch 'master' }
       steps {
         dockerLogin()
-        sh 'yarn build:storybook'
+        withCredentials([string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN')]) {
+          sh 'yarn build:storybook'
+        }
         script {
           docker.withRegistry("${env.ECR_REGISTRY_URL}") {
             serviceApp = docker.build("${NAMESPACE}/${SERVICE_NAME}:${DEPLOY_VERSION}")
