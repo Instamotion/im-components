@@ -55,7 +55,8 @@ pipeline {
           sh 'yarn changeset version'
           sh "git add . && (git commit -m \"[Jenkins]: New release. Build: ${BUILD_URL}\")"
           sh 'git push github master'
-          sh 'yarn changeset publish'
+          sh './node_modules/.bin/bolt publish'
+          sh 'git push --tags github'
         }
       }
     }
