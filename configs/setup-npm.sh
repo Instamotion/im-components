@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 
 echo -e "\e[32m  Setting git configs..."
+
 git config --global user.email "i.demchenko@instamotion.com"
 git config --global user.name "raqystyle"
 git config --global push.default simple
 
 echo -e "\e[32m  Setting git remote..."
+
 git remote add github https://raqystyle:$GH_TOKEN@github.com/Instamotion/im-components.git
 
 echo -e "\e[32m  Setting npm tokens"
+
 npm set //registry.npmjs.org/:_authToken=$NPM_PUB_TOKEN
 npm set //registry.yarnpkg.com/:_authToken=$NPM_PUB_TOKEN
 yarn config set _authToken $NPM_PUB_TOKEN

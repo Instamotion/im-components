@@ -52,11 +52,7 @@ pipeline {
           string(credentialsId: 'github_token', variable: 'GH_TOKEN')
         ]) {
           sh './configs/setup-npm.sh'
-          sh 'yarn changeset version'
-          sh "git add . && (git commit -m \"[Jenkins]: New release. Build: ${BUILD_URL}\")"
-          sh 'git push github master'
-          sh './node_modules/.bin/bolt publish'
-          sh 'git push --tags github'
+          sh './configs/publish.sh'
         }
       }
     }
