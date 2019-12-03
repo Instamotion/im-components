@@ -4,3 +4,4 @@ build is https://ci.tools.instamotion.com/job/IM-Teams/job/Shared/job/im-compone
 build is https://ci.tools.instamotion.com/job/IM-Teams/job/Shared/job/im-components/job/master/89/
 build is https://ci.tools.instamotion.com/job/IM-Teams/job/Shared/job/im-components/job/master/90/
 build is https://ci.tools.instamotion.com/job/IM-Teams/job/Shared/job/im-components/job/master/91/
+build is https://ci.tools.instamotion.com/job/IM-Teams/job/Shared/job/im-components/job/master/92/
