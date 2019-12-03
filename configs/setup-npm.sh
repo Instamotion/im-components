@@ -2,8 +2,8 @@
 
 echo -e "\e[32m  Setting git configs..."
 
-git config --global user.email "i.demchenko@instamotion.com"
-git config --global user.name "raqystyle"
+git config --global user.email $GIT_EMAIL
+git config --global user.name $GIT_USERNAME
 git config --global push.default simple
 
 echo -e "\e[32m  Setting git remote..."

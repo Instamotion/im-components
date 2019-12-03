@@ -52,6 +52,8 @@ pipeline {
         withCredentials([
           string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN'),
           string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN'),
+          string(credentialsId: 'gh_user_name', variable: 'GIT_USERNAME'),
+          string(credentialsId: 'gh_user_email', variable: 'GIT_EMAIL'),
           string(credentialsId: 'github_token', variable: 'GH_TOKEN')
         ]) {
           sh './configs/setup-npm.sh'
