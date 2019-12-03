@@ -41,16 +41,15 @@ exports[`Pagination renders 1`] = `
 }
 
 .c7 {
-  background-color: #75dfc0;
+  border-color: #75DFC0;
+  background-color: #75DFC0;
   color: #313330;
   border-width: 0rem;
   border-style: solid;
   border-radius: 0.25rem;
-  border-color: #75DFC0;
   box-sizing: border-box;
   cursor: pointer;
   font-weight: 600;
-  font-family: Roboto,sans-serif;
   text-transform: uppercase;
   text-align: center;
   -webkit-transition: all 0.2s linear;
@@ -206,16 +205,6 @@ exports[`Pagination renders 1`] = `
 <ThemeProvider
   theme={
     Object {
-      "button": Object {
-        "primary": Object {
-          "background": "#75dfc0",
-          "color": "#313330",
-        },
-        "secondary": Object {
-          "background": "#fff",
-          "color": "#75dfc0",
-        },
-      },
       "card": Object {
         "border": Object {
           "radius": 4,
@@ -1091,15 +1080,9 @@ exports[`Pagination renders 1`] = `
                                 "rem;
   border-style: solid;
   border-radius: 0.25rem;
-  border-color: ",
-                                "#75DFC0",
-                                ";
   box-sizing: border-box;
   cursor: pointer;
   font-weight: 600;
-  font-family: ",
-                                "Roboto, sans-serif",
-                                ";
   text-transform: uppercase;
   text-align: center;
   transition: all 0.2s linear;

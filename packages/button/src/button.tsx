@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import React from 'react';
-import theme from '@im-ui/theme';
+import theme from './theme';
 
 export const AvailableButtonTypes = {
   primary: 'primary',
@@ -20,18 +20,17 @@ const Button = styled.button<ButtonProps>`
   ${props => {
     const buttonType: ButtonTypes = props.buttonType || 'primary';
     return css`
-      background-color: ${theme.button[buttonType].background};
-      color: ${theme.button[buttonType].color};
+      border-color: ${theme[buttonType].borderColor}
+      background-color: ${theme[buttonType].background};
+      color: ${theme[buttonType].color};
     `;
   }}
   border-width: ${props => (props.buttonType === 'primary' ? 0 : 0.0625)}rem;
   border-style: solid;
   border-radius: 0.25rem;
-  border-color: ${theme.color.downy};
   box-sizing: border-box;
   cursor: pointer;
   font-weight: 600;
-  font-family: ${theme.font.sans.family};
   text-transform: uppercase;
   text-align: center;
   transition: all 0.2s linear;
