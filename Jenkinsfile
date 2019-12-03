@@ -54,10 +54,8 @@ pipeline {
           sh './configs/setup-npm.sh'
           sh 'yarn changeset version'
           sh "git add . && (git commit -m \"New release. Build: ${BUILD_URL}\")"
-          sshagent(['github_token']) {
-            sh 'git push origin master'
-            sh 'yarn changeset publish'
-          }
+          sh 'git push origin master'
+          sh 'yarn changeset publish'
         }
       }
     }
