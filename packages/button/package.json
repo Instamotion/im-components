@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/button",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -19,9 +19,7 @@
     "Oleg P",
     "Dmytro B"
   ],
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.0.21",
