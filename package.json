@@ -18,8 +18,7 @@
     "build:storybook": "build-storybook -c .storybook -o ./storybook-dist",
     "build:components": "bolt workspaces run build",
     "build": "bolt build:components && bolt build:storybook",
-    "start": "start-storybook -p 6006",
-    "bump:changeset": "yarn changeset"
+    "start": "start-storybook -p 6006"
   },
   "repository": {
     "type": "git",
