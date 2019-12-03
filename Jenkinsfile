@@ -45,6 +45,9 @@ pipeline {
 
     stage('Publish components') {
       when { branch 'master' }
+      environment {
+        HUSKY_SKIP_HOOKS = '1'
+      }
       steps {
         withCredentials([
           string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN'),
