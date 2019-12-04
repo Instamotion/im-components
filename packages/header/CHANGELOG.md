@@ -1,5 +1,12 @@
 # @im-ui/header
 
+## 0.2.6
+
+### Patch Changes
+
+- Updated dependencies [365625d]
+  - @im-ui/branding-logo@0.2.0
+
 ## 0.2.5
 
 ### Patch Changes

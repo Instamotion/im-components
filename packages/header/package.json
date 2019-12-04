@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/header",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -35,7 +35,7 @@
     "react-gtm-module": "^2.0.8"
   },
   "dependencies": {
-    "@im-ui/branding-logo": "^0.1.5",
+    "@im-ui/branding-logo": "^0.2.0",
     "@im-ui/icon": "^0.2.9",
     "@im-ui/theme": "^1.0.0",
     "@im-ui/utils": "^0.5.2",
