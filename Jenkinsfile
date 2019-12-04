@@ -48,7 +48,7 @@ pipeline {
         allOf {
           branch 'master'
           expression {
-            changeset = sh('yarn changeset status').trim()
+            changeset = sh(script: 'yarn changeset status', returnStdout: true).trim()
             return !changeset.contains('No changesets present')
           }
         }
