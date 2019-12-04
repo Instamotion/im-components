@@ -75,7 +75,9 @@ pipeline {
       steps {
         dockerLogin()
         withCredentials([string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN')]) {
-          sh 'yarn build:storybook'
+          sh 'yarn'
+          sh 'yarn bootstrap'
+          sh 'yarn build'
         }
         script {
           docker.withRegistry("${env.ECR_REGISTRY_URL}") {
