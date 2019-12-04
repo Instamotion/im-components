@@ -44,7 +44,15 @@ pipeline {
     }
 
     stage('Publish components') {
-      when { branch 'master' }
+      when {
+        allOf {
+          branch 'master'
+          expression {
+            changeset = sh('yarn changeset status').trim()
+            return !changeset.contains('No changesets present')
+          }
+        }
+      }
       environment {
         HUSKY_SKIP_HOOKS = '1'
       }
