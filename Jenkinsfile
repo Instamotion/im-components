@@ -28,18 +28,18 @@ pipeline {
     NAMESPACE                = 'app'
     SERVICE_NAME             = 'design'
     TF_VAR_container_name    = "${env.ECR_REGISTRY}/${NAMESPACE}/${SERVICE_NAME}"
+    NPM_RO_TOKEN             = credentials('npm_read_only_token')
+    NPM_PUB_TOKEN            = credentials('npm_publish_token')
   }
 
   stages {
     stage('Test branch') {
       steps {
-        withCredentials([string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN')]) {
-          sh 'yarn'
-          sh 'yarn bootstrap'
-          sh 'yarn build:components'
-          sh 'yarn typecheck'
-          sh 'yarn test'
-        }
+        sh 'yarn'
+        sh 'yarn bootstrap'
+        sh 'yarn build:components'
+        sh 'yarn typecheck'
+        sh 'yarn test'
       }
     }
 
@@ -58,8 +58,6 @@ pipeline {
       }
       steps {
         withCredentials([
-          string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN'),
-          string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN'),
           string(credentialsId: 'gh_user_name', variable: 'GIT_USERNAME'),
           string(credentialsId: 'gh_user_email', variable: 'GIT_EMAIL'),
           string(credentialsId: 'github_token', variable: 'GH_TOKEN')
@@ -74,11 +72,9 @@ pipeline {
       when { branch 'master' }
       steps {
         dockerLogin()
-        withCredentials([string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN')]) {
-          sh 'yarn'
-          sh 'yarn bootstrap'
-          sh 'yarn build'
-        }
+        sh 'yarn'
+        sh 'yarn bootstrap'
+        sh 'yarn build'
         script {
           docker.withRegistry("${env.ECR_REGISTRY_URL}") {
             serviceApp = docker.build("${NAMESPACE}/${SERVICE_NAME}:${DEPLOY_VERSION}")
