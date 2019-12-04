@@ -30,10 +30,11 @@ pipeline {
     TF_VAR_container_name    = "${env.ECR_REGISTRY}/${NAMESPACE}/${SERVICE_NAME}"
     NPM_RO_TOKEN             = credentials('npm_read_only_token')
     NPM_PUB_TOKEN            = credentials('npm_publish_token')
+    HUSKY_SKIP_HOOKS         = '1'
   }
 
   stages {
-    stage('Test branch') {
+    stage('Bootstrap') {
       steps {
         sh 'yarn'
         sh 'yarn bootstrap'
@@ -48,13 +49,9 @@ pipeline {
         allOf {
           branch 'master'
           expression {
-            changeset = sh(script: 'yarn changeset status', returnStdout: true).trim()
-            return !changeset.contains('No changesets present')
+            return sh(script: 'yarn changeset status', returnStatus: true) == 0
           }
         }
-      }
-      environment {
-        HUSKY_SKIP_HOOKS = '1'
       }
       steps {
         withCredentials([
