@@ -1,5 +1,16 @@
 # @im-ui/pagination
 
+## 0.0.9
+
+### Patch Changes
+
+- ca1d08e: Move the button's theme out of theme pkg into the button pkg
+- Updated dependencies [ca1d08e]
+  - @im-ui/theme@1.0.0
+  - @im-ui/button@0.3.0
+  - @im-ui/label@0.1.8
+  - @im-ui/utils@0.5.2
+
 ## 0.0.8
 
 ### Patch Changes

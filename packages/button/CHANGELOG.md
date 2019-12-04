@@ -1,5 +1,17 @@
 # @im-ui/button
 
+## 0.3.0
+
+### Minor Changes
+
+- ca1d08e: Move the button's theme out of theme pkg into the button pkg
+
+### Patch Changes
+
+- Updated dependencies [ca1d08e]
+  - @im-ui/theme@1.0.0
+  - @im-ui/icon@0.2.9
+
 ## 0.2.1
 
 ### Patch Changes

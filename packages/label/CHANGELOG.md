@@ -1,5 +1,13 @@
 # @im-ui/label
 
+## 0.1.8
+
+### Patch Changes
+
+- Updated dependencies [ca1d08e]
+  - @im-ui/theme@1.0.0
+  - @im-ui/utils@0.5.2
+
 ## 0.1.7
 
 ### Patch Changes
