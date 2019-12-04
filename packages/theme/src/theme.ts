@@ -83,16 +83,6 @@ export const theme: Theme = {
     },
     shadow: '0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.1)'
   },
-  button: {
-    primary: {
-      color: '#313330',
-      background: '#75dfc0'
-    },
-    secondary: {
-      color: '#75dfc0',
-      background: '#fff'
-    }
-  },
   input: {
     border: {
       width: 1,

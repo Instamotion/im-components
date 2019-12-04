@@ -4,16 +4,6 @@ exports[`Tooltip renders 1`] = `
 <ThemeProvider
   theme={
     Object {
-      "button": Object {
-        "primary": Object {
-          "background": "#75dfc0",
-          "color": "#313330",
-        },
-        "secondary": Object {
-          "background": "#fff",
-          "color": "#75dfc0",
-        },
-      },
       "card": Object {
         "border": Object {
           "radius": 4,

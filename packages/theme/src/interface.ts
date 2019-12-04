@@ -31,11 +31,6 @@ interface TableSection {
   background: HexColor;
 }
 
-interface Button {
-  color: HexColor;
-  background: HexColor;
-}
-
 export default interface Theme {
   name: string;
   color: {
@@ -76,10 +71,6 @@ export default interface Theme {
     s: Heading;
     xs: Heading;
     xxs: Heading;
-  };
-  button: {
-    primary: Button;
-    secondary: Button;
   };
   input: {
     border: Border;

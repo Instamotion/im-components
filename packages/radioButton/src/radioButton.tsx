@@ -45,7 +45,7 @@ export const RadioButtonInput = styled.input`
     border-radius: 50%;
     width: ${px2rem(10)};
     height: ${px2rem(10)};
-    background-color: ${theme.button.primary.background};
+    background-color: ${theme.color.downy};
   }
 `;
 
