@@ -8,9 +8,9 @@ const FooterContentComponent: React.FC = ({ children }) => (
 
 const FooterContainer = styled.div`
   font-family: ${theme.font.sans.family};
-  padding-top: 2.8rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: grid;
   background-color: ${theme.color.lightGrey};
   color: ${theme.color.oil};
@@ -50,7 +50,6 @@ const FooterContainer = styled.div`
       'creators creators creators creators creators creators';
   }
   ${theme.mediaQueries.whenDesktopXL} {
-    max-width: ${theme.footer.maxWidth}px;
     margin: 0 auto;
   }
 `;

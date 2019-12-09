@@ -45,6 +45,7 @@ const AllianzHorizontalWrapper = styled.div`
 const InstamotionAllianzWrapper = styled.div`
   width: 6rem;
   height: 2.125rem;
+  line-height: 1;
   & div:nth-child(1) {
     height: 1.25rem;
   }

@@ -1,6 +1,6 @@
 import React, { useEffect, ReactNode } from 'react';
 import { storiesOf } from '@storybook/react';
-import { HeaderWrapper, HeaderWrapperProps } from '../src';
+import Header, { HeaderProps } from '../src';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import messages from '../utils/locales';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
@@ -18,14 +18,45 @@ const GtmWrapper: React.FC<{ children: ReactNode }> = ({ children }): JSX.Elemen
   return <>{children}</>;
 };
 
-storiesOf('Header', module).add('Default', () => {
-  const props: HeaderWrapperProps = {
+storiesOf('Header', module).add('auto', () => {
+  const props: HeaderProps = {
     imgPath: image,
-    phoneNumber: text('phone number', '089-411151-100')
+    phoneNumber: text('phone number', '089-411151-100'),
+    variant: 'auto'
   };
   return renderWithThemeAndI18n(
     <GtmWrapper>
-      <HeaderWrapper {...props} />
+      <Header {...props} />
+    </GtmWrapper>,
+    'de',
+    messages
+  );
+});
+
+storiesOf('Header', module).add('dark', () => {
+  const props: HeaderProps = {
+    imgPath: image,
+    phoneNumber: text('phone number', '089-411151-100'),
+    variant: 'dark'
+  };
+  return renderWithThemeAndI18n(
+    <GtmWrapper>
+      <Header {...props} />
+    </GtmWrapper>,
+    'de',
+    messages
+  );
+});
+
+storiesOf('Header', module).add('transparent', () => {
+  const props: HeaderProps = {
+    imgPath: image,
+    phoneNumber: text('phone number', '089-411151-100'),
+    variant: 'transparent'
+  };
+  return renderWithThemeAndI18n(
+    <GtmWrapper>
+      <Header {...props} />
     </GtmWrapper>,
     'de',
     messages
