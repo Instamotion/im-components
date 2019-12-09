@@ -23,6 +23,13 @@ export const MobileMenu: React.FC<Props> = ({ className, phoneNumber }) => {
           path={`tel:${phoneNumber}`}
         />
         <Link
+          text={<FormattedMessage id="header.menu.search" />}
+          color={'white'}
+          colorHover={'downy'}
+          icon="search"
+          path="/autos"
+        />
+        <Link
           text={<FormattedMessage id="header.menu.top_offers" />}
           color={'white'}
           colorHover={'downy'}
@@ -59,7 +66,7 @@ const MobileItems = styled.div`
     padding: 0.625rem 0;
   }
   ${Link}:first-child {
-    padding-top: 1.25rem;
+    padding-top: 1.5rem;
   }
 `;
 

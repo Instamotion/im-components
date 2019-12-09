@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import BrandingLogo from '@im-ui/branding-logo';
 import CallerImg from './items/callerImg';
@@ -10,47 +10,41 @@ import Icon from '@im-ui/icon';
 import { FormattedMessage } from 'react-intl';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
-export enum AvailableVariants {
-  Dark = 'Dark',
-  Transparent = 'Transparent'
+export interface HeaderProps {
+  imgPath: string;
+  phoneNumber: string;
+  variant: 'auto' | 'dark' | 'transparent';
 }
-
-export type VariantTypes = keyof typeof AvailableVariants;
 
 export interface HeaderWrapperProps {
-  imgPath: string;
-  className?: string;
-  phoneNumber: string;
+  isDark: boolean;
 }
 
-export interface HeaderProps extends HeaderWrapperProps {
-  variant: VariantTypes;
-  burgerClicked(): void;
-  isOpen: boolean;
-}
+export const Header: React.FC<HeaderProps> = ({ variant, imgPath, phoneNumber }) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [isDark, setDark] = React.useState(variant === 'dark' ? true : false);
 
-export const HeaderComponent: React.FC<HeaderProps> = ({
-  variant,
-  className,
-  imgPath,
-  burgerClicked,
-  phoneNumber,
-  isOpen
-}) => {
-  const brandColor =
-    variant === AvailableVariants.Dark ? AvailableColors.white : AvailableColors.oil;
-  const brandColorTwo =
-    variant === AvailableVariants.Dark ? AvailableColors.downy : AvailableColors.oil;
-  const allianzColor = variant === AvailableVariants.Dark ? '#138' : AvailableColors.oil;
-  const textColor: keyof typeof AvailableColors =
-    variant === AvailableVariants.Dark ? 'white' : 'oil';
-  const textColorHover: keyof typeof AvailableColors =
-    variant === AvailableVariants.Dark ? 'silver' : 'brightGrey';
+  useScrollPosition(
+    ({ currPos }: ScrollProps) => {
+      if (variant !== 'auto') return;
+      setDark(currPos.y < 0);
+    },
+    [isDark],
+    undefined,
+    false,
+    50
+  );
+
+  const brandColor = isDark ? AvailableColors.white : AvailableColors.oil;
+  const brandColorTwo = isDark ? AvailableColors.downy : AvailableColors.oil;
+  const allianzColor = isDark ? '#138' : AvailableColors.oil;
+  const textColor: keyof typeof AvailableColors = isDark ? 'white' : 'oil';
+  const textColorHover: keyof typeof AvailableColors = isDark ? 'silver' : 'brightGrey';
 
   return (
-    <header className={className}>
+    <HeaderWrapper isDark={isDark}>
       <HeaderBar>
-        <Burger clickedCb={() => burgerClicked()} isOpen={isOpen} textColor={textColor}></Burger>
+        <Burger clickedCb={() => setIsOpen(!isOpen)} isOpen={isOpen} textColor={textColor}></Burger>
         <LogoWrapper>
           <BrandingLogo
             color={brandColor}
@@ -114,18 +108,17 @@ export const HeaderComponent: React.FC<HeaderProps> = ({
         <BrandingLogo color={allianzColor} brandingHolder="Allianz" link="/" />
       </AllianzBar>
       <MobileMenu isOpen={isOpen} phoneNumber={phoneNumber}></MobileMenu>
-    </header>
+    </HeaderWrapper>
   );
 };
 
-const Header = styled(HeaderComponent)`
-  background: ${props =>
-    props.variant === AvailableVariants.Transparent ? 'transparent' : theme.color.oil};
+export const HeaderWrapper = styled.header<HeaderWrapperProps>`
+  background: ${props => (props.isDark ? theme.color.oil : 'transparent')};
+  color: ${props => (props.isDark ? 'white' : 'black')};
   transition: all 0.3s ease;
-  color: ${props => (props.variant === AvailableVariants.Transparent ? 'black' : 'white')};
   display: flex;
   position: fixed;
-  z-index: 10;
+  z-index: 50;
   top: 0;
   right: 0;
   left: 0;
@@ -138,7 +131,7 @@ const Header = styled(HeaderComponent)`
   }
 `;
 
-const LogoWrapper = styled.div`
+export const LogoWrapper = styled.div`
   display: block;
   width: 6rem;
   height: 2rem;
@@ -163,7 +156,7 @@ const LogoDesktopWrapper = styled.div`
 `;
 
 const PhoneWrapper = styled.div`
-  flex-shring: 0;
+  flex-shrink: 0;
   align-items: center;
   display: none;
   ${theme.mediaQueries.whenDesktop} {
@@ -173,6 +166,7 @@ const PhoneWrapper = styled.div`
 
 const HelpWrapper = styled.span`
   margin-left: 1.5rem;
+  line-height: 1.6;
   display: none;
   ${theme.mediaQueries.whenDesktopXL} {
     display: inline;
@@ -224,37 +218,5 @@ interface ScrollProps {
     y: Number;
   };
 }
-
-export const HeaderWrapper: React.FC<HeaderWrapperProps> = props => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [variant, setVariant] = React.useState<VariantTypes>(AvailableVariants.Dark);
-
-  const clicked = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useScrollPosition(
-    ({ currPos }: ScrollProps) => {
-      const newVariant = currPos.y < 0 ? AvailableVariants.Dark : AvailableVariants.Transparent;
-      if (newVariant !== variant) setVariant(newVariant);
-    },
-    [variant],
-    undefined,
-    false,
-    50
-  );
-
-  return useMemo(
-    () => (
-      <Header
-        {...props}
-        burgerClicked={clicked}
-        variant={isOpen ? AvailableVariants.Dark : variant}
-        isOpen={isOpen}
-      ></Header>
-    ),
-    [isOpen, variant]
-  );
-};
 
 export default Header;

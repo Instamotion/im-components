@@ -10,7 +10,7 @@ const TrustfulContainer = styled.div`
   background: #fff;
 
   ${theme.mediaQueries.whenTablet} {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1.5rem;
   }
 `;
 

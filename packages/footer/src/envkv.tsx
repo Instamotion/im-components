@@ -12,7 +12,7 @@ const ENVKVText = styled(Text)`
   font-size: 0.75rem;
   padding-left: 1rem;
   line-height: 1.33;
-  margin: 1rem 0;
+  margin: 1rem 1.5rem;
 
   ${({ theme }) => css`
     color: ${theme.color.brightGrey};
