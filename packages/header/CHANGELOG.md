@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.3.1
+
+### Patch Changes
+
+- 411d714: fix header overlay
+
 ## 0.3.0
 
 ### Minor Changes
