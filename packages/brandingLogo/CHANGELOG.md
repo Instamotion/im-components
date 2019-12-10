@@ -1,5 +1,11 @@
 # @im-ui/branding-logo
 
+## 0.3.0
+
+### Minor Changes
+
+- f604f99: design adjustments, header ssr fix
+
 ## 0.2.0
 
 ### Minor Changes

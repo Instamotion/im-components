@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.4.0
+
+### Minor Changes
+
+- f604f99: design adjustments, header ssr fix
+
 ## 0.3.11
 
 ### Patch Changes

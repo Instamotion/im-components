@@ -1,5 +1,16 @@
 # @im-ui/header
 
+## 0.3.0
+
+### Minor Changes
+
+- f604f99: design adjustments, header ssr fix
+
+### Patch Changes
+
+- Updated dependencies [f604f99]
+  - @im-ui/branding-logo@0.3.0
+
 ## 0.2.6
 
 ### Patch Changes
