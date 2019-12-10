@@ -118,7 +118,7 @@ export const HeaderWrapper = styled.header<HeaderWrapperProps>`
   transition: all 0.3s ease;
   display: flex;
   position: fixed;
-  z-index: 50;
+  z-index: 1000000;
   top: 0;
   right: 0;
   left: 0;

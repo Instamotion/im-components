@@ -76,7 +76,7 @@ const MobileMenuComponent = styled(MobileMenu)`
   box-sizing: border-box;
   top: 3rem;
   bottom: 0;
-  left: 0;
+  left: ${props => (props.isOpen ? '0' : '-100%')};
   width: 100%;
   height: 100%;
   background-color: ${theme.color.oil};
