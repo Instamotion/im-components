@@ -2,6 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled, { css } from 'styled-components';
 import { Link, Text } from '@im-ui/typography';
+import theme from '@im-ui/theme';
 
 const ENVKVLink = styled(Link)`
   font-size: 0.75rem;
@@ -14,9 +15,7 @@ const ENVKVText = styled(Text)`
   line-height: 1.33;
   margin: 1rem 1.5rem;
 
-  ${({ theme }) => css`
-    color: ${theme.color.brightGrey};
-  `}
+  color: ${theme.color.brightGrey};
 
   &::before {
     content: '*';
@@ -26,11 +25,9 @@ const ENVKVText = styled(Text)`
     top: -0.25rem;
   }
 
-  ${({ theme }) => `
-    ${theme.mediaQueries.whenMobileL} {
-       padding-left: 1.5rem;
-    }
-  `}
+  ${theme.mediaQueries.whenMobileL} {
+    padding-left: 1.5rem;
+  }
 `;
 
 export default () => {
