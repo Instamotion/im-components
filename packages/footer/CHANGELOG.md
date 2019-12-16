@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.4.1
+
+### Patch Changes
+
+- 9d0b41c: Fix theme dependency
+
 ## 0.4.0
 
 ### Minor Changes
