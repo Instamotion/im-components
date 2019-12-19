@@ -18,11 +18,21 @@ type FullFooterProps = {
   variant: 'full';
   googleToken: string;
   facebookToken: string;
+  menuOptions?: MenuOptions;
 }
 
 type MinimalFooterProps = {
   className?: string;
   variant: 'minimal';
+}
+
+type MenuOptions = {
+  showNewHowItWorksLink?: boolean;
+  hideOldServicesLinks?: boolean;
+  showNewWarrantyLink?: boolean;
+  showNewFinancingLink?: boolean;
+  showNewDeliveryLink?: boolean;
+  showNewQualityLink?: boolean;
 }
 ```
 
@@ -83,4 +93,6 @@ default.footer.guide_funding
 default.footer.guide_leasing
 default.footer.advice_leasing
 default.footer.financing
+default.footer.delivery
+default.footer.quality
 ```

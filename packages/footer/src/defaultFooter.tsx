@@ -42,6 +42,7 @@ const menus: {
   icon?: string;
   blank?: boolean;
   track?: string;
+  isHidden?: (menuOptions: MenuOptions) => boolean;
 }[][] = [
   [
     {
@@ -132,7 +133,15 @@ const menus: {
       id: 'default.footer.menu.how_it_works',
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.how_it_works" />,
-      link: '/so-funktionierts'
+      link: '/so-funktionierts',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showNewHowItWorksLink === true
+    },
+    {
+      id: 'default.footer.menu.how_it_works',
+      type: 'item',
+      title: <FormattedMessage id="default.footer.menu.how_it_works" />,
+      link: '/sofunktionierts',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showNewHowItWorksLink !== true
     },
     {
       id: 'default.footer.menu.blog',
@@ -197,41 +206,67 @@ const menus: {
       title: <FormattedMessage id="default.footer.services" />
     },
     {
+      id: 'default.footer.financing',
+      type: 'item',
+      title: <FormattedMessage id="default.footer.financing" />,
+      link: '/finanzierung',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showNewFinancingLink !== true
+    },
+    {
+      id: 'default.footer.delivery',
+      type: 'item',
+      title: <FormattedMessage id="default.footer.delivery" />,
+      link: '/lieferung',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showNewDeliveryLink !== true
+    },
+    {
       id: 'default.footer.warranty',
       type: 'item',
       title: <FormattedMessage id="default.footer.warranty" />,
       link: '/garantie'
     },
     {
+      id: 'default.footer.quality',
+      type: 'item',
+      title: <FormattedMessage id="default.footer.quality" />,
+      link: '/qualitaet',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showNewQualityLink !== true
+    },
+    {
       id: 'default.footer.part_exchange',
       type: 'item',
       title: <FormattedMessage id="default.footer.part_exchange" />,
       link: '/inzahlungnahme',
-      track: 'inzahlungsnahme button'
+      track: 'inzahlungsnahme button',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.hideOldServicesLinks === true
     },
     {
       id: 'default.footer.financing_or_leasing',
       type: 'item',
       title: <FormattedMessage id="default.footer.financing_or_leasing" />,
-      link: '/gebrauchtwagenkauf'
+      link: '/gebrauchtwagenkauf',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.hideOldServicesLinks === true
     },
     {
       id: 'default.footer.guidebook_family_car',
       type: 'item',
       title: <FormattedMessage id="default.footer.guidebook_family_car" />,
-      link: '/familienauto'
+      link: '/familienauto',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.hideOldServicesLinks === true
     },
     {
       id: 'default.footer.advisor_novice_driver',
       type: 'item',
       title: <FormattedMessage id="default.footer.advisor_novice_driver" />,
-      link: '/fahranfaenger'
+      link: '/fahranfaenger',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.hideOldServicesLinks === true
     },
     {
       id: 'default.footer.guide_for_owners',
       type: 'item',
       title: <FormattedMessage id="default.footer.guide_for_owners" />,
-      link: '/hund-im-auto'
+      link: '/hund-im-auto',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.hideOldServicesLinks === true
     }
   ],
   [
@@ -290,10 +325,20 @@ const menus: {
   ]
 ];
 
-export const renderMenu = (): React.ReactNode => {
+export const renderMenu = (menuOptions: MenuOptions | undefined): React.ReactNode => {
   return menus.map(menu => (
     <MenuItem key={menu[0].id + menu.length}>
       {menu.map(menuItem => {
+        const isMenuItemHidden = !!(
+          menuOptions &&
+          menuItem.isHidden &&
+          menuItem.isHidden(menuOptions)
+        );
+
+        if (isMenuItemHidden) {
+          return null;
+        }
+
         switch (menuItem.type) {
           case 'header':
             return (
@@ -324,20 +369,31 @@ export interface DefaultFooterProps {
   onTop?: React.ReactElement;
   googleToken: string;
   facebookToken: string;
+  menuOptions?: MenuOptions;
+}
+
+export interface MenuOptions {
+  showNewHowItWorksLink?: boolean;
+  hideOldServicesLinks?: boolean;
+  showNewWarrantyLink?: boolean;
+  showNewFinancingLink?: boolean;
+  showNewDeliveryLink?: boolean;
+  showNewQualityLink?: boolean;
 }
 
 const DefaultFooter: React.FC<DefaultFooterProps> = ({
   onTop,
   className,
   googleToken,
-  facebookToken
+  facebookToken,
+  menuOptions
 }) => {
   return (
     <footer className={className}>
       <Envkv />
       <TrustfulContainer>{onTop}</TrustfulContainer>
       <FooterContent>
-        {renderMenu()}
+        {renderMenu(menuOptions)}
         <SocialContainerWithScript googleToken={googleToken} facebookToken={facebookToken} />
         <MailContainer>
           <MailContent
