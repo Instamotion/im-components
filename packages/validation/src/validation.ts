@@ -6,7 +6,11 @@ export type Errors<S extends Object> = {
   [K in keyof S]?: Error;
 };
 
-export type HandleChange<S> = <K extends keyof S>(key: K, value: S[K]) => void;
+export type HandleChange<S> = <K extends keyof S>(
+  key: K,
+  value: S[K],
+  forceValidation?: boolean
+) => void;
 
 export type HandleBlur<S> = <K extends keyof S>(key: K, value: S[K]) => void;
 
@@ -29,7 +33,6 @@ export type ReturnType<S> = [Errors<S>, HandleChange<S>, HandleBlur<S>, runAllVa
 
 const useValidation = <S>({ validations, onStateChange }: useValidationProps<S>): ReturnType<S> => {
   const [errors, setErrors] = useState<Errors<S>>({});
-  const [watch, setWatch] = useState<{ [key in keyof S]?: boolean }>({});
 
   const runAllValidators = (state: S): boolean => {
     const validationKeys = Object.keys(validations) as Array<keyof S>;
@@ -48,31 +51,41 @@ const useValidation = <S>({ validations, onStateChange }: useValidationProps<S>)
     return isValid;
   };
 
-  const validate = <K extends keyof S>(key: K, value: S[K]): boolean => {
+  const validate = <K extends keyof S>(key: K, value: S[K]): Error => {
     const validators = validations[key] || [];
-    const result: Error = validators
+    const res = validators
       .map(v => v(value))
       .filter(v => v !== undefined)
-      .pop(); // todo: show first or last?
-    setErrors(prev => ({
-      ...prev,
-      [key]: result
-    }));
-    return result === undefined;
+      .pop();
+    return res;
   };
 
-  const handleChange = <K extends keyof S>(key: K, value: S[K]): void => {
+  const handleChange = <K extends keyof S>(
+    key: K,
+    value: S[K],
+    forceValidation?: boolean
+  ): void => {
     onStateChange(key, value);
-    if (!watch[key]) return;
-    validate(key, value);
+    if (forceValidation) {
+      setErrors(prev => ({
+        ...prev,
+        [key]: validate(key, value)
+      }));
+    } else {
+      if (errors[key] !== undefined) {
+        setErrors(prev => ({
+          ...prev,
+          [key]: validate(key, value)
+        }));
+      }
+    }
   };
 
   const handleBlur = <K extends keyof S>(key: K, value: S[K]): void => {
-    setWatch(prev => ({
+    setErrors(prev => ({
       ...prev,
-      [key]: true
+      [key]: validate(key, value)
     }));
-    validate(key, value);
   };
 
   return [errors, handleChange, handleBlur, runAllValidators];

@@ -20,7 +20,7 @@ const FormComponent: React.FC = () => {
   const [errors, handleChange, handleBlur, runAllValidators] = useValidation<State>({
     validations: {
       name: [validators.validateRequired, validators.validateName],
-      email: [validators.validateEmail],
+      email: [validators.validateRequired, validators.validateEmail],
       agree: [validators.validateIsTrue]
     },
     onStateChange: (key, value) => {
@@ -68,10 +68,10 @@ const FormComponent: React.FC = () => {
           id="agree"
           type="checkbox"
           checked={form.agree}
-          onChange={e => handleChange('agree', e.target.checked)}
+          onChange={e => handleChange('agree', e.target.checked, true)}
         />
-        <label htmlFor="agree">Agree with the term?s</label>
-        {errors.agree}
+        <label htmlFor="agree">Agree with the terms?</label>
+        <div>{errors.agree}</div>
       </div>
       <button type="submit">Submit</button>
       <br />

@@ -2,4 +2,4 @@
 '@im-ui/validation': patch
 ---
 
-new component
+Validation component has been added
