@@ -1,18 +1,15 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { IValidator } from './validation';
+import { Validator } from './validation';
 
-export const validateRequired: IValidator = value => {
-  if (value === undefined) {
-    return undefined;
+export const validateRequired: Validator<any> = value => {
+  if (value === undefined || value === null) {
+    return <FormattedMessage id="validation.value_missing"></FormattedMessage>;
   }
-  if (value.length >= 1) {
-    return undefined;
-  }
-  return <FormattedMessage id="validation.value_missing"></FormattedMessage>;
+  return undefined;
 };
 
-export const validateName: IValidator = value => {
+export const validateName: Validator<string> = value => {
   if (!value) return undefined;
   if (value.length >= 2) {
     return undefined;
@@ -20,7 +17,14 @@ export const validateName: IValidator = value => {
   return <FormattedMessage id="validation.value_missing"></FormattedMessage>;
 };
 
-export const validateEmail: IValidator = value => {
+export const validateIsTrue: Validator<boolean> = value => {
+  if (typeof value === 'undefined' || value !== true) {
+    return <FormattedMessage id="validation.value_missing"></FormattedMessage>;
+  }
+  return undefined;
+};
+
+export const validateEmail: Validator<string> = value => {
   if (!value) return undefined;
   if (
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(

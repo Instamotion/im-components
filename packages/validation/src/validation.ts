@@ -2,39 +2,38 @@ import { useState } from 'react';
 
 export type Error = JSX.Element | undefined;
 
-export type HandleChange = (key: string, value: string) => void;
+export type Errors<S extends Object> = {
+  [K in keyof S]?: Error;
+};
 
-export type handleBlur = (key: string, value: string) => void;
+export type HandleChange<S> = <K extends keyof S>(key: K, value: S[K]) => void;
 
-export type runAllValidators = (state: Object) => boolean;
+export type HandleBlur<S> = <K extends keyof S>(key: K, value: S[K]) => void;
 
-export interface Errors {
-  [key: string]: Error;
+export type runAllValidators<S> = (state: S) => boolean;
+
+export interface Validator<V> {
+  (value?: V): JSX.Element | undefined;
 }
 
-export interface IValidator {
-  (value?: string): JSX.Element | undefined;
+export interface useValidationProps<S> {
+  validations: ValidationSchema<S, keyof S>;
+  onStateChange: <K extends keyof S>(name: K, value: S[K]) => void;
 }
 
-export interface useValidationProps {
-  validations: ValidationSchema;
-  onStateChange: (name: string, value: string | boolean) => void;
-}
+export type ValidationSchema<S, K extends keyof S> = {
+  [key in K]: Validator<S[K]>[];
+};
 
-export interface ValidationSchema {
-  [key: string]: IValidator[];
-}
+export type ReturnType<S> = [Errors<S>, HandleChange<S>, HandleBlur<S>, runAllValidators<S>];
 
-const useValidation = ({
-  validations = {},
-  onStateChange
-}: useValidationProps): [Errors, HandleChange, handleBlur, runAllValidators] => {
-  const [errors, setErrors] = useState<Errors>({});
-  const [watch, setWatch] = useState<{ [key: string]: boolean }>({});
+const useValidation = <S>({ validations, onStateChange }: useValidationProps<S>): ReturnType<S> => {
+  const [errors, setErrors] = useState<Errors<S>>({});
+  const [watch, setWatch] = useState<{ [key in keyof S]?: boolean }>({});
 
-  const runAllValidators = (state: any): boolean => {
-    const validationKeys = Object.keys(validations);
-    const stateKeys = Object.keys(state);
+  const runAllValidators = (state: S): boolean => {
+    const validationKeys = Object.keys(validations) as Array<keyof S>;
+    const stateKeys = Object.keys(state) as Array<keyof S>;
     let isValid = true;
     for (const key of validationKeys) {
       if (!stateKeys.includes(key)) {
@@ -43,14 +42,13 @@ const useValidation = ({
       }
       const value = state[key];
       if (!validate(key, value)) {
-        console.log('wtf!!');
         isValid = false;
       }
     }
     return isValid;
   };
 
-  const validate = (key: string, value: string): boolean => {
+  const validate = <K extends keyof S>(key: K, value: S[K]): boolean => {
     const validators = validations[key] || [];
     const result: Error = validators
       .map(v => v(value))
@@ -63,13 +61,13 @@ const useValidation = ({
     return result === undefined;
   };
 
-  const handleChange = (key: string, value: string): void => {
+  const handleChange = <K extends keyof S>(key: K, value: S[K]): void => {
     onStateChange(key, value);
     if (!watch[key]) return;
     validate(key, value);
   };
 
-  const handleBlur = (key: string, value: string): void => {
+  const handleBlur = <K extends keyof S>(key: K, value: S[K]): void => {
     setWatch(prev => ({
       ...prev,
       [key]: true
