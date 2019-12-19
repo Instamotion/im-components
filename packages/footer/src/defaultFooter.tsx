@@ -133,15 +133,7 @@ const menus: {
       id: 'default.footer.menu.how_it_works',
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.how_it_works" />,
-      link: '/so-funktionierts',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.showNewHowItWorksLink === true
-    },
-    {
-      id: 'default.footer.menu.how_it_works',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.menu.how_it_works" />,
-      link: '/sofunktionierts',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.showNewHowItWorksLink !== true
+      link: '/so-funktionierts'
     },
     {
       id: 'default.footer.menu.blog',
@@ -210,14 +202,14 @@ const menus: {
       type: 'item',
       title: <FormattedMessage id="default.footer.financing" />,
       link: '/finanzierung',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.showNewFinancingLink !== true
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showFinancingLink !== true
     },
     {
       id: 'default.footer.delivery',
       type: 'item',
       title: <FormattedMessage id="default.footer.delivery" />,
       link: '/lieferung',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.showNewDeliveryLink !== true
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showDeliveryLink !== true
     },
     {
       id: 'default.footer.warranty',
@@ -230,43 +222,7 @@ const menus: {
       type: 'item',
       title: <FormattedMessage id="default.footer.quality" />,
       link: '/qualitaet',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.showNewQualityLink !== true
-    },
-    {
-      id: 'default.footer.part_exchange',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.part_exchange" />,
-      link: '/inzahlungnahme',
-      track: 'inzahlungsnahme button',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.hideOldServicesLinks === true
-    },
-    {
-      id: 'default.footer.financing_or_leasing',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.financing_or_leasing" />,
-      link: '/gebrauchtwagenkauf',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.hideOldServicesLinks === true
-    },
-    {
-      id: 'default.footer.guidebook_family_car',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.guidebook_family_car" />,
-      link: '/familienauto',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.hideOldServicesLinks === true
-    },
-    {
-      id: 'default.footer.advisor_novice_driver',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.advisor_novice_driver" />,
-      link: '/fahranfaenger',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.hideOldServicesLinks === true
-    },
-    {
-      id: 'default.footer.guide_for_owners',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.guide_for_owners" />,
-      link: '/hund-im-auto',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.hideOldServicesLinks === true
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showQualityLink !== true
     }
   ],
   [
@@ -373,12 +329,9 @@ export interface DefaultFooterProps {
 }
 
 export interface MenuOptions {
-  showNewHowItWorksLink?: boolean;
-  hideOldServicesLinks?: boolean;
-  showNewWarrantyLink?: boolean;
-  showNewFinancingLink?: boolean;
-  showNewDeliveryLink?: boolean;
-  showNewQualityLink?: boolean;
+  showFinancingLink?: boolean;
+  showDeliveryLink?: boolean;
+  showQualityLink?: boolean;
 }
 
 const DefaultFooter: React.FC<DefaultFooterProps> = ({

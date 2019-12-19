@@ -27,12 +27,9 @@ type MinimalFooterProps = {
 }
 
 type MenuOptions = {
-  showNewHowItWorksLink?: boolean;
-  hideOldServicesLinks?: boolean;
-  showNewWarrantyLink?: boolean;
-  showNewFinancingLink?: boolean;
-  showNewDeliveryLink?: boolean;
-  showNewQualityLink?: boolean;
+  showFinancingLink?: boolean;
+  showDeliveryLink?: boolean;
+  showQualityLink?: boolean;
 }
 ```
 
@@ -82,11 +79,6 @@ default.footer.shipping_and_payment
 default.footer.cancellation
 default.footer.services
 default.footer.warranty
-default.footer.financing_or_leasing
-default.footer.guidebook_family_car
-default.footer.advisor_novice_driver
-default.footer.part_exchange
-default.footer.guide_for_owners
 default.footer.fold_us
 default.footer.free_advice
 default.footer.guide_funding
