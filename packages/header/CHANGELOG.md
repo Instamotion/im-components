@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.3.2
+
+### Patch Changes
+
+- d931ebc: Fix z-index
+
 ## 0.3.1
 
 ### Patch Changes
