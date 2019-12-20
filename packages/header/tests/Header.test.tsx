@@ -4,15 +4,13 @@ import { mount } from 'enzyme';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
 import BrandingLogo from '@im-ui/branding-logo';
 import Header, { HeaderWrapper } from '../src';
-import Link from '../src/items/link';
 import messages from '../utils/locales';
-import { AvailableColors } from '@im-ui/theme';
 
 describe('Header', () => {
   it('header rendered', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Header imgPath="" phoneNumber="089-411151-100" variant="auto" />,
+        <Header phoneNumber="089-411151-100" favoritesCount={0} />,
         'de',
         messages
       )
@@ -22,66 +20,11 @@ describe('Header', () => {
   it('all logos rendered', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Header imgPath="" phoneNumber="089-411151-100" variant="auto" />,
+        <Header phoneNumber="089-411151-100" favoritesCount={0} />,
         'de',
         messages
       )
     );
-    expect(wrapper.find(BrandingLogo).length).toEqual(3);
-  });
-
-  it('Transparent variant applied', () => {
-    const wrapper = mount(
-      renderWithThemeAndI18n(
-        <Header variant="transparent" imgPath="" phoneNumber="089-411151-100" />,
-        'de',
-        messages
-      )
-    );
-    expect(
-      wrapper
-        .find(BrandingLogo)
-        .at(0)
-        .prop('color')
-    ).toEqual(AvailableColors.oil);
-    expect(
-      wrapper
-        .find(BrandingLogo)
-        .at(2)
-        .prop('color')
-    ).toEqual(AvailableColors.oil);
-    expect(
-      wrapper
-        .find(Link)
-        .at(0)
-        .prop('color')
-    ).toEqual('oil');
-  });
-  it('Dark variant applied', () => {
-    const wrapper = mount(
-      renderWithThemeAndI18n(
-        <Header variant={'dark'} imgPath="" phoneNumber="089-411151-100" />,
-        'de',
-        messages
-      )
-    );
-    expect(
-      wrapper
-        .find(BrandingLogo)
-        .at(0)
-        .prop('color')
-    ).toEqual(AvailableColors.white);
-    expect(
-      wrapper
-        .find(BrandingLogo)
-        .at(2)
-        .prop('color')
-    ).toEqual('#138');
-    expect(
-      wrapper
-        .find(Link)
-        .at(0)
-        .prop('color')
-    ).toEqual('white');
+    expect(wrapper.find(BrandingLogo).length).toEqual(1);
   });
 });
