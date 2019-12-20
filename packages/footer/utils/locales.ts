@@ -34,17 +34,14 @@ const de = {
   'default.footer.cancellation': 'Widerrufsbelehrung',
   'default.footer.services': 'Services',
   'default.footer.warranty': 'Garantie',
-  'default.footer.financing_or_leasing': 'Finanzierung oder Leasing?',
-  'default.footer.guidebook_family_car': 'Ratgeber Familienauto',
-  'default.footer.advisor_novice_driver': 'Ratgeber Fahranfänger',
-  'default.footer.part_exchange': 'Inzahlungnahme',
-  'default.footer.guide_for_owners': 'Ratgeber für Hundebesitzer',
   'default.footer.fold_us': 'Folge uns',
   'default.footer.free_advice': 'Kostenlose Beratung',
   'default.footer.guide_funding': 'Ratgeber Finanzierung',
   'default.footer.guide_leasing': 'Ratgeber Leasing',
   'default.footer.advice_leasing': 'Ratgeber Leasing oder',
   'default.footer.financing': 'Finanzierung',
+  'default.footer.delivery': 'Lieferung',
+  'default.footer.quality': 'Qualität',
   'default.footer.finePrint':
     'Weitere Informationen zum offiziellen Kraftstoffverbrauch und den offiziellen spezifischen CO2-Emissionen neuer Personenkraftwagen können dem "Leitfaden über den Kraftstoffverbrauch, die CO2-Emissionen und den Stromverbrauch neuer Personenkraftwagen" entnommen werden, der an allen Verkaufsstellen und bei der Deutsche Automobil Treuhand GmbH (DAT), Hellmuth-Hirth-Straße 1, 73760 Ostfildern-Scharnhausen bzw. im Internet unter {link} unentgeltlich erhältlich ist.'
 };

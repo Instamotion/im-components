@@ -18,11 +18,18 @@ type FullFooterProps = {
   variant: 'full';
   googleToken: string;
   facebookToken: string;
+  menuOptions?: MenuOptions;
 }
 
 type MinimalFooterProps = {
   className?: string;
   variant: 'minimal';
+}
+
+type MenuOptions = {
+  showFinancingLink?: boolean;
+  showDeliveryLink?: boolean;
+  showQualityLink?: boolean;
 }
 ```
 
@@ -72,15 +79,12 @@ default.footer.shipping_and_payment
 default.footer.cancellation
 default.footer.services
 default.footer.warranty
-default.footer.financing_or_leasing
-default.footer.guidebook_family_car
-default.footer.advisor_novice_driver
-default.footer.part_exchange
-default.footer.guide_for_owners
 default.footer.fold_us
 default.footer.free_advice
 default.footer.guide_funding
 default.footer.guide_leasing
 default.footer.advice_leasing
 default.footer.financing
+default.footer.delivery
+default.footer.quality
 ```

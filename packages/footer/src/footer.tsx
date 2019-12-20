@@ -1,6 +1,6 @@
 import React from 'react';
 import CheckoutFooter from './checkoutFooter';
-import DefaultFooter from './defaultFooter';
+import DefaultFooter, { MenuOptions } from './defaultFooter';
 import TrustfulSection from './trustfulSection';
 
 type FullFooterProps = {
@@ -8,6 +8,7 @@ type FullFooterProps = {
   variant: 'full';
   googleToken: string;
   facebookToken: string;
+  menuOptions?: MenuOptions;
 };
 
 type MinimalFooterProps = {
@@ -29,6 +30,7 @@ const Footer: React.FC<FooterProps> = props => {
           facebookToken={props.facebookToken}
           className={props.className}
           onTop={<TrustfulSection />}
+          menuOptions={props.menuOptions}
         />
       );
   }

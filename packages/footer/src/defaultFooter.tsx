@@ -42,6 +42,7 @@ const menus: {
   icon?: string;
   blank?: boolean;
   track?: string;
+  isHidden?: (menuOptions: MenuOptions) => boolean;
 }[][] = [
   [
     {
@@ -203,35 +204,25 @@ const menus: {
       link: '/garantie'
     },
     {
-      id: 'default.footer.part_exchange',
+      id: 'default.footer.delivery',
       type: 'item',
-      title: <FormattedMessage id="default.footer.part_exchange" />,
-      link: '/inzahlungnahme',
-      track: 'inzahlungsnahme button'
+      title: <FormattedMessage id="default.footer.delivery" />,
+      link: '/lieferung',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showDeliveryLink !== true
     },
     {
-      id: 'default.footer.financing_or_leasing',
+      id: 'default.footer.financing',
       type: 'item',
-      title: <FormattedMessage id="default.footer.financing_or_leasing" />,
-      link: '/gebrauchtwagenkauf'
+      title: <FormattedMessage id="default.footer.financing" />,
+      link: '/finanzierung',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showFinancingLink !== true
     },
     {
-      id: 'default.footer.guidebook_family_car',
+      id: 'default.footer.quality',
       type: 'item',
-      title: <FormattedMessage id="default.footer.guidebook_family_car" />,
-      link: '/familienauto'
-    },
-    {
-      id: 'default.footer.advisor_novice_driver',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.advisor_novice_driver" />,
-      link: '/fahranfaenger'
-    },
-    {
-      id: 'default.footer.guide_for_owners',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.guide_for_owners" />,
-      link: '/hund-im-auto'
+      title: <FormattedMessage id="default.footer.quality" />,
+      link: '/qualitaet',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showQualityLink !== true
     }
   ],
   [
@@ -290,10 +281,20 @@ const menus: {
   ]
 ];
 
-export const renderMenu = (): React.ReactNode => {
+export const renderMenu = (menuOptions?: MenuOptions): React.ReactNode => {
   return menus.map(menu => (
     <MenuItem key={menu[0].id + menu.length}>
       {menu.map(menuItem => {
+        const isMenuItemHidden = !!(
+          menuOptions &&
+          menuItem.isHidden &&
+          menuItem.isHidden(menuOptions)
+        );
+
+        if (isMenuItemHidden) {
+          return null;
+        }
+
         switch (menuItem.type) {
           case 'header':
             return (
@@ -324,20 +325,28 @@ export interface DefaultFooterProps {
   onTop?: React.ReactElement;
   googleToken: string;
   facebookToken: string;
+  menuOptions?: MenuOptions;
+}
+
+export interface MenuOptions {
+  showFinancingLink?: boolean;
+  showDeliveryLink?: boolean;
+  showQualityLink?: boolean;
 }
 
 const DefaultFooter: React.FC<DefaultFooterProps> = ({
   onTop,
   className,
   googleToken,
-  facebookToken
+  facebookToken,
+  menuOptions
 }) => {
   return (
     <footer className={className}>
       <Envkv />
       <TrustfulContainer>{onTop}</TrustfulContainer>
       <FooterContent>
-        {renderMenu()}
+        {renderMenu(menuOptions)}
         <SocialContainerWithScript googleToken={googleToken} facebookToken={facebookToken} />
         <MailContainer>
           <MailContent
