@@ -74,3 +74,22 @@ bolt w @im-ui/button add @im-iu/utils [-P|-D]
 You can use yarn flags to specify the type of the dependency:
 - `-P` for peer dependency;
 - `-D` for dev dependency
+
+### Publishing and integrating locally
+
+You can use `yalc` as a local repo for publishing packages and integrating with consumers.
+
+Build and publish component:
+```
+bolt w @im-ui/button exec -- yalc publish
+```
+
+Install component in consumer repo:
+```
+yalc add @im-ui/button
+```
+
+Update component in consumer repo (after republishing the component):
+```
+yalc update @im-ui/button
+```
