@@ -1,120 +1,86 @@
 import React from 'react';
 import styled from 'styled-components';
 import BrandingLogo from '@im-ui/branding-logo';
-import CallerImg from './items/callerImg';
 import Link from './items/link';
 import Burger from './items/burger';
 import MobileMenu from './items/mobileMenu';
 import theme, { AvailableColors } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 import { FormattedMessage } from 'react-intl';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { HeaderProps } from './types';
 
-export interface HeaderProps {
-  imgPath: string;
-  phoneNumber: string;
-  variant: 'auto' | 'dark' | 'transparent';
-}
-
-export interface HeaderWrapperProps {
-  isDark: boolean;
-}
-
-export const Header: React.FC<HeaderProps> = ({ variant, imgPath, phoneNumber }) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [isDark, setDark] = React.useState(variant === 'dark' ? true : false);
-
-  useScrollPosition(
-    ({ currPos }: ScrollProps) => {
-      if (variant !== 'auto') return;
-      setDark(currPos.y < 0);
-    },
-    [isDark],
-    undefined,
-    false,
-    50
-  );
-
-  const brandColor = isDark ? AvailableColors.white : AvailableColors.oil;
-  const brandColorTwo = isDark ? AvailableColors.downy : AvailableColors.oil;
-  const allianzColor = isDark ? '#138' : AvailableColors.oil;
-  const textColor: keyof typeof AvailableColors = isDark ? 'white' : 'oil';
-  const textColorHover: keyof typeof AvailableColors = isDark ? 'silver' : 'brightGrey';
+export const Header: React.FC<HeaderProps> = ({ phoneNumber, menuOptions = {} }) => {
+  const [isBurgerOpen, setBurgerOpen] = React.useState(false);
+  const [isSubMenuOpen, setSubMenuOpen] = React.useState(false);
 
   return (
-    <HeaderWrapper isDark={isDark}>
+    <HeaderWrapper>
+      <SubMenuOverlay visible={isSubMenuOpen}></SubMenuOverlay>
       <HeaderBar>
-        <Burger clickedCb={() => setIsOpen(!isOpen)} isOpen={isOpen} textColor={textColor}></Burger>
+        <Burger clickedCb={() => setBurgerOpen(!isBurgerOpen)} isOpen={isBurgerOpen}></Burger>
         <LogoWrapper>
           <BrandingLogo
-            color={brandColor}
-            colorTwo={brandColorTwo}
+            color={AvailableColors.white}
+            colorTwo={AvailableColors.downy}
             brandingHolder="InstamotionAllianz"
             link="/"
           />
         </LogoWrapper>
         <SearchWrapper>
           <a href="/autos">
-            <Icon iconName={'search'} size={16} color={textColor} />
+            <Icon iconName={'cars'} size={20} color={'white'} />
           </a>
         </SearchWrapper>
-        <LogoDesktopWrapper>
-          <BrandingLogo
-            color={brandColor}
-            colorTwo={brandColorTwo}
-            brandingHolder="Instamotion"
-            link="/"
-          />
-        </LogoDesktopWrapper>
+        <NavWrapper>
+          <Link text={<FormattedMessage id="header.menu.autos" />} path="/autos" />
+          <Link text={<FormattedMessage id="header.menu.top_offers" />} path="/angebote" />
+          <Link text={<FormattedMessage id="header.menu.wish_list" />} path="/favoriten" />
+          <Link text={<FormattedMessage id="header.menu.how_it_works" />} path="/sofunktionierts" />
+          <Link
+            text={<FormattedMessage id="header.menu.services" />}
+            onClick={() => {
+              setSubMenuOpen(!isSubMenuOpen);
+            }}
+            showChildren={isSubMenuOpen}
+          >
+            {menuOptions.showFinancingLink && (
+              <Link text={<FormattedMessage id="header.menu.financing" />} path="/finanzierung" />
+            )}
+            {menuOptions.showDeliveryLink && (
+              <Link text={<FormattedMessage id="header.menu.delivery" />} path="/lieferung" />
+            )}
+            <Link text={<FormattedMessage id="header.menu.warranty" />} path="/garantie" />
+            {menuOptions.showQualityLink && (
+              <Link text={<FormattedMessage id="header.menu.quality" />} path="/qualitaet" />
+            )}
+          </Link>
+        </NavWrapper>
         <PhoneWrapper>
-          <HelpWrapper>
-            <FormattedMessage id="header.menu.help" />
-          </HelpWrapper>
-          <CallerImg imgPath={imgPath} />
+          <CallerImg />
           <Link
             text={phoneNumber}
             track="callFromHeader"
-            color={textColor}
-            colorHover={textColorHover}
             icon="phone"
             path={`tel:${phoneNumber}`}
           />
         </PhoneWrapper>
-        <NavWrapper>
-          <Link
-            text={<FormattedMessage id="header.menu.search" />}
-            color={textColor}
-            colorHover={textColorHover}
-            icon="search"
-            path="/autos"
-          />
-          <Link
-            text={<FormattedMessage id="header.menu.top_offers" />}
-            color={textColor}
-            colorHover={textColorHover}
-            icon="trophy"
-            path="/angebote"
-          />
-          <Link
-            text={<FormattedMessage id="header.menu.wish_list" />}
-            color={textColor}
-            colorHover={textColorHover}
-            icon="star"
-            path="/favoriten"
-          />
-        </NavWrapper>
       </HeaderBar>
-      <AllianzBar>
-        <BrandingLogo color={allianzColor} brandingHolder="Allianz" link="/" />
-      </AllianzBar>
-      <MobileMenu isOpen={isOpen} phoneNumber={phoneNumber}></MobileMenu>
+      <MobileMenu
+        isOpen={isBurgerOpen}
+        phoneNumber={phoneNumber}
+        isSubMenuOpen={isSubMenuOpen}
+        menuOptions={menuOptions}
+        toggleMenu={() => {
+          setSubMenuOpen(!isSubMenuOpen);
+        }}
+      ></MobileMenu>
     </HeaderWrapper>
   );
 };
 
-export const HeaderWrapper = styled.header<HeaderWrapperProps>`
-  background: ${props => (props.isDark ? theme.color.oil : 'transparent')};
-  color: ${props => (props.isDark ? 'white' : 'black')};
+export const HeaderWrapper = styled.header`
+  background: ${theme.color.oil};
+  color: ${theme.color.white};
   transition: all 0.3s ease;
   display: flex;
   position: fixed;
@@ -133,10 +99,16 @@ export const HeaderWrapper = styled.header<HeaderWrapperProps>`
 
 export const LogoWrapper = styled.div`
   display: block;
-  width: 6rem;
-  height: 2rem;
+  ${BrandingLogo} div {
+    width: 7.6rem;
+    height: 2.1rem;
+  }
   ${theme.mediaQueries.whenDesktop} {
-    display: none;
+    display: inline-flex;
+    ${BrandingLogo} div {
+      width: 10rem;
+      height: 2.75rem;
+    }
   }
 `;
 
@@ -148,13 +120,6 @@ const SearchWrapper = styled.div`
   }
 `;
 
-const LogoDesktopWrapper = styled.div`
-  display: none;
-  ${theme.mediaQueries.whenDesktop} {
-    display: inline-flex;
-  }
-`;
-
 const PhoneWrapper = styled.div`
   flex-shrink: 0;
   align-items: center;
@@ -162,14 +127,23 @@ const PhoneWrapper = styled.div`
   ${theme.mediaQueries.whenDesktop} {
     display: inline-flex;
   }
+  ${Link} a {
+    margin-right: 0;
+  }
 `;
 
-const HelpWrapper = styled.span`
-  margin-left: 1.5rem;
-  line-height: 1.6;
+const CallerImg = styled.div`
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  background-image: url('https://cdn.instamotion.com/images/header-img.png');
+  object-fit: contain;
+  border-radius: 1rem;
+  background-position: center;
+  margin: 0 1rem;
   display: none;
   ${theme.mediaQueries.whenDesktopXL} {
-    display: inline;
+    display: block;
   }
 `;
 
@@ -183,18 +157,19 @@ const NavWrapper = styled.div`
   }
 `;
 
-const AllianzBar = styled.div`
+const SubMenuOverlay = styled.div<{ visible: boolean }>`
+  position: fixed;
+  height: 3rem;
+  width: 100%;
+  top: 4rem;
+  background-color: ${theme.color.oil};
+  transition: all 0.3s ease;
+  visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')};
+  opacity: ${({ visible }) => (visible ? '0.8' : '0')};
   display: none;
   ${theme.mediaQueries.whenDesktop} {
-    display: inline-flex;
+    display: block;
   }
-  flex: 0 0 auto;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1.6rem;
-  transition: background-color 0.3s ease;
-  background-color: ${theme.color.white};
-  height: 100%;
 `;
 
 const HeaderBar = styled.div`
@@ -207,16 +182,5 @@ const HeaderBar = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-
-interface ScrollProps {
-  prevPos: {
-    x: Number;
-    y: Number;
-  };
-  currPos: {
-    x: Number;
-    y: Number;
-  };
-}
 
 export default Header;

@@ -38,7 +38,6 @@
     "@im-ui/branding-logo": "^0.3.0",
     "@im-ui/icon": "^0.2.9",
     "@im-ui/theme": "^1.0.0",
-    "@im-ui/utils": "^0.5.2",
-    "@n8tb1t/use-scroll-position": "1.0.40"
+    "@im-ui/utils": "^0.5.2"
   }
 }

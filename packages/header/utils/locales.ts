@@ -1,9 +1,14 @@
 const de = {
-  'header.menu.help': 'Wir helfen Dir weiter!',
-  'header.menu.search': 'Suchen',
+  'header.menu.autos': 'Autos',
   'header.menu.top_offers': 'Topangebote',
-  'header.menu.wish_list': 'Merkzettel',
-  'header.menu.phone_number': '089 411151-100'
+  'header.menu.wish_list': 'Merkliste',
+  'header.menu.how_it_works': "So funktioniert's",
+  'header.menu.services': 'Services',
+  'header.menu.phone_number': '089 411151-100',
+  'header.menu.financing': 'Finanzierung',
+  'header.menu.delivery': 'Lieferung',
+  'header.menu.warranty': 'Garantie',
+  'header.menu.quality': 'Qualität'
 };
 
 export default { de };

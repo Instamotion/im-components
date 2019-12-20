@@ -1,47 +1,58 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '@im-ui/theme';
-import Link from './link';
+import Link, { ChildrenItems } from './link';
 import { FormattedMessage } from 'react-intl';
+import { MenuOptions } from '../types';
 
 interface Props {
   className?: string;
   isOpen: boolean;
   phoneNumber: string;
+  menuOptions: MenuOptions;
+  showChildren?: boolean;
+  isSubMenuOpen?: boolean;
+  toggleMenu: () => void;
 }
 
-export const MobileMenu: React.FC<Props> = ({ className, phoneNumber }) => {
+export const MobileMenu: React.FC<Props> = ({
+  className,
+  phoneNumber,
+  isSubMenuOpen,
+  toggleMenu,
+  menuOptions
+}) => {
   return (
     <div className={className}>
       <MobileItems>
+        <Link text={<FormattedMessage id="header.menu.autos" />} path="/autos" />
+        <Link text={<FormattedMessage id="header.menu.top_offers" />} path="/angebote" />
+        <Link text={<FormattedMessage id="header.menu.wish_list" />} path="/favoriten" />
+        <Link text={<FormattedMessage id="header.menu.how_it_works" />} path="/sofunktionierts" />
         <Link
+          text={<FormattedMessage id="header.menu.services" />}
+          onClick={() => {
+            toggleMenu();
+          }}
+          showChildren={isSubMenuOpen}
+        >
+          {menuOptions.showFinancingLink && (
+            <Link text={<FormattedMessage id="header.menu.financing" />} path="/finanzierung" />
+          )}
+          {menuOptions.showDeliveryLink && (
+            <Link text={<FormattedMessage id="header.menu.delivery" />} path="/lieferung" />
+          )}
+          <Link text={<FormattedMessage id="header.menu.warranty" />} path="/garantie" />
+          {menuOptions.showQualityLink && (
+            <Link text={<FormattedMessage id="header.menu.quality" />} path="/qualitaet" />
+          )}
+        </Link>
+        <Link
+          className="phoneLink"
           text={phoneNumber}
-          color={'white'}
-          colorHover={'downy'}
-          icon="phone"
+          icon={'phone'}
           track="callFromHeader"
           path={`tel:${phoneNumber}`}
-        />
-        <Link
-          text={<FormattedMessage id="header.menu.search" />}
-          color={'white'}
-          colorHover={'downy'}
-          icon="search"
-          path="/autos"
-        />
-        <Link
-          text={<FormattedMessage id="header.menu.top_offers" />}
-          color={'white'}
-          colorHover={'downy'}
-          icon="trophy"
-          path="/angebote"
-        />
-        <Link
-          text={<FormattedMessage id="header.menu.wish_list" />}
-          color={'white'}
-          colorHover={'downy'}
-          icon="star"
-          path="/favoriten"
         />
       </MobileItems>
     </div>
@@ -54,19 +65,23 @@ const MobileItems = styled.div`
   top: 3rem;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 75%;
   height: 100%;
   box-sizing: border-box;
   opacity: 1;
-  max-width: 27rem;
-  padding-left: 1.5rem;
+  /* max-width: 27rem; */
+  padding: 1.5rem;
   background-color: ${theme.color.oil};
   text-align: left;
   ${Link} {
-    padding: 0.625rem 0;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
   }
-  ${Link}:first-child {
-    padding-top: 1.5rem;
+  ${Link} .phoneLink {
+    margin-top: 2rem;
+  }
+  ${ChildrenItems} ${Link} {
+    margin-bottom: 0;
   }
 `;
 
@@ -79,7 +94,7 @@ const MobileMenuComponent = styled(MobileMenu)`
   left: ${props => (props.isOpen ? '0' : '-100%')};
   width: 100%;
   height: 100%;
-  background-color: ${theme.color.oil};
+  background-color: transparent;
   transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
   ${theme.mediaQueries.whenDesktop} {
     display: none;
