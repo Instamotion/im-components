@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.5.0
+
+### Minor Changes
+
+- 9f031e3: Change footer links for Services submenu and add possibility to toggle their visibility
+
 ## 0.4.1
 
 ### Patch Changes
