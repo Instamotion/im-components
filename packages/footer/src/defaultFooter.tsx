@@ -198,11 +198,10 @@ const menus: {
       title: <FormattedMessage id="default.footer.services" />
     },
     {
-      id: 'default.footer.financing',
+      id: 'default.footer.warranty',
       type: 'item',
-      title: <FormattedMessage id="default.footer.financing" />,
-      link: '/finanzierung',
-      isHidden: (menuOptions: MenuOptions) => menuOptions.showFinancingLink !== true
+      title: <FormattedMessage id="default.footer.warranty" />,
+      link: '/garantie'
     },
     {
       id: 'default.footer.delivery',
@@ -212,10 +211,11 @@ const menus: {
       isHidden: (menuOptions: MenuOptions) => menuOptions.showDeliveryLink !== true
     },
     {
-      id: 'default.footer.warranty',
+      id: 'default.footer.financing',
       type: 'item',
-      title: <FormattedMessage id="default.footer.warranty" />,
-      link: '/garantie'
+      title: <FormattedMessage id="default.footer.financing" />,
+      link: '/finanzierung',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showFinancingLink !== true
     },
     {
       id: 'default.footer.quality',
@@ -281,7 +281,7 @@ const menus: {
   ]
 ];
 
-export const renderMenu = (menuOptions: MenuOptions | undefined): React.ReactNode => {
+export const renderMenu = (menuOptions?: MenuOptions): React.ReactNode => {
   return menus.map(menu => (
     <MenuItem key={menu[0].id + menu.length}>
       {menu.map(menuItem => {
