@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.4.1
+
+### Patch Changes
+
+- 44466b8: link fix
+
 ## 0.4.0
 
 ### Minor Changes
