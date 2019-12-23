@@ -1,5 +1,11 @@
 # @im-ui/branding-logo
 
+## 0.3.1
+
+### Patch Changes
+
+- 857ced2: improved header, added icon, added logo
+
 ## 0.3.0
 
 ### Minor Changes

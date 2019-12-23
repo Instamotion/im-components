@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.2.10
+
+### Patch Changes
+
+- 857ced2: improved header, added icon, added logo
+
 ## 0.2.9
 
 ### Patch Changes

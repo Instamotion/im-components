@@ -1,5 +1,17 @@
 # @im-ui/header
 
+## 0.4.0
+
+### Minor Changes
+
+- 857ced2: improved header, added icon, added logo
+
+### Patch Changes
+
+- Updated dependencies [857ced2]
+  - @im-ui/branding-logo@0.3.1
+  - @im-ui/icon@0.2.10
+
 ## 0.3.2
 
 ### Patch Changes
