@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.5.1
+
+### Patch Changes
+
+- e9e7f0e: removed envkv text from footer
+
 ## 0.5.0
 
 ### Minor Changes
