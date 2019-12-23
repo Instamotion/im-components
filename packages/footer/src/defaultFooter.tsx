@@ -343,7 +343,6 @@ const DefaultFooter: React.FC<DefaultFooterProps> = ({
 }) => {
   return (
     <footer className={className}>
-      <Envkv />
       <TrustfulContainer>{onTop}</TrustfulContainer>
       <FooterContent>
         {renderMenu(menuOptions)}
