@@ -6,6 +6,6 @@ export interface MenuOptions {
 
 export interface HeaderProps {
   phoneNumber: string;
-  favoritesCount: number;
+  favoritesCount?: number;
   menuOptions?: MenuOptions;
 }

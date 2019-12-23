@@ -3,21 +3,26 @@ import styled from 'styled-components';
 import BrandingLogo from '@im-ui/branding-logo';
 import Link from './items/link';
 import Burger from './items/burger';
-import MobileMenu from './items/mobileMenu';
+import MobileMenu, { Favorites } from './items/mobileMenu';
 import theme, { AvailableColors } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 import { FormattedMessage } from 'react-intl';
 import { HeaderProps } from './types';
+import useModal from './useModal';
 
-export const Header: React.FC<HeaderProps> = ({ phoneNumber, menuOptions = {} }) => {
-  const [isBurgerOpen, setBurgerOpen] = React.useState(false);
+export const Header: React.FC<HeaderProps> = ({
+  phoneNumber,
+  menuOptions = {},
+  favoritesCount
+}) => {
+  const [isBurgerOpen, toggleBurger] = useModal();
   const [isSubMenuOpen, setSubMenuOpen] = React.useState(false);
 
   return (
     <HeaderWrapper>
       <SubMenuOverlay visible={isSubMenuOpen}></SubMenuOverlay>
       <HeaderBar>
-        <Burger clickedCb={() => setBurgerOpen(!isBurgerOpen)} isOpen={isBurgerOpen}></Burger>
+        <Burger clickedCb={toggleBurger} isOpen={isBurgerOpen}></Burger>
         <LogoWrapper>
           <BrandingLogo
             color={AvailableColors.white}
@@ -31,10 +36,15 @@ export const Header: React.FC<HeaderProps> = ({ phoneNumber, menuOptions = {} })
             <Icon iconName={'cars'} size={20} color={'white'} />
           </a>
         </SearchWrapper>
+        <SpacerBefore></SpacerBefore>
         <NavWrapper>
           <Link text={<FormattedMessage id="header.menu.autos" />} path="/autos" />
           <Link text={<FormattedMessage id="header.menu.top_offers" />} path="/angebote" />
-          <Link text={<FormattedMessage id="header.menu.wish_list" />} path="/favoriten" />
+          <Link
+            text={<FormattedMessage id="header.menu.wish_list" />}
+            path="/favoriten"
+            extra={favoritesCount ? <Favorites>{favoritesCount}</Favorites> : undefined}
+          />
           <Link text={<FormattedMessage id="header.menu.how_it_works" />} path="/sofunktionierts" />
           <Link
             text={<FormattedMessage id="header.menu.services" />}
@@ -55,6 +65,7 @@ export const Header: React.FC<HeaderProps> = ({ phoneNumber, menuOptions = {} })
             )}
           </Link>
         </NavWrapper>
+        <SpacerAfter></SpacerAfter>
         <PhoneWrapper>
           <CallerImg />
           <Link
@@ -67,9 +78,11 @@ export const Header: React.FC<HeaderProps> = ({ phoneNumber, menuOptions = {} })
       </HeaderBar>
       <MobileMenu
         isOpen={isBurgerOpen}
+        toggleBurger={toggleBurger}
         phoneNumber={phoneNumber}
         isSubMenuOpen={isSubMenuOpen}
         menuOptions={menuOptions}
+        favoritesCount={favoritesCount}
         toggleMenu={() => {
           setSubMenuOpen(!isSubMenuOpen);
         }}
@@ -77,6 +90,22 @@ export const Header: React.FC<HeaderProps> = ({ phoneNumber, menuOptions = {} })
     </HeaderWrapper>
   );
 };
+
+const SpacerBefore = styled.div`
+  flex-grow: 0.3;
+  display: none;
+  ${theme.mediaQueries.whenDesktop} {
+    display: flex;
+  }
+`;
+
+const SpacerAfter = styled.div`
+  flex-grow: 0.7;
+  display: none;
+  ${theme.mediaQueries.whenDesktop} {
+    display: flex;
+  }
+`;
 
 export const HeaderWrapper = styled.header`
   background: ${theme.color.oil};
@@ -140,7 +169,7 @@ const CallerImg = styled.div`
   object-fit: contain;
   border-radius: 1rem;
   background-position: center;
-  margin: 0 1rem;
+  margin: 0 1rem 0 0;
   display: none;
   ${theme.mediaQueries.whenDesktopXL} {
     display: block;
@@ -152,7 +181,7 @@ const NavWrapper = styled.div`
   ${theme.mediaQueries.whenDesktop} {
     display: inline-flex;
   }
-  ${Link}:last-child {
+  ${Link}:last-child > a {
     margin-right: 0;
   }
 `;

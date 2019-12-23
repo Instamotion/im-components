@@ -7,6 +7,7 @@ import theme, { AvailableColors } from '@im-ui/theme';
 interface Props {
   className?: string;
   text?: JSX.Element | string;
+  extra?: JSX.Element;
   path?: string;
   icon?: AvailableIcons;
   track?: string;
@@ -18,6 +19,7 @@ export const LinkComponent: React.FC<Props> = ({
   className,
   path,
   text,
+  extra,
   icon,
   track,
   children,
@@ -42,6 +44,7 @@ export const LinkComponent: React.FC<Props> = ({
       <a href={path} onClick={() => tag()}>
         {icon && <Icon iconName={icon} size={16} color={'white'} />}
         {text}
+        {extra}
         {children && <Icon className="chevron" iconName={'chevronUp'} size={14} color={'white'} />}
       </a>
       {showChildren && <ChildrenItems>{children}</ChildrenItems>}
@@ -75,10 +78,11 @@ const Link = styled(LinkComponent)`
     }
     .chevron {
       transition: all 0.3s ease;
-      margin-left: 0.5rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
       margin-right: 0;
       float: right;
-      transform: ${({ showChildren }) => (showChildren ? 'rotate(180deg)' : 'rotate(0)')};
+      transform: ${({ showChildren }) => (showChildren ? 'rotate(0)' : 'rotate(180deg)')};
     }
   }
 `;

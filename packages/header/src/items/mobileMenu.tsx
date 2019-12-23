@@ -8,8 +8,10 @@ import { MenuOptions } from '../types';
 interface Props {
   className?: string;
   isOpen: boolean;
+  toggleBurger: () => void;
   phoneNumber: string;
   menuOptions: MenuOptions;
+  favoritesCount?: number;
   showChildren?: boolean;
   isSubMenuOpen?: boolean;
   toggleMenu: () => void;
@@ -17,23 +19,28 @@ interface Props {
 
 export const MobileMenu: React.FC<Props> = ({
   className,
+  toggleBurger,
   phoneNumber,
   isSubMenuOpen,
   toggleMenu,
+  favoritesCount,
   menuOptions
 }) => {
   return (
     <div className={className}>
+      <Overlay onClick={toggleBurger}></Overlay>
       <MobileItems>
         <Link text={<FormattedMessage id="header.menu.autos" />} path="/autos" />
         <Link text={<FormattedMessage id="header.menu.top_offers" />} path="/angebote" />
-        <Link text={<FormattedMessage id="header.menu.wish_list" />} path="/favoriten" />
+        <Link
+          text={<FormattedMessage id="header.menu.wish_list" />}
+          path="/favoriten"
+          extra={favoritesCount ? <Favorites>({favoritesCount})</Favorites> : undefined}
+        />
         <Link text={<FormattedMessage id="header.menu.how_it_works" />} path="/sofunktionierts" />
         <Link
           text={<FormattedMessage id="header.menu.services" />}
-          onClick={() => {
-            toggleMenu();
-          }}
+          onClick={toggleMenu}
           showChildren={isSubMenuOpen}
         >
           {menuOptions.showFinancingLink && (
@@ -48,7 +55,7 @@ export const MobileMenu: React.FC<Props> = ({
           )}
         </Link>
         <Link
-          className="phoneLink"
+          className="phonelink"
           text={phoneNumber}
           icon={'phone'}
           track="callFromHeader"
@@ -59,6 +66,33 @@ export const MobileMenu: React.FC<Props> = ({
   );
 };
 
+export const Favorites = styled.span`
+  color: ${theme.color.downy};
+  padding-left: 0.5rem;
+  ${theme.mediaQueries.whenDesktop} {
+    position: absolute;
+    padding-left: 0;
+    font-size: 0.75rem;
+    bottom: 1.05rem;
+    right: 1rem;
+  }
+`;
+
+const Overlay = styled.div`
+  display: block;
+  position: fixed;
+  box-sizing: border-box;
+  top: 3rem;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${theme.color.oil};
+  transition: visibility 0.2s ease-in-out, opacity 0.5s ease-in-out;
+  ${theme.mediaQueries.whenDesktop} {
+    display: none;
+  }
+`;
+
 const MobileItems = styled.div`
   flex-direction: column;
   position: fixed;
@@ -67,18 +101,26 @@ const MobileItems = styled.div`
   left: 0;
   width: 75%;
   height: 100%;
+  overflow-y: scroll;
   box-sizing: border-box;
-  opacity: 1;
-  /* max-width: 27rem; */
+  max-width: 22rem;
   padding: 1.5rem;
   background-color: ${theme.color.oil};
   text-align: left;
   ${Link} {
     padding: 0.5rem 0;
     margin-bottom: 0.5rem;
+    a:hover:not([href]) {
+      -webkit-tap-highlight-color: transparent;
+      color: ${theme.color.white};
+    }
   }
-  ${Link} .phoneLink {
-    margin-top: 2rem;
+  & > .phonelink {
+    margin-top: 5rem;
+    a {
+      text-decoration: underline;
+      color: ${theme.color.downy};
+    }
   }
   ${ChildrenItems} ${Link} {
     margin-bottom: 0;
@@ -86,22 +128,13 @@ const MobileItems = styled.div`
 `;
 
 const MobileMenuComponent = styled(MobileMenu)`
-  display: block;
-  position: fixed;
-  box-sizing: border-box;
-  top: 3rem;
-  bottom: 0;
-  left: ${props => (props.isOpen ? '0' : '-100%')};
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  ${theme.mediaQueries.whenDesktop} {
-    display: none;
+  ${Overlay} {
+    ${props => (props.isOpen ? 'opacity: 0.5;' : 'opacity: 0;')};
+    left: ${props => (props.isOpen ? '0' : '-100%')};
   }
-  ${props => (props.isOpen ? 'opacity: 1;' : 'opacity: 0;')};
   ${MobileItems} {
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    overflow-y: ${props => (props.isOpen ? 'scroll' : 'hidden')};
     transform: ${props => (props.isOpen ? 'translateX(0)' : 'translateX(-100%)')};
   }
 `;

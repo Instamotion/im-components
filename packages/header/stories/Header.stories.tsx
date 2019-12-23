@@ -1,7 +1,7 @@
 import React, { useEffect, ReactNode } from 'react';
 import { storiesOf } from '@storybook/react';
 import Header, { HeaderProps, MenuOptions } from '../src';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, number } from '@storybook/addon-knobs';
 import messages from '../utils/locales';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
 import TagManager from 'react-gtm-module';
@@ -19,7 +19,7 @@ const GtmWrapper: React.FC<{ children: ReactNode }> = ({ children }): JSX.Elemen
 storiesOf('Header', module).add('default', () => {
   const props: HeaderProps = {
     phoneNumber: text('phone number', '089-411151-100'),
-    favoritesCount: 0,
+    favoritesCount: number('favorites', 23),
     menuOptions: {
       showDeliveryLink: true,
       showFinancingLink: true,
