@@ -117,6 +117,7 @@ export const HeaderWrapper = styled.header`
   top: 0;
   right: 0;
   left: 0;
+  line-height: 1.5;
   justify-content: space-between;
   align-items: center;
   font-family: ${theme.font.sans.family};

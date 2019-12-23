@@ -88,9 +88,6 @@ const Overlay = styled.div`
   height: 100%;
   background-color: ${theme.color.oil};
   transition: visibility 0.2s ease-in-out, opacity 0.5s ease-in-out;
-  ${theme.mediaQueries.whenDesktop} {
-    display: none;
-  }
 `;
 
 const MobileItems = styled.div`
@@ -104,11 +101,11 @@ const MobileItems = styled.div`
   overflow-y: scroll;
   box-sizing: border-box;
   max-width: 22rem;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   background-color: ${theme.color.oil};
   text-align: left;
   ${Link} {
-    padding: 0.5rem 0;
+    padding: 0.25rem 0;
     margin-bottom: 0.5rem;
     a:hover:not([href]) {
       -webkit-tap-highlight-color: transparent;
@@ -136,6 +133,9 @@ const MobileMenuComponent = styled(MobileMenu)`
     transition: transform 0.3s ease;
     overflow-y: ${props => (props.isOpen ? 'scroll' : 'hidden')};
     transform: ${props => (props.isOpen ? 'translateX(0)' : 'translateX(-100%)')};
+  }
+  ${theme.mediaQueries.whenDesktop} {
+    display: none;
   }
 `;
 

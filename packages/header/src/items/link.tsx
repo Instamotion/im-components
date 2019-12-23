@@ -45,7 +45,11 @@ export const LinkComponent: React.FC<Props> = ({
         {icon && <Icon iconName={icon} size={16} color={'white'} />}
         {text}
         {extra}
-        {children && <Icon className="chevron" iconName={'chevronUp'} size={14} color={'white'} />}
+        {children && (
+          <Chevron showChildren={showChildren}>
+            <Icon iconName={'chevronUp'} size={14} color={'white'} />
+          </Chevron>
+        )}
       </a>
       {showChildren && <ChildrenItems>{children}</ChildrenItems>}
     </div>
@@ -56,6 +60,10 @@ const Link = styled(LinkComponent)`
   display: flex;
   position: relative;
   flex-direction: column;
+  ${IconWrapper} {
+    margin-bottom: 0.1rem;
+    margin-right: 0.5rem;
+  }
   a {
     color: ${AvailableColors.white};
     cursor: pointer;
@@ -69,21 +77,20 @@ const Link = styled(LinkComponent)`
     }
     transition: color 0.2s ease;
     text-decoration: none;
-    ${IconWrapper} {
-      margin-bottom: 0.1rem;
-      margin-right: 0.5rem;
-    }
     &:hover {
       color: ${AvailableColors.downy};
     }
-    .chevron {
-      transition: all 0.3s ease;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      margin-right: 0;
-      float: right;
-      transform: ${({ showChildren }) => (showChildren ? 'rotate(0)' : 'rotate(180deg)')};
-    }
+  }
+`;
+
+const Chevron = styled.div<{ showChildren?: boolean }>`
+  float: right;
+  margin-left: 0.5rem;
+  ${IconWrapper} {
+    transition: transform 0.3s ease;
+    transform: ${({ showChildren }) => (showChildren ? 'rotate(0)' : 'rotate(180deg)')};
+    margin-bottom: 0.2rem;
+    margin-right: 0;
   }
 `;
 
