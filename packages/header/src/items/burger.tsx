@@ -8,11 +8,10 @@ import TagManager, { DataLayerArgs } from 'react-gtm-module';
 interface Props {
   className?: string;
   isOpen: boolean;
-  textColor: AvailableColors;
   clickedCb: () => void;
 }
 
-export const BurgerComponent: React.FC<Props> = ({ className, isOpen, textColor, clickedCb }) => {
+export const BurgerComponent: React.FC<Props> = ({ className, isOpen, clickedCb }) => {
   const tag = (): void => {
     const dataLayer: DataLayerArgs = {
       dataLayer: {
@@ -30,11 +29,11 @@ export const BurgerComponent: React.FC<Props> = ({ className, isOpen, textColor,
     <div className={className} onClick={tag}>
       <BurgerIcon
         isVisible={!isOpen}
-        icon={<Icon iconName={'bars'} size={16} color={textColor} />}
+        icon={<Icon iconName={'bars'} size={16} color={'white'} />}
       ></BurgerIcon>
       <BurgerIcon
         isVisible={isOpen}
-        icon={<Icon iconName={'times'} size={16} color={textColor} />}
+        icon={<Icon iconName={'times'} size={16} color={'white'} />}
       ></BurgerIcon>
     </div>
   );
