@@ -45,7 +45,10 @@ export const Header: React.FC<HeaderProps> = ({
             path="/favoriten"
             extra={favoritesCount ? <Favorites>{favoritesCount}</Favorites> : undefined}
           />
-          <Link text={<FormattedMessage id="header.menu.how_it_works" />} path="/sofunktionierts" />
+          <Link
+            text={<FormattedMessage id="header.menu.how_it_works" />}
+            path="/so-funktionierts"
+          />
           <Link
             text={<FormattedMessage id="header.menu.services" />}
             onClick={() => {
