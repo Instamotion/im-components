@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.4.2
+
+### Patch Changes
+
+- d539971: fixed favorites count on xl desktop screen
+
 ## 0.4.1
 
 ### Patch Changes
