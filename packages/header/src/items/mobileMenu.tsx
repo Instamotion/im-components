@@ -76,6 +76,9 @@ export const Favorites = styled.span`
     bottom: 1.05rem;
     right: 1rem;
   }
+  ${theme.mediaQueries.whenDesktopXL} {
+    right: 1.5rem;
+  }
 `;
 
 const Overlay = styled.div`
