@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.4.3
+
+### Patch Changes
+
+- d6d068c: mobile favorites link fix
+
 ## 0.4.2
 
 ### Patch Changes
