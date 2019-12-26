@@ -1,5 +1,11 @@
 # @im-ui/branding-logo
 
+## 0.3.2
+
+### Patch Changes
+
+- 107eaec: fixed invalid property
+
 ## 0.3.1
 
 ### Patch Changes
