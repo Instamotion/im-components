@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.4.4
+
+### Patch Changes
+
+- cc2e64c: dependancy version bump
+
 ## 0.4.3
 
 ### Patch Changes
