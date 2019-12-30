@@ -18,7 +18,7 @@ resource "aws_iam_role" "task_role" {
 EOF
 
   tags = {
-    ENV = "${var.environment}"
+    ENV = var.environment
   }
 }
 
@@ -55,6 +55,6 @@ EOF
 
 resource "aws_iam_policy_attachment" "test-attach" {
   name = "${var.service_name}-${var.environment}-attachment"
-  roles = ["${aws_iam_role.task_role.name}"]
-  policy_arn = "${aws_iam_policy.policy.arn}"
+  roles = [aws_iam_role.task_role.name]
+  policy_arn = aws_iam_policy.policy.arn
 }
