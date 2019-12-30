@@ -115,7 +115,7 @@ export const HeaderWrapper = styled.header`
   color: ${theme.color.white};
   transition: all 0.3s ease;
   display: flex;
-  font-size: 1rem;
+  font-size: 100%;
   position: fixed;
   z-index: 10;
   top: 0;
