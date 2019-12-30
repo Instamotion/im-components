@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.4.5
+
+### Patch Changes
+
+- bb2b500: rem to em for showroom integration
+
 ## 0.4.4
 
 ### Patch Changes
