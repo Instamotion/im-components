@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.4.6
+
+### Patch Changes
+
+- aa6c4f9: font-size to 100%
+
 ## 0.4.5
 
 ### Patch Changes
