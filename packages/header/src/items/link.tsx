@@ -61,8 +61,8 @@ const Link = styled(LinkComponent)`
   position: relative;
   flex-direction: column;
   ${IconWrapper} {
-    margin-bottom: 0.1rem;
-    margin-right: 0.5rem;
+    margin-bottom: 0.1em;
+    margin-right: 0.5em;
   }
   a {
     color: ${AvailableColors.white};
@@ -70,10 +70,10 @@ const Link = styled(LinkComponent)`
     user-select: none;
     text-transform: uppercase;
     ${theme.mediaQueries.whenDesktop} {
-      margin-right: 1.5rem;
+      margin-right: 1.5em;
     }
     ${theme.mediaQueries.whenDesktopXL} {
-      margin-right: 2rem;
+      margin-right: 2em;
     }
     transition: color 0.2s ease;
     text-decoration: none;
@@ -85,21 +85,21 @@ const Link = styled(LinkComponent)`
 
 const Chevron = styled.div<{ showChildren?: boolean }>`
   float: right;
-  margin-left: 0.5rem;
+  margin-left: 0.5em;
   ${IconWrapper} {
     transition: transform 0.3s ease;
     transform: ${({ showChildren }) => (showChildren ? 'rotate(0)' : 'rotate(180deg)')};
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.2em;
     margin-right: 0;
   }
 `;
 
 export const ChildrenItems = styled.div`
-  margin: 0.5rem 1.5rem;
+  margin: 0.5em 1.5em;
   ${theme.mediaQueries.whenDesktop} {
     margin: 0;
     position: absolute;
-    top: 3.55rem;
+    top: 3.55em;
     right: 0;
     display: inline-flex;
   }

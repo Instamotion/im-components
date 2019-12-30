@@ -68,16 +68,16 @@ export const MobileMenu: React.FC<Props> = ({
 
 export const Favorites = styled.span`
   color: ${theme.color.downy};
-  padding-left: 0.5rem;
+  padding-left: 0.5em;
   ${theme.mediaQueries.whenDesktop} {
     position: absolute;
     padding-left: 0;
-    font-size: 0.75rem;
-    bottom: 1.05rem;
-    right: 1rem;
+    font-size: 0.75em;
+    bottom: 1.35em;
+    right: 1em;
   }
   ${theme.mediaQueries.whenDesktopXL} {
-    right: 1.5rem;
+    right: 1.5em;
   }
 `;
 
@@ -85,7 +85,7 @@ const Overlay = styled.div`
   display: block;
   position: fixed;
   box-sizing: border-box;
-  top: 3rem;
+  top: 3em;
   bottom: 0;
   width: 100%;
   height: 100%;
@@ -96,27 +96,27 @@ const Overlay = styled.div`
 const MobileItems = styled.div`
   flex-direction: column;
   position: fixed;
-  top: 3rem;
+  top: 3em;
   bottom: 0;
   left: 0;
   width: 75%;
   height: 100%;
   overflow-y: scroll;
   box-sizing: border-box;
-  max-width: 22rem;
-  padding: 1rem 1.5rem;
+  max-width: 22em;
+  padding: 1em 1.5em;
   background-color: ${theme.color.oil};
   text-align: left;
   ${Link} {
-    padding: 0.25rem 0;
-    margin-bottom: 0.5rem;
+    padding: 0.25em 0;
+    margin-bottom: 0.5em;
     a:hover:not([href]) {
       -webkit-tap-highlight-color: transparent;
       color: ${theme.color.white};
     }
   }
   & > .phonelink {
-    margin-top: 5rem;
+    margin-top: 5em;
     a {
       text-decoration: underline;
       color: ${theme.color.downy};

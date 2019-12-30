@@ -115,6 +115,7 @@ export const HeaderWrapper = styled.header`
   color: ${theme.color.white};
   transition: all 0.3s ease;
   display: flex;
+  font-size: 1rem;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -124,23 +125,23 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   font-family: ${theme.font.sans.family};
-  height: 3rem;
+  height: 3em;
   ${theme.mediaQueries.whenDesktop} {
-    height: 4rem;
+    height: 4em;
   }
 `;
 
 export const LogoWrapper = styled.div`
   display: block;
   ${BrandingLogo} div {
-    width: 7.6rem;
-    height: 2.1rem;
+    width: 7.6em;
+    height: 2.1em;
   }
   ${theme.mediaQueries.whenDesktop} {
     display: inline-flex;
     ${BrandingLogo} div {
-      width: 10rem;
-      height: 2.75rem;
+      width: 10em;
+      height: 2.75em;
     }
   }
 `;
@@ -166,14 +167,14 @@ const PhoneWrapper = styled.div`
 `;
 
 const CallerImg = styled.div`
-  width: 2rem;
-  height: 2rem;
-  min-width: 2rem;
+  width: 2em;
+  height: 2em;
+  min-width: 2em;
   background-image: url('https://cdn.instamotion.com/images/header-img.png');
   object-fit: contain;
-  border-radius: 1rem;
+  border-radius: 1em;
   background-position: center;
-  margin: 0 1rem 0 0;
+  margin: 0 1em 0 0;
   display: none;
   ${theme.mediaQueries.whenDesktopXL} {
     display: block;
@@ -192,9 +193,9 @@ const NavWrapper = styled.div`
 
 const SubMenuOverlay = styled.div<{ visible: boolean }>`
   position: fixed;
-  height: 3rem;
+  height: 3em;
   width: 100%;
-  top: 4rem;
+  top: 4em;
   background-color: ${theme.color.oil};
   transition: all 0.3s ease;
   visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')};
@@ -207,9 +208,9 @@ const SubMenuOverlay = styled.div<{ visible: boolean }>`
 
 const HeaderBar = styled.div`
   display: flex;
-  padding: 0 1rem;
+  padding: 0 1em;
   ${theme.mediaQueries.whenDesktop} {
-    padding: 0 1.5rem;
+    padding: 0 1.5em;
   }
   flex: 1 1 auto;
   align-items: center;

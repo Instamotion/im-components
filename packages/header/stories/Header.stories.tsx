@@ -1,4 +1,5 @@
 import React, { useEffect, ReactNode } from 'react';
+import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import Header, { HeaderProps, MenuOptions } from '../src';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
@@ -28,9 +29,15 @@ storiesOf('Header', module).add('default', () => {
   };
   return renderWithThemeAndI18n(
     <GtmWrapper>
-      <Header {...props} />
+      <Fs>
+        <Header {...props} />
+      </Fs>
     </GtmWrapper>,
     'de',
     messages
   );
 });
+
+const Fs = styled.div`
+  font-size: 160%;
+`;
