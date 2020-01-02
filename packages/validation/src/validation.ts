@@ -36,15 +36,10 @@ const useValidation = <S>({ validations, onStateChange }: useValidationProps<S>)
 
   const runAllValidators = (state: S): boolean => {
     const validationKeys = Object.keys(validations) as Array<keyof S>;
-    const stateKeys = Object.keys(state) as Array<keyof S>;
     let isValid = true;
     for (const key of validationKeys) {
-      if (!stateKeys.includes(key)) {
-        // todo: remove from errors if we add/remove state props
-        continue;
-      }
-      const value = state[key];
-      if (!validate(key, value)) {
+      const res = validate(key, state[key]);
+      if (res !== undefined) {
         isValid = false;
       }
     }
@@ -53,11 +48,15 @@ const useValidation = <S>({ validations, onStateChange }: useValidationProps<S>)
 
   const validate = <K extends keyof S>(key: K, value: S[K]): Error => {
     const validators = validations[key] || [];
-    const res = validators
+    const error = validators
       .map(v => v(value))
       .filter(v => v !== undefined)
       .pop();
-    return res;
+    setErrors(prev => ({
+      ...prev,
+      [key]: error
+    }));
+    return error;
   };
 
   const handleChange = <K extends keyof S>(
@@ -66,26 +65,13 @@ const useValidation = <S>({ validations, onStateChange }: useValidationProps<S>)
     forceValidation?: boolean
   ): void => {
     onStateChange(key, value);
-    if (forceValidation) {
-      setErrors(prev => ({
-        ...prev,
-        [key]: validate(key, value)
-      }));
-    } else {
-      if (errors[key] !== undefined) {
-        setErrors(prev => ({
-          ...prev,
-          [key]: validate(key, value)
-        }));
-      }
+    if (errors[key] !== undefined || forceValidation) {
+      validate(key, value);
     }
   };
 
   const handleBlur = <K extends keyof S>(key: K, value: S[K]): void => {
-    setErrors(prev => ({
-      ...prev,
-      [key]: validate(key, value)
-    }));
+    validate(key, value);
   };
 
   return [errors, handleChange, handleBlur, runAllValidators];
