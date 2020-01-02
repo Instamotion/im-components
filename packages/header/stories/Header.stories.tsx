@@ -29,15 +29,9 @@ storiesOf('Header', module).add('default', () => {
   };
   return renderWithThemeAndI18n(
     <GtmWrapper>
-      <Fs>
-        <Header {...props} />
-      </Fs>
+      <Header {...props} />
     </GtmWrapper>,
     'de',
     messages
   );
 });
-
-const Fs = styled.div`
-  font-size: 160%;
-`;
