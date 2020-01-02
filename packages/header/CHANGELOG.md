@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.4.7
+
+### Patch Changes
+
+- 69c08b4: storybook font size fix
+
 ## 0.4.6
 
 ### Patch Changes
