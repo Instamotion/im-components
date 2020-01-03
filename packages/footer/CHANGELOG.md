@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.5.2
+
+### Patch Changes
+
+- a203af7: footer show envkv option
+
 ## 0.5.1
 
 ### Patch Changes
