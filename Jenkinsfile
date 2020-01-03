@@ -4,7 +4,7 @@
 pipeline {
   // Main build agent for whole pipeline
   agent {
-    label 'nodejs'
+    label 'nodejs-10'
   }
 
   // Oprional jenkins job configuration
