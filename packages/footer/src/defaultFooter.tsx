@@ -326,6 +326,7 @@ export interface DefaultFooterProps {
   googleToken: string;
   facebookToken: string;
   menuOptions?: MenuOptions;
+  showEnvkv?: boolean;
 }
 
 export interface MenuOptions {
@@ -339,10 +340,12 @@ const DefaultFooter: React.FC<DefaultFooterProps> = ({
   className,
   googleToken,
   facebookToken,
-  menuOptions
+  menuOptions,
+  showEnvkv
 }) => {
   return (
     <footer className={className}>
+      {showEnvkv && <Envkv />}
       <TrustfulContainer>{onTop}</TrustfulContainer>
       <FooterContent>
         {renderMenu(menuOptions)}

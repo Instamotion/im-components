@@ -9,6 +9,7 @@ type FullFooterProps = {
   googleToken: string;
   facebookToken: string;
   menuOptions?: MenuOptions;
+  showEnvkv?: boolean;
 };
 
 type MinimalFooterProps = {
@@ -31,6 +32,7 @@ const Footer: React.FC<FooterProps> = props => {
           className={props.className}
           onTop={<TrustfulSection />}
           menuOptions={props.menuOptions}
+          showEnvkv={props.showEnvkv}
         />
       );
   }

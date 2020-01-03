@@ -31,7 +31,7 @@ storiesOf('Footer | Variants', module)
   })
   .add('full', () =>
     renderWithThemeAndI18n(
-      <Footer variant="full" googleToken="123" facebookToken="qwe" />,
+      <Footer showEnvkv variant="full" googleToken="123" facebookToken="qwe" />,
       'de',
       messages
     )
