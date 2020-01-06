@@ -1,5 +1,11 @@
 # @im-ui/validation
 
+## 0.1.1
+
+### Patch Changes
+
+- 45182f1: validation build scripts
+
 ## 0.1.0
 
 ### Minor Changes
