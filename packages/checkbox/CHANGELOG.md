@@ -1,5 +1,11 @@
 # @im-ui/checkbox
 
+## 0.1.9
+
+### Patch Changes
+
+- c885749: Fixed layout for the checkbox
+
 ## 0.1.8
 
 ### Patch Changes
