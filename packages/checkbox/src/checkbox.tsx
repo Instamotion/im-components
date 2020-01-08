@@ -28,10 +28,11 @@ export const Checkmark = styled.label`
   position: absolute;
   left: 0;
   top: -1px;
+  box-sizing: border-box;
   width: ${px2rem(16)};
   height: ${px2rem(16)};
   border: ${px2rem(2)} solid ${theme.color.silver};
-  background-color: #fff;
+  background-color: ${theme.color.white};
 
   ::after {
     content: '';
@@ -57,7 +58,7 @@ export const CheckboxControl = styled.span`
   position: relative;
   user-select: none;
   flex-direction: column;
-  padding-left: 1rem;
+  padding-left: ${px2rem(20)};
 
   & input:checked ~ ${Checkmark} {
     border-color: ${theme.color.oil};
@@ -103,7 +104,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         required={required}
       />
       <Checkmark htmlFor={id} />
-      <Label required={required} messageId={messageId || ''} />
+      <Label htmlFor={id} required={required} messageId={messageId || ''} />
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </CheckboxControl>
   );
