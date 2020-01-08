@@ -31,6 +31,8 @@ const Button = styled.button<ButtonProps>`
   box-sizing: border-box;
   cursor: pointer;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
   text-transform: uppercase;
   text-align: center;
   transition: all 0.2s linear;
