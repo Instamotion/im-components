@@ -26,11 +26,21 @@ storiesOf('Button', module)
     return <Button {...props}>{text('Label', 'Hello World')}</Button>;
   })
   .add('with text and icon', () => {
-    const props: IconButtonProps = {
+    const propsL: IconButtonProps = {
       onClick: action('Button click'),
       disabled: boolean('Disabled', false),
       buttonType: select('variant', buttonVariants, buttonVariants[0]),
       icon: 'envelope'
     };
-    return <IconButton {...props}>{text('Label', 'Icon Test')}</IconButton>;
+    const propsR: IconButtonProps = {
+      ...propsL,
+      iconPosition: 'right'
+    };
+    return (
+      <div>
+        <IconButton {...propsL}>{text('Label', 'Icon Test')}</IconButton>
+        <hr />
+        <IconButton {...propsR}>{text('Label', 'Icon Test')}</IconButton>
+      </div>
+    );
   });

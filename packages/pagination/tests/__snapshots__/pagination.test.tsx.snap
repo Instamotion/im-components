@@ -50,6 +50,14 @@ exports[`Pagination renders 1`] = `
   box-sizing: border-box;
   cursor: pointer;
   font-weight: 600;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-transform: uppercase;
   text-align: center;
   -webkit-transition: all 0.2s linear;
@@ -89,9 +97,7 @@ exports[`Pagination renders 1`] = `
 }
 
 .c8 {
-  font-size: 1rem;
-  padding: 0 0.5rem;
-  margin-left: 2rem;
+  padding: 0 0.5rem 0 0;
 }
 
 .c1 {
@@ -349,7 +355,7 @@ exports[`Pagination renders 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-dnqmqq",
+                "componentId": "sc-iwsKbI",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -366,7 +372,7 @@ exports[`Pagination renders 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-dnqmqq",
+              "styledComponentId": "sc-iwsKbI",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -390,7 +396,7 @@ exports[`Pagination renders 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-ifAKCX",
+                        "componentId": "sc-EHOje",
                         "isStatic": false,
                         "lastClassName": "c1",
                         "rules": Array [
@@ -408,7 +414,7 @@ exports[`Pagination renders 1`] = `
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-ifAKCX",
+                      "styledComponentId": "sc-EHOje",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -430,7 +436,7 @@ exports[`Pagination renders 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-iwsKbI",
+                      "componentId": "sc-gZMcBi",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -451,7 +457,7 @@ exports[`Pagination renders 1`] = `
                     "displayName": "styled.ul",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-iwsKbI",
+                    "styledComponentId": "sc-gZMcBi",
                     "target": "ul",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -887,7 +893,7 @@ exports[`Pagination renders 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-htoDjs",
+                            "componentId": "sc-dnqmqq",
                             "isStatic": false,
                             "lastClassName": "c5",
                             "rules": Array [
@@ -901,7 +907,7 @@ exports[`Pagination renders 1`] = `
                           "displayName": "styled.li",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-htoDjs",
+                          "styledComponentId": "sc-dnqmqq",
                           "target": "li",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -996,7 +1002,7 @@ exports[`Pagination renders 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-gzVnrw",
+                        "componentId": "sc-htoDjs",
                         "isStatic": false,
                         "lastClassName": "c6",
                         "rules": Array [
@@ -1038,7 +1044,7 @@ exports[`Pagination renders 1`] = `
                       "displayName": "Styled(Component)",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-gzVnrw",
+                      "styledComponentId": "sc-htoDjs",
                       "target": [Function],
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -1083,6 +1089,8 @@ exports[`Pagination renders 1`] = `
   box-sizing: border-box;
   cursor: pointer;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
   text-transform: uppercase;
   text-align: center;
   transition: all 0.2s linear;
@@ -1138,9 +1146,7 @@ exports[`Pagination renders 1`] = `
                                     "lastClassName": "c8",
                                     "rules": Array [
                                       "
-  font-size: 1rem;
-  padding: 0 0.5rem;
-  margin-left: 2rem;
+  padding: 0 0.5rem 0 0;
 ",
                                     ],
                                   },
