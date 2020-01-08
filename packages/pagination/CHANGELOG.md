@@ -1,5 +1,12 @@
 # @im-ui/pagination
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies [acba753]
+  - @im-ui/button@0.4.0
+
 ## 0.0.9
 
 ### Patch Changes

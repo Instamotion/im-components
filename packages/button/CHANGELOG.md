@@ -1,5 +1,11 @@
 # @im-ui/button
 
+## 0.4.0
+
+### Minor Changes
+
+- acba753: fixed layout for the button with the icon
+
 ## 0.3.0
 
 ### Minor Changes
