@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import theme, { AvailableColors } from '@im-ui/theme';
 
-const Icons = {
+export const Icons = {
   arrowCircleLeft: (size: number, colorName: AvailableColors = 'silver') => (
     <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path
@@ -517,10 +517,22 @@ const Icons = {
         d="M484 256H252a28 28 0 0 0-28 28v168a28 28 0 0 0 28 28h232a28 28 0 0 0 28-28V284a28 28 0 0 0-28-28zm-20 176H272V304h192zM244 192h184a20 20 0 0 0 20-20V52a20 20 0 0 0-20-20H244a20 20 0 0 0-20 20v120a20 20 0 0 0 20 20zm28-112h128v64H272zM104.72 35.76a12 12 0 0 0-17.44 0l-68 72A12 12 0 0 0 28 128h44v336a16 16 0 0 0 16 16h16a16 16 0 0 0 16-16V128h44a12 12 0 0 0 8.73-20.24z"
       />
     </svg>
+  ),
+  close: (size: number, colorName: AvailableColors = 'niagara') => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      fill={theme.color[colorName]}
+      viewBox="0 0 11 11"
+    >
+      <path
+        fill={theme.color[colorName]}
+        d="M6.665 5.5l4.25 4.25c.114.113.114.24 0 .376l-.789.788c-.137.115-.263.115-.377 0l-.72-.754L5.5 6.665l-4.25 4.25c-.113.114-.24.114-.376 0l-.788-.789c-.115-.137-.115-.263 0-.377L4.335 5.5.085 1.25c-.114-.113-.114-.24 0-.376L.875.086c.137-.115.263-.115.377 0L5.5 4.335 9.75.085c.113-.114.24-.114.376 0l.788.789c.115.137.115.263 0 .377l-.754.72L6.665 5.5z"
+      />
+    </svg>
   )
 };
-
-export type SomeType = { some: 'type' };
 
 export type AvailableIcons = keyof typeof Icons;
 
