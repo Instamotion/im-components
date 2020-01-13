@@ -1,5 +1,12 @@
 # @im-ui/header
 
+## 0.4.8
+
+### Patch Changes
+
+- Updated dependencies [0c2f7a3]
+  - @im-ui/icon@0.3.0
+
 ## 0.4.7
 
 ### Patch Changes

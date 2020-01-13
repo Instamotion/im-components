@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.3.0
+
+### Minor Changes
+
+- 0c2f7a3: added 'close' icon, updated storybook
+
 ## 0.2.10
 
 ### Patch Changes
