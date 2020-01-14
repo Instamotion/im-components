@@ -1,5 +1,11 @@
 # @im-ui/validation
 
+## 0.1.2
+
+### Patch Changes
+
+- 8591041: added phone validator
+
 ## 0.1.1
 
 ### Patch Changes
