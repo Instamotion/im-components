@@ -35,3 +35,12 @@ export const validateEmail: Validator<string> = value => {
   }
   return <FormattedMessage id="validation.wrong_email" />;
 };
+
+export const validatePhone: Validator<string> = value => {
+  if (!value) return undefined;
+  const re = /(\+49\d{7,})/;
+  if (re.test(value)) {
+    return undefined;
+  }
+  return <FormattedMessage id="validation.wrong_phone" />;
+};
