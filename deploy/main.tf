@@ -13,7 +13,7 @@ provider "aws" {
 
   assume_role {
     role_arn    = "arn:aws:iam::${var.remote_account_id}:role/TerraformCrossAccTrustedRole"
-    external_id = "${var.local_account_id}"
+    external_id = var.local_account_id
   }
 }
 
@@ -30,25 +30,25 @@ provider "aws" {
 module "ecs_deploy" {
   source = "../terraform-repo/modules/deploy-ecs-alb"
 
-  region         = "${var.region}"
-  environment    = "${var.environment}"
-  service_name   = "${var.service_name}"
-  container_name = "${var.container_name}"
-  container_tag  = "${var.container_tag}"
+  region         = var.region
+  environment    = var.environment
+  service_name   = var.service_name
+  container_name = var.container_name
+  container_tag  = var.container_tag
   cluster_name   = "${var.namespace}-${var.environment}"
-  task_role_arn  = "${aws_iam_role.task_role.arn}"
+  task_role_arn  = aws_iam_role.task_role.arn
 
   # Module defaults to 8080 port. In this case nginx uses 80, so to override module - these two vars should be here.
-  container_port    = "${var.application_port}"
-  target_group_port = "${var.application_port}"
+  container_port    = var.application_port
+  target_group_port = var.application_port
 }
 
 module "alias_r53" {
   source = "../terraform-repo/modules/alias-r53"
 
-  r53_dns_name = "${var.service_name}"
-  alb_dns_name = "${module.ecs_deploy.service_endpoint}"
-  environment  = "${var.environment}"
+  r53_dns_name = var.service_name
+  alb_dns_name = module.ecs_deploy.service_endpoint
+  environment  = var.environment
 
   providers = {
     aws = "aws.r53"
