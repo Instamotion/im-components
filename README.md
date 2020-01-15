@@ -35,7 +35,7 @@ $ bolt
 $ bolt build
 ```
 
-### How to create a new component
+### Creating a new component
 
 We are using [Hygen](https://www.hygen.io/) to generate a new components.
 
@@ -47,20 +47,39 @@ bolt generate:component <componentsName>
 
 Note: *Our custom template is located in `/_templates/component/new` folder. Please, feel free to contribute.*
 
-### Bump the version
+### Last step, brefore creating a PR
 
-After you have added or modified a package, you should run the following commands:
+After you have added or modified a package, you should run the following command:
 
-1.  `bolt bump:changeset` - pick the packages to include in a new changeset;
-2.  `bolt bump:version` - generates/appends to `changelog.md` filed and bump versions;
-3. run `bolt` again just to varify that everything is fine.
+`yarn changeset` - pick the packages to include in a new changeset. This will give you the following prompt:
 
-### Run Storybook
+```
+Which packages would you like to include? …
+- changed packages
+  ✔ @im-ui/accordion
+- unchanged packages
+    @im-ui/branding-logo
+    @im-ui/button
+    ...
+```
+
+Using up, down and space keys select the packages you want to include in the changeset (pick all :).
+
+```
+Which packages should have a major bump? …
+✔ @im-ui/accordion@0.1.4
+```
+
+Using up, down and space keys select the packages that will receive a major change (same for minor and patch).
+
+Finish up by writing a (more-or-less) meaningful message. Push your branch. Done.
+
+### Running the Storybook
 
 First, run `bolt` and `bolt build:components`. After everything has been built, you can run Storybook:
 
 ```
-bolt start
+yarn start
 ```
 
 ### Adding dependency to a package
