@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.4.9
+
+### Patch Changes
+
+- 5762c37: Added cross app support for header favorites
+
 ## 0.4.8
 
 ### Patch Changes
