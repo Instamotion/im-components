@@ -336,7 +336,7 @@ export interface MenuOptions {
   showQualityLink?: boolean;
 }
 
-class Footer extends React.Component<DefaultFooterProps> {
+class DefaultFooter extends React.Component<DefaultFooterProps> {
   componentDidMount() {
     gclid();
   }
@@ -369,4 +369,4 @@ class Footer extends React.Component<DefaultFooterProps> {
   }
 }
 
-export default Footer;
+export default DefaultFooter;
