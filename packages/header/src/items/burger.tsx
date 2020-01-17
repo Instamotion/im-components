@@ -8,10 +8,16 @@ import TagManager, { DataLayerArgs } from 'react-gtm-module';
 interface Props {
   className?: string;
   isOpen: boolean;
+  favoritesCount: number;
   clickedCb: () => void;
 }
 
-export const BurgerComponent: React.FC<Props> = ({ className, isOpen, clickedCb }) => {
+export const BurgerComponent: React.FC<Props> = ({
+  className,
+  isOpen,
+  clickedCb,
+  favoritesCount
+}) => {
   const tag = (): void => {
     const dataLayer: DataLayerArgs = {
       dataLayer: {
@@ -27,14 +33,13 @@ export const BurgerComponent: React.FC<Props> = ({ className, isOpen, clickedCb 
 
   return (
     <div className={className} onClick={tag}>
-      <BurgerIcon
-        isVisible={!isOpen}
-        icon={<Icon iconName={'bars'} size={16} color={'white'} />}
-      ></BurgerIcon>
-      <BurgerIcon
-        isVisible={isOpen}
-        icon={<Icon iconName={'times'} size={16} color={'white'} />}
-      ></BurgerIcon>
+      {favoritesCount > 0 && !isOpen && <Favorites>{favoritesCount}</Favorites>}
+      <BurgerIcon isVisible={!isOpen}>
+        <Icon iconName={'bars'} size={16} color={'white'} />
+      </BurgerIcon>
+      <BurgerIcon isVisible={isOpen}>
+        <Icon iconName={'times'} size={16} color={'white'} />
+      </BurgerIcon>
     </div>
   );
 };
@@ -49,6 +54,15 @@ const Burger = styled(BurgerComponent)`
     position: absolute;
     top: 0;
   }
+`;
+
+const Favorites = styled.span`
+  color: ${theme.color.downy};
+  position: absolute;
+  padding-left: 0;
+  font-size: 0.75em;
+  bottom: 1.35em;
+  right: -0.5em;
 `;
 
 export default Burger;

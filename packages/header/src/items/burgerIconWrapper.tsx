@@ -3,12 +3,11 @@ import styled from 'styled-components';
 
 interface Props {
   className?: string;
-  icon: JSX.Element;
   isVisible: boolean;
 }
 
-export const MenuIconComponent: React.FC<Props> = ({ className, icon, isVisible }) => {
-  return <div className={className}>{icon}</div>;
+export const MenuIconComponent: React.FC<Props> = ({ className, children }) => {
+  return <div className={className}>{children}</div>;
 };
 
 const visibleCss = `

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import BrandingLogo from '@im-ui/branding-logo';
 import Link from './items/link';
@@ -16,13 +16,30 @@ export const Header: React.FC<HeaderProps> = ({
   favoritesCount
 }) => {
   const [isBurgerOpen, toggleBurger] = useModal();
-  const [isSubMenuOpen, setSubMenuOpen] = React.useState(false);
+  const [isSubMenuOpen, setSubMenuOpen] = useState(false);
+  const [count, setCount] = useState(0);
+
+  const countFromLocalStorage = () => {
+    if (typeof favoritesCount === 'number') return;
+    const val = localStorage.getItem('im-favoriteProducts');
+    setCount(val ? JSON.parse(val).length : 0);
+  };
+
+  useEffect(() => {
+    countFromLocalStorage();
+    document.addEventListener('favoritesCountChanged', countFromLocalStorage);
+  }, []);
+
+  useEffect(() => {
+    if (typeof favoritesCount !== 'number') return;
+    setCount(favoritesCount);
+  }, [favoritesCount]);
 
   return (
     <HeaderWrapper>
       <SubMenuOverlay visible={isSubMenuOpen}></SubMenuOverlay>
       <HeaderBar>
-        <Burger clickedCb={toggleBurger} isOpen={isBurgerOpen}></Burger>
+        <Burger clickedCb={toggleBurger} isOpen={isBurgerOpen} favoritesCount={count}></Burger>
         <LogoWrapper>
           <BrandingLogo
             color={AvailableColors.white}
@@ -43,7 +60,7 @@ export const Header: React.FC<HeaderProps> = ({
           <Link
             text={<FormattedMessage id="header.menu.wish_list" />}
             path="/favoriten"
-            extra={favoritesCount ? <Favorites>{favoritesCount}</Favorites> : undefined}
+            extra={count ? <Favorites>{count}</Favorites> : undefined}
           />
           <Link
             text={<FormattedMessage id="header.menu.how_it_works" />}
@@ -85,7 +102,7 @@ export const Header: React.FC<HeaderProps> = ({
         phoneNumber={phoneNumber}
         isSubMenuOpen={isSubMenuOpen}
         menuOptions={menuOptions}
-        favoritesCount={favoritesCount}
+        favoritesCount={count}
         toggleMenu={() => {
           setSubMenuOpen(!isSubMenuOpen);
         }}

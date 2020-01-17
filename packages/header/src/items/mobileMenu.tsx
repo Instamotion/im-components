@@ -74,10 +74,10 @@ export const Favorites = styled.span`
     padding-left: 0;
     font-size: 0.75em;
     bottom: 1.35em;
-    right: 1em;
+    right: 1.5em;
   }
   ${theme.mediaQueries.whenDesktopXL} {
-    right: 1.5em;
+    right: 2em;
   }
 `;
 
