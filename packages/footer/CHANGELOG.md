@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.6.0
+
+### Minor Changes
+
+- 049d657: CA-519: added storing of the gclid to cookie if present in url
+
 ## 0.5.3
 
 ### Patch Changes
