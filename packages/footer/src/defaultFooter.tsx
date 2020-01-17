@@ -12,6 +12,7 @@ import Envkv from './envkv';
 import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
 import SocialContainerWithScript from './social/socialContanerWithScript';
+import gclid from './tracking/gclid';
 
 export const renderIcon = (iconName?: string): React.ReactNode => {
   switch (iconName) {
@@ -335,36 +336,37 @@ export interface MenuOptions {
   showQualityLink?: boolean;
 }
 
-const DefaultFooter: React.FC<DefaultFooterProps> = ({
-  onTop,
-  className,
-  googleToken,
-  facebookToken,
-  menuOptions,
-  showEnvkv
-}) => {
-  return (
-    <footer className={className}>
-      {showEnvkv && <Envkv />}
-      <TrustfulContainer>{onTop}</TrustfulContainer>
-      <FooterContent>
-        {renderMenu(menuOptions)}
-        <SocialContainerWithScript googleToken={googleToken} facebookToken={facebookToken} />
-        <MailContainer>
-          <MailContent
-            title={<FormattedMessage id="default.footer.newsletter.title" />}
-            subTitle={<FormattedMessage id="default.footer.newsletter.subtitle" />}
-            linkText={<FormattedMessage id="default.footer.newsletter.linkText" />}
-            linkHref="/datenschutz"
-          />
-        </MailContainer>
-        <Copyrights
-          logo={<AllianzLogo />}
-          title={<FormattedMessage id="default.footer.copyrights.text" />}
-        />
-      </FooterContent>
-    </footer>
-  );
-};
+class Footer extends React.Component<DefaultFooterProps> {
+  componentDidMount() {
+    gclid();
+  }
 
-export default DefaultFooter;
+  render() {
+    const { onTop, className, googleToken, facebookToken, menuOptions, showEnvkv } = this.props;
+
+    return (
+      <footer className={className}>
+        {showEnvkv && <Envkv />}
+        <TrustfulContainer>{onTop}</TrustfulContainer>
+        <FooterContent>
+          {renderMenu(menuOptions)}
+          <SocialContainerWithScript googleToken={googleToken} facebookToken={facebookToken} />
+          <MailContainer>
+            <MailContent
+              title={<FormattedMessage id="default.footer.newsletter.title" />}
+              subTitle={<FormattedMessage id="default.footer.newsletter.subtitle" />}
+              linkText={<FormattedMessage id="default.footer.newsletter.linkText" />}
+              linkHref="/datenschutz"
+            />
+          </MailContainer>
+          <Copyrights
+            logo={<AllianzLogo />}
+            title={<FormattedMessage id="default.footer.copyrights.text" />}
+          />
+        </FooterContent>
+      </footer>
+    );
+  }
+}
+
+export default Footer;
