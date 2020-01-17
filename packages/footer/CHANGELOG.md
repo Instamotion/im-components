@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.7.0
+
+### Minor Changes
+
+- 670788c: CA-519: fixed typo
+
 ## 0.6.0
 
 ### Minor Changes
