@@ -2,6 +2,7 @@
  * Inspired by: https://github.com/medius/utm_form/blob/master/dest/utm_form-1.0.4.js
  *
  */
+import TagManager, { DataLayerArgs } from 'react-gtm-module';
 
 const sessionCookieName = 'session';
 const cookieNamePrefix = '_uc_';
@@ -87,11 +88,7 @@ const isItAfterMidnight = () => {
 
   const past = new Date(parseInt(sessionExpTimestamp, 10));
   past.setTime(past.getTime() - cookieExpiryMinutes * 60 * 1000);
-
   const now = new Date();
-
-  console.log(past);
-  console.log(now);
 
   return past.getDay() !== now.getDay();
 };
@@ -120,7 +117,7 @@ const isUTMParamsChanged = () => {
 
 const createUTMCookie = (param: string) => {
   const specialParams = ['utm_source', 'utm_medium'];
-  const defaultVal = specialParams.includes(param) ? 'organic' : '';
+  const defaultVal = specialParams.includes(param) ? 'direct' : '';
   createCookie(param, defaultVal);
 };
 
@@ -144,13 +141,22 @@ const resetUTMCookies = () => {
   }
 };
 
+const pushToDataLayer = (value: string) => {
+  const dataLayer: DataLayerArgs = {
+    dataLayer: {
+      im_session_id: value
+    }
+  };
+  TagManager.dataLayer(dataLayer);
+};
+
 /**
  *
  * Does a user have a tracking cookie?
  *
- * If no -> set a new tracking cookie
+ * If no -> set a new tracking cookie and set UTM cookie if present in URL
  * If yes -> is it after (within a 30 min) midnight and previous tracking cookie was set before midnight?
- *      If yes -> set a new tracking cookie
+ *      If yes -> set a new tracking cookie and prolong UTM cookies
  *      If no -> does UTM params changed (was set or changed)? — we could store a hash of the UTM cookies in a separate cookie with the correlated expiration logic
  *          If yes -> set a new tracking cookie
  *          If no -> do we have gclid or fbclid in the URL?
@@ -160,7 +166,6 @@ const resetUTMCookies = () => {
  */
 export const utm = () => {
   if (!isSessionCookieExists()) {
-    console.log(1);
     resetSession();
     if (isUTMParamsPresentInUrl()) {
       writeUtmCookieFromParams();
@@ -168,23 +173,19 @@ export const utm = () => {
       resetUTMCookies();
     }
   } else if (isItAfterMidnightAndSessionCookiePresent()) {
-    console.log(2);
     resetSession();
     prolongOrCreateUTMCookies();
   } else if (isUTMParamsChanged()) {
-    console.log(3);
     resetSession();
   } else if (isAdditionalParamsPresentInUrl()) {
-    console.log(4);
     resetSession();
     prolongOrCreateUTMCookies();
   } else {
-    console.log(5);
     prolongOrCreateSession();
     prolongOrCreateUTMCookies();
   }
 
-  console.log(readCookie(sessionCookieName));
+  pushToDataLayer(readCookie(sessionCookieName));
 };
 
 export default utm;
