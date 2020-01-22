@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.8.0
+
+### Minor Changes
+
+- 99efdff: CA-489: Implement new tracking cookie on the frontend
+
 ## 0.7.0
 
 ### Minor Changes
