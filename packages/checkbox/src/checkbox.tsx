@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import ErrorMessage from '@im-ui/error-message';
-import Label from '@im-ui/label';
 import theme from '@im-ui/theme';
 import { css } from '@im-ui/utils';
 
@@ -14,7 +13,7 @@ export type ClickChangeEvent =
 export interface CheckboxProps {
   className?: string;
   id: string;
-  messageId?: string;
+  message?: JSX.Element | string;
   name?: string;
   value?: string;
   checked?: boolean;
@@ -73,13 +72,24 @@ export const CheckboxControl = styled.span`
   }
 `;
 
+export const Label = styled.label`
+  font-size: 0.75rem;
+  color: ${theme.color.brightGrey};
+  font-weight: bold;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  user-select: none;
+`;
+
 export const Checkbox: React.FC<CheckboxProps> = ({
   id,
   checked = false,
   disabled = false,
   onChange,
   className,
-  messageId,
+  message,
   required,
   value,
   errorMessage
@@ -104,7 +114,11 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         required={required}
       />
       <Checkmark htmlFor={id} />
-      <Label htmlFor={id} required={required} messageId={messageId || ''} />
+      {message && (
+        <Label htmlFor={id}>
+          {message} {required && '*'}
+        </Label>
+      )}
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </CheckboxControl>
   );
