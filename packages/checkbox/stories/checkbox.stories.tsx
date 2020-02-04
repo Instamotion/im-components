@@ -13,7 +13,7 @@ stories
   .add('multi line', () => {
     const props: CheckboxProps = {
       id: 'ch1',
-      messageId: text('Label1', 'label text'),
+      message: text('Label1', 'label text'),
       onChange: action('clicked')
     };
     return renderWithThemeAndI18n(<Checkbox {...props} />);
@@ -23,7 +23,7 @@ stories
     const props: CheckboxProps = {
       id: 'ch1',
       checked: true,
-      messageId: text('Label1', 'label text'),
+      message: text('Label1', 'label text'),
       onChange: action('clicked')
     };
     return renderWithThemeAndI18n(<Checkbox {...props} />);
