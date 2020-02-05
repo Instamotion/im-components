@@ -1,5 +1,11 @@
 # @im-ui/checkbox
 
+## 0.1.10
+
+### Patch Changes
+
+- af1a8f2: Checkbox label fix
+
 ## 0.1.9
 
 ### Patch Changes

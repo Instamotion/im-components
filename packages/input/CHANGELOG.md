@@ -1,5 +1,13 @@
 # @im-ui/input
 
+## 0.2.8
+
+### Patch Changes
+
+- af1a8f2: Checkbox label fix
+- Updated dependencies [af1a8f2]
+  - @im-ui/checkbox@0.1.10
+
 ## 0.2.7
 
 ### Patch Changes
