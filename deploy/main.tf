@@ -28,7 +28,7 @@ provider "aws" {
 }
 
 module "ecs_deploy" {
-  source = "../terraform-repo/modules/deploy-ecs-alb"
+  source = "../terraform-repo/modules-tf012/deploy-ecs-alb"
 
   region         = var.region
   environment    = var.environment
