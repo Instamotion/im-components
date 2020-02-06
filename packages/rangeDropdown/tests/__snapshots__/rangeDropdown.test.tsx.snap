@@ -716,18 +716,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                             value="from"
                                           >
                                             <FormattedMessage
-                                              defaultMessage="Beliebig"
-                                              id="serp.filters.selectOptionText"
-                                              values={Object {}}
-                                            >
-                                              <option
-                                                key="serp.filters.selectOptionText"
-                                                value=""
-                                              >
-                                                Beliebig
-                                              </option>
-                                            </FormattedMessage>
-                                            <FormattedMessage
                                               id="from"
                                               key="from"
                                               values={Object {}}
@@ -1262,18 +1250,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                             onChange={[Function]}
                                             value="to"
                                           >
-                                            <FormattedMessage
-                                              defaultMessage="Beliebig"
-                                              id="serp.filters.selectOptionText"
-                                              values={Object {}}
-                                            >
-                                              <option
-                                                key="serp.filters.selectOptionText"
-                                                value=""
-                                              >
-                                                Beliebig
-                                              </option>
-                                            </FormattedMessage>
                                             <FormattedMessage
                                               id="to"
                                               key="to"
@@ -1943,18 +1919,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                               onChange={[Function]}
                               value={1}
                             >
-                              <FormattedMessage
-                                defaultMessage="Beliebig"
-                                id="serp.filters.selectOptionText"
-                                values={Object {}}
-                              >
-                                <option
-                                  key="serp.filters.selectOptionText"
-                                  value=""
-                                >
-                                  Beliebig
-                                </option>
-                              </FormattedMessage>
                               <FormattedMessage
                                 id="This is one"
                                 key="1"
