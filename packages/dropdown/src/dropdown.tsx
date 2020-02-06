@@ -22,7 +22,6 @@ export type DropdownProps = React.SelectHTMLAttributes<HTMLSelectElement> & {
   width?: string;
   errorMessage?: JSX.Element;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  defaultExist?: boolean;
 };
 
 export interface InputValidationResult {
@@ -41,8 +40,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   width,
   label,
   errorMessage,
-  value,
-  defaultExist = true
+  value
 }) => {
   const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     if (onChange && !disabled) {
@@ -65,15 +63,6 @@ export const Dropdown: React.FC<DropdownProps> = ({
           required={required}
           value={value}
         >
-          {defaultExist && (
-            <FormattedMessage id="serp.filters.selectOptionText" defaultMessage="Beliebig">
-              {txt => (
-                <option key="serp.filters.selectOptionText" value="">
-                  {txt}
-                </option>
-              )}
-            </FormattedMessage>
-          )}
           {options &&
             options.map(option => (
               <FormattedMessage
