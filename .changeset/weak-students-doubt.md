@@ -2,4 +2,4 @@
 '@im-ui/dropdown': minor
 ---
 
-Update docs
+Updated docs for the dropdown component
