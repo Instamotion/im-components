@@ -23,6 +23,7 @@ const FooterContainer = styled.div`
     'menu6'
     'social'
     'mail'
+    'seals'
     'creators';
   ${theme.mediaQueries.whenMobileL} {
     grid-template-areas:
@@ -31,13 +32,14 @@ const FooterContainer = styled.div`
       'menu5 menu6'
       'social social'
       'mail mail'
+      'seals seals'
       'creators creators';
   }
   ${theme.mediaQueries.whenTablet} {
     grid-template-areas:
       'menu1 menu2 menu3 menu4'
-      'mail mail menu5 social'
-      'mail mail menu6 social'
+      'mail menu5 social seals'
+      'mail menu6 social seals'
       '.. .. .. ..'
       'creators creators creators creators';
   }
@@ -46,7 +48,7 @@ const FooterContainer = styled.div`
     grid-template-areas:
       'mail menu5 menu1 menu2 menu3 menu4'
       'social menu6 menu1 menu2 menu3 menu4'
-      'social  .. .. .. .. ..'
+      'social  .. .. .. seals seals'
       'creators creators creators creators creators creators';
   }
   ${theme.mediaQueries.whenDesktopXL} {

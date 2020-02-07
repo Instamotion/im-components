@@ -9,6 +9,7 @@ import MenuItem from './menu/menuItem';
 import MenuItemHeader from './menu/menuItemHeader';
 import FooterContent from './footerContainer';
 import Envkv from './envkv';
+import Seals from './seals';
 import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
 import SocialContainerWithScript from './social/socialContanerWithScript';
@@ -361,6 +362,7 @@ class DefaultFooter extends React.Component<DefaultFooterProps> {
               linkHref="/datenschutz"
             />
           </MailContainer>
+          <Seals />
           <Copyrights
             logo={<AllianzLogo />}
             title={<FormattedMessage id="default.footer.copyrights.text" />}
