@@ -1,5 +1,5 @@
 ---
-'@im-ui/dropdown': patch
+'@im-ui/dropdown': minor
 ---
 
 Update docs
