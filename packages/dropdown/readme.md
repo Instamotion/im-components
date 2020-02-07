@@ -21,7 +21,7 @@ interface DropdownOptionProps {
 type DropdownProps = React.SelectHTMLAttributes<HTMLSelectElement> & {
   id?: string;
   options: DropdownOptionProps[];
-  label?: JSX.Element | string;
+  label?: string;
   disabled?: boolean;
   selected?: string;
   value?: DropdownValue;
