@@ -2,6 +2,9 @@
 
 echo -e "\e[32m  Setting git configs..."
 
+git config --global user.email "it-systems@instamotion.com"
+git config --global user.name "im-it-systems"
+
 if [ "$GIT_SSH_KEY_PUBLISH" != "" ]; then
   echo "Detected SSH key for git. Adding SSH config" >&1
   echo "" >&1
