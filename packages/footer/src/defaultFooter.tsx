@@ -182,12 +182,6 @@ const menus: {
       link: '/datenschutz'
     },
     {
-      id: 'default.footer.shipping_and_payment',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.shipping_and_payment" />,
-      link: '/versand-und-zahlung'
-    },
-    {
       id: 'default.footer.cancellation',
       type: 'item',
       title: <FormattedMessage id="default.footer.cancellation" />,
