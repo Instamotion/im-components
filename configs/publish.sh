@@ -8,8 +8,8 @@ echo -e "\e[32m  Commiting changes..."
 
 (git add .) || true
 (git commit -m "[Jenkins]: New release" -m "Build: $BUILD_URL") || true
-(git push origin master) || true
-# (git push github master) || true
+# (git push origin master) || true
+(git push github master) || true
 
 echo -e "\e[32m  Publish components..."
 
@@ -17,5 +17,5 @@ echo -e "\e[32m  Publish components..."
 
 echo -e "\e[32m  Pushing tags..."
 
-git push --tags origin
-# git push --tags github
+# git push --tags origin
+git push --tags github
