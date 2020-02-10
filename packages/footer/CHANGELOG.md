@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.10.0
+
+### Minor Changes
+
+- 9213a71: Delete Versand & Zahlung from Footer
+
 ## 0.9.0
 
 ### Minor Changes
