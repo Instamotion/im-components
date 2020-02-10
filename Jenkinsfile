@@ -55,25 +55,12 @@ pipeline {
       }
       steps {
         withCredentials([
-          string(credentialsId: 'im-priv-key', variable: 'GIT_SSH_KEY_PUBLISH')
+          string(credentialsId: 'im-priv-key', variable: 'GIT_SSH_KEY_PUBLISH'),
+          string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN')
         ]) {
           sh './configs/setup-npm.sh'
           sh './configs/publish.sh'
         }
-
-        // sshagent (credentials: ['your credentials']) {
-        //   sh './configs/setup-npm.sh'
-        //   sh './configs/publish.sh'
-        // }
-
-        // withCredentials([
-        //   string(credentialsId: 'gh_user_name', variable: 'GIT_USERNAME'),
-        //   string(credentialsId: 'gh_user_email', variable: 'GIT_EMAIL'),
-        //   string(credentialsId: 'github_token', variable: 'GH_TOKEN')
-        // ]) {
-        //   sh './configs/setup-npm.sh'
-        //   sh './configs/publish.sh'
-        // }
       }
     }
 
