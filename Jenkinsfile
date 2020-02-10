@@ -54,14 +54,19 @@ pipeline {
         }
       }
       steps {
-        withCredentials([
-          string(credentialsId: 'gh_user_name', variable: 'GIT_USERNAME'),
-          string(credentialsId: 'gh_user_email', variable: 'GIT_EMAIL'),
-          string(credentialsId: 'github_token', variable: 'GH_TOKEN')
-        ]) {
+        sshagent (credentials: ['your credentials']) {
           sh './configs/setup-npm.sh'
           sh './configs/publish.sh'
         }
+
+        // withCredentials([
+        //   string(credentialsId: 'gh_user_name', variable: 'GIT_USERNAME'),
+        //   string(credentialsId: 'gh_user_email', variable: 'GIT_EMAIL'),
+        //   string(credentialsId: 'github_token', variable: 'GH_TOKEN')
+        // ]) {
+        //   sh './configs/setup-npm.sh'
+        //   sh './configs/publish.sh'
+        // }
       }
     }
 

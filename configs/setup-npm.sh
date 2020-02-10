@@ -2,13 +2,13 @@
 
 echo -e "\e[32m  Setting git configs..."
 
-git config --global user.email $GIT_EMAIL
-git config --global user.name $GIT_USERNAME
-git config --global push.default simple
+# git config --global user.email $GIT_EMAIL
+# git config --global user.name $GIT_USERNAME
+# git config --global push.default simple
 
 echo -e "\e[32m  Setting git remote..."
 
-git remote add github https://im-it-systems:$GH_TOKEN@github.com/Instamotion/im-components.git
+# git remote add github https://im-it-systems:$GH_TOKEN@github.com/Instamotion/im-components.git
 
 echo -e "\e[32m  Setting npm tokens"
 
