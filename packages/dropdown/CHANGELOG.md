@@ -1,5 +1,11 @@
 # @im-ui/dropdown
 
+## 0.2.6
+
+### Patch Changes
+
+- ed01b27: Updated docs for the dropdown component. Even more docs.
+
 ## 0.2.5
 
 ### Patch Changes
