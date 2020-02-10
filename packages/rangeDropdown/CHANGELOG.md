@@ -1,5 +1,11 @@
 # @im-ui/range-dropdown
 
+## 0.2.0
+
+### Minor Changes
+
+- c8a7c44: version bump
+
 ## 0.1.7
 
 ### Patch Changes

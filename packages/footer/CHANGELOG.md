@@ -1,5 +1,12 @@
 # @im-ui/footer
 
+## 0.11.0
+
+### Minor Changes
+
+- c8a7c44: version bump
+- f4a6ff7: version bump
+
 ## 0.10.0
 
 ### Minor Changes
