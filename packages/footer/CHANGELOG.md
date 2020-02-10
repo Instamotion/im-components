@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.9.0
+
+### Minor Changes
+
+- 0cfe9cf: Trusty seals added
+
 ## 0.8.0
 
 ### Minor Changes
