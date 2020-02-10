@@ -1,5 +1,5 @@
 ---
-'@im-ui/footer': patch
+'@im-ui/footer': minor
 ---
 
 Trusty seals added
