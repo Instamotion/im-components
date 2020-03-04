@@ -26,7 +26,8 @@ const createCookie = (name: string, value: string) => {
   const expireDate = new Date();
   expireDate.setTime(expireDate.getTime() + cookieExpiryMinutes * 60 * 1000); // 30 min
   const cookieExpire = '; expires=' + expireDate.toUTCString();
-  document.cookie = cookieNamePrefix + name + '=' + escape(value) + cookieExpire;
+  const path = '; path=/';
+  document.cookie = cookieNamePrefix + name + '=' + escape(value) + cookieExpire + path;
 
   if (name === sessionCookieName) {
     saveExpireForSessionCookie(expireDate);
@@ -117,7 +118,7 @@ const isUTMParamsChanged = () => {
 
 const createUTMCookie = (param: string) => {
   const specialParams = ['utm_source', 'utm_medium'];
-  const defaultVal = specialParams.includes(param) ? 'direct' : '';
+  const defaultVal = specialParams.indexOf(param) !== -1 ? 'direct' : '';
   createCookie(param, defaultVal);
 };
 
