@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Icon from '@im-ui/icon';
-import theme, { AvailableColors } from '@im-ui/theme';
+import theme from '@im-ui/theme';
 import BurgerIcon from './burgerIconWrapper';
 import TagManager, { DataLayerArgs } from 'react-gtm-module';
 
@@ -35,10 +35,10 @@ export const BurgerComponent: React.FC<Props> = ({
     <div className={className} onClick={tag}>
       {favoritesCount > 0 && !isOpen && <Favorites>{favoritesCount}</Favorites>}
       <BurgerIcon isVisible={!isOpen}>
-        <Icon iconName={'bars'} color={'white'} />
+        <Icon icon="bars" color="white" />
       </BurgerIcon>
       <BurgerIcon isVisible={isOpen}>
-        <Icon iconName={'times'} color={'white'} />
+        <Icon icon="times" color="white" />
       </BurgerIcon>
     </div>
   );

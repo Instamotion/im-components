@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Icon, { AvailableIcons } from '@im-ui/icon';
-import TagManager, { DataLayerArgs } from 'react-gtm-module';
+import TagManager from 'react-gtm-module';
 import theme, { AvailableColors } from '@im-ui/theme';
 
 interface Props {
@@ -60,9 +60,6 @@ const Link = styled(LinkComponent)`
   display: flex;
   position: relative;
   flex-direction: column;
-  ${IconWrapper} {
-    margin-right: 0.5em;
-  }
   a {
     color: ${AvailableColors.white};
     cursor: pointer;
@@ -85,12 +82,6 @@ const Link = styled(LinkComponent)`
 const Chevron = styled.div<{ showChildren?: boolean }>`
   float: right;
   margin-left: 0.5em;
-  ${IconWrapper} {
-    transition: transform 0.3s ease;
-    transform: ${({ showChildren }) => (showChildren ? 'rotate(0)' : 'rotate(180deg)')};
-    margin-bottom: 0.2em;
-    margin-right: 0;
-  }
 `;
 
 export const ChildrenItems = styled.div`
