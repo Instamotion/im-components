@@ -19,17 +19,17 @@ import utm from './tracking/utm';
 export const renderIcon = (iconName?: string): React.ReactNode => {
   switch (iconName) {
     case 'PhoneSVG':
-      return <Icon iconName="phone" color="silver" />;
+      return <Icon icon="phone" color="silver" />;
     case 'EnvelopeSVG':
-      return <Icon iconName="envelope" color="silver" />;
+      return <Icon icon="envelope" color="silver" />;
     case 'FacebookSVG':
-      return <Icon iconName="facebook" color="silver" />;
+      return <Icon icon="facebook" color="silver" />;
     case 'LinkedSVG':
-      return <Icon iconName="linkedIn" color="silver" />;
+      return <Icon icon="linkedIn" color="silver" />;
     case 'TwitterSVG':
-      return <Icon iconName="twitter" color="silver" />;
+      return <Icon icon="twitter" color="silver" />;
     case 'YoutubeSVG':
-      return <Icon iconName="youtube" color="silver" />;
+      return <Icon icon="youtube" color="silver" />;
     case 'AllianzLogo':
       return <AllianzLogo />;
     default:

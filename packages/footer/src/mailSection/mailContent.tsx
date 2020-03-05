@@ -36,7 +36,7 @@ const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, link
       >
         <FooterMailInput placeholder="E-Mail" type="email" />
         <FooterMailSubmit type="submit">
-          <Icon iconName="paperPlane" color="oil" />
+          <Icon icon="paperPlane" color="oil" />
         </FooterMailSubmit>
       </form>
     </>

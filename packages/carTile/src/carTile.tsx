@@ -76,7 +76,7 @@ const CarTileComponent: React.FC<CarTileProps> = ({
       <Tile className={className}>
         <CarTileTop>
           <Favorite>
-            <Icon iconName="star" size={16} color="downy" />
+            <Icon icon="star" color="downy" />
           </Favorite>
           <Name>{`${make} ${model}`}</Name>
           <ModelDescription>{modelDescription}</ModelDescription>
@@ -86,7 +86,8 @@ const CarTileComponent: React.FC<CarTileProps> = ({
           <CarImage url={image} />
         ) : (
           <CarPlaceholder>
-            <Icon iconName="tilePlaceholder" size={imageWidth} />
+            {/* TODO: Move placeholder to CDN */}
+            <Icon icon="tilePlaceholder" />
           </CarPlaceholder>
         )}
         <CarPrice>
@@ -196,7 +197,7 @@ export const AlternativePrice = styled.div`
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25;
-  color: ${theme.color.brightGrey}
+  color: ${theme.color.brightGrey};
   margin-top: 0.25rem;
 `;
 

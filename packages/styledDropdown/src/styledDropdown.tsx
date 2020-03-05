@@ -56,7 +56,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
           <DropdownContainer isOpen={isOpen} disabled={isDisabled} {...getToggleButtonProps()}>
             {selectedItem && selectedItem.iconName && (
               <DropdownIcon
-                iconName={selectedItem.iconName}
+                icon={selectedItem.iconName}
                 color={isDisabled ? 'silver' : 'niagara'}
               />
             )}
@@ -68,9 +68,9 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
             />
             <DropdownButton>
               {isOpen ? (
-                <Icon iconName="up" color="oil" size={14} />
+                <Icon icon="up" color="oil" />
               ) : (
-                <Icon iconName="down" color={isDisabled ? 'silver' : 'oil'} size={14} />
+                <Icon icon="down" color={isDisabled ? 'silver' : 'oil'} />
               )}
             </DropdownButton>
           </DropdownContainer>
@@ -87,7 +87,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
                     index
                   })}
                 >
-                  {item.iconName && <DropdownIcon iconName={item.iconName} color="niagara" />}
+                  {item.iconName && <DropdownIcon icon={item.iconName} color="niagara" />}
                   <DropdownLabel>
                     <FormattedMessage id={item.label} />
                   </DropdownLabel>
@@ -183,7 +183,7 @@ const DropdownContainer = styled.div`
   height: 2.5rem;
   padding-left: 1.125rem;
   position: relative;
-  user-select:none;    
+  user-select:none;
   z-index: 1;
   ${(props: { isOpen: boolean; disabled?: boolean }) =>
     !props.isOpen &&

@@ -7,7 +7,7 @@
   "author": "InstaMotion Retail GmbH",
   "scripts": {
     "build": "npm run clean && npm run compile:esm && npm run compile:cjs",
-    "clean": "rm -rf ./dist",
+    "clean":"rm -rf ./dist || true",
     "compile:esm": "tsc -p build/tsconfig.esm.json",
     "compile:cjs": "tsc -p build/tsconfig.cjs.json",
     "prepublishOnly": "bolt build",
@@ -29,7 +29,10 @@
   },
   "dependencies": {
     "@im-ui/icon": "^0.3.0",
-    "@im-ui/theme": "^1.0.0"
+    "@im-ui/theme": "^1.0.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8"
   },
   "peerDependencies": {
     "react": "^16.11.0",

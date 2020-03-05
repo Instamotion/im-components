@@ -50,7 +50,8 @@ export const Header: React.FC<HeaderProps> = ({
         </LogoWrapper>
         <SearchWrapper>
           <a href="/autos">
-            <Icon iconName={'cars'} size={20} color={'white'} />
+            {/* TODO: size was: 20 */}
+            <Icon icon="cars" color="white" />
           </a>
         </SearchWrapper>
         <SpacerBefore></SpacerBefore>

@@ -55,7 +55,7 @@ const InfoItemComponent: React.FC<InfoItemProps> = props => (
   <AdditionalInfo>
     {Object.keys(props).map((key: any) => (
       <InfoItem key={`ii-${key}`}>
-        <Icon iconName={key} size={18} color={props[key] ? 'brightGrey' : 'silver'} />
+        <Icon icon={key} />
         <InfoLabel available={!!props[key]}>
           <FormattedMessage id={key} {...transformInfo(key, props[key])} />
         </InfoLabel>

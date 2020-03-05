@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icon, { IconWrapper, AvailableIcons } from '@im-ui/icon';
+import Icon, { AvailableIcons } from '@im-ui/icon';
 import TagManager, { DataLayerArgs } from 'react-gtm-module';
 import theme, { AvailableColors } from '@im-ui/theme';
 
@@ -42,12 +42,12 @@ export const LinkComponent: React.FC<Props> = ({
   return (
     <div className={className}>
       <a href={path} onClick={() => tag()}>
-        {icon && <Icon iconName={icon} size={16} color={'white'} />}
+        {icon && <Icon icon={icon} color="white" />}
         {text}
         {extra}
         {children && (
           <Chevron showChildren={showChildren}>
-            <Icon iconName={'chevronUp'} size={14} color={'white'} />
+            <Icon icon={'chevronUp'} color="white" />
           </Chevron>
         )}
       </a>
@@ -61,7 +61,6 @@ const Link = styled(LinkComponent)`
   position: relative;
   flex-direction: column;
   ${IconWrapper} {
-    margin-bottom: 0.1em;
     margin-right: 0.5em;
   }
   a {

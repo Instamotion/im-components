@@ -1,7 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { IconButton } from '@im-ui/button';
+import Button from '@im-ui/button';
 import theme from '@im-ui/theme';
+import Icon from '@im-ui/icon';
 
 interface PaginationNextProps {
   display: boolean;
@@ -17,7 +18,7 @@ const Spacer = styled.div`
   }
 `;
 
-const StyledButton = styled(IconButton)`
+const StyledButton = styled(Button)`
   display: flex;
   flex-flow: row-reverse nowrap;
   justify-content: space-between;
@@ -56,7 +57,8 @@ const PaginationNext: React.FC<PaginationNextProps> = ({
   children
 }) => {
   return display ? (
-    <StyledButton className={className} onClick={onClick} icon="chevronRight">
+    <StyledButton className={className} onClick={onClick}>
+      <Icon icon="chevronRight" />
       {children}
     </StyledButton>
   ) : (

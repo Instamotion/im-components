@@ -4,18 +4,27 @@ import { number } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 
 import Icon, { AvailableIcons, Icons } from '../src';
-import { px2rem } from '../../utils/src/css';
 
-const IconsContainer = styled.div`
-  & > span {
-    margin-right: ${px2rem(10)};
-  }
+const BigIcon = styled(Icons.file)`
+  font-size: 3rem;
 `;
 
 storiesOf('Icon', module).add('available icons', () => (
-  <IconsContainer>
+  <div>
+    <Icon icon="arrowCircleLeft" size="lg" />
+    TEXT
+    <br />
+    <Icon icon="file" />
+    Text
+    <br />
+    Lorem ipsum
+    <BigIcon color="downy" />
+    <br />
     {Object.keys(Icons).map((item, index) => {
-      return <Icon key={index} iconName={item as AvailableIcons} size={number('size', 20)} />;
+      // const IconDynamic = Icons[item as AvailableIcons];
+      return <Icon icon={item as AvailableIcons} />;
     })}
-  </IconsContainer>
+    <br />
+    <Icon icon="arrowCircleLeft" size="lg" />
+  </div>
 ));
