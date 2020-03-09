@@ -1,0 +1,38 @@
+{
+  "name": "@im-ui/loading-spinner-instamotion",
+  "version": "0.1.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "author": "InstaMotion Retail GmbH",
+  "scripts": {
+    "build": "npm run clean && npm run compile:esm && npm run compile:cjs",
+    "clean": "rm -rf ./dist",
+    "compile:esm": "tsc -p build/tsconfig.esm.json",
+    "compile:cjs": "tsc -p build/tsconfig.cjs.json",
+    "prepublishOnly": "bolt build"
+  },
+  "repository": "git@github.com:Instamotion/im-components.git",
+  "maintainers": [
+    "Ivan D",
+    "Oleg P",
+    "Anatolii P",
+    "Max K"
+  ],
+  "license": "MIT",
+  "files": ["dist"],
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "@types/react": "^16.9.11",
+    "@types/styled-components": "^4.1.20",
+    "jest": "^24.9.0",
+    "typescript": "^3.6.4"
+  },
+  "peerDependencies": {
+    "react": "^16.11.0",
+    "styled-components": "^4.4.1"
+  },
+  "dependencies": {
+    "@im-ui/theme": "^1.0.0"
+  }
+}
