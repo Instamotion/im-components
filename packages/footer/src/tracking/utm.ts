@@ -163,6 +163,7 @@ const pushToDataLayer = (value: string) => {
  *          If no -> do we have gclid or fbclid in the URL?
  *              If yes -> set a new tracking cookie
  *              If no -> prolong existing tracking cookie for 30 min
+ *
  */
 export const utm = () => {
   if (!isSessionCookieExists()) {
