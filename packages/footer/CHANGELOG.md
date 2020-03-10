@@ -1,5 +1,13 @@
 # @im-ui/footer
 
+## 0.12.0
+
+### Minor Changes
+
+- e7cb0a1: retrigget the build
+- d0aa051: CA-489:changing patter for session to see if new sessions have different behavioure
+- 8a5c0ab: CA-489: added path for the tracking cookie creation
+
 ## 0.11.0
 
 ### Minor Changes
