@@ -47,7 +47,7 @@ const generateNewGUID = () => {
     return (symbol === 'x' ? random : (random & 0x3) | 0x8).toString(16);
   };
 
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, randomGenerator);
+  return 'xxxxxxxx-xxxx-5xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, randomGenerator);
 };
 
 const resetSession = () => createCookie(sessionCookieName, generateNewGUID());
