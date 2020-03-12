@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.14.0
+
+### Minor Changes
+
+- 55e0fc5: CA-489: remove escape of special chars from cookie, since marketing is using | in values
+
 ## 0.13.0
 
 ### Minor Changes
