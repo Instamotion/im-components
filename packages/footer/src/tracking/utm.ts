@@ -27,7 +27,7 @@ const createCookie = (name: string, value: string) => {
   expireDate.setTime(expireDate.getTime() + cookieExpiryMinutes * 60 * 1000); // 30 min
   const cookieExpire = '; expires=' + expireDate.toUTCString();
   const path = '; path=/';
-  document.cookie = cookieNamePrefix + name + '=' + escape(value) + cookieExpire + path;
+  document.cookie = cookieNamePrefix + name + '=' + value + cookieExpire + path;
 
   if (name === sessionCookieName) {
     saveExpireForSessionCookie(expireDate);
@@ -67,7 +67,7 @@ const getURLParamByName = (name: string): string => {
   const regexS = '[\\?&]' + name + '=([^&#]*)';
   const regex = new RegExp(regexS);
   const results = regex.exec(window.location.search);
-  return results ? decodeURIComponent(results[1].replace(/\+/g, ' ')) : '';
+  return results && results[1] ? decodeURIComponent(results[1].replace(/\+/g, ' ')) : '';
 };
 
 const isUTMParamsPresentInUrl = () =>
