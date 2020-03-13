@@ -12,7 +12,7 @@ import Envkv from './envkv';
 import Seals from './seals';
 import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
-import SocialContainerWithScript from './social/socialContanerWithScript';
+import SocialContainer from './social/SocialContainer';
 import gclid from './tracking/gclid';
 import utm from './tracking/utm';
 
@@ -347,7 +347,7 @@ class DefaultFooter extends React.Component<DefaultFooterProps> {
         <TrustfulContainer>{onTop}</TrustfulContainer>
         <FooterContent>
           {renderMenu(menuOptions)}
-          <SocialContainerWithScript googleToken={googleToken} facebookToken={facebookToken} />
+          <SocialContainer googleToken={googleToken} facebookToken={facebookToken} />
           <MailContainer>
             <MailContent
               title={<FormattedMessage id="default.footer.newsletter.title" />}
