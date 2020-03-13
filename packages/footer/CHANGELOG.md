@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.15.0
+
+### Minor Changes
+
+- d0a31b9: CA-489: change cookie experation from 30 min to 60 min
+
 ## 0.14.0
 
 ### Minor Changes
