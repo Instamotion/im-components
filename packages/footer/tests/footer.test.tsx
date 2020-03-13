@@ -6,7 +6,6 @@ import { renderIcon } from '../src/defaultFooter';
 import TrustfulSection from '../src/trustfulSection';
 import TrustfulHeading from '../src/trustfulSection/trustfulHeading';
 import MenuItem from '../src/menu/menuItem';
-import SocialContainer from '../src/social/socialContainer';
 import Copyrights from '../src/copyrights';
 import CheckoutFooter from '../src/checkoutFooter';
 import Footer from '../src';
@@ -50,7 +49,7 @@ describe('Global | Footer', () => {
         messages
       )
     );
-    expect(wrapper.find(SocialContainer)).toHaveLength(1);
+    expect(wrapper.find('SocialContainerComponent')).toHaveLength(1);
   });
 
   it('default variant has copyrights section', () => {

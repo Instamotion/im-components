@@ -12,7 +12,7 @@ import Envkv from './envkv';
 import Seals from './seals';
 import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
-import SocialContainerWithScript from './social/socialContanerWithScript';
+import SocialContainer from './social/socialContainer';
 import gclid from './tracking/gclid';
 
 export const renderIcon = (iconName?: string): React.ReactNode => {
@@ -345,7 +345,7 @@ class DefaultFooter extends React.Component<DefaultFooterProps> {
         <TrustfulContainer>{onTop}</TrustfulContainer>
         <FooterContent>
           {renderMenu(menuOptions)}
-          <SocialContainerWithScript googleToken={googleToken} facebookToken={facebookToken} />
+          <SocialContainer googleToken={googleToken} facebookToken={facebookToken} />
           <MailContainer>
             <MailContent
               title={<FormattedMessage id="default.footer.newsletter.title" />}

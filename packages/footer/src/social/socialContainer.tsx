@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import theme from '@im-ui/theme';
 import SocialItem from './socialItem';
 import TagManager, { DataLayerArgs } from 'react-gtm-module';
+import useScript from './useScript';
 
 interface Props {
   googleToken: string;
@@ -10,6 +11,10 @@ interface Props {
 }
 
 const SocialContainerComponent: React.FC<Props> = ({ googleToken, facebookToken }) => {
+  // TODO: widgetEmbedUrl should be moved to .env variables
+  const widgetEmbedUrl = 'https://reviewsonmywebsite.com/js/embedLoader.js?id=16985fd9e429040ba7c6';
+  useScript(widgetEmbedUrl);
+
   const tag = (track: string): void => {
     const dataLayer: DataLayerArgs = {
       dataLayer: {
