@@ -8,7 +8,7 @@ import Copyrights from '../src/copyrights';
 import AllianzLogo from '../src/assets/AllianzLogo';
 import { renderMenu } from '../src/defaultFooter';
 import FooterContentComponent from '../src/footerContainer';
-import SocialContainer from '../src/social/SocialContainer';
+import SocialContainer from '../src/social/socialContainer';
 
 import messages from '../utils/locales';
 
