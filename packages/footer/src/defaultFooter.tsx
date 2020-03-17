@@ -12,7 +12,7 @@ import Envkv from './envkv';
 import Seals from './seals';
 import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
-import SocialContainer from './social/SocialContainer';
+import SocialContainer from './social/socialContainer';
 import gclid from './tracking/gclid';
 import utm from './tracking/utm';
 
