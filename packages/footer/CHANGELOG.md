@@ -1,5 +1,32 @@
 # @im-ui/footer
 
+## 0.15.0
+
+### Minor Changes
+
+- d0a31b9: CA-489: change cookie experation from 30 min to 60 min
+
+## 0.14.0
+
+### Minor Changes
+
+- 55e0fc5: CA-489: remove escape of special chars from cookie, since marketing is using | in values
+
+## 0.13.0
+
+### Minor Changes
+
+- 1e91947: bump the version
+- ea9d0fe: bump the version
+
+## 0.12.0
+
+### Minor Changes
+
+- e7cb0a1: retrigget the build
+- d0aa051: CA-489:changing patter for session to see if new sessions have different behavioure
+- 8a5c0ab: CA-489: added path for the tracking cookie creation
+
 ## 0.11.0
 
 ### Minor Changes

@@ -7,7 +7,7 @@ import TagManager, { DataLayerArgs } from 'react-gtm-module';
 const sessionCookieName = 'session';
 const cookieNamePrefix = '_uc_';
 const sessionLocalstorageExpKey = cookieNamePrefix + sessionCookieName;
-const cookieExpiryMinutes = 30; //minutes
+const cookieExpiryMinutes = 60; //minutes
 const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
 const additionalParams = ['gclid', 'fbclid'];
 
@@ -24,9 +24,10 @@ const saveExpireForSessionCookie = (expire: Date) => {
 
 const createCookie = (name: string, value: string) => {
   const expireDate = new Date();
-  expireDate.setTime(expireDate.getTime() + cookieExpiryMinutes * 60 * 1000); // 30 min
+  expireDate.setTime(expireDate.getTime() + cookieExpiryMinutes * 60 * 1000); // 60 min
   const cookieExpire = '; expires=' + expireDate.toUTCString();
-  document.cookie = cookieNamePrefix + name + '=' + escape(value) + cookieExpire;
+  const path = '; path=/';
+  document.cookie = cookieNamePrefix + name + '=' + value + cookieExpire + path;
 
   if (name === sessionCookieName) {
     saveExpireForSessionCookie(expireDate);
@@ -46,7 +47,7 @@ const generateNewGUID = () => {
     return (symbol === 'x' ? random : (random & 0x3) | 0x8).toString(16);
   };
 
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, randomGenerator);
+  return 'xxxxxxxx-xxxx-5xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, randomGenerator);
 };
 
 const resetSession = () => createCookie(sessionCookieName, generateNewGUID());
@@ -66,7 +67,7 @@ const getURLParamByName = (name: string): string => {
   const regexS = '[\\?&]' + name + '=([^&#]*)';
   const regex = new RegExp(regexS);
   const results = regex.exec(window.location.search);
-  return results ? decodeURIComponent(results[1].replace(/\+/g, ' ')) : '';
+  return results && results[1] ? decodeURIComponent(results[1].replace(/\+/g, ' ')) : '';
 };
 
 const isUTMParamsPresentInUrl = () =>
@@ -117,7 +118,7 @@ const isUTMParamsChanged = () => {
 
 const createUTMCookie = (param: string) => {
   const specialParams = ['utm_source', 'utm_medium'];
-  const defaultVal = specialParams.includes(param) ? 'direct' : '';
+  const defaultVal = specialParams.indexOf(param) !== -1 ? 'direct' : '';
   createCookie(param, defaultVal);
 };
 
@@ -155,14 +156,13 @@ const pushToDataLayer = (value: string) => {
  * Does a user have a tracking cookie?
  *
  * If no -> set a new tracking cookie and set UTM cookie if present in URL
- * If yes -> is it after (within a 30 min) midnight and previous tracking cookie was set before midnight?
+ * If yes -> is it after (within a 60 min) midnight and previous tracking cookie was set before midnight?
  *      If yes -> set a new tracking cookie and prolong UTM cookies
  *      If no -> does UTM params changed (was set or changed)? — we could store a hash of the UTM cookies in a separate cookie with the correlated expiration logic
  *          If yes -> set a new tracking cookie
  *          If no -> do we have gclid or fbclid in the URL?
  *              If yes -> set a new tracking cookie
- *              If no -> prolong existing tracking cookie for 30 min
- *
+ *              If no -> prolong existing tracking cookie for 60 min
  */
 export const utm = () => {
   if (!isSessionCookieExists()) {

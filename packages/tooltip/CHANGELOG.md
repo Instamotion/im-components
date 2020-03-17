@@ -1,5 +1,11 @@
 # @im-ui/tooltip
 
+## 0.2.0
+
+### Minor Changes
+
+- 5714f1b: Fixed missing build atrifacts
+
 ## 0.1.8
 
 ### Patch Changes

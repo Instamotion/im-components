@@ -1,13 +1,13 @@
 {
-  "name": "@im-ui/icon",
-  "version": "0.3.1",
+  "name": "@im-ui/loading-spinner-instamotion",
+  "version": "0.1.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
   "author": "InstaMotion Retail GmbH",
   "scripts": {
     "build": "npm run clean && npm run compile:esm && npm run compile:cjs",
-    "clean":"rm -rf ./dist || true",
+    "clean": "rm -rf ./dist",
     "compile:esm": "tsc -p build/tsconfig.esm.json",
     "compile:cjs": "tsc -p build/tsconfig.cjs.json",
     "prepublishOnly": "bolt build"
@@ -16,7 +16,8 @@
   "maintainers": [
     "Ivan D",
     "Oleg P",
-    "Dmytro B"
+    "Anatolii P",
+    "Max K"
   ],
   "license": "MIT",
   "files": ["dist"],
