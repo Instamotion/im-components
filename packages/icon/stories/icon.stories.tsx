@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { number } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 
 import Icon, { AvailableIcons, Icons } from '../src';
@@ -11,20 +10,14 @@ const BigIcon = styled(Icons.file)`
 
 storiesOf('Icon', module).add('available icons', () => (
   <div>
-    <Icon icon="arrowCircleLeft" size="lg" />
-    TEXT
+    <span>
+      Regular: <Icon icon="gearbox" /> large: <Icon icon="gearbox" size="lg" /> small:{' '}
+      <Icon icon="gearbox" size="sm" />
+    </span>
     <br />
-    <Icon icon="file" />
-    Text
     <br />
-    Lorem ipsum
-    <BigIcon color="downy" />
-    <br />
-    {Object.keys(Icons).map((item, index) => {
-      // const IconDynamic = Icons[item as AvailableIcons];
-      return <Icon icon={item as AvailableIcons} />;
+    {Object.keys(Icons).map(item => {
+      return <Icon icon={item as AvailableIcons} style={{ margin: '0 0.5rem 0 0' }} />;
     })}
-    <br />
-    <Icon icon="arrowCircleLeft" size="lg" />
   </div>
 ));

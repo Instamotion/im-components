@@ -7,7 +7,6 @@ import { converter } from '@im-ui/utils';
 import { CarInfoModel } from './carTile';
 
 export const transformInfo = (type: string, value: number | string): object => {
-  // todo: check it on backend
   if (!value || value === '. ') {
     return {
       id: 'car.tile.not_available'

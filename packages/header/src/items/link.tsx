@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icon, { AvailableIcons } from '@im-ui/icon';
+import Icon, { AvailableIcons, IconStyled } from '@im-ui/icon';
 import TagManager, { DataLayerArgs } from 'react-gtm-module';
 import theme, { AvailableColors } from '@im-ui/theme';
 
@@ -60,7 +60,7 @@ const Link = styled(LinkComponent)`
   display: flex;
   position: relative;
   flex-direction: column;
-  ${IconWrapper} {
+  ${IconStyled} {
     margin-right: 0.5em;
   }
   a {
@@ -85,10 +85,9 @@ const Link = styled(LinkComponent)`
 const Chevron = styled.div<{ showChildren?: boolean }>`
   float: right;
   margin-left: 0.5em;
-  ${IconWrapper} {
+  ${IconStyled} {
     transition: transform 0.3s ease;
     transform: ${({ showChildren }) => (showChildren ? 'rotate(0)' : 'rotate(180deg)')};
-    margin-bottom: 0.2em;
     margin-right: 0;
   }
 `;
