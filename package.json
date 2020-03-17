@@ -32,9 +32,6 @@
   },
   "homepage": "https://github.com/Instamotion/im-components#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/react-fontawesome": "^0.1.8",
     "@n8tb1t/use-scroll-position": "1.0.40",
     "downshift": "^3.3.5",
     "react": "^16.11.0",

@@ -53,29 +53,6 @@ describe('Styled dropdown', () => {
     );
     expect(wrapper.find('label').text()).toEqual('im a label!');
   });
-  it('items render', () => {
-    const wrapper = mount(
-      renderWithThemeAndI18n(<StyledDropdown options={options} defaultItem={options[0]} />)
-    );
-    expect(
-      wrapper
-        .find('path')
-        .at(0)
-        .prop('fill')
-    ).toEqual(theme.color.niagara);
-  });
-
-  it('disabled items render', () => {
-    const wrapper = mount(
-      renderWithThemeAndI18n(<StyledDropdown options={options} disabled defaultItem={options[0]} />)
-    );
-    expect(
-      wrapper
-        .find('path')
-        .at(0)
-        .prop('fill')
-    ).toEqual(theme.color.silver);
-  });
   it('items width editions', () => {
     const wrapper = mount(renderWithThemeAndI18n(<StyledDropdown options={optionWithEditions} />));
     wrapper.find(DropdownButton).simulate('click');
