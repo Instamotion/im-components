@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '@im-ui/theme';
-import { IconWrapper } from '@im-ui/icon';
+import { IconStyled } from '@im-ui/icon';
 import TagManager, { DataLayerArgs } from 'react-gtm-module';
 
 interface Props {
@@ -36,7 +36,7 @@ const MenuItemLinkComponent: React.FC<Props> = ({ inline, icon, path, title, tra
 const MenuItemIcon = styled.span`
   :hover {
     svg {
-      path {
+      IconWrapper path {
         fill: ${(props: { inline: boolean }) =>
           props.inline ? theme.color.downy : theme.color.silver};
       }
@@ -47,7 +47,7 @@ const MenuItemIcon = styled.span`
 const MenuItemLink = styled.div`
   display: ${(props: { inline: boolean }) => (props.inline ? 'inline-block' : 'block')};
 
-  ${IconWrapper} {
+  ${IconStyled} {
     padding-right: 0.5rem;
   }
 

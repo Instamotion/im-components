@@ -7,7 +7,6 @@ import { converter } from '@im-ui/utils';
 import { CarInfoModel } from './carTile';
 
 export const transformInfo = (type: string, value: number | string): object => {
-  // todo: check it on backend
   if (!value || value === '. ') {
     return {
       id: 'car.tile.not_available'
@@ -55,7 +54,7 @@ const InfoItemComponent: React.FC<InfoItemProps> = props => (
   <AdditionalInfo>
     {Object.keys(props).map((key: any) => (
       <InfoItem key={`ii-${key}`}>
-        <Icon iconName={key} size={18} color={props[key] ? 'brightGrey' : 'silver'} />
+        <Icon icon={key} />
         <InfoLabel available={!!props[key]}>
           <FormattedMessage id={key} {...transformInfo(key, props[key])} />
         </InfoLabel>

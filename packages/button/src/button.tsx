@@ -17,34 +17,33 @@ export type ButtonProps = React.ButtonHTMLAttributes<any> & {
 };
 
 const Button = styled.button<ButtonProps>`
-  ${props => {
-    const buttonType: ButtonTypes = props.buttonType || 'primary';
-    return css`
+  ${({ buttonType = 'primary' }) => css`
       border-color: ${theme[buttonType].borderColor}
       background-color: ${theme[buttonType].background};
       color: ${theme[buttonType].color};
-    `;
-  }}
+    `}
+  ${({ sizing = 'auto' }) => css`
+    display: ${sizing === 'auto' ? 'inline-block' : 'block'};
+    width: ${sizing === 'auto' ? 'auto' : '100%'};
+  `}
+  align-items: center;
   border-width: ${props => (props.buttonType === 'primary' ? 0 : 0.0625)}rem;
   border-style: solid;
   border-radius: 0.25rem;
   box-sizing: border-box;
+  height: inherit;
   cursor: pointer;
+  font-size: 1rem;
   font-weight: 600;
-  display: inline-flex;
-  align-items: center;
+  color: red;
+  padding: 0.25rem 1rem;
   text-transform: uppercase;
   text-align: center;
   transition: all 0.2s linear;
   height: 2.5rem;
-  ${props =>
-    props.sizing === 'full-width' &&
-    css`
-      width: 100%;
-    `}
   letter-spacing: 0.025rem;
   &:hover {
-    box-shadow: 0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
   }
   &:active {
     box-shadow: inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);

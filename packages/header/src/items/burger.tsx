@@ -35,10 +35,10 @@ export const BurgerComponent: React.FC<Props> = ({
     <div className={className} onClick={tag}>
       {favoritesCount > 0 && !isOpen && <Favorites>{favoritesCount}</Favorites>}
       <BurgerIcon isVisible={!isOpen}>
-        <Icon iconName={'bars'} size={16} color={'white'} />
+        <Icon icon={'bars'} color={'white'} />
       </BurgerIcon>
       <BurgerIcon isVisible={isOpen}>
-        <Icon iconName={'times'} size={16} color={'white'} />
+        <Icon icon={'times'} color={'white'} />
       </BurgerIcon>
     </div>
   );

@@ -41,63 +41,10 @@ exports[`Pagination renders 1`] = `
 }
 
 .c7 {
-  border-color: #75DFC0;
-  background-color: #75DFC0;
-  color: #313330;
-  border-width: 0rem;
-  border-style: solid;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-weight: 600;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  height: 2.5rem;
-  -webkit-letter-spacing: 0.025rem;
-  -moz-letter-spacing: 0.025rem;
-  -ms-letter-spacing: 0.025rem;
-  letter-spacing: 0.025rem;
-}
-
-.c7:hover {
-  box-shadow: 0 0.25rem 0.25rem rgba(0,0 ,0,0.1);
-}
-
-.c7:active {
-  box-shadow: inset 0px 0.125rem 0.125rem rgba(0,0,0,0.05);
-}
-
-.c7:disabled {
-  opacity: 0.5;
-  box-shadow: none;
-  cursor: no-drop;
-}
-
-.c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  vertical-align: middle;
-  width: 20px;
-}
-
-.c8 {
-  padding: 0 0.5rem 0 0;
+  display: inline-block;
+  height: 1em;
+  vertical-align: -0.125em;
+  font-size: 1em;
 }
 
 .c1 {
@@ -109,6 +56,34 @@ exports[`Pagination renders 1`] = `
 }
 
 .c6 {
+  border-color: #75DFC0;
+  background-color: #75DFC0;
+  color: #313330;
+  display: inline-block;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  height: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: red;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  height: 2.5rem;
+  -webkit-letter-spacing: 0.025rem;
+  -moz-letter-spacing: 0.025rem;
+  -ms-letter-spacing: 0.025rem;
+  letter-spacing: 0.025rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -133,6 +108,20 @@ exports[`Pagination renders 1`] = `
   text-transform: none;
   width: auto;
   min-width: 5.5rem;
+}
+
+.c6:hover {
+  box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,0.1);
+}
+
+.c6:active {
+  box-shadow: inset 0px 0.125rem 0.125rem rgba(0,0,0,0.05);
+}
+
+.c6:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+  cursor: no-drop;
 }
 
 .c6 span:last-child {
@@ -355,7 +344,7 @@ exports[`Pagination renders 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-iwsKbI",
+                "componentId": "sc-htoDjs",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -372,7 +361,7 @@ exports[`Pagination renders 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-iwsKbI",
+              "styledComponentId": "sc-htoDjs",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -396,7 +385,7 @@ exports[`Pagination renders 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-EHOje",
+                        "componentId": "sc-bxivhb",
                         "isStatic": false,
                         "lastClassName": "c1",
                         "rules": Array [
@@ -414,7 +403,7 @@ exports[`Pagination renders 1`] = `
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-EHOje",
+                      "styledComponentId": "sc-bxivhb",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -436,7 +425,7 @@ exports[`Pagination renders 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gZMcBi",
+                      "componentId": "sc-dnqmqq",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -457,7 +446,7 @@ exports[`Pagination renders 1`] = `
                     "displayName": "styled.ul",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gZMcBi",
+                    "styledComponentId": "sc-dnqmqq",
                     "target": "ul",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -893,7 +882,7 @@ exports[`Pagination renders 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-dnqmqq",
+                            "componentId": "sc-gzVnrw",
                             "isStatic": false,
                             "lastClassName": "c5",
                             "rules": Array [
@@ -907,7 +896,7 @@ exports[`Pagination renders 1`] = `
                           "displayName": "styled.li",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-dnqmqq",
+                          "styledComponentId": "sc-gzVnrw",
                           "target": "li",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -990,9 +979,8 @@ exports[`Pagination renders 1`] = `
               display={true}
               onClick={[Function]}
             >
-              <Styled(Component)
+              <Styled(styled.button)
                 className="pgn-next"
-                icon="chevronRight"
                 onClick={[Function]}
               >
                 <StyledComponent
@@ -1002,10 +990,47 @@ exports[`Pagination renders 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-htoDjs",
+                        "componentId": "sc-bZQynM",
                         "isStatic": false,
                         "lastClassName": "c6",
                         "rules": Array [
+                          "
+  ",
+                          [Function],
+                          "
+  ",
+                          [Function],
+                          "
+  align-items: center;
+  border-width: ",
+                          [Function],
+                          "rem;
+  border-style: solid;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  height: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: red;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.2s linear;
+  height: 2.5rem;
+  letter-spacing: 0.025rem;
+  &:hover {
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+  }
+  &:active {
+    box-shadow: inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);
+  }
+  &:disabled {
+    opacity: 0.5;
+    box-shadow: none;
+    cursor: no-drop;
+  }
+",
                           "
   display: flex;
   flex-flow: row-reverse nowrap;
@@ -1041,203 +1066,92 @@ exports[`Pagination renders 1`] = `
 ",
                         ],
                       },
-                      "displayName": "Styled(Component)",
-                      "foldedComponentIds": Array [],
+                      "displayName": "Styled(styled.button)",
+                      "foldedComponentIds": Array [
+                        "sc-bwzfXH",
+                      ],
                       "render": [Function],
-                      "styledComponentId": "sc-htoDjs",
-                      "target": [Function],
+                      "styledComponentId": "sc-bZQynM",
+                      "target": "button",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
                   }
                   forwardedRef={null}
-                  icon="chevronRight"
                   onClick={[Function]}
                 >
-                  <Component
+                  <button
                     className="c6 pgn-next"
-                    icon="chevronRight"
                     onClick={[Function]}
                   >
-                    <styled.button
-                      buttonType="primary"
-                      className="c6 pgn-next"
-                      onClick={[Function]}
+                    <Component
+                      icon="chevronRight"
                     >
-                      <StyledComponent
-                        buttonType="primary"
-                        className="c6 pgn-next"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
-                              "isStatic": false,
-                              "lastClassName": "c7",
-                              "rules": Array [
-                                "
-  ",
-                                [Function],
-                                "
-  border-width: ",
-                                [Function],
-                                "rem;
-  border-style: solid;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  text-transform: uppercase;
-  text-align: center;
-  transition: all 0.2s linear;
-  height: 2.5rem;
-  ",
-                                [Function],
-                                "
-  letter-spacing: 0.025rem;
-  &:hover {
-    box-shadow: 0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1);
-  }
-  &:active {
-    box-shadow: inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);
-  }
-  &:disabled {
-    opacity: 0.5;
-    box-shadow: none;
-    cursor: no-drop;
-  }
-",
-                              ],
-                            },
-                            "displayName": "styled.button",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
-                            "target": "button",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        onClick={[Function]}
-                      >
-                        <button
-                          className="c7 c6 pgn-next"
-                          onClick={[Function]}
+                      <chevronRight>
+                        <styled.svg
+                          viewBox="0 0 320 512"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <Styled(Component)
-                            color="oil"
-                            iconName="chevronRight"
-                          >
-                            <StyledComponent
-                              color="oil"
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "sc-bxivhb",
-                                    "isStatic": false,
-                                    "lastClassName": "c8",
-                                    "rules": Array [
-                                      "
-  padding: 0 0.5rem 0 0;
-",
-                                    ],
-                                  },
-                                  "displayName": "Styled(Component)",
-                                  "foldedComponentIds": Array [],
-                                  "render": [Function],
-                                  "styledComponentId": "sc-bxivhb",
-                                  "target": [Function],
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
-                              }
-                              forwardedRef={null}
-                              iconName="chevronRight"
-                            >
-                              <Component
-                                className="c8"
-                                color="oil"
-                                iconName="chevronRight"
-                              >
-                                <styled.span
-                                  className="c8"
-                                  size={20}
-                                >
-                                  <StyledComponent
-                                    className="c8"
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "sc-htpNat",
-                                          "isStatic": false,
-                                          "lastClassName": "c9",
-                                          "rules": Array [
-                                            "
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-htpNat",
+                                  "isStatic": false,
+                                  "lastClassName": "c7",
+                                  "rules": Array [
+                                    "
+  display: inline-block;
+  height: 1em;
   ",
-                                            [Function],
-                                            "
+                                    [Function],
+                                    "
+  ",
+                                    [Function],
+                                    "
 ",
-                                          ],
-                                        },
-                                        "displayName": "styled.span",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "sc-htpNat",
-                                        "target": "span",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                    size={20}
-                                  >
-                                    <span
-                                      className="c9 c8"
-                                      size={20}
-                                    >
-                                      <svg
-                                        height={20}
-                                        viewBox="0 0 320 512"
-                                        width={20}
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
-                                        />
-                                      </svg>
-                                    </span>
-                                  </StyledComponent>
-                                </styled.span>
-                              </Component>
-                            </StyledComponent>
-                          </Styled(Component)>
-                          <FormattedMessage
-                            id="pagination.next"
-                            values={Object {}}
+                                  ],
+                                },
+                                "displayName": "styled.svg",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-htpNat",
+                                "target": "svg",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            viewBox="0 0 320 512"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            pagination.next
-                          </FormattedMessage>
-                        </button>
-                      </StyledComponent>
-                    </styled.button>
-                  </Component>
+                            <svg
+                              className="c7"
+                              viewBox="0 0 320 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </StyledComponent>
+                        </styled.svg>
+                      </chevronRight>
+                    </Component>
+                    <FormattedMessage
+                      id="pagination.next"
+                      values={Object {}}
+                    >
+                      pagination.next
+                    </FormattedMessage>
+                  </button>
                 </StyledComponent>
-              </Styled(Component)>
+              </Styled(styled.button)>
             </PaginationNext>
           </div>
         </StyledComponent>

@@ -1,21 +1,23 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { number } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 
 import Icon, { AvailableIcons, Icons } from '../src';
-import { px2rem } from '../../utils/src/css';
 
-const IconsContainer = styled.div`
-  & > span {
-    margin-right: ${px2rem(10)};
-  }
+const BigIcon = styled(Icons.file)`
+  font-size: 3rem;
 `;
 
 storiesOf('Icon', module).add('available icons', () => (
-  <IconsContainer>
-    {Object.keys(Icons).map((item, index) => {
-      return <Icon key={index} iconName={item as AvailableIcons} size={number('size', 20)} />;
+  <div>
+    <span>
+      Regular: <Icon icon="gearbox" /> large: <Icon icon="gearbox" size="lg" /> small:{' '}
+      <Icon icon="gearbox" size="sm" />
+    </span>
+    <br />
+    <br />
+    {Object.keys(Icons).map(item => {
+      return <Icon icon={item as AvailableIcons} style={{ margin: '0 0.5rem 0 0' }} />;
     })}
-  </IconsContainer>
+  </div>
 ));

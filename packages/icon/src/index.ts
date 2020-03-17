@@ -1,1 +1,1 @@
-export { default, IconWrapper, AvailableIcons, Icons } from './icon';
+export { default, AvailableIcons, Icons, IconStyled, IconProps, IconWrapperProps } from './icon';

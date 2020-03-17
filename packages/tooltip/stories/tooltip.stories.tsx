@@ -10,7 +10,7 @@ story.addDecorator(withKnobs);
 
 story.add('with icon', () => {
   const props: TooltipProps = {
-    icon: <Icon iconName="infoCircle" />
+    icon: <Icon icon="infoCircle" />
   };
 
   return (

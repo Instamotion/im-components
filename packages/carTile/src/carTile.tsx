@@ -47,7 +47,7 @@ const CarTileComponent: React.FC<CarTileProps> = ({
   make,
   model,
   modelDescription,
-  image,
+  image = 'https://cdn.instamotion.com/images/car-tile-placeholder.svg',
   monthlyInstallment,
   price,
   mileage,
@@ -76,19 +76,13 @@ const CarTileComponent: React.FC<CarTileProps> = ({
       <Tile className={className}>
         <CarTileTop>
           <Favorite>
-            <Icon iconName="star" size={16} color="downy" />
+            <Icon icon="star" color="downy" />
           </Favorite>
           <Name>{`${make} ${model}`}</Name>
           <ModelDescription>{modelDescription}</ModelDescription>
           <Tooltip>{modelDescription}</Tooltip>
         </CarTileTop>
-        {image ? (
-          <CarImage url={image} />
-        ) : (
-          <CarPlaceholder>
-            <Icon iconName="tilePlaceholder" size={imageWidth} />
-          </CarPlaceholder>
-        )}
+        <CarImage url={image} />
         <CarPrice>
           <Price>{`${formatting.formatNumber(+monthlyInstallment, 'de-DE')},– € p.M.`}</Price>
           <AlternativePrice>
@@ -196,7 +190,7 @@ export const AlternativePrice = styled.div`
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25;
-  color: ${theme.color.brightGrey}
+  color: ${theme.color.brightGrey};
   margin-top: 0.25rem;
 `;
 
