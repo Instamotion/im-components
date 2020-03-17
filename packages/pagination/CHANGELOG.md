@@ -1,5 +1,14 @@
 # @im-ui/pagination
 
+## 0.0.11
+
+### Patch Changes
+
+- b702b0d: icons updated
+- Updated dependencies [b702b0d]
+  - @im-ui/icon@0.4.0
+  - @im-ui/button@0.4.2
+
 ## 0.0.10
 
 ### Patch Changes

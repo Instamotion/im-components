@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.4.0
+
+### Minor Changes
+
+- b702b0d: icons updated
+
 ## 0.3.1
 
 ### Patch Changes

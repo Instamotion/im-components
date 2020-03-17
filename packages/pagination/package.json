@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/pagination",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -33,10 +33,10 @@
     "styled-components": "^4.4.1"
   },
   "dependencies": {
-    "@im-ui/button": "^0.4.0",
+    "@im-ui/button": "^0.4.2",
     "@im-ui/label": "^0.1.8",
     "@im-ui/theme": "^1.0.0",
     "@im-ui/utils": "^0.5.2",
-    "@im-ui/icon": "^0.3.0"
+    "@im-ui/icon": "^0.4.0"
   }
 }

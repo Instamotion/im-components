@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/button",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -28,7 +28,7 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "@im-ui/icon": "^0.3.0",
+    "@im-ui/icon": "^0.4.0",
     "@im-ui/theme": "^1.0.0"
   },
   "peerDependencies": {
