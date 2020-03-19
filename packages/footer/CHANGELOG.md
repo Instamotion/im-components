@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.16.0
+
+### Minor Changes
+
+- 0cabbae: CA-489: we moved logic into GTM to custom variable Cookie Session ID
+
 ## 0.15.1
 
 ### Patch Changes
