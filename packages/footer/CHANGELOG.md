@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.17.0
+
+### Minor Changes
+
+- de9cbac: fixed review ups
+
 ## 0.16.0
 
 ### Minor Changes
