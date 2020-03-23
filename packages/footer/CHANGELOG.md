@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.18.0
+
+### Minor Changes
+
+- 875574e: enable utm and session id on the website again
+
 ## 0.17.0
 
 ### Minor Changes
