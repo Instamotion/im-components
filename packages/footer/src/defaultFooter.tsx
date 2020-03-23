@@ -14,6 +14,7 @@ import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
 import SocialContainer from './social/socialContainer';
 import gclid from './tracking/gclid';
+import utm from './tracking/utm';
 
 export const renderIcon = (iconName?: string): React.ReactNode => {
   switch (iconName) {
@@ -334,6 +335,7 @@ export interface MenuOptions {
 class DefaultFooter extends React.Component<DefaultFooterProps> {
   componentDidMount() {
     gclid();
+    utm();
   }
 
   render() {
