@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.19.0
+
+### Minor Changes
+
+- 4a2e07b: Add Link to https://www.instamotion.com/erfahrungen
+
 ## 0.18.0
 
 ### Minor Changes
