@@ -139,6 +139,12 @@ const menus: {
       link: '/so-funktionierts'
     },
     {
+      id: 'default.footer.menu.erfahrungen',
+      type: 'item',
+      title: <FormattedMessage id="default.footer.menu.erfahrungen" />,
+      link: '/erfahrungen'
+    },
+    {
       id: 'default.footer.menu.blog',
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.blog" />,
