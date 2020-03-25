@@ -35,7 +35,6 @@ const Button = styled.button<ButtonProps>`
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
-  color: red;
   padding: 0.25rem 1rem;
   text-transform: uppercase;
   text-align: center;
