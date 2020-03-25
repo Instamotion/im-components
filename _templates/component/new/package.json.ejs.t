@@ -16,6 +16,13 @@ to: packages/<%= name %>/package.json
   ],
   "repository": "git@github.com:Instamotion/im-components.git",
   "license": "MIT",
+  "scripts": {
+    "build": "npm run clean && npm run compile:esm && npm run compile:cjs",
+    "clean": "rm -rf ./dist",
+    "compile:esm": "tsc -p build/tsconfig.esm.json",
+    "compile:cjs": "tsc -p build/tsconfig.cjs.json",
+    "prepublishOnly": "bolt build"
+  },
   "files": [
     "dist"
   ],
