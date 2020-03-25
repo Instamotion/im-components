@@ -1,5 +1,12 @@
 # @im-ui/how-it-works
 
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies [15de59f]
+  - @im-ui/icon@0.5.0
+
 ## 1.1.0
 
 ### Minor Changes

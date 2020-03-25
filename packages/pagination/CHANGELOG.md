@@ -1,5 +1,18 @@
 # @im-ui/pagination
 
+## 0.1.0
+
+### Minor Changes
+
+- 15de59f: added coin icon
+
+### Patch Changes
+
+- Updated dependencies [15de59f]
+- Updated dependencies [15de59f]
+  - @im-ui/button@0.5.0
+  - @im-ui/icon@0.5.0
+
 ## 0.0.11
 
 ### Patch Changes

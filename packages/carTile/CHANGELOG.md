@@ -1,5 +1,12 @@
 # @im-ui/car-tile
 
+## 0.1.12
+
+### Patch Changes
+
+- Updated dependencies [15de59f]
+  - @im-ui/icon@0.5.0
+
 ## 0.1.11
 
 ### Patch Changes

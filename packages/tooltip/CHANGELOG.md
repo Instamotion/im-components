@@ -1,5 +1,12 @@
 # @im-ui/tooltip
 
+## 0.2.2
+
+### Patch Changes
+
+- Updated dependencies [15de59f]
+  - @im-ui/icon@0.5.0
+
 ## 0.2.1
 
 ### Patch Changes

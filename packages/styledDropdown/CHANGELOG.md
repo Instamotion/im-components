@@ -1,5 +1,12 @@
 # @im-ui/styled-dropdown
 
+## 0.1.7
+
+### Patch Changes
+
+- Updated dependencies [15de59f]
+  - @im-ui/icon@0.5.0
+
 ## 0.1.6
 
 ### Patch Changes

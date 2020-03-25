@@ -1,5 +1,17 @@
 # @im-ui/button
 
+## 0.5.0
+
+### Minor Changes
+
+- 15de59f: added coin icon
+
+### Patch Changes
+
+- 15de59f: button color fix
+- Updated dependencies [15de59f]
+  - @im-ui/icon@0.5.0
+
 ## 0.4.3
 
 ### Patch Changes

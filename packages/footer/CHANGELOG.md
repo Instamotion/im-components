@@ -1,5 +1,12 @@
 # @im-ui/footer
 
+## 0.19.1
+
+### Patch Changes
+
+- Updated dependencies [15de59f]
+  - @im-ui/icon@0.5.0
+
 ## 0.19.0
 
 ### Minor Changes
