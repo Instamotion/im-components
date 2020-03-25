@@ -1,5 +1,11 @@
 # @im-ui/button
 
+## 0.4.3
+
+### Patch Changes
+
+- 4a60d2a: button color fix
+
 ## 0.4.2
 
 ### Patch Changes
