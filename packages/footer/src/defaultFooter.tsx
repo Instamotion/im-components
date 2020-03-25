@@ -142,7 +142,8 @@ const menus: {
       id: 'default.footer.menu.erfahrungen',
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.erfahrungen" />,
-      link: '/erfahrungen'
+      // hardcoded link for QA needs
+      link: 'https://www.instamotion.com/erfahrungen'
     },
     {
       id: 'default.footer.menu.blog',
