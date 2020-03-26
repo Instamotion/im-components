@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.20.0
+
+### Minor Changes
+
+- 2f62862: CAT-29: added new utm logic to track first utm campaings
+
 ## 0.19.1
 
 ### Patch Changes
