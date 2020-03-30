@@ -1,5 +1,11 @@
 # @im-ui/how-it-works
 
+## 1.2.0
+
+### Minor Changes
+
+- 2ebf537: Fix centering aligment issues
+
 ## 1.1.1
 
 ### Patch Changes
