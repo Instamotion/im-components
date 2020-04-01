@@ -129,7 +129,7 @@ const DesktopDivider = styled.hr`
 
 const MobileDivider = styled.span`
   display: inline-block;
-  margin: 0.3rem 0.4rem 0.2rem;
+  margin: 0.2rem 0.4rem 0.3rem;
   color: ${theme.color.downy};
 
   ${theme.mediaQueries.whenTablet} {
