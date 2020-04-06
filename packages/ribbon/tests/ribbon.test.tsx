@@ -1,11 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import InfoItem from '../src';
+import Ribbon from '../src';
 
-describe('infoItem', () => {
+describe('ribbon', () => {
   it('renders', () => {
-    const wrapper = mount(<InfoItem />);
+    const wrapper = mount(<Ribbon />);
 
     expect(wrapper).toBeDefined();
   });
