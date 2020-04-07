@@ -112,6 +112,7 @@ const Tooltip = styled.span`
 
     ${TooltipText} {
       display: inline;
+      position: absolute;
     }
   }
 `;
