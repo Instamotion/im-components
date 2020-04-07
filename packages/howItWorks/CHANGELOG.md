@@ -1,5 +1,11 @@
 # @im-ui/how-it-works
 
+## 1.3.0
+
+### Minor Changes
+
+- 161a1e2: fix tooltips on mobile
+
 ## 1.2.1
 
 ### Patch Changes
