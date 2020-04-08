@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.21.0
+
+### Minor Changes
+
+- 262f619: CAT-29: moving out Session and UTM logic to GTM
+
 ## 0.20.0
 
 ### Minor Changes
