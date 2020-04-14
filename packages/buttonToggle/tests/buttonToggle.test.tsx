@@ -1,24 +1,29 @@
 /* eslint-env jest */
-import React from 'react';
+import React, { useState } from 'react';
 import { mount } from 'enzyme';
 
 import ButtonToggle, { ButtonToggleItemProps, ButtonToggleProps } from '../src';
-import { ButtonToggleContainer, ButtonToggleItem } from '../src/buttonToggle';
-import BrandingLogo from '../../brandingLogo/src';
+import { ButtonToggleItem } from '../src/buttonToggle';
+
+const firstButton: ButtonToggleItemProps<number> = { label: '1', value: 1 };
+const secondButton: ButtonToggleItemProps<number> = { label: '2', value: 2 };
+const thirdButton: ButtonToggleItemProps<number> = { label: '3', value: 3, disabled: true };
+const TestComponent = () => {
+  const [selectedItem, setSelectedItem] = useState<number>(2);
+  return (
+    <ButtonToggle<number>
+      items={[firstButton, secondButton, thirdButton]}
+      selected={selectedItem}
+      onChange={selected => {
+        setSelectedItem(selected);
+      }}
+    />
+  );
+};
 
 describe('ButtonToggle', () => {
-  const firstButton: ButtonToggleItemProps = { label: '1', value: 1 };
-  const secondButton: ButtonToggleItemProps = { label: '2', value: 2 };
-  const thirdButton: ButtonToggleItemProps = { label: '3', value: 3, disabled: true };
-
-  const props: ButtonToggleProps = {
-    items: [firstButton, secondButton, thirdButton],
-    selected: 2,
-    onChange: () => {}
-  };
-
   it('renders', () => {
-    const wrapper = mount(<ButtonToggle {...props} />);
+    const wrapper = mount(<TestComponent />);
     const buttons = wrapper
       .find(ButtonToggle)
       .childAt(0)
@@ -29,7 +34,7 @@ describe('ButtonToggle', () => {
   });
 
   it('toggles active button on click', () => {
-    const wrapper = mount(<ButtonToggle {...props} />);
+    const wrapper = mount(<TestComponent />);
     expect(
       wrapper
         .find(ButtonToggleItem)
@@ -49,7 +54,7 @@ describe('ButtonToggle', () => {
   });
 
   it("doesn't toggle disabled button on click", () => {
-    const wrapper = mount(<ButtonToggle {...props} />);
+    const wrapper = mount(<TestComponent />);
     expect(
       wrapper
         .find(ButtonToggleItem)

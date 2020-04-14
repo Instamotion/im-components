@@ -1,13 +1,13 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
-import React, { useState } from 'react';
 import theme from '@im-ui/theme';
-import { px2rem } from '../../utils/src/css';
+import { css as cssUtils } from '@im-ui/utils';
 
-type StringOrNumber = string | number;
+const { px2rem } = cssUtils;
 
-export interface ButtonToggleItemProps {
+export interface ButtonToggleItemProps<A> {
   label: string | JSX.Element;
-  value: StringOrNumber;
+  value: A;
   disabled?: boolean;
 }
 
@@ -49,24 +49,21 @@ export const ButtonToggleItem = styled.div<ButtonToggleItemStyledProps>`
     `}
 `;
 
-export interface ButtonToggleProps {
-  items: ButtonToggleItemProps[];
-  selected: StringOrNumber;
-  onChange: (selected: StringOrNumber) => void;
+export interface ButtonToggleProps<A> {
+  items: ButtonToggleItemProps<A>[];
+  selected: A;
+  onChange: (selected: A) => void;
 }
 
-const ButtonToggle: React.FC<ButtonToggleProps> = ({ items, selected, onChange }) => {
-  const [selectedItem, setSelectedItem] = useState<StringOrNumber>(selected);
-
+function ButtonToggle<A>(props: ButtonToggleProps<A>) {
+  const { items, selected, onChange } = props;
   const handleClick = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    item: ButtonToggleItemProps
+    _e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    item: ButtonToggleItemProps<A>
   ) => {
     if (item.disabled) {
       return;
     }
-
-    setSelectedItem(item.value);
     onChange(item.value);
   };
 
@@ -75,7 +72,7 @@ const ButtonToggle: React.FC<ButtonToggleProps> = ({ items, selected, onChange }
       {items.map(item => (
         <ButtonToggleItem
           key={String(item.value)}
-          selected={selectedItem == item.value}
+          selected={selected == item.value}
           disabled={item.disabled ? item.disabled : false}
           data-value={item.value}
           onClick={e => {
@@ -87,6 +84,6 @@ const ButtonToggle: React.FC<ButtonToggleProps> = ({ items, selected, onChange }
       ))}
     </ButtonToggleContainer>
   );
-};
+}
 
 export default ButtonToggle;
