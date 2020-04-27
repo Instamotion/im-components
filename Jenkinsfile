@@ -36,6 +36,7 @@ pipeline {
   stages {
     stage('Bootstrap') {
       steps {
+        scmSkip(deleteBuild: true, skipPattern:'.*\\[Jenkins\\]\\: New release\\.*')
         sh 'yarn'
         sh 'yarn bootstrap'
         sh 'yarn build:components'
