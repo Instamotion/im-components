@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { renderWithThemeAdnI18n } from '@im-ui/utils';
+import { renderWithThemeAndI18n } from '@im-ui/utils';
 
 import Ribbon, { RibbonProps } from '../src';
 
@@ -10,7 +10,7 @@ storiesOf('Ribbon', module)
       text: 'Topangebote'
     };
 
-    return renderWithThemeAdnI18n(<Ribbon {...props} />);
+    return renderWithThemeAndI18n(<Ribbon {...props} />);
   })
   .add('Right', () => {
     const props: RibbonProps = {
@@ -18,5 +18,5 @@ storiesOf('Ribbon', module)
       alignRight: true
     };
 
-    return renderWithThemeAdnI18n(<Ribbon {...props} />);
+    return renderWithThemeAndI18n(<Ribbon {...props} />);
   });

@@ -5,9 +5,9 @@ function Icon() {
     <svg xmlns="http://www.w3.org/2000/svg" width="56" height="94" fill="none" viewBox="0 0 56 94">
       <path
         fill="#20AD90"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M56 0H0v84.968L28 94l28-9.032V0z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path fill="#75DFC0" d="M3 28h50v54l-25 8-25-8V28z" />
       <path
