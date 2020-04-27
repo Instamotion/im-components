@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.21.2
+
+### Patch Changes
+
+- ca32831: Fixed warnings related to props naming and React conventions
+
 ## 0.21.1
 
 ### Patch Changes

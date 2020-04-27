@@ -1,5 +1,11 @@
 # @im-ui/ribbon
 
+## 0.1.2
+
+### Patch Changes
+
+- ca32831: Fixed warnings related to props naming and React conventions
+
 ## 0.1.1
 
 ### Patch Changes
