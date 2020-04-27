@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.21.1
+
+### Patch Changes
+
+- cd5b4da: fillRule, clipRule fixes, ribon props fix
+
 ## 0.21.0
 
 ### Minor Changes
