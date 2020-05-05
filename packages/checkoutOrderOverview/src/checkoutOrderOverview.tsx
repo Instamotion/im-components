@@ -128,7 +128,7 @@ export const CheckoutOrderOverview: React.FC<CheckoutOrderOverviewProps> = ({
           <CarOverview className="car-overview">
             <CarNameAndPrice>
               <CarName className="car-name">{`${car.make} ${car.model}`}</CarName>
-              <CarPrice>{formatting.formatEuroCurrency(Number(car.price), 'de-DE')}</CarPrice>
+              <CarPrice>{formatting.formatEuroCurrency(Number(car.price))}</CarPrice>
             </CarNameAndPrice>
             <CarInfo className="car-info">
               {car.mileage && (
