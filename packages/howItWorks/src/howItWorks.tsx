@@ -1,26 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
-import { css } from '@im-ui/utils';
 import theme from '@im-ui/theme';
-import { Heading, Link } from '@im-ui/typography';
-import Icon from '@im-ui/icon';
-
-const { px2rem } = css;
 
 export interface HowItWorksProps {
+  currentStep: number;
+  items: string[];
   className?: string;
 }
-
-const Header = styled(Heading)`
-  margin: 0 0 1rem;
-  font-weight: bold;
-
-  ${theme.mediaQueries.whenTablet} {
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-  }
-`;
 
 const List = styled.ol`
   display: flex;
@@ -35,7 +21,61 @@ const List = styled.ol`
   }
 `;
 
-const ListItem = styled.li`
+const Number = styled.span`
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.75rem 0 0;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  text-align: center;
+  color: ${theme.color.white};
+  background-color: ${theme.color.downy};
+  border-radius: 100%;
+  font-weight: bold;
+
+  ${theme.mediaQueries.whenTablet} {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    /* border: 0.5rem solid ${theme.color.lightGrey}; */
+  }
+`;
+
+const LineBefore = styled.div<{ linesCount: number; isActive: boolean }>`
+  margin-top: 0.6875rem;
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
+  box-sizing: border-box;
+  height: 0.125rem;
+  background-color: ${({ isActive }) => (isActive ? theme.color.downy : theme.color.brightGrey)};
+  width: calc((100% - 1.5rem) / (${props => props.linesCount}));
+`;
+
+const LineAfter = styled.div<{ linesCount: number; isActive: boolean }>`
+  margin-top: 0.6875rem;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
+  height: 0.125rem;
+  background-color: ${({ isActive }) => (isActive ? theme.color.downy : theme.color.brightGrey)};
+  width: calc((100% - 1.5rem) / (${props => props.linesCount}));
+`;
+
+const NumberBlock = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+`;
+const Text = styled.span`
+  width: 70%;
+  font-size: 1.125rem;
+  font-weight: 500;
+`;
+
+const ListItem = styled.li<{ isActive: boolean; length: number; linesCount: number }>`
   display: flex;
   flex-direction: row;
   position: relative;
@@ -45,177 +85,74 @@ const ListItem = styled.li`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%;
-    font-size: ${px2rem(18)};
+    width: calc(
+      (
+          (
+              (100% - (1.5rem * ${props => props.length})) /* total length excluded number blocks */ /
+                ((${props => props.length} - 1) * 2) /* divided by number of lines */
+            ) * ${props => props.linesCount} /* multiplied by amount of lines in block */
+        ) + 1.5rem
+    ); /* added size of number */
+    font-size: 1.125rem;
     text-align: center;
 
-    &:first-child {
-      align-items: flex-start;
+    &:first-child ${Text} {
+      text-align: left;
+      width: 100%;
     }
 
-    &:last-child {
-      align-items: flex-end;
+    &:last-child ${Text} {
+      text-align: right;
+      width: 100%;
     }
   }
-`;
-
-const Number = styled.span`
-  width: 1rem;
-  height: 1rem;
-  margin: 0 0.75rem 0 0;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  text-align: center;
-  color: ${theme.color.white};
-  background: ${theme.color.downy};
-  border-radius: 100%;
-
-  ${theme.mediaQueries.whenTablet} {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0 0 1rem;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    border: 0.5rem solid ${theme.color.lightGrey};
+  ${Number} {
+    background-color: ${({ isActive }) => (isActive ? theme.color.downy : theme.color.brightGrey)};
   }
 `;
 
-const Text = styled.span``;
+interface ItemElementProps {
+  item: string;
+  index: number;
+  currentStep: number;
+  total: number;
+}
 
-const TooltipText = styled.div`
-  display: none;
-  position: fixed;
-  margin: -0.5rem 0 0 0.25rem;
-  padding: 0.5rem;
-  background-color: ${theme.color.white};
-  border-radius: 0.25rem;
-  box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+const ItemElement: React.FC<ItemElementProps> = ({ item, index, currentStep, total }) => {
+  const linesCount = index === 0 || index === total - 1 ? 1 : 2;
+  const isActive = index < currentStep;
+  return (
+    <ListItem isActive={isActive} length={total} linesCount={linesCount}>
+      <NumberBlock>
+        {index > 0 && <LineBefore linesCount={linesCount} isActive={isActive} />}
+        <Number>{1 + index}</Number>
+        {index < total - 1 && <LineAfter linesCount={linesCount} isActive={isActive} />}
+      </NumberBlock>
+      <Text>{item}</Text>
+    </ListItem>
+  );
+};
 
-  ${theme.mediaQueries.whenTablet} {
-    position: absolute;
-    top: 5.5rem;
-    left: 0;
-  }
-`;
+const HowItWorksComponent: React.FC<HowItWorksProps> = ({ items, currentStep }) => {
+  // const lines = (items.length -1) * 2;
+  // const circles = items.length * 1.5rem;
+  // const total = lines + circles;
+  // console.log(lines)
+  // const lineWidth = 'calc((100% - (1.5rem * 4) ) / 6)'
 
-const TooltipIcon = styled(Icon)`
-  color: ${theme.color.niagara};
-`;
-
-const Tooltip = styled.span`
-  display: inline-block;
-  margin-left: 0.5rem;
-
-  &:hover,
-  &:active {
-    cursor: pointer;
-
-    ${TooltipText} {
-      display: inline;
-      position: absolute;
-    }
-  }
-`;
-
-const DesktopDivider = styled.hr`
-  display: none;
-
-  ${theme.mediaQueries.whenTablet} {
-    display: block;
-    color: ${theme.color.downy};
-    width: 99%;
-    margin-bottom: -2.3rem;
-  }
-`;
-
-const MobileDivider = styled.span`
-  display: inline-block;
-  margin: 0.2rem 0.4rem 0.3rem;
-  color: ${theme.color.downy};
-
-  ${theme.mediaQueries.whenTablet} {
-    display: none;
-  }
-`;
-
-const MoreLink = styled(Link)`
-  align-self: flex-end;
-  color: ${theme.color.niagara};
-`;
-
-const HowItWorksComponent: React.FC<HowItWorksProps> = ({ className }) => (
-  <section className={className}>
-    <Header size="xxs">
-      <FormattedMessage id="how_it_works.heading" />
-    </Header>
-
-    <DesktopDivider />
-
+  return (
     <List>
-      <ListItem>
-        <Number>1</Number>
-        <Text>
-          <FormattedMessage id="how_it_works.step_1" />
-          <Tooltip>
-            <TooltipIcon icon={'infoCircle'} />
-            <TooltipText>
-              <FormattedMessage id="how_it_works.tooltip_1" />
-            </TooltipText>
-          </Tooltip>
-        </Text>
-      </ListItem>
-
-      <MobileDivider>|</MobileDivider>
-
-      <ListItem>
-        <Number>2</Number>
-        <Text>
-          <FormattedMessage id="how_it_works.step_2" />
-          <Tooltip>
-            <TooltipIcon icon={'infoCircle'} />
-            <TooltipText>
-              <FormattedMessage id="how_it_works.tooltip_2" />
-            </TooltipText>
-          </Tooltip>
-        </Text>
-      </ListItem>
-
-      <MobileDivider>|</MobileDivider>
-
-      <ListItem>
-        <Number>3</Number>
-        <Text>
-          <FormattedMessage id="how_it_works.step_3" />
-          <Tooltip>
-            <TooltipIcon icon={'infoCircle'} />
-            <TooltipText>
-              <FormattedMessage id="how_it_works.tooltip_3" />
-            </TooltipText>
-          </Tooltip>
-        </Text>
-      </ListItem>
-
-      <MobileDivider>|</MobileDivider>
-
-      <ListItem>
-        <Number>4</Number>
-        <Text>
-          <FormattedMessage id="how_it_works.step_4" />
-          <Tooltip>
-            <TooltipIcon icon={'infoCircle'} />
-            <TooltipText>
-              <FormattedMessage id="how_it_works.tooltip_4" />
-            </TooltipText>
-          </Tooltip>
-        </Text>
-      </ListItem>
+      {items.map((item, index) => (
+        <ItemElement
+          item={item}
+          index={index}
+          currentStep={currentStep}
+          total={items.length}
+        ></ItemElement>
+      ))}
     </List>
-
-    <MoreLink href="https://www.instamotion.com/so-funktionierts" target="_blank">
-      <FormattedMessage id="how_it_works.more" />
-    </MoreLink>
-  </section>
-);
+  );
+};
 
 const HowItWorks = styled(HowItWorksComponent)`
   display: flex;
