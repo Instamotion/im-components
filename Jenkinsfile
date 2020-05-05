@@ -37,11 +37,16 @@ pipeline {
     stage('Bootstrap') {
       steps {
         scmSkip(deleteBuild: true, skipPattern:'.*\\[Jenkins\\]\\: New release\\.*')
-        sh 'yarn'
-        sh 'yarn bootstrap'
-        sh 'yarn build:components'
-        sh 'yarn typecheck'
-        sh 'yarn test'
+        withCredentials([
+          string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN'),
+          string(credentialsId: 'fontawesome_token', variable: 'FONTAWESOME_TOKEN')
+        ]) {
+          sh 'yarn'
+          sh 'yarn bootstrap'
+          sh 'yarn build:components'
+          sh 'yarn typecheck'
+          sh 'yarn test'
+        }
       }
     }
 
@@ -58,7 +63,8 @@ pipeline {
         withCredentials([
           string(credentialsId: 'im-priv-key', variable: 'GIT_SSH_KEY_PUBLISH'),
           string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN'),
-          string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN')
+          string(credentialsId: 'npm_publish_token', variable: 'NPM_PUB_TOKEN'),
+          string(credentialsId: 'fontawesome_token', variable: 'FONTAWESOME_TOKEN')
         ]) {
           sh './configs/setup-npm.sh'
           sh './configs/publish.sh'
@@ -70,13 +76,18 @@ pipeline {
       when { branch 'master' }
       steps {
         dockerLogin()
-        sh 'yarn'
-        sh 'yarn bootstrap'
-        sh 'yarn build'
-        script {
-          docker.withRegistry("${env.ECR_REGISTRY_URL}") {
-            serviceApp = docker.build("${NAMESPACE}/${SERVICE_NAME}:${DEPLOY_VERSION}")
-            serviceApp.push()
+        withCredentials([
+          string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN'),
+          string(credentialsId: 'fontawesome_token', variable: 'FONTAWESOME_TOKEN')
+        ]) {
+          sh 'yarn'
+          sh 'yarn bootstrap'
+          sh 'yarn build'
+          script {
+            docker.withRegistry("${env.ECR_REGISTRY_URL}") {
+              serviceApp = docker.build("${NAMESPACE}/${SERVICE_NAME}:${DEPLOY_VERSION}")
+              serviceApp.push()
+            }
           }
         }
       }
