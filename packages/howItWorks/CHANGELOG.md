@@ -1,5 +1,11 @@
 # @im-ui/how-it-works
 
+## 2.0.0
+
+### Major Changes
+
+- 5a91017: How it works v2.0
+
 ## 1.3.0
 
 ### Minor Changes
