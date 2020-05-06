@@ -44,35 +44,54 @@ const Number = styled.span`
   }
 `;
 
-const LineBefore = styled.div<{ linesCount: number; isActive: boolean }>`
-  margin-top: 0.6875rem;
-  margin-right: 0.5rem;
-  padding-right: 0.5rem;
+const Line = styled.div<{ linesCount: number; isActive: boolean }>`
   box-sizing: border-box;
-  height: 0.125rem;
   background-color: ${({ isActive }) => (isActive ? theme.color.downy : theme.color.brightGrey)};
-  width: calc((100% - 1.5rem) / (${props => props.linesCount}));
+  height: 0.55rem;
+  width: 0.125rem;
+  ${theme.mediaQueries.whenTablet} {
+    height: 0.125rem;
+    width: calc((100% - 1.5rem) / (${props => props.linesCount}));
+  }
 `;
 
-const LineAfter = styled.div<{ linesCount: number; isActive: boolean }>`
-  margin-top: 0.6875rem;
-  margin-left: 0.5rem;
-  padding-left: 0.5rem;
-  box-sizing: border-box;
-  height: 0.125rem;
-  background-color: ${({ isActive }) => (isActive ? theme.color.downy : theme.color.brightGrey)};
-  width: calc((100% - 1.5rem) / (${props => props.linesCount}));
+const LineBefore = styled(Line)`
+  margin: 0 0 0.4rem 0.44rem;
+  ${theme.mediaQueries.whenTablet} {
+    margin: 0.6875rem 0.5rem 0 0;
+    padding-right: 0.5rem;
+  }
+`;
+
+const LineAfter = styled(Line)`
+  margin: 0.4rem 0 0 0.44rem;
+  flex-grow: 1;
+  ${theme.mediaQueries.whenTablet} {
+    margin: 0.6875rem 0 0 0.5rem;
+    padding-left: 0.5rem;
+  }
 `;
 
 const NumberBlock = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  flex-direction: column;
+  /* box-sizing: border-box; */
+  ${theme.mediaQueries.whenTablet} {
+    &:first-child {
+      margin-top: 0;
+    }
+    width: 100%;
+    flex-direction: row;
+  }
 `;
 const Text = styled.span`
   width: 70%;
   font-size: 1.125rem;
   font-weight: 500;
+  margin: 0.75rem 0;
+  ${theme.mediaQueries.whenTablet} {
+    margin: 0;
+  }
 `;
 
 const ListItem = styled.li<{ isActive: boolean; length: number; linesCount: number }>`
@@ -80,6 +99,10 @@ const ListItem = styled.li<{ isActive: boolean; length: number; linesCount: numb
   flex-direction: row;
   position: relative;
   color: ${theme.color.brightGrey};
+
+  &:first-child ${NumberBlock} {
+    margin-top: 0.95rem;
+  }
 
   ${theme.mediaQueries.whenTablet} {
     display: flex;
@@ -96,9 +119,14 @@ const ListItem = styled.li<{ isActive: boolean; length: number; linesCount: numb
     font-size: 1.125rem;
     text-align: center;
 
+    &:first-child ${NumberBlock} {
+      margin-top: 0;
+    }
+
     &:first-child ${Text} {
       text-align: left;
       width: 100%;
+      margin-top: 0;
     }
 
     &:last-child ${Text} {
