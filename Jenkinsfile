@@ -30,6 +30,7 @@ pipeline {
     TF_VAR_container_name    = "${env.ECR_REGISTRY}/${NAMESPACE}/${SERVICE_NAME}"
     NPM_RO_TOKEN             = credentials('npm_read_only_token')
     NPM_PUB_TOKEN            = credentials('npm_publish_token')
+    FONTAWESOME_TOKEN        = credentials('fontawesome_token')
     HUSKY_SKIP_HOOKS         = '1'
   }
 
