@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/accordion",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -19,9 +19,7 @@
     "Dmytro B"
   ],
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "devDependencies": {
     "@im-ui/utils": "^0.5.0",
     "@types/jest": "^24.0.21",
