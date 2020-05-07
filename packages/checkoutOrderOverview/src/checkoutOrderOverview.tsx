@@ -13,34 +13,10 @@ import { formatting } from '@im-ui/utils';
 import theme from '@im-ui/theme';
 
 export interface CarDetails {
-  offerID: any;
-  variant?: string;
   make: string;
   model: string;
-  mileage?: number;
-  power?: number;
-  firstRegistration?: string;
-  fuel?: Fuel;
-  consumptionUnit?: string;
-  consumptionCombined?: number;
-  co2?: number;
   price: number;
   image: string;
-}
-
-export enum Fuel {
-  Petrol = 'PETROL',
-  Diesel = 'DIESEL',
-  Lpg = 'LPG',
-  Cng = 'CNG',
-  Gas = 'GAS',
-  Electricity = 'ELECTRICITY',
-  Hybrid = 'HYBRID',
-  Hydrogenium = 'HYDROGENIUM',
-  Ethanol = 'ETHANOL',
-  HybridDiesel = 'HYBRID_DIESEL',
-  HybridAll = 'HYBRID_ALL',
-  Other = 'OTHER'
 }
 
 export interface Translations {
@@ -55,12 +31,7 @@ export interface Translations {
   included: string;
   remark: string;
   services: string;
-  fuel: fuelTranslations;
 }
-
-export type fuelTranslations = {
-  [key in Fuel]: string;
-};
 
 export const translationStrings: Translations = {
   price: 'Fahrzeugpreis',
@@ -73,21 +44,7 @@ export const translationStrings: Translations = {
   total: 'Gesamt',
   included: 'inkl.',
   remark: 'alle Beträge inkl. MwSt',
-  services: 'Optionale InstaMotion Services',
-  fuel: {
-    PETROL: 'Benzin',
-    DIESEL: 'Diesel',
-    LPG: 'Autogas (LPG)',
-    CNG: 'Erdgas (CNG)',
-    GAS: 'Gas',
-    ELECTRICITY: 'Elektro',
-    HYBRID: 'Hybrid (Benzin/Elektro)',
-    HYDROGENIUM: 'Wasserstoff',
-    ETHANOL: 'Ethanol (FFV, E85 etc.)',
-    HYBRID_DIESEL: 'Hybrid (Diesel / Elektro)',
-    HYBRID_ALL: 'Hybrid',
-    OTHER: 'Andere'
-  }
+  services: 'Optionale InstaMotion Services'
 };
 
 export interface CheckoutOrderOverviewProps {
