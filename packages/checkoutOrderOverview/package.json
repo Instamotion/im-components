@@ -23,7 +23,6 @@
   "files": ["dist"],
   "dependencies": {
     "@im-ui/theme": "^1.0.0",
-    "@im-ui/checkbox": "^0.1.10",
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@fortawesome/fontawesome-pro": "^5.13.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",

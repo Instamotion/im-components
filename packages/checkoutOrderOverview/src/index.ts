@@ -1,9 +1,3 @@
-export {
-  default,
-  CheckoutOrderOverviewProps,
-  CarDetails,
-  Translations,
-  Fuel,
-  fuelTranslations,
-  translationStrings
-} from './checkoutOrderOverview';
+export * from './checkoutOrderOverview';
+import def from './checkoutOrderOverview';
+export default def;
