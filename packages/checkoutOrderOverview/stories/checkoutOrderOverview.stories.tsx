@@ -28,11 +28,13 @@ const car: CarDetails = {
 storiesOf('Checkout Order Overview', module).add('Default', () => {
   const props: CheckoutOrderOverviewProps = {
     translations: translationStrings,
-    customPlatesPrice: 50,
+    fullPrice: 13175,
     deliveryPrice: 100,
     registrationPrice: 75,
     car
   };
 
-  return renderWithThemeAndI18n(<CheckoutOrderOverview {...props} />);
+  return renderWithThemeAndI18n(
+    <CheckoutOrderOverview {...props}>Custom license plate</CheckoutOrderOverview>
+  );
 });

@@ -1,12 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Checkbox from '@im-ui/checkbox';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faCoin,
   faTruck,
   faFileAlt,
   faShieldCheck,
-  faArrowAltCircleLeft
+  faArrowAltCircleLeft,
+  faTrafficCone
 } from '@fortawesome/pro-regular-svg-icons';
 import { formatting } from '@im-ui/utils';
 import theme from '@im-ui/theme';
@@ -43,18 +44,17 @@ export enum Fuel {
 }
 
 export interface Translations {
-  carMileage: string;
-  carPower: string;
-  carRego: string;
-  carFuel: string;
-  carConsumption: string;
-  carEmission: string;
+  price: string;
   instaMotionProvides: string;
   delivery: string;
   rego: string;
   warranty: string;
   rightToReturn: string;
+  protection: string;
+  total: string;
   included: string;
+  remark: string;
+  services: string;
   fuel: fuelTranslations;
 }
 
@@ -63,18 +63,17 @@ export type fuelTranslations = {
 };
 
 export const translationStrings: Translations = {
-  carMileage: 'Kilometer',
-  carPower: 'Leistung',
-  carRego: 'Zulassung',
-  carFuel: 'Kraftstoff',
-  carConsumption: 'Verbrauch (kombiniert)',
-  carEmission: 'CO2-Emissionen',
+  price: 'Fahrzeugpreis',
   instaMotionProvides: 'InstaMotion Services',
   delivery: 'Lieferung nach Hause im Wert von',
   rego: 'Zulassung/Registrierung im Wert von',
   warranty: 'Mind. 1 Jahr Garantie',
   rightToReturn: '14 Tage Rückgaberecht',
+  protection: 'Fahrzeugpreis',
+  total: 'Gesamt',
   included: 'inkl.',
+  remark: 'alle Beträge inkl. MwSt',
+  services: 'Optionale InstaMotion Services',
   fuel: {
     PETROL: 'Benzin',
     DIESEL: 'Diesel',
@@ -92,135 +91,156 @@ export const translationStrings: Translations = {
 };
 
 export interface CheckoutOrderOverviewProps {
-  className?: string;
   translations: Translations;
   car: CarDetails;
-  readOnly?: boolean;
+  fullPrice: number;
   deliveryPrice: number;
   registrationPrice: number;
-  customPlatesPrice: number;
-  setWithLicensePlate?: (value: boolean) => void;
-  withLicensePlate?: boolean;
 }
 
-export const CheckoutOrderOverview: React.FC<CheckoutOrderOverviewProps> = ({
+const CheckoutOrderOverview: React.FC<CheckoutOrderOverviewProps> = ({
   translations: t,
-  className,
-  readOnly,
+  car,
+  fullPrice,
   deliveryPrice,
   registrationPrice,
-  customPlatesPrice,
-  car,
-  setWithLicensePlate,
-  withLicensePlate
+  children
 }) => {
   return (
-    <Wrapper className={className}>
-      <Order>
-        <ImgWrapper>
-          <CarImg
-            src={car.image}
-            alt={`${car.make} ${car.model}`}
-            title={`${car.make} ${car.model}`}
-          />
-        </ImgWrapper>
-        <PriceOverview>
-          <CarOverview className="car-overview">
-            <CarNameAndPrice>
-              <CarName className="car-name">{`${car.make} ${car.model}`}</CarName>
-              <CarPrice>{formatting.formatEuroCurrency(Number(car.price), 'de-DE')}</CarPrice>
-            </CarNameAndPrice>
-            <CarInfo className="car-info">
-              {car.mileage && (
-                <CarInfoItem>
-                  <CarInfoItemLabel>{t.carMileage}</CarInfoItemLabel>{' '}
-                  {`${formatting.formatNumber(Number(car.mileage))} km`}
-                </CarInfoItem>
-              )}
-              {car.power && (
-                <CarInfoItem>
-                  <CarInfoItemLabel>{t.carPower}</CarInfoItemLabel>{' '}
-                  {`${car.power} KW (${Math.floor(Number(car.power) / 0.73549875)} PS)`}
-                </CarInfoItem>
-              )}
-              {car.firstRegistration && (
-                <CarInfoItem>
-                  <CarInfoItemLabel>{t.carRego}</CarInfoItemLabel> {car.firstRegistration}
-                </CarInfoItem>
-              )}
-              {car.fuel && (
-                <CarInfoItem>
-                  <CarInfoItemLabel>{t.carFuel}</CarInfoItemLabel> {t.fuel[car.fuel]}
-                </CarInfoItem>
-              )}
-              {car.consumptionCombined && (
-                <CarInfoItem>
-                  <CarInfoItemLabel>{t.carConsumption}</CarInfoItemLabel>{' '}
-                  {`${car.consumptionCombined}/100km*`}
-                </CarInfoItem>
-              )}
-              <CarInfoItem>
-                <CarInfoItemLabel>{t.carEmission}</CarInfoItemLabel> {`${car.co2} g/km*`}
-              </CarInfoItem>
-            </CarInfo>
-          </CarOverview>
+    <Order>
+      <ImgWrapper>
+        <CarImg
+          src={car.image}
+          alt={`${car.make} ${car.model}`}
+          title={`${car.make} ${car.model}`}
+        />
+      </ImgWrapper>
+      <CarDetails>
+        <Headline>
+          <Title>{`${car.make} ${car.model}`}</Title>
+        </Headline>
 
-          <ServicesOverview>
-            <p>
-              <strong>{t.instaMotionProvides}</strong>
-            </p>
-            <Service>
-              <IconStyled icon={faTruck} color="oil" />
-              {t.delivery}
-            </Service>
-            <Price>{formatting.formatEuroCurrency(deliveryPrice)}</Price>
+        <ServiceItem>
+          <Icon>
+            <IconStyled icon={faCoin} color="oil" />
+          </Icon>
+          <Text>{t.price}</Text>
+          <Info>{formatting.formatEuroCurrency(car.price)}</Info>
+        </ServiceItem>
 
-            <Service>
-              <IconStyled icon={faFileAlt} color="oil" />
-              {t.rego}
-            </Service>
-            <Price>{formatting.formatEuroCurrency(registrationPrice)}</Price>
+        <Line></Line>
 
-            <Service>
-              <IconStyled icon={faShieldCheck} color="oil" />
-              {t.warranty}
-            </Service>
-            <Price>{t.included}</Price>
+        <Headline>
+          <Title>{t.instaMotionProvides}</Title>
+        </Headline>
 
-            <Service>
-              <IconStyled icon={faArrowAltCircleLeft} color="oil"></IconStyled>
-              {t.rightToReturn}
-            </Service>
-            <Price>{t.included}</Price>
-          </ServicesOverview>
-          <Remark>alle Beträge inkl. MwSt</Remark>
-        </PriceOverview>
-      </Order>
-      <CustomPlates>
-        <ImgWrapper>
-          <img src="https://cdn.instamotion.com/images/license-plate.svg" alt="license plate"></img>
-        </ImgWrapper>
-        <CustomPlatesOverview>
-          <Checkbox
-            id="custom-plates"
-            checked={!!withLicensePlate}
-            onChange={setWithLicensePlate}
-            message="Wunschkennzeichen"
-            disabled={readOnly}
-          />
-          <Price>{formatting.formatEuroCurrency(readOnly ? 0 : customPlatesPrice)}</Price>
-        </CustomPlatesOverview>
-      </CustomPlates>
-    </Wrapper>
+        <ServiceItem>
+          <Icon>
+            <IconStyled icon={faTruck} color="oil" />
+          </Icon>
+          <Text>{t.delivery}</Text>
+          <Info>{formatting.formatEuroCurrency(deliveryPrice)}</Info>
+        </ServiceItem>
+
+        <ServiceItem>
+          <Icon>
+            <IconStyled icon={faFileAlt} color="oil" />
+          </Icon>
+          <Text>{t.rego}</Text>
+          <Info>{formatting.formatEuroCurrency(registrationPrice)}</Info>
+        </ServiceItem>
+
+        <ServiceItem>
+          <Icon>
+            <IconStyled icon={faShieldCheck} color="oil" />
+          </Icon>
+          <Text>{t.warranty}</Text>
+          <Info>{t.included}</Info>
+        </ServiceItem>
+
+        <ServiceItem>
+          <Icon>
+            <IconStyled icon={faArrowAltCircleLeft} color="oil" />
+          </Icon>
+          <Text>{t.rightToReturn}</Text>
+          <Info>{t.included}</Info>
+        </ServiceItem>
+
+        <ServiceItem>
+          <Icon>
+            <IconStyled icon={faTrafficCone} color="oil" />
+          </Icon>
+          <Text>{t.protection}</Text>
+          <Info>{t.included}</Info>
+        </ServiceItem>
+
+        <Remark>{t.remark}</Remark>
+
+        <Line></Line>
+
+        {children && (
+          <Headline>
+            <Title>{t.services}</Title>
+          </Headline>
+        )}
+
+        {children}
+
+        {children && <Line></Line>}
+
+        <Headline>
+          <Title>{t.total}</Title>
+          <CarPrice>{formatting.formatEuroCurrency(fullPrice)}</CarPrice>
+        </Headline>
+      </CarDetails>
+    </Order>
   );
 };
 
-const Wrapper = styled.section`
-  margin-bottom: 3rem;
-  text-align: left;
+export const LineStyled = styled.svg`
+  width: 100%;
+  height: 1px;
+  margin: 1rem 0;
 `;
 
-const Order = styled.section`
+export const Line: React.FC = () => (
+  <LineStyled>
+    <line
+      x1="100%"
+      y1="0%"
+      x2="0%"
+      y2="100%"
+      strokeDasharray="10"
+      style={{ stroke: theme.color.silver, strokeWidth: 1 }}
+    />
+  </LineStyled>
+);
+
+export const ServiceItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  color: ${theme.color.brightGrey};
+  margin-bottom: 0.5rem;
+`;
+
+export const Icon = styled.div`
+  flex-grow: 0;
+  width: 2.25rem;
+`;
+
+export const Text = styled.div`
+  flex-grow: 0.7;
+`;
+
+export const Info = styled.div`
+  flex-grow: 0.3;
+  min-width: 4rem;
+  text-align: right;
+  font-weight: bold;
+  color: ${theme.color.oil};
+`;
+
+export const Order = styled.section`
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -229,7 +249,7 @@ const Order = styled.section`
   }
 `;
 
-const ImgWrapper = styled.div`
+export const ImgWrapper = styled.div`
   padding-bottom: 1rem;
   font-size: 1.2rem;
   ${theme.mediaQueries.whenTablet} {
@@ -240,13 +260,13 @@ const ImgWrapper = styled.div`
   }
 `;
 
-const CarImg = styled.img`
+export const CarImg = styled.img`
   display: block;
   width: 100%;
   height: auto;
 `;
 
-const PriceOverview = styled.div`
+export const CarDetails = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -256,96 +276,40 @@ const PriceOverview = styled.div`
   }
 `;
 
-const CarOverview = styled.div`
-  padding-bottom: 1rem;
-  border-bottom: 2px dashed ${theme.color.silver};
-`;
+export const IconStyled = styled(FontAwesomeIcon)``;
 
-const CarInfo = styled.div`
-  font-size: 0.8rem;
-`;
-
-const ServicesOverview = styled.div`
-  position: relative;
-  border-bottom: 2px dashed ${theme.color.silver};
-  p {
-    width: 100%;
-  }
-`;
-
-const IconStyled = styled(FontAwesomeIcon)``;
-
-const Service = styled.div`
-  float: left;
-  width: 70%;
-  padding-bottom: 1rem;
-  ${IconStyled} {
-    padding: 0 1rem 0 0;
-  }
-`;
-
-const Price = styled.div`
+export const Price = styled.div`
   max-width: 35%;
   float: right;
   font-size: 1rem;
 `;
 
-const CarPrice = styled(Price)`
-  font-weight: bold;
-`;
-
-const Remark = styled.div`
-  padding-top: 1rem;
+export const Remark = styled.div`
+  font-size: 0.75rem;
   text-align: right;
-  color: lightgray;
+  color: ${theme.color.silver};
 `;
 
-const CustomPlates = styled.section`
-  border-top: solid 2px ${theme.color.oil};
-  padding: 1rem 0;
-  display: flex;
-  justify-content: flex-end;
-  ${theme.mediaQueries.whenTablet} {
-    flex-direction: row;
-    padding: 2rem 0;
-  }
-`;
-
-const CustomPlatesOverview = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  ${theme.mediaQueries.whenTablet} {
-    width: 70%;
-    padding-left: 2rem;
-    padding-top: 0.6rem;
-  }
-`;
-
-const CarNameAndPrice = styled.div`
+export const Headline = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
+  margin: 1rem 0;
   justify-content: space-between;
   ${theme.mediaQueries.whenTablet} {
     flex-direction: row;
-    padding: 0 0 1rem;
+    margin: 0.5rem 0 1rem;
   }
 `;
 
-const CarName = styled.div`
+export const Title = styled.div`
+  color: ${theme.color.oil};
+  font-size: 1.125rem;
   font-weight: bold;
 `;
 
-const CarInfoItem = styled.div`
-  margin-bottom: 0.5rem;
-  display: block;
-`;
-
-const CarInfoItemLabel = styled.span`
-  min-width: 9rem;
-  display: inline-block;
+export const CarPrice = styled(Price)`
+  font-weight: bold;
+  font-size: 1.125rem;
 `;
 
 export default CheckoutOrderOverview;
