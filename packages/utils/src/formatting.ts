@@ -1,5 +1,4 @@
 export const formatEuroCurrency = (val: number, locale = 'de-DE'): string => {
-  console.log(locale);
   return new Intl.NumberFormat(locale, {
     style: 'currency',
     currency: 'EUR'
