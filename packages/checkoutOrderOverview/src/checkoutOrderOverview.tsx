@@ -66,6 +66,9 @@ const CheckoutOrderOverview: React.FC<CheckoutOrderOverviewProps> = ({
   return (
     <Order>
       <ImgWrapper>
+        <HeadlineMobile>
+          <Title>{`${car.make} ${car.model}`}</Title>
+        </HeadlineMobile>
         <CarImg
           src={car.image}
           alt={`${car.make} ${car.model}`}
@@ -73,9 +76,9 @@ const CheckoutOrderOverview: React.FC<CheckoutOrderOverviewProps> = ({
         />
       </ImgWrapper>
       <CarDetails>
-        <Headline>
+        <HeadlineDesktop>
           <Title>{`${car.make} ${car.model}`}</Title>
-        </Headline>
+        </HeadlineDesktop>
 
         <ServiceItem>
           <Icon>
@@ -157,7 +160,10 @@ const CheckoutOrderOverview: React.FC<CheckoutOrderOverviewProps> = ({
 export const LineStyled = styled.svg`
   width: 100%;
   height: 1px;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  ${theme.mediaQueries.whenTablet} {
+    margin: 1rem 0;
+  }
 `;
 
 export const Line: React.FC = () => (
@@ -183,6 +189,10 @@ export const ServiceItem = styled.div`
 export const Icon = styled.div`
   flex-grow: 0;
   width: 2.25rem;
+  display: none;
+  ${theme.mediaQueries.whenTablet} {
+    display: block;
+  }
 `;
 
 export const Text = styled.div`
@@ -249,12 +259,25 @@ export const Remark = styled.div`
 
 export const Headline = styled.div`
   display: flex;
-  flex-direction: column;
-  margin: 1rem 0;
+  flex-direction: row;
+  margin: 0 0 1rem;
   justify-content: space-between;
   ${theme.mediaQueries.whenTablet} {
-    flex-direction: row;
     margin: 0.5rem 0 1rem;
+  }
+`;
+
+export const HeadlineMobile = styled(Headline)`
+  justify-content: center;
+  ${theme.mediaQueries.whenTablet} {
+    display: none;
+  }
+`;
+
+export const HeadlineDesktop = styled(Headline)`
+  display: none;
+  ${theme.mediaQueries.whenTablet} {
+    display: block;
   }
 `;
 
@@ -267,6 +290,7 @@ export const Title = styled.div`
 export const CarPrice = styled(Price)`
   font-weight: bold;
   font-size: 1.125rem;
+  color: ${theme.color.oil};
 `;
 
 export default CheckoutOrderOverview;
