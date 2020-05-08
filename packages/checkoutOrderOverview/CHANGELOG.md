@@ -1,5 +1,13 @@
 # @im-ui/checkout-order-overview
 
+## 0.2.1
+
+### Patch Changes
+
+- 6681993: Overview mobile design improvements
+- Updated dependencies [6681993]
+  - @im-ui/utils@0.5.4
+
 ## 0.2.0
 
 ### Minor Changes

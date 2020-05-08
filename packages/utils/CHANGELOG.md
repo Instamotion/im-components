@@ -1,5 +1,11 @@
 # @im-ui/utils
 
+## 0.5.4
+
+### Patch Changes
+
+- 6681993: Overview mobile design improvements
+
 ## 0.5.3
 
 ### Patch Changes
