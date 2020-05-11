@@ -22,7 +22,8 @@ export const ButtonToggleContainer = styled.div`
 `;
 
 export const ButtonToggleItem = styled.div<ButtonToggleItemStyledProps>`
-  min-width: ${px2rem(40)};
+  min-width: ${px2rem(20)};
+  max-width: ${px2rem(40)};
   height: ${px2rem(40)};
   line-height: ${px2rem(40)};
   border: ${px2rem(0.5)} solid ${theme.color.silver};
@@ -30,6 +31,7 @@ export const ButtonToggleItem = styled.div<ButtonToggleItemStyledProps>`
   text-align: center;
   margin-right: ${px2rem(1)};
   cursor: pointer;
+  flex: 1;
 
   ${props =>
     props.selected &&
