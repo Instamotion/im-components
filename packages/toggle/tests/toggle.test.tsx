@@ -2,7 +2,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
-import Toggle, { ToggleProps, WrapperLabel, ToggleInput } from '../src/toggle';
+import Toggle, { WrapperLabel, ToggleInput } from '../src/toggle';
 
 const onChangeEvent = jest.fn();
 
@@ -10,7 +10,7 @@ describe('Toggle', () => {
   const props = {
     id: 'switcher id',
     onChange: onChangeEvent,
-    messageId: 'Action name'
+    label: 'Action name'
   };
   it('renders switcher component', () => {
     const wrapper = mount(renderWithThemeAndI18n(<Toggle {...props} />));
@@ -20,7 +20,7 @@ describe('Toggle', () => {
 
   it('renders switcher with label', () => {
     const wrapper = mount(
-      renderWithThemeAndI18n(<Toggle {...props} messageId="serp.filters.topAngebote" />)
+      renderWithThemeAndI18n(<Toggle {...props} label="serp.filters.topAngebote" />)
     );
     expect(wrapper.find(Toggle)).toHaveLength(1);
     expect(wrapper.find(WrapperLabel)).toHaveLength(1);

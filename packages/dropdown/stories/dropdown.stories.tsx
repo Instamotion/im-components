@@ -23,7 +23,7 @@ storiesOf('Dropdown', module)
 
     return renderWithThemeAndI18n(
       <Fragment>
-        <Label messageId="label" />
+        <Label text="Country" />
         <Dropdown {...props} />
       </Fragment>,
       'de',

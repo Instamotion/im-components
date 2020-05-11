@@ -179,7 +179,7 @@ const InputCustomValidation = (): React.ReactElement => {
           id="overwrite-validation"
           checked={withCustomValid}
           onChange={i => setWithCustomValid(i)}
-          message="Use additional validation"
+          label="Use additional validation"
         />
       </div>
       <div>
@@ -187,7 +187,7 @@ const InputCustomValidation = (): React.ReactElement => {
           id="is-it-valid"
           checked={isValid}
           onChange={i => setIsValid(i)}
-          message="Is input valid"
+          label="Is input valid"
         />
       </div>
       <Input

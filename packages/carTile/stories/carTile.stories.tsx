@@ -5,7 +5,7 @@ import { renderWithThemeAndI18n } from '@im-ui/utils';
 import CarTile, { CarTileProps } from '../src';
 import messages from '../utils/locales';
 
-storiesOf('CarTile', module).add('Common car tile', () => {
+storiesOf('Complex | Car tile', module).add('Common car tile', () => {
   const carDetails: CarTileProps = {
     id: 'SJNFEAF15U7135383',
     className: 'SJNFEAF15U7135383',

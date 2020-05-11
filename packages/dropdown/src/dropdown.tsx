@@ -15,7 +15,7 @@ export interface DropdownOptionProps {
 export type DropdownProps = React.SelectHTMLAttributes<HTMLSelectElement> & {
   id?: string;
   options: DropdownOptionProps[];
-  label?: string;
+  label?: JSX.Element | string;
   disabled?: boolean;
   selected?: string;
   value?: DropdownValue;
@@ -51,7 +51,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <DropdownComponent style={{ width }}>
-      {label && <Label messageId={label} />}
+      {label && <Label text={label} disabled={disabled} required={required} />}
       <DropdownContainer>
         <DropdownSelect
           id={id}

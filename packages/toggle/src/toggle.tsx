@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import styled, { css } from 'styled-components';
 import Label from '@im-ui/label';
 import theme from '@im-ui/theme';
 
@@ -14,7 +14,8 @@ export interface ToggleProps {
   value?: string;
   checked?: boolean;
   disabled?: boolean;
-  messageId?: string;
+  label?: JSX.Element | string;
+  fullWidth?: boolean;
   onChange?: (checked: boolean, e: ClickChangeEvent) => void;
 }
 
@@ -24,41 +25,39 @@ export const Toggle: React.FC<ToggleProps> = ({
   disabled = false,
   onChange,
   className,
-  messageId,
+  label,
+  fullWidth = false,
   value
 }) => {
-  const [state, setState] = React.useState(checked);
-  const handleOnChange = (e: ClickChangeEvent): void => {
-    if (onChange && !disabled) {
-      setState(!state);
-      onChange(!state, e);
-    }
-  };
-
-  useEffect(() => {
-    setState(checked);
-  }, [checked]);
-
   return (
-    <ToggleControl className={className}>
-      {messageId && <WrapperLabel messageId={messageId} />}
+    <ToggleControl fullWidth={fullWidth} id={id} className={className}>
+      {label && <WrapperLabel htmlFor={id} text={label} disabled={disabled} />}
       <ToggleInput
         type="checkbox"
         id={id}
         name={id}
         value={value}
-        checked={state}
+        checked={checked}
         disabled={disabled}
-        onChange={handleOnChange}
+        onChange={(e: ClickChangeEvent): void => {
+          if (onChange && !disabled) {
+            onChange(!checked, e);
+          }
+        }}
       />
     </ToggleControl>
   );
 };
 
-export const ToggleControl = styled.span`
+export const ToggleControl = styled.span<ToggleProps>`
   position: relative;
   display: flex;
   align-items: center;
+  ${props =>
+    props.fullWidth &&
+    css`
+      justify-content: space-between;
+    `}
 `;
 
 export const WrapperLabel = styled(Label)`
@@ -78,11 +77,16 @@ export const ToggleInput = styled.input`
   cursor: pointer;
   margin: 0;
   transition-duration: 0.2s;
-
-  ::after {
+  ${props =>
+      props.disabled &&
+      css`
+        opacity: 0.5;
+      `}
+    ::after {
     content: '';
     position: absolute;
-    top: 2px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 2px;
     width: 1rem;
     height: 1rem;

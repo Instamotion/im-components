@@ -15,7 +15,7 @@ const car: CarDetails = {
   price: 13000
 };
 
-storiesOf('Checkout Order Overview', module).add('Default', () => {
+storiesOf('Complex | Checkout order overview', module).add('Default', () => {
   const props: CheckoutOrderOverviewProps = {
     translations: translationStrings,
     fullPrice: 13175,

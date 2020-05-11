@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ErrorMessage from '@im-ui/error-message';
 import theme from '@im-ui/theme';
 import { css } from '@im-ui/utils';
+import Label from '@im-ui/label';
 
 const { px2rem } = css;
 
@@ -13,23 +14,25 @@ export type ClickChangeEvent =
 export interface CheckboxProps {
   className?: string;
   id: string;
-  message?: JSX.Element | string;
+  label?: JSX.Element | string;
   name?: string;
   value?: string;
   checked?: boolean;
   disabled?: boolean;
   required?: boolean;
-  errorMessage?: JSX.Element;
+  errorMessage?: JSX.Element | string;
   onChange?: (checked: boolean, e: ClickChangeEvent) => void;
 }
 
 export const Checkmark = styled.label`
-  position: absolute;
-  left: 0;
-  top: -1px;
+  display: inline-block;
   box-sizing: border-box;
-  width: ${px2rem(16)};
-  height: ${px2rem(16)};
+  position: relative;
+  vertical-align: middle;
+  margin-left: -${px2rem(20)};
+  width: 1rem;
+  height: 1rem;
+  margin-right: ${px2rem(3)};
   border: ${px2rem(2)} solid ${theme.color.silver};
   background-color: ${theme.color.white};
 
@@ -47,6 +50,10 @@ export const Checkmark = styled.label`
   }
 `;
 
+export const CheckboxWrapper = styled.div`
+  padding-left: ${px2rem(20)};
+`;
+
 export const CheckboxInput = styled.input`
   position: absolute;
   display: none;
@@ -57,7 +64,6 @@ export const CheckboxControl = styled.span`
   position: relative;
   user-select: none;
   flex-direction: column;
-  padding-left: ${px2rem(20)};
 
   & input:checked ~ ${Checkmark} {
     border-color: ${theme.color.oil};
@@ -72,24 +78,13 @@ export const CheckboxControl = styled.span`
   }
 `;
 
-export const Label = styled.label`
-  font-size: 0.75rem;
-  color: ${theme.color.brightGrey};
-  font-weight: bold;
-  display: flex;
-  cursor: pointer;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  user-select: none;
-`;
-
 export const Checkbox: React.FC<CheckboxProps> = ({
   id,
   checked = false,
   disabled = false,
   onChange,
   className,
-  message,
+  label,
   required,
   value,
   errorMessage
@@ -104,21 +99,19 @@ export const Checkbox: React.FC<CheckboxProps> = ({
 
   return (
     <CheckboxControl className={className}>
-      <CheckboxInput
-        type="checkbox"
-        id={id}
-        name={id}
-        onChange={handleOnChange}
-        checked={state}
-        value={value}
-        required={required}
-      />
-      <Checkmark htmlFor={id} />
-      {message && (
-        <Label htmlFor={id}>
-          {message} {required && '*'}
-        </Label>
-      )}
+      <CheckboxWrapper>
+        <CheckboxInput
+          type="checkbox"
+          id={id}
+          name={id}
+          onChange={handleOnChange}
+          checked={state}
+          value={value}
+          required={required}
+        />
+        <Checkmark htmlFor={id} />
+        {label && <Label text={label} disabled={disabled} htmlFor={id} placement={'inline'} />}
+      </CheckboxWrapper>
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </CheckboxControl>
   );

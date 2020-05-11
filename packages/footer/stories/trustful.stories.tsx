@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import TrustfulLogo from '../src/trustfulSection/trustfulLogo';
 import TrustfulSection from '../src/trustfulSection';
 
-storiesOf('Footer | Trustful section', module)
+storiesOf('Complex | Footer', module)
   .add('Trustful logo', () => {
     const TrustfulLogoSingle = styled(TrustfulLogo)`
       margin: 20px;

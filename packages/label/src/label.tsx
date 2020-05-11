@@ -1,36 +1,41 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import theme from '@im-ui/theme';
-import { FormattedMessage } from 'react-intl';
+
+export type Placement = 'stack' | 'inline';
 
 export interface LabelProps {
-  messageId: string;
+  text: JSX.Element | string;
   required?: boolean;
   disabled?: boolean;
   htmlFor?: string;
   className?: string;
+  placement?: Placement;
 }
 
-export const LabelComponent = styled.label`
+const LabelComponent = styled.label<LabelProps>`
   font-size: 0.75rem;
-  color: ${theme.color.brightGrey};
   font-weight: bold;
-  display: flex;
   cursor: pointer;
-  margin-bottom: 0.5rem;
   text-transform: uppercase;
-  user-select: none;
-  ${(props: { disabled?: boolean }) =>
-    props.disabled &&
+  ${({ placement = 'stack' }) =>
     css`
-      color: ${theme.color.silver};
+      margin-bottom: ${placement === 'stack' ? '0.5rem' : '0'};
     `}
+  ${({ disabled }) => css`
+    color: ${disabled ? theme.color.silver : theme.color.brightGrey};
+  `}
 `;
 
-const Label: React.FC<LabelProps> = ({ required, messageId, ...props }) => (
+const Asterisk = styled.span<{ disabled: boolean | undefined }>`
+  padding-left: 0.2rem;
+  color: ${({ disabled }) => (disabled ? theme.color.silver : theme.color.flamePea)};
+`;
+
+const Label: React.FC<LabelProps> = props => (
   <LabelComponent {...props}>
-    <FormattedMessage id={messageId} />
-    {required && '*'}
+    <span>{props.text}</span>
+    {props.required && <Asterisk disabled={props.disabled}>*</Asterisk>}
   </LabelComponent>
 );
 
