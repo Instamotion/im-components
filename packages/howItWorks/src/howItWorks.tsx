@@ -172,6 +172,7 @@ const HowItWorksComponent: React.FC<HowItWorksProps> = ({ items, currentStep }) 
     <List>
       {items.map((item, index) => (
         <ItemElement
+          key={`hiw-${index}`}
           item={item}
           index={index}
           currentStep={currentStep}

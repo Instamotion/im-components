@@ -7,8 +7,8 @@ import Footer from '../src';
 
 import messages from '../utils/locales';
 
-storiesOf('Footer | Variants', module)
-  .add('minimal', () => {
+storiesOf('Complex | Footer', module)
+  .add('Minimal', () => {
     const items = [
       { text: text('home', 'home'), href: '#' },
       { text: text('test', 'test'), href: '#' },
@@ -29,7 +29,7 @@ storiesOf('Footer | Variants', module)
       messages
     );
   })
-  .add('full', () =>
+  .add('Full', () =>
     renderWithThemeAndI18n(
       <Footer showEnvkv variant="full" googleToken="123" facebookToken="qwe" />,
       'de',

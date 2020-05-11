@@ -1,20 +1,88 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { renderWithThemeAndI18n } from '@im-ui/utils';
-import messages from '../utils/locales';
 import { action } from '@storybook/addon-actions';
 
-import Toggle, { ToggleProps } from '../src';
+import Toggle from '../src';
 
-storiesOf('Toggle', module).add('Default', () => {
-  const props: ToggleProps = {
-    id: 'switcher id',
-    disabled: false,
-    messageId: 'serp.filters.topAngebote',
-    onChange: checked => {
-      action('clicked')(checked);
-    }
-  };
+storiesOf('Toggle', module)
+  .add('Default', () => {
+    const [checked, setChecked] = useState(false);
 
-  return renderWithThemeAndI18n(<Toggle {...props} />, 'de', messages);
-});
+    return (
+      <Toggle
+        id="id1"
+        label="Top Offers"
+        checked={checked}
+        onChange={checked => {
+          setChecked(checked);
+          action('clicked')(checked);
+        }}
+      />
+    );
+  })
+
+  .add('Checked by default', () => {
+    const [checked, setChecked] = useState(true);
+
+    return (
+      <Toggle
+        id="id1"
+        label="Top Offers"
+        checked={checked}
+        onChange={checked => {
+          setChecked(checked);
+          action('clicked')(checked);
+        }}
+      />
+    );
+  })
+
+  .add('Checked and disabled', () => {
+    const [checked, setChecked] = useState(true);
+
+    return (
+      <Toggle
+        id="id1"
+        label="Top Offers"
+        disabled={true}
+        checked={checked}
+        onChange={checked => {
+          setChecked(checked);
+          action('clicked')(checked);
+        }}
+      />
+    );
+  })
+
+  .add('Disabled', () => {
+    const [checked, setChecked] = useState(false);
+
+    return (
+      <Toggle
+        id="id1"
+        label="Top Offers"
+        disabled={true}
+        checked={checked}
+        onChange={checked => {
+          setChecked(checked);
+          action('clicked')(checked);
+        }}
+      />
+    );
+  })
+
+  .add('Full width', () => {
+    const [checked, setChecked] = useState(false);
+
+    return (
+      <Toggle
+        id="id1"
+        fullWidth={true}
+        label="Top Offers"
+        onChange={checked => {
+          setChecked(checked);
+          action('clicked')(checked);
+        }}
+      />
+    );
+  });

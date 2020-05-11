@@ -10,7 +10,7 @@ export type Range = [DropdownValue, DropdownValue];
 export interface RangeDropdownProps {
   className?: string;
   id: string;
-  label?: string;
+  label?: JSX.Element | string;
   placeholderFrom: string;
   placeholderTo: string;
   optionsFrom: DropdownOptionProps[];
@@ -131,7 +131,7 @@ export const RangeDropdown: React.FC<RangeDropdownProps> = ({
   const [valueFrom, valueTo] = range;
   return (
     <RangeSelectContainer id={id} className={className}>
-      {label && <Label messageId={label} />}
+      {label && <Label text={label} />}
       <RangeSelectsWrapper>
         {renderSelector(
           id,

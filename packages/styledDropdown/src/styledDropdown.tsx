@@ -15,7 +15,7 @@ export type OptionType = {
 
 export interface StyledDropdownProps {
   options: OptionType[];
-  label?: string;
+  label?: JSX.Element | string;
   disabled?: boolean;
   placeholder?: string;
   defaultItem?: OptionType;
@@ -52,7 +52,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
         selectedItem
       }) => (
         <StyledDropdownWrapper {...getRootProps()}>
-          {label ? <Label messageId={label} disabled={isDisabled} {...getLabelProps()} /> : null}
+          {label && <Label text={label} disabled={isDisabled} {...getLabelProps()} />}
           <DropdownContainer isOpen={isOpen} disabled={isDisabled} {...getToggleButtonProps()}>
             {selectedItem && selectedItem.iconName && (
               <DropdownIcon

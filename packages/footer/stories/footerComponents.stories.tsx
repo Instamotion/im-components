@@ -12,8 +12,8 @@ import SocialContainer from '../src/social/socialContainer';
 
 import messages from '../utils/locales';
 
-storiesOf('Footer | Components', module)
-  .add('newsletterForm', () =>
+storiesOf('Complex | Footer', module)
+  .add('News letter form', () =>
     renderWithThemeAndI18n(
       <MailContainer>
         <MailContent linkHref="#" />

@@ -7,7 +7,7 @@ function keysOf<P, T = keyof P>(obj: P) {
   return (Object.keys(obj) as any) as T[];
 }
 
-storiesOf('Theme', module).add('colors', () => {
+storiesOf('Common | Theme', module).add('colors', () => {
   return (
     <div>
       {keysOf(theme.color).map((colorName: AvailableColors) => (

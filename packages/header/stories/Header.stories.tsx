@@ -7,9 +7,6 @@ import messages from '../utils/locales';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
 import TagManager from 'react-gtm-module';
 
-const stories = storiesOf('Header', module);
-stories.addDecorator(withKnobs);
-
 const GtmWrapper: React.FC<{ children: ReactNode }> = ({ children }): JSX.Element => {
   useEffect(() => {
     TagManager.initialize({ gtmId: '' });
@@ -17,7 +14,9 @@ const GtmWrapper: React.FC<{ children: ReactNode }> = ({ children }): JSX.Elemen
   return <>{children}</>;
 };
 
-storiesOf('Header', module).add('default', () => {
+const stories = storiesOf('Complex | Header', module);
+stories.addDecorator(withKnobs);
+stories.add('default', () => {
   const props: HeaderProps = {
     phoneNumber: text('phone number', '089-411151-100'),
     favoritesCount: number('favorites', 23),

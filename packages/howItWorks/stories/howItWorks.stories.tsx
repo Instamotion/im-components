@@ -5,7 +5,7 @@ import messages from '../utils/locales';
 
 import HowItWorks, { HowItWorksProps } from '../src';
 
-storiesOf('How It Works', module).add('Default', () => {
+storiesOf('Complex | How It Works', module).add('Default', () => {
   const props: HowItWorksProps = {
     currentStep: 1,
     items: [
