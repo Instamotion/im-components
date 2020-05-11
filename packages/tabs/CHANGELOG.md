@@ -1,5 +1,11 @@
 # @im-ui/tabs
 
+## 0.1.2
+
+### Patch Changes
+
+- e50bf55: Fixes dependencies for tabs
+
 ## 0.1.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @im-ui/toggle
 
+## 1.0.1
+
+### Patch Changes
+
+- 4864d15: cleaning up toggle component
+
 ## 1.0.0
 
 ### Major Changes
