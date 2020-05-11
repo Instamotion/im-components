@@ -1,5 +1,18 @@
 # @im-ui/dropdown
 
+## 1.0.0
+
+### Major Changes
+
+- 566d0cf: Fixes various issues for multiple components, reorganises the stories a bit
+
+### Patch Changes
+
+- Updated dependencies [566d0cf]
+  - @im-ui/label@1.0.0
+  - @im-ui/error-message@0.1.6
+  - @im-ui/theme@1.0.1
+
 ## 0.2.6
 
 ### Patch Changes

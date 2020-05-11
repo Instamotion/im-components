@@ -1,5 +1,13 @@
 # @im-ui/pagination
 
+## 0.1.1
+
+### Patch Changes
+
+- Updated dependencies [566d0cf]
+  - @im-ui/label@1.0.0
+  - @im-ui/theme@1.0.1
+
 ## 0.1.0
 
 ### Minor Changes

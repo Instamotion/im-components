@@ -1,5 +1,17 @@
 # @im-ui/styled-dropdown
 
+## 0.2.0
+
+### Minor Changes
+
+- 566d0cf: Fixes various issues for multiple components, reorganises the stories a bit
+
+### Patch Changes
+
+- Updated dependencies [566d0cf]
+  - @im-ui/label@1.0.0
+  - @im-ui/theme@1.0.1
+
 ## 0.1.7
 
 ### Patch Changes

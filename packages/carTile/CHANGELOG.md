@@ -1,5 +1,16 @@
 # @im-ui/car-tile
 
+## 0.1.13
+
+### Patch Changes
+
+- 566d0cf: Fixes various issues for multiple components, reorganises the stories a bit
+- Updated dependencies [566d0cf]
+  - @im-ui/checkbox@1.0.0
+  - @im-ui/label@1.0.0
+  - @im-ui/error-message@0.1.6
+  - @im-ui/theme@1.0.1
+
 ## 0.1.12
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # @im-ui/input
 
+## 0.3.0
+
+### Minor Changes
+
+- 566d0cf: Fixes various issues for multiple components, reorganises the stories a bit
+
+### Patch Changes
+
+- Updated dependencies [566d0cf]
+  - @im-ui/checkbox@1.0.0
+  - @im-ui/label@1.0.0
+  - @im-ui/error-message@0.1.6
+  - @im-ui/theme@1.0.1
+
 ## 0.2.8
 
 ### Patch Changes

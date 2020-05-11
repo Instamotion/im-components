@@ -1,5 +1,13 @@
 # @im-ui/checkout-order-overview
 
+## 0.2.2
+
+### Patch Changes
+
+- 566d0cf: Fixes various issues for multiple components, reorganises the stories a bit
+- Updated dependencies [566d0cf]
+  - @im-ui/theme@1.0.1
+
 ## 0.2.1
 
 ### Patch Changes
