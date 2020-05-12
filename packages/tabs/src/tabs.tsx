@@ -53,7 +53,7 @@ const Tabs: React.FC<TabsProps> = ({ children, className }) => {
 
     React.Children.toArray(children)
       .filter((_, index) => index % 2 === 0)
-      .forEach(element => tabs.push(<Tab>{element}</Tab>));
+      .forEach((element, index) => tabs.push(<Tab key={`tab-${index}`}>{element}</Tab>));
 
     return tabs;
   };
@@ -63,7 +63,9 @@ const Tabs: React.FC<TabsProps> = ({ children, className }) => {
 
     React.Children.toArray(children)
       .filter((_, index) => index % 2 != 0)
-      .forEach(element => tabPanels.push(<TabPanel>{element}</TabPanel>));
+      .forEach((element, index) =>
+        tabPanels.push(<TabPanel key={`tp-${index}`}>{element}</TabPanel>)
+      );
 
     return tabPanels;
   };

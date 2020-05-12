@@ -10,6 +10,7 @@ export interface HowItWorksProps {
 
 const List = styled.ol`
   display: flex;
+  margin: 0;
   flex-direction: column;
   padding: 0;
   list-style: none;
@@ -17,7 +18,6 @@ const List = styled.ol`
 
   ${theme.mediaQueries.whenTablet} {
     flex-direction: row;
-    margin-bottom: 1rem;
   }
 `;
 
@@ -40,7 +40,6 @@ const Number = styled.span`
     margin: 0 0 1rem;
     font-size: 1rem;
     line-height: 1.5rem;
-    /* border: 0.5rem solid ${theme.color.lightGrey}; */
   }
 `;
 
@@ -75,7 +74,6 @@ const LineAfter = styled(Line)`
 const NumberBlock = styled.div`
   display: flex;
   flex-direction: column;
-  /* box-sizing: border-box; */
   ${theme.mediaQueries.whenTablet} {
     &:first-child {
       margin-top: 0;
@@ -86,7 +84,7 @@ const NumberBlock = styled.div`
 `;
 const Text = styled.span`
   width: 70%;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   margin: 0.75rem 0;
   ${theme.mediaQueries.whenTablet} {
@@ -162,12 +160,6 @@ const ItemElement: React.FC<ItemElementProps> = ({ item, index, currentStep, tot
 };
 
 const HowItWorksComponent: React.FC<HowItWorksProps> = ({ items, currentStep }) => {
-  // const lines = (items.length -1) * 2;
-  // const circles = items.length * 1.5rem;
-  // const total = lines + circles;
-  // console.log(lines)
-  // const lineWidth = 'calc((100% - (1.5rem * 4) ) / 6)'
-
   return (
     <List>
       {items.map((item, index) => (

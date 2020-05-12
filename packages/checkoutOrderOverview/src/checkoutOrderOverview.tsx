@@ -210,7 +210,6 @@ export const Info = styled.div`
 export const Order = styled.section`
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
   ${theme.mediaQueries.whenTablet} {
     flex-direction: row;
   }
