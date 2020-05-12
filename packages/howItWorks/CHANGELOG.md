@@ -1,5 +1,11 @@
 # @im-ui/how-it-works
 
+## 2.0.2
+
+### Patch Changes
+
+- 5b1d459: desing fixes
+
 ## 2.0.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @im-ui/tabs
 
+## 0.1.3
+
+### Patch Changes
+
+- 5b1d459: desing fixes
+
 ## 0.1.2
 
 ### Patch Changes

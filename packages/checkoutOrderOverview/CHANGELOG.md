@@ -1,5 +1,11 @@
 # @im-ui/checkout-order-overview
 
+## 0.2.3
+
+### Patch Changes
+
+- 5b1d459: desing fixes
+
 ## 0.2.2
 
 ### Patch Changes
