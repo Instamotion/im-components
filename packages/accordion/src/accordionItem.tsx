@@ -20,7 +20,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, open = false, chil
     <AccordionItemWrapper>
       <AccordionHeader aria-expanded={isOpen} onClick={handleClick}>
         <AccordionTitle>{!!title && title}</AccordionTitle>
-        <AccordionIcon icon={faChevronDown} isOpen={isOpen} />
+        <AccordionIcon icon={faChevronDown} open={isOpen} />
       </AccordionHeader>
       {isOpen && <AccordionItemContent>{children}</AccordionItemContent>}
     </AccordionItemWrapper>
@@ -64,7 +64,7 @@ export const AccordionTitle = styled.div`
   }
 `;
 
-export const AccordionIcon = styled(FontAwesomeIcon)`
+export const AccordionIcon = styled(FontAwesomeIcon)<{ open: boolean }>`
   color: ${theme.color.brightGrey};
   user-select: none;
   transform: rotate(-90deg);
@@ -73,8 +73,8 @@ export const AccordionIcon = styled(FontAwesomeIcon)`
   ${theme.mediaQueries.whenDesktop} {
     font-size: 1.5rem;
   }
-  ${(props: { isOpen: boolean }) =>
-    props.isOpen &&
+  ${(props: { open: boolean }) =>
+    props.open &&
     css`
       transform: rotate(0);
     `}
