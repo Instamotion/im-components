@@ -38,3 +38,13 @@ variable "application_port" {
   description = "Application startup port. Example: node defaults to 8080."
   default     = 80
 }
+
+variable "desired_count" {
+  type = "map"
+
+  default = {
+    default = 1
+    dev     = 1
+    prod    = 1
+  }
+}
