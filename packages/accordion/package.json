@@ -32,5 +32,10 @@
     "react": "^16.11.0",
     "styled-components": "^4.4.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@im-ui/theme": "1.0.1",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@fortawesome/fontawesome-pro": "^5.13.0",
+    "@fortawesome/pro-light-svg-icons": "^5.13.0"
+  }
 }
