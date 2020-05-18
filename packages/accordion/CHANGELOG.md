@@ -1,5 +1,11 @@
 # @im-ui/accordion
 
+## 0.2.0
+
+### Minor Changes
+
+- 8077bb1: Accordion improvements
+
 ## 0.1.5
 
 ### Patch Changes
