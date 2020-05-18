@@ -37,6 +37,9 @@ module "ecs_deploy" {
   container_tag  = var.container_tag
   cluster_name   = "${var.namespace}-${var.environment}"
   task_role_arn  = aws_iam_role.task_role.arn
+  
+  # Custom desired count of tasks to be launched
+  desired_count      = "${var.desired_count}"
 
   # Module defaults to 8080 port. In this case nginx uses 80, so to override module - these two vars should be here.
   container_port    = var.application_port
