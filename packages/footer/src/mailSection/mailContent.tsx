@@ -34,7 +34,7 @@ const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, link
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: `email=${email}`
+      body: `email=${encodeURIComponent(email)}`
     })
       .then(res => res.json())
       .then(r => {
