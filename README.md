@@ -98,6 +98,18 @@ You can use yarn flags to specify the type of the dependency:
 
 You can use `yalc` as a local repo for publishing packages and integrating with consumers.
 
+Please, install [yalc](https://www.npmjs.com/package/yalc).
+```
+yarn global add yalc
+```
+
+Install dependencies and build all the packages:
+
+```
+$ bolt
+$ bolt build
+```
+
 Build and publish component:
 ```
 bolt w @im-ui/button exec -- yalc publish

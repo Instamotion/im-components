@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import theme from '@im-ui/theme';
 import Icon from '@im-ui/icon';
@@ -12,6 +12,10 @@ interface Props {
 }
 
 const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, linkHref }) => {
+  const [email, setEmail] = useState('');
+  const [subtitle, setSubtitle] = useState(subTitle);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const subscriptionLink = 'https://instamotion.com/component/70/data/subscribe';
   const tag = (): void => {
     const dataLayer: DataLayerArgs = {
       dataLayer: {
@@ -21,24 +25,62 @@ const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, link
     TagManager.dataLayer(dataLayer);
   };
 
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    fetch(subscriptionLink, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `email=${encodeURIComponent(email)}`
+    })
+      .then(res => res.json())
+      .then(r => {
+        if (!r.success) {
+          throw new Error('Error subscribing to newsletter from footer due to response fail');
+        }
+
+        tag();
+        setSubtitle(r.message);
+        setIsSubscribed(true);
+      })
+      .catch(e => {
+        throw new Error('Error subscribing to newsletter from footer');
+      });
+  };
+
   return (
     <>
       <FooterMailTitle>{title}</FooterMailTitle>
-      <FooterMailSubTitle>
-        {subTitle}
-        <a href={linkHref}>{linkText}</a>
-      </FooterMailSubTitle>
-      <form
-        action="https://www.instamotion.com/component/70/data/subscribe"
-        method="post"
-        style={{ display: 'flex' }}
-        onSubmit={tag}
-      >
-        <FooterMailInput placeholder="E-Mail" type="email" />
-        <FooterMailSubmit type="submit">
-          <Icon icon="paperPlane" color="oil" />
-        </FooterMailSubmit>
-      </form>
+      {!isSubscribed ? (
+        <FooterMailSubTitle>
+          {subtitle}
+          <a href={linkHref}>{linkText}</a>
+        </FooterMailSubTitle>
+      ) : (
+        <FooterMailSubTitle>{subtitle}</FooterMailSubTitle>
+      )}
+      {!isSubscribed ? (
+        <form
+          action={subscriptionLink}
+          method="post"
+          style={{ display: 'flex' }}
+          onSubmit={handleSubmit}
+        >
+          <FooterMailInput
+            placeholder="E-Mail"
+            type="email"
+            onChange={e => setEmail(e.target.value)}
+          />
+          <FooterMailSubmit type="submit">
+            <Icon icon="paperPlane" color="oil" />
+          </FooterMailSubmit>
+        </form>
+      ) : (
+        ''
+      )}
     </>
   );
 };
