@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.22.0
+
+### Minor Changes
+
+- 9bfe542: Adding missing post request to add newsletter subscriber.
+
 ## 0.21.3
 
 ### Patch Changes
