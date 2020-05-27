@@ -15,7 +15,7 @@ const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, link
   const [email, setEmail] = useState('');
   const [subtitle, setSubtitle] = useState(subTitle);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const subscriptionLink = 'https://instamotion.com/component/70/data/subscribe';
+  const subscriptionLink = 'https://www.instamotion.com/component/70/data/subscribe';
   const tag = (): void => {
     const dataLayer: DataLayerArgs = {
       dataLayer: {
