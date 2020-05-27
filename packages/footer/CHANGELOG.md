@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.22.1
+
+### Patch Changes
+
+- a1adb1b: add www prefix to newsletter sub call - fixing cors issues
+
 ## 0.22.0
 
 ### Minor Changes
