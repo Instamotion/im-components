@@ -1,5 +1,11 @@
 # @im-ui/checkout-order-overview
 
+## 0.2.4
+
+### Patch Changes
+
+- 70ebf2e: Price formatting fix
+
 ## 0.2.3
 
 ### Patch Changes
