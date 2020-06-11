@@ -9,7 +9,7 @@ import {
   faArrowAltCircleLeft,
   faTrafficCone
 } from '@fortawesome/pro-regular-svg-icons';
-import { formatting } from '@im-ui/utils';
+import { formatEuroCurrency } from './helpers';
 import theme from '@im-ui/theme';
 
 export interface CarDetails {
@@ -85,7 +85,7 @@ const CheckoutOrderOverview: React.FC<CheckoutOrderOverviewProps> = ({
             <IconStyled icon={faCoin} color="oil" />
           </Icon>
           <Text>{t.price}</Text>
-          <Info>{formatting.formatEuroCurrency(car.price)}</Info>
+          <Info>{formatEuroCurrency(car.price)}</Info>
         </ServiceItem>
 
         <Line></Line>
@@ -99,7 +99,7 @@ const CheckoutOrderOverview: React.FC<CheckoutOrderOverviewProps> = ({
             <IconStyled icon={faTruck} color="oil" />
           </Icon>
           <Text>{t.delivery}</Text>
-          <Info>{formatting.formatEuroCurrency(deliveryPrice)}</Info>
+          <Info>{formatEuroCurrency(deliveryPrice)}</Info>
         </ServiceItem>
 
         <ServiceItem>
@@ -107,7 +107,7 @@ const CheckoutOrderOverview: React.FC<CheckoutOrderOverviewProps> = ({
             <IconStyled icon={faFileAlt} color="oil" />
           </Icon>
           <Text>{t.rego}</Text>
-          <Info>{formatting.formatEuroCurrency(registrationPrice)}</Info>
+          <Info>{formatEuroCurrency(registrationPrice)}</Info>
         </ServiceItem>
 
         <ServiceItem>
@@ -150,7 +150,7 @@ const CheckoutOrderOverview: React.FC<CheckoutOrderOverviewProps> = ({
 
         <Headline>
           <Title>{t.total}</Title>
-          <CarPrice>{formatting.formatEuroCurrency(fullPrice)}</CarPrice>
+          <CarPrice>{formatEuroCurrency(fullPrice)}</CarPrice>
         </Headline>
       </CarDetails>
     </Order>
