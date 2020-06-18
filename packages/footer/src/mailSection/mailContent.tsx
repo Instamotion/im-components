@@ -25,7 +25,7 @@ const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, link
     };
     TagManager.dataLayer(dataLayer);
 
-    const crossEngageEvet = {
+    const crossEngageEvent = {
       dataLayer: {
         event: 'crossEngage',
         emailHash: sha('sha256')
@@ -33,7 +33,7 @@ const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, link
           .digest('hex')
       }
     };
-    TagManager.dataLayer(crossEngageEvet);
+    TagManager.dataLayer(crossEngageEvent);
   };
 
   const handleSubmit = (e: any) => {
