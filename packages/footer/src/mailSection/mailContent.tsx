@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import theme from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 import TagManager, { DataLayerArgs } from 'react-gtm-module';
+import sha from 'sha.js';
 
 interface Props {
   title?: JSX.Element | string;
@@ -23,6 +24,16 @@ const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, link
       }
     };
     TagManager.dataLayer(dataLayer);
+
+    const crossEngageEvet = {
+      dataLayer: {
+        event: 'crossEngage',
+        emailHash: sha('sha256')
+          .update(email)
+          .digest('hex')
+      }
+    };
+    TagManager.dataLayer(crossEngageEvet);
   };
 
   const handleSubmit = (e: any) => {

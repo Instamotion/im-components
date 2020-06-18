@@ -20,7 +20,9 @@
     "Giovanni E"
   ],
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@types/jest": "^24.0.21",
     "@types/react": "^16.9.11",
@@ -31,10 +33,12 @@
     "typescript": "^3.6.4"
   },
   "peerDependencies": {
+    "@types/sha.js": "^2.4.0",
     "react": "^16.11.0",
     "react-gtm-module": "^2.0.8",
-    "styled-components": "^4.4.1",
-    "react-intl": "^3.4.0"
+    "react-intl": "^3.4.0",
+    "sha.js": "^2.4.11",
+    "styled-components": "^4.4.1"
   },
   "dependencies": {
     "@im-ui/carousel": "^0.1.6",
