@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.23.0
+
+### Minor Changes
+
+- 71c25a7: added cross engage event to newsletter sub action
+
 ## 0.22.1
 
 ### Patch Changes
