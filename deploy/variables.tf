@@ -48,3 +48,15 @@ variable "desired_count" {
     prod    = 1
   }
 }
+
+variable "cpu" {
+  default = 64
+}
+
+variable "memory_reservation" {
+  default = 32
+}
+
+variable "memory" {
+  default = 64
+}

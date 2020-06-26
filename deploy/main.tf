@@ -44,6 +44,11 @@ module "ecs_deploy" {
   # Module defaults to 8080 port. In this case nginx uses 80, so to override module - these two vars should be here.
   container_port    = var.application_port
   target_group_port = var.application_port
+
+  # Custom CPU & Memory limits
+  cpu                = var.cpu
+  memory_reservation = var.memory_reservation
+  memory             = var.memory
 }
 
 module "alias_r53" {
