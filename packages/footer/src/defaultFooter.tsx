@@ -233,11 +233,11 @@ const menus: {
       title: <FormattedMessage id="default.footer.free_advice" />
     },
     {
-      id: 'tel:089411151100',
+      id: 'tel:08921094444',
       type: 'item',
       icon: 'PhoneSVG',
-      title: '089 411 151 100',
-      link: 'tel:089411151100',
+      title: '089 2109 4444',
+      link: 'tel:08921094444',
       track: 'call_from_footer'
     },
     {
