@@ -10,11 +10,8 @@ import { FormattedMessage } from 'react-intl';
 import { HeaderProps } from './types';
 import useModal from './useModal';
 
-export const Header: React.FC<HeaderProps> = ({
-  phoneNumber,
-  menuOptions = {},
-  favoritesCount
-}) => {
+export const Header: React.FC<HeaderProps> = ({ menuOptions = {}, favoritesCount }) => {
+  const phoneNumber = '089 2109 4444';
   const [isBurgerOpen, toggleBurger] = useModal();
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
   const [count, setCount] = useState(0);
