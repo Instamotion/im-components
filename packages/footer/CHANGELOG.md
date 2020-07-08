@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.24.0
+
+### Minor Changes
+
+- fa69196: Update phone number
+
 ## 0.23.0
 
 ### Minor Changes

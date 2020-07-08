@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.5.0
+
+### Minor Changes
+
+- fa69196: Update phone number
+
 ## 0.4.12
 
 ### Patch Changes
