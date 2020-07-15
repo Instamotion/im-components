@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.25.0
+
+### Minor Changes
+
+- 70ddc28: fixed font in footer
+
 ## 0.24.0
 
 ### Minor Changes
