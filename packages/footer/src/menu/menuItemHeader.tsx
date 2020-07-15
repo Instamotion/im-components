@@ -11,8 +11,7 @@ const MenuItemHeader = styled.div`
   width: 8.3125rem;
   height: 1.5rem;
   opacity: 0.87;
-  font-family: Roboto;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
