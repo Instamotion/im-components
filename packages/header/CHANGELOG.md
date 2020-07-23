@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.5.1
+
+### Patch Changes
+
+- e2f63da: Logo URL prop added
+
 ## 0.5.0
 
 ### Minor Changes
