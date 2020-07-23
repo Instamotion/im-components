@@ -10,8 +10,12 @@ import { FormattedMessage } from 'react-intl';
 import { HeaderProps } from './types';
 import useModal from './useModal';
 
-export const Header: React.FC<HeaderProps> = ({ menuOptions = {}, favoritesCount }) => {
-  const phoneNumber = '089 2109 4444';
+export const Header: React.FC<HeaderProps> = ({
+  menuOptions = {},
+  favoritesCount,
+  phoneNumber = '089 2109 4444',
+  logoUrl
+}) => {
   const [isBurgerOpen, toggleBurger] = useModal();
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
   const [count, setCount] = useState(0);
@@ -42,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({ menuOptions = {}, favoritesCount
             color={AvailableColors.white}
             colorTwo={AvailableColors.downy}
             brandingHolder="InstamotionAllianz"
-            link="/"
+            link={logoUrl ? logoUrl : '/'}
           />
         </LogoWrapper>
         <SearchWrapper>
