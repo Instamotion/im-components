@@ -18,13 +18,14 @@ const stories = storiesOf('Complex | Header', module);
 stories.addDecorator(withKnobs);
 stories.add('default', () => {
   const props: HeaderProps = {
-    phoneNumber: text('phone number', '089-411151-100'),
+    phoneNumber: text('phone number', '089-411151-101'),
     favoritesCount: number('favorites', 23),
     menuOptions: {
       showDeliveryLink: true,
       showFinancingLink: true,
       showQualityLink: true
-    }
+    },
+    logoUrl: 'https://instamotion.com/'
   };
   return renderWithThemeAndI18n(
     <GtmWrapper>
