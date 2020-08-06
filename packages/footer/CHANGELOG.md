@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.26.1
+
+### Patch Changes
+
+- 604152f: fixed build
+
 ## 0.26.0
 
 ### Minor Changes
