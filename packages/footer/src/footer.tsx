@@ -3,7 +3,6 @@ import CheckoutFooter from './checkoutFooter';
 import DefaultFooter, { MenuOptions } from './defaultFooter';
 import TrustfulSection from './trustfulSection';
 import TagManager from 'react-gtm-module';
-import detectSSR from '../utils/detectSSR';
 
 const AB_TEST_VARIABLE_NAME: string = 'ab-test-product';
 
@@ -30,9 +29,7 @@ type MinimalFooterProps = {
 export type FooterProps = FullFooterProps | MinimalFooterProps;
 
 const Footer: React.FC<FooterProps> = props => {
-  const { isBrowser } = detectSSR();
-
-  if (isBrowser && props.productAbToggleVariable) {
+  if (typeof window !== 'undefined' && props.productAbToggleVariable) {
     const productTestVariation: ProductAbVariationType = useMemo(
       () => props.originalPhotosVariation || 'default',
       [props.originalPhotosVariation]
