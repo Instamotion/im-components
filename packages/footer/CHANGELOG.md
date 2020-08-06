@@ -1,5 +1,12 @@
 # @im-ui/footer
 
+## 0.26.0
+
+### Minor Changes
+
+- 5d36220: fixes
+- 2de26f7: added gtm event for ab testing
+
 ## 0.25.0
 
 ### Minor Changes
