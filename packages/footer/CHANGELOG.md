@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.27.0
+
+### Minor Changes
+
+- f1d2886: changes
+
 ## 0.26.1
 
 ### Patch Changes
