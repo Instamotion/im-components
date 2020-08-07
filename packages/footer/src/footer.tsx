@@ -15,33 +15,28 @@ type FullFooterProps = {
   facebookToken: string;
   menuOptions?: MenuOptions;
   showEnvkv?: boolean;
-  productAbToggleVariable?: string;
-  originalPhotosVariation?: ProductAbVariationType;
+  abTestFlagName?: string;
+  abTestFlagValue?: ProductAbVariationType;
 };
 
 type MinimalFooterProps = {
   className?: string;
   variant: 'minimal';
-  productAbToggleVariable?: string;
-  originalPhotosVariation?: ProductAbVariationType;
+  abTestFlagName?: string;
+  abTestFlagValue?: ProductAbVariationType;
 };
 
 export type FooterProps = FullFooterProps | MinimalFooterProps;
 
 const Footer: React.FC<FooterProps> = props => {
-  if (typeof window !== 'undefined' && props.productAbToggleVariable) {
-    const productTestVariation: ProductAbVariationType = useMemo(
-      () => props.originalPhotosVariation || 'default',
-      [props.originalPhotosVariation]
-    );
-
+  if (typeof window !== 'undefined' && props.abTestFlagName) {
     const dataLayerArgs = useMemo(
       () => ({
         dataLayer: {
-          [AB_TEST_VARIABLE_NAME]: `${props.productAbToggleVariable}-${productTestVariation}`
+          [AB_TEST_VARIABLE_NAME]: `${props.abTestFlagName}-${props.abTestFlagValue || 'default'}`
         }
       }),
-      [AB_TEST_VARIABLE_NAME, props.productAbToggleVariable, productTestVariation]
+      [AB_TEST_VARIABLE_NAME, props.abTestFlagName, props.abTestFlagValue]
     );
 
     TagManager.dataLayer(dataLayerArgs);
