@@ -17,6 +17,12 @@ pipeline {
         artifactNumToKeepStr: '3'
       )
     )
+    office365ConnectorWebhooks([[
+        notifyAborted: true,
+        notifyFailure: true,
+        url: '${TEAMS_URL}'
+      ]]
+    )
     timeout(time: 20, unit: 'MINUTES')
   }
 
@@ -101,12 +107,6 @@ pipeline {
           ecsDeploy("prod", "${SERVICE_NAME}", "${DEPLOY_VERSION}", "${NAMESPACE}")
         }
       }
-    }
-  }
-
-  post {
-    failure {
-        slackSend(channel: '#team-hulk-alerts', color: 'danger', message: "Huh, not good... Build failed : ${env.JOB_NAME} [${env.BUILD_NUMBER}] (<${env.RUN_DISPLAY_URL}|Open>) :man-shrugging::shrug:")
     }
   }
 }
