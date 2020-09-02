@@ -202,7 +202,7 @@ const menus: {
       id: 'default.footer.warranty',
       type: 'item',
       title: <FormattedMessage id="default.footer.warranty" />,
-      link: '/garantie'
+      link: '/nur-gepruefte-fahrzeuge'
     },
     {
       id: 'default.footer.delivery',
@@ -215,14 +215,28 @@ const menus: {
       id: 'default.footer.financing',
       type: 'item',
       title: <FormattedMessage id="default.footer.financing" />,
-      link: '/finanzierung',
+      link: '/attraktive-konditionen',
       isHidden: (menuOptions: MenuOptions) => menuOptions.showFinancingLink !== true
     },
     {
       id: 'default.footer.quality',
       type: 'item',
       title: <FormattedMessage id="default.footer.quality" />,
-      link: '/qualitaet',
+      link: '/1-jahr-garantie',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showQualityLink !== true
+    },
+    {
+      id: 'default.footer.unsere_zusatzleistungen',
+      type: 'item',
+      title: <FormattedMessage id="default.footer.unsere_zusatzleistungen" />,
+      link: '/zusatzleistungen',
+      isHidden: (menuOptions: MenuOptions) => menuOptions.showQualityLink !== true
+    },
+    {
+      id: 'default.footer.so_funktioniert',
+      type: 'item',
+      title: <FormattedMessage id="default.footer.so_funktioniert" />,
+      link: '/so-funktionierts',
       isHidden: (menuOptions: MenuOptions) => menuOptions.showQualityLink !== true
     }
   ],

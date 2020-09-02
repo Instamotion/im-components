@@ -69,10 +69,11 @@ const Link = styled(LinkComponent)`
     user-select: none;
     text-transform: uppercase;
     ${theme.mediaQueries.whenDesktop} {
+      font-size: 0.75rem;
       margin-right: 1.5em;
     }
     ${theme.mediaQueries.whenDesktopXL} {
-      margin-right: 2em;
+      font-size: 1rem;
     }
     transition: color 0.2s ease;
     text-decoration: none;

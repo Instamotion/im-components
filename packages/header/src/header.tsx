@@ -11,13 +11,11 @@ import { HeaderProps } from './types';
 import useModal from './useModal';
 
 export const Header: React.FC<HeaderProps> = ({
-  menuOptions = {},
   favoritesCount,
   phoneNumber = '089 2109 4444',
   logoUrl
 }) => {
   const [isBurgerOpen, toggleBurger] = useModal();
-  const [isSubMenuOpen, setSubMenuOpen] = useState(false);
   const [count, setCount] = useState(0);
 
   const countFromLocalStorage = () => {
@@ -38,9 +36,8 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <HeaderWrapper>
-      <SubMenuOverlay visible={isSubMenuOpen}></SubMenuOverlay>
       <HeaderBar>
-        <Burger clickedCb={toggleBurger} isOpen={isBurgerOpen} favoritesCount={count}></Burger>
+        <Burger clickedCb={toggleBurger} isOpen={isBurgerOpen} favoritesCount={count} />
         <LogoWrapper>
           <BrandingLogo
             color={AvailableColors.white}
@@ -54,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Icon icon="cars" color="white" />
           </a>
         </SearchWrapper>
-        <SpacerBefore></SpacerBefore>
+        <SpacerBefore />
         <NavWrapper>
           <Link text={<FormattedMessage id="header.menu.autos" />} path="/autos" />
           <Link text={<FormattedMessage id="header.menu.top_offers" />} path="/angebote" />
@@ -67,26 +64,13 @@ export const Header: React.FC<HeaderProps> = ({
             text={<FormattedMessage id="header.menu.how_it_works" />}
             path="/so-funktionierts"
           />
+          <Link text={<FormattedMessage id="header.menu.services" />} path="/deine-vorteile" />
           <Link
-            text={<FormattedMessage id="header.menu.services" />}
-            onClick={() => {
-              setSubMenuOpen(!isSubMenuOpen);
-            }}
-            showChildren={isSubMenuOpen}
-          >
-            {menuOptions.showFinancingLink && (
-              <Link text={<FormattedMessage id="header.menu.financing" />} path="/finanzierung" />
-            )}
-            {menuOptions.showDeliveryLink && (
-              <Link text={<FormattedMessage id="header.menu.delivery" />} path="/lieferung" />
-            )}
-            <Link text={<FormattedMessage id="header.menu.warranty" />} path="/garantie" />
-            {menuOptions.showQualityLink && (
-              <Link text={<FormattedMessage id="header.menu.quality" />} path="/qualitaet" />
-            )}
-          </Link>
+            text={<FormattedMessage id="header.menu.additional_services" />}
+            path="/zusatzleistungen"
+          />
         </NavWrapper>
-        <SpacerAfter></SpacerAfter>
+        <SpacerAfter />
         <PhoneWrapper>
           <CallerImg />
           <Link
@@ -101,13 +85,8 @@ export const Header: React.FC<HeaderProps> = ({
         isOpen={isBurgerOpen}
         toggleBurger={toggleBurger}
         phoneNumber={phoneNumber}
-        isSubMenuOpen={isSubMenuOpen}
-        menuOptions={menuOptions}
         favoritesCount={count}
-        toggleMenu={() => {
-          setSubMenuOpen(!isSubMenuOpen);
-        }}
-      ></MobileMenu>
+      />
     </HeaderWrapper>
   );
 };
@@ -205,21 +184,6 @@ const NavWrapper = styled.div`
   }
   ${Link}:last-child > a {
     margin-right: 0;
-  }
-`;
-
-const SubMenuOverlay = styled.div<{ visible: boolean }>`
-  position: fixed;
-  height: 3em;
-  width: 100%;
-  top: 4em;
-  background-color: ${theme.color.oil};
-  transition: all 0.3s ease;
-  visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')};
-  opacity: ${({ visible }) => (visible ? '0.8' : '0')};
-  display: none;
-  ${theme.mediaQueries.whenDesktop} {
-    display: block;
   }
 `;
 
