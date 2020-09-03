@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.29.0
+
+### Minor Changes
+
+- 66d7fad: links change
+
 ## 0.28.0
 
 ### Minor Changes
