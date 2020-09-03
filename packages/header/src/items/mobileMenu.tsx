@@ -3,28 +3,20 @@ import styled from 'styled-components';
 import theme from '@im-ui/theme';
 import Link, { ChildrenItems } from './link';
 import { FormattedMessage } from 'react-intl';
-import { MenuOptions } from '../types';
 
 interface Props {
   className?: string;
   isOpen: boolean;
   toggleBurger: () => void;
   phoneNumber: string;
-  menuOptions: MenuOptions;
   favoritesCount?: number;
-  showChildren?: boolean;
-  isSubMenuOpen?: boolean;
-  toggleMenu: () => void;
 }
 
 export const MobileMenu: React.FC<Props> = ({
   className,
   toggleBurger,
   phoneNumber,
-  isSubMenuOpen,
-  toggleMenu,
-  favoritesCount,
-  menuOptions
+  favoritesCount
 }) => {
   return (
     <div className={className}>
@@ -38,22 +30,11 @@ export const MobileMenu: React.FC<Props> = ({
           extra={favoritesCount ? <Favorites>({favoritesCount})</Favorites> : undefined}
         />
         <Link text={<FormattedMessage id="header.menu.how_it_works" />} path="/so-funktionierts" />
+        <Link text={<FormattedMessage id="header.menu.services" />} path="/deine-vorteile" />
         <Link
-          text={<FormattedMessage id="header.menu.services" />}
-          onClick={toggleMenu}
-          showChildren={isSubMenuOpen}
-        >
-          {menuOptions.showFinancingLink && (
-            <Link text={<FormattedMessage id="header.menu.financing" />} path="/finanzierung" />
-          )}
-          {menuOptions.showDeliveryLink && (
-            <Link text={<FormattedMessage id="header.menu.delivery" />} path="/lieferung" />
-          )}
-          <Link text={<FormattedMessage id="header.menu.warranty" />} path="/garantie" />
-          {menuOptions.showQualityLink && (
-            <Link text={<FormattedMessage id="header.menu.quality" />} path="/qualitaet" />
-          )}
-        </Link>
+          text={<FormattedMessage id="header.menu.additional_services" />}
+          path="/zusatzleistungen"
+        />
         <Link
           className="phonelink"
           text={phoneNumber}
