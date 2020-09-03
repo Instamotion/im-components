@@ -131,12 +131,6 @@ const menus: {
       link: '/faq'
     },
     {
-      id: 'default.footer.menu.how_it_works',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.menu.how_it_works" />,
-      link: '/so-funktionierts'
-    },
-    {
       id: 'default.footer.menu.erfahrungen',
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.erfahrungen" />,
@@ -208,7 +202,7 @@ const menus: {
       id: 'default.footer.delivery',
       type: 'item',
       title: <FormattedMessage id="default.footer.delivery" />,
-      link: '/lieferung',
+      link: '/so-funktionierts',
       isHidden: (menuOptions: MenuOptions) => menuOptions.showDeliveryLink !== true
     },
     {
