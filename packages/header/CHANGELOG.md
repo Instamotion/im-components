@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.6.0
+
+### Minor Changes
+
+- 60bf7a0: link changes
+
 ## 0.5.1
 
 ### Patch Changes
