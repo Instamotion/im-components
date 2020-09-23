@@ -43,9 +43,9 @@ variable "desired_count" {
   type = "map"
 
   default = {
-    default = 1
-    dev     = 1
-    prod    = 1
+    default = 0
+    dev     = 0
+    prod    = 0
   }
 }
 
