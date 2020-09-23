@@ -37,7 +37,6 @@ pipeline {
   stages {
     stage('Bootstrap') {
       steps {
-        scmSkip(deleteBuild: true, skipPattern:'.*\\[Jenkins\\]\\: New release\\.*')
         withCredentials([
           string(credentialsId: 'npm_read_only_token', variable: 'NPM_RO_TOKEN'),
           string(credentialsId: 'fontawesome_token', variable: 'FONTAWESOME_TOKEN')
@@ -101,12 +100,6 @@ pipeline {
           ecsDeploy("prod", "${SERVICE_NAME}", "${DEPLOY_VERSION}", "${NAMESPACE}")
         }
       }
-    }
-  }
-
-  post {
-    failure {
-        slackSend(channel: '#team-hulk-alerts', color: 'danger', message: "Huh, not good... Build failed : ${env.JOB_NAME} [${env.BUILD_NUMBER}] (<${env.RUN_DISPLAY_URL}|Open>) :man-shrugging::shrug:")
     }
   }
 }
