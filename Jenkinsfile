@@ -17,6 +17,12 @@ pipeline {
         artifactNumToKeepStr: '3'
       )
     )
+    office365ConnectorWebhooks([[
+        notifyAborted: true,
+        notifyFailure: true,
+        url: '${TEAMS_URL}'
+      ]]
+    )
     timeout(time: 20, unit: 'MINUTES')
   }
 
