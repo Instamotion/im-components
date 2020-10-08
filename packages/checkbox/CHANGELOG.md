@@ -1,5 +1,11 @@
 # @im-ui/checkbox
 
+## 2.0.0
+
+### Major Changes
+
+- 6ac2328: Checkbox layout changes
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,5 +1,12 @@
 # @im-ui/input
 
+## 0.3.1
+
+### Patch Changes
+
+- Updated dependencies [6ac2328]
+  - @im-ui/checkbox@2.0.0
+
 ## 0.3.0
 
 ### Minor Changes

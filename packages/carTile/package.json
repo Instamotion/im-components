@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/car-tile",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -23,7 +23,7 @@
   "license": "MIT",
   "files": ["dist"],
   "devDependencies": {
-    "@im-ui/checkbox": "^1.0.0",
+    "@im-ui/checkbox": "^2.0.0",
     "@types/jest": "^24.0.21",
     "@types/react": "^16.9.11",
     "@types/styled-components": "^4.1.20",
