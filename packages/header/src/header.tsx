@@ -51,7 +51,6 @@ export const Header: React.FC<HeaderProps> = ({
             <Icon icon="cars" color="white" />
           </a>
         </SearchWrapper>
-        <SpacerBefore />
         <NavWrapper>
           <Link text={<FormattedMessage id="header.menu.autos" />} path="/autos" />
           <Link text={<FormattedMessage id="header.menu.top_offers" />} path="/angebote" />
@@ -70,7 +69,6 @@ export const Header: React.FC<HeaderProps> = ({
             path="/zusatzleistungen"
           />
         </NavWrapper>
-        <SpacerAfter />
         <PhoneWrapper>
           <CallerImg />
           <Link
@@ -90,22 +88,6 @@ export const Header: React.FC<HeaderProps> = ({
     </HeaderWrapper>
   );
 };
-
-const SpacerBefore = styled.div`
-  flex-grow: 0.3;
-  display: none;
-  ${theme.mediaQueries.whenDesktop} {
-    display: flex;
-  }
-`;
-
-const SpacerAfter = styled.div`
-  flex-grow: 0.7;
-  display: none;
-  ${theme.mediaQueries.whenDesktop} {
-    display: flex;
-  }
-`;
 
 export const HeaderWrapper = styled.header`
   background: ${theme.color.oil};
@@ -190,7 +172,10 @@ const NavWrapper = styled.div`
 const HeaderBar = styled.div`
   display: flex;
   padding: 0 1em;
+  box-sizing: border-box;
   ${theme.mediaQueries.whenDesktop} {
+    max-width: 80rem;
+    margin: auto;
     padding: 0 1.5em;
   }
   flex: 1 1 auto;

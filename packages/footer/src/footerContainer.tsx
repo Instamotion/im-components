@@ -3,8 +3,14 @@ import styled from 'styled-components';
 import theme from '@im-ui/theme';
 
 const FooterContentComponent: React.FC = ({ children }) => (
-  <FooterContainer>{children}</FooterContainer>
+  <FooterWrapper>
+    <FooterContainer>{children}</FooterContainer>
+  </FooterWrapper>
 );
+
+const FooterWrapper = styled.div`
+  background-color: ${theme.color.lightGrey};
+`;
 
 const FooterContainer = styled.div`
   font-family: ${theme.font.sans.family};
@@ -12,7 +18,6 @@ const FooterContainer = styled.div`
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   display: grid;
-  background-color: ${theme.color.lightGrey};
   color: ${theme.color.oil};
   grid-template-areas:
     'menu1'
@@ -36,6 +41,9 @@ const FooterContainer = styled.div`
       'creators creators';
   }
   ${theme.mediaQueries.whenTablet} {
+    max-width: 80rem;
+    margin: 0 auto;
+    box-sizing: border-box;
     grid-template-areas:
       'menu1 menu2 menu3 menu4'
       'mail menu5 social seals'
