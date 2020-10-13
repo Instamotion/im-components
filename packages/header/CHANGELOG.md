@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 0.7.0
+
+### Minor Changes
+
+- 7727a68: styles changes
+
 ## 0.6.0
 
 ### Minor Changes

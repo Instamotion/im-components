@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.30.0
+
+### Minor Changes
+
+- 7727a68: styles changes
+
 ## 0.29.0
 
 ### Minor Changes
