@@ -8,6 +8,8 @@ interface TrustfulContainerComponentProps {
 
 const TrustfulContainer = styled.div`
   background: #fff;
+  max-width: 80rem;
+  margin: auto;
 
   ${theme.mediaQueries.whenTablet} {
     padding: 2rem 1.5rem;

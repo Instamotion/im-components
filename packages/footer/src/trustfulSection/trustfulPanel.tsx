@@ -29,8 +29,6 @@ const TrustfulPanelComponent: React.FC<TrustfulPanelComponentProps> = ({ classNa
 const TrustfulPanel = styled(TrustfulPanelComponent)`
   background: #fff;
   color: #fff;
-  max-width: 1320px;
-  margin: 0 auto;
   display: none;
   -webkit-box-pack: justify;
   -webkit-justify-content: center;
