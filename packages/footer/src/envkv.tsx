@@ -14,19 +14,19 @@ const ENVKVText = styled(Text)`
   line-height: 1.33;
   margin: 1rem auto;
   max-width: 80rem;
-  padding: 0 2rem 0 1rem;
+  padding: 0 2rem 0 2rem;
   color: ${theme.color.brightGrey};
 
   &::before {
     content: '*';
     position: absolute;
     font-size: 1.25rem;
-    left: 0;
+    left: 1rem;
     top: -0.25rem;
   }
 
   ${theme.mediaQueries.whenMobileL} {
-    padding-left: 1.5rem;
+    padding-left: 2.5rem;
     box-sizing: border-box;
   }
 `;
