@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.31.0
+
+### Minor Changes
+
+- aac2a49: minor fix
+
 ## 0.30.0
 
 ### Minor Changes
