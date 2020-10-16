@@ -166,7 +166,7 @@ describe('RangeDropdown Input', () => {
       const wrapper = mount(renderWithThemeAndI18n(component));
       const input = wrapper.find('input');
       input.simulate('blur');
-      expect(propagateRange).toBeCalledWith(['1', 2]);
+      expect(propagateRange).toBeCalledWith([1, 2]);
     });
 
     it('should call the onChange callback when select value changed', () => {
