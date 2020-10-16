@@ -190,9 +190,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-VigVT",
+                "componentId": "sc-jTzLTM",
                 "isStatic": false,
-                "lastClassName": "iIEVIh",
+                "lastClassName": "iNxaQE",
                 "rules": Array [
                   "
   display: flex;
@@ -203,7 +203,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-VigVT",
+              "styledComponentId": "sc-jTzLTM",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -214,7 +214,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
           id="dropdown-1"
         >
           <div
-            className="sc-VigVT iIEVIh"
+            className="sc-jTzLTM iNxaQE"
             id="dropdown-1"
           >
             <Label
@@ -277,9 +277,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jTzLTM",
+                      "componentId": "sc-fjdhpX",
                       "isStatic": false,
-                      "lastClassName": "gArCnl",
+                      "lastClassName": "gddroE",
                       "rules": Array [
                         "
   display: flex;
@@ -290,7 +290,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jTzLTM",
+                    "styledComponentId": "sc-fjdhpX",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -300,7 +300,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="sc-jTzLTM gArCnl"
+                  className="sc-fjdhpX gddroE"
                 >
                   <styled.div>
                     <StyledComponent
@@ -309,9 +309,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-gqjmRU",
+                            "componentId": "sc-VigVT",
                             "isStatic": false,
-                            "lastClassName": "ftzKWF",
+                            "lastClassName": "emQMoV",
                             "rules": Array [
                               "
   display: flex;
@@ -346,7 +346,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-gqjmRU",
+                          "styledComponentId": "sc-VigVT",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -356,7 +356,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="sc-gqjmRU ftzKWF"
+                        className="sc-VigVT emQMoV"
                       >
                         <Component
                           aria-label="input-from"
@@ -574,79 +574,118 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           />
                                         </StyledComponent>
                                       </styled.input>
-                                      <Component
+                                      <Styled(Component)
                                         className="times-icon"
                                         color="brightGrey"
                                         icon="times"
                                         onClick={[Function]}
                                       >
-                                        <times
+                                        <StyledComponent
                                           className="times-icon"
                                           color="brightGrey"
+                                          forwardedComponent={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-gqjmRU",
+                                                "isStatic": false,
+                                                "lastClassName": "hspxAx",
+                                                "rules": Array [
+                                                  "
+  cursor: pointer;
+",
+                                                ],
+                                              },
+                                              "displayName": "Styled(Component)",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-gqjmRU",
+                                              "target": [Function],
+                                              "toString": [Function],
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
+                                            }
+                                          }
+                                          forwardedRef={null}
+                                          icon="times"
                                           onClick={[Function]}
                                         >
-                                          <styled.svg
-                                            className="times-icon"
+                                          <Component
+                                            className="sc-gqjmRU hspxAx times-icon"
                                             color="brightGrey"
+                                            icon="times"
                                             onClick={[Function]}
-                                            viewBox="0 0 320 512"
-                                            xmlns="http://www.w3.org/2000/svg"
                                           >
-                                            <StyledComponent
-                                              className="times-icon"
+                                            <times
+                                              className="sc-gqjmRU hspxAx times-icon"
                                               color="brightGrey"
-                                              forwardedComponent={
-                                                Object {
-                                                  "$$typeof": Symbol(react.forward_ref),
-                                                  "attrs": Array [],
-                                                  "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-gzVnrw",
-                                                    "isStatic": false,
-                                                    "lastClassName": "ffvvXT",
-                                                    "rules": Array [
-                                                      "
-  display: inline-block;
-  height: 1em;
-  ",
-                                                      [Function],
-                                                      "
-  ",
-                                                      [Function],
-                                                      "
-",
-                                                    ],
-                                                  },
-                                                  "displayName": "styled.svg",
-                                                  "foldedComponentIds": Array [],
-                                                  "render": [Function],
-                                                  "styledComponentId": "sc-gzVnrw",
-                                                  "target": "svg",
-                                                  "toString": [Function],
-                                                  "warnTooManyClasses": [Function],
-                                                  "withComponent": [Function],
-                                                }
-                                              }
-                                              forwardedRef={null}
                                               onClick={[Function]}
-                                              viewBox="0 0 320 512"
-                                              xmlns="http://www.w3.org/2000/svg"
                                             >
-                                              <svg
-                                                className="sc-gzVnrw ffvvXT times-icon"
+                                              <styled.svg
+                                                className="sc-gqjmRU hspxAx times-icon"
                                                 color="brightGrey"
                                                 onClick={[Function]}
                                                 viewBox="0 0 320 512"
                                                 xmlns="http://www.w3.org/2000/svg"
                                               >
-                                                <path
-                                                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
-                                                  fill="currentColor"
-                                                />
-                                              </svg>
-                                            </StyledComponent>
-                                          </styled.svg>
-                                        </times>
-                                      </Component>
+                                                <StyledComponent
+                                                  className="sc-gqjmRU hspxAx times-icon"
+                                                  color="brightGrey"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-gzVnrw",
+                                                        "isStatic": false,
+                                                        "lastClassName": "ffvvXT",
+                                                        "rules": Array [
+                                                          "
+  display: inline-block;
+  height: 1em;
+  ",
+                                                          [Function],
+                                                          "
+  ",
+                                                          [Function],
+                                                          "
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.svg",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-gzVnrw",
+                                                      "target": "svg",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  onClick={[Function]}
+                                                  viewBox="0 0 320 512"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <svg
+                                                    className="sc-gzVnrw ffvvXT sc-gqjmRU hspxAx times-icon"
+                                                    color="brightGrey"
+                                                    onClick={[Function]}
+                                                    viewBox="0 0 320 512"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <path
+                                                      d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                                      fill="currentColor"
+                                                    />
+                                                  </svg>
+                                                </StyledComponent>
+                                              </styled.svg>
+                                            </times>
+                                          </Component>
+                                        </StyledComponent>
+                                      </Styled(Component)>
                                     </div>
                                   </StyledComponent>
                                 </styled.div>
@@ -981,9 +1020,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-gqjmRU",
+                            "componentId": "sc-VigVT",
                             "isStatic": false,
-                            "lastClassName": "ftzKWF",
+                            "lastClassName": "emQMoV",
                             "rules": Array [
                               "
   display: flex;
@@ -1018,7 +1057,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-gqjmRU",
+                          "styledComponentId": "sc-VigVT",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1028,7 +1067,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="sc-gqjmRU ftzKWF"
+                        className="sc-VigVT emQMoV"
                       >
                         <Component
                           aria-label="input-to"
@@ -1246,79 +1285,118 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           />
                                         </StyledComponent>
                                       </styled.input>
-                                      <Component
+                                      <Styled(Component)
                                         className="times-icon"
                                         color="brightGrey"
                                         icon="times"
                                         onClick={[Function]}
                                       >
-                                        <times
+                                        <StyledComponent
                                           className="times-icon"
                                           color="brightGrey"
+                                          forwardedComponent={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-gqjmRU",
+                                                "isStatic": false,
+                                                "lastClassName": "hspxAx",
+                                                "rules": Array [
+                                                  "
+  cursor: pointer;
+",
+                                                ],
+                                              },
+                                              "displayName": "Styled(Component)",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-gqjmRU",
+                                              "target": [Function],
+                                              "toString": [Function],
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
+                                            }
+                                          }
+                                          forwardedRef={null}
+                                          icon="times"
                                           onClick={[Function]}
                                         >
-                                          <styled.svg
-                                            className="times-icon"
+                                          <Component
+                                            className="sc-gqjmRU hspxAx times-icon"
                                             color="brightGrey"
+                                            icon="times"
                                             onClick={[Function]}
-                                            viewBox="0 0 320 512"
-                                            xmlns="http://www.w3.org/2000/svg"
                                           >
-                                            <StyledComponent
-                                              className="times-icon"
+                                            <times
+                                              className="sc-gqjmRU hspxAx times-icon"
                                               color="brightGrey"
-                                              forwardedComponent={
-                                                Object {
-                                                  "$$typeof": Symbol(react.forward_ref),
-                                                  "attrs": Array [],
-                                                  "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-gzVnrw",
-                                                    "isStatic": false,
-                                                    "lastClassName": "ffvvXT",
-                                                    "rules": Array [
-                                                      "
-  display: inline-block;
-  height: 1em;
-  ",
-                                                      [Function],
-                                                      "
-  ",
-                                                      [Function],
-                                                      "
-",
-                                                    ],
-                                                  },
-                                                  "displayName": "styled.svg",
-                                                  "foldedComponentIds": Array [],
-                                                  "render": [Function],
-                                                  "styledComponentId": "sc-gzVnrw",
-                                                  "target": "svg",
-                                                  "toString": [Function],
-                                                  "warnTooManyClasses": [Function],
-                                                  "withComponent": [Function],
-                                                }
-                                              }
-                                              forwardedRef={null}
                                               onClick={[Function]}
-                                              viewBox="0 0 320 512"
-                                              xmlns="http://www.w3.org/2000/svg"
                                             >
-                                              <svg
-                                                className="sc-gzVnrw ffvvXT times-icon"
+                                              <styled.svg
+                                                className="sc-gqjmRU hspxAx times-icon"
                                                 color="brightGrey"
                                                 onClick={[Function]}
                                                 viewBox="0 0 320 512"
                                                 xmlns="http://www.w3.org/2000/svg"
                                               >
-                                                <path
-                                                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
-                                                  fill="currentColor"
-                                                />
-                                              </svg>
-                                            </StyledComponent>
-                                          </styled.svg>
-                                        </times>
-                                      </Component>
+                                                <StyledComponent
+                                                  className="sc-gqjmRU hspxAx times-icon"
+                                                  color="brightGrey"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-gzVnrw",
+                                                        "isStatic": false,
+                                                        "lastClassName": "ffvvXT",
+                                                        "rules": Array [
+                                                          "
+  display: inline-block;
+  height: 1em;
+  ",
+                                                          [Function],
+                                                          "
+  ",
+                                                          [Function],
+                                                          "
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.svg",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-gzVnrw",
+                                                      "target": "svg",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  onClick={[Function]}
+                                                  viewBox="0 0 320 512"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <svg
+                                                    className="sc-gzVnrw ffvvXT sc-gqjmRU hspxAx times-icon"
+                                                    color="brightGrey"
+                                                    onClick={[Function]}
+                                                    viewBox="0 0 320 512"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <path
+                                                      d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                                      fill="currentColor"
+                                                    />
+                                                  </svg>
+                                                </StyledComponent>
+                                              </styled.svg>
+                                            </times>
+                                          </Component>
+                                        </StyledComponent>
+                                      </Styled(Component)>
                                     </div>
                                   </StyledComponent>
                                 </styled.div>
@@ -1799,9 +1877,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-gqjmRU",
+              "componentId": "sc-VigVT",
               "isStatic": false,
-              "lastClassName": "ftzKWF",
+              "lastClassName": "emQMoV",
               "rules": Array [
                 "
   display: flex;
@@ -1836,7 +1914,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-gqjmRU",
+            "styledComponentId": "sc-VigVT",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -1846,7 +1924,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
         forwardedRef={null}
       >
         <div
-          className="sc-gqjmRU ftzKWF"
+          className="sc-VigVT emQMoV"
         >
           <Component
             aria-label="input-from"
@@ -2064,79 +2142,118 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                             />
                           </StyledComponent>
                         </styled.input>
-                        <Component
+                        <Styled(Component)
                           className="times-icon"
                           color="brightGrey"
                           icon="times"
                           onClick={[Function]}
                         >
-                          <times
+                          <StyledComponent
                             className="times-icon"
                             color="brightGrey"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-gqjmRU",
+                                  "isStatic": false,
+                                  "lastClassName": "hspxAx",
+                                  "rules": Array [
+                                    "
+  cursor: pointer;
+",
+                                  ],
+                                },
+                                "displayName": "Styled(Component)",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-gqjmRU",
+                                "target": [Function],
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            icon="times"
                             onClick={[Function]}
                           >
-                            <styled.svg
-                              className="times-icon"
+                            <Component
+                              className="sc-gqjmRU hspxAx times-icon"
                               color="brightGrey"
+                              icon="times"
                               onClick={[Function]}
-                              viewBox="0 0 320 512"
-                              xmlns="http://www.w3.org/2000/svg"
                             >
-                              <StyledComponent
-                                className="times-icon"
+                              <times
+                                className="sc-gqjmRU hspxAx times-icon"
                                 color="brightGrey"
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gzVnrw",
-                                      "isStatic": false,
-                                      "lastClassName": "ffvvXT",
-                                      "rules": Array [
-                                        "
-  display: inline-block;
-  height: 1em;
-  ",
-                                        [Function],
-                                        "
-  ",
-                                        [Function],
-                                        "
-",
-                                      ],
-                                    },
-                                    "displayName": "styled.svg",
-                                    "foldedComponentIds": Array [],
-                                    "render": [Function],
-                                    "styledComponentId": "sc-gzVnrw",
-                                    "target": "svg",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
                                 onClick={[Function]}
-                                viewBox="0 0 320 512"
-                                xmlns="http://www.w3.org/2000/svg"
                               >
-                                <svg
-                                  className="sc-gzVnrw ffvvXT times-icon"
+                                <styled.svg
+                                  className="sc-gqjmRU hspxAx times-icon"
                                   color="brightGrey"
                                   onClick={[Function]}
                                   viewBox="0 0 320 512"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <path
-                                    d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </StyledComponent>
-                            </styled.svg>
-                          </times>
-                        </Component>
+                                  <StyledComponent
+                                    className="sc-gqjmRU hspxAx times-icon"
+                                    color="brightGrey"
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-gzVnrw",
+                                          "isStatic": false,
+                                          "lastClassName": "ffvvXT",
+                                          "rules": Array [
+                                            "
+  display: inline-block;
+  height: 1em;
+  ",
+                                            [Function],
+                                            "
+  ",
+                                            [Function],
+                                            "
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.svg",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-gzVnrw",
+                                        "target": "svg",
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                    onClick={[Function]}
+                                    viewBox="0 0 320 512"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <svg
+                                      className="sc-gzVnrw ffvvXT sc-gqjmRU hspxAx times-icon"
+                                      color="brightGrey"
+                                      onClick={[Function]}
+                                      viewBox="0 0 320 512"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                        fill="currentColor"
+                                      />
+                                    </svg>
+                                  </StyledComponent>
+                                </styled.svg>
+                              </times>
+                            </Component>
+                          </StyledComponent>
+                        </Styled(Component)>
                       </div>
                     </StyledComponent>
                   </styled.div>
