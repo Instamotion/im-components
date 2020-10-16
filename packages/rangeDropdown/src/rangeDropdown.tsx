@@ -74,8 +74,8 @@ export const renderSelector = (
       type="number"
       placeholder={placeholder}
       value={value}
-      onChange={e => setRange(formRange(prefix, e.target.value, otherValue))}
-      onBlur={e => propagateRange(formRange(prefix, e.target.value, otherValue))}
+      onChange={val => setRange(formRange(prefix, val, otherValue))}
+      onBlur={val => propagateRange(formRange(prefix, val, otherValue))}
     />
     <Dropdown
       id={`from-dropdown-${id}`}

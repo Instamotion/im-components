@@ -21,10 +21,9 @@ const TextInputDemo = (): React.ReactElement => {
     value,
     type: 'text',
     label: 'Hello',
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-      const fromInput = (e.target as HTMLInputElement).value;
-      setValue(fromInput);
-      action('Input changed')(fromInput);
+    onChange: (val: string) => {
+      setValue(val);
+      action('Input changed')(val);
     }
   };
 
@@ -47,10 +46,9 @@ const TextInputValidationDemo = (): React.ReactElement => {
     value: requiredValue,
     type: 'text',
     label: 'input[type=text] with required value',
-    onChange: (e: React.ChangeEvent<HTMLInputElement>): void => {
-      const fromInput = (e.target as HTMLInputElement).value;
-      setRequiredValue(fromInput);
-      action('Input changed')(fromInput);
+    onChange: (val: string): void => {
+      setRequiredValue(val);
+      action('Input changed')(val);
     },
     placeholder: 'Full name',
     required: true
@@ -60,38 +58,36 @@ const TextInputValidationDemo = (): React.ReactElement => {
     value: minLengthValue,
     type: 'text',
     label: 'input[type=text] with minimum length 5',
-    onChange: (e: React.ChangeEvent<HTMLInputElement>): void => {
-      const fromInput = (e.target as HTMLInputElement).value;
-      setMinLengthValue(fromInput);
-      action('Input changed')(fromInput);
+    onChange: (val: string): void => {
+      setMinLengthValue(val);
+      action('Input changed')(val);
     },
     placeholder: 'Full name',
     required: true,
-    minLength: 5
+    inputProps: {
+      minLength: 5
+    }
   };
 
   const patternProps: InputProps = {
     value: patternValue,
     type: 'tel',
     label: 'input[type=text] with specific format',
-    onChange: (e: React.ChangeEvent<HTMLInputElement>): void => {
-      const fromInput = (e.target as HTMLInputElement).value;
-      setPatternValue(fromInput);
-      action('Input changed')(fromInput);
+    onChange: (val: string): void => {
+      setPatternValue(val);
+      action('Input changed')(val);
     },
     placeholder: 'Phone number in format 123-456',
-    required: true,
-    pattern: '[0-9]{3}-[0-9]{3}'
+    required: true
   };
 
   const emailProps: InputProps = {
     value: emailValue,
     type: 'email',
     label: 'input[type=email]',
-    onChange: (e: React.ChangeEvent<HTMLInputElement>): void => {
-      const fromInput = (e.target as HTMLInputElement).value;
-      setEmailValue(fromInput);
-      action('Input changed')(fromInput);
+    onChange: (val: string): void => {
+      setEmailValue(val);
+      action('Input changed')(val);
     },
     placeholder: 'E-mail address',
     required: true
@@ -101,10 +97,9 @@ const TextInputValidationDemo = (): React.ReactElement => {
     value: urlValue,
     type: 'url',
     label: 'input[type=url]',
-    onChange: (e: React.ChangeEvent<HTMLInputElement>): void => {
-      const fromInput = (e.target as HTMLInputElement).value;
-      setUrlValue(fromInput);
-      action('Input changed')(fromInput);
+    onChange: (val: string): void => {
+      setUrlValue(val);
+      action('Input changed')(val);
     },
     placeholder: 'Url',
     required: true
@@ -114,14 +109,15 @@ const TextInputValidationDemo = (): React.ReactElement => {
     value: numberValue,
     type: 'number',
     label: 'input[type=number] with minimum length 5',
-    onChange: (e: React.ChangeEvent<HTMLInputElement>): void => {
-      const fromInput = (e.target as HTMLInputElement).value;
-      setNumberValue(fromInput);
-      action('Input changed')(fromInput);
+    onChange: (val: string): void => {
+      setNumberValue(val);
+      action('Input changed')(val);
     },
     placeholder: 'Zip code',
     required: true,
-    pattern: '[0-9]{5}'
+    inputProps: {
+      pattern: '[0-9]{5}'
+    }
   };
 
   return (
@@ -146,14 +142,12 @@ const RangeInputDemo = (): React.ReactElement => {
   const props: InputProps = {
     value,
     type: 'range',
-    min: 0,
-    max: maxVal,
-    step: stepVal,
+    minLength: 0,
+    maxLength: maxVal,
     label: `Range: ${value}/${maxVal}`,
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-      const fromInput = Number((e.target as HTMLInputElement).value);
-      setValue(fromInput);
-      action('Input changed')(fromInput);
+    onChange: (val: number) => {
+      setValue(val);
+      action('Input changed')(val);
     }
   };
 
