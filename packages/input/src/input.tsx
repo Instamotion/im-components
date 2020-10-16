@@ -105,6 +105,10 @@ export const InputElements = styled.input`
   }
 `;
 
+const StyledIcon = styled(Icon)`
+  cursor: pointer;
+`;
+
 export const Input: React.FC<InputProps> = ({
   label,
   errorMessage,
@@ -198,7 +202,12 @@ export const Input: React.FC<InputProps> = ({
           pattern={shouldShowPhonePrefix ? patternWithoutPrefixDE : patternWithPrefixDE}
         />
         {value && (
-          <Icon icon="times" color="brightGrey" className="times-icon" onClick={handleReset} />
+          <StyledIcon
+            icon="times"
+            color="brightGrey"
+            className="times-icon"
+            onClick={handleReset}
+          />
         )}
       </StyledInput>
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
