@@ -1,5 +1,16 @@
 # @im-ui/range-dropdown
 
+## 1.0.0
+
+### Major Changes
+
+- e62a423: update input and dependencies
+
+### Patch Changes
+
+- Updated dependencies [e62a423]
+  - @im-ui/input@1.0.0
+
 ## 0.3.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 1.0.0
+
+### Major Changes
+
+- e62a423: update input and dependencies
+
 ## 0.3.1
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/range-dropdown",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -34,7 +34,7 @@
   "dependencies": {
     "@im-ui/dropdown": "^1.0.0",
     "@im-ui/error-message": "^0.1.6",
-    "@im-ui/input": "^0.3.0",
+    "@im-ui/input": "^1.0.0",
     "@im-ui/label": "^1.0.0",
     "@im-ui/theme": "^1.0.1",
     "@im-ui/utils": "^0.5.2"
