@@ -14,6 +14,8 @@ import Input, { InputProps } from '../src';
 // addLocaleData([...deLocaleData, ...enLocaleData]);
 // const messages = translations.de;
 
+type ValueType = string | number;
+
 const TextInputDemo = (): React.ReactElement => {
   const [value, setValue] = React.useState(text('value', 'Hello'));
 
@@ -21,8 +23,8 @@ const TextInputDemo = (): React.ReactElement => {
     value,
     type: 'text',
     label: 'Hello',
-    onChange: (val: string) => {
-      setValue(val);
+    onChange: (val: ValueType) => {
+      setValue(val as string);
       action('Input changed')(val);
     }
   };
@@ -46,8 +48,8 @@ const TextInputValidationDemo = (): React.ReactElement => {
     value: requiredValue,
     type: 'text',
     label: 'input[type=text] with required value',
-    onChange: (val: string): void => {
-      setRequiredValue(val);
+    onChange: (val: ValueType): void => {
+      setRequiredValue(val as string);
       action('Input changed')(val);
     },
     placeholder: 'Full name',
@@ -58,8 +60,8 @@ const TextInputValidationDemo = (): React.ReactElement => {
     value: minLengthValue,
     type: 'text',
     label: 'input[type=text] with minimum length 5',
-    onChange: (val: string): void => {
-      setMinLengthValue(val);
+    onChange: (val: ValueType): void => {
+      setMinLengthValue(val as string);
       action('Input changed')(val);
     },
     placeholder: 'Full name',
@@ -73,8 +75,8 @@ const TextInputValidationDemo = (): React.ReactElement => {
     value: patternValue,
     type: 'tel',
     label: 'input[type=text] with specific format',
-    onChange: (val: string): void => {
-      setPatternValue(val);
+    onChange: (val: ValueType): void => {
+      setPatternValue(val as string);
       action('Input changed')(val);
     },
     placeholder: 'Phone number in format 123-456',
@@ -85,8 +87,8 @@ const TextInputValidationDemo = (): React.ReactElement => {
     value: emailValue,
     type: 'email',
     label: 'input[type=email]',
-    onChange: (val: string): void => {
-      setEmailValue(val);
+    onChange: (val: ValueType): void => {
+      setEmailValue(val as string);
       action('Input changed')(val);
     },
     placeholder: 'E-mail address',
@@ -97,8 +99,8 @@ const TextInputValidationDemo = (): React.ReactElement => {
     value: urlValue,
     type: 'url',
     label: 'input[type=url]',
-    onChange: (val: string): void => {
-      setUrlValue(val);
+    onChange: (val: ValueType): void => {
+      setUrlValue(val as string);
       action('Input changed')(val);
     },
     placeholder: 'Url',
@@ -109,8 +111,8 @@ const TextInputValidationDemo = (): React.ReactElement => {
     value: numberValue,
     type: 'number',
     label: 'input[type=number] with minimum length 5',
-    onChange: (val: string): void => {
-      setNumberValue(val);
+    onChange: (val: ValueType): void => {
+      setNumberValue(val as string);
       action('Input changed')(val);
     },
     placeholder: 'Zip code',
@@ -145,8 +147,8 @@ const RangeInputDemo = (): React.ReactElement => {
     minLength: 0,
     maxLength: maxVal,
     label: `Range: ${value}/${maxVal}`,
-    onChange: (val: number) => {
-      setValue(val);
+    onChange: (val: ValueType) => {
+      setValue(val as number);
       action('Input changed')(val);
     }
   };

@@ -137,14 +137,14 @@ export const Input: React.FC<InputProps> = ({
   };
 
   const handleOnBlur = (): void => {
-    let newVal;
+    let newVal = value;
     if (isPhone) {
       changePhoneStatus(false);
       newVal = value && value !== phonePrefix ? phonePrefix + value : '';
       updateValue(newVal);
     }
     if (onBlur) {
-      onBlur(newVal || value);
+      onBlur(newVal);
     }
   };
 
