@@ -30,7 +30,7 @@ const MenuItemLinkComponent: React.FC<Props> = ({ inline, icon, path, title, tra
             category: 'call',
             action: 'call',
             label: 'from_footer',
-            variant: 'undefined'
+            variant: undefined
           }
         }
       });
