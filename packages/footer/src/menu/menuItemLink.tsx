@@ -21,6 +21,20 @@ const MenuItemLinkComponent: React.FC<Props> = ({ inline, icon, path, title, tra
       }
     };
     TagManager.dataLayer(dataLayer);
+    if (track === 'call_from_footer') {
+      TagManager.dataLayer({
+        dataLayer: {
+          event: 'click',
+          schema: 'interaction',
+          interaction: {
+            category: 'call',
+            action: 'call',
+            label: 'from_footer',
+            variant: undefined
+          }
+        }
+      });
+    }
   };
 
   return (
