@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 0.32.0
+
+### Minor Changes
+
+- 0654165: added additional GTM event for a phone click
+
 ## 0.31.0
 
 ### Minor Changes
