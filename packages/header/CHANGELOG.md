@@ -1,5 +1,12 @@
 # @im-ui/header
 
+## 1.0.0
+
+### Major Changes
+
+- b88171d: update tests
+- b88171d: add Süddeutsche Zeitung header and footer
+
 ## 0.7.0
 
 ### Minor Changes
