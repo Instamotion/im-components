@@ -16,10 +16,14 @@ const GtmWrapper: React.FC<{ children: ReactNode }> = ({ children }): JSX.Elemen
 
 const stories = storiesOf('Complex | Header', module);
 stories.addDecorator(withKnobs);
+stories.add('Süddeutsche Zeitung', () => {
+  return renderWithThemeAndI18n(<Header type="sz" />, 'de', messages);
+});
 stories.add('default', () => {
   const props: HeaderProps = {
     phoneNumber: text('phone number', '089-411151-101'),
     favoritesCount: number('favorites', 23),
+    type: 'default',
     menuOptions: {
       showDeliveryLink: true,
       showFinancingLink: true,

@@ -3,6 +3,7 @@ import CheckoutFooter from './checkoutFooter';
 import DefaultFooter, { MenuOptions } from './defaultFooter';
 import TrustfulSection from './trustfulSection';
 import TagManager from 'react-gtm-module';
+import SzFooterContent from './szFooter';
 
 const AB_TEST_VARIABLE_NAME: string = 'ab-test-product';
 
@@ -10,7 +11,7 @@ type ProductAbVariationType = boolean | string;
 
 type FullFooterProps = {
   className?: string;
-  variant: 'full';
+  variant: FooterVariant.full;
   googleToken: string;
   facebookToken: string;
   menuOptions?: MenuOptions;
@@ -21,15 +22,26 @@ type FullFooterProps = {
 
 type MinimalFooterProps = {
   className?: string;
-  variant: 'minimal';
+  variant: FooterVariant.minimal;
   abTestFlagName?: string;
   abTestFlagValue?: ProductAbVariationType;
 };
 
-export type FooterProps = FullFooterProps | MinimalFooterProps;
+type SZFooterProps = {
+  className?: string;
+  variant: FooterVariant.sz;
+};
+
+export enum FooterVariant {
+  minimal = 'minimal',
+  full = 'full',
+  sz = 'sz'
+}
+
+export type FooterProps = FullFooterProps | MinimalFooterProps | SZFooterProps;
 
 const Footer: React.FC<FooterProps> = props => {
-  if (typeof window !== 'undefined' && props.abTestFlagName) {
+  if (typeof window !== 'undefined' && props.variant !== FooterVariant.sz && props.abTestFlagName) {
     const dataLayerArgs = useMemo(
       () => ({
         dataLayer: {
@@ -43,8 +55,11 @@ const Footer: React.FC<FooterProps> = props => {
   }
 
   switch (props.variant) {
-    case 'minimal': {
+    case FooterVariant.minimal: {
       return <CheckoutFooter className={props.className} />;
+    }
+    case FooterVariant.sz: {
+      return <SzFooterContent />;
     }
     default:
       return (

@@ -35,4 +35,7 @@ storiesOf('Complex | Footer', module)
       'de',
       messages
     )
+  )
+  .add('Süddeutsche Zeitung', () =>
+    renderWithThemeAndI18n(<Footer showEnvkv variant="sz" />, 'de', messages)
   );

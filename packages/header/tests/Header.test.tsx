@@ -5,12 +5,13 @@ import { renderWithThemeAndI18n } from '@im-ui/utils';
 import BrandingLogo from '@im-ui/branding-logo';
 import Header, { HeaderWrapper } from '../src';
 import messages from '../utils/locales';
+import { HeaderTypes } from '../src/types';
 
 describe('Header', () => {
   it('header rendered', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Header phoneNumber="089-411151-100" favoritesCount={0} />,
+        <Header type={HeaderTypes.default} phoneNumber="089-411151-100" favoritesCount={0} />,
         'de',
         messages
       )
@@ -20,7 +21,7 @@ describe('Header', () => {
   it('all logos rendered', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Header phoneNumber="089-411151-100" favoritesCount={0} />,
+        <Header type={HeaderTypes.default} phoneNumber="089-411151-100" favoritesCount={0} />,
         'de',
         messages
       )

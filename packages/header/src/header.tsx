@@ -7,86 +7,91 @@ import MobileMenu, { Favorites } from './items/mobileMenu';
 import theme, { AvailableColors } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 import { FormattedMessage } from 'react-intl';
-import { HeaderProps } from './types';
+import { HeaderProps, HeaderTypes } from './types';
 import useModal from './useModal';
+import SzHeaderComponent from './szHeader';
 
-export const Header: React.FC<HeaderProps> = ({
-  favoritesCount,
-  phoneNumber = '089 2109 4444',
-  logoUrl
-}) => {
-  const [isBurgerOpen, toggleBurger] = useModal();
-  const [count, setCount] = useState(0);
+export const Header: React.FC<HeaderProps> = props => {
+  switch (props.type) {
+    case HeaderTypes.sz: {
+      return <SzHeaderComponent />;
+    }
+    default: {
+      const [isBurgerOpen, toggleBurger] = useModal();
+      const [count, setCount] = useState(0);
+      const phoneNumber = props.phoneNumber || '089 2109 4444';
 
-  const countFromLocalStorage = () => {
-    if (typeof favoritesCount === 'number') return;
-    const val = localStorage.getItem('im-favoriteProducts');
-    setCount(val ? JSON.parse(val).length : 0);
-  };
+      const countFromLocalStorage = () => {
+        if (typeof props.favoritesCount === 'number') return;
+        const val = localStorage.getItem('im-favoriteProducts');
+        setCount(val ? JSON.parse(val).length : 0);
+      };
 
-  useEffect(() => {
-    countFromLocalStorage();
-    document.addEventListener('favoritesCountChanged', countFromLocalStorage);
-  }, []);
+      useEffect(() => {
+        countFromLocalStorage();
+        document.addEventListener('favoritesCountChanged', countFromLocalStorage);
+      }, []);
 
-  useEffect(() => {
-    if (typeof favoritesCount !== 'number') return;
-    setCount(favoritesCount);
-  }, [favoritesCount]);
+      useEffect(() => {
+        if (typeof props.favoritesCount !== 'number') return;
+        setCount(props.favoritesCount);
+      }, [props.favoritesCount]);
 
-  return (
-    <HeaderWrapper>
-      <HeaderBar>
-        <Burger clickedCb={toggleBurger} isOpen={isBurgerOpen} favoritesCount={count} />
-        <LogoWrapper>
-          <BrandingLogo
-            color={AvailableColors.white}
-            colorTwo={AvailableColors.downy}
-            brandingHolder="InstamotionAllianz"
-            link={logoUrl ? logoUrl : '/'}
+      return (
+        <HeaderWrapper>
+          <HeaderBar>
+            <Burger clickedCb={toggleBurger} isOpen={isBurgerOpen} favoritesCount={count} />
+            <LogoWrapper>
+              <BrandingLogo
+                color={AvailableColors.white}
+                colorTwo={AvailableColors.downy}
+                brandingHolder="InstamotionAllianz"
+                link={props.logoUrl ? props.logoUrl : '/'}
+              />
+            </LogoWrapper>
+            <SearchWrapper>
+              <a href="/autos">
+                <Icon icon="cars" color="white" />
+              </a>
+            </SearchWrapper>
+            <NavWrapper>
+              <Link text={<FormattedMessage id="header.menu.autos" />} path="/autos" />
+              <Link text={<FormattedMessage id="header.menu.top_offers" />} path="/angebote" />
+              <Link
+                text={<FormattedMessage id="header.menu.wish_list" />}
+                path="/favoriten"
+                extra={count ? <Favorites>{count}</Favorites> : undefined}
+              />
+              <Link
+                text={<FormattedMessage id="header.menu.how_it_works" />}
+                path="/so-funktionierts"
+              />
+              <Link text={<FormattedMessage id="header.menu.services" />} path="/deine-vorteile" />
+              <Link
+                text={<FormattedMessage id="header.menu.additional_services" />}
+                path="/zusatzleistungen"
+              />
+            </NavWrapper>
+            <PhoneWrapper>
+              <CallerImg />
+              <Link
+                text={phoneNumber}
+                track="callFromHeader"
+                icon="phone"
+                path={`tel:${phoneNumber}`}
+              />
+            </PhoneWrapper>
+          </HeaderBar>
+          <MobileMenu
+            isOpen={isBurgerOpen}
+            toggleBurger={toggleBurger}
+            phoneNumber={phoneNumber}
+            favoritesCount={count}
           />
-        </LogoWrapper>
-        <SearchWrapper>
-          <a href="/autos">
-            <Icon icon="cars" color="white" />
-          </a>
-        </SearchWrapper>
-        <NavWrapper>
-          <Link text={<FormattedMessage id="header.menu.autos" />} path="/autos" />
-          <Link text={<FormattedMessage id="header.menu.top_offers" />} path="/angebote" />
-          <Link
-            text={<FormattedMessage id="header.menu.wish_list" />}
-            path="/favoriten"
-            extra={count ? <Favorites>{count}</Favorites> : undefined}
-          />
-          <Link
-            text={<FormattedMessage id="header.menu.how_it_works" />}
-            path="/so-funktionierts"
-          />
-          <Link text={<FormattedMessage id="header.menu.services" />} path="/deine-vorteile" />
-          <Link
-            text={<FormattedMessage id="header.menu.additional_services" />}
-            path="/zusatzleistungen"
-          />
-        </NavWrapper>
-        <PhoneWrapper>
-          <CallerImg />
-          <Link
-            text={phoneNumber}
-            track="callFromHeader"
-            icon="phone"
-            path={`tel:${phoneNumber}`}
-          />
-        </PhoneWrapper>
-      </HeaderBar>
-      <MobileMenu
-        isOpen={isBurgerOpen}
-        toggleBurger={toggleBurger}
-        phoneNumber={phoneNumber}
-        favoritesCount={count}
-      />
-    </HeaderWrapper>
-  );
+        </HeaderWrapper>
+      );
+    }
+  }
 };
 
 export const HeaderWrapper = styled.header`
