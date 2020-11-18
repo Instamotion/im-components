@@ -1,4 +1,5 @@
 
+# Take a note that Storybook don't supported anymore
 # im-components
 
 We use [bolt](https://www.npmjs.com/package/bolt) to manage workspaces in this repository.
@@ -74,7 +75,7 @@ Using up, down and space keys select the packages that will receive a major chan
 
 Finish up by writing a (more-or-less) meaningful message. Push your branch. Done.
 
-### Running the Storybook
+### Running the Storybook - don't supported anymore
 
 First, run `bolt` and `bolt build:components`. After everything has been built, you can run Storybook:
 
