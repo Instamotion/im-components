@@ -8,20 +8,22 @@ import TrustfulHeading from '../src/trustfulSection/trustfulHeading';
 import MenuItem from '../src/menu/menuItem';
 import Copyrights from '../src/copyrights';
 import CheckoutFooter from '../src/checkoutFooter';
-import Footer from '../src';
+import Footer, { FooterVariant } from '../src';
 import AllianzLogo from '../src/assets/AllianzLogo';
 import messages from '../utils/locales';
 
 describe('Global | Footer', () => {
   it('renders correct variant', () => {
-    const wrapper = mount(renderWithThemeAndI18n(<Footer variant="minimal" />, 'de', messages));
+    const wrapper = mount(
+      renderWithThemeAndI18n(<Footer variant={FooterVariant.minimal} />, 'de', messages)
+    );
     expect(wrapper.find(CheckoutFooter).length).toEqual(1);
   });
 
   it('renders default variant', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Footer variant="full" googleToken="" facebookToken="" />,
+        <Footer variant={FooterVariant.full} googleToken="" facebookToken="" />,
         'de',
         messages
       )
@@ -33,7 +35,7 @@ describe('Global | Footer', () => {
   it('default variant have menu items', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Footer variant="full" googleToken="" facebookToken="" />,
+        <Footer variant={FooterVariant.full} googleToken="" facebookToken="" />,
         'de',
         messages
       )
@@ -44,7 +46,7 @@ describe('Global | Footer', () => {
   it('default variant has social container', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Footer variant="full" googleToken="" facebookToken="" />,
+        <Footer variant={FooterVariant.full} googleToken="" facebookToken="" />,
         'de',
         messages
       )
@@ -55,7 +57,7 @@ describe('Global | Footer', () => {
   it('default variant has copyrights section', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Footer variant="full" googleToken="" facebookToken="" />,
+        <Footer variant={FooterVariant.full} googleToken="" facebookToken="" />,
         'de',
         messages
       )

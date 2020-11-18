@@ -32,7 +32,7 @@ type SZFooterProps = {
   variant: FooterVariant.sz;
 };
 
-enum FooterVariant {
+export enum FooterVariant {
   minimal = 'minimal',
   full = 'full',
   sz = 'sz'
