@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.0.0
+
+### Major Changes
+
+- 91c62d7: add legal text, update link
+
 ## 1.0.0
 
 ### Major Changes
