@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '@im-ui/theme';
 import { IconStyled } from '@im-ui/icon';
-import TagManager, { DataLayerArgs } from 'react-gtm-module';
+import {
+  trackingLogEvent,
+  trackingPhoneNumberClicked,
+  trackingMailLinkClicked
+} from '../helpers/tracking';
 
 interface Props {
   inline: boolean;
@@ -15,25 +19,17 @@ interface Props {
 
 const MenuItemLinkComponent: React.FC<Props> = ({ inline, icon, path, title, track }) => {
   const tag = (): void => {
-    const dataLayer: DataLayerArgs = {
-      dataLayer: {
-        event: track
+    if (track) {
+      trackingLogEvent(track);
+
+      switch (track) {
+        case 'call_from_footer':
+          trackingPhoneNumberClicked();
+          break;
+        case 'mail_from_footer':
+          trackingMailLinkClicked();
+          break;
       }
-    };
-    TagManager.dataLayer(dataLayer);
-    if (track === 'call_from_footer') {
-      TagManager.dataLayer({
-        dataLayer: {
-          event: 'click',
-          schema: 'interaction',
-          interaction: {
-            category: 'call',
-            action: 'call',
-            label: 'from_footer',
-            variant: undefined
-          }
-        }
-      });
     }
   };
 
