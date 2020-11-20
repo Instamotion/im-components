@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import theme from '@im-ui/theme';
 import Icon from '@im-ui/icon';
-import TagManager, { DataLayerArgs } from 'react-gtm-module';
+import TagManager from 'react-gtm-module';
 import sha from 'sha.js';
+import {
+  trackingLogEvent,
+  trackingNewsletterSuccess,
+  trackingNewsletterError
+} from '../helpers/tracking';
 
 interface Props {
   title?: JSX.Element | string;
@@ -18,12 +23,7 @@ const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, link
   const [isSubscribed, setIsSubscribed] = useState(false);
   const subscriptionLink = 'https://www.instamotion.com/component/70/data/subscribe';
   const tag = (): void => {
-    const dataLayer: DataLayerArgs = {
-      dataLayer: {
-        event: 'newsletter_suscription'
-      }
-    };
-    TagManager.dataLayer(dataLayer);
+    trackingLogEvent('newsletter_suscription');
 
     const crossEngageEvent = {
       dataLayer: {
@@ -56,8 +56,10 @@ const MailContentComponent: React.FC<Props> = ({ title, subTitle, linkText, link
         tag();
         setSubtitle(r.message);
         setIsSubscribed(true);
+        trackingNewsletterSuccess();
       })
       .catch(e => {
+        trackingNewsletterError(window.location.href);
         throw new Error('Error subscribing to newsletter from footer');
       });
   };
