@@ -1,8 +1,42 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+import { theme } from '../../theme/src/theme';
+
+const SzLegalText = styled.div`
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: ${theme.color.brightGrey}
+  font-family: ${theme.font.sans.family};
+  text-align: right;
+  
+  ${theme.mediaQueries.whenTablet} {
+    align-items: center;
+    max-width: 80rem;
+    padding: 1rem 5rem;
+  }
+`;
+
+const SzInstaText = styled.span`
+  display: block;
+
+  ${theme.mediaQueries.whenTablet} {
+    display: inline;
+  }
+`;
 
 const SzFooterContent: React.FC = () => (
   <>
+    <SzLegalText>
+      <div>Anzeige</div>
+      <div>
+        Ein Angebot der <SzInstaText>InstaMotion Retail GmbH</SzInstaText>
+      </div>
+    </SzLegalText>
     <FooterStyles></FooterStyles>
     <footer data-lt="sitefooter" className="css-1hmmevp-footer">
       <a href="https://www.sueddeutsche.de/">
@@ -67,25 +101,34 @@ const SzFooterContent: React.FC = () => (
       </ul>
       <ul className="css-1hhbgdh-list-dataPrivacyLinks">
         <li className="css-sr4uiq-listItem">
-          <a href="https://www.instamotion.com/impressum" className="css-gthqlh-dataPrivacyLink">
+          <a
+            href="https://www.instamotion.com/gebrauchtwagen/impressum"
+            className="css-gthqlh-dataPrivacyLink"
+          >
             Impressum
           </a>
         </li>
         <li className="css-sr4uiq-listItem">
           <a
-            href="https://www.instamotion.com/rechtliche-hinweise"
+            href="https://www.instamotion.com/gebrauchtwagen/rechtliche-hinweise"
             className="css-gthqlh-dataPrivacyLink"
           >
             Rechtliche Hinweise
           </a>
         </li>
         <li className="css-sr4uiq-listItem">
-          <a href="https://www.instamotion.com/agb" className="css-gthqlh-dataPrivacyLink">
+          <a
+            href="https://www.instamotion.com/gebrauchtwagen/agb"
+            className="css-gthqlh-dataPrivacyLink"
+          >
             AGB
           </a>
         </li>
         <li className="css-sr4uiq-listItem">
-          <a href="https://www.instamotion.com/datenschutz" className="css-gthqlh-dataPrivacyLink">
+          <a
+            href="https://www.instamotion.com/gebrauchtwagen/datenschutz"
+            className="css-gthqlh-dataPrivacyLink"
+          >
             Datenschutz
           </a>
         </li>
@@ -95,7 +138,10 @@ const SzFooterContent: React.FC = () => (
           </a>
         </li>
         <li className="css-sr4uiq-listItem">
-          <a href="https://www.instamotion.com/agb#Widerruf" className="css-gthqlh-dataPrivacyLink">
+          <a
+            href="https://www.instamotion.com/gebrauchtwagen/agb#Widerruf"
+            className="css-gthqlh-dataPrivacyLink"
+          >
             Widerrufsbelehrung
           </a>
         </li>
