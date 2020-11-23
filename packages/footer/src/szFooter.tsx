@@ -31,6 +31,10 @@ const SzInstaText = styled.span`
 
 const SzFooterContent: React.FC = () => (
   <>
+    <link
+      rel="stylesheet"
+      href="https://www.sueddeutsche.de/assets/contracts/fonts/fonts2020.1.css"
+    />
     <SzLegalText>
       <div>Anzeige</div>
       <div>
