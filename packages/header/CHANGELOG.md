@@ -1,5 +1,12 @@
 # @im-ui/header
 
+## 1.1.0
+
+### Minor Changes
+
+- d07794b: update footer and header with new styles
+- d07794b: fix absolute
+
 ## 1.0.0
 
 ### Major Changes
