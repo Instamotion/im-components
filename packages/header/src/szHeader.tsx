@@ -60,7 +60,6 @@ const SzHeaderComponent: React.FC = () => (
 const SZHeaderStyles = createGlobalStyle`
   .css-4duy2j-header {
     position: absolute;
-    position: absolute;
     width: 100vw;
     left: 0;
     top: 0;
