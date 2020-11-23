@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import { theme } from '../../theme/src/theme';
+import theme from '@im-ui/theme';
 
 const SzLegalText = styled.div`
   display: flex;
@@ -10,10 +10,10 @@ const SzLegalText = styled.div`
   text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 400;
-  color: ${theme.color.brightGrey}
+  color: ${theme.color.brightGrey};
   font-family: ${theme.font.sans.family};
   text-align: right;
-  
+
   ${theme.mediaQueries.whenTablet} {
     align-items: center;
     max-width: 80rem;
