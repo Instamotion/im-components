@@ -3,6 +3,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const SzHeaderComponent: React.FC = () => (
   <>
+    <link
+      rel="stylesheet"
+      href="https://www.sueddeutsche.de/assets/contracts/fonts/fonts2020.1.css"
+    />
     <SZHeaderStyles></SZHeaderStyles>
     <header className="css-1rk3xl1-header">
       <a href="https://www.sueddeutsche.de">
@@ -11,7 +15,8 @@ const SzHeaderComponent: React.FC = () => (
           viewBox="0 0 536 62"
           fill="#29293a"
           aria-hidden="false"
-          height="49"
+          height="20"
+          className="css-1vdppt3-logo"
         >
           <title>Süddeutsche Zeitung</title>
           <path d="M163.1 24.12c-.7-1.99-2.63-4.17-4.93-4.78-1.97-.62-4.28.14-6.01 1.65-3.95 3.84-3.9 9.52-2.35 14.44l13.3-11.31zm4.89-.2l-16.91 14.73c1.45 3.88 7.47 7.76 13.43.8l2.26 2.46c-3.53 4.31-9.96 5.54-15.32 4.4-4.84-1.04-8.74-5.63-10.05-10.26-1.65-5.83-.24-11.88 4.37-15.67 4-3.55 14.14-7.81 22.22 3.55zm161.31.2c-.7-1.99-2.63-4.17-4.93-4.78-1.97-.62-4.27.14-6.01 1.65-3.95 3.84-3.9 9.52-2.35 14.44l13.3-11.31zm4.89-.2l-16.91 14.73c1.45 3.88 7.47 7.76 13.43.8l2.26 2.46c-3.53 4.31-9.96 5.54-15.32 4.4-4.83-1.04-8.73-5.63-10.05-10.26-1.64-5.83-.23-11.88 4.37-15.67 4-3.55 14.19-7.81 22.22 3.55zm59.7.2c-.7-1.99-2.62-4.17-4.93-4.78-1.97-.62-4.27.14-6 1.65-3.95 3.84-3.9 9.52-2.36 14.44l13.3-11.31zm4.85-.2l-16.92 14.73c1.46 3.88 7.47 7.76 13.44.8l2.25 2.46c-3.52 4.31-9.96 5.54-15.31 4.4-4.84-1.04-8.74-5.63-10.05-10.26-1.65-5.83-.24-11.88 4.37-15.67 4.04-3.55 14.18-7.81 22.22 3.55zm-153.71-4.1l-2.2 3.02c-3.63-2.84-9.5-4.92-13.77-2.93-3.2 1.6-2.59 5.25 1.97 6.48 2.96.95 12.73 1.8 13.81 9.18.38 3.03-1.03 5.73-3.43 7.62-5.54 4.26-14.33 3.27-20.43 1.14-.05-.1 1.4-4.88 1.4-4.88a24.34 24.34 0 005.46 2.6c9.39 3.41 14.8-2.36 8.92-5.77-2.58-1.56-5.96-1.7-9.25-3.03-2.45-1-4.98-2.88-5.78-5.63-.8-2.84-.24-6.15 1.5-7.9 5.64-5.3 15.7-3.27 21.8.1M45.9 10.71a3.8 3.8 0 117.6 0 3.8 3.8 0 01-3.8 3.84 3.86 3.86 0 01-3.8-3.84"></path>
@@ -19,12 +24,12 @@ const SzHeaderComponent: React.FC = () => (
           <path d="M38.2 6.42L41.05 4l1.31 1.23-6.57 5.64C29.45 5.99 21.14 1.64 12.78 4c-2.16.71-5.08 2.6-5.17 5.35-.1 4.92 9.54 7.43 9.54 7.43s12.92 3.98 18.22 9c2.45 2.22 3.25 5.82 2.59 9.37C33.92 52.6 10 44.14 4.28 39.4l-2.96 3.03L0 41.25l6.67-6.81c5.3 3.97 6.48 4.68 11.37 6.76 12.64 4.78 16.77-2.6 13.3-7.28-5.88-6.96-15.88-5.78-22.98-10.75-3.76-2.7-6.43-6.67-5.78-11.45.43-4.55 5.08-8.62 9.07-10.13 9.07-3.6 19.26-.71 26.54 4.83m478.03 37.9c-4.27 0-7.7-5.48-7.7-12.3 0-6.76 3.47-12.3 7.7-12.3 4.28 0 7.7 5.49 7.7 12.3 0 6.82-3.42 12.3-7.7 12.3m19.5-23a3.76 3.76 0 00-7.23-1.47c0 .01-.48 1.15-.38 2.28a9.66 9.66 0 00-1.55-1.56c-4.7-4.07-12.45-4.64-17.85-1.9-5.83 3.04-8.83 9.14-7.99 15.67.52 5.5 5.4 10.6 10.34 12.3-.85.39-3.34.95-3.48 3.89-.1 5.01 7.84 2.36 11.74 3.74.99.52 1.5 1.51 1.32 2.7a3.07 3.07 0 01-2.02 1.94c-3.66 1.23-7.47-.81-10.1-3.32l-2.82 2.23c1.7 1.37 3.38 2.65 5.26 3.3 3.24 1.24 10.76 1.8 14.24-3.11.75-1 1.03-3.13.32-4.4-2.58-4.36-8.5-2.32-11.98-2.8-1.92-.23-3.28-3.12 3.72-3.69 5.3-.24 10.19-3.36 12.96-8.14 2.3-4.07 1.65-10.08-.1-14.06.85.2 1.46.29 1.98.2a3.79 3.79 0 003.62-3.8"></path>
         </svg>
       </a>
-      <ul className="css-w7tg3m-nav">
+      <ul className="css-rgxpu2-nav">
         <li className="css-1t1j9fp-navItem">
           <a
             href="https://www.sueddeutsche.de"
             data-title="SZ.de"
-            className="css-1it5csh-navLink-activeNavLink-ProductHeader"
+            className="css-341ceg-navLink-activeNavLink-ProductHeader"
           >
             SZ.de
           </a>
@@ -53,22 +58,41 @@ const SzHeaderComponent: React.FC = () => (
 );
 
 const SZHeaderStyles = createGlobalStyle`
-  .css-1rk3xl1-header {
+  .css-4duy2j-header {
+    position: absolute;
+    position: absolute;
     width: 100vw;
-    padding: 30px 0 24px;
+    left: 0;
+    top: 0;
     text-align: center;
     border-bottom: 2px solid #f2f2f3;
+    padding: 14px 0 8px;
   }
-  .css-w7tg3m-nav {
-    margin: 4px 0 0 0;
-    padding: 0;
-    list-style: none;
+  @media screen and (min-width: 768px) {
+    .css-4duy2j-header {
+      padding: 30px 0 24px;
+    }
   }
-  .css-1t1j9fp-navItem {
-    display: inline-block;
-    margin: 0 10px;
+  .css-1vdppt3-logo {
+    height: 20px;
   }
-  .css-1it5csh-navLink-activeNavLink-ProductHeader {
+  @media screen and (min-width: 768px) {
+    .css-1vdppt3-logo {
+      height: 49px;
+    }
+  }
+  .css-rgxpu2-nav {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    .css-rgxpu2-nav {
+      display: block;
+      margin: 4px 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+  .css-341ceg-navLink-activeNavLink-ProductHeader {
     -webkit-text-decoration: none;
     text-decoration: none;
     font-family: 'SZ Text', 'Georgia', 'Times', serif;
@@ -78,11 +102,11 @@ const SZHeaderStyles = createGlobalStyle`
     color: #29293a;
     font-weight: 700;
   }
-  .css-1it5csh-navLink-activeNavLink-ProductHeader:hover {
+  .css-341ceg-navLink-activeNavLink-ProductHeader:hover {
     color: #29293a;
     font-weight: 700;
   }
-  .css-1it5csh-navLink-activeNavLink-ProductHeader::before {
+  .css-341ceg-navLink-activeNavLink-ProductHeader::before {
     display: block;
     content: attr(data-title);
     font-weight: 700;
