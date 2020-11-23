@@ -58,13 +58,12 @@ pipeline {
 
     stage('Publish components') {
       when {
-        branch 'master'
-        // allOf {
-        //   branch 'master'
-        //   expression {
-        //     return sh(script: 'yarn changeset status', returnStatus: true) == 0
-        //   }
-        // }
+        allOf {
+          branch 'master'
+          expression {
+            return sh(script: 'yarn changeset status', returnStatus: true) == 0
+          }
+        }
       }
       steps {
         withCredentials([
