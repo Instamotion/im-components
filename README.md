@@ -44,7 +44,7 @@ import { theme } from ‘@im-ui/theme’;
 ```
 following import syntax is wrong:
 ```
-import { theme } from ‘@im-ui/theme’;
+import { theme } from ‘../../theme/src/theme’;
 ```
 
 
