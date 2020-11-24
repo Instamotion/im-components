@@ -47,6 +47,7 @@ following import syntax is wrong:
 import { theme } from ‘@im-ui/theme’;
 ```
 
+
 We are using [Hygen](https://www.hygen.io/) to generate a new components.
 
 Run the following command passing the new component's name in the end:
