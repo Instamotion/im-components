@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.2.0
+
+### Minor Changes
+
+- 969679f: update footer and header with new styles
+
 ## 2.1.1
 
 ### Patch Changes

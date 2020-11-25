@@ -66,7 +66,6 @@ const SZHeaderStyles = createGlobalStyle`
     padding: 14px 0 8px;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 1;
     background-color: ${theme.color.white};
   }
