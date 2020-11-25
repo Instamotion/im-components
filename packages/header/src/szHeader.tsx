@@ -1,6 +1,6 @@
 import React from 'react';
-import { createGlobalStyle, css } from 'styled-components';
-import { Theme } from '@im-ui/theme';
+import { createGlobalStyle } from 'styled-components';
+import theme from '@im-ui/theme';
 
 const SzHeaderComponent: React.FC = () => (
   <>
@@ -58,94 +58,92 @@ const SzHeaderComponent: React.FC = () => (
   </>
 );
 
-const SZHeaderStyles = createGlobalStyle<{ theme: Theme }>`
-  ${({ theme }) => css`
+const SZHeaderStyles = createGlobalStyle`
+  .css-4duy2j-header {
+    width: 100vw;
+    text-align: center;
+    border-bottom: 2px solid #f2f2f3;
+    padding: 14px 0 8px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: ${theme.color.white};
+  }
+  ${theme.mediaQueries.whenDesktop} {
     .css-4duy2j-header {
-      width: 100vw;
-      text-align: center;
-      border-bottom: 2px solid #f2f2f3;
-      padding: 11px 0 8px;
-      position: fixed;
-      top: 0;
-      z-index: 1;
-      background-color: ${theme.color.white};
+      padding: 30px 0 24px;
+      position: relative;
     }
-    ${theme.mediaQueries.whenDesktop} {
-      .css-4duy2j-header {
-        padding: 30px 0 24px;
-        position: relative;
-      }
-    }
+  }
+  .css-1vdppt3-logo {
+    height: 20px;
+  }
+  ${theme.mediaQueries.whenDesktop} {
     .css-1vdppt3-logo {
-      height: 20px;
+      height: 49px;
     }
-    ${theme.mediaQueries.whenDesktop} {
-      .css-1vdppt3-logo {
-        height: 49px;
-      }
-    }
+  }
+  .css-rgxpu2-nav {
+    display: none;
+  }
+  ${theme.mediaQueries.whenDesktop} {
     .css-rgxpu2-nav {
-      display: none;
-    }
-    ${theme.mediaQueries.whenDesktop} {
-      .css-rgxpu2-nav {
-        display: block;
-        margin: 4px 0 0 0;
-        padding: 0;
-        list-style: none;
-      }
-    }
-    .css-1t1j9fp-navItem {
-      display: inline-block;
-      margin: 0 10px;
-    }
-    .css-341ceg-navLink-activeNavLink-ProductHeader {
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      font-family: 'SZ Text', 'Georgia', 'Times', serif;
-      font-weight: 400;
-      font-size: 22px;
-      color: #71737f;
-      color: #29293a;
-      font-weight: 700;
-    }
-    .css-341ceg-navLink-activeNavLink-ProductHeader:hover {
-      color: #29293a;
-      font-weight: 700;
-    }
-    .css-341ceg-navLink-activeNavLink-ProductHeader::before {
       display: block;
-      content: attr(data-title);
-      font-weight: 700;
-      height: 1px;
-      color: transparent;
-      overflow: hidden;
-      visibility: hidden;
-      display: block;
+      margin: 4px 0 0 0;
+      padding: 0;
+      list-style: none;
     }
-    .css-fvji8-navLink {
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      font-family: 'SZ Text', 'Georgia', 'Times', serif;
-      font-weight: 400;
-      font-size: 22px;
-      color: #71737f;
-    }
-    .css-fvji8-navLink:hover {
-      color: #29293a;
-      font-weight: 700;
-    }
-    .css-fvji8-navLink::before {
-      display: block;
-      content: attr(data-title);
-      font-weight: 700;
-      height: 1px;
-      color: transparent;
-      overflow: hidden;
-      visibility: hidden;
-      display: block;
-    }
-  `}
+  }
+  .css-1t1j9fp-navItem {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .css-341ceg-navLink-activeNavLink-ProductHeader {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-family: 'SZ Text', 'Georgia', 'Times', serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #71737f;
+    color: #29293a;
+    font-weight: 700;
+  }
+  .css-341ceg-navLink-activeNavLink-ProductHeader:hover {
+    color: #29293a;
+    font-weight: 700;
+  }
+  .css-341ceg-navLink-activeNavLink-ProductHeader::before {
+    display: block;
+    content: attr(data-title);
+    font-weight: 700;
+    height: 1px;
+    color: transparent;
+    overflow: hidden;
+    visibility: hidden;
+    display: block;
+  }
+  .css-fvji8-navLink {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-family: 'SZ Text', 'Georgia', 'Times', serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #71737f;
+  }
+  .css-fvji8-navLink:hover {
+    color: #29293a;
+    font-weight: 700;
+  }
+  .css-fvji8-navLink::before {
+    display: block;
+    content: attr(data-title);
+    font-weight: 700;
+    height: 1px;
+    color: transparent;
+    overflow: hidden;
+    visibility: hidden;
+    display: block;
+  }
 `;
 
 export default SzHeaderComponent;
