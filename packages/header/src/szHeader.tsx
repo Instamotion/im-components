@@ -1,5 +1,5 @@
 import React from 'react';
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import theme from '@im-ui/theme';
 
 const SzHeaderComponent: React.FC = () => (
