@@ -63,10 +63,10 @@ const SZHeaderStyles = createGlobalStyle`
     width: 100vw;
     text-align: center;
     border-bottom: 2px solid #f2f2f3;
-    padding: 14px 0 8px;
+    padding: 11px 0 8px;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: ${theme.color.white};
   }
   ${theme.mediaQueries.whenDesktop} {
