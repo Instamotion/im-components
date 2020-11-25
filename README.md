@@ -38,6 +38,16 @@ $ bolt build
 
 ### Creating a new component
 
+!!!IMPORTANT Packages are all separate projects-like modules. This means that for package build correctly we need to import stuff from other packages with similar syntax:
+```
+import { theme } from ‘@im-ui/theme’;
+```
+following import syntax is wrong:
+```
+import { theme } from ‘../../theme/src/theme’;
+```
+
+
 We are using [Hygen](https://www.hygen.io/) to generate a new components.
 
 Run the following command passing the new component's name in the end:
