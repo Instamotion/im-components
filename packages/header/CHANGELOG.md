@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 1.3.1
+
+### Patch Changes
+
+- 6821870: Fix header style for parkplapz filter
+
 ## 1.3.0
 
 ### Minor Changes
