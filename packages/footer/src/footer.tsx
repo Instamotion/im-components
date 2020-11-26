@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import CheckoutFooter from './checkoutFooter';
 import DefaultFooter, { MenuOptions } from './defaultFooter';
 import TrustfulSection from './trustfulSection';
-import TagManager from 'react-gtm-module';
 import SzFooterContent from './szFooter';
+import { trackingLogCustomEvent } from './helpers/tracking';
 
 const AB_TEST_VARIABLE_NAME: string = 'ab-test-product';
 
@@ -41,18 +41,18 @@ export enum FooterVariant {
 export type FooterProps = FullFooterProps | MinimalFooterProps | SZFooterProps;
 
 const Footer: React.FC<FooterProps> = props => {
-  if (typeof window !== 'undefined' && props.variant !== FooterVariant.sz && props.abTestFlagName) {
-    const dataLayerArgs = useMemo(
-      () => ({
-        dataLayer: {
+  useEffect(() => {
+    if (props.variant !== FooterVariant.sz && props.abTestFlagName) {
+      const dataLayerArgs = useMemo(
+        () => ({
           [AB_TEST_VARIABLE_NAME]: `${props.abTestFlagName}-${props.abTestFlagValue || 'default'}`
-        }
-      }),
-      [AB_TEST_VARIABLE_NAME, props.abTestFlagName, props.abTestFlagValue]
-    );
+        }),
+        [AB_TEST_VARIABLE_NAME, props.abTestFlagName, props.abTestFlagValue]
+      );
 
-    TagManager.dataLayer(dataLayerArgs);
-  }
+      trackingLogCustomEvent(dataLayerArgs);
+    }
+  }, []);
 
   switch (props.variant) {
     case FooterVariant.minimal: {
