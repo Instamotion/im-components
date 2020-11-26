@@ -43,14 +43,9 @@ export type FooterProps = FullFooterProps | MinimalFooterProps | SZFooterProps;
 const Footer: React.FC<FooterProps> = props => {
   useEffect(() => {
     if (props.variant !== FooterVariant.sz && props.abTestFlagName) {
-      const dataLayerArgs = useMemo(
-        () => ({
-          [AB_TEST_VARIABLE_NAME]: `${props.abTestFlagName}-${props.abTestFlagValue || 'default'}`
-        }),
-        [AB_TEST_VARIABLE_NAME, props.abTestFlagName, props.abTestFlagValue]
-      );
-
-      trackingLogCustomEvent(dataLayerArgs);
+      trackingLogCustomEvent({
+        [AB_TEST_VARIABLE_NAME]: `${props.abTestFlagName}-${props.abTestFlagValue || 'default'}`
+      });
     }
   }, []);
 
