@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.3.1
+
+### Patch Changes
+
+- 7afc638: Tracking fix
+
 ## 2.3.0
 
 ### Minor Changes
