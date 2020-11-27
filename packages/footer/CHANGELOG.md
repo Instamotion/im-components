@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.3.3
+
+### Patch Changes
+
+- 7239ac1: fix footer behaviour
+
 ## 2.3.2
 
 ### Patch Changes
