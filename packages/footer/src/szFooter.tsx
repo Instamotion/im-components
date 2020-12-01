@@ -1,33 +1,5 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import theme from '@im-ui/theme';
-
-const SzLegalText = styled.div`
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  padding: 1rem;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: ${theme.color.brightGrey};
-  font-family: ${theme.font.sans.family};
-  text-align: right;
-
-  ${theme.mediaQueries.whenTablet} {
-    align-items: center;
-    max-width: 80rem;
-    padding: 1rem 5rem;
-  }
-`;
-
-const SzInstaText = styled.span`
-  display: block;
-
-  ${theme.mediaQueries.whenTablet} {
-    display: inline;
-  }
-`;
+import { createGlobalStyle } from 'styled-components';
 
 const SzFooterContent: React.FC = () => {
   const openCookiePopup = (event: any) => {
@@ -43,12 +15,6 @@ const SzFooterContent: React.FC = () => {
         rel="stylesheet"
         href="https://www.sueddeutsche.de/assets/contracts/fonts/fonts2020.1.css"
       />
-      <SzLegalText>
-        <div>Anzeige</div>
-        <div>
-          Ein Angebot der <SzInstaText>InstaMotion Retail GmbH</SzInstaText>
-        </div>
-      </SzLegalText>
       <FooterStyles></FooterStyles>
       <footer data-lt="sitefooter" className="css-1hmmevp-footer">
         <a href="https://www.sueddeutsche.de/">
