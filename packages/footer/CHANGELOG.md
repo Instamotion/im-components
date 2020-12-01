@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.3.4
+
+### Patch Changes
+
+- 65274f3: remove SZ legal text
+
 ## 2.3.3
 
 ### Patch Changes
