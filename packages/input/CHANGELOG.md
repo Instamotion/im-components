@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 1.0.1
+
+### Patch Changes
+
+- 3fc4451: update error and label styles
+
 ## 1.0.0
 
 ### Major Changes
