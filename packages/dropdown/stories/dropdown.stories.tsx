@@ -12,10 +12,12 @@ const options: DropdownOptionProps[] = [
 ];
 
 storiesOf('Dropdown', module)
-  .add('with label', () => {
+  .add('with label and error message', () => {
     const props: DropdownProps = {
       id: 'dropdown-1',
+      errorMessage: <>error message</>,
       options,
+      label: 'country',
       onChange: (e: React.ChangeEvent<HTMLSelectElement>) => {
         action('selected')(e.target.selectedIndex);
       }
@@ -23,7 +25,6 @@ storiesOf('Dropdown', module)
 
     return renderWithThemeAndI18n(
       <Fragment>
-        <Label text="Country" />
         <Dropdown {...props} />
       </Fragment>,
       'de',

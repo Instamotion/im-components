@@ -1,5 +1,17 @@
 import styled from 'styled-components';
 import theme from '@im-ui/theme';
+import Label from '@im-ui/label';
+
+export const ErrorMessage = styled.span`
+  color: ${theme.color.flamePea};
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+`;
+
+export const StyledLabel = styled(Label)<{ error?: boolean }>`
+  ${props => props.error && `color: ${theme.color.flamePea};`};
+  display: block;
+`;
 
 export const DropdownComponent = styled.span`
   display: flex;

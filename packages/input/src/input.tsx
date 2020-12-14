@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Label from '@im-ui/label';
-import ErrorMessage from '@im-ui/error-message';
 import theme from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 
@@ -109,6 +108,16 @@ const StyledIcon = styled(Icon)`
   cursor: pointer;
 `;
 
+const StyledLabel = styled(Label)<{ error?: boolean }>`
+  ${props => props.error && `color: ${theme.color.flamePea};`}
+`;
+
+const ErrorMessage = styled.span`
+  color: ${theme.color.flamePea};
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+`;
+
 export const Input: React.FC<InputProps> = ({
   label,
   errorMessage,
@@ -185,7 +194,9 @@ export const Input: React.FC<InputProps> = ({
 
   return (
     <InputComponentWrapper style={{ width }}>
-      {label && <Label required={required} text={label} htmlFor={id} />}
+      {label && (
+        <StyledLabel error={!!errorMessage} required={required} text={label} htmlFor={id} />
+      )}
       <StyledInput value={value} error={!!errorMessage}>
         {shouldShowPhonePrefix && <span>{phonePrefix}</span>}
         <InputElements
