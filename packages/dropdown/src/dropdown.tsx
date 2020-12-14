@@ -1,8 +1,13 @@
 import React from 'react';
-import Label from '@im-ui/label';
-import ErrorMessage from '@im-ui/error-message';
 import { FormattedMessage } from 'react-intl';
-import { AngleIcon, DropdownContainer, DropdownSelect, DropdownComponent } from './dropdownStyles';
+import {
+  AngleIcon,
+  DropdownContainer,
+  DropdownSelect,
+  DropdownComponent,
+  ErrorMessage,
+  StyledLabel
+} from './dropdownStyles';
 
 export type DropdownValue = number | string;
 
@@ -51,7 +56,9 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <DropdownComponent style={{ width }}>
-      {label && <Label text={label} disabled={disabled} required={required} />}
+      {label && (
+        <StyledLabel error={!!errorMessage} text={label} disabled={disabled} required={required} />
+      )}
       <DropdownContainer>
         <DropdownSelect
           id={id}
