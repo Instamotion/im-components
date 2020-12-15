@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/footer",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",

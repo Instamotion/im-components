@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.3.5
+
+### Patch Changes
+
+- 649110a: update traking for footer
+
 ## 2.3.4
 
 ### Patch Changes
