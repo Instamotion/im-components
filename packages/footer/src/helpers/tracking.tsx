@@ -27,7 +27,7 @@ export const trackingPhoneNumberClicked = () =>
     event: 'click',
     schema: 'interaction',
     interaction: {
-      category: 'call',
+      category: 'contact',
       action: 'call',
       label: 'from_footer',
       variant: undefined
