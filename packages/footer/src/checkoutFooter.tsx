@@ -6,6 +6,14 @@ interface Props {
   className?: string;
 }
 
+const handleClickPrivacySettings = (e: any) => {
+  e.preventDefault();
+  const cookieOpenBttn = document.getElementsByClassName(
+    'ot-floating-button__open'
+  )[0] as HTMLButtonElement;
+  cookieOpenBttn.click();
+};
+
 export const FooterComponent: React.FC<Props> = ({ className }) => (
   <footer className={className}>
     <a href="https://www.instamotion.com/ueber-uns" target="_blank" rel="noopener noreferrer">
@@ -19,6 +27,9 @@ export const FooterComponent: React.FC<Props> = ({ className }) => (
     </a>
     <a href="https://www.instamotion.com/datenschutz" target="_blank" rel="noopener noreferrer">
       <FormattedMessage id="checkout.footer.privacy" />
+    </a>
+    <a href="#" onClick={handleClickPrivacySettings}>
+      <FormattedMessage id="checkout.footer.privacy_settings" />
     </a>
     <a href="https://www.instamotion.com/faq" target="_blank" rel="noopener noreferrer">
       <FormattedMessage id="checkout.footer.faq" />
