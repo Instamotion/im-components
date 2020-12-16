@@ -16,6 +16,7 @@ storiesOf('Dropdown', module)
     const props: DropdownProps = {
       id: 'dropdown-1',
       errorMessage: <>error message</>,
+      required: true,
       options,
       label: 'country',
       onChange: (e: React.ChangeEvent<HTMLSelectElement>) => {
