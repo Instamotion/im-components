@@ -116,25 +116,25 @@ const menus: {
       id: 'default.footer.menu.about_us',
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.about_us" />,
-      link: '/ueber-uns'
+      link: '/ueber/ueber-uns'
     },
     {
       id: 'default.footer.menu.press',
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.press" />,
-      link: '/presse'
+      link: '/ueber/presse'
     },
     {
       id: 'default.footer.menu.faq',
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.faq" />,
-      link: '/faq'
+      link: '/ueber/faq'
     },
     {
       id: 'default.footer.menu.erfahrungen',
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.erfahrungen" />,
-      link: '/erfahrungen'
+      link: '/ueber/erfahrungen'
     },
     {
       id: 'default.footer.menu.blog',
@@ -146,7 +146,7 @@ const menus: {
       id: 'default.footer.menu.jobs',
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.jobs" />,
-      link: '/jobs'
+      link: '/karriere/jobs'
     }
   ],
   [
@@ -159,31 +159,31 @@ const menus: {
       id: 'default.footer.imprint',
       type: 'item',
       title: <FormattedMessage id="default.footer.imprint" />,
-      link: '/impressum'
+      link: '/rechtliches/impressum'
     },
     {
       id: 'default.footer.legal_notice',
       type: 'item',
       title: <FormattedMessage id="default.footer.legal_notice" />,
-      link: '/rechtliche-hinweise'
+      link: '/rechtliches/rechtliche-hinweise'
     },
     {
       id: 'default.footer.conditions',
       type: 'item',
       title: <FormattedMessage id="default.footer.conditions" />,
-      link: '/agb'
+      link: '/rechtliches/agb'
     },
     {
       id: 'default.footer.data_protection',
       type: 'item',
       title: <FormattedMessage id="default.footer.data_protection" />,
-      link: '/datenschutz'
+      link: '/rechtliches/datenschutz'
     },
     {
       id: 'default.footer.cancellation',
       type: 'item',
       title: <FormattedMessage id="default.footer.cancellation" />,
-      link: '/agb#Widerruf'
+      link: '/rechtliches/agb#Widerruf'
     }
   ],
   [
@@ -196,41 +196,41 @@ const menus: {
       id: 'default.footer.warranty',
       type: 'item',
       title: <FormattedMessage id="default.footer.warranty" />,
-      link: '/nur-gepruefte-fahrzeuge'
+      link: '/deine-vorteile/nur-gepruefte-fahrzeuge'
     },
     {
       id: 'default.footer.delivery',
       type: 'item',
       title: <FormattedMessage id="default.footer.delivery" />,
-      link: '/so-funktionierts',
+      link: '/deine-vorteile/so-funktionierts',
       isHidden: (menuOptions: MenuOptions) => menuOptions.showDeliveryLink !== true
     },
     {
       id: 'default.footer.financing',
       type: 'item',
       title: <FormattedMessage id="default.footer.financing" />,
-      link: '/attraktive-konditionen',
+      link: '/deine-vorteile/attraktive-konditionen',
       isHidden: (menuOptions: MenuOptions) => menuOptions.showFinancingLink !== true
     },
     {
       id: 'default.footer.quality',
       type: 'item',
       title: <FormattedMessage id="default.footer.quality" />,
-      link: '/1-jahr-garantie',
+      link: '/deine-vorteile/1-jahr-garantie',
       isHidden: (menuOptions: MenuOptions) => menuOptions.showQualityLink !== true
     },
     {
       id: 'default.footer.unsere_zusatzleistungen',
       type: 'item',
       title: <FormattedMessage id="default.footer.unsere_zusatzleistungen" />,
-      link: '/zusatzleistungen',
+      link: '/deine-vorteile/zusatzleistungen',
       isHidden: (menuOptions: MenuOptions) => menuOptions.showQualityLink !== true
     },
     {
       id: 'default.footer.so_funktioniert',
       type: 'item',
       title: <FormattedMessage id="default.footer.so_funktioniert" />,
-      link: '/so-funktionierts',
+      link: '/deine-vorteile/so-funktionierts',
       isHidden: (menuOptions: MenuOptions) => menuOptions.showQualityLink !== true
     }
   ],
