@@ -1,5 +1,11 @@
 # @im-ui/dropdown
 
+## 1.0.2
+
+### Patch Changes
+
+- 7c86d90: update dropdown with error styles
+
 ## 1.0.1
 
 ### Patch Changes
