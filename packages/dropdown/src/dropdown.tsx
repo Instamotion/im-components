@@ -69,6 +69,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           onChange={handleOnChange}
           required={required}
           value={value}
+          error={!!errorMessage}
         >
           {options &&
             options.map(option => (

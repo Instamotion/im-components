@@ -53,11 +53,12 @@ export const DropdownContainer = styled.div`
   position: relative;
 `;
 
-export const DropdownSelect = styled.select`
+export const DropdownSelect = styled.select<{ error: boolean }>`
   appearance: none;
   box-sizing: border-box;
   cursor: pointer;
-  border: ${theme.input.border.width}px solid ${theme.input.border.color};
+  border: ${theme.input.border.width}px solid
+    ${props => (props.error ? theme.color.flamePea : theme.input.border.color)};
   border-radius: 4px;
   font-family: ${theme.font.sans.family};
   font-size: ${theme.input.font.size}px;
