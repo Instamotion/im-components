@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.4.0
+
+### Minor Changes
+
+- 5237aca: UT-371-Update-footer-with-new-urls
+
 ## 2.3.5
 
 ### Patch Changes
