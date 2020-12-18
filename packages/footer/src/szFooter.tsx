@@ -79,22 +79,28 @@ const SzFooterContent: React.FC = () => {
         </ul>
         <ul className="css-1hhbgdh-list-dataPrivacyLinks">
           <li className="css-sr4uiq-listItem">
-            <a href="/gebrauchtwagen/impressum" className="css-gthqlh-dataPrivacyLink">
+            <a href="/gebrauchtwagen/rechtliches/impressum" className="css-gthqlh-dataPrivacyLink">
               Impressum
             </a>
           </li>
           <li className="css-sr4uiq-listItem">
-            <a href="/gebrauchtwagen/rechtliche-hinweise" className="css-gthqlh-dataPrivacyLink">
+            <a
+              href="/gebrauchtwagen/rechtliches/rechtliche-hinweise"
+              className="css-gthqlh-dataPrivacyLink"
+            >
               Rechtliche Hinweise
             </a>
           </li>
           <li className="css-sr4uiq-listItem">
-            <a href="/gebrauchtwagen/agb" className="css-gthqlh-dataPrivacyLink">
+            <a href="/gebrauchtwagen/rechtliches/agb" className="css-gthqlh-dataPrivacyLink">
               AGB
             </a>
           </li>
           <li className="css-sr4uiq-listItem">
-            <a href="/gebrauchtwagen/datenschutz" className="css-gthqlh-dataPrivacyLink">
+            <a
+              href="/gebrauchtwagen/rechtliches/datenschutz"
+              className="css-gthqlh-dataPrivacyLink"
+            >
               Datenschutz
             </a>
           </li>
@@ -104,7 +110,10 @@ const SzFooterContent: React.FC = () => {
             </a>
           </li>
           <li className="css-sr4uiq-listItem">
-            <a href="/gebrauchtwagen/agb#Widerruf" className="css-gthqlh-dataPrivacyLink">
+            <a
+              href="/gebrauchtwagen/rechtliches/agb#Widerruf"
+              className="css-gthqlh-dataPrivacyLink"
+            >
               Widerrufsbelehrung
             </a>
           </li>
