@@ -64,12 +64,15 @@ export const Header: React.FC<HeaderProps> = props => {
               />
               <Link
                 text={<FormattedMessage id="header.menu.how_it_works" />}
-                path="/so-funktionierts"
+                path="/deine-vorteile/so-funktionierts"
               />
-              <Link text={<FormattedMessage id="header.menu.services" />} path="/deine-vorteile" />
+              <Link
+                text={<FormattedMessage id="header.menu.services" />}
+                path="/deine-vorteile/deine-vorteile"
+              />
               <Link
                 text={<FormattedMessage id="header.menu.additional_services" />}
-                path="/zusatzleistungen"
+                path="/deine-vorteile/zusatzleistungen"
               />
             </NavWrapper>
             <PhoneWrapper>
