@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 1.3.2
+
+### Patch Changes
+
+- d643273: change the links for header
+
 ## 1.3.1
 
 ### Patch Changes
