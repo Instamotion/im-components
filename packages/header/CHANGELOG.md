@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 1.3.3
+
+### Patch Changes
+
+- 4e6114d: fix header types
+
 ## 1.3.2
 
 ### Patch Changes
