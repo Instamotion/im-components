@@ -1,5 +1,12 @@
 # @im-ui/footer
 
+## 2.4.1
+
+### Patch Changes
+
+- c86a1ec: Add footer link to open cookie preferences
+- c86a1ec: Add footer link to open cookie preferences
+
 ## 2.4.0
 
 ### Minor Changes
