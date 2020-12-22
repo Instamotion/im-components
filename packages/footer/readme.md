@@ -48,6 +48,7 @@ checkout.footer.about_us
 checkout.footer.agb
 checkout.footer.imprint
 checkout.footer.privacy
+checkout.footer.privacy_settings
 checkout.footer.faq
 default.footer.newsletter.title
 default.footer.newsletter.linkText

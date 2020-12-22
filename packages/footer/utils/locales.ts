@@ -3,6 +3,7 @@ const de = {
   'checkout.footer.agb': 'AGB',
   'checkout.footer.imprint': 'Impressum',
   'checkout.footer.privacy': 'Datenschutz',
+  'checkout.footer.privacy_settings': 'Datenschutz-Einstellungen',
   'checkout.footer.faq': 'FAQ',
   'default.footer.newsletter.title': 'Verpasse mit unserem Newsletter \nkein Angebot mehr!',
   'default.footer.newsletter.linkText': '\nDatenschutzbestimmungen.',
