@@ -1,2 +1,2 @@
 export { default, HeaderWrapper } from './header';
-export { HeaderProps, MenuOptions } from './types';
+export { HeaderProps, MenuOptions, HeaderTypes } from './types';

@@ -14,7 +14,7 @@ export type DefaultHeaderProps = {
   favoritesCount?: number;
   menuOptions?: MenuOptions;
   logoUrl?: string;
-  type: HeaderTypes.default;
+  type?: HeaderTypes.default;
 };
 
 export type SZHeaderProps = {
