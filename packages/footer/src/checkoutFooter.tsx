@@ -1,18 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
+import { openBanner } from '../utils/cookieProBanner';
 
 interface Props {
   className?: string;
 }
-
-const handleClickPrivacySettings = (e: any) => {
-  e.preventDefault();
-  const cookieOpenBttn = document.getElementsByClassName(
-    'ot-floating-button__open'
-  )[0] as HTMLButtonElement;
-  cookieOpenBttn.click();
-};
 
 export const FooterComponent: React.FC<Props> = ({ className }) => (
   <footer className={className}>
@@ -28,7 +21,7 @@ export const FooterComponent: React.FC<Props> = ({ className }) => (
     <a href="https://www.instamotion.com/datenschutz" target="_blank" rel="noopener noreferrer">
       <FormattedMessage id="checkout.footer.privacy" />
     </a>
-    <a href="#" onClick={handleClickPrivacySettings}>
+    <a href="#" onClick={openBanner}>
       <FormattedMessage id="checkout.footer.privacy_settings" />
     </a>
     <a href="https://www.instamotion.com/faq" target="_blank" rel="noopener noreferrer">
