@@ -1,14 +1,8 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+import { openBanner } from '../utils/cookieProBanner';
 
 const SzFooterContent: React.FC = () => {
-  const openCookiePopup = (event: any) => {
-    event.preventDefault();
-    const cookieOpenBttn = document.getElementsByClassName(
-      'ot-floating-button__open'
-    )[0] as HTMLButtonElement;
-    cookieOpenBttn.click();
-  };
   return (
     <>
       <link
@@ -105,7 +99,7 @@ const SzFooterContent: React.FC = () => {
             </a>
           </li>
           <li className="css-sr4uiq-listItem">
-            <a href="#" onClick={openCookiePopup} className="css-gthqlh-dataPrivacyLink">
+            <a href="#" onClick={openBanner} className="css-gthqlh-dataPrivacyLink">
               Datenschutz-Einstellungen
             </a>
           </li>

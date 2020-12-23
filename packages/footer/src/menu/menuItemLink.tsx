@@ -15,10 +15,21 @@ interface Props {
   title?: JSX.Element | string;
   blank?: boolean;
   track?: string;
+  clickHandler?: (event: React.MouseEvent<EventTarget>) => void;
 }
 
-const MenuItemLinkComponent: React.FC<Props> = ({ inline, icon, path, title, track }) => {
-  const tag = (): void => {
+const MenuItemLinkComponent: React.FC<Props> = ({
+  inline,
+  icon,
+  path,
+  title,
+  track,
+  clickHandler
+}) => {
+  const tag = (event: React.MouseEvent<EventTarget>): void => {
+    if (clickHandler) {
+      clickHandler(event);
+    }
     if (track) {
       trackingLogEvent(track);
 
@@ -43,19 +54,18 @@ const MenuItemLinkComponent: React.FC<Props> = ({ inline, icon, path, title, tra
   );
 };
 
-const MenuItemIcon = styled.span`
+const MenuItemIcon = styled.span<{ inline: boolean }>`
   :hover {
     svg {
       IconWrapper path {
-        fill: ${(props: { inline: boolean }) =>
-          props.inline ? theme.color.downy : theme.color.silver};
+        fill: ${props => (props.inline ? theme.color.downy : theme.color.silver)};
       }
     }
   }
 `;
 
-const MenuItemLink = styled.div`
-  display: ${(props: { inline: boolean }) => (props.inline ? 'inline-block' : 'block')};
+const MenuItemLink = styled.div<{ inline: boolean }>`
+  display: ${props => (props.inline ? 'inline-block' : 'block')};
 
   ${IconStyled} {
     padding-right: 0.5rem;

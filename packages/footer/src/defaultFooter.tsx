@@ -13,6 +13,7 @@ import Seals from './seals';
 import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
 import SocialContainer from './social/socialContainer';
+import { openBanner } from '../utils/cookieProBanner';
 
 export const renderIcon = (iconName?: string): React.ReactNode => {
   switch (iconName) {
@@ -43,6 +44,7 @@ const menus: {
   icon?: string;
   blank?: boolean;
   track?: string;
+  clickFuntion?: (event: React.MouseEvent<EventTarget>) => void;
   isHidden?: (menuOptions: MenuOptions) => boolean;
 }[][] = [
   [
@@ -178,6 +180,12 @@ const menus: {
       type: 'item',
       title: <FormattedMessage id="default.footer.data_protection" />,
       link: '/rechtliches/datenschutz'
+    },
+    {
+      id: 'checkout.footer.privacy_settings',
+      type: 'item',
+      title: <FormattedMessage id="checkout.footer.privacy_settings" />,
+      clickFuntion: openBanner
     },
     {
       id: 'default.footer.cancellation',
@@ -319,6 +327,7 @@ export const renderMenu = (menuOptions?: MenuOptions): React.ReactNode => {
                 title={menuItem.title}
                 blank={menuItem.blank}
                 track={menuItem.track}
+                clickHandler={menuItem.clickFuntion}
               />
             );
           default:
