@@ -95,10 +95,10 @@ yarn start
 
 ### Adding dependency to a package
 
-Let's say, we need to use `@im-iu/utils` within `@im-ui/button`.
+Let's say, we need to use `@im-ui/utils` within `@im-ui/button`.
 
 ```
-bolt w @im-ui/button add @im-iu/utils [-P|-D]
+bolt w @im-ui/button add @im-ui/utils [-P|-D]
 ```
 
 You can use yarn flags to specify the type of the dependency:
