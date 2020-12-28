@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Downshift from 'downshift';
-import styled, { css } from 'styled-components';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { FormattedMessage, useIntl } from 'react-intl';
 import Icon, { AvailableIcons } from '@im-ui/icon';
 import Label from '@im-ui/label';
@@ -20,6 +20,8 @@ export interface StyledDropdownProps {
   placeholder?: string;
   defaultItem?: OptionType;
   onChange?: (selectedItem: OptionType) => void;
+  selectStyles?: FlattenSimpleInterpolation;
+  isActive?: boolean;
 }
 
 const StyledDropdown: React.FC<StyledDropdownProps> = ({
@@ -28,18 +30,26 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
   disabled,
   placeholder,
   defaultItem,
-  onChange
+  onChange,
+  selectStyles,
+  isActive
 }) => {
   const hasEditions =
     options && options.length && options.find(option => option.value.includes('_'));
   const isDisabled = options.length ? disabled : true;
   const { formatMessage } = useIntl();
+  const isPhoneCode: boolean = useMemo(() => !!selectStyles, [selectStyles]);
+
   return (
     <Downshift
       onChange={onChange}
       itemToString={item => item && formatMessage({ id: item.label })}
       selectedItem={defaultItem} //TODO: fix console warning
-      inputValue={defaultItem ? formatMessage({ id: defaultItem.label }) : ''}
+      inputValue={
+        defaultItem
+          ? formatMessage({ id: isPhoneCode ? defaultItem.value : defaultItem.label })
+          : ''
+      }
     >
       {({
         getRootProps,
@@ -51,9 +61,14 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
         isOpen,
         selectedItem
       }) => (
-        <StyledDropdownWrapper {...getRootProps()}>
+        <StyledDropdownWrapper {...getRootProps()} selectStyles={selectStyles}>
           {label && <Label text={label} disabled={isDisabled} {...getLabelProps()} />}
-          <DropdownContainer isOpen={isOpen} disabled={isDisabled} {...getToggleButtonProps()}>
+          <DropdownContainer
+            isOpen={isOpen}
+            disabled={isDisabled}
+            isActive={isActive}
+            {...getToggleButtonProps()}
+          >
             {selectedItem && selectedItem.iconName && (
               <DropdownIcon
                 icon={selectedItem.iconName}
@@ -66,7 +81,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
               placeholder={placeholder && formatMessage({ id: placeholder })}
               disabled={isDisabled}
             />
-            <DropdownButton>
+            <DropdownButton isPhoneCode={isPhoneCode} isActive={isActive} isOpen={isOpen}>
               {isOpen ? (
                 <Icon icon="up" color="oil" />
               ) : (
@@ -104,6 +119,7 @@ const StyledDropdownWrapper = styled.div`
   width: 100%;
   padding-bottom: 1rem;
   position: relative;
+  ${({ selectStyles }: { selectStyles: FlattenSimpleInterpolation }) => selectStyles};
 `;
 
 const Menu = styled.ul`
@@ -166,22 +182,35 @@ export const Item = styled.li`
     `};
 `;
 
-export const DropdownButton = styled.div`
+type DropdownButtonType = { isPhoneCode?: boolean; isActive?: boolean; isOpen?: boolean };
+
+export const DropdownButton = styled.div<DropdownButtonType>`
   cursor: pointer;
   margin-left: auto;
   margin-right: 0.5rem;
+  ${({ isPhoneCode, isActive, isOpen }) =>
+    isPhoneCode &&
+    `
+    align-items: center;
+    display: flex;
+    height: 100%;
+    padding-right: .5rem;
+    border-right: 0.0625rem solid ${
+      isActive || isOpen ? theme.color.downy : theme.input.border.color
+    };
+  `}
 `;
 
+// @ts-ignore
 const DropdownContainer = styled.div`
   align-items: center;
-  background: #fff;
   border-radius: 0.25rem;
   border: 0.0625rem solid ${theme.color.silver};
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
   height: 2.5rem;
-  padding-left: 1.125rem;
+  padding: .25rem 0 .25rem 1.125rem;
   position: relative;
   user-select:none;
   z-index: 1;
@@ -192,6 +221,10 @@ const DropdownContainer = styled.div`
       &:hover {
         box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.1);
         border: 0.0625rem solid ${theme.color.downy};
+
+        ${DropdownButton} {
+          border-color: ${theme.color.downy};
+        }
       }
     `}
   ${(props: { isOpen: boolean; disabled?: boolean }) =>
@@ -216,16 +249,23 @@ const DropdownContainer = styled.div`
         outline: none;
       }
     `}
-    ${(props: { isOpen: boolean; disabled?: boolean }) =>
-      props.disabled &&
-      css`
-        cursor: not-allowed;
-        pointer-events: none;
-      `}
+  ${(props: { isOpen: boolean; disabled?: boolean }) =>
+    props.disabled &&
+    css`
+      cursor: not-allowed;
+      pointer-events: none;
+    `}
+  ${(props: { isActive: boolean; isOpen: boolean }) =>
+    props.isActive &&
+    !props.isOpen &&
+    css`
+      border-color: ${theme.color.downy};
+    `}
 `;
 
 const DropdownInput = styled.input`
   border: none;
+  padding: 0;
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -241,6 +281,10 @@ const DropdownInput = styled.input`
     css`
       color: ${theme.color.silver};
     `}
+
+  &:after {
+    content: '';
+  }
 `;
 
 const DropdownIcon = styled(Icon)`

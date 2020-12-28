@@ -16,6 +16,26 @@ import Input, { InputProps } from '../src';
 
 type ValueType = string | number;
 
+const PhoneInputDemo = (): React.ReactElement => {
+  const [value, setValue] = React.useState(text('value', ''));
+
+  const props: InputProps = {
+    value,
+    type: 'tel',
+    label: 'Your phone',
+    onChange: (val: ValueType) => {
+      setValue(val as string);
+      action('Input changed')(val);
+    }
+  };
+
+  return renderWithThemeAndI18n(
+    <div style={{ fontSize: '16px' }}>
+      <Input {...props} />
+    </div>
+  );
+};
+
 const TextInputDemo = (): React.ReactElement => {
   const [value, setValue] = React.useState(text('value', 'Hello'));
 
@@ -209,6 +229,7 @@ const InputCustomValidation = (): React.ReactElement => {
 };
 
 storiesOf('Input', module)
+  .add('phone', () => <PhoneInputDemo />)
   .add('text', () => <TextInputDemo />)
   .add('validation', () => <TextInputValidationDemo />)
   .add('overwrite html5 validation', () => <InputCustomValidation />)

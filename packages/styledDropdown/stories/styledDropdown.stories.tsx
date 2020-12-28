@@ -48,6 +48,7 @@ storiesOf('Styled dropdown', module)
     return renderWithThemeAndI18n(
       <StyledDropdown
         options={optionsWithoutIcons}
+        defaultItem={optionsWithoutIcons[0]}
         placeholder={text('placeholder', 'Choose value')}
         onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
         label={text('label', 'Click on me!', 'other')}
