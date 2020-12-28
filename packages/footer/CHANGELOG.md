@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.5.1
+
+### Patch Changes
+
+- 8696643: change footer imports
+
 ## 2.5.0
 
 ### Minor Changes
