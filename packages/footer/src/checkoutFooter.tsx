@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
-import { openBanner } from '../utils/cookieProBanner';
+import { openBanner } from './helpers/cookieProBanner';
 
 interface Props {
   className?: string;

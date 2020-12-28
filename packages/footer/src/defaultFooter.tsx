@@ -13,7 +13,7 @@ import Seals from './seals';
 import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
 import SocialContainer from './social/socialContainer';
-import { openBanner } from '../utils/cookieProBanner';
+import { openBanner } from './helpers/cookieProBanner';
 
 export const renderIcon = (iconName?: string): React.ReactNode => {
   switch (iconName) {
