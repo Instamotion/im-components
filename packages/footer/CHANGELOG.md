@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.5.0
+
+### Minor Changes
+
+- 4b2a846: update version to fix npm build
+
 ## 2.4.2
 
 ### Patch Changes
