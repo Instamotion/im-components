@@ -1,6 +1,6 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import { openBanner } from '../utils/cookieProBanner';
+import { openBanner } from './helpers/cookieProBanner';
 
 const SzFooterContent: React.FC = () => {
   return (
