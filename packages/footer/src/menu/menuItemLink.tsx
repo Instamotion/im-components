@@ -76,6 +76,7 @@ const MenuItemLink = styled.div<{ inline: boolean }>`
     color: ${theme.color.oil};
     font-size: 1rem;
     line-height: 1.92rem;
+    cursor: pointer;
     :hover {
       color: ${theme.color.downy};
     }
