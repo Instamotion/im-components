@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.0.0
+
+### Major Changes
+
+- f73cf90: added dropdown corrct publish, added input country code
+
 ## 0.2.0
 
 ### Minor Changes

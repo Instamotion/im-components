@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.5.2
+
+### Patch Changes
+
+- eb26a0f: update link styles
+
 ## 2.5.1
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @im-ui/input
 
+## 2.0.0
+
+### Major Changes
+
+- f73cf90: added dropdown corrct publish, added input country code
+
+### Patch Changes
+
+- Updated dependencies [f73cf90]
+  - @im-ui/styled-dropdown@1.0.0
+
 ## 1.0.1
 
 ### Patch Changes
