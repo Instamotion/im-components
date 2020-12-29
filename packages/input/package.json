@@ -7,7 +7,7 @@
   "author": "InstaMotion Retail GmbH",
   "scripts": {
     "build": "npm run clean && npm run compile:esm && npm run compile:cjs",
-    "clean": "rm -rf ./dist",
+    "clean": "rimraf ./dist",
     "compile:esm": "tsc -p build/tsconfig.esm.json",
     "compile:cjs": "tsc -p build/tsconfig.cjs.json",
     "prepublishOnly": "bolt build"
@@ -37,6 +37,7 @@
     "@im-ui/icon": "^0.5.0",
     "@im-ui/label": "^1.0.0",
     "@im-ui/theme": "^1.0.1",
-    "@im-ui/utils": "^0.5.2"
+    "@im-ui/utils": "^0.5.2",
+    "@im-ui/styled-dropdown": "^0.2.0"
   }
 }
