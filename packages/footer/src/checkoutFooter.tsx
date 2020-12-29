@@ -22,7 +22,7 @@ export const FooterComponent: React.FC<Props> = ({ className }) => (
       <FormattedMessage id="checkout.footer.privacy" />
     </a>
     <a href="#" onClick={openBanner}>
-      <FormattedMessage id="checkout.footer.privacy_settings" />
+      <FormattedMessage id="footer.privacy_settings" />
     </a>
     <a href="https://www.instamotion.com/faq" target="_blank" rel="noopener noreferrer">
       <FormattedMessage id="checkout.footer.faq" />

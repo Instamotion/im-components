@@ -190,9 +190,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-cSHVUG",
+                "componentId": "sc-jKJlTe",
                 "isStatic": false,
-                "lastClassName": "krvUqN",
+                "lastClassName": "cJqkLF",
                 "rules": Array [
                   "
   display: flex;
@@ -203,7 +203,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-cSHVUG",
+              "styledComponentId": "sc-jKJlTe",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -214,7 +214,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
           id="dropdown-1"
         >
           <div
-            className="sc-cSHVUG krvUqN"
+            className="sc-jKJlTe cJqkLF"
             id="dropdown-1"
           >
             <Label
@@ -277,9 +277,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kAzzGY",
+                      "componentId": "sc-eNQAEJ",
                       "isStatic": false,
-                      "lastClassName": "cDFycH",
+                      "lastClassName": "jkKDHZ",
                       "rules": Array [
                         "
   display: flex;
@@ -290,7 +290,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kAzzGY",
+                    "styledComponentId": "sc-eNQAEJ",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -300,7 +300,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="sc-kAzzGY cDFycH"
+                  className="sc-eNQAEJ jkKDHZ"
                 >
                   <styled.div>
                     <StyledComponent
@@ -309,9 +309,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-jzJRlG",
+                            "componentId": "sc-ckVGcZ",
                             "isStatic": false,
-                            "lastClassName": "cOWnBy",
+                            "lastClassName": "ljZFDc",
                             "rules": Array [
                               "
   display: flex;
@@ -321,7 +321,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   position: relative;
 
   ",
-                              ".sc-iwsKbI",
+                              ".sc-kAzzGY",
                               " {
     position: absolute;
     z-index: 1;
@@ -346,7 +346,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-jzJRlG",
+                          "styledComponentId": "sc-ckVGcZ",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -356,7 +356,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="sc-jzJRlG cOWnBy"
+                        className="sc-ckVGcZ ljZFDc"
                       >
                         <Component
                           aria-label="input-from"
@@ -380,9 +380,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-iwsKbI",
+                                    "componentId": "sc-kAzzGY",
                                     "isStatic": false,
-                                    "lastClassName": "dLdgFI",
+                                    "lastClassName": "ZMbZk",
                                     "rules": Array [
                                       "
   display: flex;
@@ -395,7 +395,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "displayName": "styled.div",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-iwsKbI",
+                                  "styledComponentId": "sc-kAzzGY",
                                   "target": "div",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -410,7 +410,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                               }
                             >
                               <div
-                                className="sc-iwsKbI dLdgFI"
+                                className="sc-kAzzGY ZMbZk"
                                 style={
                                   Object {
                                     "width": undefined,
@@ -419,6 +419,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                               >
                                 <styled.div
                                   error={false}
+                                  isPhone={false}
                                   value="from"
                                 >
                                   <StyledComponent
@@ -428,18 +429,17 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-dnqmqq",
+                                          "componentId": "sc-cSHVUG",
                                           "isStatic": false,
-                                          "lastClassName": "ekftni",
+                                          "lastClassName": "bYMlVI",
                                           "rules": Array [
                                             "
+  position: relative;
   display: flex;
   align-items: center;
   border-radius: 4px;
   border: ",
-                                            "1",
-                                            "px solid ",
-                                            "#C4C4C4",
+                                            [Function],
                                             ";
   font-family: ",
                                             "Roboto, sans-serif",
@@ -472,7 +472,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   ",
                                             "@media (min-width: 768px)",
                                             " {
-    padding: 1rem;
+    padding: ",
+                                            [Function],
+                                            ";
   }
 
   ",
@@ -488,7 +490,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "displayName": "styled.div",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-dnqmqq",
+                                        "styledComponentId": "sc-cSHVUG",
                                         "target": "div",
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -496,10 +498,11 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                       }
                                     }
                                     forwardedRef={null}
+                                    isPhone={false}
                                     value="from"
                                   >
                                     <div
-                                      className="sc-dnqmqq ekftni"
+                                      className="sc-cSHVUG bYMlVI"
                                       value="from"
                                     >
                                       <styled.input
@@ -509,7 +512,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         onChange={[Function]}
                                         onFocus={[Function]}
                                         onKeyDown={[Function]}
-                                        pattern="^(\\\\+49)\\\\d{7,15}$"
+                                        pattern="^\\\\d{7,15}$"
                                         type="number"
                                         value="from"
                                       >
@@ -519,21 +522,23 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-gqjmRU",
+                                                "componentId": "sc-chPdSV",
                                                 "isStatic": false,
-                                                "lastClassName": "dgPsAV",
+                                                "lastClassName": "ieiUtU",
                                                 "rules": Array [
                                                   "
   background-color: transparent;
-  flex: 1;
   border: none;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   height: inherit;
+  width: 100%;
   padding: 0;
-
-  :focus {
+  ",
+                                                  [Function],
+                                                  "
+    :focus {
     outline: none;
   }
 ",
@@ -542,7 +547,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "displayName": "styled.input",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-gqjmRU",
+                                              "styledComponentId": "sc-chPdSV",
                                               "target": "input",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -556,136 +561,176 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           onChange={[Function]}
                                           onFocus={[Function]}
                                           onKeyDown={[Function]}
-                                          pattern="^(\\\\+49)\\\\d{7,15}$"
+                                          pattern="^\\\\d{7,15}$"
                                           type="number"
                                           value="from"
                                         >
                                           <input
-                                            className="sc-gqjmRU dgPsAV"
+                                            className="sc-chPdSV ieiUtU"
                                             id="from-input-dropdown-1"
                                             maxLength={30}
                                             onBlur={[Function]}
                                             onChange={[Function]}
                                             onFocus={[Function]}
                                             onKeyDown={[Function]}
-                                            pattern="^(\\\\+49)\\\\d{7,15}$"
+                                            pattern="^\\\\d{7,15}$"
                                             type="number"
                                             value="from"
                                           />
                                         </StyledComponent>
                                       </styled.input>
-                                      <Styled(Component)
-                                        className="times-icon"
-                                        color="brightGrey"
-                                        icon="times"
-                                        onClick={[Function]}
-                                      >
+                                      <styled.div>
                                         <StyledComponent
-                                          className="times-icon"
-                                          color="brightGrey"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-VigVT",
+                                                "componentId": "sc-dxgOiQ",
                                                 "isStatic": false,
-                                                "lastClassName": "eEmFhv",
+                                                "lastClassName": "gcFWBx",
                                                 "rules": Array [
                                                   "
-  cursor: pointer;
+  display: flex;
+  flex: 1;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  width: 2rem;
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(Component)",
+                                              "displayName": "styled.div",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-VigVT",
-                                              "target": [Function],
+                                              "styledComponentId": "sc-dxgOiQ",
+                                              "target": "div",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
                                               "withComponent": [Function],
                                             }
                                           }
                                           forwardedRef={null}
-                                          icon="times"
-                                          onClick={[Function]}
                                         >
-                                          <Component
-                                            className="sc-VigVT eEmFhv times-icon"
-                                            color="brightGrey"
-                                            icon="times"
-                                            onClick={[Function]}
+                                          <div
+                                            className="sc-dxgOiQ gcFWBx"
                                           >
-                                            <times
-                                              className="sc-VigVT eEmFhv times-icon"
+                                            <Styled(Component)
+                                              className="times-icon"
                                               color="brightGrey"
+                                              icon="times"
                                               onClick={[Function]}
                                             >
-                                              <styled.svg
-                                                className="sc-VigVT eEmFhv times-icon"
+                                              <StyledComponent
+                                                className="times-icon"
                                                 color="brightGrey"
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "sc-kgoBCf",
+                                                      "isStatic": false,
+                                                      "lastClassName": "fROEoW",
+                                                      "rules": Array [
+                                                        "
+  cursor: pointer;
+",
+                                                      ],
+                                                    },
+                                                    "displayName": "Styled(Component)",
+                                                    "foldedComponentIds": Array [],
+                                                    "render": [Function],
+                                                    "styledComponentId": "sc-kgoBCf",
+                                                    "target": [Function],
+                                                    "toString": [Function],
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
+                                                  }
+                                                }
+                                                forwardedRef={null}
+                                                icon="times"
                                                 onClick={[Function]}
-                                                viewBox="0 0 320 512"
-                                                xmlns="http://www.w3.org/2000/svg"
                                               >
-                                                <StyledComponent
-                                                  className="sc-VigVT eEmFhv times-icon"
+                                                <Component
+                                                  className="sc-kgoBCf fROEoW times-icon"
                                                   color="brightGrey"
-                                                  forwardedComponent={
-                                                    Object {
-                                                      "$$typeof": Symbol(react.forward_ref),
-                                                      "attrs": Array [],
-                                                      "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-htoDjs",
-                                                        "isStatic": false,
-                                                        "lastClassName": "iYqjKj",
-                                                        "rules": Array [
-                                                          "
+                                                  icon="times"
+                                                  onClick={[Function]}
+                                                >
+                                                  <times
+                                                    className="sc-kgoBCf fROEoW times-icon"
+                                                    color="brightGrey"
+                                                    onClick={[Function]}
+                                                  >
+                                                    <styled.svg
+                                                      className="sc-kgoBCf fROEoW times-icon"
+                                                      color="brightGrey"
+                                                      onClick={[Function]}
+                                                      viewBox="0 0 320 512"
+                                                      xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                      <StyledComponent
+                                                        className="sc-kgoBCf fROEoW times-icon"
+                                                        color="brightGrey"
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "sc-htoDjs",
+                                                              "isStatic": false,
+                                                              "lastClassName": "iYqjKj",
+                                                              "rules": Array [
+                                                                "
   display: inline-block;
   height: 1em;
   ",
-                                                          [Function],
-                                                          "
+                                                                [Function],
+                                                                "
   ",
-                                                          [Function],
-                                                          "
+                                                                [Function],
+                                                                "
 ",
-                                                        ],
-                                                      },
-                                                      "displayName": "styled.svg",
-                                                      "foldedComponentIds": Array [],
-                                                      "render": [Function],
-                                                      "styledComponentId": "sc-htoDjs",
-                                                      "target": "svg",
-                                                      "toString": [Function],
-                                                      "warnTooManyClasses": [Function],
-                                                      "withComponent": [Function],
-                                                    }
-                                                  }
-                                                  forwardedRef={null}
-                                                  onClick={[Function]}
-                                                  viewBox="0 0 320 512"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                  <svg
-                                                    className="sc-htoDjs iYqjKj sc-VigVT eEmFhv times-icon"
-                                                    color="brightGrey"
-                                                    onClick={[Function]}
-                                                    viewBox="0 0 320 512"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                  >
-                                                    <path
-                                                      d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
-                                                      fill="currentColor"
-                                                    />
-                                                  </svg>
-                                                </StyledComponent>
-                                              </styled.svg>
-                                            </times>
-                                          </Component>
+                                                              ],
+                                                            },
+                                                            "displayName": "styled.svg",
+                                                            "foldedComponentIds": Array [],
+                                                            "render": [Function],
+                                                            "styledComponentId": "sc-htoDjs",
+                                                            "target": "svg",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                        onClick={[Function]}
+                                                        viewBox="0 0 320 512"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <svg
+                                                          className="sc-htoDjs iYqjKj sc-kgoBCf fROEoW times-icon"
+                                                          color="brightGrey"
+                                                          onClick={[Function]}
+                                                          viewBox="0 0 320 512"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                          <path
+                                                            d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                                            fill="currentColor"
+                                                          />
+                                                        </svg>
+                                                      </StyledComponent>
+                                                    </styled.svg>
+                                                  </times>
+                                                </Component>
+                                              </StyledComponent>
+                                            </Styled(Component)>
+                                          </div>
                                         </StyledComponent>
-                                      </Styled(Component)>
+                                      </styled.div>
                                     </div>
                                   </StyledComponent>
                                 </styled.div>
@@ -1023,9 +1068,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-jzJRlG",
+                            "componentId": "sc-ckVGcZ",
                             "isStatic": false,
-                            "lastClassName": "cOWnBy",
+                            "lastClassName": "ljZFDc",
                             "rules": Array [
                               "
   display: flex;
@@ -1035,7 +1080,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   position: relative;
 
   ",
-                              ".sc-iwsKbI",
+                              ".sc-kAzzGY",
                               " {
     position: absolute;
     z-index: 1;
@@ -1060,7 +1105,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-jzJRlG",
+                          "styledComponentId": "sc-ckVGcZ",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1070,7 +1115,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="sc-jzJRlG cOWnBy"
+                        className="sc-ckVGcZ ljZFDc"
                       >
                         <Component
                           aria-label="input-to"
@@ -1094,9 +1139,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-iwsKbI",
+                                    "componentId": "sc-kAzzGY",
                                     "isStatic": false,
-                                    "lastClassName": "dLdgFI",
+                                    "lastClassName": "ZMbZk",
                                     "rules": Array [
                                       "
   display: flex;
@@ -1109,7 +1154,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "displayName": "styled.div",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-iwsKbI",
+                                  "styledComponentId": "sc-kAzzGY",
                                   "target": "div",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -1124,7 +1169,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                               }
                             >
                               <div
-                                className="sc-iwsKbI dLdgFI"
+                                className="sc-kAzzGY ZMbZk"
                                 style={
                                   Object {
                                     "width": undefined,
@@ -1133,6 +1178,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                               >
                                 <styled.div
                                   error={false}
+                                  isPhone={false}
                                   value="to"
                                 >
                                   <StyledComponent
@@ -1142,18 +1188,17 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-dnqmqq",
+                                          "componentId": "sc-cSHVUG",
                                           "isStatic": false,
-                                          "lastClassName": "ekftni",
+                                          "lastClassName": "bYMlVI",
                                           "rules": Array [
                                             "
+  position: relative;
   display: flex;
   align-items: center;
   border-radius: 4px;
   border: ",
-                                            "1",
-                                            "px solid ",
-                                            "#C4C4C4",
+                                            [Function],
                                             ";
   font-family: ",
                                             "Roboto, sans-serif",
@@ -1186,7 +1231,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   ",
                                             "@media (min-width: 768px)",
                                             " {
-    padding: 1rem;
+    padding: ",
+                                            [Function],
+                                            ";
   }
 
   ",
@@ -1202,7 +1249,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         "displayName": "styled.div",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-dnqmqq",
+                                        "styledComponentId": "sc-cSHVUG",
                                         "target": "div",
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -1210,10 +1257,11 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                       }
                                     }
                                     forwardedRef={null}
+                                    isPhone={false}
                                     value="to"
                                   >
                                     <div
-                                      className="sc-dnqmqq ekftni"
+                                      className="sc-cSHVUG bYMlVI"
                                       value="to"
                                     >
                                       <styled.input
@@ -1223,7 +1271,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         onChange={[Function]}
                                         onFocus={[Function]}
                                         onKeyDown={[Function]}
-                                        pattern="^(\\\\+49)\\\\d{7,15}$"
+                                        pattern="^\\\\d{7,15}$"
                                         type="number"
                                         value="to"
                                       >
@@ -1233,21 +1281,23 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-gqjmRU",
+                                                "componentId": "sc-chPdSV",
                                                 "isStatic": false,
-                                                "lastClassName": "dgPsAV",
+                                                "lastClassName": "ieiUtU",
                                                 "rules": Array [
                                                   "
   background-color: transparent;
-  flex: 1;
   border: none;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   height: inherit;
+  width: 100%;
   padding: 0;
-
-  :focus {
+  ",
+                                                  [Function],
+                                                  "
+    :focus {
     outline: none;
   }
 ",
@@ -1256,7 +1306,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "displayName": "styled.input",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-gqjmRU",
+                                              "styledComponentId": "sc-chPdSV",
                                               "target": "input",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -1270,136 +1320,176 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           onChange={[Function]}
                                           onFocus={[Function]}
                                           onKeyDown={[Function]}
-                                          pattern="^(\\\\+49)\\\\d{7,15}$"
+                                          pattern="^\\\\d{7,15}$"
                                           type="number"
                                           value="to"
                                         >
                                           <input
-                                            className="sc-gqjmRU dgPsAV"
+                                            className="sc-chPdSV ieiUtU"
                                             id="to-input-dropdown-1"
                                             maxLength={30}
                                             onBlur={[Function]}
                                             onChange={[Function]}
                                             onFocus={[Function]}
                                             onKeyDown={[Function]}
-                                            pattern="^(\\\\+49)\\\\d{7,15}$"
+                                            pattern="^\\\\d{7,15}$"
                                             type="number"
                                             value="to"
                                           />
                                         </StyledComponent>
                                       </styled.input>
-                                      <Styled(Component)
-                                        className="times-icon"
-                                        color="brightGrey"
-                                        icon="times"
-                                        onClick={[Function]}
-                                      >
+                                      <styled.div>
                                         <StyledComponent
-                                          className="times-icon"
-                                          color="brightGrey"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-VigVT",
+                                                "componentId": "sc-dxgOiQ",
                                                 "isStatic": false,
-                                                "lastClassName": "eEmFhv",
+                                                "lastClassName": "gcFWBx",
                                                 "rules": Array [
                                                   "
-  cursor: pointer;
+  display: flex;
+  flex: 1;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  width: 2rem;
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(Component)",
+                                              "displayName": "styled.div",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-VigVT",
-                                              "target": [Function],
+                                              "styledComponentId": "sc-dxgOiQ",
+                                              "target": "div",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
                                               "withComponent": [Function],
                                             }
                                           }
                                           forwardedRef={null}
-                                          icon="times"
-                                          onClick={[Function]}
                                         >
-                                          <Component
-                                            className="sc-VigVT eEmFhv times-icon"
-                                            color="brightGrey"
-                                            icon="times"
-                                            onClick={[Function]}
+                                          <div
+                                            className="sc-dxgOiQ gcFWBx"
                                           >
-                                            <times
-                                              className="sc-VigVT eEmFhv times-icon"
+                                            <Styled(Component)
+                                              className="times-icon"
                                               color="brightGrey"
+                                              icon="times"
                                               onClick={[Function]}
                                             >
-                                              <styled.svg
-                                                className="sc-VigVT eEmFhv times-icon"
+                                              <StyledComponent
+                                                className="times-icon"
                                                 color="brightGrey"
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "sc-kgoBCf",
+                                                      "isStatic": false,
+                                                      "lastClassName": "fROEoW",
+                                                      "rules": Array [
+                                                        "
+  cursor: pointer;
+",
+                                                      ],
+                                                    },
+                                                    "displayName": "Styled(Component)",
+                                                    "foldedComponentIds": Array [],
+                                                    "render": [Function],
+                                                    "styledComponentId": "sc-kgoBCf",
+                                                    "target": [Function],
+                                                    "toString": [Function],
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
+                                                  }
+                                                }
+                                                forwardedRef={null}
+                                                icon="times"
                                                 onClick={[Function]}
-                                                viewBox="0 0 320 512"
-                                                xmlns="http://www.w3.org/2000/svg"
                                               >
-                                                <StyledComponent
-                                                  className="sc-VigVT eEmFhv times-icon"
+                                                <Component
+                                                  className="sc-kgoBCf fROEoW times-icon"
                                                   color="brightGrey"
-                                                  forwardedComponent={
-                                                    Object {
-                                                      "$$typeof": Symbol(react.forward_ref),
-                                                      "attrs": Array [],
-                                                      "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-htoDjs",
-                                                        "isStatic": false,
-                                                        "lastClassName": "iYqjKj",
-                                                        "rules": Array [
-                                                          "
+                                                  icon="times"
+                                                  onClick={[Function]}
+                                                >
+                                                  <times
+                                                    className="sc-kgoBCf fROEoW times-icon"
+                                                    color="brightGrey"
+                                                    onClick={[Function]}
+                                                  >
+                                                    <styled.svg
+                                                      className="sc-kgoBCf fROEoW times-icon"
+                                                      color="brightGrey"
+                                                      onClick={[Function]}
+                                                      viewBox="0 0 320 512"
+                                                      xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                      <StyledComponent
+                                                        className="sc-kgoBCf fROEoW times-icon"
+                                                        color="brightGrey"
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "sc-htoDjs",
+                                                              "isStatic": false,
+                                                              "lastClassName": "iYqjKj",
+                                                              "rules": Array [
+                                                                "
   display: inline-block;
   height: 1em;
   ",
-                                                          [Function],
-                                                          "
+                                                                [Function],
+                                                                "
   ",
-                                                          [Function],
-                                                          "
+                                                                [Function],
+                                                                "
 ",
-                                                        ],
-                                                      },
-                                                      "displayName": "styled.svg",
-                                                      "foldedComponentIds": Array [],
-                                                      "render": [Function],
-                                                      "styledComponentId": "sc-htoDjs",
-                                                      "target": "svg",
-                                                      "toString": [Function],
-                                                      "warnTooManyClasses": [Function],
-                                                      "withComponent": [Function],
-                                                    }
-                                                  }
-                                                  forwardedRef={null}
-                                                  onClick={[Function]}
-                                                  viewBox="0 0 320 512"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                  <svg
-                                                    className="sc-htoDjs iYqjKj sc-VigVT eEmFhv times-icon"
-                                                    color="brightGrey"
-                                                    onClick={[Function]}
-                                                    viewBox="0 0 320 512"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                  >
-                                                    <path
-                                                      d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
-                                                      fill="currentColor"
-                                                    />
-                                                  </svg>
-                                                </StyledComponent>
-                                              </styled.svg>
-                                            </times>
-                                          </Component>
+                                                              ],
+                                                            },
+                                                            "displayName": "styled.svg",
+                                                            "foldedComponentIds": Array [],
+                                                            "render": [Function],
+                                                            "styledComponentId": "sc-htoDjs",
+                                                            "target": "svg",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                        onClick={[Function]}
+                                                        viewBox="0 0 320 512"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <svg
+                                                          className="sc-htoDjs iYqjKj sc-kgoBCf fROEoW times-icon"
+                                                          color="brightGrey"
+                                                          onClick={[Function]}
+                                                          viewBox="0 0 320 512"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                          <path
+                                                            d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                                            fill="currentColor"
+                                                          />
+                                                        </svg>
+                                                      </StyledComponent>
+                                                    </styled.svg>
+                                                  </times>
+                                                </Component>
+                                              </StyledComponent>
+                                            </Styled(Component)>
+                                          </div>
                                         </StyledComponent>
-                                      </Styled(Component)>
+                                      </styled.div>
                                     </div>
                                   </StyledComponent>
                                 </styled.div>
@@ -1883,9 +1973,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-jzJRlG",
+              "componentId": "sc-ckVGcZ",
               "isStatic": false,
-              "lastClassName": "cOWnBy",
+              "lastClassName": "ljZFDc",
               "rules": Array [
                 "
   display: flex;
@@ -1895,7 +1985,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
   position: relative;
 
   ",
-                ".sc-iwsKbI",
+                ".sc-kAzzGY",
                 " {
     position: absolute;
     z-index: 1;
@@ -1920,7 +2010,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-jzJRlG",
+            "styledComponentId": "sc-ckVGcZ",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -1930,7 +2020,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
         forwardedRef={null}
       >
         <div
-          className="sc-jzJRlG cOWnBy"
+          className="sc-ckVGcZ ljZFDc"
         >
           <Component
             aria-label="input-from"
@@ -1954,9 +2044,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-iwsKbI",
+                      "componentId": "sc-kAzzGY",
                       "isStatic": false,
-                      "lastClassName": "dLdgFI",
+                      "lastClassName": "ZMbZk",
                       "rules": Array [
                         "
   display: flex;
@@ -1969,7 +2059,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-iwsKbI",
+                    "styledComponentId": "sc-kAzzGY",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1984,7 +2074,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                 }
               >
                 <div
-                  className="sc-iwsKbI dLdgFI"
+                  className="sc-kAzzGY ZMbZk"
                   style={
                     Object {
                       "width": undefined,
@@ -1993,6 +2083,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                 >
                   <styled.div
                     error={false}
+                    isPhone={false}
                     value={1}
                   >
                     <StyledComponent
@@ -2002,18 +2093,17 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-dnqmqq",
+                            "componentId": "sc-cSHVUG",
                             "isStatic": false,
-                            "lastClassName": "ekftni",
+                            "lastClassName": "bYMlVI",
                             "rules": Array [
                               "
+  position: relative;
   display: flex;
   align-items: center;
   border-radius: 4px;
   border: ",
-                              "1",
-                              "px solid ",
-                              "#C4C4C4",
+                              [Function],
                               ";
   font-family: ",
                               "Roboto, sans-serif",
@@ -2046,7 +2136,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
   ",
                               "@media (min-width: 768px)",
                               " {
-    padding: 1rem;
+    padding: ",
+                              [Function],
+                              ";
   }
 
   ",
@@ -2062,7 +2154,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-dnqmqq",
+                          "styledComponentId": "sc-cSHVUG",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -2070,10 +2162,11 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                         }
                       }
                       forwardedRef={null}
+                      isPhone={false}
                       value={1}
                     >
                       <div
-                        className="sc-dnqmqq ekftni"
+                        className="sc-cSHVUG bYMlVI"
                         value={1}
                       >
                         <styled.input
@@ -2083,7 +2176,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           onChange={[Function]}
                           onFocus={[Function]}
                           onKeyDown={[Function]}
-                          pattern="^(\\\\+49)\\\\d{7,15}$"
+                          pattern="^\\\\d{7,15}$"
                           type="number"
                           value={1}
                         >
@@ -2093,21 +2186,23 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-gqjmRU",
+                                  "componentId": "sc-chPdSV",
                                   "isStatic": false,
-                                  "lastClassName": "dgPsAV",
+                                  "lastClassName": "ieiUtU",
                                   "rules": Array [
                                     "
   background-color: transparent;
-  flex: 1;
   border: none;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   height: inherit;
+  width: 100%;
   padding: 0;
-
-  :focus {
+  ",
+                                    [Function],
+                                    "
+    :focus {
     outline: none;
   }
 ",
@@ -2116,7 +2211,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                 "displayName": "styled.input",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-gqjmRU",
+                                "styledComponentId": "sc-chPdSV",
                                 "target": "input",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -2130,136 +2225,176 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                             onChange={[Function]}
                             onFocus={[Function]}
                             onKeyDown={[Function]}
-                            pattern="^(\\\\+49)\\\\d{7,15}$"
+                            pattern="^\\\\d{7,15}$"
                             type="number"
                             value={1}
                           >
                             <input
-                              className="sc-gqjmRU dgPsAV"
+                              className="sc-chPdSV ieiUtU"
                               id="from-input-test-1"
                               maxLength={30}
                               onBlur={[Function]}
                               onChange={[Function]}
                               onFocus={[Function]}
                               onKeyDown={[Function]}
-                              pattern="^(\\\\+49)\\\\d{7,15}$"
+                              pattern="^\\\\d{7,15}$"
                               type="number"
                               value={1}
                             />
                           </StyledComponent>
                         </styled.input>
-                        <Styled(Component)
-                          className="times-icon"
-                          color="brightGrey"
-                          icon="times"
-                          onClick={[Function]}
-                        >
+                        <styled.div>
                           <StyledComponent
-                            className="times-icon"
-                            color="brightGrey"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-VigVT",
+                                  "componentId": "sc-dxgOiQ",
                                   "isStatic": false,
-                                  "lastClassName": "eEmFhv",
+                                  "lastClassName": "gcFWBx",
                                   "rules": Array [
                                     "
-  cursor: pointer;
+  display: flex;
+  flex: 1;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  width: 2rem;
 ",
                                   ],
                                 },
-                                "displayName": "Styled(Component)",
+                                "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-VigVT",
-                                "target": [Function],
+                                "styledComponentId": "sc-dxgOiQ",
+                                "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }
                             }
                             forwardedRef={null}
-                            icon="times"
-                            onClick={[Function]}
                           >
-                            <Component
-                              className="sc-VigVT eEmFhv times-icon"
-                              color="brightGrey"
-                              icon="times"
-                              onClick={[Function]}
+                            <div
+                              className="sc-dxgOiQ gcFWBx"
                             >
-                              <times
-                                className="sc-VigVT eEmFhv times-icon"
+                              <Styled(Component)
+                                className="times-icon"
                                 color="brightGrey"
+                                icon="times"
                                 onClick={[Function]}
                               >
-                                <styled.svg
-                                  className="sc-VigVT eEmFhv times-icon"
+                                <StyledComponent
+                                  className="times-icon"
                                   color="brightGrey"
+                                  forwardedComponent={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-kgoBCf",
+                                        "isStatic": false,
+                                        "lastClassName": "fROEoW",
+                                        "rules": Array [
+                                          "
+  cursor: pointer;
+",
+                                        ],
+                                      },
+                                      "displayName": "Styled(Component)",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-kgoBCf",
+                                      "target": [Function],
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                    }
+                                  }
+                                  forwardedRef={null}
+                                  icon="times"
                                   onClick={[Function]}
-                                  viewBox="0 0 320 512"
-                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <StyledComponent
-                                    className="sc-VigVT eEmFhv times-icon"
+                                  <Component
+                                    className="sc-kgoBCf fROEoW times-icon"
                                     color="brightGrey"
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "sc-htoDjs",
-                                          "isStatic": false,
-                                          "lastClassName": "iYqjKj",
-                                          "rules": Array [
-                                            "
+                                    icon="times"
+                                    onClick={[Function]}
+                                  >
+                                    <times
+                                      className="sc-kgoBCf fROEoW times-icon"
+                                      color="brightGrey"
+                                      onClick={[Function]}
+                                    >
+                                      <styled.svg
+                                        className="sc-kgoBCf fROEoW times-icon"
+                                        color="brightGrey"
+                                        onClick={[Function]}
+                                        viewBox="0 0 320 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <StyledComponent
+                                          className="sc-kgoBCf fROEoW times-icon"
+                                          color="brightGrey"
+                                          forwardedComponent={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-htoDjs",
+                                                "isStatic": false,
+                                                "lastClassName": "iYqjKj",
+                                                "rules": Array [
+                                                  "
   display: inline-block;
   height: 1em;
   ",
-                                            [Function],
-                                            "
+                                                  [Function],
+                                                  "
   ",
-                                            [Function],
-                                            "
+                                                  [Function],
+                                                  "
 ",
-                                          ],
-                                        },
-                                        "displayName": "styled.svg",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "sc-htoDjs",
-                                        "target": "svg",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                    onClick={[Function]}
-                                    viewBox="0 0 320 512"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <svg
-                                      className="sc-htoDjs iYqjKj sc-VigVT eEmFhv times-icon"
-                                      color="brightGrey"
-                                      onClick={[Function]}
-                                      viewBox="0 0 320 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
-                                        fill="currentColor"
-                                      />
-                                    </svg>
-                                  </StyledComponent>
-                                </styled.svg>
-                              </times>
-                            </Component>
+                                                ],
+                                              },
+                                              "displayName": "styled.svg",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-htoDjs",
+                                              "target": "svg",
+                                              "toString": [Function],
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
+                                            }
+                                          }
+                                          forwardedRef={null}
+                                          onClick={[Function]}
+                                          viewBox="0 0 320 512"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <svg
+                                            className="sc-htoDjs iYqjKj sc-kgoBCf fROEoW times-icon"
+                                            color="brightGrey"
+                                            onClick={[Function]}
+                                            viewBox="0 0 320 512"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                              fill="currentColor"
+                                            />
+                                          </svg>
+                                        </StyledComponent>
+                                      </styled.svg>
+                                    </times>
+                                  </Component>
+                                </StyledComponent>
+                              </Styled(Component)>
+                            </div>
                           </StyledComponent>
-                        </Styled(Component)>
+                        </styled.div>
                       </div>
                     </StyledComponent>
                   </styled.div>

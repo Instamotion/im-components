@@ -182,9 +182,9 @@ const menus: {
       link: '/rechtliches/datenschutz'
     },
     {
-      id: 'checkout.footer.privacy_settings',
+      id: 'footer.privacy_settings',
       type: 'item',
-      title: <FormattedMessage id="checkout.footer.privacy_settings" />,
+      title: <FormattedMessage id="footer.privacy_settings" />,
       clickFuntion: openBanner
     },
     {
