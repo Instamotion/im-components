@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.1.0
+
+### Minor Changes
+
+- 65d9b35: fix for custom styled of input
+
 ## 2.0.0
 
 ### Major Changes
