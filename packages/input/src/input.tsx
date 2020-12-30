@@ -31,6 +31,7 @@ export type InputProps = {
   required?: boolean;
   resetValue?: ValueType;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+  className?: string;
 };
 
 type StyledInputType = {
@@ -187,7 +188,8 @@ export const Input: React.FC<InputProps> = ({
   onFocus,
   required,
   resetValue,
-  inputProps = {}
+  inputProps = {},
+  className
 }) => {
   const isPhone = useMemo(() => type === 'tel', [type]);
   const formattedValue = useMemo(
@@ -233,7 +235,7 @@ export const Input: React.FC<InputProps> = ({
   };
 
   return (
-    <InputComponentWrapper style={{ width }}>
+    <InputComponentWrapper style={{ width }} className={className}>
       {label && (
         <StyledLabel error={!!errorMessage} required={required} text={label} htmlFor={id} />
       )}
