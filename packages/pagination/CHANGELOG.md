@@ -1,5 +1,13 @@
 # @im-ui/pagination
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies [f36bb1f]
+  - @im-ui/icon@0.6.0
+  - @im-ui/button@0.5.1
+
 ## 0.1.1
 
 ### Patch Changes

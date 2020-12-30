@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.0
+
+### Minor Changes
+
+- f36bb1f: small fix for reset btn area
+
 ## 0.5.0
 
 ### Minor Changes

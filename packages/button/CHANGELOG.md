@@ -1,5 +1,12 @@
 # @im-ui/button
 
+## 0.5.1
+
+### Patch Changes
+
+- Updated dependencies [f36bb1f]
+  - @im-ui/icon@0.6.0
+
 ## 0.5.0
 
 ### Minor Changes
