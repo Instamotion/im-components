@@ -262,16 +262,16 @@ export const Input: React.FC<InputProps> = ({
           minLength={minLength}
           pattern={patternDE}
         />
-        {inputValue && (
-          <IconWrapper>
+        <IconWrapper>
+          {inputValue && (
             <StyledIcon
               icon="times"
               color="brightGrey"
               className="times-icon"
               onClick={handleReset}
             />
-          </IconWrapper>
-        )}
+          )}
+        </IconWrapper>
       </StyledInput>
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </InputComponentWrapper>
