@@ -1,5 +1,11 @@
 # @im-ui/utils
 
+## 0.5.5
+
+### Patch Changes
+
+- 13ebca9: add tracking functions
+
 ## 0.5.4
 
 ### Patch Changes
