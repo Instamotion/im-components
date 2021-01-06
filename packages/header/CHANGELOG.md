@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 1.3.5
+
+### Patch Changes
+
+- 929f32b: Phone call tracking
+
 ## 1.3.4
 
 ### Patch Changes
