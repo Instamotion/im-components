@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Icon, { AvailableIcons, IconStyled } from '@im-ui/icon';
-import TagManager, { DataLayerArgs } from 'react-gtm-module';
+import TagManager from 'react-gtm-module';
 import theme, { AvailableColors } from '@im-ui/theme';
 
 interface Props {
@@ -33,6 +33,21 @@ export const LinkComponent: React.FC<Props> = ({
           event: track
         }
       });
+
+      if (track === 'callFromHeader') {
+        TagManager.dataLayer({
+          dataLayer: {
+            event: 'click',
+            schema: 'interaction',
+            interaction: {
+              category: 'contact',
+              action: 'call',
+              label: 'from_header',
+              variant: undefined
+            }
+          }
+        });
+      }
     }
     if (onClick) {
       onClick();
