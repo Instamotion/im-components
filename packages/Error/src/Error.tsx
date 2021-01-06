@@ -2,28 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '@im-ui/theme';
 import { FormattedMessage } from 'react-intl';
-import { trackingCodeError, trackingMaintenanceError, trackingCheckoutError } from './tracking';
+import { trackingError } from './tracking';
 
 export interface ErrorProps {
   statusCode: number;
-  isMaintenanceError?: boolean;
-  isCheckoutError?: boolean;
   className?: string;
 }
 
-const Error: React.FC<ErrorProps> = ({
-  statusCode,
-  isMaintenanceError = false,
-  isCheckoutError = false
-}) => {
-  if (isMaintenanceError) {
-    trackingMaintenanceError();
-  } else if (isCheckoutError) {
-    trackingCheckoutError();
-  } else {
-    trackingCodeError(statusCode);
-  }
-
+const Error: React.FC<ErrorProps> = ({ statusCode }) => {
+  trackingError(statusCode);
   return (
     <ErrorWrapp>
       <TitleMain>
