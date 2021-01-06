@@ -27,10 +27,10 @@ to: packages/<%= name %>/package.json
     "dist"
   ],
   "dependencies": {
-    "@im-ui/theme": "^0.3.4"
+    "@im-ui/theme": "^1.0.1",
+    "@im-ui/utils": "^0.5.5"
   },
   "devDependencies": {
-    "@im-ui/utils": "^0.4.2",
     "@types/jest": "^24.0.21",
     "@types/react": "^16.9.11",
     "@types/styled-components": "^4.1.20",
