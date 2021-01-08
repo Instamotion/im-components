@@ -155,6 +155,10 @@ const phoneCodes: OptionType[] = [
   {
     label: 'Österreich, +43',
     value: '+43'
+  },
+  {
+    label: 'Schweiz, +41',
+    value: '+41'
   }
 ];
 
