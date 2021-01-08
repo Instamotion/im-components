@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.2.0
+
+### Minor Changes
+
+- 52f6f49: added separate country code handling for tel type of input
+
 ## 2.1.1
 
 ### Patch Changes
