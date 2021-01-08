@@ -24,6 +24,7 @@ export type InputProps = {
   maxLength?: number;
   minLength?: number;
   onChange?: (value: ValueType) => void;
+  onCountryCodeChange?: (value: ValueType) => void;
   onBlur?: (value: ValueType) => void;
   onReset?: (value: ValueType) => void;
   enterDown?: (e: React.KeyboardEvent) => void;
@@ -154,6 +155,10 @@ const phoneCodes: OptionType[] = [
   {
     label: 'Österreich, +43',
     value: '+43'
+  },
+  {
+    label: 'Schweiz, +41',
+    value: '+41'
   }
 ];
 
@@ -182,6 +187,7 @@ export const Input: React.FC<InputProps> = ({
   maxLength = 30,
   minLength,
   onChange,
+  onCountryCodeChange,
   onBlur,
   onReset,
   enterDown,
@@ -203,6 +209,7 @@ export const Input: React.FC<InputProps> = ({
   useEffect(() => {
     const value = isPhone ? `${phoneCode.value}${inputValue}` : inputValue;
     onChange?.(value);
+    onCountryCodeChange?.(phoneCode.value);
   }, [isPhone, phoneCode, inputValue]);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
