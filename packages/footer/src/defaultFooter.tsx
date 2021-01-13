@@ -371,7 +371,7 @@ class DefaultFooter extends React.Component<DefaultFooterProps> {
               title={<FormattedMessage id="default.footer.newsletter.title" />}
               subTitle={<FormattedMessage id="default.footer.newsletter.subtitle" />}
               linkText={<FormattedMessage id="default.footer.newsletter.linkText" />}
-              linkHref="/datenschutz"
+              linkHref="/rechtliches/datenschutz"
             />
           </MailContainer>
           <Seals />
