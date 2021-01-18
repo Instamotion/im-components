@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.0.2
+
+### Patch Changes
+
+- 818e0b5: add error styles
+
 ## 1.0.1
 
 ### Patch Changes
