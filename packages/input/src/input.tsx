@@ -254,6 +254,7 @@ export const Input: React.FC<InputProps> = ({
             defaultItem={phoneCode}
             selectStyles={selectStyles}
             isActive={isPhone && !!inputValue}
+            hasError={!!errorMessage}
           />
         )}
         <InputElements
