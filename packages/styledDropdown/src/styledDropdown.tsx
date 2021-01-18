@@ -22,6 +22,7 @@ export interface StyledDropdownProps {
   onChange?: (selectedItem: OptionType) => void;
   selectStyles?: FlattenSimpleInterpolation;
   isActive?: boolean;
+  hasError?: boolean;
 }
 
 const StyledDropdown: React.FC<StyledDropdownProps> = ({
@@ -32,7 +33,8 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
   defaultItem,
   onChange,
   selectStyles,
-  isActive
+  isActive,
+  hasError = false
 }) => {
   const hasEditions =
     options && options.length && options.find(option => option.value.includes('_'));
@@ -67,6 +69,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
             isOpen={isOpen}
             disabled={isDisabled}
             isActive={isActive}
+            hasError={hasError}
             {...getToggleButtonProps()}
           >
             {selectedItem && selectedItem.iconName && (
@@ -81,7 +84,12 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
               placeholder={placeholder && formatMessage({ id: placeholder })}
               disabled={isDisabled}
             />
-            <DropdownButton isPhoneCode={isPhoneCode} isActive={isActive} isOpen={isOpen}>
+            <DropdownButton
+              isPhoneCode={isPhoneCode}
+              isActive={isActive}
+              isOpen={isOpen}
+              hasError={hasError}
+            >
               {isOpen ? (
                 <Icon icon="up" color="oil" />
               ) : (
@@ -89,7 +97,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
               )}
             </DropdownButton>
           </DropdownContainer>
-          <Menu {...getMenuProps()} isOpen={isOpen}>
+          <Menu {...getMenuProps()} isOpen={isOpen} hasError={hasError}>
             {isOpen &&
               options.map((item, index) => (
                 <Item
@@ -122,9 +130,11 @@ const StyledDropdownWrapper = styled.div`
   ${({ selectStyles }: { selectStyles: FlattenSimpleInterpolation }) => selectStyles};
 `;
 
-const Menu = styled.ul`
+type menuProps = { isOpen: boolean; hasError: boolean };
+
+const Menu = styled.ul<menuProps>`
   background: #fff;
-  border: solid 0.0625rem ${theme.color.downy};
+  border: solid 0.0625rem ${({ hasError }) => (hasError ? theme.color.flamePea : theme.color.downy)};
   border-top: 0;
   box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -147,8 +157,8 @@ const Menu = styled.ul`
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
   }
-  ${(props: { isOpen: boolean }) =>
-    !props.isOpen &&
+  ${({ isOpen }) =>
+    !isOpen &&
     css`
       border: 0;
     `}
@@ -182,13 +192,18 @@ export const Item = styled.li`
     `};
 `;
 
-type DropdownButtonType = { isPhoneCode?: boolean; isActive?: boolean; isOpen?: boolean };
+type DropdownButtonType = {
+  isPhoneCode?: boolean;
+  isActive?: boolean;
+  isOpen?: boolean;
+  hasError: boolean;
+};
 
 export const DropdownButton = styled.div<DropdownButtonType>`
   cursor: pointer;
   margin-left: auto;
   margin-right: 0.5rem;
-  ${({ isPhoneCode, isActive, isOpen }) =>
+  ${({ isPhoneCode, isActive, isOpen, hasError }) =>
     isPhoneCode &&
     `
     align-items: center;
@@ -196,16 +211,27 @@ export const DropdownButton = styled.div<DropdownButtonType>`
     height: 100%;
     padding-right: .5rem;
     border-right: 0.0625rem solid ${
-      isActive || isOpen ? theme.color.downy : theme.input.border.color
+      hasError
+        ? theme.color.flamePea
+        : isActive || isOpen
+        ? theme.color.downy
+        : theme.input.border.color
     };
   `}
 `;
 
-// @ts-ignore
-const DropdownContainer = styled.div`
+type containerProps = {
+  isOpen: boolean;
+  disabled?: boolean;
+  hasError: boolean;
+  isActive?: boolean;
+};
+
+const DropdownContainer = styled.div<containerProps>`
   align-items: center;
   border-radius: 0.25rem;
-  border: 0.0625rem solid ${theme.color.silver};
+  border: 0.0625rem solid ${({ hasError }) =>
+    hasError ? theme.color.flamePea : theme.color.silver};
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
@@ -214,31 +240,31 @@ const DropdownContainer = styled.div`
   position: relative;
   user-select:none;
   z-index: 1;
-  ${(props: { isOpen: boolean; disabled?: boolean }) =>
-    !props.isOpen &&
-    !props.disabled &&
+  ${({ isOpen, disabled, hasError }) =>
+    !isOpen &&
+    !disabled &&
     css`
       &:hover {
         box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.1);
-        border: 0.0625rem solid ${theme.color.downy};
+        border: 0.0625rem solid ${hasError ? theme.color.flamePea : theme.color.downy};
 
         ${DropdownButton} {
-          border-color: ${theme.color.downy};
+          border-color: ${hasError ? theme.color.flamePea : theme.color.downy};
         }
       }
     `}
-  ${(props: { isOpen: boolean; disabled?: boolean }) =>
-    props.isOpen &&
+  ${({ isOpen, disabled, hasError }) =>
+    isOpen &&
     css`
       transform: rotateZ(0);
       border-radius: 0.25rem 0.25rem 0 0;
-      border: solid 0.0625rem ${theme.color.downy};
+      border: solid 0.0625rem ${hasError ? theme.color.flamePea : theme.color.downy};
       border-bottom: 0.0625rem solid transparent;
       &:after {
         content: '';
         width: calc(100% - 1rem);
         height: 100%;
-        border-bottom: 0.0625rem solid ${theme.color.downy};
+        border-bottom: 0.0625rem solid ${hasError ? theme.color.flamePea : theme.color.downy};
         display: inline-block;
         margin-left: 0.5rem;
         position: absolute;
@@ -249,17 +275,17 @@ const DropdownContainer = styled.div`
         outline: none;
       }
     `}
-  ${(props: { isOpen: boolean; disabled?: boolean }) =>
-    props.disabled &&
+  ${({ isOpen, disabled }) =>
+    disabled &&
     css`
       cursor: not-allowed;
       pointer-events: none;
     `}
-  ${(props: { isActive: boolean; isOpen: boolean }) =>
-    props.isActive &&
-    !props.isOpen &&
+  ${({ isActive, isOpen, hasError }) =>
+    isActive &&
+    !isOpen &&
     css`
-      border-color: ${theme.color.downy};
+      border-color: ${hasError ? theme.color.flamePea : theme.color.downy};
     `}
 `;
 

@@ -5,6 +5,7 @@ import { text, select, boolean } from '@storybook/addon-knobs';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
 import { AvailableIcons } from '@im-ui/icon';
 import StyledDropdown, { OptionType } from '../src';
+import { css, FlattenSimpleInterpolation } from 'styled-components';
 
 storiesOf('Styled dropdown', module)
   .add('Dropdown with default', () => {
@@ -53,6 +54,46 @@ storiesOf('Styled dropdown', module)
         onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
         label={text('label', 'Click on me!', 'other')}
         disabled={boolean('disabled', false, 'other')}
+      />
+    );
+  })
+  .add('Phone dropdown with error', () => {
+    const phoneCodes: OptionType[] = [
+      {
+        label: 'Deutschland, +49',
+        value: '+49'
+      },
+      {
+        label: 'Österreich, +43',
+        value: '+43'
+      }
+    ];
+
+    const selectStyles: FlattenSimpleInterpolation = css`
+      padding: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      input {
+        width: 3rem;
+
+        & + div {
+          margin: 0;
+        }
+      }
+    `;
+
+    return renderWithThemeAndI18n(
+      <StyledDropdown
+        options={phoneCodes}
+        defaultItem={phoneCodes[0]}
+        selectStyles={selectStyles}
+        placeholder={text('placeholder', 'Choose value')}
+        onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+        label={text('label', 'Click on me!', 'other')}
+        disabled={boolean('disabled', false, 'other')}
+        hasError={true}
       />
     );
   });
