@@ -38,6 +38,6 @@
     "@im-ui/label": "^1.0.0",
     "@im-ui/theme": "^1.0.1",
     "@im-ui/utils": "^0.5.2",
-    "@im-ui/styled-dropdown": "^1.0.1"
+    "@im-ui/styled-dropdown": "^1.0.2"
   }
 }
