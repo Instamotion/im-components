@@ -205,19 +205,22 @@ export const DropdownButton = styled.div<DropdownButtonType>`
   margin-right: 0.5rem;
   ${({ isPhoneCode, isActive, isOpen, hasError }) =>
     isPhoneCode &&
+    css`
+      align-items: center;
+      display: flex;
+      height: 100%;
+      padding-right: 0.5rem;
+      border-right-width: 0.0625rem;
+      border-right-style: solid;
+      ${() =>
+        hasError
+          ? `
+      border-right-color: ${theme.color.flamePea};
     `
-    align-items: center;
-    display: flex;
-    height: 100%;
-    padding-right: .5rem;
-    border-right: 0.0625rem solid ${
-      hasError
-        ? theme.color.flamePea
-        : isActive || isOpen
-        ? theme.color.downy
-        : theme.input.border.color
-    };
-  `}
+          : `
+      border-right-color: ${isActive || isOpen ? theme.color.downy : theme.input.border.color};
+    `}
+    `}
 `;
 
 type containerProps = {
