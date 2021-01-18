@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.2.1
+
+### Patch Changes
+
+- 03d0b49: phone input update
+
 ## 2.2.0
 
 ### Minor Changes
