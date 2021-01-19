@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.6.0
+
+### Minor Changes
+
+- 2463ea0: Fixed broken footer link
+
 ## 2.5.3
 
 ### Patch Changes
