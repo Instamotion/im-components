@@ -1,32 +1,5 @@
 # @im-ui/how-it-works
 
-## 2.0.3
-
-### Patch Changes
-
-- Updated dependencies [f36bb1f]
-  - @im-ui/icon@0.6.0
-
-## 2.0.2
-
-### Patch Changes
-
-- 5b1d459: desing fixes
-
-## 2.0.1
-
-### Patch Changes
-
-- 566d0cf: Fixes various issues for multiple components, reorganises the stories a bit
-- Updated dependencies [566d0cf]
-  - @im-ui/theme@1.0.1
-
-## 2.0.0
-
-### Major Changes
-
-- 5a91017: How it works v2.0
-
 ## 1.3.0
 
 ### Minor Changes
