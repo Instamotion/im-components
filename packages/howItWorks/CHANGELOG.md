@@ -1,5 +1,16 @@
 # @im-ui/how-it-works
 
+## 1.4.0
+
+### Minor Changes
+
+- d611d79: version upd
+
+### Patch Changes
+
+- d7b97e4: version fix
+- d5befbd: patch of link in legacy how it works package
+
 ## 1.3.0
 
 ### Minor Changes
