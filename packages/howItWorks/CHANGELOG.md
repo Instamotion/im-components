@@ -1,5 +1,11 @@
 # @im-ui/how-it-works
 
+## 2.1.0
+
+### Minor Changes
+
+- 4cb7b95: minor sub release for legacy package (hiw)
+
 ## 2.0.3
 
 ### Patch Changes
