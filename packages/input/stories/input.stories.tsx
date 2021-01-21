@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { text, number } from '@storybook/addon-knobs';
+import { text, number, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { IntlProvider } from 'react-intl';
@@ -8,7 +8,7 @@ import { IntlProvider } from 'react-intl';
 // import enLocaleData from 'react-intl/locale-data/en';
 import Checkbox from '@im-ui/checkbox';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
-import Input, { InputProps } from '../src';
+import Input, { InputProps, checkPhoneValidation } from '../src';
 // import translations from '../../i18n';
 
 // addLocaleData([...deLocaleData, ...enLocaleData]);
@@ -18,6 +18,7 @@ type ValueType = string | number;
 
 const PhoneInputDemo = (): React.ReactElement => {
   const [value, setValue] = React.useState(text('value', ''));
+  const [validation, setValidation] = React.useState(boolean('validation', false));
 
   const props: InputProps = {
     value,
@@ -26,12 +27,14 @@ const PhoneInputDemo = (): React.ReactElement => {
     onChange: (val: ValueType) => {
       setValue(val as string);
       action('Input changed')(val);
+      setValidation(checkPhoneValidation(val as string));
     }
   };
 
   return renderWithThemeAndI18n(
     <div style={{ fontSize: '16px' }}>
       <Input {...props} />
+      <div>{validation ? 'match to validation' : 'not match to validation'}</div>
     </div>
   );
 };

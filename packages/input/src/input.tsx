@@ -8,11 +8,6 @@ import Dropdown, { OptionType } from '@im-ui/styled-dropdown';
 
 type ValueType = string | number;
 
-const phonePrefix = '+49';
-// eslint-disable-next-line
-// eslint-disable-next-line
-const patternDE = '^\\d{7,15}$';
-
 export type InputProps = {
   label?: string | JSX.Element;
   errorMessage?: JSX.Element;
@@ -162,6 +157,15 @@ const phoneCodes: OptionType[] = [
   }
 ];
 
+const buildCodesString = (): string => `(${phoneCodes.map(el => `\\${el.value}`).join('|')})`;
+// eslint-disable-next-line
+// eslint-disable-next-line
+export const phoneRegex = new RegExp(`^${buildCodesString()}\\d{7,15}$`);
+
+export const checkPhoneValidation = (phone: string): boolean => {
+  return phoneRegex.test(phone);
+};
+
 const selectStyles: FlattenSimpleInterpolation = css`
   padding: 0;
   position: absolute;
@@ -206,8 +210,18 @@ export const Input: React.FC<InputProps> = ({
   const [phoneCode, setPhoneCode] = useState<OptionType>(phoneCodes[0]);
   const [inputValue, setInputValue] = useState<string | number>(formattedValue);
 
+  const removeZeroFromPhoneStart = (str: string): string => {
+    let stringWithoutFirstZero;
+    if (!!str.length && Array.from(str)?.[0] === '0') {
+      stringWithoutFirstZero = str.replace('0', '');
+    }
+    return stringWithoutFirstZero ?? str;
+  };
+
   useEffect(() => {
-    const value = isPhone ? `${phoneCode.value}${inputValue}` : inputValue;
+    const value = isPhone
+      ? `${phoneCode.value}${removeZeroFromPhoneStart(inputValue as string)}`
+      : inputValue;
     onChange?.(value);
     onCountryCodeChange?.(phoneCode.value);
   }, [isPhone, phoneCode, inputValue]);
@@ -268,7 +282,6 @@ export const Input: React.FC<InputProps> = ({
           value={formattedValue}
           maxLength={maxLength}
           minLength={minLength}
-          pattern={patternDE}
         />
         <IconWrapper>
           {inputValue && (
