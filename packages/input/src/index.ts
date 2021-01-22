@@ -1,1 +1,7 @@
-export { default, InputComponentWrapper, InputProps } from './input';
+export {
+  default,
+  InputComponentWrapper,
+  InputProps,
+  phoneRegex,
+  checkPhoneValidation
+} from './input';

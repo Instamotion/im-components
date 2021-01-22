@@ -512,7 +512,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         onChange={[Function]}
                                         onFocus={[Function]}
                                         onKeyDown={[Function]}
-                                        pattern="^\\\\d{7,15}$"
                                         type="number"
                                         value="from"
                                       >
@@ -561,7 +560,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           onChange={[Function]}
                                           onFocus={[Function]}
                                           onKeyDown={[Function]}
-                                          pattern="^\\\\d{7,15}$"
                                           type="number"
                                           value="from"
                                         >
@@ -573,7 +571,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                             onChange={[Function]}
                                             onFocus={[Function]}
                                             onKeyDown={[Function]}
-                                            pattern="^\\\\d{7,15}$"
                                             type="number"
                                             value="from"
                                           />
@@ -1271,7 +1268,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                         onChange={[Function]}
                                         onFocus={[Function]}
                                         onKeyDown={[Function]}
-                                        pattern="^\\\\d{7,15}$"
                                         type="number"
                                         value="to"
                                       >
@@ -1320,7 +1316,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           onChange={[Function]}
                                           onFocus={[Function]}
                                           onKeyDown={[Function]}
-                                          pattern="^\\\\d{7,15}$"
                                           type="number"
                                           value="to"
                                         >
@@ -1332,7 +1327,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                             onChange={[Function]}
                                             onFocus={[Function]}
                                             onKeyDown={[Function]}
-                                            pattern="^\\\\d{7,15}$"
                                             type="number"
                                             value="to"
                                           />
@@ -2176,7 +2170,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                           onChange={[Function]}
                           onFocus={[Function]}
                           onKeyDown={[Function]}
-                          pattern="^\\\\d{7,15}$"
                           type="number"
                           value={1}
                         >
@@ -2225,7 +2218,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                             onChange={[Function]}
                             onFocus={[Function]}
                             onKeyDown={[Function]}
-                            pattern="^\\\\d{7,15}$"
                             type="number"
                             value={1}
                           >
@@ -2237,7 +2229,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                               onChange={[Function]}
                               onFocus={[Function]}
                               onKeyDown={[Function]}
-                              pattern="^\\\\d{7,15}$"
                               type="number"
                               value={1}
                             />
