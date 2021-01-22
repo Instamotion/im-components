@@ -211,11 +211,7 @@ export const Input: React.FC<InputProps> = ({
   const [inputValue, setInputValue] = useState<string | number>(formattedValue);
 
   const removeZeroFromPhoneStart = (str: string): string => {
-    let stringWithoutFirstZero;
-    if (!!str.length && Array.from(str)?.[0] === '0') {
-      stringWithoutFirstZero = str.replace('0', '');
-    }
-    return stringWithoutFirstZero ?? str;
+    return str && str.startsWith('0') ? str.substring(1) : str;
   };
 
   useEffect(() => {
