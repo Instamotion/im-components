@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.3.0
+
+### Minor Changes
+
+- 70bfc95: remove zeros and add validation func
+
 ## 2.2.1
 
 ### Patch Changes
