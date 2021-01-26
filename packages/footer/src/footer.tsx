@@ -5,8 +5,6 @@ import TrustfulSection from './trustfulSection';
 import SzFooterContent from './szFooter';
 import { trackingLogCustomEvent } from './helpers/tracking';
 
-const AB_TEST_VARIABLE_NAME: string = 'ab-test-product';
-
 type ProductAbVariationType = boolean | string;
 
 type FullFooterProps = {
@@ -44,7 +42,14 @@ const Footer: React.FC<FooterProps> = props => {
   useEffect(() => {
     if (props.variant !== FooterVariant.sz && props.abTestFlagName) {
       trackingLogCustomEvent({
-        [AB_TEST_VARIABLE_NAME]: `${props.abTestFlagName}-${props.abTestFlagValue || 'default'}`
+        event: 'assigned',
+        schema: 'experiment',
+        experiment: {
+          id: 'AB-16',
+          name: `${props.abTestFlagName}`,
+          variant: `${props.abTestFlagValue}`,
+          slot: 0
+        }
       });
     }
   }, []);
