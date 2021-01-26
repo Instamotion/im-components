@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.7.0
+
+### Minor Changes
+
+- 439f50f: Add AB test experement structure in footer
+
 ## 2.6.0
 
 ### Minor Changes
