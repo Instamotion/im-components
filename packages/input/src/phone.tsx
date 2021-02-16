@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, useRef } from 'react';
 import { css, FlattenSimpleInterpolation } from 'styled-components';
 import Dropdown, { OptionType } from '@im-ui/styled-dropdown';
 import { InputComponentWrapper, InputProps } from '.';
@@ -75,19 +75,30 @@ export const Input: React.FC<InputProps> = ({
 
   const [phoneCode, setPhoneCode] = useState<OptionType>(phoneCodes[0]);
   const [inputValue, setInputValue] = useState<string | number>(formattedValue);
+  const [caretPosition, setCaretPosition] = useState<null | number>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const removeZeroFromPhoneStart = (str: string): string => {
     return str && str.startsWith('0') ? str.substring(1) : str;
   };
 
   useEffect(() => {
-    const value = `${phoneCode.value}${removeZeroFromPhoneStart(inputValue as string)}`;
+    if (caretPosition) {
+      inputRef.current?.setSelectionRange(caretPosition, caretPosition);
+      setCaretPosition(null);
+    }
+  }, [formattedValue]);
+
+  useEffect(() => {
+    const value = phoneCode.value + inputValue;
     onChange?.(value);
     onCountryCodeChange?.(phoneCode.value);
   }, [isPhone, phoneCode, inputValue]);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    setInputValue(e.target.value);
+    setCaretPosition(e.target.selectionStart);
+    const withoutStartZero = removeZeroFromPhoneStart(e.target.value as string);
+    setInputValue(withoutStartZero);
   };
 
   const handleOnBlur = (): void => {
@@ -140,6 +151,7 @@ export const Input: React.FC<InputProps> = ({
           value={formattedValue}
           maxLength={maxLength}
           minLength={minLength}
+          ref={inputRef}
         />
 
         <IconWrapper>
