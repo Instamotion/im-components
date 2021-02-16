@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.4.0
+
+### Minor Changes
+
+- 6f0670f: separate phone input fix caret position
+
 ## 2.3.0
 
 ### Minor Changes
