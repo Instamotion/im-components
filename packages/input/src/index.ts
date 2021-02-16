@@ -1,7 +1,4 @@
-export {
-  default,
-  InputComponentWrapper,
-  InputProps,
-  phoneRegex,
-  checkPhoneValidation
-} from './input';
+export { InputProps } from './input';
+export { phoneRegex, checkPhoneValidation } from './phone';
+export { default } from './root';
+export { InputComponentWrapper } from './styles';
