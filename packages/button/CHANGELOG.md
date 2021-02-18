@@ -1,5 +1,13 @@
 # @im-ui/button
 
+## 0.5.2
+
+### Patch Changes
+
+- Updated dependencies [9569632]
+  - @im-ui/theme@2.0.0
+  - @im-ui/icon@0.6.1
+
 ## 0.5.1
 
 ### Patch Changes

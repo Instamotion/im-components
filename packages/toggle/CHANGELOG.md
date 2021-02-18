@@ -1,5 +1,14 @@
 # @im-ui/toggle
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [9569632]
+  - @im-ui/theme@2.0.0
+  - @im-ui/label@1.0.1
+  - @im-ui/utils@0.5.6
+
 ## 1.0.1
 
 ### Patch Changes

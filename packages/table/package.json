@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/table",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -35,7 +35,7 @@
     "styled-components": "^4.4.1"
   },
   "dependencies": {
-    "@im-ui/theme": "^1.0.0",
-    "@im-ui/utils": "^0.5.2"
+    "@im-ui/theme": "^2.0.0",
+    "@im-ui/utils": "^0.5.6"
   }
 }

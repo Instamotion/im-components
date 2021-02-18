@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/car-tile",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -23,7 +23,7 @@
   "license": "MIT",
   "files": ["dist"],
   "devDependencies": {
-    "@im-ui/checkbox": "^2.0.0",
+    "@im-ui/checkbox": "^2.0.1",
     "@types/jest": "^24.0.21",
     "@types/react": "^16.9.11",
     "@types/styled-components": "^4.1.20",
@@ -36,10 +36,10 @@
     "styled-components": "^4.4.1"
   },
   "dependencies": {
-    "@im-ui/error-message": "^0.1.6",
-    "@im-ui/icon": "^0.6.0",
-    "@im-ui/label": "^1.0.0",
-    "@im-ui/theme": "^1.0.1",
-    "@im-ui/utils": "^0.5.2"
+    "@im-ui/error-message": "^0.1.7",
+    "@im-ui/icon": "^0.6.1",
+    "@im-ui/label": "^1.0.1",
+    "@im-ui/theme": "^2.0.0",
+    "@im-ui/utils": "^0.5.6"
   }
 }

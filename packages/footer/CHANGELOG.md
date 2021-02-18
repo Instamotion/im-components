@@ -1,5 +1,16 @@
 # @im-ui/footer
 
+## 2.7.1
+
+### Patch Changes
+
+- Updated dependencies [9569632]
+  - @im-ui/theme@2.0.0
+  - @im-ui/carousel@0.1.7
+  - @im-ui/icon@0.6.1
+  - @im-ui/typography@0.2.8
+  - @im-ui/utils@0.5.6
+
 ## 2.7.0
 
 ### Minor Changes

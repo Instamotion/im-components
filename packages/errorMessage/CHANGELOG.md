@@ -1,5 +1,12 @@
 # @im-ui/error-message
 
+## 0.1.7
+
+### Patch Changes
+
+- Updated dependencies [9569632]
+  - @im-ui/theme@2.0.0
+
 ## 0.1.6
 
 ### Patch Changes

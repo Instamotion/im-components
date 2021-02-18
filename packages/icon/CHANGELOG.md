@@ -1,5 +1,12 @@
 # @im-ui/icon
 
+## 0.6.1
+
+### Patch Changes
+
+- Updated dependencies [9569632]
+  - @im-ui/theme@2.0.0
+
 ## 0.6.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/how-it-works",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "types": "dist/cjs/index.d.ts",
   "module": "dist/esm/index.js",
   "main": "dist/cjs/index.js",
@@ -22,12 +22,12 @@
   },
   "files": ["dist"],
   "dependencies": {
-    "@im-ui/theme": "^1.0.1",
-    "@im-ui/icon": "^0.6.0",
-    "@im-ui/typography": "^0.2.7"
+    "@im-ui/theme": "^2.0.0",
+    "@im-ui/icon": "^0.6.1",
+    "@im-ui/typography": "^0.2.8"
   },
   "devDependencies": {
-    "@im-ui/utils": "^0.5.2",
+    "@im-ui/utils": "^0.5.6",
     "@types/jest": "^24.0.21",
     "@types/react": "^16.9.11",
     "@types/styled-components": "^4.1.20",

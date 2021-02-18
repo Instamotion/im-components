@@ -1,5 +1,15 @@
 # @im-ui/how-it-works
 
+## 2.2.1
+
+### Patch Changes
+
+- Updated dependencies [9569632]
+  - @im-ui/theme@2.0.0
+  - @im-ui/icon@0.6.1
+  - @im-ui/typography@0.2.8
+  - @im-ui/utils@0.5.6
+
 ## 2.2.0
 
 ### Minor Changes

@@ -1,5 +1,15 @@
 # @im-ui/header
 
+## 1.3.6
+
+### Patch Changes
+
+- Updated dependencies [9569632]
+  - @im-ui/theme@2.0.0
+  - @im-ui/branding-logo@0.3.3
+  - @im-ui/icon@0.6.1
+  - @im-ui/utils@0.5.6
+
 ## 1.3.5
 
 ### Patch Changes

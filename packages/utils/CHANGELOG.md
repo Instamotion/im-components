@@ -1,5 +1,12 @@
 # @im-ui/utils
 
+## 0.5.6
+
+### Patch Changes
+
+- Updated dependencies [9569632]
+  - @im-ui/theme@2.0.0
+
 ## 0.5.5
 
 ### Patch Changes

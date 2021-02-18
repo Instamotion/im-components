@@ -1,5 +1,17 @@
 # @im-ui/input
 
+## 2.4.1
+
+### Patch Changes
+
+- Updated dependencies [9569632]
+  - @im-ui/theme@2.0.0
+  - @im-ui/checkbox@2.0.1
+  - @im-ui/icon@0.6.1
+  - @im-ui/label@1.0.1
+  - @im-ui/styled-dropdown@1.0.3
+  - @im-ui/utils@0.5.6
+
 ## 2.4.0
 
 ### Minor Changes

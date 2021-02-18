@@ -1,5 +1,11 @@
 # @im-ui/theme
 
+## 2.0.0
+
+### Major Changes
+
+- 9569632: new theme
+
 ## 1.0.1
 
 ### Patch Changes
