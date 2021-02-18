@@ -1,34 +1,74 @@
 import React from 'react';
+import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
-import TrustfulContainer from './trustfulSection/trustfulContainer';
 import Icon from '@im-ui/icon';
-import MailContainer from './mailSection/mailContainer';
-import MailContent from './mailSection/mailContent';
 import MenuItemLink from './menu/menuItemLink';
 import MenuItem from './menu/menuItem';
 import MenuItemHeader from './menu/menuItemHeader';
 import FooterContent from './footerContainer';
-import Envkv from './envkv';
-import Seals from './seals';
 import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
-import SocialContainer from './social/socialContainer';
-import { openBanner } from './helpers/cookieProBanner';
+import { openBanner } from '../helpers/cookieProBanner';
+import { BrandLogo } from './BrandLogo';
+import { theme } from '@themes/themesV4/default';
+
+const FooterBottomSection = styled.div`
+  max-width: 67.25rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  flex-direction: column;
+  padding-bottom: 3.125rem;
+
+  & > div:first-of-type {
+    margin-bottom: 1.75rem;
+
+    ${theme.mediaQueries.whenDesktop} {
+      margin-bottom: 0;
+    }
+  }
+  ${theme.mediaQueries.whenDesktop} {
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 8.25rem;
+    justify-content: space-around;
+  }
+
+  ${theme.mediaQueries.whenDesktopXL} {
+    justify-content: space-between;
+  }
+`;
+const MediaWrapper = styled.div`
+  display: flex;
+  & a {
+    margin-right: 1.75rem;
+  }
+  ${theme.mediaQueries.whenDesktopXL} {
+    margin-bottom: 3.3125rem;
+  }
+`;
+
+const BrandLogoWrapper = styled.div`
+  margin-bottom: 3.5rem;
+`;
 
 export const renderIcon = (iconName?: string): React.ReactNode => {
   switch (iconName) {
     case 'PhoneSVG':
-      return <Icon icon="phone" color="silver" />;
+      return <Icon icon="phone" color="oil" size="lg" />;
     case 'EnvelopeSVG':
-      return <Icon icon="envelope" color="silver" />;
+      return <Icon icon="envelope" color="oil" size="lg" />;
     case 'FacebookSVG':
-      return <Icon icon="facebook" color="silver" />;
+      return <Icon icon="facebook" color="oil" size="lg" />;
     case 'LinkedSVG':
-      return <Icon icon="linkedIn" color="silver" />;
+      return <Icon icon="linkedIn" color="oil" size="lg" />;
     case 'TwitterSVG':
-      return <Icon icon="twitter" color="silver" />;
+      return <Icon icon="twitter" color="oil" size="lg" />;
     case 'YoutubeSVG':
-      return <Icon icon="youtube" color="silver" />;
+      return <Icon icon="youtube" color="oil" size="lg" />;
     case 'AllianzLogo':
       return <AllianzLogo />;
     default:
@@ -94,18 +134,6 @@ const menus: {
       type: 'item',
       title: <FormattedMessage id="default.footer.menu.jahreswagen" />,
       link: '/jahreswagen'
-    },
-    {
-      id: 'default.footer.menu.to_dye',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.menu.to_dye" />,
-      link: '/farbe'
-    },
-    {
-      id: 'default.footer.menu.germany',
-      type: 'item',
-      title: <FormattedMessage id="default.footer.menu.germany" />,
-      link: '/deutschland'
     }
   ],
   [
@@ -241,61 +269,38 @@ const menus: {
       link: '/deine-vorteile/so-funktionierts',
       isHidden: (menuOptions: MenuOptions) => menuOptions.showQualityLink !== true
     }
-  ],
-  [
-    {
-      id: 'default.footer.free_advice',
-      type: 'header',
-      title: <FormattedMessage id="default.footer.free_advice" />
-    },
-    {
-      id: 'tel:08921094444',
-      type: 'item',
-      icon: 'PhoneSVG',
-      title: '089 2109 4444',
-      link: 'tel:08921094444',
-      track: 'call_from_footer'
-    },
-    {
-      id: 'mailto:info@instamotion.com',
-      type: 'item',
-      icon: 'EnvelopeSVG',
-      title: 'info@instamotion.com',
-      link: 'mailto:info@instamotion.com',
-      track: 'mail_from_footer'
-    }
-  ],
-  [
-    {
-      id: 'default.footer.fold_us',
-      type: 'header',
-      title: <FormattedMessage id="default.footer.fold_us" />
-    },
-    {
-      id: 'FacebookSVG',
-      type: 'item',
-      icon: 'FacebookSVG',
-      link: 'https://www.facebook.com/Instamotion/'
-    },
-    {
-      id: 'TwitterSVG',
-      type: 'item',
-      icon: 'TwitterSVG',
-      link: 'https://twitter.com/instamotion_com/'
-    },
-    {
-      id: 'LinkedSVG',
-      type: 'item',
-      icon: 'LinkedSVG',
-      link: 'https://www.linkedin.com/company/instamotion-retail-gmbh'
-    },
-    {
-      id: 'YoutubeSVG',
-      type: 'item',
-      icon: 'YoutubeSVG',
-      link: 'https://www.youtube.com/channel/UCpnVUOLAonPxTb-7n5KZ_Yw/'
-    }
   ]
+];
+
+const socialMedia = [
+  {
+    id: 'FacebookSVG',
+    type: 'item',
+    icon: 'FacebookSVG',
+    link: 'https://www.facebook.com/Instamotion/',
+    title: ''
+  },
+  {
+    id: 'TwitterSVG',
+    type: 'item',
+    icon: 'TwitterSVG',
+    link: 'https://twitter.com/instamotion_com/',
+    title: ''
+  },
+  {
+    id: 'LinkedSVG',
+    type: 'item',
+    icon: 'LinkedSVG',
+    link: 'https://www.linkedin.com/company/instamotion-retail-gmbh',
+    title: ''
+  },
+  {
+    id: 'YoutubeSVG',
+    type: 'item',
+    icon: 'YoutubeSVG',
+    link: 'https://www.youtube.com/channel/UCpnVUOLAonPxTb-7n5KZ_Yw/',
+    title: ''
+  }
 ];
 
 export const renderMenu = (menuOptions?: MenuOptions): React.ReactNode => {
@@ -338,11 +343,11 @@ export const renderMenu = (menuOptions?: MenuOptions): React.ReactNode => {
   ));
 };
 
-export interface DefaultFooterProps {
+export interface NewFooterProps {
   className?: string;
   onTop?: React.ReactElement;
-  googleToken: string;
-  facebookToken: string;
+  googleToken?: string;
+  facebookToken?: string;
   menuOptions?: MenuOptions;
   showEnvkv?: boolean;
 }
@@ -353,36 +358,38 @@ export interface MenuOptions {
   showQualityLink?: boolean;
 }
 
-class DefaultFooter extends React.Component<DefaultFooterProps> {
-  componentDidMount() {}
-
-  render() {
-    const { onTop, className, googleToken, facebookToken, menuOptions, showEnvkv } = this.props;
-
-    return (
-      <footer className={className}>
-        {showEnvkv && <Envkv />}
-        <TrustfulContainer>{onTop}</TrustfulContainer>
-        <FooterContent>
-          {renderMenu(menuOptions)}
-          <SocialContainer googleToken={googleToken} facebookToken={facebookToken} />
-          <MailContainer>
-            <MailContent
-              title={<FormattedMessage id="default.footer.newsletter.title" />}
-              subTitle={<FormattedMessage id="default.footer.newsletter.subtitle" />}
-              linkText={<FormattedMessage id="default.footer.newsletter.linkText" />}
-              linkHref="/rechtliches/datenschutz"
+const DefaultFooter: React.FC<NewFooterProps> = ({ className, menuOptions }) => (
+  <footer className={className}>
+    <FooterContent>
+      <BrandLogoWrapper>
+        <BrandLogo
+          color={theme.color.secondary}
+          colorTwo={theme.color.primary}
+          brandingHolder="Instamotion"
+          link="/"
+        />
+      </BrandLogoWrapper>
+      {renderMenu(menuOptions)}
+    </FooterContent>
+    <FooterBottomSection>
+      <MediaWrapper>
+        {socialMedia.map(menuItem => {
+          return (
+            <MenuItemLink
+              key={menuItem.type + menuItem.link}
+              inline={!menuItem.title}
+              path={menuItem.link}
+              icon={renderIcon(menuItem.icon)}
             />
-          </MailContainer>
-          <Seals />
-          <Copyrights
-            logo={<AllianzLogo />}
-            title={<FormattedMessage id="default.footer.copyrights.text" />}
-          />
-        </FooterContent>
-      </footer>
-    );
-  }
-}
+          );
+        })}
+      </MediaWrapper>
+      <Copyrights
+        logo={<AllianzLogo />}
+        title={<FormattedMessage id="default.footer.copyrights.text" />}
+      />
+    </FooterBottomSection>
+  </footer>
+);
 
 export default DefaultFooter;

@@ -8,7 +8,7 @@ import {
   trackingLogEvent,
   trackingNewsletterSuccess,
   trackingNewsletterError
-} from '../helpers/tracking';
+} from '../../helpers/tracking';
 
 interface Props {
   title?: JSX.Element | string;

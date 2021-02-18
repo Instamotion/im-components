@@ -1,12 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '@im-ui/theme';
+import { theme } from '@themes/themesV4/default';
 import { IconStyled } from '@im-ui/icon';
-import {
-  trackingLogEvent,
-  trackingPhoneNumberClicked,
-  trackingMailLinkClicked
-} from '../helpers/tracking';
+import { trackingLogEvent } from '../../helpers/tracking';
 
 interface Props {
   inline: boolean;
@@ -32,15 +28,6 @@ const MenuItemLinkComponent: React.FC<Props> = ({
     }
     if (track) {
       trackingLogEvent(track);
-
-      switch (track) {
-        case 'call_from_footer':
-          trackingPhoneNumberClicked();
-          break;
-        case 'mail_from_footer':
-          trackingMailLinkClicked();
-          break;
-      }
     }
   };
 
@@ -73,12 +60,14 @@ const MenuItemLink = styled.div<{ inline: boolean }>`
 
   & a {
     text-decoration: none;
-    color: ${theme.color.oil};
-    font-size: 1rem;
-    line-height: 1.92rem;
+    color: ${theme.color.typo};
     cursor: pointer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 2rem;
     :hover {
-      color: ${theme.color.downy};
+      color: ${theme.color.primary};
     }
   }
 `;

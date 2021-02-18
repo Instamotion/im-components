@@ -2,24 +2,16 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
-import { renderIcon } from '../src/defaultFooter';
+import { renderIcon } from '../src/oldFooter/defaultFooter';
 import TrustfulSection from '../src/trustfulSection';
 import TrustfulHeading from '../src/trustfulSection/trustfulHeading';
 import MenuItem from '../src/menu/menuItem';
 import Copyrights from '../src/copyrights';
-import CheckoutFooter from '../src/checkoutFooter';
 import Footer, { FooterVariant } from '../src';
 import AllianzLogo from '../src/assets/AllianzLogo';
 import messages from '../utils/locales';
 
 describe('Global | Footer', () => {
-  it('renders correct variant', () => {
-    const wrapper = mount(
-      renderWithThemeAndI18n(<Footer variant={FooterVariant.minimal} />, 'de', messages)
-    );
-    expect(wrapper.find(CheckoutFooter).length).toEqual(1);
-  });
-
   it('renders default variant', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
