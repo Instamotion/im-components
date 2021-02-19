@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.0.4
+
+### Patch Changes
+
+- 936d66d: update dropdown with new styles
+
 ## 1.0.3
 
 ### Patch Changes
