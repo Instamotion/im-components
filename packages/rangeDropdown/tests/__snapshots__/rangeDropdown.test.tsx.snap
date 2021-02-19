@@ -190,9 +190,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-jKJlTe",
+                "componentId": "sc-jWBwVP",
                 "isStatic": false,
-                "lastClassName": "cJqkLF",
+                "lastClassName": "hEwBEr",
                 "rules": Array [
                   "
   display: flex;
@@ -203,7 +203,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-jKJlTe",
+              "styledComponentId": "sc-jWBwVP",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -214,7 +214,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
           id="dropdown-1"
         >
           <div
-            className="sc-jKJlTe cJqkLF"
+            className="sc-jWBwVP hEwBEr"
             id="dropdown-1"
           >
             <Label
@@ -287,9 +287,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eNQAEJ",
+                      "componentId": "sc-brqgnP",
                       "isStatic": false,
-                      "lastClassName": "jkKDHZ",
+                      "lastClassName": "hLBrGM",
                       "rules": Array [
                         "
   display: flex;
@@ -300,7 +300,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eNQAEJ",
+                    "styledComponentId": "sc-brqgnP",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -310,7 +310,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="sc-eNQAEJ jkKDHZ"
+                  className="sc-brqgnP hLBrGM"
                 >
                   <styled.div>
                     <StyledComponent
@@ -319,9 +319,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-ckVGcZ",
+                            "componentId": "sc-cvbbAY",
                             "isStatic": false,
-                            "lastClassName": "ljZFDc",
+                            "lastClassName": "emOTPt",
                             "rules": Array [
                               "
   display: flex;
@@ -331,7 +331,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   position: relative;
 
   ",
-                              ".sc-kAzzGY",
+                              ".sc-hMqMXs",
                               " {
     position: absolute;
     z-index: 1;
@@ -356,7 +356,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-ckVGcZ",
+                          "styledComponentId": "sc-cvbbAY",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -366,7 +366,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="sc-ckVGcZ ljZFDc"
+                        className="sc-cvbbAY emOTPt"
                       >
                         <Component
                           aria-label="input-from"
@@ -399,9 +399,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-kAzzGY",
+                                      "componentId": "sc-hMqMXs",
                                       "isStatic": false,
-                                      "lastClassName": "ZMbZk",
+                                      "lastClassName": "eLwVVu",
                                       "rules": Array [
                                         "
   display: flex;
@@ -414,7 +414,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-kAzzGY",
+                                    "styledComponentId": "sc-hMqMXs",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -429,7 +429,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                 }
                               >
                                 <div
-                                  className="sc-kAzzGY ZMbZk"
+                                  className="sc-hMqMXs eLwVVu"
                                   style={
                                     Object {
                                       "width": undefined,
@@ -448,9 +448,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-cSHVUG",
+                                            "componentId": "sc-eNQAEJ",
                                             "isStatic": false,
-                                            "lastClassName": "bYMlVI",
+                                            "lastClassName": "brBASy",
                                             "rules": Array [
                                               "
   position: relative;
@@ -509,7 +509,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           "displayName": "styled.div",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-cSHVUG",
+                                          "styledComponentId": "sc-eNQAEJ",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -521,7 +521,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                       value="from"
                                     >
                                       <div
-                                        className="sc-cSHVUG bYMlVI"
+                                        className="sc-eNQAEJ brBASy"
                                         value="from"
                                       >
                                         <styled.input
@@ -540,9 +540,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-chPdSV",
+                                                  "componentId": "sc-kEYyzF",
                                                   "isStatic": false,
-                                                  "lastClassName": "ieiUtU",
+                                                  "lastClassName": "dgDHAw",
                                                   "rules": Array [
                                                     "
   background-color: transparent;
@@ -565,7 +565,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                 "displayName": "styled.input",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-chPdSV",
+                                                "styledComponentId": "sc-kEYyzF",
                                                 "target": "input",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -583,7 +583,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                             value="from"
                                           >
                                             <input
-                                              className="sc-chPdSV ieiUtU"
+                                              className="sc-kEYyzF dgDHAw"
                                               id="from-input-dropdown-1"
                                               maxLength={30}
                                               onBlur={[Function]}
@@ -602,9 +602,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-dxgOiQ",
+                                                  "componentId": "sc-eHgmQL",
                                                   "isStatic": false,
-                                                  "lastClassName": "gcFWBx",
+                                                  "lastClassName": "bTDffh",
                                                   "rules": Array [
                                                     "
   display: flex;
@@ -620,7 +620,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                 "displayName": "styled.div",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-dxgOiQ",
+                                                "styledComponentId": "sc-eHgmQL",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -630,7 +630,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                             forwardedRef={null}
                                           >
                                             <div
-                                              className="sc-dxgOiQ gcFWBx"
+                                              className="sc-eHgmQL bTDffh"
                                             >
                                               <Styled(Component)
                                                 className="times-icon"
@@ -646,9 +646,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-kgoBCf",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "fROEoW",
+                                                        "lastClassName": "hpqNEU",
                                                         "rules": Array [
                                                           "
   cursor: pointer;
@@ -658,7 +658,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                       "displayName": "Styled(Component)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-kgoBCf",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "warnTooManyClasses": [Function],
@@ -670,25 +670,25 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                   onClick={[Function]}
                                                 >
                                                   <Component
-                                                    className="sc-kgoBCf fROEoW times-icon"
+                                                    className="sc-kkGfuU hpqNEU times-icon"
                                                     color="brightGrey"
                                                     icon="times"
                                                     onClick={[Function]}
                                                   >
                                                     <times
-                                                      className="sc-kgoBCf fROEoW times-icon"
+                                                      className="sc-kkGfuU hpqNEU times-icon"
                                                       color="brightGrey"
                                                       onClick={[Function]}
                                                     >
                                                       <styled.svg
-                                                        className="sc-kgoBCf fROEoW times-icon"
+                                                        className="sc-kkGfuU hpqNEU times-icon"
                                                         color="brightGrey"
                                                         onClick={[Function]}
                                                         viewBox="0 0 320 512"
                                                         xmlns="http://www.w3.org/2000/svg"
                                                       >
                                                         <StyledComponent
-                                                          className="sc-kgoBCf fROEoW times-icon"
+                                                          className="sc-kkGfuU hpqNEU times-icon"
                                                           color="brightGrey"
                                                           forwardedComponent={
                                                             Object {
@@ -727,7 +727,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                           xmlns="http://www.w3.org/2000/svg"
                                                         >
                                                           <svg
-                                                            className="sc-htoDjs iYqjKj sc-kgoBCf fROEoW times-icon"
+                                                            className="sc-htoDjs iYqjKj sc-kkGfuU hpqNEU times-icon"
                                                             color="brightGrey"
                                                             onClick={[Function]}
                                                             viewBox="0 0 320 512"
@@ -1085,9 +1085,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-ckVGcZ",
+                            "componentId": "sc-cvbbAY",
                             "isStatic": false,
-                            "lastClassName": "ljZFDc",
+                            "lastClassName": "emOTPt",
                             "rules": Array [
                               "
   display: flex;
@@ -1097,7 +1097,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   position: relative;
 
   ",
-                              ".sc-kAzzGY",
+                              ".sc-hMqMXs",
                               " {
     position: absolute;
     z-index: 1;
@@ -1122,7 +1122,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-ckVGcZ",
+                          "styledComponentId": "sc-cvbbAY",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1132,7 +1132,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="sc-ckVGcZ ljZFDc"
+                        className="sc-cvbbAY emOTPt"
                       >
                         <Component
                           aria-label="input-to"
@@ -1165,9 +1165,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-kAzzGY",
+                                      "componentId": "sc-hMqMXs",
                                       "isStatic": false,
-                                      "lastClassName": "ZMbZk",
+                                      "lastClassName": "eLwVVu",
                                       "rules": Array [
                                         "
   display: flex;
@@ -1180,7 +1180,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-kAzzGY",
+                                    "styledComponentId": "sc-hMqMXs",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -1195,7 +1195,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                 }
                               >
                                 <div
-                                  className="sc-kAzzGY ZMbZk"
+                                  className="sc-hMqMXs eLwVVu"
                                   style={
                                     Object {
                                       "width": undefined,
@@ -1214,9 +1214,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-cSHVUG",
+                                            "componentId": "sc-eNQAEJ",
                                             "isStatic": false,
-                                            "lastClassName": "bYMlVI",
+                                            "lastClassName": "brBASy",
                                             "rules": Array [
                                               "
   position: relative;
@@ -1275,7 +1275,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           "displayName": "styled.div",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-cSHVUG",
+                                          "styledComponentId": "sc-eNQAEJ",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1287,7 +1287,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                       value="to"
                                     >
                                       <div
-                                        className="sc-cSHVUG bYMlVI"
+                                        className="sc-eNQAEJ brBASy"
                                         value="to"
                                       >
                                         <styled.input
@@ -1306,9 +1306,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-chPdSV",
+                                                  "componentId": "sc-kEYyzF",
                                                   "isStatic": false,
-                                                  "lastClassName": "ieiUtU",
+                                                  "lastClassName": "dgDHAw",
                                                   "rules": Array [
                                                     "
   background-color: transparent;
@@ -1331,7 +1331,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                 "displayName": "styled.input",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-chPdSV",
+                                                "styledComponentId": "sc-kEYyzF",
                                                 "target": "input",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -1349,7 +1349,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                             value="to"
                                           >
                                             <input
-                                              className="sc-chPdSV ieiUtU"
+                                              className="sc-kEYyzF dgDHAw"
                                               id="to-input-dropdown-1"
                                               maxLength={30}
                                               onBlur={[Function]}
@@ -1368,9 +1368,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-dxgOiQ",
+                                                  "componentId": "sc-eHgmQL",
                                                   "isStatic": false,
-                                                  "lastClassName": "gcFWBx",
+                                                  "lastClassName": "bTDffh",
                                                   "rules": Array [
                                                     "
   display: flex;
@@ -1386,7 +1386,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                 "displayName": "styled.div",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-dxgOiQ",
+                                                "styledComponentId": "sc-eHgmQL",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -1396,7 +1396,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                             forwardedRef={null}
                                           >
                                             <div
-                                              className="sc-dxgOiQ gcFWBx"
+                                              className="sc-eHgmQL bTDffh"
                                             >
                                               <Styled(Component)
                                                 className="times-icon"
@@ -1412,9 +1412,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-kgoBCf",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "fROEoW",
+                                                        "lastClassName": "hpqNEU",
                                                         "rules": Array [
                                                           "
   cursor: pointer;
@@ -1424,7 +1424,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                       "displayName": "Styled(Component)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-kgoBCf",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "warnTooManyClasses": [Function],
@@ -1436,25 +1436,25 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                   onClick={[Function]}
                                                 >
                                                   <Component
-                                                    className="sc-kgoBCf fROEoW times-icon"
+                                                    className="sc-kkGfuU hpqNEU times-icon"
                                                     color="brightGrey"
                                                     icon="times"
                                                     onClick={[Function]}
                                                   >
                                                     <times
-                                                      className="sc-kgoBCf fROEoW times-icon"
+                                                      className="sc-kkGfuU hpqNEU times-icon"
                                                       color="brightGrey"
                                                       onClick={[Function]}
                                                     >
                                                       <styled.svg
-                                                        className="sc-kgoBCf fROEoW times-icon"
+                                                        className="sc-kkGfuU hpqNEU times-icon"
                                                         color="brightGrey"
                                                         onClick={[Function]}
                                                         viewBox="0 0 320 512"
                                                         xmlns="http://www.w3.org/2000/svg"
                                                       >
                                                         <StyledComponent
-                                                          className="sc-kgoBCf fROEoW times-icon"
+                                                          className="sc-kkGfuU hpqNEU times-icon"
                                                           color="brightGrey"
                                                           forwardedComponent={
                                                             Object {
@@ -1493,7 +1493,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                           xmlns="http://www.w3.org/2000/svg"
                                                         >
                                                           <svg
-                                                            className="sc-htoDjs iYqjKj sc-kgoBCf fROEoW times-icon"
+                                                            className="sc-htoDjs iYqjKj sc-kkGfuU hpqNEU times-icon"
                                                             color="brightGrey"
                                                             onClick={[Function]}
                                                             viewBox="0 0 320 512"
@@ -1997,9 +1997,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-ckVGcZ",
+              "componentId": "sc-cvbbAY",
               "isStatic": false,
-              "lastClassName": "ljZFDc",
+              "lastClassName": "emOTPt",
               "rules": Array [
                 "
   display: flex;
@@ -2009,7 +2009,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
   position: relative;
 
   ",
-                ".sc-kAzzGY",
+                ".sc-hMqMXs",
                 " {
     position: absolute;
     z-index: 1;
@@ -2034,7 +2034,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-ckVGcZ",
+            "styledComponentId": "sc-cvbbAY",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -2044,7 +2044,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
         forwardedRef={null}
       >
         <div
-          className="sc-ckVGcZ ljZFDc"
+          className="sc-cvbbAY emOTPt"
         >
           <Component
             aria-label="input-from"
@@ -2077,9 +2077,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-kAzzGY",
+                        "componentId": "sc-hMqMXs",
                         "isStatic": false,
-                        "lastClassName": "ZMbZk",
+                        "lastClassName": "eLwVVu",
                         "rules": Array [
                           "
   display: flex;
@@ -2092,7 +2092,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-kAzzGY",
+                      "styledComponentId": "sc-hMqMXs",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -2107,7 +2107,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                   }
                 >
                   <div
-                    className="sc-kAzzGY ZMbZk"
+                    className="sc-hMqMXs eLwVVu"
                     style={
                       Object {
                         "width": undefined,
@@ -2126,9 +2126,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-cSHVUG",
+                              "componentId": "sc-eNQAEJ",
                               "isStatic": false,
-                              "lastClassName": "bYMlVI",
+                              "lastClassName": "brBASy",
                               "rules": Array [
                                 "
   position: relative;
@@ -2187,7 +2187,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-cSHVUG",
+                            "styledComponentId": "sc-eNQAEJ",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -2199,7 +2199,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                         value={1}
                       >
                         <div
-                          className="sc-cSHVUG bYMlVI"
+                          className="sc-eNQAEJ brBASy"
                           value={1}
                         >
                           <styled.input
@@ -2218,9 +2218,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-chPdSV",
+                                    "componentId": "sc-kEYyzF",
                                     "isStatic": false,
-                                    "lastClassName": "ieiUtU",
+                                    "lastClassName": "dgDHAw",
                                     "rules": Array [
                                       "
   background-color: transparent;
@@ -2243,7 +2243,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                   "displayName": "styled.input",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-chPdSV",
+                                  "styledComponentId": "sc-kEYyzF",
                                   "target": "input",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -2261,7 +2261,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                               value={1}
                             >
                               <input
-                                className="sc-chPdSV ieiUtU"
+                                className="sc-kEYyzF dgDHAw"
                                 id="from-input-test-1"
                                 maxLength={30}
                                 onBlur={[Function]}
@@ -2280,9 +2280,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-dxgOiQ",
+                                    "componentId": "sc-eHgmQL",
                                     "isStatic": false,
-                                    "lastClassName": "gcFWBx",
+                                    "lastClassName": "bTDffh",
                                     "rules": Array [
                                       "
   display: flex;
@@ -2298,7 +2298,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                   "displayName": "styled.div",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-dxgOiQ",
+                                  "styledComponentId": "sc-eHgmQL",
                                   "target": "div",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -2308,7 +2308,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                               forwardedRef={null}
                             >
                               <div
-                                className="sc-dxgOiQ gcFWBx"
+                                className="sc-eHgmQL bTDffh"
                               >
                                 <Styled(Component)
                                   className="times-icon"
@@ -2324,9 +2324,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-kgoBCf",
+                                          "componentId": "sc-kkGfuU",
                                           "isStatic": false,
-                                          "lastClassName": "fROEoW",
+                                          "lastClassName": "hpqNEU",
                                           "rules": Array [
                                             "
   cursor: pointer;
@@ -2336,7 +2336,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                         "displayName": "Styled(Component)",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-kgoBCf",
+                                        "styledComponentId": "sc-kkGfuU",
                                         "target": [Function],
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -2348,25 +2348,25 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                     onClick={[Function]}
                                   >
                                     <Component
-                                      className="sc-kgoBCf fROEoW times-icon"
+                                      className="sc-kkGfuU hpqNEU times-icon"
                                       color="brightGrey"
                                       icon="times"
                                       onClick={[Function]}
                                     >
                                       <times
-                                        className="sc-kgoBCf fROEoW times-icon"
+                                        className="sc-kkGfuU hpqNEU times-icon"
                                         color="brightGrey"
                                         onClick={[Function]}
                                       >
                                         <styled.svg
-                                          className="sc-kgoBCf fROEoW times-icon"
+                                          className="sc-kkGfuU hpqNEU times-icon"
                                           color="brightGrey"
                                           onClick={[Function]}
                                           viewBox="0 0 320 512"
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
                                           <StyledComponent
-                                            className="sc-kgoBCf fROEoW times-icon"
+                                            className="sc-kkGfuU hpqNEU times-icon"
                                             color="brightGrey"
                                             forwardedComponent={
                                               Object {
@@ -2405,7 +2405,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <svg
-                                              className="sc-htoDjs iYqjKj sc-kgoBCf fROEoW times-icon"
+                                              className="sc-htoDjs iYqjKj sc-kkGfuU hpqNEU times-icon"
                                               color="brightGrey"
                                               onClick={[Function]}
                                               viewBox="0 0 320 512"

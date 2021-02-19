@@ -1,1 +1,2 @@
-export { default, StyledDropdownProps, OptionType, DropdownButton, Item } from './styledDropdown';
+export { default, StyledDropdownProps, OptionType } from './styledDropdown';
+export { DropdownButton, Item } from './styles';
