@@ -8,7 +8,7 @@ import {
   IconWrapper,
   StyledIcon,
   ErrorMessage
-} from './styles';
+} from './newStyles';
 
 export type ValueType = string | number;
 

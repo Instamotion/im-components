@@ -81,9 +81,7 @@ export const StyledIcon = styled(Icon)`
   color: ${theme.color.oil};
 `;
 
-export const StyledLabel = styled(Label)`
-  ${(props: { error?: boolean }) => props.error && `color: ${theme.color.signal};`}
-`;
+export const StyledLabel = styled(Label)``;
 
 export const ErrorMessage = styled.span`
   font-family: ${theme.font.bentonRegular.family};

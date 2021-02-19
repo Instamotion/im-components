@@ -46,6 +46,9 @@ const TextInputDemo = (): React.ReactElement => {
     value,
     type: 'text',
     label: 'Hello',
+    inputProps: {
+      placeholder: 'Example placeholder'
+    },
     onChange: (val: ValueType) => {
       setValue(val as string);
       action('Input changed')(val);
