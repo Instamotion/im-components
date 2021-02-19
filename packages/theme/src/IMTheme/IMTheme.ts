@@ -4,19 +4,19 @@ const sansSerifFont: Font = {
   family: 'Roboto, sans-serif'
 };
 const BentonRegular: Font = {
-  family: 'BentonSans Regular',
+  family: 'BentonSans',
   weight: 400
 };
 const BentonMedium: Font = {
-  family: 'BentonSans Medium',
+  family: 'BentonSans',
   weight: 500
 };
 const BentonBold: Font = {
-  family: 'BentonSans Bold',
+  family: 'BentonSans',
   weight: 700
 };
 const BentonBlack: Font = {
-  family: 'BentonSans Black',
+  family: 'BentonSans',
   weight: 900
 };
 
