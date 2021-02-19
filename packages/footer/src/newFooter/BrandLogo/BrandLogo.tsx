@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, { ThemedStyledProps, FlattenInterpolation, css } from 'styled-components';
-import { theme } from '@themes/themesV4/default';
+import { IMTheme as theme } from '@im-ui/theme';
 import InstamotionLogo from '../assets/Logo';
 import AllianzLogo from '../assets/AllianzLogo';
 
@@ -77,7 +77,7 @@ export const BrandingLogoComponent: React.FC<BrandingLogoProps> = ({
 );
 
 const BrandingLogo = styled(BrandingLogoComponent)`
-  ${({ color, colorTwo }) => (color ? coloredLogo(color, colorTwo) : defaultLogoColor)}
+  ${({ color, colorTwo }) => (color ? coloredLogo(color, colorTwo || '') : defaultLogoColor)}
 `;
 
 export default BrandingLogo;

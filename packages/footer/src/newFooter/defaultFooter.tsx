@@ -10,7 +10,7 @@ import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
 import { openBanner } from '../helpers/cookieProBanner';
 import { BrandLogo } from './BrandLogo';
-import { theme } from '@themes/themesV4/default';
+import { IMTheme as theme } from '@im-ui/theme';
 
 const FooterBottomSection = styled.div`
   max-width: 67.25rem;

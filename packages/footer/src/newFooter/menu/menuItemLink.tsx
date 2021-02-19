@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from '@themes/themesV4/default';
+import { IMTheme as theme } from '@im-ui/theme';
 import { IconStyled } from '@im-ui/icon';
 import { trackingLogEvent } from '../../helpers/tracking';
 
