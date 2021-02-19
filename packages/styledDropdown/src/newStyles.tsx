@@ -191,9 +191,10 @@ export const DropdownInput = styled.input`
   width: 100%;
   height: 100%;
   background: transparent;
-  color: ${theme.color.brightGrey};
+  color: ${theme.color.oil};
   font-size: 1rem;
-  font-family: ${theme.font.sans.family};
+  font-family: ${theme.font.bentonRegular.family};
+  font-weight: ${theme.font.bentonRegular.weight};
   &:focus {
     outline: none;
   }

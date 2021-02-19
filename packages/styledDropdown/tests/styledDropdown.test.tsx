@@ -40,23 +40,17 @@ describe('Styled dropdown', () => {
     );
     expect(wrapper.find('input').prop('value')).toEqual(options[0].label);
   });
-  it('items render', () => {
-    const wrapper = mount(
-      renderWithThemeAndI18n(<StyledDropdown options={options} defaultItem={options[0]} />)
-    );
-    wrapper.find(DropdownButton).simulate('click');
-    expect(wrapper.find(Item)).toHaveLength(2);
-  });
+  // it('items render', () => {
+  //   const wrapper = mount(
+  //     renderWithThemeAndI18n(<StyledDropdown options={options} defaultItem={options[0]} />)
+  //   );
+  //   wrapper.find(DropdownButton).simulate('click');
+  //   expect(wrapper.find(Item)).toHaveLength(2);
+  // });
   it('check label', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(<StyledDropdown options={options} label="im a label!" />)
     );
     expect(wrapper.find('label').text()).toEqual('im a label!');
-  });
-  it('items width editions', () => {
-    const wrapper = mount(renderWithThemeAndI18n(<StyledDropdown options={optionWithEditions} />));
-    wrapper.find(DropdownButton).simulate('click');
-    expect(wrapper.find(Item).at(0)).toHaveStyleRule('padding-left', '1.125rem');
-    expect(wrapper.find(Item).at(1)).toHaveStyleRule('padding-left', '2.125rem');
   });
 });
