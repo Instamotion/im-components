@@ -34,6 +34,33 @@ storiesOf('Styled dropdown', module)
       </div>
     );
   })
+  .add('Dropdown with border', () => {
+    const iconOptions: Array<AvailableIcons> = ['file', 'envelope', 'condition'];
+    const options: OptionType[] = [
+      {
+        value: text('value', '_default item', 'default item'),
+        label: text('label', 'default item', 'default item'),
+        iconName: select<AvailableIcons>('iconName', iconOptions, 'condition', 'default item')
+      },
+      {
+        value: text('value2', 'non default item', 'non default item'),
+        label: text('label2', 'non default item', 'non default item'),
+        iconName: select<AvailableIcons>('iconName2', iconOptions, 'condition', 'non default item')
+      }
+    ];
+    return renderWithThemeAndI18n(
+      <div style={{ width: '280px' }}>
+        <StyledDropdown
+          options={options}
+          hasBorder
+          label={text('label', 'Click on me!', 'other')}
+          disabled={boolean('disabled', false, 'other')}
+          defaultItem={options[0]}
+          onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+        />
+      </div>
+    );
+  })
   .add('Dropdown with placeholder', () => {
     const optionsWithoutIcons: OptionType[] = [
       {
