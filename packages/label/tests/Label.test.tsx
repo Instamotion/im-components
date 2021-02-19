@@ -11,16 +11,4 @@ describe('Label', () => {
     const wrapper = mount(renderWithThemeAndI18n(<Label text="Test" />));
     expect(wrapper.find(Label).text()).toEqual('Test');
   });
-  it('enabled label', () => {
-    const wrapper = mount(renderWithThemeAndI18n(<Label text="label" />));
-    expect(wrapper.find(Label)).toHaveStyleRule('color', theme.color.brightGrey);
-  });
-  it('disabled label', () => {
-    const wrapper = mount(renderWithThemeAndI18n(<Label text="label" disabled />));
-    expect(wrapper.find(Label)).toHaveStyleRule('color', theme.color.silver);
-  });
-  it('disabled label', () => {
-    const wrapper = mount(renderWithThemeAndI18n(<Label text="required" required />));
-    expect(wrapper.find(Label).text()).toEqual('required*');
-  });
 });
