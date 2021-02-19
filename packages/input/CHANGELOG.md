@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.5.0
+
+### Minor Changes
+
+- 7c052af: update input styles
+
 ## 2.4.1
 
 ### Patch Changes
