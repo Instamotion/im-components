@@ -79,6 +79,7 @@ export type ColorLibrary = {
   lightBackground: HexColor;
   secondaryBlack: HexColor;
   typo: HexColor;
+  signal: HexColor;
 };
 
 export type FontSizes = {

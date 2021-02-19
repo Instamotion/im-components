@@ -61,12 +61,14 @@ const colors = {
   almond: '#FBEEC7',
   // USP background light gray color
   lightGreyBG: '#F9F9F9',
-  //lightBackground
+  // lightBackground
   lightBackground: '#F9F9F9',
-  //secondaryBlack
+  // secondaryBlack
   secondaryBlack: '#333333',
-  //typo
-  typo: '#575756'
+  // typo
+  typo: '#575756',
+  // error colour
+  signal: '#FF0000'
 };
 
 export const imTheme: IMTheme = {
@@ -234,18 +236,17 @@ export const imTheme: IMTheme = {
   input: {
     border: {
       width: 1,
-      color: '#C4C4C4'
+      color: '#BBBBBB'
     },
     font: {
-      ...sansSerifFont,
+      ...BentonRegular,
       size: 16
     }
   },
   label: {
     font: {
-      ...sansSerifFont,
-      size: 1,
-      weight: 600
+      ...BentonRegular,
+      size: 1
     },
     // line-height css rule
     line: {
