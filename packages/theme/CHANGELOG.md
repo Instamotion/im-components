@@ -1,5 +1,11 @@
 # @im-ui/theme
 
+## 2.0.1
+
+### Patch Changes
+
+- 5fb9dca: update font name
+
 ## 2.0.0
 
 ### Major Changes

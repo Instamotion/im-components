@@ -1,5 +1,12 @@
 # @im-ui/accordion
 
+## 0.2.3
+
+### Patch Changes
+
+- Updated dependencies [5fb9dca]
+  - @im-ui/theme@2.0.1
+
 ## 0.2.2
 
 ### Patch Changes
