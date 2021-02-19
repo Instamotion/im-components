@@ -1,5 +1,12 @@
 # @im-ui/tabs
 
+## 0.1.6
+
+### Patch Changes
+
+- Updated dependencies [77afe50]
+  - @im-ui/theme@2.0.2
+
 ## 0.1.5
 
 ### Patch Changes
