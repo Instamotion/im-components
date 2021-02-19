@@ -11,6 +11,10 @@ storiesOf('Label', module)
     return <Label required={true} text={'Hello there!'} />;
   })
 
+  .add('Required error', () => {
+    return <Label required={true} text={'Hello there!'} error={true} />;
+  })
+
   .add('With JSX in text', () => {
     return (
       <Label
