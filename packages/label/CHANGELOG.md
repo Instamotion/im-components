@@ -1,5 +1,11 @@
 # @im-ui/label
 
+## 1.0.2
+
+### Patch Changes
+
+- 9b63d55: color changes
+
 ## 1.0.1
 
 ### Patch Changes
