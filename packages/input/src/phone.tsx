@@ -10,7 +10,7 @@ import {
   IconWrapper,
   StyledIcon,
   ErrorMessage
-} from './styles';
+} from './newStyles';
 
 const phoneCodes: OptionType[] = [
   {
@@ -131,7 +131,7 @@ export const Input: React.FC<InputProps> = ({
       {label && (
         <StyledLabel error={!!errorMessage} required={required} text={label} htmlFor={id} />
       )}
-      <StyledInput value={value} error={!!errorMessage} isPhone={isPhone}>
+      <StyledInput value={value} error={!!errorMessage}>
         <Dropdown
           options={phoneCodes}
           onChange={handleCodeChange}
