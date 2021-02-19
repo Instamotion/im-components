@@ -1,11 +1,12 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import theme from '@im-ui/theme';
+import { IMTheme as theme } from '@im-ui/theme';
 
 export type Placement = 'stack' | 'inline';
 
 export interface LabelProps {
   text: JSX.Element | string;
+  error?: boolean;
   required?: boolean;
   disabled?: boolean;
   htmlFor?: string;
@@ -14,28 +15,35 @@ export interface LabelProps {
 }
 
 const LabelComponent = styled.label<LabelProps>`
+  font-family: ${theme.font.bentonMedium.family};
+  font-weight: ${theme.font.bentonMedium.weight};
+  color: ${theme.color.typo}
   font-size: 0.75rem;
-  font-weight: bold;
   cursor: pointer;
-  text-transform: uppercase;
   ${({ placement = 'stack' }) =>
     css`
       margin-bottom: ${placement === 'stack' ? '0.5rem' : '0'};
     `}
   ${({ disabled }) => css`
-    color: ${disabled ? theme.color.silver : theme.color.brightGrey};
+    color: ${disabled ? theme.color.silver : theme.color.typo};
   `}
+  color: ${({ error }) => (error ? theme.color.signal : theme.color.typo)}
 `;
 
-const Asterisk = styled.span<{ disabled: boolean | undefined }>`
+const Asterisk = styled.span<{ disabled: boolean | undefined; error?: boolean }>`
   padding-left: 0.2rem;
-  color: ${({ disabled }) => (disabled ? theme.color.silver : theme.color.flamePea)};
+  color: ${({ disabled }) => (disabled ? theme.color.silver : theme.color.typo)};
+  color: ${({ error }) => (error ? theme.color.signal : theme.color.typo)};
 `;
 
 const Label: React.FC<LabelProps> = props => (
   <LabelComponent {...props}>
     <span>{props.text}</span>
-    {props.required && <Asterisk disabled={props.disabled}>*</Asterisk>}
+    {props.required && (
+      <Asterisk disabled={props.disabled} error={props.error}>
+        *
+      </Asterisk>
+    )}
   </LabelComponent>
 );
 
