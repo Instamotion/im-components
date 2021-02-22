@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@im-ui/icon": "^0.6.1",
-    "@im-ui/theme": "^2.0.0"
+    "@im-ui/theme": "^2.0.3"
   },
   "peerDependencies": {
     "react": "^16.11.0",
