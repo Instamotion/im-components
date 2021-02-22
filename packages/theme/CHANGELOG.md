@@ -1,5 +1,11 @@
 # @im-ui/theme
 
+## 2.0.3
+
+### Patch Changes
+
+- 3bb3fd8: update theme for font and colours
+
 ## 2.0.2
 
 ### Patch Changes
