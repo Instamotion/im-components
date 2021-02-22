@@ -3,6 +3,10 @@ import IMTheme, { Font } from './IMInterface';
 const sansSerifFont: Font = {
   family: 'Roboto, sans-serif'
 };
+const BentonLight: Font = {
+  family: 'BentonSans',
+  weight: 300
+};
 const BentonRegular: Font = {
   family: 'BentonSans',
   weight: 400
@@ -44,11 +48,15 @@ const colors = {
   // light-grey
   lightGrey: '#FAFAFA',
   // lighter-gray
+  whiteGrey: '#E5E5E5',
+  // lighter-gray
   lighterGrey: '#f3f3f3',
   // grey
   grey: '#9E9E9E',
   // dark grey
   dark: '#323330',
+  // dark grey for button
+  grayscale: '#8F8F8F',
   // black
   black: '#000000',
   // light shade of cyan
@@ -169,7 +177,31 @@ export const imTheme: IMTheme = {
       background: colors.secondary,
       padding: '0.8125rem 3rem',
       font: {
-        ...sansSerifFont,
+        ...BentonBold,
+        size: 1,
+        weight: 600,
+        spacing: 0
+      },
+      hover: {
+        shadow: '0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)'
+      },
+      active: {
+        shadow: 'inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);'
+      },
+      disabled: {
+        opacity: 0.5
+      }
+    },
+    grayscaleDark: {
+      border: {
+        color: colors.secondary,
+        width: 0
+      },
+      color: colors.whiteGrey,
+      background: colors.grayscale,
+      padding: '0.8125rem 3rem',
+      font: {
+        ...BentonBold,
         size: 1,
         weight: 600,
         spacing: 0
@@ -269,6 +301,7 @@ export const imTheme: IMTheme = {
   },
   font: {
     sans: sansSerifFont,
+    bentonLight: BentonLight,
     bentonRegular: BentonRegular,
     bentonMedium: BentonMedium,
     bentonBold: BentonBold,

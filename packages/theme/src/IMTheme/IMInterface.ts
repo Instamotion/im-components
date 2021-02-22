@@ -67,9 +67,11 @@ export type ColorLibrary = {
   brightGrey: HexColor;
   silver: HexColor;
   lightGrey: HexColor;
+  whiteGrey: HexColor;
   lighterGrey: HexColor;
   grey: HexColor;
   dark: HexColor;
+  grayscale: HexColor;
   black: HexColor;
   cyan: HexColor;
   silverDark: HexColor;
@@ -118,6 +120,7 @@ export default interface IMTheme {
   button: {
     primary: Button;
     secondary: Button;
+    grayscaleDark: Button;
     grayscale: Button;
     outlined: Button;
   };
@@ -132,6 +135,7 @@ export default interface IMTheme {
   };
   font: {
     sans: Font;
+    bentonLight: Font;
     bentonRegular: Font;
     bentonMedium: Font;
     bentonBold: Font;
