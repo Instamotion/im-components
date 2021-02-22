@@ -343,7 +343,7 @@ exports[`Pagination renders 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-htoDjs",
+                "componentId": "sc-dnqmqq",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -360,7 +360,7 @@ exports[`Pagination renders 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-htoDjs",
+              "styledComponentId": "sc-dnqmqq",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -384,7 +384,7 @@ exports[`Pagination renders 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bxivhb",
+                        "componentId": "sc-ifAKCX",
                         "isStatic": false,
                         "lastClassName": "c1",
                         "rules": Array [
@@ -402,7 +402,7 @@ exports[`Pagination renders 1`] = `
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bxivhb",
+                      "styledComponentId": "sc-ifAKCX",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -424,7 +424,7 @@ exports[`Pagination renders 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-dnqmqq",
+                      "componentId": "sc-iwsKbI",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -445,7 +445,7 @@ exports[`Pagination renders 1`] = `
                     "displayName": "styled.ul",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-dnqmqq",
+                    "styledComponentId": "sc-iwsKbI",
                     "target": "ul",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -881,7 +881,7 @@ exports[`Pagination renders 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-gzVnrw",
+                            "componentId": "sc-htoDjs",
                             "isStatic": false,
                             "lastClassName": "c5",
                             "rules": Array [
@@ -895,7 +895,7 @@ exports[`Pagination renders 1`] = `
                           "displayName": "styled.li",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-gzVnrw",
+                          "styledComponentId": "sc-htoDjs",
                           "target": "li",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -989,7 +989,7 @@ exports[`Pagination renders 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bZQynM",
+                        "componentId": "sc-gzVnrw",
                         "isStatic": false,
                         "lastClassName": "c6",
                         "rules": Array [
@@ -1069,7 +1069,7 @@ exports[`Pagination renders 1`] = `
                         "sc-bwzfXH",
                       ],
                       "render": [Function],
-                      "styledComponentId": "sc-bZQynM",
+                      "styledComponentId": "sc-gzVnrw",
                       "target": "button",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -1097,7 +1097,7 @@ exports[`Pagination renders 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-htpNat",
+                                  "componentId": "sc-bxivhb",
                                   "isStatic": false,
                                   "lastClassName": "c7",
                                   "rules": Array [
@@ -1116,7 +1116,7 @@ exports[`Pagination renders 1`] = `
                                 "displayName": "styled.svg",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-htpNat",
+                                "styledComponentId": "sc-bxivhb",
                                 "target": "svg",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
