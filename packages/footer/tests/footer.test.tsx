@@ -3,19 +3,19 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
 import { renderIcon } from '../src/oldFooter/defaultFooter';
-import TrustfulSection from '../src/trustfulSection';
-import TrustfulHeading from '../src/trustfulSection/trustfulHeading';
-import MenuItem from '../src/menu/menuItem';
-import Copyrights from '../src/copyrights';
+import TrustfulSection from '../src/oldFooter/trustfulSection';
+import TrustfulHeading from '../src/oldFooter/trustfulSection/trustfulHeading';
+import MenuItem from '../src/oldFooter/menu/menuItem';
+import Copyrights from '../src/oldFooter/copyrights';
 import Footer, { FooterVariant } from '../src';
-import AllianzLogo from '../src/assets/AllianzLogo';
+import AllianzLogo from '../src/oldFooter/assets/AllianzLogo';
 import messages from '../utils/locales';
 
 describe('Global | Footer', () => {
   it('renders default variant', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Footer variant={FooterVariant.full} googleToken="" facebookToken="" />,
+        <Footer variant={FooterVariant.old} googleToken="" facebookToken="" />,
         'de',
         messages
       )
@@ -27,7 +27,7 @@ describe('Global | Footer', () => {
   it('default variant have menu items', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Footer variant={FooterVariant.full} googleToken="" facebookToken="" />,
+        <Footer variant={FooterVariant.old} googleToken="" facebookToken="" />,
         'de',
         messages
       )
@@ -38,7 +38,7 @@ describe('Global | Footer', () => {
   it('default variant has social container', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Footer variant={FooterVariant.full} googleToken="" facebookToken="" />,
+        <Footer variant={FooterVariant.old} googleToken="" facebookToken="" />,
         'de',
         messages
       )
@@ -49,7 +49,7 @@ describe('Global | Footer', () => {
   it('default variant has copyrights section', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Footer variant={FooterVariant.full} googleToken="" facebookToken="" />,
+        <Footer variant={FooterVariant.old} googleToken="" facebookToken="" />,
         'de',
         messages
       )
