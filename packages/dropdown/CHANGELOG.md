@@ -1,5 +1,11 @@
 # @im-ui/dropdown
 
+## 1.1.0
+
+### Minor Changes
+
+- e8710be: update dropdowns and checkbox
+
 ## 1.0.3
 
 ### Patch Changes

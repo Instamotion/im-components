@@ -1,5 +1,11 @@
 # @im-ui/checkbox
 
+## 2.1.0
+
+### Minor Changes
+
+- e8710be: update dropdowns and checkbox
+
 ## 2.0.1
 
 ### Patch Changes

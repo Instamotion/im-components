@@ -1,5 +1,16 @@
 # @im-ui/range-dropdown
 
+## 1.1.0
+
+### Minor Changes
+
+- e8710be: update dropdowns and checkbox
+
+### Patch Changes
+
+- Updated dependencies [e8710be]
+  - @im-ui/dropdown@1.1.0
+
 ## 1.0.2
 
 ### Patch Changes
