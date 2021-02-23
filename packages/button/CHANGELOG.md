@@ -1,5 +1,11 @@
 # @im-ui/button
 
+## 0.6.0
+
+### Minor Changes
+
+- 80c70b4: add new styled button
+
 ## 0.5.2
 
 ### Patch Changes
