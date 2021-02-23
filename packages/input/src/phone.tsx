@@ -131,7 +131,7 @@ export const Input: React.FC<InputProps> = ({
       {label && (
         <StyledLabel error={!!errorMessage} required={required} text={label} htmlFor={id} />
       )}
-      <StyledInput value={value} error={!!errorMessage}>
+      <StyledInput value={value} error={!!errorMessage} isPhone>
         <Dropdown
           options={phoneCodes}
           onChange={handleCodeChange}
@@ -139,6 +139,7 @@ export const Input: React.FC<InputProps> = ({
           selectStyles={selectStyles}
           isActive={isPhone && !!inputValue}
           hasError={!!errorMessage}
+          className="phone-dropdown"
         />
         <InputElements
           {...inputProps}
