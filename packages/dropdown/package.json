@@ -34,7 +34,7 @@
     "styled-components": "^4.4.1"
   },
   "dependencies": {
-    "@im-ui/label": "^1.0.1",
+    "@im-ui/label": "^1.0.2",
     "@im-ui/theme": "^2.0.0",
     "@im-ui/utils": "^0.5.6"
   }
