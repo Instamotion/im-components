@@ -450,7 +450,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-kEYyzF",
                                             "isStatic": false,
-                                            "lastClassName": "dDDnuX",
+                                            "lastClassName": "jhGMoI",
                                             "rules": Array [
                                               "
   position: relative;
@@ -460,7 +460,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "#f3f3f3",
                                               ";
   border-radius: 6px;
-  border: none;
   font-family: ",
                                               "BentonSans",
                                               ";
@@ -478,6 +477,16 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   height: 3rem;
   box-sizing: border-box;
   margin: 0;
+
+  ",
+                                              [Function],
+                                              "
+
+  &:focus-within {
+    ",
+                                              [Function],
+                                              "
+  }
 
   ",
                                               "@media (min-width: 768px)",
@@ -507,7 +516,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                       value="from"
                                     >
                                       <div
-                                        className="sc-kEYyzF dDDnuX"
+                                        className="sc-kEYyzF jhGMoI"
                                         value="from"
                                       >
                                         <styled.input
@@ -1214,7 +1223,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-kEYyzF",
                                             "isStatic": false,
-                                            "lastClassName": "dDDnuX",
+                                            "lastClassName": "jhGMoI",
                                             "rules": Array [
                                               "
   position: relative;
@@ -1224,7 +1233,6 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                               "#f3f3f3",
                                               ";
   border-radius: 6px;
-  border: none;
   font-family: ",
                                               "BentonSans",
                                               ";
@@ -1242,6 +1250,16 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   height: 3rem;
   box-sizing: border-box;
   margin: 0;
+
+  ",
+                                              [Function],
+                                              "
+
+  &:focus-within {
+    ",
+                                              [Function],
+                                              "
+  }
 
   ",
                                               "@media (min-width: 768px)",
@@ -1271,7 +1289,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                       value="to"
                                     >
                                       <div
-                                        className="sc-kEYyzF dDDnuX"
+                                        className="sc-kEYyzF jhGMoI"
                                         value="to"
                                       >
                                         <styled.input
@@ -2124,7 +2142,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-kEYyzF",
                               "isStatic": false,
-                              "lastClassName": "dDDnuX",
+                              "lastClassName": "jhGMoI",
                               "rules": Array [
                                 "
   position: relative;
@@ -2134,7 +2152,6 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                 "#f3f3f3",
                                 ";
   border-radius: 6px;
-  border: none;
   font-family: ",
                                 "BentonSans",
                                 ";
@@ -2152,6 +2169,16 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
   height: 3rem;
   box-sizing: border-box;
   margin: 0;
+
+  ",
+                                [Function],
+                                "
+
+  &:focus-within {
+    ",
+                                [Function],
+                                "
+  }
 
   ",
                                 "@media (min-width: 768px)",
@@ -2181,7 +2208,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                         value={1}
                       >
                         <div
-                          className="sc-kEYyzF dDDnuX"
+                          className="sc-kEYyzF jhGMoI"
                           value={1}
                         >
                           <styled.input
