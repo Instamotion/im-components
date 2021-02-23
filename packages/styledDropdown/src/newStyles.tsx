@@ -15,17 +15,21 @@ type menuProps = {
   hasError: boolean;
   isPhoneCode?: boolean;
   dropMenuBorder?: boolean;
+  isActive?: boolean;
 };
+
+const getSolidBSring = (color: string) => `border: solid 1px ${color};`;
 
 export const Menu = styled.ul<menuProps>`
   background: ${theme.color.lighterGrey};
-  ${({ hasError, isPhoneCode, isOpen, dropMenuBorder }) => {
-    if (hasError) return 'border: solid 1px ' + theme.color.signal;
-    if ((isPhoneCode || dropMenuBorder) && isOpen)
-      return 'border: solid 1px ' + theme.input.border.color;
+  ${({ hasError, isOpen, isPhoneCode, isActive }) => {
+    if (isOpen) return getSolidBSring(theme.color.secondary);
+    if (hasError) return getSolidBSring(theme.color.signal);
+    if (isPhoneCode || isActive) return getSolidBSring(theme.input.border.color);
   }};
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
   border-top: 0;
-  box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   cursor: auto;
   margin-top: 0;
@@ -60,6 +64,7 @@ export const Item = styled.li<{
   item: OptionType;
   highlighted: boolean;
 }>`
+  font-size: 1rem;
   font-family: ${theme.font.bentonRegular.family};
   font-weight: ${theme.font.bentonRegular.weight};
   align-items: center;
@@ -73,7 +78,7 @@ export const Item = styled.li<{
   white-space: normal;
   word-wrap: break-word;
   &:hover {
-    background-color: ${theme.color.lightGrey};
+    background-color: ${theme.color.whiteGrey};
   }
   ${props =>
     props.hasEditions &&
@@ -85,7 +90,8 @@ export const Item = styled.li<{
   ${props =>
     props.isSelected &&
     css`
-      font-weight: bold;
+      font-family: ${theme.font.bentonMedium.family};
+      font-weight: ${theme.font.bentonMedium.weight};
     `};
   ${props =>
     props.disabled &&
@@ -132,14 +138,11 @@ export const DropdownButton = styled.div<DropdownButtonType>`
       padding-right: 0.5rem;
       border-right-width: 0.0625rem;
       border-right-style: solid;
-      ${() =>
-        hasError && isPhoneCode
-          ? `
-      border-right-color: ${theme.color.signal};
-    `
-          : `
-      border-right-color: ${!hasError && isPhoneCode ? theme.input.border.color : 'transparent'};
-    `}
+      ${() => {
+        if (isOpen) return `border-right-color: ${theme.color.secondary};`;
+        if (hasError) return `border-right-color: ${theme.color.signal};`;
+        if (isPhoneCode || isActive) return `border-right-color: ${theme.input.border.color};`;
+      }}
     `}
 `;
 
@@ -156,9 +159,10 @@ export const DropdownContainer = styled.div<containerProps>`
   align-items: center;
   border-radius: 6px;
   background-color: ${theme.color.lighterGrey};
-  ${({ hasError, isPhoneCode, dropMenuBorder }) => {
-    if (hasError) return 'border: solid 1px ' + theme.color.signal;
-    if (isPhoneCode || dropMenuBorder) return 'border: solid 1px ' + theme.input.border.color;
+  ${({ hasError, isPhoneCode, isOpen, isActive }) => {
+    if (isOpen) return getSolidBSring(theme.color.secondary);
+    if (hasError) return getSolidBSring(theme.color.signal);
+    if (isPhoneCode || isActive) return getSolidBSring(theme.input.border.color);
   }};
   font-family: ${theme.font.bentonRegular.family};
   font-weight: ${theme.font.bentonRegular.weight};
@@ -215,4 +219,12 @@ export const DropdownIcon = styled(Icon)`
 
 export const DropdownLabel = styled.div`
   user-select: none;
+`;
+
+export const ErrorMessage = styled.span`
+  font-family: ${theme.font.bentonRegular.family};
+  font-weight: ${theme.font.bentonRegular.weight};
+  color: ${theme.color.signal};
+  font-size: 0.625rem;
+  margin-top: 0.5rem;
 `;

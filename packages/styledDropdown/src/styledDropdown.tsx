@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import Downshift from 'downshift';
 import { FlattenSimpleInterpolation } from 'styled-components';
 import { FormattedMessage, useIntl } from 'react-intl';
@@ -12,7 +12,8 @@ import {
   Item,
   Menu,
   DropdownContainer,
-  StyledDropdownWrapper
+  StyledDropdownWrapper,
+  ErrorMessage
 } from './newStyles';
 
 export type OptionType = {
@@ -29,10 +30,13 @@ export interface StyledDropdownProps {
   placeholder?: string;
   defaultItem?: OptionType;
   onChange?: (selectedItem: OptionType) => void;
+  openStateIcon?: JSX.Element;
+  closeStateIcon?: JSX.Element;
   selectStyles?: FlattenSimpleInterpolation;
   isActive?: boolean;
   hasError?: boolean;
-  hasBorder?: boolean;
+  className?: string;
+  errorMessage?: JSX.Element | string;
 }
 
 const StyledDropdown: React.FC<StyledDropdownProps> = ({
@@ -42,20 +46,40 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
   placeholder,
   defaultItem,
   onChange,
+  openStateIcon,
+  closeStateIcon,
   selectStyles,
   isActive,
   hasError = false,
-  hasBorder = false
+  className,
+  errorMessage
 }) => {
+  const [wasChanged, setWasChanged] = useState(false);
   const hasEditions =
     options && options.length && options.find(option => option.value.includes('_'));
   const isDisabled = options.length ? disabled : true;
   const { formatMessage } = useIntl();
   const isPhoneCode: boolean = useMemo(() => !!selectStyles, [selectStyles]);
 
+  const handleChange = (selectedItem: OptionType) => {
+    setWasChanged(true);
+    onChange?.(selectedItem);
+  };
+
+  const getOpenIcon = () => {
+    return openStateIcon ? openStateIcon : <Icon icon="up" color="oil" />;
+  };
+  const getCloseIcon = () => {
+    return closeStateIcon ? (
+      openStateIcon
+    ) : (
+      <Icon icon="down" color={isDisabled ? 'silver' : 'oil'} />
+    );
+  };
+
   return (
     <Downshift
-      onChange={onChange}
+      onChange={handleChange}
       itemToString={item => item && formatMessage({ id: item.label })}
       selectedItem={defaultItem} //TODO: fix console warning
       inputValue={
@@ -77,12 +101,12 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
         <StyledDropdownWrapper {...getRootProps()} selectStyles={selectStyles}>
           {label && <Label text={label} disabled={isDisabled} {...getLabelProps()} />}
           <DropdownContainer
+            className={className}
             isPhoneCode={isPhoneCode}
             isOpen={isOpen}
             disabled={isDisabled}
-            isActive={isActive}
+            isActive={isActive || wasChanged}
             hasError={hasError}
-            dropMenuBorder={hasBorder}
             {...getToggleButtonProps()}
           >
             {selectedItem && selectedItem.iconName && (
@@ -98,24 +122,22 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
               disabled={isDisabled}
             />
             <DropdownButton
+              className={className + '-button'}
               isPhoneCode={isPhoneCode}
-              isActive={isActive}
+              isActive={isActive || wasChanged}
               isOpen={isOpen}
               hasError={hasError}
             >
-              {isOpen ? (
-                <Icon icon="up" color="oil" />
-              ) : (
-                <Icon icon="down" color={isDisabled ? 'silver' : 'oil'} />
-              )}
+              {isOpen ? getOpenIcon() : getCloseIcon()}
             </DropdownButton>
           </DropdownContainer>
           <Menu
             {...getMenuProps()}
             isOpen={isOpen}
             hasError={hasError}
-            dropMenuBorder={hasBorder}
+            isActive={isActive || wasChanged}
             isPhoneCode={isPhoneCode}
+            className={className + '-menu'}
           >
             {isOpen &&
               options.map((item, index) => (
@@ -136,6 +158,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
                 </Item>
               ))}
           </Menu>
+          {hasError && errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
         </StyledDropdownWrapper>
       )}
     </Downshift>

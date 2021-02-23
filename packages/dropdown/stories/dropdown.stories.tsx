@@ -55,4 +55,21 @@ storiesOf('Dropdown', module)
         Switzerland: 'Switzerland'
       }
     });
+  })
+  .add('without preselected value', () => {
+    const props: DropdownProps = {
+      id: 'dropdown-1',
+      options,
+      onChange: (e: React.ChangeEvent<HTMLSelectElement>) => {
+        action('selected')(e.target.selectedIndex);
+      }
+    };
+
+    return renderWithThemeAndI18n(<Dropdown {...props} />, 'de', {
+      de: {
+        Germany: 'Germany',
+        Austria: 'Austria',
+        Switzerland: 'Switzerland'
+      }
+    });
   });

@@ -7,7 +7,7 @@ import {
   DropdownComponent,
   ErrorMessage,
   StyledLabel
-} from './dropdownStyles';
+} from './dropdownNewStyles';
 
 export type DropdownValue = number | string;
 

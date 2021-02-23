@@ -18,7 +18,7 @@
   "dependencies": {
     "@im-ui/icon": "^0.6.1",
     "@im-ui/label": "^1.0.2",
-    "@im-ui/theme": "^2.0.2",
+    "@im-ui/theme": "^2.0.3",
     "downshift": "^3.3.5"
   },
   "devDependencies": {

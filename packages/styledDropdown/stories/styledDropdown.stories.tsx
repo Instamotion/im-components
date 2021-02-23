@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
-import { AvailableIcons } from '@im-ui/icon';
-import StyledDropdown, { OptionType } from '../src';
+import Icon, { AvailableIcons } from '@im-ui/icon';
+import StyledDropdown, { DropdownCombiner, OptionType } from '../src';
 import { css, FlattenSimpleInterpolation } from 'styled-components';
 
 storiesOf('Styled dropdown', module)
@@ -30,11 +30,13 @@ storiesOf('Styled dropdown', module)
           disabled={boolean('disabled', false, 'other')}
           defaultItem={options[0]}
           onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+          openStateIcon={<Icon icon="phone" color="oil" />}
+          closeStateIcon={<Icon icon="phone" color="oil" />}
         />
       </div>
     );
   })
-  .add('Dropdown with border', () => {
+  .add('Dropdown with icons', () => {
     const iconOptions: Array<AvailableIcons> = ['file', 'envelope', 'condition'];
     const options: OptionType[] = [
       {
@@ -52,7 +54,6 @@ storiesOf('Styled dropdown', module)
       <div style={{ width: '280px' }}>
         <StyledDropdown
           options={options}
-          hasBorder
           label={text('label', 'Click on me!', 'other')}
           disabled={boolean('disabled', false, 'other')}
           defaultItem={options[0]}
@@ -75,6 +76,7 @@ storiesOf('Styled dropdown', module)
 
     return renderWithThemeAndI18n(
       <StyledDropdown
+        isActive={true}
         options={optionsWithoutIcons}
         defaultItem={optionsWithoutIcons[0]}
         placeholder={text('placeholder', 'Choose value')}
@@ -84,7 +86,7 @@ storiesOf('Styled dropdown', module)
       />
     );
   })
-  .add('Phone dropdown with error', () => {
+  .add('Phone dropdown', () => {
     const phoneCodes: OptionType[] = [
       {
         label: 'Deutschland, +49',
@@ -112,15 +114,48 @@ storiesOf('Styled dropdown', module)
     `;
 
     return renderWithThemeAndI18n(
-      <StyledDropdown
-        options={phoneCodes}
-        defaultItem={phoneCodes[0]}
-        selectStyles={selectStyles}
-        placeholder={text('placeholder', 'Choose value')}
-        onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
-        label={text('label', 'Click on me!', 'other')}
-        disabled={boolean('disabled', false, 'other')}
-        hasError={true}
-      />
+      <>
+        <StyledDropdown
+          options={phoneCodes}
+          defaultItem={phoneCodes[0]}
+          selectStyles={selectStyles}
+          placeholder={text('placeholder', 'Choose value')}
+          onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+          label={text('label', 'Click on me!', 'other')}
+          disabled={boolean('disabled', false, 'other')}
+          hasError={true}
+        />
+      </>
+    );
+  })
+  .add('Dropdown wrappers', () => {
+    const iconOptions: Array<AvailableIcons> = ['file', 'envelope', 'condition'];
+    const options: OptionType[] = [
+      {
+        value: text('value', '_default item', 'default item'),
+        label: text('label', 'default item', 'default item'),
+        iconName: select<AvailableIcons>('iconName', iconOptions, 'condition', 'default item')
+      },
+      {
+        value: text('value2', 'non default item', 'non default item'),
+        label: text('label2', 'non default item', 'non default item'),
+        iconName: select<AvailableIcons>('iconName2', iconOptions, 'condition', 'non default item')
+      }
+    ];
+    return renderWithThemeAndI18n(
+      <DropdownCombiner label={text('label', 'Click on me!', 'other')}>
+        <StyledDropdown
+          options={options}
+          disabled={boolean('disabled', false, 'other')}
+          defaultItem={options[0]}
+          onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+        />
+        <StyledDropdown
+          options={options}
+          disabled={boolean('disabled', false, 'other')}
+          defaultItem={options[1]}
+          onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+        />
+      </DropdownCombiner>
     );
   });

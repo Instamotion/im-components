@@ -1,1 +1,2 @@
-export { default, CheckboxProps, CheckboxInput } from './checkbox';
+export { default, CheckboxProps } from './checkbox';
+export { CheckboxInput } from './styles';
