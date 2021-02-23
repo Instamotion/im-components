@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Label from '@im-ui/label';
 import { IMTheme as theme } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
@@ -15,7 +15,6 @@ export const StyledInput = styled.div<StyledInputType>`
   align-items: center;
   background-color: ${theme.color.lighterGrey};
   border-radius: 6px;
-  border: none;
   font-family: ${theme.font.bentonRegular.family};
   font-weight: ${theme.font.bentonRegular.weight};
   font-size: ${theme.input.font.size}px;
@@ -26,13 +25,37 @@ export const StyledInput = styled.div<StyledInputType>`
   box-sizing: border-box;
   margin: 0;
 
+  ${props =>
+    props.value &&
+    !props.isPhone &&
+    `
+    border: 1px solid ${theme.input.border.color};
+  `}
+
+  &:focus-within {
+    ${props => {
+      if (props.isPhone) {
+        return css`
+          .phone-dropdown,
+          .phone-dropdown-menu,
+          .phone-dropdown-button {
+            border-color: ${theme.color.secondary} !important;
+          }
+        `;
+      } else {
+        return `border: 1px solid ${theme.color.secondary};`;
+      }
+    }}
+  }
+
   ${theme.mediaQueries.whenTablet} {
     height: 3.125rem;
     padding: 0.812rem 1.375rem;
   }
 
-  ${(props: { error?: boolean }) =>
+  ${props =>
     props.error &&
+    !props.isPhone &&
     `
     border: 1px solid ${theme.color.signal};
   `}
