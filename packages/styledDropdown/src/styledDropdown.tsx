@@ -36,6 +36,7 @@ export interface StyledDropdownProps {
   isActive?: boolean;
   required?: boolean;
   className?: string;
+  hasError?: boolean;
   errorMessage?: JSX.Element | string;
 }
 
@@ -52,9 +53,10 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
   isActive,
   className,
   errorMessage,
+  hasError = false,
   required = false
 }) => {
-  const hasError = !!errorMessage;
+  const validationError = !!errorMessage || hasError;
   const [wasChanged, setWasChanged] = useState(false);
   const hasEditions =
     options && options.length && options.find(option => option.value.includes('_'));
@@ -103,7 +105,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
           {label && (
             <Label
               text={label}
-              error={hasError}
+              error={validationError}
               required={required}
               disabled={isDisabled}
               {...getLabelProps()}
@@ -115,7 +117,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
             isOpen={isOpen}
             disabled={isDisabled}
             isActive={isActive || wasChanged}
-            hasError={hasError}
+            hasError={validationError}
             {...getToggleButtonProps()}
           >
             {selectedItem && selectedItem.iconName && (
@@ -135,7 +137,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
               isPhoneCode={isPhoneCode}
               isActive={isActive || wasChanged}
               isOpen={isOpen}
-              hasError={hasError}
+              hasError={validationError}
             >
               {isOpen ? getOpenIcon() : getCloseIcon()}
             </DropdownButton>
@@ -143,7 +145,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
           <Menu
             {...getMenuProps()}
             isOpen={isOpen}
-            hasError={hasError}
+            hasError={validationError}
             isActive={isActive || wasChanged}
             isPhoneCode={isPhoneCode}
             className={className + '-menu'}
@@ -167,7 +169,7 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
                 </Item>
               ))}
           </Menu>
-          {hasError && errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+          {validationError && errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
         </StyledDropdownWrapper>
       )}
     </Downshift>
