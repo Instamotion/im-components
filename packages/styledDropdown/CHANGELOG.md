@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.1.1
+
+### Patch Changes
+
+- db19aef: required add ty styled dd
+
 ## 1.1.0
 
 ### Minor Changes
