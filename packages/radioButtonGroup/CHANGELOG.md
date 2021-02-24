@@ -1,5 +1,13 @@
 # @im-ui/radio-button-group
 
+## 0.2.9
+
+### Patch Changes
+
+- fa92c31: small ui changes
+- Updated dependencies [fa92c31]
+  - @im-ui/radio-button@0.2.2
+
 ## 0.2.8
 
 ### Patch Changes

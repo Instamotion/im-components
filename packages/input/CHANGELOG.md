@@ -1,5 +1,13 @@
 # @im-ui/input
 
+## 2.5.2
+
+### Patch Changes
+
+- fa92c31: small ui changes
+- Updated dependencies [fa92c31]
+  - @im-ui/checkbox@2.1.1
+
 ## 2.5.1
 
 ### Patch Changes

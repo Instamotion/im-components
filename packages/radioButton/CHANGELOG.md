@@ -1,5 +1,11 @@
 # @im-ui/radio-button
 
+## 0.2.2
+
+### Patch Changes
+
+- fa92c31: small ui changes
+
 ## 0.2.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @im-ui/checkbox
 
+## 2.1.1
+
+### Patch Changes
+
+- fa92c31: small ui changes
+
 ## 2.1.0
 
 ### Minor Changes
