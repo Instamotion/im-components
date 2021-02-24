@@ -32,7 +32,7 @@ describe('RadioButtonGroup', () => {
       )
     );
 
-    expect(wrapper.find('div').children().length).toEqual(2);
+    expect(wrapper.find('label').length).toEqual(2);
   });
 
   it('switch selected element', () => {
