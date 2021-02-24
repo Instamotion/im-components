@@ -21,6 +21,7 @@ export const Checkmark = styled.label<{ error: boolean }>`
   margin-right: 1rem;
   border: 1px solid ${theme.color.whiteGrey};
   background-color: ${theme.color.white};
+  cursor: pointer;
 
   ::after {
     content: '';

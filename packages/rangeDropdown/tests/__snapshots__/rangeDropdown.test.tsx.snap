@@ -450,7 +450,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-kEYyzF",
                                             "isStatic": false,
-                                            "lastClassName": "jhGMoI",
+                                            "lastClassName": "JwIDp",
                                             "rules": Array [
                                               "
   position: relative;
@@ -477,6 +477,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   height: 3rem;
   box-sizing: border-box;
   margin: 0;
+  border: 1px solid ",
+                                              "#f3f3f3",
+                                              "
 
   ",
                                               [Function],
@@ -516,7 +519,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                       value="from"
                                     >
                                       <div
-                                        className="sc-kEYyzF jhGMoI"
+                                        className="sc-kEYyzF JwIDp"
                                         value="from"
                                       >
                                         <styled.input
@@ -1223,7 +1226,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-kEYyzF",
                                             "isStatic": false,
-                                            "lastClassName": "jhGMoI",
+                                            "lastClassName": "JwIDp",
                                             "rules": Array [
                                               "
   position: relative;
@@ -1250,6 +1253,9 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   height: 3rem;
   box-sizing: border-box;
   margin: 0;
+  border: 1px solid ",
+                                              "#f3f3f3",
+                                              "
 
   ",
                                               [Function],
@@ -1289,7 +1295,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                       value="to"
                                     >
                                       <div
-                                        className="sc-kEYyzF jhGMoI"
+                                        className="sc-kEYyzF JwIDp"
                                         value="to"
                                       >
                                         <styled.input
@@ -2142,7 +2148,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-kEYyzF",
                               "isStatic": false,
-                              "lastClassName": "jhGMoI",
+                              "lastClassName": "JwIDp",
                               "rules": Array [
                                 "
   position: relative;
@@ -2169,6 +2175,9 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
   height: 3rem;
   box-sizing: border-box;
   margin: 0;
+  border: 1px solid ",
+                                "#f3f3f3",
+                                "
 
   ",
                                 [Function],
@@ -2208,7 +2217,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                         value={1}
                       >
                         <div
-                          className="sc-kEYyzF jhGMoI"
+                          className="sc-kEYyzF JwIDp"
                           value={1}
                         >
                           <styled.input

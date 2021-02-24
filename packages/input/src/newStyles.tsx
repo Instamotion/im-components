@@ -24,6 +24,7 @@ export const StyledInput = styled.div<StyledInputType>`
   height: 3rem;
   box-sizing: border-box;
   margin: 0;
+  border: 1px solid ${theme.color.lighterGrey}
 
   ${props =>
     props.value &&

@@ -1,10 +1,7 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import RadioButton, { RadioButtonLabel } from '@im-ui/radio-button';
 import theme from '@im-ui/theme';
-import { css as utilsCSS } from '@im-ui/utils';
-
-const { px2rem } = utilsCSS;
 
 export interface RadioButtonsProps<T> {
   label: JSX.Element | string;
@@ -40,8 +37,8 @@ export const RadioButtonGroupContainer = styled.div<GroupProps>`
   ${RadioButtonLabel} {
     margin: ${props =>
       props.orientation === RadioButtonGroupOrientation.VERTICAL
-        ? `0 0 ${px2rem(20)} 0`
-        : `0 ${px2rem(20)} 0 0`};
+        ? `0 0 1.25rem 0`
+        : `0 1.25rem 0 0`};
   }
 
   > label:last-child {
