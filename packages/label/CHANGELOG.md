@@ -1,5 +1,11 @@
 # @im-ui/label
 
+## 1.0.3
+
+### Patch Changes
+
+- 2fbc723: label fonts
+
 ## 1.0.2
 
 ### Patch Changes
