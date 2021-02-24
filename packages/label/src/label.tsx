@@ -15,10 +15,11 @@ export interface LabelProps {
 }
 
 const LabelComponent = styled.label<LabelProps>`
-  font-family: ${theme.font.bentonMedium.family};
-  font-weight: ${theme.font.bentonMedium.weight};
+  font-family: ${theme.font.bentonBold.family};
+  font-weight: ${theme.font.bentonBold.weight};
+  line-height: 1.625rem;
   color: ${theme.color.typo}
-  font-size: 0.75rem;
+  font-size: 1rem;
   cursor: pointer;
   ${({ placement = 'stack' }) =>
     css`
