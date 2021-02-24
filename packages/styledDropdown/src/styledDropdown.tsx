@@ -34,7 +34,7 @@ export interface StyledDropdownProps {
   closeStateIcon?: JSX.Element;
   selectStyles?: FlattenSimpleInterpolation;
   isActive?: boolean;
-  hasError?: boolean;
+  required?: boolean;
   className?: string;
   errorMessage?: JSX.Element | string;
 }
@@ -50,10 +50,11 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
   closeStateIcon,
   selectStyles,
   isActive,
-  hasError = false,
   className,
-  errorMessage
+  errorMessage,
+  required = false
 }) => {
+  const hasError = !!errorMessage;
   const [wasChanged, setWasChanged] = useState(false);
   const hasEditions =
     options && options.length && options.find(option => option.value.includes('_'));
@@ -99,7 +100,15 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
         selectedItem
       }) => (
         <StyledDropdownWrapper {...getRootProps()} selectStyles={selectStyles}>
-          {label && <Label text={label} disabled={isDisabled} {...getLabelProps()} />}
+          {label && (
+            <Label
+              text={label}
+              error={hasError}
+              required={required}
+              disabled={isDisabled}
+              {...getLabelProps()}
+            />
+          )}
           <DropdownContainer
             className={className}
             isPhoneCode={isPhoneCode}
