@@ -86,7 +86,7 @@ storiesOf('Styled dropdown', module)
       />
     );
   })
-  .add('Phone dropdown', () => {
+  .add('Phone dropdown with error', () => {
     const phoneCodes: OptionType[] = [
       {
         label: 'Deutschland, +49',
@@ -122,8 +122,9 @@ storiesOf('Styled dropdown', module)
           placeholder={text('placeholder', 'Choose value')}
           onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
           label={text('label', 'Click on me!', 'other')}
+          required
           disabled={boolean('disabled', false, 'other')}
-          hasError={true}
+          errorMessage={<>sasd</>}
         />
       </>
     );
