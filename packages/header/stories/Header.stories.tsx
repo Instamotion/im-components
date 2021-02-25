@@ -10,6 +10,9 @@ import TagManager from 'react-gtm-module';
 const Content = styled.div`
   height: 3000px;
 `;
+const WrappContent = styled.div`
+  background-color: gray;
+`;
 
 const GtmWrapper: React.FC<{ children: ReactNode }> = ({ children }): JSX.Element => {
   useEffect(() => {
@@ -25,20 +28,20 @@ stories.add('Süddeutsche Zeitung', () => {
 });
 stories.add('new header light', () => {
   return renderWithThemeAndI18n(
-    <div>
+    <WrappContent>
       <Header type={HeaderTypes.new} favoritesCount={number('favorites', 23)} light />
       <Content />
-    </div>,
+    </WrappContent>,
     'de',
     messages
   );
 });
 stories.add('new header usual', () => {
   return renderWithThemeAndI18n(
-    <div>
+    <WrappContent>
       <Header type={HeaderTypes.new} />
       <Content />
-    </div>,
+    </WrappContent>,
     'de',
     messages
   );
