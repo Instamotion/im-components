@@ -11,7 +11,7 @@ describe('Header', () => {
   it('header rendered', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Header type={HeaderTypes.default} phoneNumber="089-411151-100" favoritesCount={0} />,
+        <Header type={HeaderTypes.old} phoneNumber="089-411151-100" favoritesCount={0} />,
         'de',
         messages
       )
@@ -21,7 +21,7 @@ describe('Header', () => {
   it('all logos rendered', () => {
     const wrapper = mount(
       renderWithThemeAndI18n(
-        <Header type={HeaderTypes.default} phoneNumber="089-411151-100" favoritesCount={0} />,
+        <Header type={HeaderTypes.old} phoneNumber="089-411151-100" favoritesCount={0} />,
         'de',
         messages
       )
