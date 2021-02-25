@@ -97,7 +97,7 @@ const Overlay = styled.div`
   display: block;
   position: fixed;
   box-sizing: border-box;
-  top: 3em;
+  top: 3.25em;
   bottom: 0;
   width: 100%;
   height: 100%;
@@ -109,7 +109,7 @@ const MobileItems = styled.div`
   flex-direction: column;
   font-weight: 400;
   position: fixed;
-  top: 3rem;
+  top: 3.25rem;
   bottom: 0;
   left: 0;
   width: 100%;

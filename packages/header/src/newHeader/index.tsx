@@ -54,7 +54,7 @@ export const Header: React.FC<NewHeaderProps> = props => {
   const addUtm = (url: string): string => (utmQuery ? url + utmQuery : url);
 
   return (
-    <HeaderWrapper isScrolled={!isScrolled && props.light}>
+    <HeaderWrapper isScrolled={!isScrolled && props.light && !isBurgerOpen}>
       <HeaderBar>
         <Burger clickedCb={toggleBurger} isOpen={isBurgerOpen} />
         <Link
@@ -158,30 +158,31 @@ export const HeaderWrapper = styled.header<ScrolledProp>`
   align-items: center;
   font-family: ${theme.font.bentonMedium.family};
   font-weight: ${theme.font.bentonMedium.weight};
-  height: 3em;
-  ${theme.mediaQueries.whenDesktop} {
-    height: 4em;
+  height: 3.25rem;
 
-    ${props =>
-      props.isScrolled &&
-      css`
-        background: transparent;
+  ${theme.mediaQueries.whenDesktop} {
+    height: 5rem;
+  }
+
+  ${props =>
+    props.isScrolled &&
+    css`
+      background: transparent;
+      color: ${theme.color.primary};
+      a {
         color: ${theme.color.primary};
-        a {
-          color: ${theme.color.primary};
-        }
-        svg {
+      }
+      svg {
+        fill: ${theme.color.primary};
+        color: ${theme.color.primary};
+      }
+      g {
+        > path:nth-child(2) {
           fill: ${theme.color.primary};
           color: ${theme.color.primary};
         }
-        g {
-          > path:nth-child(2) {
-            fill: ${theme.color.primary};
-            color: ${theme.color.primary};
-          }
-        }
-      `}
-  }
+      }
+    `}
 `;
 
 export const LogoWrapper = styled.div<ScrolledProp>`
