@@ -158,10 +158,10 @@ export const HeaderWrapper = styled.header<ScrolledProp>`
   align-items: center;
   font-family: ${theme.font.bentonMedium.family};
   font-weight: ${theme.font.bentonMedium.weight};
-  height: 3.25em;
+  height: 3.25rem;
 
   ${theme.mediaQueries.whenDesktop} {
-    height: 5em;
+    height: 5rem;
   }
 
   ${props =>
