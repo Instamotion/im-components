@@ -51,6 +51,8 @@ export const Header: React.FC<NewHeaderProps> = props => {
     setCount(props.favoritesCount);
   }, [props.favoritesCount]);
 
+  const addUtm = (url: string): string => (utmQuery ? url + utmQuery : url);
+
   return (
     <HeaderWrapper isScrolled={!isScrolled && props.light}>
       <HeaderBar>
@@ -66,24 +68,24 @@ export const Header: React.FC<NewHeaderProps> = props => {
               {!!count && <FavoritesCount>{count}</FavoritesCount>}
             </FormattedMessageWrapper>
           }
-          path={`/favoriten${utmQuery}`}
+          path={addUtm('/favoriten')}
         />
         <LogoWrapper>
           <BrandLogo
             color={theme.color.secondary}
             colorTwo={theme.color.white}
             brandingHolder="Instamotion"
-            link={`/${utmQuery}`}
+            link={addUtm('/')}
           />
         </LogoWrapper>
-        <NavWrapper>
+        <NavWrapper isScrolled={!isScrolled && props.light}>
           <Link
             text={
               <FormattedMessageWrapper>
                 <FormattedMessage id="header.menu.alle.autos" />
               </FormattedMessageWrapper>
             }
-            path={`/autos${utmQuery}`}
+            path={addUtm('/autos')}
           />
           <Link
             text={
@@ -91,7 +93,7 @@ export const Header: React.FC<NewHeaderProps> = props => {
                 <FormattedMessage id="header.menu.top_offers" />
               </FormattedMessageWrapper>
             }
-            path={`/angebote${utmQuery}`}
+            path={addUtm('/angebote')}
           />
           <Link
             text={
@@ -99,7 +101,7 @@ export const Header: React.FC<NewHeaderProps> = props => {
                 <FormattedMessage id="header.menu.how_it_works" />
               </FormattedMessageWrapper>
             }
-            path={`/deine-vorteile/so-funktionierts${utmQuery}`}
+            path={addUtm('/deine-vorteile/so-funktionierts')}
           />
           <Link
             className={`${count ? 'favorites' : ''}`}
@@ -111,11 +113,19 @@ export const Header: React.FC<NewHeaderProps> = props => {
                 <FormattedMessage id="header.menu.favorites" />
               </FormattedMessageWrapper>
             }
-            path={`/favoriten${utmQuery}`}
+            path={addUtm('/favoriten')}
           />
           <PhoneWrapper>
-            <Icon icon={faPhoneAlt} />
-            <Link text={phoneNumber} track="callFromHeader" path={`tel:${phoneNumber}`} />
+            <Link
+              text={
+                <FormattedMessageWrapper>
+                  <Icon icon={faPhoneAlt} color={theme.color.white} />
+                  {phoneNumber}
+                </FormattedMessageWrapper>
+              }
+              track="callFromHeader"
+              path={`tel:${phoneNumber}`}
+            />
           </PhoneWrapper>
         </NavWrapper>
       </HeaderBar>
@@ -151,27 +161,27 @@ export const HeaderWrapper = styled.header<ScrolledProp>`
   height: 3em;
   ${theme.mediaQueries.whenDesktop} {
     height: 4em;
-  }
 
-  ${props =>
-    props.isScrolled &&
-    css`
-      background: transparent;
-      color: ${theme.color.primary};
-      a {
+    ${props =>
+      props.isScrolled &&
+      css`
+        background: transparent;
         color: ${theme.color.primary};
-      }
-      svg {
-        fill: ${theme.color.primary};
-        color: ${theme.color.primary};
-      }
-      g {
-        > path:nth-child(2) {
+        a {
+          color: ${theme.color.primary};
+        }
+        svg {
           fill: ${theme.color.primary};
           color: ${theme.color.primary};
         }
-      }
-    `}
+        g {
+          > path:nth-child(2) {
+            fill: ${theme.color.primary};
+            color: ${theme.color.primary};
+          }
+        }
+      `}
+  }
 `;
 
 export const LogoWrapper = styled.div<ScrolledProp>`
@@ -202,6 +212,7 @@ const PhoneWrapper = styled.div<ScrolledProp>`
     display: flex;
     height: 100%;
   }
+
   ${Link} a {
     margin-right: 0;
     height: 100%;
@@ -229,12 +240,30 @@ const NavWrapper = styled.div<ScrolledProp>`
     justify-content: center;
     height: 100%;
     a {
+      text-transform: none;
       margin-right: 0;
-      ${props =>
-        props.isScrolled &&
-        css`
+      :hover {
+        svg {
+          fill: ${theme.color.primary};
           color: ${theme.color.primary};
-        `}
+        }
+      }
+
+      ${theme.mediaQueries.whenTablet} {
+        ${props =>
+          props.isScrolled &&
+          css`
+            color: ${theme.color.primary};
+            :hover {
+              color: ${theme.color.white};
+
+              svg {
+                fill: ${theme.color.white};
+                color: ${theme.color.white};
+              }
+            }
+          `}
+      }
     }
   }
   ${Link}:last-child > a {
@@ -251,12 +280,16 @@ const NavWrapper = styled.div<ScrolledProp>`
       display: flex;
       align-items: center;
     }
+    svg {
+      fill: ${theme.color.secondary};
+      color: ${theme.color.secondary};
+    }
     &:hover {
       a {
         color: ${theme.color.white};
       }
+
       background: ${theme.color.primary};
-      border: 1px solid ${theme.color.primary};
     }
   }
 `;

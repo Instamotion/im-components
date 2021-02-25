@@ -26,7 +26,7 @@ stories.add('Süddeutsche Zeitung', () => {
 stories.add('new header light', () => {
   return renderWithThemeAndI18n(
     <div>
-      <Header type={HeaderTypes.new} light />
+      <Header type={HeaderTypes.new} favoritesCount={number('favorites', 23)} light />
       <Content />
     </div>,
     'de',
