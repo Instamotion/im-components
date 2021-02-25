@@ -24,9 +24,14 @@ export type SZHeaderProps = {
   type: HeaderTypes.sz;
 };
 
-export type NewHeader = {
+export type NewHeaderProps = {
   className?: string;
   type: HeaderTypes.new;
+  utmQuery?: string;
+  light?: boolean;
+  isScrolled?: boolean;
+  favoritesCount?: number;
+  phoneNumber?: string;
 };
 
-export type HeaderProps = DefaultHeaderProps | SZHeaderProps | NewHeader;
+export type HeaderProps = DefaultHeaderProps | SZHeaderProps | NewHeaderProps;
