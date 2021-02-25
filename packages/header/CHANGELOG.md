@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 1.4.1
+
+### Patch Changes
+
+- dad533c: fix UI issues
+
 ## 1.4.0
 
 ### Minor Changes
