@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import OldFooter, { OldFooterProps } from './oldFooter/defaultFooter';
-import NewFooter, { NewFooterProps } from './newFooter/defaultFooter';
+import {
+  DefaultFooter as NewFooter,
+  DefaultFooterProps as NewFooterProps
+} from './newFooter/defaultFooter';
 import TrustfulSection from './oldFooter/trustfulSection';
 import SzFooterContent from './szFooter';
 import { trackingLogCustomEvent } from './helpers/tracking';
@@ -9,6 +12,7 @@ type ProductAbVariationType = boolean | string;
 
 type WrapProps = {
   className?: string;
+  utmQuery?: string;
   variant: FooterVariant;
   abTestFlagName?: string;
   abTestFlagValue?: ProductAbVariationType;
@@ -63,6 +67,7 @@ const Footer: React.FC<FooterProps> = props => {
     default:
       return (
         <NewFooter
+          utmQuery={props.utmQuery}
           googleToken={props.googleToken}
           facebookToken={props.facebookToken}
           className={props.className}

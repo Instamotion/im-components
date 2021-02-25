@@ -25,6 +25,10 @@ const FooterContainer = styled.div`
     'menu4'
     'menu5'
     'menu6';
+
+  & > :first-child {
+    grid-column: 1/3;
+  }
   ${theme.mediaQueries.whenMobileL} {
     grid-template-areas:
       'menu1 menu1'
@@ -42,7 +46,10 @@ const FooterContainer = styled.div`
       'menu1 menu1 . ..'
       'menu2 menu4 menu3 menu5'
       'menu2 menu4 menu3 menu5';
-    // 'seals seals creators creators creators';
+
+    & > :first-child {
+      grid-column: auto;
+    }
   }
   ${theme.mediaQueries.whenDesktopXL} {
     max-width: 67.25rem;

@@ -303,7 +303,7 @@ const socialMedia = [
   }
 ];
 
-export const renderMenu = (menuOptions?: MenuOptions): React.ReactNode => {
+export const renderMenu = (menuOptions?: MenuOptions, utmQuery?: string): React.ReactNode => {
   return menus.map(menu => (
     <MenuItem key={menu[0].id + menu.length}>
       {menu.map(menuItem => {
@@ -323,11 +323,12 @@ export const renderMenu = (menuOptions?: MenuOptions): React.ReactNode => {
               <MenuItemHeader key={menuItem.type + menuItem.link}>{menuItem.title}</MenuItemHeader>
             );
           case 'item':
+            const buildPath = utmQuery ? `${menuItem.link}/${utmQuery}` : menuItem.link;
             return (
               <MenuItemLink
                 key={menuItem.type + menuItem.link}
                 inline={!menuItem.title}
-                path={menuItem.link}
+                path={buildPath}
                 icon={renderIcon(menuItem.icon)}
                 title={menuItem.title}
                 blank={menuItem.blank}
@@ -343,13 +344,14 @@ export const renderMenu = (menuOptions?: MenuOptions): React.ReactNode => {
   ));
 };
 
-export interface NewFooterProps {
+export interface DefaultFooterProps {
   className?: string;
   onTop?: React.ReactElement;
   googleToken?: string;
   facebookToken?: string;
   menuOptions?: MenuOptions;
   showEnvkv?: boolean;
+  utmQuery?: string;
 }
 
 export interface MenuOptions {
@@ -358,7 +360,11 @@ export interface MenuOptions {
   showQualityLink?: boolean;
 }
 
-const DefaultFooter: React.FC<NewFooterProps> = ({ className, menuOptions }) => (
+export const DefaultFooter: React.FC<DefaultFooterProps> = ({
+  className,
+  menuOptions,
+  utmQuery
+}) => (
   <footer className={className}>
     <FooterContent>
       <BrandLogoWrapper>
@@ -369,7 +375,7 @@ const DefaultFooter: React.FC<NewFooterProps> = ({ className, menuOptions }) => 
           link="/"
         />
       </BrandLogoWrapper>
-      {renderMenu(menuOptions)}
+      {renderMenu(menuOptions, utmQuery)}
     </FooterContent>
     <FooterBottomSection>
       <MediaWrapper>
@@ -391,5 +397,3 @@ const DefaultFooter: React.FC<NewFooterProps> = ({ className, menuOptions }) => 
     </FooterBottomSection>
   </footer>
 );
-
-export default DefaultFooter;
