@@ -6,7 +6,9 @@ export interface MenuOptions {
 
 export enum HeaderTypes {
   default = 'default',
-  sz = 'sz'
+  sz = 'sz',
+  old = 'old',
+  new = 'new'
 }
 
 export type DefaultHeaderProps = {
@@ -14,7 +16,7 @@ export type DefaultHeaderProps = {
   favoritesCount?: number;
   menuOptions?: MenuOptions;
   logoUrl?: string;
-  type?: HeaderTypes.default;
+  type?: HeaderTypes.old;
 };
 
 export type SZHeaderProps = {
@@ -22,4 +24,14 @@ export type SZHeaderProps = {
   type: HeaderTypes.sz;
 };
 
-export type HeaderProps = DefaultHeaderProps | SZHeaderProps;
+export type NewHeaderProps = {
+  className?: string;
+  type: HeaderTypes.new;
+  utmQuery?: string;
+  light?: boolean;
+  isScrolled?: boolean;
+  favoritesCount?: number;
+  phoneNumber?: string;
+};
+
+export type HeaderProps = DefaultHeaderProps | SZHeaderProps | NewHeaderProps;

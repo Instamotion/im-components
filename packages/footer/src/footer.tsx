@@ -1,26 +1,19 @@
-import React, { useEffect, useMemo } from 'react';
-import CheckoutFooter from './checkoutFooter';
-import DefaultFooter, { MenuOptions } from './defaultFooter';
-import TrustfulSection from './trustfulSection';
+import React, { useEffect } from 'react';
+import OldFooter, { OldFooterProps } from './oldFooter/defaultFooter';
+import {
+  DefaultFooter as NewFooter,
+  DefaultFooterProps as NewFooterProps
+} from './newFooter/defaultFooter';
+import TrustfulSection from './oldFooter/trustfulSection';
 import SzFooterContent from './szFooter';
 import { trackingLogCustomEvent } from './helpers/tracking';
 
 type ProductAbVariationType = boolean | string;
 
-type FullFooterProps = {
+type WrapProps = {
   className?: string;
-  variant: FooterVariant.full;
-  googleToken: string;
-  facebookToken: string;
-  menuOptions?: MenuOptions;
-  showEnvkv?: boolean;
-  abTestFlagName?: string;
-  abTestFlagValue?: ProductAbVariationType;
-};
-
-type MinimalFooterProps = {
-  className?: string;
-  variant: FooterVariant.minimal;
+  utmQuery?: string;
+  variant: FooterVariant;
   abTestFlagName?: string;
   abTestFlagValue?: ProductAbVariationType;
 };
@@ -31,12 +24,12 @@ type SZFooterProps = {
 };
 
 export enum FooterVariant {
-  minimal = 'minimal',
-  full = 'full',
-  sz = 'sz'
+  old = 'old',
+  sz = 'sz',
+  new = 'new'
 }
 
-export type FooterProps = FullFooterProps | MinimalFooterProps | SZFooterProps;
+export type FooterProps = (OldFooterProps | SZFooterProps | NewFooterProps) & WrapProps;
 
 const Footer: React.FC<FooterProps> = props => {
   useEffect(() => {
@@ -55,15 +48,26 @@ const Footer: React.FC<FooterProps> = props => {
   }, []);
 
   switch (props.variant) {
-    case FooterVariant.minimal: {
-      return <CheckoutFooter className={props.className} />;
-    }
     case FooterVariant.sz: {
       return <SzFooterContent />;
     }
+    case FooterVariant.old: {
+      return (
+        <OldFooter
+          googleToken={props.googleToken}
+          facebookToken={props.facebookToken}
+          className={props.className}
+          onTop={<TrustfulSection />}
+          menuOptions={props.menuOptions}
+          showEnvkv={props.showEnvkv}
+        />
+      );
+    }
+    case FooterVariant.new:
     default:
       return (
-        <DefaultFooter
+        <NewFooter
+          utmQuery={props.utmQuery}
           googleToken={props.googleToken}
           facebookToken={props.facebookToken}
           className={props.className}

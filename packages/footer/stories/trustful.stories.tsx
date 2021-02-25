@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 
-import TrustfulLogo from '../src/trustfulSection/trustfulLogo';
-import TrustfulSection from '../src/trustfulSection';
+import TrustfulLogo from '../src/oldFooter/trustfulSection/trustfulLogo';
+import TrustfulSection from '../src/oldFooter/trustfulSection';
 
 storiesOf('Complex | Footer', module)
   .add('Trustful logo', () => {

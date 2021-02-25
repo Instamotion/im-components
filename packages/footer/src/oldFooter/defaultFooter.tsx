@@ -13,7 +13,7 @@ import Seals from './seals';
 import Copyrights from './copyrights';
 import AllianzLogo from './assets/AllianzLogo';
 import SocialContainer from './social/socialContainer';
-import { openBanner } from './helpers/cookieProBanner';
+import { openBanner } from '../helpers/cookieProBanner';
 
 export const renderIcon = (iconName?: string): React.ReactNode => {
   switch (iconName) {
@@ -338,11 +338,11 @@ export const renderMenu = (menuOptions?: MenuOptions): React.ReactNode => {
   ));
 };
 
-export interface DefaultFooterProps {
+export interface OldFooterProps {
   className?: string;
   onTop?: React.ReactElement;
-  googleToken: string;
-  facebookToken: string;
+  googleToken?: string;
+  facebookToken?: string;
   menuOptions?: MenuOptions;
   showEnvkv?: boolean;
 }
@@ -353,7 +353,7 @@ export interface MenuOptions {
   showQualityLink?: boolean;
 }
 
-class DefaultFooter extends React.Component<DefaultFooterProps> {
+class DefaultFooter extends React.Component<OldFooterProps> {
   componentDidMount() {}
 
   render() {
@@ -365,7 +365,10 @@ class DefaultFooter extends React.Component<DefaultFooterProps> {
         <TrustfulContainer>{onTop}</TrustfulContainer>
         <FooterContent>
           {renderMenu(menuOptions)}
-          <SocialContainer googleToken={googleToken} facebookToken={facebookToken} />
+          <SocialContainer
+            googleToken={googleToken as string}
+            facebookToken={facebookToken as string}
+          />
           <MailContainer>
             <MailContent
               title={<FormattedMessage id="default.footer.newsletter.title" />}
