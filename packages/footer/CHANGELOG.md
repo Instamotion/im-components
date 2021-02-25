@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.8.0
+
+### Minor Changes
+
+- df4eb4a: add new header/footer styles
+
 ## 2.7.1
 
 ### Patch Changes

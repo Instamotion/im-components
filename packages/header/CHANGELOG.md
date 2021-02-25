@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 1.4.0
+
+### Minor Changes
+
+- df4eb4a: add new header/footer styles
+
 ## 1.3.6
 
 ### Patch Changes
