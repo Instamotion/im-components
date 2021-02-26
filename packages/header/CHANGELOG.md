@@ -1,5 +1,11 @@
 # @im-ui/header
 
+## 1.4.3
+
+### Patch Changes
+
+- dfbb81c: styles fix
+
 ## 1.4.2
 
 ### Patch Changes
