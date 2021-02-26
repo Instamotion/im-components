@@ -122,6 +122,9 @@ const MobileItems = styled.div`
   ${Link} {
     padding: 1.25rem 0;
     border-bottom: 1px solid #e5e5e5;
+    a {
+      text-transform: inherit;
+    }
     a:hover:not([href]) {
       -webkit-tap-highlight-color: transparent;
       color: ${theme.color.white};

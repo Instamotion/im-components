@@ -109,8 +109,18 @@ export const Header: React.FC<NewHeaderProps> = props => {
             text={
               <FormattedMessageWrapper>
                 <Icon color={count ? theme.color.secondary : theme.color.white} icon={faHeart} />
-                {!!count && <FavoritesCount>{count}</FavoritesCount>}
-                <FormattedMessage id="header.menu.favorites" />
+                <FavoritesCount>
+                  {!!count && (
+                    <span>
+                      {count} <FormattedMessage id="header.menu.favorites" />
+                    </span>
+                  )}
+                  {!count && (
+                    <span>
+                      <FormattedMessage id="header.menu.favorites" />
+                    </span>
+                  )}
+                </FavoritesCount>
               </FormattedMessageWrapper>
             }
             path={addUtm('/favoriten')}
@@ -277,17 +287,29 @@ const NavWrapper = styled.div<ScrolledProp>`
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    margin-right: 2.5rem;
+
+    a {
+      margin-right: 0;
+    }
     span {
       display: flex;
       align-items: center;
     }
     svg {
+      padding-bottom: 3px;
       fill: ${theme.color.secondary};
       color: ${theme.color.secondary};
     }
     &:hover {
       a {
         color: ${theme.color.white};
+
+        svg {
+          fill: ${theme.color.secondary};
+          color: ${theme.color.secondary};
+        }
       }
 
       background: ${theme.color.primary};
@@ -312,7 +334,7 @@ const HeaderBar = styled.div`
   & .heartoutline {
     position: absolute;
     right: 2rem;
-    top: 0.875rem;
+    top: 1rem;
     ${theme.mediaQueries.whenDesktop} {
       display: none;
     }
@@ -351,7 +373,10 @@ const Icon = styled(FontAwesomeIcon)`
 const FavoritesCount = styled.span`
   font-size: 0.875rem;
   ${theme.mediaQueries.whenDesktop} {
-    margin-right: 0.5rem;
+    font-size: 0.77rem;
+    svg {
+      margin-right: 0.5rem;
+    }
   }
 `;
 
