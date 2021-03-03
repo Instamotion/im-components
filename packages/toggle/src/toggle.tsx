@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Label from '@im-ui/label';
-import theme from '@im-ui/theme';
+import { IMTheme as theme } from '@im-ui/theme';
 
 export type ClickChangeEvent =
   | React.ChangeEvent<HTMLInputElement>
@@ -96,8 +96,8 @@ export const ToggleInput = styled.input`
   }
 
   &:checked {
-    background-color: ${theme.color.downy};
-    border-color: ${theme.color.downy};
+    background-color: ${theme.color.secondary};
+    border-color: ${theme.color.secondary};
   }
 
   &:checked::after {
