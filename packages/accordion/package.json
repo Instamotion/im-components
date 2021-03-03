@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/accordion",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -33,7 +33,7 @@
     "styled-components": "^4.4.1"
   },
   "dependencies": {
-    "@im-ui/theme": "2.0.3",
+    "@im-ui/theme": "2.0.4",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@fortawesome/fontawesome-pro": "^5.13.0",
     "@fortawesome/pro-light-svg-icons": "^5.13.0"

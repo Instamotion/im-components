@@ -1,5 +1,13 @@
 # @im-ui/icon
 
+## 0.6.2
+
+### Patch Changes
+
+- c61b5b1: update styles
+- Updated dependencies [c61b5b1]
+  - @im-ui/theme@2.0.4
+
 ## 0.6.1
 
 ### Patch Changes

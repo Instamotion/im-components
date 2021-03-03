@@ -1,5 +1,11 @@
 # @im-ui/theme
 
+## 2.0.4
+
+### Patch Changes
+
+- c61b5b1: update styles
+
 ## 2.0.3
 
 ### Patch Changes

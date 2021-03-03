@@ -1,5 +1,13 @@
 # @im-ui/branding-logo
 
+## 0.3.4
+
+### Patch Changes
+
+- c61b5b1: update styles
+- Updated dependencies [c61b5b1]
+  - @im-ui/theme@2.0.4
+
 ## 0.3.3
 
 ### Patch Changes
