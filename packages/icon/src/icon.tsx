@@ -1445,9 +1445,6 @@ export const Icons = {
         fill="#054256"
       />
     </IconStyled>
-  ),
-  processZulassungOhneStress: (props: IconProps) => (
-    <IconStyled xmlns="http://www.w3.org/2000/svg" viewBox="" {...props}></IconStyled>
   )
 };
 
