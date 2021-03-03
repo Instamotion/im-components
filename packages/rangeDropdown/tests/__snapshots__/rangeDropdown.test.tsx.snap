@@ -699,7 +699,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-htoDjs",
                                                                 "isStatic": false,
-                                                                "lastClassName": "iYqjKj",
+                                                                "lastClassName": "hxnYON",
                                                                 "rules": Array [
                                                                   "
   display: inline-block;
@@ -729,7 +729,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                           xmlns="http://www.w3.org/2000/svg"
                                                         >
                                                           <svg
-                                                            className="sc-htoDjs iYqjKj sc-hSdWYo cwpLEy times-icon"
+                                                            className="sc-htoDjs hxnYON sc-hSdWYo cwpLEy times-icon"
                                                             color="brightGrey"
                                                             onClick={[Function]}
                                                             viewBox="0 0 320 512"
@@ -1475,7 +1475,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-htoDjs",
                                                                 "isStatic": false,
-                                                                "lastClassName": "iYqjKj",
+                                                                "lastClassName": "hxnYON",
                                                                 "rules": Array [
                                                                   "
   display: inline-block;
@@ -1505,7 +1505,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                                           xmlns="http://www.w3.org/2000/svg"
                                                         >
                                                           <svg
-                                                            className="sc-htoDjs iYqjKj sc-hSdWYo cwpLEy times-icon"
+                                                            className="sc-htoDjs hxnYON sc-hSdWYo cwpLEy times-icon"
                                                             color="brightGrey"
                                                             onClick={[Function]}
                                                             viewBox="0 0 320 512"
@@ -2397,7 +2397,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-htoDjs",
                                                   "isStatic": false,
-                                                  "lastClassName": "iYqjKj",
+                                                  "lastClassName": "hxnYON",
                                                   "rules": Array [
                                                     "
   display: inline-block;
@@ -2427,7 +2427,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <svg
-                                              className="sc-htoDjs iYqjKj sc-hSdWYo cwpLEy times-icon"
+                                              className="sc-htoDjs hxnYON sc-hSdWYo cwpLEy times-icon"
                                               color="brightGrey"
                                               onClick={[Function]}
                                               viewBox="0 0 320 512"

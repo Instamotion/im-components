@@ -79,6 +79,8 @@ const colors = {
   signal: '#FF0000'
 };
 
+export type IMAvailableColors = keyof typeof colors;
+
 export const imTheme: IMTheme = {
   name: 'default',
   fontSize: {
