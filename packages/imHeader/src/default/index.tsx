@@ -85,7 +85,7 @@ const Header: React.FC<DefaultHeaderProps> = ({
         </Link>
       </NavWrapper>
       <MobileIcons isSelected={!!count}>
-        <Link mode={linkMode} isSelected={!!count}>
+        <Link mode={linkMode} href={addUtm('/favoriten')} isSelected={!!count}>
           {count ? (
             <>
               <Icon icon="newHeart" color={theme.color.secondary} />
@@ -193,7 +193,6 @@ const Link = styled.a<{ mode: string; isSelected?: boolean }>`
   text-decoration: none;
   font-size: 0.875rem;
   border-radius: 50rem;
-  line-height: 1rem;
   ${({ mode, isSelected }) => {
     const state = isSelected ? 'select' : 'notSelect';
     const color = linkColours[mode].color[state];
