@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.3
+
+### Patch Changes
+
+- cca67c5: add icons
+
 ## 0.6.2
 
 ### Patch Changes
