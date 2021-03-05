@@ -1,16 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
-import Icon from '@im-ui/icon';
+import Icon, { AvailableIcons } from '@im-ui/icon';
 import MenuItemLink from './menu/menuItemLink';
 import MenuItem from './menu/menuItem';
 import MenuItemHeader from './menu/menuItemHeader';
 import FooterContent from './footerContainer';
 import Copyrights from './copyrights';
-import AllianzLogo from './assets/AllianzLogo';
 import { openBanner } from '../helpers/cookieProBanner';
-import { BrandLogo } from './BrandLogo';
+import BrandingLogo from '@im-ui/branding-logo';
 import { IMTheme as theme } from '@im-ui/theme';
+
+const StyledBrandingLogo = styled(BrandingLogo)`
+  > div {
+    width: auto;
+    height: auto;
+  }
+`;
 
 const FooterBottomSection = styled.div`
   max-width: 67.25rem;
@@ -43,10 +49,12 @@ const FooterBottomSection = styled.div`
 `;
 const MediaWrapper = styled.div`
   display: flex;
+  margin-top: 1.375rem;
   & a {
     margin-right: 1.75rem;
   }
   ${theme.mediaQueries.whenDesktopXL} {
+    margin-top: 0;
     margin-bottom: 3.3125rem;
   }
 `;
@@ -55,26 +63,10 @@ const BrandLogoWrapper = styled.div`
   margin-bottom: 3.5rem;
 `;
 
-export const renderIcon = (iconName?: string): React.ReactNode => {
-  switch (iconName) {
-    case 'PhoneSVG':
-      return <Icon icon="phone" color="oil" size="lg" />;
-    case 'EnvelopeSVG':
-      return <Icon icon="envelope" color="oil" size="lg" />;
-    case 'FacebookSVG':
-      return <Icon icon="facebook" color="oil" size="lg" />;
-    case 'LinkedSVG':
-      return <Icon icon="linkedIn" color="oil" size="lg" />;
-    case 'TwitterSVG':
-      return <Icon icon="twitter" color="oil" size="lg" />;
-    case 'YoutubeSVG':
-      return <Icon icon="youtube" color="oil" size="lg" />;
-    case 'AllianzLogo':
-      return <AllianzLogo />;
-    default:
-      return null;
-  }
-};
+const StyledIcon = styled(Icon)`
+  width: 1.5rem;
+  height: 1.5rem;
+`;
 
 const menus: {
   id: string;
@@ -276,29 +268,43 @@ const socialMedia = [
   {
     id: 'FacebookSVG',
     type: 'item',
-    icon: 'FacebookSVG',
+    icon: 'footerFacebook',
     link: 'https://www.facebook.com/Instamotion/',
     title: ''
   },
   {
-    id: 'TwitterSVG',
+    id: 'Instagram',
     type: 'item',
-    icon: 'TwitterSVG',
-    link: 'https://twitter.com/instamotion_com/',
+    icon: 'footerInstagram',
+    link: '',
     title: ''
   },
   {
     id: 'LinkedSVG',
     type: 'item',
-    icon: 'LinkedSVG',
+    icon: 'footerLinkedIn',
     link: 'https://www.linkedin.com/company/instamotion-retail-gmbh',
     title: ''
   },
   {
     id: 'YoutubeSVG',
     type: 'item',
-    icon: 'YoutubeSVG',
+    icon: 'footerYoutube',
     link: 'https://www.youtube.com/channel/UCpnVUOLAonPxTb-7n5KZ_Yw/',
+    title: ''
+  },
+  {
+    id: 'PhoneSVG',
+    type: 'item',
+    icon: 'footerPhone',
+    link: 'tel:089 2109 4444',
+    title: ''
+  },
+  {
+    id: 'EmailSVG',
+    type: 'item',
+    icon: 'footerEmail',
+    link: 'mailto:info@instamotion.com',
     title: ''
   }
 ];
@@ -329,7 +335,7 @@ export const renderMenu = (menuOptions?: MenuOptions, utmQuery?: string): React.
                 key={menuItem.type + menuItem.link}
                 inline={!menuItem.title}
                 path={buildPath}
-                icon={renderIcon(menuItem.icon)}
+                icon={menuItem.icon}
                 title={menuItem.title}
                 blank={menuItem.blank}
                 track={menuItem.track}
@@ -368,7 +374,7 @@ export const DefaultFooter: React.FC<DefaultFooterProps> = ({
   <footer className={className}>
     <FooterContent>
       <BrandLogoWrapper>
-        <BrandLogo
+        <BrandingLogo
           color={theme.color.secondary}
           colorTwo={theme.color.primary}
           brandingHolder="Instamotion"
@@ -381,17 +387,14 @@ export const DefaultFooter: React.FC<DefaultFooterProps> = ({
       <MediaWrapper>
         {socialMedia.map(menuItem => {
           return (
-            <MenuItemLink
-              key={menuItem.type + menuItem.link}
-              inline={!menuItem.title}
-              path={menuItem.link}
-              icon={renderIcon(menuItem.icon)}
-            />
+            <a href={menuItem.link} key={menuItem.type + menuItem.link}>
+              <StyledIcon icon={menuItem.icon as AvailableIcons} color={theme.color.oil} />
+            </a>
           );
         })}
       </MediaWrapper>
       <Copyrights
-        logo={<AllianzLogo />}
+        logo={<StyledBrandingLogo brandingHolder="Allianz" link="/" color={theme.color.oil} />}
         title={<FormattedMessage id="default.footer.copyrights.text" />}
       />
     </FooterBottomSection>

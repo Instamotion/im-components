@@ -40,9 +40,10 @@
   },
   "dependencies": {
     "@im-ui/carousel": "^0.1.7",
-    "@im-ui/icon": "^0.6.1",
+    "@im-ui/icon": "^0.6.3",
     "@im-ui/theme": "^2.0.0",
     "@im-ui/typography": "^0.2.8",
-    "@im-ui/utils": "^0.5.6"
+    "@im-ui/utils": "^0.5.6",
+    "@im-ui/branding-logo": "^0.3.4"
   }
 }
