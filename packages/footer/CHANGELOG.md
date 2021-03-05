@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.8.1
+
+### Patch Changes
+
+- fd54c6b: update icons for new footer
+
 ## 2.8.0
 
 ### Minor Changes
