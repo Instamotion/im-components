@@ -58,52 +58,54 @@ const Header: React.FC<DefaultHeaderProps> = ({
 
   return (
     <HeaderBar lighModeEnable={isLight}>
-      <LogoWrapper lighModeEnable={isLight}>
-        <BrandLogo
-          color={theme.color.secondary}
-          colorTwo={theme.color.white}
-          brandingHolder="Instamotion"
-          link={addUtm('/')}
-        />
-      </LogoWrapper>
-      <NavWrapper lighModeEnable={isLight}>
-        <Link mode={linkMode} href={addUtm('/autos')}>
-          <FormattedMessage id="header.menu.alle.autos" />
-        </Link>
-        <Link mode={linkMode} href={addUtm('/angebote')}>
-          <FormattedMessage id="header.menu.top_offers" />
-        </Link>
-        <Link mode={linkMode} href={addUtm('/deine-vorteile/so-funktionierts')}>
-          <FormattedMessage id="header.menu.how_it_works" />
-        </Link>
-        <Link mode={linkMode} href={addUtm('/favoriten')} isSelected={!!count}>
-          <StyledIcon icon="newHeart" color={count ? theme.color.secondary : 'inherit'} />
-          {!!count && count} <FormattedMessage id="header.menu.favorites" />
-        </Link>
-        <Link mode={linkMode} href={`tel:${phoneNumber}`}>
-          <StyledIcon icon="newPhone" /> <span>{phoneNumber}</span>
-        </Link>
-      </NavWrapper>
-      <MobileIcons isSelected={!!count}>
-        <Link mode={linkMode} href={addUtm('/favoriten')} isSelected={!!count}>
-          {count ? (
-            <>
-              <Icon icon="newHeart" color={theme.color.secondary} />
-              <span>{count}</span>
-            </>
-          ) : (
-            <Icon icon="newHeartEmpty" color={'transparent'} />
-          )}
-        </Link>
-        <Burger clickedCb={toggleBurger} isOpen={isBurgerOpen} />
-        <MobileMenu
-          isOpen={isBurgerOpen}
-          toggleBurger={toggleBurger}
-          phoneNumber={phoneNumber}
-          favoritesCount={count}
-          utmQuery={utmQuery}
-        />
-      </MobileIcons>
+      <HeaderContentWrapper>
+        <LogoWrapper lighModeEnable={isLight}>
+          <BrandLogo
+            color={theme.color.secondary}
+            colorTwo={theme.color.white}
+            brandingHolder="Instamotion"
+            link={addUtm('/')}
+          />
+        </LogoWrapper>
+        <NavWrapper lighModeEnable={isLight}>
+          <Link mode={linkMode} href={addUtm('/autos')}>
+            <FormattedMessage id="header.menu.alle.autos" />
+          </Link>
+          <Link mode={linkMode} href={addUtm('/angebote')}>
+            <FormattedMessage id="header.menu.top_offers" />
+          </Link>
+          <Link mode={linkMode} href={addUtm('/deine-vorteile/so-funktionierts')}>
+            <FormattedMessage id="header.menu.how_it_works" />
+          </Link>
+          <Link mode={linkMode} href={addUtm('/favoriten')} isSelected={!!count}>
+            <StyledIcon icon="newHeart" color={count ? theme.color.secondary : 'inherit'} />
+            {!!count && count} <FormattedMessage id="header.menu.favorites" />
+          </Link>
+          <Link mode={linkMode} href={`tel:${phoneNumber}`}>
+            <StyledIcon icon="newPhone" /> <span>{phoneNumber}</span>
+          </Link>
+        </NavWrapper>
+        <MobileIcons isSelected={!!count}>
+          <Link mode={linkMode} href={addUtm('/favoriten')} isSelected={!!count}>
+            {count ? (
+              <>
+                <Icon icon="newHeart" color={theme.color.secondary} />
+                <span>{count}</span>
+              </>
+            ) : (
+              <Icon icon="newHeartEmpty" color={'transparent'} />
+            )}
+          </Link>
+          <Burger clickedCb={toggleBurger} isOpen={isBurgerOpen} />
+          <MobileMenu
+            isOpen={isBurgerOpen}
+            toggleBurger={toggleBurger}
+            phoneNumber={phoneNumber}
+            favoritesCount={count}
+            utmQuery={utmQuery}
+          />
+        </MobileIcons>
+      </HeaderContentWrapper>
     </HeaderBar>
   );
 };
@@ -113,16 +115,15 @@ interface LightModeProp {
 }
 
 export const HeaderBar = styled.div<LightModeProp>`
+  display: flex;
+  justify-content: center;
   background: linear-gradient(95.66deg, #054256 5.21%, #6dc4cd 67.29%);
   color: ${theme.color.white};
-  display: flex;
   position: fixed;
   z-index: 9999;
   top: 0;
   right: 0;
   left: 0;
-  justify-content: space-between;
-  align-items: center;
   font-family: ${theme.font.bentonMedium.family};
   font-weight: ${theme.font.bentonMedium.weight};
   height: 3.25rem;
@@ -138,6 +139,14 @@ export const HeaderBar = styled.div<LightModeProp>`
     `
       background: transparent;
     `}
+`;
+
+export const HeaderContentWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  max-width: 80rem;
+  width: 100%;
+  margin: auto;
 `;
 
 export const LogoWrapper = styled.div<LightModeProp>`
