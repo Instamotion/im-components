@@ -1,5 +1,11 @@
 # @im-ui/im-header
 
+## 0.1.3
+
+### Patch Changes
+
+- 1db482e: sz header
+
 ## 0.1.2
 
 ### Patch Changes
