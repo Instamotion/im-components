@@ -1,5 +1,11 @@
 # @im-ui/branding-logo
 
+## 0.3.5
+
+### Patch Changes
+
+- 84b7d2e: Add Allianz logo without text
+
 ## 0.3.4
 
 ### Patch Changes

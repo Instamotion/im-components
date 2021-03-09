@@ -1,5 +1,13 @@
 # @im-ui/im-header
 
+## 0.1.1
+
+### Patch Changes
+
+- 48cd4e5: add styles fix
+- Updated dependencies [84b7d2e]
+  - @im-ui/branding-logo@0.3.5
+
 ## 0.1.0
 
 ### Minor Changes
