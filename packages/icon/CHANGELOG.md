@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.4
+
+### Patch Changes
+
+- 39f6578: Add Allianz logo
+
 ## 0.6.3
 
 ### Patch Changes
