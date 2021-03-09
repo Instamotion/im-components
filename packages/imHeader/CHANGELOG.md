@@ -1,5 +1,11 @@
 # @im-ui/im-header
 
+## 0.1.2
+
+### Patch Changes
+
+- 518f64c: add header tag
+
 ## 0.1.1
 
 ### Patch Changes
