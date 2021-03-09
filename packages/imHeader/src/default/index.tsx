@@ -67,7 +67,7 @@ const Header: React.FC<DefaultHeaderProps> = ({
             link={addUtm('/')}
           />
         </LogoWrapper>
-        <NavWrapper lighModeEnable={isLight}>
+        <NavWrapper>
           <Link mode={linkMode} href={addUtm('/autos')}>
             <FormattedMessage id="header.menu.alle.autos" />
           </Link>
@@ -202,6 +202,15 @@ const Link = styled.a<{ mode: string; isSelected?: boolean }>`
   text-decoration: none;
   font-size: 0.875rem;
   border-radius: 50rem;
+  margin: 0 1.25rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+
   ${({ mode, isSelected }) => {
     const state = isSelected ? 'select' : 'notSelect';
     const color = linkColours[mode].color[state];
@@ -243,19 +252,8 @@ const Link = styled.a<{ mode: string; isSelected?: boolean }>`
   `}
 `;
 
-const NavWrapper = styled.div<LightModeProp>`
+const NavWrapper = styled.div`
   display: none;
-
-  ${Link} {
-    margin: 0 1.25rem;
-
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-  }
 
   ${theme.mediaQueries.whenDesktop} {
     display: flex;
