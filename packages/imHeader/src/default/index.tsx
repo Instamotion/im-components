@@ -114,7 +114,7 @@ interface LightModeProp {
   lighModeEnable?: boolean;
 }
 
-export const HeaderBar = styled.div<LightModeProp>`
+export const HeaderBar = styled.header<LightModeProp>`
   display: flex;
   justify-content: center;
   background: linear-gradient(95.66deg, #054256 5.21%, #6dc4cd 67.29%);
