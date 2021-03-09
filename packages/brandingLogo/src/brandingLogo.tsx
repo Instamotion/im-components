@@ -136,7 +136,7 @@ const coloredLogo = (
   .cls-1 {
     fill: ${color};
   }
-  ,
+
   .cls-2 {
     fill: ${colorTwo};
   }
