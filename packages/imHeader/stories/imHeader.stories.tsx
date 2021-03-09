@@ -36,3 +36,13 @@ stories.add('new header usual', () => {
     messages
   );
 });
+stories.add('SZ header', () => {
+  return renderWithThemeAndI18n(
+    <WrappContent>
+      <ImHeader type={HeaderTypes.sz} />
+      <Content />
+    </WrappContent>,
+    'de',
+    messages
+  );
+});
