@@ -1,5 +1,11 @@
 # @im-ui/toggle
 
+## 1.0.3
+
+### Patch Changes
+
+- c2d504a: Patch bump
+
 ## 1.0.2
 
 ### Patch Changes
