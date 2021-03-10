@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.5
+
+### Patch Changes
+
+- 07eb401: Fix ViewBox in AllianzLogo
+
 ## 0.6.4
 
 ### Patch Changes
