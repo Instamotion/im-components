@@ -276,7 +276,7 @@ const socialMedia = [
     id: 'Instagram',
     type: 'item',
     icon: 'footerInstagram',
-    link: '',
+    link: 'https://www.instagram.com/instamotion_com/',
     title: ''
   },
   {
