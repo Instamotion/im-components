@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.8.2
+
+### Patch Changes
+
+- 6c44950: fix instagramm link
+
 ## 2.8.1
 
 ### Patch Changes
