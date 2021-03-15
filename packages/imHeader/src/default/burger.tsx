@@ -38,13 +38,11 @@ export const BurgerComponent: React.FC<Props> = ({ className, isOpen, clickedCb 
 
 const visibleCss = `
   transform: rotate(-180deg);
-  opacity: 1;
-  visibility: visible;
+  display: block;
 `;
 
 const MenuIconWrapper = styled.div<{ isVisible: boolean }>`
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   transition: visibility 0.2s ease, opacity 0.2s ease, transform 0.3s ease,
     -webkit-transform 0.3s ease;
   ${props => (props.isVisible ? visibleCss : null)}
@@ -64,10 +62,10 @@ const BurgerWrapp = styled.div`
     }
   }
   ${MenuIconWrapper}:last-child {
-    position: absolute;
-    top: -0.35rem;
+    position: relative;
+    top: -0.1rem;
     svg {
-      height: 1.5rem;
+      height: 1.3rem;
     }
   }
 `;
