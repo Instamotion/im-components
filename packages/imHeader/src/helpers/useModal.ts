@@ -5,7 +5,7 @@ const useModal = (): [boolean, () => void] => {
 
   function toggle() {
     document.documentElement.style.overflow = !open ? 'hidden' : 'auto';
-    setOpen(!open);
+    setOpen(open => !open);
   }
 
   return [open, toggle];
