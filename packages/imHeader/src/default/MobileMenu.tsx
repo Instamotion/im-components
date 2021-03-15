@@ -32,7 +32,6 @@ export const MobileMenu: React.FC<Props> = ({
   };
   return (
     <MobileMenuWrapper className={className} isOpen={isOpen}>
-      <Overlay onClick={toggleBurger}></Overlay>
       <MobileItems>
         <Link href={addUtm('/autos')}>
           <FormattedMessage id="header.menu.alle.autos" />
@@ -130,10 +129,6 @@ const MobileInfo = styled.div`
 `;
 
 const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
-  ${Overlay} {
-    ${props => (props.isOpen ? 'opacity: 0.5;' : 'opacity: 0;')};
-    left: ${props => (props.isOpen ? '0' : '-100%')};
-  }
   ${MobileItems} {
     transition: transform 0.3s ease;
     overflow-y: ${props => (props.isOpen ? 'scroll' : 'hidden')};
