@@ -1,5 +1,11 @@
 # @im-ui/im-header
 
+## 0.1.4
+
+### Patch Changes
+
+- dcecc4a: Update close button position
+
 ## 0.1.3
 
 ### Patch Changes
