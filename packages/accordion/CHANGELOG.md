@@ -1,5 +1,11 @@
 # @im-ui/accordion
 
+## 0.3.0
+
+### Minor Changes
+
+- 853c8ca: Changed styles according to design
+
 ## 0.2.6
 
 ### Patch Changes
