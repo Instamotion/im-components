@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import theme from '@im-ui/theme';
+import { IMTheme as theme } from '@im-ui/theme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/pro-light-svg-icons';
 
@@ -35,8 +35,7 @@ export const AccordionItemWrapper = styled.div`
   }
   margin-bottom: 1rem;
   box-sizing: border-box;
-  border-top: 0.0625rem solid ${theme.color.downy};
-  border-bottom: 0.0625rem solid ${theme.color.downy};
+  border-bottom: 0.0625rem solid ${theme.color.typo};
 `;
 
 export const AccordionHeader = styled.div`
