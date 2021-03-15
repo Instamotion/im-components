@@ -35,7 +35,7 @@ export const AccordionItemWrapper = styled.div`
   }
   margin-bottom: 1rem;
   box-sizing: border-box;
-  border-bottom: 0.0625rem solid ${theme.color.typo};
+  border-bottom: 0.0625rem solid #e6e6e6;
 `;
 
 export const AccordionHeader = styled.div`
