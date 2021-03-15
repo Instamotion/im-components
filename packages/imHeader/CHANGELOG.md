@@ -1,5 +1,11 @@
 # @im-ui/im-header
 
+## 0.1.5
+
+### Patch Changes
+
+- acf5c37: If new state depends on the previous state, this should be used: setCheck(prevCheck => !prevCheck);
+
 ## 0.1.4
 
 ### Patch Changes
