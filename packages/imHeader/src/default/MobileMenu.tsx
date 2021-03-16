@@ -31,8 +31,8 @@ export const MobileMenu: React.FC<Props> = ({
     });
   };
   return (
-    <MobileMenuWrapper className={className} isOpen={isOpen}>
-      <MobileItems>
+    <MobileMenuWrapper className={className}>
+      <MobileItems isOpen={isOpen}>
         <Link href={addUtm('/autos')}>
           <FormattedMessage id="header.menu.alle.autos" />
         </Link>
@@ -65,19 +65,7 @@ export const MobileMenu: React.FC<Props> = ({
   );
 };
 
-const Overlay = styled.div`
-  display: block;
-  position: fixed;
-  box-sizing: border-box;
-  top: 3.25em;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: ${theme.color.oil};
-  transition: visibility 0.2s ease-in-out, opacity 0.5s ease-in-out;
-`;
-
-const MobileItems = styled.div`
+const MobileItems = styled.div<{ isOpen: boolean }>`
   display: flex;
   flex-direction: column;
   font-weight: 400;
@@ -92,6 +80,10 @@ const MobileItems = styled.div`
   padding: 2rem;
   background-color: ${theme.color.white};
   text-align: left;
+
+  transition: transform 0.3s ease;
+  overflow-y: ${props => (props.isOpen ? 'scroll' : 'hidden')};
+  transform: ${props => (props.isOpen ? 'translateX(0)' : 'translateX(100%)')};
 `;
 
 export const Favorites = styled.span`
@@ -128,12 +120,7 @@ const MobileInfo = styled.div`
   }
 `;
 
-const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
-  ${MobileItems} {
-    transition: transform 0.3s ease;
-    overflow-y: ${props => (props.isOpen ? 'scroll' : 'hidden')};
-    transform: ${props => (props.isOpen ? 'translateX(0)' : 'translateX(100%)')};
-  }
+const MobileMenuWrapper = styled.div`
   ${theme.mediaQueries.whenDesktop} {
     display: none;
   }
