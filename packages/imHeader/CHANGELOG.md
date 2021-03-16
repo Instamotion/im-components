@@ -1,5 +1,11 @@
 # @im-ui/im-header
 
+## 0.1.6
+
+### Patch Changes
+
+- 300e82c: Move transition to MobileItems
+
 ## 0.1.5
 
 ### Patch Changes
