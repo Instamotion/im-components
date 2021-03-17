@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.6
+
+### Patch Changes
+
+- d68f30a: Add new star icon
+
 ## 0.6.5
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @im-ui/im-header
 
+## 0.1.7
+
+### Patch Changes
+
+- ad03c52: Update icons version
+- Updated dependencies [d68f30a]
+  - @im-ui/icon@0.6.6
+
 ## 0.1.6
 
 ### Patch Changes
