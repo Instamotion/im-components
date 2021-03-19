@@ -1,5 +1,11 @@
 # @im-ui/im-header
 
+## 0.1.8
+
+### Patch Changes
+
+- 0de2813: Remove unnecessary classes
+
 ## 0.1.7
 
 ### Patch Changes
