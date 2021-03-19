@@ -211,7 +211,7 @@ const menus: {
       id: 'default.footer.cancellation',
       type: 'item',
       title: <FormattedMessage id="default.footer.cancellation" />,
-      link: '/rechtliches/agb#Widerruf'
+      link: '/rechtliches/agb#35'
     }
   ],
   [
