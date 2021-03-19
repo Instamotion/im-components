@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.8.3
+
+### Patch Changes
+
+- e6932cd: Update anchor link
+
 ## 2.8.2
 
 ### Patch Changes
