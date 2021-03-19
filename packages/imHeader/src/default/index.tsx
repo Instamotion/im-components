@@ -151,8 +151,8 @@ export const HeaderContentWrapper = styled.div`
 
 export const LogoWrapper = styled.div<LightModeProp>`
   display: block;
-  ${BrandLogo} svg,
-  ${BrandLogo} div {
+  svg,
+  div {
     width: 8.75rem;
     height: 1.875rem;
 
