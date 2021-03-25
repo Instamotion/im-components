@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.7
+
+### Patch Changes
+
+- 881dbbb: added new icon for picture
+
 ## 0.6.6
 
 ### Patch Changes
