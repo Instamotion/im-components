@@ -41,7 +41,9 @@ export const MobileMenu: React.FC<Props> = ({
         </Link>
         <Link href={addUtm('/favoriten')}>
           <FormattedMessage id="header.menu.favorites" />
-          {favoritesCount && <Favorites>({favoritesCount})</Favorites>}
+          {favoritesCount !== undefined && favoritesCount > 0 && (
+            <Favorites>({favoritesCount})</Favorites>
+          )}
         </Link>
         <Link href={addUtm('/deine-vorteile/so-funktionierts')}>
           <FormattedMessage id="header.menu.how_it_works" />

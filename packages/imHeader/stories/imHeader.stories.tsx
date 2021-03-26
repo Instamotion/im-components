@@ -26,6 +26,16 @@ stories.add('new header light', () => {
     messages
   );
 });
+stories.add('new header light - 0 fav', () => {
+  return renderWithThemeAndI18n(
+    <WrappContent>
+      <ImHeader type={HeaderTypes.new} favoritesCount={number('favorites', 0)} light />
+      <Content />
+    </WrappContent>,
+    'de',
+    messages
+  );
+});
 stories.add('new header usual', () => {
   return renderWithThemeAndI18n(
     <WrappContent>
