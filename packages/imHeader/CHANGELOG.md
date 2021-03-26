@@ -1,5 +1,11 @@
 # @im-ui/im-header
 
+## 0.1.9
+
+### Patch Changes
+
+- d7f6219: Remove number of Favorites when it's 0
+
 ## 0.1.8
 
 ### Patch Changes
