@@ -3,10 +3,13 @@ import styled from 'styled-components';
 import { IMTheme as theme } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 
-const HighlightsWrap = styled.div`
+const HighlightsWrap = styled.div<{ displayWithShadow?: boolean }>`
   width: 100%;
   display: inline-block;
-  background: linear-gradient(180deg, ${theme.color.lightGreyBG} 50%, ${theme.color.white} 50%);
+  background: ${props =>
+    !props.displayWithShadow
+      ? `linear-gradient(180deg,${theme.color.lightGreyBG} 50%,${theme.color.white} 50%)`
+      : ''};
 
   ${theme.mediaQueries.whenDesktop} {
     display: block;
@@ -33,24 +36,28 @@ const HighlightsContainer = styled.div`
   ${theme.mediaQueries.whenDesktop} {
     margin: auto;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0.4rem 1rem;
   }
 
   ${theme.mediaQueries.whenDesktopL} {
-    padding: 0 3rem;
+    padding: 0.4rem 3rem;
   }
 `;
 
-const Highlight = styled.div`
+const Highlight = styled.div<{ displayWithShadow?: boolean }>`
   margin: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 1px solid ${theme.color.oil};
+  background-color: ${props =>
+    props.displayWithShadow ? theme.color.lightGreyBG : theme.color.white};
+  border: 1px solid
+    ${props => (props.displayWithShadow ? theme.color.lightGreyBG : theme.color.oil)};
   border-radius: 0.5rem;
   padding: 0.3rem 1rem 0.4rem;
-  background-color: ${theme.color.white};
+  box-shadow: ${props =>
+    props.displayWithShadow ? '0.05rem 0.1rem 0.3rem rgb(0 0 0 / 5%)' : 'none'};
 
   ${theme.mediaQueries.whenDesktop} {
     margin: 0;
@@ -149,7 +156,7 @@ const renderHighlights = (offer: HighlightsProps) => {
     .slice(0, 6);
 
   return highlights.map(elem => (
-    <Highlight key={elem.type}>
+    <Highlight key={elem.type} displayWithShadow={offer.displayWithShadow}>
       <IconWrap>{elem.icon}</IconWrap>
       <Text>{elem.value}</Text>
     </Highlight>
@@ -166,6 +173,7 @@ export interface HighlightsProps {
   power: number;
   consumption: number;
   preOwners: number;
+  displayWithShadow?: boolean;
 }
 
 const HighlightsComponent: React.FC<HighlightsProps> = ({
@@ -177,9 +185,10 @@ const HighlightsComponent: React.FC<HighlightsProps> = ({
   registrationDate,
   power,
   consumption,
-  preOwners
+  preOwners,
+  displayWithShadow
 }) => (
-  <HighlightsWrap>
+  <HighlightsWrap displayWithShadow={displayWithShadow}>
     <HighlightsContainer>
       {renderHighlights({
         order,
@@ -190,7 +199,8 @@ const HighlightsComponent: React.FC<HighlightsProps> = ({
         registrationDate,
         power,
         consumption,
-        preOwners
+        preOwners,
+        displayWithShadow
       })}
     </HighlightsContainer>
   </HighlightsWrap>
