@@ -128,7 +128,6 @@ const renderHighlights = (offer: HighlightsProps) => {
       value: getGearTitle(offer.gear),
       icon: <Icon icon="gear" color="primary" />
     },
-
     registrationDate: {
       value: isNew ? 'Neuwagen' : `EZ ${offer.registrationDate}`,
       icon: <Icon icon="date" color="primary" />
@@ -148,11 +147,13 @@ const renderHighlights = (offer: HighlightsProps) => {
   };
 
   const highlights = offer.order
-    .map((elem: string) => ({
-      type: elem,
-      icon: options[elem].icon,
-      value: options[elem].value
-    }))
+    .map((elem: string) => {
+      return {
+        type: elem,
+        icon: options[elem as keyof typeof options].icon,
+        value: options[elem as keyof typeof options].value
+      };
+    })
     .slice(0, 6);
 
   return highlights.map(elem => (
