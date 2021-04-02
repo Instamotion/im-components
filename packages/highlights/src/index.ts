@@ -1,1 +1,1 @@
-export { default, HighlightsProps } from './highlights';
+export { default, HighlightsProps, GEAR, FUEL } from './highlights';
