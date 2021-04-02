@@ -75,7 +75,7 @@ const Text = styled.span`
   overflow: hidden;
 `;
 
-const GEAR = {
+export const GEAR = {
   AUTOMATIC_GEAR: 'Automatik',
   SEMIAUTOMATIC_GEAR: 'Halbautomatik',
   MANUAL_GEAR: 'Schaltgetriebe'
@@ -85,7 +85,7 @@ const getGearTitle = (type: keyof typeof GEAR) => {
   return type && GEAR[type] ? GEAR[type] : GEAR.MANUAL_GEAR;
 };
 
-const FUEL = {
+export const FUEL = {
   CNG: 'Erdgas (CNG)',
   DIESEL: 'Diesel',
   ELECTRICITY: 'Elektro',
