@@ -15,10 +15,6 @@ const HighlightsWrap = styled.div<{ displayWithShadow?: boolean }>`
     display: block;
     box-sizing: border-box;
   }
-
-  ${theme.mediaQueries.whenDesktopL} {
-    box-sizing: content-box;
-  }
 `;
 
 const HighlightsContainer = styled.div`
