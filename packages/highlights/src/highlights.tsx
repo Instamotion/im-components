@@ -17,26 +17,19 @@ const HighlightsWrap = styled.div<{ displayWithShadow?: boolean }>`
   }
 `;
 
-const HighlightsContainer = styled.div`
+const HighlightsContainer = styled.div<{ displayWithShadow?: boolean }>`
   display: flex;
   flex-direction: row;
-  max-width: 67.25rem;
+  max-width: ${props => (props.displayWithShadow ? `` : '67.25rem')};
   font-size: 1.125rem;
-  overflow-y: scroll;
-  margin-right: 1rem;
-
-  ${theme.mediaQueries.whenTablet} {
-    overflow-y: hidden;
-  }
+  overflow-x: scroll;
 
   ${theme.mediaQueries.whenDesktop} {
+    overflow-x: hidden;
     margin: auto;
-    justify-content: space-between;
-    padding: 0.4rem 1rem;
-  }
-
-  ${theme.mediaQueries.whenDesktopL} {
-    padding: 0.4rem 3rem;
+    justify-content: ${props => (props.displayWithShadow ? `flex-start` : 'space-between')};
+    padding: ${props => (props.displayWithShadow ? `0rem` : '0.4rem 3rem')};
+    flex-wrap: ${props => (props.displayWithShadow ? `wrap` : 'no-wrap')};
   }
 `;
 
@@ -56,7 +49,7 @@ const Highlight = styled.div<{ displayWithShadow?: boolean }>`
     props.displayWithShadow ? '0.05rem 0.1rem 0.3rem rgb(0 0 0 / 5%)' : 'none'};
 
   ${theme.mediaQueries.whenDesktop} {
-    margin: 0;
+    margin: ${props => (props.displayWithShadow ? 0.8 : 0)} 'rem';
   }
 `;
 
@@ -64,13 +57,15 @@ const IconWrap = styled.span`
   margin-right: 0.875rem;
 `;
 
-const Text = styled.span`
+const Text = styled.span<{ displayWithShadow?: boolean }>`
   margin-top: 0.2rem;
   font-size: 0.75rem;
   line-height: 1rem;
   color: ${theme.color.oil};
-  font-family: ${theme.font.bentonMedium.family};
-  font-weight: ${theme.font.bentonMedium.weight};
+  font-family: ${props =>
+    props.displayWithShadow ? theme.font.bentonRegular.family : theme.font.bentonMedium.family};
+  font-weight: ${props =>
+    props.displayWithShadow ? theme.font.bentonRegular.weight : theme.font.bentonMedium.weight};
   white-space: nowrap;
   overflow: hidden;
 `;
@@ -155,7 +150,7 @@ const renderHighlights = (offer: HighlightsProps) => {
   return highlights.map(elem => (
     <Highlight key={elem.type} displayWithShadow={offer.displayWithShadow}>
       <IconWrap>{elem.icon}</IconWrap>
-      <Text>{elem.value}</Text>
+      <Text displayWithShadow={offer.displayWithShadow}>{elem.value}</Text>
     </Highlight>
   ));
 };
@@ -186,7 +181,7 @@ const HighlightsComponent: React.FC<HighlightsProps> = ({
   displayWithShadow
 }) => (
   <HighlightsWrap displayWithShadow={displayWithShadow}>
-    <HighlightsContainer>
+    <HighlightsContainer displayWithShadow={displayWithShadow}>
       {renderHighlights({
         order,
         condition,
