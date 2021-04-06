@@ -75,6 +75,8 @@ const colors = {
   secondaryBlack: '#333333',
   // typo
   typo: '#575756',
+  // text
+  typography: '#363636',
   // error colour
   signal: '#FF0000'
 };
