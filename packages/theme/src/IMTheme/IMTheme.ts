@@ -73,6 +73,8 @@ const colors = {
   lightBackground: '#F9F9F9',
   // secondaryBlack
   secondaryBlack: '#333333',
+  // text
+  typography: '#363636',
   // typo
   typo: '#575756',
   // error colour

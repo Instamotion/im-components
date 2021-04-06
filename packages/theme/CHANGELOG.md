@@ -1,5 +1,11 @@
 # @im-ui/theme
 
+## 2.0.5
+
+### Patch Changes
+
+- bc2a4df: add colour
+
 ## 2.0.4
 
 ### Patch Changes
