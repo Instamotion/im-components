@@ -80,6 +80,7 @@ export type ColorLibrary = {
   lightGreyBG: HexColor;
   lightBackground: HexColor;
   secondaryBlack: HexColor;
+  typography: HexColor;
   typo: HexColor;
   signal: HexColor;
 };
