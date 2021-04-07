@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.8.4
+
+### Patch Changes
+
+- 629b694: Change id for experiment schema
+
 ## 2.8.3
 
 ### Patch Changes
