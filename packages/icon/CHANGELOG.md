@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.8
+
+### Patch Changes
+
+- 8d3a8d0: Add checkout icons
+
 ## 0.6.7
 
 ### Patch Changes
