@@ -16,7 +16,7 @@
   "license": "MIT",
   "files": ["dist"],
   "dependencies": {
-    "@im-ui/icon": "^0.6.1",
+    "@im-ui/icon": "^0.6.7",
     "@im-ui/label": "^1.0.2",
     "@im-ui/theme": "^2.0.3",
     "downshift": "^3.3.5"

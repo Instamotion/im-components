@@ -12,13 +12,6 @@ export const ErrorMessage = styled.span`
 
 export const StyledLabel = styled(Label)``;
 
-export const DropdownComponent = styled.span`
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  margin-bottom: 2rem;
-`;
-
 export const AngleIcon = styled.span`
   display: block;
   position: absolute;
@@ -52,7 +45,12 @@ export const DropdownContainer = styled.div`
   position: relative;
 `;
 
-export const DropdownSelect = styled.select<{ error: boolean; value: any; defaultValue: any }>`
+export const DropdownSelect = styled.select<{
+  error: boolean;
+  value: any;
+  defaultValue: any;
+  isFloatable?: boolean;
+}>`
   appearance: none;
   box-sizing: border-box;
   cursor: pointer;
@@ -62,12 +60,20 @@ export const DropdownSelect = styled.select<{ error: boolean; value: any; defaul
   font-size: 1rem;
   background-color: ${theme.color.lighterGrey};
   color: ${theme.color.typo};
-  border: none;
+  border: ${theme.input.border.width}px solid transparent;
   width: 100%;
   height: 3rem;
   padding: 0.687rem 0.625rem;
   margin: 0;
   outline: 0;
+
+  ${({ isFloatable }) =>
+    isFloatable &&
+    `
+      color: ${theme.color.typography};
+      background-color: ${theme.color.white};
+      border: ${theme.input.border.width}px solid ${theme.color.typography};
+    `}
 
   ${theme.mediaQueries.whenTablet} {
     height: 3.125rem;
@@ -86,5 +92,35 @@ export const DropdownSelect = styled.select<{ error: boolean; value: any; defaul
 
   &.touched:invalid {
     border: ${theme.input.border.width}px solid ${theme.color.signal};
+  }
+`;
+
+export const DropdownComponent = styled.span`
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  ${StyledLabel} {
+    order: 1;
+  }
+  ${DropdownContainer} {
+    order: 2;
+  }
+  ${ErrorMessage} {
+    order: 3;
+  }
+
+  label.floated {
+    transform: translate(1rem, -0.6rem) scale(0.75);
+    opacity: 1;
+    display: inline;
+
+    .asterisk {
+      display: inline;
+    }
+    .float-bg {
+      display: block;
+    }
   }
 `;
