@@ -1,18 +1,19 @@
 /* istanbul ignore file */
 import React from 'react';
-import { InputComponentWrapper } from '.';
 import {
+  InputComponentWrapper,
   StyledLabel,
   StyledInput,
   InputElements,
   IconWrapper,
   StyledIcon,
   ErrorMessage
-} from './newStyles';
+} from './styles';
 
 export type ValueType = string | number;
 
 export type InputProps = {
+  isFloatLabel?: boolean;
   label?: string | JSX.Element;
   errorMessage?: JSX.Element;
   value?: ValueType;
@@ -22,6 +23,7 @@ export type InputProps = {
   placeholder?: string | JSX.Element;
   maxLength?: number;
   minLength?: number;
+  disabled?: boolean;
   onChange?: (value: ValueType) => void;
   onCountryCodeChange?: (value: ValueType) => void;
   onBlur?: (value: ValueType) => void;
@@ -35,6 +37,7 @@ export type InputProps = {
 };
 
 export const Input: React.FC<InputProps> = ({
+  isFloatLabel = false,
   label,
   errorMessage,
   width,
@@ -50,6 +53,7 @@ export const Input: React.FC<InputProps> = ({
   onReset,
   resetValue,
   required,
+  disabled,
   inputProps = {},
   className
 }) => {
@@ -76,13 +80,16 @@ export const Input: React.FC<InputProps> = ({
       enterDown?.(e);
     }
   };
-
+  console.log(inputProps);
   return (
     <InputComponentWrapper style={{ width }} className={className}>
-      {label && (
-        <StyledLabel error={!!errorMessage} required={required} text={label} htmlFor={id} />
-      )}
-      <StyledInput value={value} error={!!errorMessage} isPhone={false}>
+      <StyledInput
+        disabled={disabled}
+        isFloatLabel={isFloatLabel}
+        value={value}
+        error={!!errorMessage}
+        isPhone={false}
+      >
         <InputElements
           {...inputProps}
           id={id}
@@ -94,6 +101,7 @@ export const Input: React.FC<InputProps> = ({
           value={value}
           maxLength={maxLength}
           minLength={minLength}
+          disabled={disabled}
         />
 
         <IconWrapper>
@@ -107,6 +115,16 @@ export const Input: React.FC<InputProps> = ({
           )}
         </IconWrapper>
       </StyledInput>
+      {label && (
+        <StyledLabel
+          haveValue={!!value}
+          isFloatLabel={isFloatLabel}
+          error={!!errorMessage}
+          required={required}
+          text={label}
+          htmlFor={id}
+        />
+      )}
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </InputComponentWrapper>
   );

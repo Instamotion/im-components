@@ -3,7 +3,6 @@ import Downshift from 'downshift';
 import { FlattenSimpleInterpolation } from 'styled-components';
 import { FormattedMessage, useIntl } from 'react-intl';
 import Icon, { AvailableIcons } from '@im-ui/icon';
-import Label from '@im-ui/label';
 import {
   DropdownButton,
   DropdownIcon,
@@ -13,8 +12,9 @@ import {
   Menu,
   DropdownContainer,
   StyledDropdownWrapper,
-  ErrorMessage
-} from './newStyles';
+  ErrorMessage,
+  StyledLabel
+} from './styles';
 
 export type OptionType = {
   value: string;
@@ -38,6 +38,7 @@ export interface StyledDropdownProps {
   className?: string;
   hasError?: boolean;
   errorMessage?: JSX.Element | string;
+  isFloatLabel?: boolean;
 }
 
 const StyledDropdown: React.FC<StyledDropdownProps> = ({
@@ -54,13 +55,14 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
   className,
   errorMessage,
   hasError = false,
-  required = false
+  required = false,
+  isFloatLabel = false
 }) => {
   const validationError = !!errorMessage || hasError;
   const [wasChanged, setWasChanged] = useState(false);
   const hasEditions =
     options && options.length && options.find(option => option.value.includes('_'));
-  const isDisabled = options.length ? disabled : true;
+  const isDisabled = !options.length || disabled;
   const { formatMessage } = useIntl();
   const isPhoneCode: boolean = useMemo(() => !!selectStyles, [selectStyles]);
 
@@ -100,78 +102,85 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
         getInputProps,
         isOpen,
         selectedItem
-      }) => (
-        <StyledDropdownWrapper {...getRootProps()} selectStyles={selectStyles}>
-          {label && (
-            <Label
-              text={label}
-              error={validationError}
-              required={required}
+      }) => {
+        const opened = isOpen && !isDisabled;
+        return (
+          <StyledDropdownWrapper {...getRootProps()} isOpen={opened} selectStyles={selectStyles}>
+            <DropdownContainer
+              className={className}
+              isPhoneCode={isPhoneCode}
+              isOpen={opened}
               disabled={isDisabled}
-              {...getLabelProps()}
-            />
-          )}
-          <DropdownContainer
-            className={className}
-            isPhoneCode={isPhoneCode}
-            isOpen={isOpen}
-            disabled={isDisabled}
-            isActive={isActive || wasChanged}
-            hasError={validationError}
-            {...getToggleButtonProps()}
-          >
-            {selectedItem && selectedItem.iconName && (
-              <DropdownIcon
-                icon={selectedItem.iconName}
-                color={isDisabled ? 'silver' : 'niagara'}
+              isActive={isActive || wasChanged}
+              hasError={validationError}
+              haveValue={!!selectedItem}
+              {...getToggleButtonProps()}
+            >
+              {selectedItem && selectedItem.iconName && (
+                <DropdownIcon
+                  icon={selectedItem.iconName}
+                  color={isDisabled ? 'silver' : 'niagara'}
+                />
+              )}
+              <DropdownInput
+                {...getInputProps()}
+                readOnly
+                placeholder={placeholder && !isFloatLabel && formatMessage({ id: placeholder })}
+                disabled={isDisabled}
+              />
+              <DropdownButton
+                className={className + '-button'}
+                isPhoneCode={isPhoneCode}
+                isActive={isActive || wasChanged}
+                isOpen={opened}
+                hasError={validationError}
+              >
+                {opened ? getOpenIcon() : getCloseIcon()}
+              </DropdownButton>
+            </DropdownContainer>
+            <Menu
+              {...getMenuProps()}
+              isOpen={opened}
+              hasError={validationError}
+              isActive={isActive || wasChanged}
+              isPhoneCode={isPhoneCode}
+              className={className + '-menu'}
+              isFloatLabel={isFloatLabel}
+            >
+              {opened &&
+                options.map((item, index) => (
+                  <Item
+                    isSelected={selectedItem && selectedItem.value === item.value}
+                    hasEditions={hasEditions}
+                    item={item}
+                    {...getItemProps({
+                      key: item.value + item.label,
+                      item,
+                      index
+                    })}
+                  >
+                    {item.iconName && <DropdownIcon icon={item.iconName} color="niagara" />}
+                    <DropdownLabel>
+                      <FormattedMessage id={item.label} />
+                    </DropdownLabel>
+                  </Item>
+                ))}
+            </Menu>
+            {label && (
+              <StyledLabel
+                haveValue={!!selectedItem}
+                isFloatLabel={isFloatLabel}
+                text={label}
+                error={validationError}
+                required={required}
+                disabled={isDisabled}
+                {...getLabelProps()}
               />
             )}
-            <DropdownInput
-              {...getInputProps()}
-              readOnly
-              placeholder={placeholder && formatMessage({ id: placeholder })}
-              disabled={isDisabled}
-            />
-            <DropdownButton
-              className={className + '-button'}
-              isPhoneCode={isPhoneCode}
-              isActive={isActive || wasChanged}
-              isOpen={isOpen}
-              hasError={validationError}
-            >
-              {isOpen ? getOpenIcon() : getCloseIcon()}
-            </DropdownButton>
-          </DropdownContainer>
-          <Menu
-            {...getMenuProps()}
-            isOpen={isOpen}
-            hasError={validationError}
-            isActive={isActive || wasChanged}
-            isPhoneCode={isPhoneCode}
-            className={className + '-menu'}
-          >
-            {isOpen &&
-              options.map((item, index) => (
-                <Item
-                  isSelected={selectedItem && selectedItem.value === item.value}
-                  hasEditions={hasEditions}
-                  item={item}
-                  {...getItemProps({
-                    key: item.value,
-                    item,
-                    index
-                  })}
-                >
-                  {item.iconName && <DropdownIcon icon={item.iconName} color="niagara" />}
-                  <DropdownLabel>
-                    <FormattedMessage id={item.label} />
-                  </DropdownLabel>
-                </Item>
-              ))}
-          </Menu>
-          {validationError && errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
-        </StyledDropdownWrapper>
-      )}
+            {validationError && errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+          </StyledDropdownWrapper>
+        );
+      }}
     </Downshift>
   );
 };
