@@ -2,9 +2,10 @@ import React from 'react';
 import Label from '@im-ui/label';
 import styled from 'styled-components';
 import { IMTheme as theme } from '@im-ui/theme';
-import { DropdownContainer, StyledDropdownWrapper, ErrorMessage } from './newStyles';
+import { DropdownContainer, Menu, ErrorMessage } from './styles';
 
 export type DropdownCombinerProps = {
+  isFloatLabel?: boolean;
   label?: JSX.Element | string;
   errorMessage?: JSX.Element;
   required?: boolean;
@@ -17,13 +18,7 @@ const CombinerBody = styled.div<{ withBorder: boolean; error: boolean; isTwoEl: 
   width: 100%;
   position: relative;
 
-  ${StyledDropdownWrapper} {
-    position: unset;
-  }
-
   ${DropdownContainer} {
-    position: unset;
-    border: none;
     border-radius: 0;
 
     ${props => {
@@ -56,6 +51,27 @@ const CombinerBody = styled.div<{ withBorder: boolean; error: boolean; isTwoEl: 
     border-bottom-right-radius: 6px;
     border-left: none;
   }
+
+  ${Menu} {
+    top: 3.1rem;
+  }
+`;
+
+const StyledLabel = styled(Label)``;
+
+const WrapBody = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${StyledLabel} {
+    order: 1;
+  }
+  ${CombinerBody} {
+    order: 2;
+  }
+  ${ErrorMessage} {
+    order: 3;
+  }
 `;
 
 export const DropdownCombiner: React.FC<DropdownCombinerProps> = ({
@@ -63,16 +79,24 @@ export const DropdownCombiner: React.FC<DropdownCombinerProps> = ({
   errorMessage,
   required,
   children,
-  withBorder = true
+  withBorder = true,
+  isFloatLabel = false
 }) => {
   const isTwoElExist = (children && Array.isArray(children) && children.length === 2) as boolean;
   return (
-    <div>
-      {label && <Label error={!!errorMessage} text={label} required={required} />}
+    <WrapBody>
       <CombinerBody error={!!errorMessage} withBorder={!!withBorder} isTwoEl={isTwoElExist}>
         {children}
       </CombinerBody>
+      {label && (
+        <StyledLabel
+          isFloatLabel={isFloatLabel}
+          error={!!errorMessage}
+          text={label}
+          required={required}
+        />
+      )}
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
-    </div>
+    </WrapBody>
   );
 };
