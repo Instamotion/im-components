@@ -1,5 +1,11 @@
 # @im-ui/highlights
 
+## 0.0.4
+
+### Patch Changes
+
+- 03b57a9: Update design
+
 ## 0.0.3
 
 ### Patch Changes
