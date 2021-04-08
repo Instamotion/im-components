@@ -847,7 +847,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-htoDjs",
                                     "isStatic": false,
-                                    "lastClassName": "bIcHsp",
+                                    "lastClassName": "kESFyj",
                                     "rules": Array [
                                       "
   display: flex;
@@ -872,7 +872,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   }
 
   label.floated {
-    transform: translate(1rem, -0.6rem) scale(.75);
+    transform: translate(1rem, -0.6rem) scale(0.75);
     opacity: 1;
     display: inline;
 
@@ -904,7 +904,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                               }
                             >
                               <span
-                                className="sc-htoDjs bIcHsp"
+                                className="sc-htoDjs kESFyj"
                                 style={
                                   Object {
                                     "width": undefined,
@@ -1702,7 +1702,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-htoDjs",
                                     "isStatic": false,
-                                    "lastClassName": "bIcHsp",
+                                    "lastClassName": "kESFyj",
                                     "rules": Array [
                                       "
   display: flex;
@@ -1727,7 +1727,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   }
 
   label.floated {
-    transform: translate(1rem, -0.6rem) scale(.75);
+    transform: translate(1rem, -0.6rem) scale(0.75);
     opacity: 1;
     display: inline;
 
@@ -1759,7 +1759,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                               }
                             >
                               <span
-                                className="sc-htoDjs bIcHsp"
+                                className="sc-htoDjs kESFyj"
                                 style={
                                   Object {
                                     "width": undefined,
@@ -2691,7 +2691,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-htoDjs",
                       "isStatic": false,
-                      "lastClassName": "bIcHsp",
+                      "lastClassName": "kESFyj",
                       "rules": Array [
                         "
   display: flex;
@@ -2716,7 +2716,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
   }
 
   label.floated {
-    transform: translate(1rem, -0.6rem) scale(.75);
+    transform: translate(1rem, -0.6rem) scale(0.75);
     opacity: 1;
     display: inline;
 
@@ -2748,7 +2748,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                 }
               >
                 <span
-                  className="sc-htoDjs bIcHsp"
+                  className="sc-htoDjs kESFyj"
                   style={
                     Object {
                       "width": undefined,
