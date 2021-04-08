@@ -2,15 +2,16 @@
 import React, { useEffect, useMemo, useState, useRef } from 'react';
 import { css, FlattenSimpleInterpolation } from 'styled-components';
 import Dropdown, { OptionType } from '@im-ui/styled-dropdown';
-import { InputComponentWrapper, InputProps } from '.';
+import { InputProps } from '.';
 import {
+  InputComponentWrapper,
   StyledLabel,
   StyledInput,
   InputElements,
   IconWrapper,
   StyledIcon,
   ErrorMessage
-} from './newStyles';
+} from './styles';
 
 const phoneCodes: OptionType[] = [
   {
@@ -51,6 +52,7 @@ const selectStyles: FlattenSimpleInterpolation = css`
 `;
 
 export const Input: React.FC<InputProps> = ({
+  isFloatLabel,
   label,
   errorMessage,
   width,
@@ -129,7 +131,13 @@ export const Input: React.FC<InputProps> = ({
   return (
     <InputComponentWrapper style={{ width }} className={className}>
       {label && (
-        <StyledLabel error={!!errorMessage} required={required} text={label} htmlFor={id} />
+        <StyledLabel
+          isFloatLabel={isFloatLabel}
+          error={!!errorMessage}
+          required={required}
+          text={label}
+          htmlFor={id}
+        />
       )}
       <StyledInput value={value} error={!!errorMessage} isPhone>
         <Dropdown

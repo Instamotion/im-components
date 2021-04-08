@@ -9,10 +9,16 @@ import { IntlProvider } from 'react-intl';
 import Checkbox from '@im-ui/checkbox';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
 import Input, { InputProps, checkPhoneValidation } from '../src';
+import styled from 'styled-components';
 // import translations from '../../i18n';
 
 // addLocaleData([...deLocaleData, ...enLocaleData]);
 // const messages = translations.de;
+
+const TitleEl = styled.div`
+  margin-bottom: 16px;
+  font-weight: bold;
+`;
 
 type ValueType = string | number;
 
@@ -33,8 +39,27 @@ const PhoneInputDemo = (): React.ReactElement => {
 
   return renderWithThemeAndI18n(
     <div style={{ fontSize: '16px' }}>
-      <Input {...props} />
       <div>{validation ? 'match to validation' : 'not match to validation'}</div>
+
+      <TitleEl>Phone input</TitleEl>
+      <Input {...props} />
+
+      <TitleEl>Phone input with error</TitleEl>
+      <Input {...props} errorMessage={<>some error</>} />
+
+      <TitleEl>Phone input disabled</TitleEl>
+      <Input {...props} disabled={true} />
+
+      {/* to test if not affected
+      
+      <TitleEl>Phone input float label</TitleEl>
+      <Input isFloatLabel={true} {...props} />
+
+      <TitleEl>Phone input float label with error</TitleEl>
+      <Input isFloatLabel={true} {...props} errorMessage={<>some error</>} />
+
+      <TitleEl>Phone input float label disabled</TitleEl>
+      <Input disabled={true} {...props} /> */}
     </div>
   );
 };
@@ -57,7 +82,43 @@ const TextInputDemo = (): React.ReactElement => {
 
   return renderWithThemeAndI18n(
     <div style={{ fontSize: '16px' }}>
+      <TitleEl>input label</TitleEl>
       <Input {...props} />
+
+      <TitleEl>input label with error</TitleEl>
+      <Input {...props} errorMessage={<>some error</>} />
+
+      <TitleEl>input label disabled</TitleEl>
+      <Input {...props} value={null} disabled={true} />
+    </div>
+  );
+};
+
+const TextInputFloatDemo = (): React.ReactElement => {
+  const [value, setValue] = React.useState(text('value', 'Hello'));
+
+  const props: InputProps = {
+    isFloatLabel: true,
+    value,
+    type: 'text',
+    label: 'Hello',
+    required: true,
+    onChange: (val: ValueType) => {
+      setValue(val as string);
+      action('Input changed')(val);
+    }
+  };
+
+  return renderWithThemeAndI18n(
+    <div style={{ fontSize: '16px' }}>
+      <TitleEl>input float label</TitleEl>
+      <Input {...props} />
+
+      <TitleEl>input float label with error</TitleEl>
+      <Input {...props} errorMessage={<>some error</>} />
+
+      <TitleEl>input float label disabled</TitleEl>
+      <Input {...props} value={null} disabled={true} />
     </div>
   );
 };
@@ -237,6 +298,7 @@ const InputCustomValidation = (): React.ReactElement => {
 storiesOf('Input', module)
   .add('phone', () => <PhoneInputDemo />)
   .add('text', () => <TextInputDemo />)
+  .add('text floatLabel', () => <TextInputFloatDemo />)
   .add('validation', () => <TextInputValidationDemo />)
   .add('overwrite html5 validation', () => <InputCustomValidation />)
   .add('range', () => <RangeInputDemo />);

@@ -1,63 +1,111 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Label from '@im-ui/label';
-import theme from '@im-ui/theme';
+import { IMTheme as theme } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 
 type StyledInputType = {
   value: string | number;
   error?: boolean;
   isPhone?: boolean;
+  isFloatLabel?: boolean;
+  disabled?: boolean;
 };
+
+export const StyledLabel = styled(Label)``;
 
 export const StyledInput = styled.div<StyledInputType>`
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: 4px;
-  border: ${({ isPhone }) =>
-    !isPhone ? `${theme.input.border.width}px solid ${theme.input.border.color}` : 'none'};
-  font-family: ${theme.font.sans.family};
+  background-color: ${theme.color.lighterGrey};
+  border-radius: 6px;
+  font-family: ${theme.font.bentonRegular.family};
+  font-weight: ${theme.font.bentonRegular.weight};
   font-size: ${theme.input.font.size}px;
-  padding: 1rem 0.5rem;
-  color: ${theme.color.oil};
+  padding: 0.687rem 0.625rem;
+  color: ${theme.color.typography};
   width: 100%;
-  height: 2.5rem;
+  height: 3rem;
   box-sizing: border-box;
   margin: 0;
+  border: 1px solid ${theme.color.lighterGrey}
 
-  &[type='text'],
-  &[type='password'],
-  &[type='email'],
-  &[type='tel'],
-  &[type='url'],
-  &[type='number'] {
-    :focus {
-      border-color: ${theme.color.downy};
+  ${props =>
+    !props.isPhone &&
+    !props.disabled &&
+    !props.error &&
+    `
+    :hover {
+      border: 1px solid ${theme.color.typography};
+    }
+  `}
+
+  ${props =>
+    props.disabled &&
+    `
+    background-color: ${theme.color.lighterGrey};
+  `}
+
+  ${props =>
+    props.value &&
+    !props.isPhone &&
+    `
+    border: 1px solid ${theme.input.border.color};
+    background-color: ${theme.color.white};
+  `}
+
+  &:focus-within {
+    ${props => {
+      if (props.isPhone) {
+        return css`
+          .phone-dropdown,
+          .phone-dropdown-menu,
+          .phone-dropdown-button {
+            border-color: ${theme.color.secondary} !important;
+          }
+        `;
+      } else {
+        return props.isFloatLabel
+          ? `border: 1px solid ${theme.color.secondary};
+            background-color: ${theme.color.white};`
+          : `border: 1px solid ${theme.color.secondary};`;
+      }
+    }}
+      + label.floated {
+        transform: translate(1rem, -0.6rem) scale(.75);
+        color: ${theme.color.secondary} !important;
+        opacity: 1;
+        display: inline;
+
+        .asterisk {
+          display: inline;
+          color: ${theme.color.secondary};
+        }
+        .float-bg {
+          display: block;
+        }
+      }
     }
   }
 
   ${theme.mediaQueries.whenTablet} {
-    padding: ${({ isPhone }) => (isPhone ? '.25rem 0' : '.25rem 1rem')};
+    height: 3.125rem;
+    padding: 0.812rem 1.375rem;
   }
 
   ${props =>
-    props.value &&
-    `
-    border-color: ${theme.color.downy};
-  `}
-
-  ${(props: { error?: boolean }) =>
-    props.error &&
-    `
-    border-color: ${theme.color.flamePea};
-  `}
-`;
-
-export const InputComponentWrapper = styled.div`
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  margin-bottom: 1rem;
+    (props.error &&
+      !props.isPhone &&
+      `
+    border: 1px solid ${theme.color.signal};
+  `) ||
+    (props.error &&
+      props.isPhone &&
+      `
+    .phone-dropdown {
+      border: 1px solid ${theme.color.signal};
+    }
+  `)}
 `;
 
 export const InputElements = styled.input<{ type: string }>`
@@ -93,16 +141,15 @@ export const InputElements = styled.input<{ type: string }>`
 
 export const StyledIcon = styled(Icon)`
   cursor: pointer;
-`;
-
-export const StyledLabel = styled(Label)`
-  ${(props: { error?: boolean }) => props.error && `color: ${theme.color.flamePea};`}
+  color: ${theme.color.oil};
 `;
 
 export const ErrorMessage = styled.span`
-  color: ${theme.color.flamePea};
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
+  font-family: ${theme.font.bentonRegular.family};
+  font-weight: ${theme.font.bentonRegular.weight};
+  color: ${theme.color.signal};
+  font-size: 0.625rem;
+  margin-top: 0.5rem;
 `;
 
 export const IconWrapper = styled.div`
@@ -113,4 +160,20 @@ export const IconWrapper = styled.div`
   justify-content: center;
   height: inherit;
   width: 2rem;
+`;
+
+export const InputComponentWrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 1rem;
+  ${StyledLabel} {
+    order: 1;
+  }
+  ${StyledInput} {
+    order: 2;
+  }
+  ${ErrorMessage} {
+    order: 3;
+  }
 `;
