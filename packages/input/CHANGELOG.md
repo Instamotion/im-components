@@ -1,5 +1,16 @@
 # @im-ui/input
 
+## 2.6.0
+
+### Minor Changes
+
+- f6092e2: add new styles to inputs
+
+### Patch Changes
+
+- Updated dependencies [f6092e2]
+  - @im-ui/styled-dropdown@1.2.0
+
 ## 2.5.2
 
 ### Patch Changes

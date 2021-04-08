@@ -1,5 +1,11 @@
 # @im-ui/dropdown
 
+## 1.2.0
+
+### Minor Changes
+
+- f6092e2: add new styles to inputs
+
 ## 1.1.0
 
 ### Minor Changes
