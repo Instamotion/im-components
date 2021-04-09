@@ -4,6 +4,8 @@ import { IMTheme as theme } from '@im-ui/theme';
 import Accordion from './accordion';
 
 const AccordionWrapper = styled.div`
+  line-height: 1.5rem;
+
   & > div {
     border-top: none;
     border-bottom: none;

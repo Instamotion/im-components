@@ -9,7 +9,7 @@ interface AccordionProps {
 }
 
 const Accordion: React.FC<AccordionProps> = ({ title, children, getTrackingEvent = () => {} }) => {
-  const [isOpen, setIsOpen] = React.useState(true);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const handleClick = (): void => {
     getTrackingEvent();
@@ -43,7 +43,7 @@ export const Expand = styled.div`
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  padding: 1.875rem 1rem 1.875rem 1.5rem;
 `;
 
 export const AccordionTitle = styled.div`
