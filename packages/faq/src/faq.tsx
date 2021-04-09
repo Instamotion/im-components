@@ -61,18 +61,12 @@ const FaqSection = styled.div`
   }
 `;
 
-export type AccordionItemType = {
-  title: string;
-  text: string | JSX.Element;
-};
-
 export interface FaqSection {
   title: string;
   text: string;
 }
 
 export interface FaqProps {
-  items?: AccordionItemType[];
   faqSections: FaqSection[];
   getTrackingEvent?: (n: number) => void;
 }
