@@ -4,6 +4,8 @@ import { IMTheme as theme } from '@im-ui/theme';
 import Accordion from './accordion';
 
 const AccordionWrapper = styled.div`
+  line-height: 1.5rem;
+
   & > div {
     border-top: none;
     border-bottom: none;
@@ -64,6 +66,7 @@ const FaqSection = styled.div`
 export interface FaqSection {
   title: string;
   text: string;
+  open?: boolean;
 }
 
 export interface FaqProps {
@@ -82,6 +85,7 @@ const FAQ: React.FC<FaqProps> = ({ getTrackingEvent = () => {}, faqSections }) =
             key={`item-${item.title}`}
             title={item.title}
             getTrackingEvent={() => getTrackingEvent(i + 1)}
+            open={item.open ? item.open : false}
           >
             <p>{item.text}</p>
           </Accordion>

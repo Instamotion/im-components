@@ -18,6 +18,7 @@ storiesOf('Faq', module).add('Default', () => {
           'Vor dem Kauf ist eine Probefahrt nicht möglich. Du bestellst den Gebrauchtwagen bei uns und bekommst ihn vor die Haustür geliefert. Jetzt hast Du die Möglichkeit Deinen neuen Gebrauchtwagen probe zu fahren und ihn bei Nichtgefallen innerhalb von zwei Wochen an uns zurück zu geben.'
       },
       {
+        open: true,
         title: 'Wie lange ist die Lieferzeit meines neuen Gebrauchtwagens?',
         text:
           'Wenn in der Produktbeschreibung nicht Abweichendes angeben wird, beträgt die Lieferzeit maximal 15 Werktage. Bei der Bezahlart "Vorkasse" beginnt die Lieferfrist am Bankarbeitstag nach dem Tag, an dem der Zahlungseingang erfolgt ist.'
