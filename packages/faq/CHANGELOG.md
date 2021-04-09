@@ -1,5 +1,11 @@
 # @im-ui/faq
 
+## 0.0.4
+
+### Patch Changes
+
+- b2770a0: Fix bottom padding
+
 ## 0.0.3
 
 ### Patch Changes
