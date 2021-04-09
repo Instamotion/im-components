@@ -4,12 +4,18 @@ import { IMTheme as theme } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 
 interface AccordionProps {
+  open?: boolean;
   title?: string;
   getTrackingEvent?: () => void;
 }
 
-const Accordion: React.FC<AccordionProps> = ({ title, children, getTrackingEvent = () => {} }) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+const Accordion: React.FC<AccordionProps> = ({
+  open = false,
+  title,
+  children,
+  getTrackingEvent = () => {}
+}) => {
+  const [isOpen, setIsOpen] = React.useState(open);
 
   const handleClick = (): void => {
     getTrackingEvent();
