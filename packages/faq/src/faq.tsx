@@ -58,7 +58,6 @@ const FaqSection = styled.div`
   max-width: 67.25rem;
   padding: 0 2rem 2.5rem;
   ${theme.mediaQueries.whenDesktopXL} {
-    padding-bottom: 0rem;
     min-width: 67.25rem;
   }
 `;
