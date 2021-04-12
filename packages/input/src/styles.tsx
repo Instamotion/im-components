@@ -54,6 +54,13 @@ export const StyledInput = styled.div<StyledInputType>`
     background-color: ${theme.color.white};
   `}
 
+  ${props =>
+    props.isPhone &&
+    `+ label.floated {
+      transform: translate(7.4rem,0.812rem) scale(1);
+      cursor: text;
+    }`}
+
   &:focus-within {
     ${props => {
       if (props.isPhone) {
