@@ -473,7 +473,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-ckVGcZ",
                                             "isStatic": false,
-                                            "lastClassName": "dMBfGj",
+                                            "lastClassName": "bEXwXR",
                                             "rules": Array [
                                               "
   position: relative;
@@ -502,6 +502,10 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   margin: 0;
   border: 1px solid ",
                                               "#f3f3f3",
+                                              "
+
+  ",
+                                              [Function],
                                               "
 
   ",
@@ -570,7 +574,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                       value="from"
                                     >
                                       <div
-                                        className="sc-ckVGcZ dMBfGj"
+                                        className="sc-ckVGcZ bEXwXR"
                                         value="from"
                                       >
                                         <styled.input
@@ -1328,7 +1332,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-ckVGcZ",
                                             "isStatic": false,
-                                            "lastClassName": "dMBfGj",
+                                            "lastClassName": "bEXwXR",
                                             "rules": Array [
                                               "
   position: relative;
@@ -1357,6 +1361,10 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   margin: 0;
   border: 1px solid ",
                                               "#f3f3f3",
+                                              "
+
+  ",
+                                              [Function],
                                               "
 
   ",
@@ -1425,7 +1433,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                       value="to"
                                     >
                                       <div
-                                        className="sc-ckVGcZ dMBfGj"
+                                        className="sc-ckVGcZ bEXwXR"
                                         value="to"
                                       >
                                         <styled.input
@@ -2329,7 +2337,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-ckVGcZ",
                               "isStatic": false,
-                              "lastClassName": "dMBfGj",
+                              "lastClassName": "bEXwXR",
                               "rules": Array [
                                 "
   position: relative;
@@ -2358,6 +2366,10 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
   margin: 0;
   border: 1px solid ",
                                 "#f3f3f3",
+                                "
+
+  ",
+                                [Function],
                                 "
 
   ",
@@ -2426,7 +2438,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                         value={1}
                       >
                         <div
-                          className="sc-ckVGcZ dMBfGj"
+                          className="sc-ckVGcZ bEXwXR"
                           value={1}
                         >
                           <styled.input

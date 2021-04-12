@@ -130,15 +130,6 @@ export const Input: React.FC<InputProps> = ({
 
   return (
     <InputComponentWrapper style={{ width }} className={className}>
-      {label && (
-        <StyledLabel
-          isFloatLabel={isFloatLabel}
-          error={!!errorMessage}
-          required={required}
-          text={label}
-          htmlFor={id}
-        />
-      )}
       <StyledInput value={value} error={!!errorMessage} isPhone>
         <Dropdown
           options={phoneCodes}
@@ -148,6 +139,7 @@ export const Input: React.FC<InputProps> = ({
           isActive={isPhone && !!inputValue}
           hasError={!!errorMessage}
           className="phone-dropdown"
+          isFloatLabel
         />
         <InputElements
           {...inputProps}
@@ -174,6 +166,16 @@ export const Input: React.FC<InputProps> = ({
           )}
         </IconWrapper>
       </StyledInput>
+      {label && (
+        <StyledLabel
+          className=""
+          isFloatLabel={isFloatLabel}
+          error={!!errorMessage}
+          required={required}
+          text={label}
+          htmlFor={id}
+        />
+      )}
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </InputComponentWrapper>
   );

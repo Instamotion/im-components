@@ -166,7 +166,8 @@ export const DropdownContainer = styled.div<containerProps>`
       ${getSolidBSring(theme.input.border.color)}
     }
   `}
-  ${({ haveValue }) => haveValue && `background-color: ${theme.color.white};`}
+  ${({ haveValue, disabled }) =>
+    haveValue && !disabled && `background-color: ${theme.color.white};`}
 
   ${({ hasError, isPhoneCode, isOpen, isActive, haveValue }) => {
     if (isOpen)

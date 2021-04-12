@@ -151,14 +151,14 @@ storiesOf('Styled dropdown', module)
           placeholder={text('placeholder', 'Choose value')}
           onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
           label={text('label', 'Click on me!', 'other')}
-          disabled={true}
+          disabled
         />
 
         <TitleEl>with defauld value and floated label</TitleEl>
         <StyledDropdown
           options={optionsWithoutIcons}
           defaultItem={optionsWithoutIcons[0]}
-          isFloatLabel={true}
+          isFloatLabel
           placeholder={text('placeholder', 'Choose value')}
           onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
           label={text('label', 'Click on me!', 'other')}
@@ -168,7 +168,7 @@ storiesOf('Styled dropdown', module)
         <TitleEl>without defauld value and floated label</TitleEl>
         <StyledDropdown
           options={optionsWithoutIcons}
-          isFloatLabel={true}
+          isFloatLabel
           placeholder={text('placeholder', 'Choose value')}
           onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
           label={text('label', 'Click on me!', 'other')}
@@ -178,7 +178,7 @@ storiesOf('Styled dropdown', module)
         <TitleEl>with defauld value and floated label and error</TitleEl>
         <StyledDropdown
           options={optionsWithoutIcons}
-          isFloatLabel={true}
+          isFloatLabel
           defaultItem={optionsWithoutIcons[0]}
           errorMessage={<div>error text</div>}
           placeholder={text('placeholder', 'Choose value')}
@@ -189,12 +189,12 @@ storiesOf('Styled dropdown', module)
         <TitleEl>disabled with defauld value and floated label</TitleEl>
         <StyledDropdown
           options={optionsWithoutIcons}
-          isFloatLabel={true}
+          isFloatLabel
           defaultItem={optionsWithoutIcons[0]}
           placeholder={text('placeholder', 'Choose value')}
           onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
           label={text('label', 'Click on me!', 'other')}
-          disabled={true}
+          disabled
         />
       </>
     );

@@ -40,26 +40,19 @@ const PhoneInputDemo = (): React.ReactElement => {
   return renderWithThemeAndI18n(
     <div style={{ fontSize: '16px' }}>
       <div>{validation ? 'match to validation' : 'not match to validation'}</div>
-
       <TitleEl>Phone input</TitleEl>
       <Input {...props} />
-
       <TitleEl>Phone input with error</TitleEl>
       <Input {...props} errorMessage={<>some error</>} />
-
       <TitleEl>Phone input disabled</TitleEl>
       <Input {...props} disabled={true} />
-
-      {/* to test if not affected
-      
+      to test if not affected
       <TitleEl>Phone input float label</TitleEl>
-      <Input isFloatLabel={true} {...props} />
-
+      <Input isFloatLabel id="tel" {...props} />
       <TitleEl>Phone input float label with error</TitleEl>
-      <Input isFloatLabel={true} {...props} errorMessage={<>some error</>} />
-
+      <Input isFloatLabel id="tel2" {...props} errorMessage={<>some error</>} />
       <TitleEl>Phone input float label disabled</TitleEl>
-      <Input disabled={true} {...props} /> */}
+      <Input disabled {...props} />
     </div>
   );
 };
