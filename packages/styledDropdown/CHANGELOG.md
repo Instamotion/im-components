@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.2.1
+
+### Patch Changes
+
+- ea1ed37: fix label
+
 ## 1.2.0
 
 ### Minor Changes

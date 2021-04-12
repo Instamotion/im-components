@@ -1,5 +1,13 @@
 # @im-ui/input
 
+## 2.6.1
+
+### Patch Changes
+
+- ea1ed37: fix label
+- Updated dependencies [ea1ed37]
+  - @im-ui/styled-dropdown@1.2.1
+
 ## 2.6.0
 
 ### Minor Changes
