@@ -233,7 +233,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bdVaJa",
                         "isStatic": false,
-                        "lastClassName": "bsHyIC",
+                        "lastClassName": "dQXKHx",
                         "rules": Array [
                           "
   font-family: ",
@@ -245,7 +245,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
   line-height: 1.625rem;
   color: ",
                           "#575756",
-                          "
+                          ";
   font-size: 1rem;
   cursor: pointer;
   ",
@@ -278,7 +278,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                   text="RangeDropdownMain"
                 >
                   <label
-                    className="sc-bdVaJa bsHyIC undefinedfalse"
+                    className="sc-bdVaJa dQXKHx undefinedfalse"
                   >
                     <span>
                       RangeDropdownMain
