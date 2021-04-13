@@ -56,6 +56,7 @@ export const StyledInput = styled.div<StyledInputType>`
 
   ${props =>
     props.isPhone &&
+    !props.value &&
     `+ label.floated {
       transform: translate(7.4rem,0.812rem) scale(1);
       cursor: text;

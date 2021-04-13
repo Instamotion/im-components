@@ -238,7 +238,6 @@ export const StyledDropdownWrapper = styled.div<{
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 1rem;
   position: relative;
   ${StyledLabel} {
     order: 1;

@@ -52,7 +52,7 @@ const PhoneInputDemo = (): React.ReactElement => {
       <TitleEl>Phone input float label with error</TitleEl>
       <Input isFloatLabel id="tel2" {...props} errorMessage={<>some error</>} />
       <TitleEl>Phone input float label disabled</TitleEl>
-      <Input disabled {...props} />
+      <Input disabled id="tel3" {...props} />
     </div>
   );
 };
