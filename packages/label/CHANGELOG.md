@@ -1,5 +1,11 @@
 # @im-ui/label
 
+## 1.0.5
+
+### Patch Changes
+
+- 4aa9957: add styles to label
+
 ## 1.0.4
 
 ### Patch Changes
