@@ -20,7 +20,7 @@ const LabelComponent = styled.label<LabelProps>`
   font-family: ${theme.font.bentonBold.family};
   font-weight: ${theme.font.bentonBold.weight};
   line-height: 1.625rem;
-  color: ${theme.color.typo}
+  color: ${theme.color.typo};
   font-size: 1rem;
   cursor: pointer;
   ${({ placement = 'stack' }) =>
@@ -52,8 +52,7 @@ const LabelComponent = styled.label<LabelProps>`
       ${!haveValue && 'transform: translate(1.375rem, 0.812rem) scale(1);'}
     }
 
-    ${haveValue &&
-      `
+    &.value {
       transform: translate(1rem, -0.6rem) scale(.75);
       opacity: 1;
 
@@ -61,17 +60,22 @@ const LabelComponent = styled.label<LabelProps>`
         display: inline;
       }
 
-      ${FloatBG} {
+      .float-bg {
         display: block;
       }
-    `}
+    }
 
     ${error &&
-      haveValue &&
       `
-      transform: translate(1rem, -0.6rem) scale(.75);
-      opacity: 1;
-      color: ${theme.color.signal};
+      &.value {
+        transform: translate(1rem, -0.6rem) scale(.75);
+        opacity: 1;
+        color: ${theme.color.signal};
+
+        .float-bg {
+          display: block;
+        }
+      }
     `}
   `}
 `;
