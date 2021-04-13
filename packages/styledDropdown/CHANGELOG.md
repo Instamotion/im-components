@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.2.2
+
+### Patch Changes
+
+- 5261231: add style changes
+
 ## 1.2.1
 
 ### Patch Changes

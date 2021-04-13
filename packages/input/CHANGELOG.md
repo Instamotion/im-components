@@ -1,5 +1,13 @@
 # @im-ui/input
 
+## 2.6.2
+
+### Patch Changes
+
+- 5261231: add style changes
+- Updated dependencies [5261231]
+  - @im-ui/styled-dropdown@1.2.2
+
 ## 2.6.1
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/radio-button-group",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",

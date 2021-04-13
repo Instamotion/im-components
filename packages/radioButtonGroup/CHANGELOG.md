@@ -1,5 +1,11 @@
 # @im-ui/radio-button-group
 
+## 0.2.10
+
+### Patch Changes
+
+- 5261231: add style changes
+
 ## 0.2.9
 
 ### Patch Changes
