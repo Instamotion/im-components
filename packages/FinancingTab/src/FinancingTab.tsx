@@ -122,6 +122,7 @@ type CalculatorProps = {
   onChangeBalloonRate: (balloonAmount: number) => void;
   openFinancingPackagesInfoModal: () => void;
 };
+
 const Calculator = (props: CalculatorProps) => {
   const CalculatorPane = styled(Col)`
     display: flex;

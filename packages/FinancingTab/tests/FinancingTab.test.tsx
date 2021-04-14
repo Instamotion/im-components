@@ -137,7 +137,16 @@ describe('FinancingTab', () => {
       },
       isAnzahlungError: false
     };
-    const wrapper = mount(<FinancingTab {...props} />);
+    const wrapper = mount(
+      <FinancingTab
+        {...props}
+        openFinancingPackagesInfoModal={() => {}}
+        onChangeBalloonRate={() => {}}
+        onChangeDownPaynment={() => {}}
+        onChangeWithBalloonRate={() => {}}
+        onChangeMonths={() => {}}
+      />
+    );
 
     expect(wrapper).toBeDefined();
   });

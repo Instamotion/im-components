@@ -138,5 +138,13 @@ storiesOf('Financing Tab', module).add('Default', () => {
     isAnzahlungError: false
   };
 
-  return renderWithThemeAndI18n(<FinancingTab {...props} />);
+  return renderWithThemeAndI18n(
+    <FinancingTab
+      {...props}
+      onChangeBalloonRate={() => {}}
+      onChangeDownPaynment={() => {}}
+      onChangeWithBalloonRate={() => {}}
+      onChangeMonths={() => {}}
+    />
+  );
 });
