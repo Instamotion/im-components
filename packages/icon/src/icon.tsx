@@ -1557,6 +1557,11 @@ export const Icons = {
         fill="#363636"
       />
     </IconStyled>
+  ),
+  skinnyArrow: (props: IconProps) => (
+    <IconStyled xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path d="M15 5L13.59 6.41L18.17 11H2V13H18.17L13.58 17.59L15 19L22 12L15 5Z" fill="#E5E5E5" />
+    </IconStyled>
   )
 };
 
