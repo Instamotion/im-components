@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.9
+
+### Patch Changes
+
+- 3c65694: added skinny arrow icon for Process component
+
 ## 0.6.8
 
 ### Patch Changes
