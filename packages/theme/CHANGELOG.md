@@ -1,5 +1,11 @@
 # @im-ui/theme
 
+## 2.0.7
+
+### Patch Changes
+
+- 3f0f471: add orange color to color library
+
 ## 2.0.6
 
 ### Patch Changes
