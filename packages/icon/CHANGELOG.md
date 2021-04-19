@@ -1,5 +1,15 @@
 # @im-ui/icon
 
+## 0.6.10
+
+### Patch Changes
+
+- fb5841c: added skinny arrow icon for Process component
+- fb5841c: circle check and alert icon
+- fb5841c: added alert and check icon to Icons, added orange alert color to Theme
+- Updated dependencies [fb5841c]
+  - @im-ui/theme@2.0.6
+
 ## 0.6.9
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @im-ui/theme
 
+## 2.0.6
+
+### Patch Changes
+
+- fb5841c: added alert and check icon to Icons, added orange alert color to Theme
+
 ## 2.0.5
 
 ### Patch Changes

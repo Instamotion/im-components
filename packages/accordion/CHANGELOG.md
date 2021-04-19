@@ -1,5 +1,12 @@
 # @im-ui/accordion
 
+## 0.4.2
+
+### Patch Changes
+
+- Updated dependencies [fb5841c]
+  - @im-ui/theme@2.0.6
+
 ## 0.4.1
 
 ### Patch Changes

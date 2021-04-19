@@ -1,5 +1,12 @@
 # @im-ui/tabs
 
+## 0.1.10
+
+### Patch Changes
+
+- Updated dependencies [fb5841c]
+  - @im-ui/theme@2.0.6
+
 ## 0.1.9
 
 ### Patch Changes
