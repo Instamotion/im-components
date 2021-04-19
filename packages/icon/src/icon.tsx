@@ -1560,7 +1560,26 @@ export const Icons = {
   ),
   skinnyArrow: (props: IconProps) => (
     <IconStyled xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-      <path d="M15 5L13.59 6.41L18.17 11H2V13H18.17L13.58 17.59L15 19L22 12L15 5Z" fill="#E5E5E5" />
+      <path
+        d="M15 5L13.59 6.41L18.17 11H2V13H18.17L13.58 17.59L15 19L22 12L15 5Z"
+        fill="currentColor"
+      />
+    </IconStyled>
+  ),
+  checkIcon: (props: IconProps) => (
+    <IconStyled xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"
+        fill="currentColor"
+      />
+    </IconStyled>
+  ),
+  failedIcon: (props: IconProps) => (
+    <IconStyled xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path
+        d="M11 15H13V17H11V15ZM11 7H13V13H11V7ZM11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z"
+        fill="currentColor"
+      />
     </IconStyled>
   )
 };

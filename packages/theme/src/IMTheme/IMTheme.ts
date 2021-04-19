@@ -78,7 +78,9 @@ const colors = {
   // typo
   typo: '#575756',
   // error colour
-  signal: '#FF0000'
+  signal: '#FF0000',
+  //aler color
+  orange: '#F78B28'
 };
 
 export type IMAvailableColors = keyof typeof colors;
