@@ -83,6 +83,7 @@ export type ColorLibrary = {
   typography: HexColor;
   typo: HexColor;
   signal: HexColor;
+  orange: HexColor;
 };
 
 export type FontSizes = {
