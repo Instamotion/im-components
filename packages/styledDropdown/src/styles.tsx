@@ -231,7 +231,11 @@ export const ErrorMessage = styled.span<{ isAbsoluteError?: boolean }>`
     isAbsoluteError &&
     `
     position: absolute;
-    bottom: -1.125rem;
+    top: 3;
+
+    ${theme.mediaQueries.whenTablet} {
+      top: 3.125rem;
+    }
   `}
 `;
 
