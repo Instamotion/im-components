@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.2.4
+
+### Patch Changes
+
+- e000abe: fix error styles
+
 ## 1.2.3
 
 ### Patch Changes

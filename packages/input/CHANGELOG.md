@@ -1,5 +1,13 @@
 # @im-ui/input
 
+## 2.6.4
+
+### Patch Changes
+
+- e000abe: fix error styles
+- Updated dependencies [e000abe]
+  - @im-ui/styled-dropdown@1.2.4
+
 ## 2.6.3
 
 ### Patch Changes
