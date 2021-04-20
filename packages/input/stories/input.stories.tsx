@@ -42,6 +42,8 @@ const PhoneInputDemo = (): React.ReactElement => {
       <div>{validation ? 'match to validation' : 'not match to validation'}</div>
       <TitleEl>Phone input</TitleEl>
       <Input {...props} />
+      <TitleEl>Phone input with absolute error</TitleEl>
+      <Input {...props} isAbsoluteError errorMessage={<>some error</>} />
       <TitleEl>Phone input with error</TitleEl>
       <Input {...props} errorMessage={<>some error</>} />
       <TitleEl>Phone input disabled</TitleEl>
@@ -78,6 +80,9 @@ const TextInputDemo = (): React.ReactElement => {
       <TitleEl>input label</TitleEl>
       <Input {...props} />
 
+      <TitleEl>input label with absolute error</TitleEl>
+      <Input {...props} isAbsoluteError errorMessage={<>some error</>} />
+
       <TitleEl>input label with error</TitleEl>
       <Input {...props} errorMessage={<>some error</>} />
 
@@ -106,6 +111,9 @@ const TextInputFloatDemo = (): React.ReactElement => {
     <div style={{ fontSize: '16px' }}>
       <TitleEl>input float label</TitleEl>
       <Input {...props} />
+
+      <TitleEl>input float label with absolute error</TitleEl>
+      <Input {...props} isAbsoluteError errorMessage={<>some error</>} />
 
       <TitleEl>input float label with error</TitleEl>
       <Input {...props} errorMessage={<>some error</>} />

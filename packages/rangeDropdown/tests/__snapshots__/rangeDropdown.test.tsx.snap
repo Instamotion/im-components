@@ -408,11 +408,12 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-kkGfuU",
                                       "isStatic": false,
-                                      "lastClassName": "gAvEoU",
+                                      "lastClassName": "gPxsgj",
                                       "rules": Array [
                                         "
   display: flex;
   flex-flow: column;
+  position: relative;
   width: 100%;
   margin-bottom: 1rem;
   ",
@@ -451,7 +452,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                 }
                               >
                                 <div
-                                  className="sc-kkGfuU gAvEoU"
+                                  className="sc-kkGfuU gPxsgj"
                                   style={
                                     Object {
                                       "width": undefined,
@@ -1267,11 +1268,12 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-kkGfuU",
                                       "isStatic": false,
-                                      "lastClassName": "gAvEoU",
+                                      "lastClassName": "gPxsgj",
                                       "rules": Array [
                                         "
   display: flex;
   flex-flow: column;
+  position: relative;
   width: 100%;
   margin-bottom: 1rem;
   ",
@@ -1310,7 +1312,7 @@ exports[`RangeDropdown Input component renders correctly 1`] = `
                                 }
                               >
                                 <div
-                                  className="sc-kkGfuU gAvEoU"
+                                  className="sc-kkGfuU gPxsgj"
                                   style={
                                     Object {
                                       "width": undefined,
@@ -2272,11 +2274,12 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-kkGfuU",
                         "isStatic": false,
-                        "lastClassName": "gAvEoU",
+                        "lastClassName": "gPxsgj",
                         "rules": Array [
                           "
   display: flex;
   flex-flow: column;
+  position: relative;
   width: 100%;
   margin-bottom: 1rem;
   ",
@@ -2315,7 +2318,7 @@ exports[`RangeDropdown Input renderSelector renders 1`] = `
                   }
                 >
                   <div
-                    className="sc-kkGfuU gAvEoU"
+                    className="sc-kkGfuU gPxsgj"
                     style={
                       Object {
                         "width": undefined,

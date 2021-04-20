@@ -152,12 +152,18 @@ export const StyledIcon = styled(Icon)`
   color: ${theme.color.oil};
 `;
 
-export const ErrorMessage = styled.span`
+export const ErrorMessage = styled.span<{ isAbsoluteError?: boolean }>`
   font-family: ${theme.font.bentonRegular.family};
   font-weight: ${theme.font.bentonRegular.weight};
   color: ${theme.color.signal};
   font-size: 0.625rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0 0.5rem;
+  ${({ isAbsoluteError }) =>
+    isAbsoluteError &&
+    `
+    position: absolute;
+    bottom: -1.125rem;
+  `}
 `;
 
 export const IconWrapper = styled.div`
@@ -173,6 +179,7 @@ export const IconWrapper = styled.div`
 export const InputComponentWrapper = styled.div`
   display: flex;
   flex-flow: column;
+  position: relative;
   width: 100%;
   margin-bottom: 1rem;
   ${StyledLabel} {

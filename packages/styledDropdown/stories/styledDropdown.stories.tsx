@@ -135,6 +135,17 @@ storiesOf('Styled dropdown', module)
           disabled={boolean('disabled', false, 'other')}
         />
 
+        <TitleEl>with defauld value and absolute error</TitleEl>
+        <StyledDropdown
+          options={optionsWithoutIcons}
+          defaultItem={optionsWithoutIcons[0]}
+          errorMessage={<div>error text</div>}
+          isAbsoluteError
+          placeholder={text('placeholder', 'Choose value')}
+          onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+          label={text('label', 'Click on me!', 'other')}
+        />
+
         <TitleEl>with defauld value and error</TitleEl>
         <StyledDropdown
           options={optionsWithoutIcons}
@@ -173,6 +184,18 @@ storiesOf('Styled dropdown', module)
           onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
           label={text('label', 'Click on me!', 'other')}
           disabled={boolean('disabled', false, 'other')}
+        />
+
+        <TitleEl>with defauld value and floated label and absolute error</TitleEl>
+        <StyledDropdown
+          options={optionsWithoutIcons}
+          isFloatLabel
+          defaultItem={optionsWithoutIcons[0]}
+          errorMessage={<div>error text</div>}
+          isAbsoluteError
+          placeholder={text('placeholder', 'Choose value')}
+          onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+          label={text('label', 'Click on me!', 'other')}
         />
 
         <TitleEl>with defauld value and floated label and error</TitleEl>
@@ -257,19 +280,61 @@ storiesOf('Styled dropdown', module)
       }
     ];
     return renderWithThemeAndI18n(
-      <DropdownCombiner label={text('label', 'Click on me!', 'other')}>
-        <StyledDropdown
-          options={options}
-          disabled={boolean('disabled', false, 'other')}
-          defaultItem={options[0]}
-          onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
-        />
-        <StyledDropdown
-          options={options}
-          disabled={boolean('disabled', false, 'other')}
-          defaultItem={options[1]}
-          onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
-        />
-      </DropdownCombiner>
+      <>
+        <TitleEl>without error</TitleEl>
+        <DropdownCombiner label={text('label', 'Click on me!', 'other')}>
+          <StyledDropdown
+            options={options}
+            disabled={boolean('disabled', false, 'other')}
+            defaultItem={options[0]}
+            onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+          />
+          <StyledDropdown
+            options={options}
+            disabled={boolean('disabled', false, 'other')}
+            defaultItem={options[1]}
+            onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+          />
+        </DropdownCombiner>
+
+        <TitleEl>with absolute error</TitleEl>
+        <DropdownCombiner
+          label={text('label', 'Click on me!', 'other')}
+          isAbsoluteError
+          errorMessage={<>error text</>}
+        >
+          <StyledDropdown
+            options={options}
+            disabled={boolean('disabled', false, 'other')}
+            defaultItem={options[0]}
+            onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+          />
+          <StyledDropdown
+            options={options}
+            disabled={boolean('disabled', false, 'other')}
+            defaultItem={options[1]}
+            onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+          />
+        </DropdownCombiner>
+
+        <TitleEl>with error</TitleEl>
+        <DropdownCombiner
+          label={text('label', 'Click on me!', 'other')}
+          errorMessage={<>error text</>}
+        >
+          <StyledDropdown
+            options={options}
+            disabled={boolean('disabled', false, 'other')}
+            defaultItem={options[0]}
+            onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+          />
+          <StyledDropdown
+            options={options}
+            disabled={boolean('disabled', false, 'other')}
+            defaultItem={options[1]}
+            onChange={(selectedItem: OptionType) => action('Chosen')(selectedItem)}
+          />
+        </DropdownCombiner>
+      </>
     );
   });

@@ -6,6 +6,7 @@ import { DropdownContainer, Menu, ErrorMessage } from './styles';
 
 export type DropdownCombinerProps = {
   isFloatLabel?: boolean;
+  isAbsoluteError?: boolean;
   label?: JSX.Element | string;
   errorMessage?: JSX.Element;
   required?: boolean;
@@ -62,6 +63,7 @@ const StyledLabel = styled(Label)``;
 const WrapBody = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
 
   ${StyledLabel} {
     order: 1;
@@ -80,7 +82,8 @@ export const DropdownCombiner: React.FC<DropdownCombinerProps> = ({
   required,
   children,
   withBorder = true,
-  isFloatLabel = false
+  isFloatLabel = false,
+  isAbsoluteError = false
 }) => {
   const isTwoElExist = (children && Array.isArray(children) && children.length === 2) as boolean;
   return (
@@ -96,7 +99,9 @@ export const DropdownCombiner: React.FC<DropdownCombinerProps> = ({
           required={required}
         />
       )}
-      {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+      {errorMessage && (
+        <ErrorMessage isAbsoluteError={isAbsoluteError}>{errorMessage}</ErrorMessage>
+      )}
     </WrapBody>
   );
 };

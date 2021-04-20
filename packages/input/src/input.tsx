@@ -34,6 +34,7 @@ export type InputProps = {
   resetValue?: ValueType;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   className?: string;
+  isAbsoluteError?: boolean;
 };
 
 export const Input: React.FC<InputProps> = ({
@@ -55,7 +56,8 @@ export const Input: React.FC<InputProps> = ({
   required,
   disabled,
   inputProps = {},
-  className
+  className,
+  isAbsoluteError = false
 }) => {
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const val = resetValue || '';
@@ -125,7 +127,9 @@ export const Input: React.FC<InputProps> = ({
           htmlFor={id}
         />
       )}
-      {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+      {errorMessage && (
+        <ErrorMessage isAbsoluteError={isAbsoluteError}>{errorMessage}</ErrorMessage>
+      )}
     </InputComponentWrapper>
   );
 };
