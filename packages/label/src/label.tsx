@@ -40,7 +40,7 @@ const LabelComponent = styled.label<LabelProps>`
     transform-origin: top left;
     transform: translate(0.625rem, 0.687rem) scale(1);
     transition: all .1s ease-in-out;
-    z-index: 1;
+    z-index: 10;
     color: ${theme.color.typography};
     opacity: 0.6;
 
