@@ -1,5 +1,11 @@
 # @im-ui/label
 
+## 1.0.6
+
+### Patch Changes
+
+- 3de5c68: add z-index
+
 ## 1.0.5
 
 ### Patch Changes
