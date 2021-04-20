@@ -39,6 +39,7 @@ export interface StyledDropdownProps {
   hasError?: boolean;
   errorMessage?: JSX.Element | string;
   isFloatLabel?: boolean;
+  isAbsoluteError?: boolean;
 }
 
 const StyledDropdown: React.FC<StyledDropdownProps> = ({
@@ -56,7 +57,8 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
   errorMessage,
   hasError = false,
   required = false,
-  isFloatLabel = false
+  isFloatLabel = false,
+  isAbsoluteError = false
 }) => {
   const validationError = !!errorMessage || hasError;
   const [wasChanged, setWasChanged] = useState(false);
@@ -177,7 +179,9 @@ const StyledDropdown: React.FC<StyledDropdownProps> = ({
                 {...getLabelProps()}
               />
             )}
-            {validationError && errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+            {validationError && errorMessage && (
+              <ErrorMessage isAbsoluteError={isAbsoluteError}>{errorMessage}</ErrorMessage>
+            )}
           </StyledDropdownWrapper>
         );
       }}

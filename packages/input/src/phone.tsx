@@ -70,7 +70,8 @@ export const Input: React.FC<InputProps> = ({
   required,
   resetValue,
   inputProps = {},
-  className
+  className,
+  isAbsoluteError = false
 }) => {
   const isPhone = useMemo(() => type === 'tel', [type]);
   const formattedValue = useMemo(() => (value as string).replace(/^(\+\d{2})/g, ''), [value]);
@@ -177,7 +178,9 @@ export const Input: React.FC<InputProps> = ({
           htmlFor={id}
         />
       )}
-      {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+      {errorMessage && (
+        <ErrorMessage isAbsoluteError={isAbsoluteError}>{errorMessage}</ErrorMessage>
+      )}
     </InputComponentWrapper>
   );
 };
