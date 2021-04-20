@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.2.3
+
+### Patch Changes
+
+- 8785535: add absolute error pos fix label
+
 ## 1.2.2
 
 ### Patch Changes

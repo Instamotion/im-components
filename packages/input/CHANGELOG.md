@@ -1,5 +1,13 @@
 # @im-ui/input
 
+## 2.6.3
+
+### Patch Changes
+
+- 8785535: add absolute error pos fix label
+- Updated dependencies [8785535]
+  - @im-ui/styled-dropdown@1.2.3
+
 ## 2.6.2
 
 ### Patch Changes
