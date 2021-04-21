@@ -179,7 +179,9 @@ export const Input: React.FC<InputProps> = ({
         />
       )}
       {errorMessage && (
-        <ErrorMessage isAbsoluteError={isAbsoluteError}>{errorMessage}</ErrorMessage>
+        <ErrorMessage isFloatLabel={isFloatLabel} isAbsoluteError={isAbsoluteError}>
+          {errorMessage}
+        </ErrorMessage>
       )}
     </InputComponentWrapper>
   );
