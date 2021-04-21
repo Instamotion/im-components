@@ -152,23 +152,23 @@ export const StyledIcon = styled(Icon)`
   color: ${theme.color.oil};
 `;
 
-export const ErrorMessage = styled.span<{ isAbsoluteError?: boolean }>`
+export const ErrorMessage = styled.span<{ isFloatLabel?: boolean; isAbsoluteError?: boolean }>`
   font-family: ${theme.font.bentonRegular.family};
   font-weight: ${theme.font.bentonRegular.weight};
   color: ${theme.color.signal};
   font-size: 0.625rem;
   margin: 0.5rem 0 0 0.5rem;
-  ${({ isAbsoluteError }) =>
+  ${({ isAbsoluteError, isFloatLabel }) =>
     isAbsoluteError &&
     `
     position: absolute;
-    top: 3;
+    top: ${isFloatLabel ? '3' : '4.625'}rem;
 
     ${theme.mediaQueries.whenTablet} {
-      top: 3.125rem;
+      top: ${isFloatLabel ? '3.125' : '5.250'}rem;
     }
   `}
-`;
+`; // absolute position includes label height and margin
 
 export const IconWrapper = styled.div`
   display: flex;
