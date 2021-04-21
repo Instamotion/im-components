@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.2.5
+
+### Patch Changes
+
+- 677851c: fix error position
+
 ## 1.2.4
 
 ### Patch Changes

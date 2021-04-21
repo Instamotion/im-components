@@ -1,5 +1,13 @@
 # @im-ui/input
 
+## 2.6.5
+
+### Patch Changes
+
+- 677851c: fix error position
+- Updated dependencies [677851c]
+  - @im-ui/styled-dropdown@1.2.5
+
 ## 2.6.4
 
 ### Patch Changes
