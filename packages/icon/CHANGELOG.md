@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.11
+
+### Patch Changes
+
+- c9b8993: Add radioCheck icon
+
 ## 0.6.10
 
 ### Patch Changes
