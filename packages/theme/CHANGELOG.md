@@ -1,5 +1,11 @@
 # @im-ui/theme
 
+## 2.0.8
+
+### Patch Changes
+
+- 0f91b2d: Add colors
+
 ## 2.0.7
 
 ### Patch Changes
