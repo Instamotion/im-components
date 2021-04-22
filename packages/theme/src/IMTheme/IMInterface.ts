@@ -84,6 +84,8 @@ export type ColorLibrary = {
   typo: HexColor;
   signal: HexColor;
   orange: HexColor;
+  bermuda: HexColor;
+  alabaster: HexColor;
 };
 
 export type FontSizes = {

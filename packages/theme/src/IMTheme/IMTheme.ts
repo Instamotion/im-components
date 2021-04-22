@@ -80,7 +80,11 @@ const colors = {
   // error colour
   signal: '#FF0000',
   //aler color
-  orange: '#F78B28'
+  orange: '#F78B28',
+  // turquoise, used in radio buttons, very similar to niagara
+  bermuda: '#76DFBF',
+  // one more shade of light grey
+  alabaster: '#F7F7F7'
 };
 
 export type IMAvailableColors = keyof typeof colors;
