@@ -11,7 +11,8 @@ function isNil<A>(x: A | null | undefined): boolean {
   return x === null || x === undefined;
 }
 
-export const formatCurrency = (x: number | undefined): string => `${x.toLocaleString('de-de')} €`;
+export const formatCurrency = (x: number | undefined): string =>
+  `${x != undefined && x.toLocaleString('de-de')} €`;
 
 type FeatureFlagsType = {
   'schlussrate-read-only': boolean;
