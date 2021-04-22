@@ -28,7 +28,7 @@ export const Menu = styled.ul<menuProps>`
   padding: 0;
   position: absolute;
   width: 100%;
-  z-index: 2;
+  z-index: 11;
   box-shadow: 0px 0px 4px rgba(54, 54, 54, 0.15);
   &::-webkit-scrollbar {
     background: transparent;
