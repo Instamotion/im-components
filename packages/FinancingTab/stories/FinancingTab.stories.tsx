@@ -66,7 +66,7 @@ storiesOf('Financing Tab', module).add('Default', () => {
       cms: null
     },
     state: {
-      withBalloonRate: false,
+      withBalloonRate: true,
       downPayment: 1313,
       maxDownPayment: 6114,
       months: 60,

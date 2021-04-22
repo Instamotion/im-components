@@ -38,6 +38,7 @@ const MontlyRateChooser: React.FC<MontlyRateChooserProps> = ({ items, selected, 
   const handleDropdownSelect = (e: { target: { value: string } }) => {
     onChange(Number(e.target.value));
   };
+
   return (
     <>
       <DesktopWrapper>

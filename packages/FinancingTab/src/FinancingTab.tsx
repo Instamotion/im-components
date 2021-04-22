@@ -11,7 +11,7 @@ function isNil<A>(x: A | null | undefined): boolean {
   return x === null || x === undefined;
 }
 
-export const formatCurrency = (x: number): string => `${x.toLocaleString('de-de')} €`;
+export const formatCurrency = (x: number | undefined): string => `${x.toLocaleString('de-de')} €`;
 
 type FeatureFlagsType = {
   'schlussrate-read-only': boolean;
@@ -38,7 +38,7 @@ type Props = {
   openFinancingPackagesInfoModal: () => void;
 };
 
-const getMinMaxLabel = (label: string, min: number = 0, max: number = 1000000): string => {
+const getMinMaxLabel = (label: string, min?: number, max?: number): string => {
   let parts = [label];
   if (!isNil(min) || !isNil(max)) {
     parts.push(' (');
