@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import styled, { css } from 'styled-components';
 import { IMTheme as theme } from '@im-ui/theme';
-import CheckIcon from '../assets/CheckIcon';
+import Icon from '@im-ui/icon';
 import ContentBoxRadioButton from './ContentBoxRadioButton';
 
 export interface RadioButtonsProps<T> {
@@ -128,7 +128,7 @@ function ContentBoxRadioButtonGroup<T>({
                 (usp: string, index: number) => (
                   <UspItem key={index}>
                     <CheckIconWrapper>
-                      <CheckIcon />
+                      <Icon icon="radioCheck" />
                     </CheckIconWrapper>
                     <UspText>{usp}</UspText>
                   </UspItem>

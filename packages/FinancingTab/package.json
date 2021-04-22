@@ -26,7 +26,7 @@
   "dependencies": {
     "@im-ui/theme": "^2.0.8",
     "@im-ui/utils": "^0.5.6",
-    "@im-ui/icon": "^0.6.1",
+    "@im-ui/icon": "^0.6.11",
     "@im-ui/button": "^0.6.0",
     "@im-ui/dropdown": "^1.2.0",
     "@im-ui/button-toggle": "^1.0.0",
