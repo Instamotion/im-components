@@ -47,7 +47,7 @@ export const ButtonToggleItem = styled.div<ButtonToggleItemStyledProps>`
   ${props =>
     props.disabled &&
     css`
-      background-color: #e5e5e5;
+      background-color: ${theme.color.whiteGrey};
       color: ${theme.color.grey};
       cursor: default;
     `}
