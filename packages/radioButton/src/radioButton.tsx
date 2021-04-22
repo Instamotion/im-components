@@ -28,7 +28,7 @@ export const RadioButtonDecorator = styled.span`
   position: absolute;
   width: 1.25rem;
   height: 1.25rem;
-  background-color: #f7f7f7;
+  background-color: ${theme.color.alabaster};
   border: 1px solid #c6c6c6;
   border-radius: 50%;
   left: 0;
@@ -46,7 +46,7 @@ export const RadioButtonInput = styled.input`
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
-    background-color: #76dfbf;
+    background-color: ${theme.color.bermuda};
     background-image: url('check.svg');
   }
 `;
