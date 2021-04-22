@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.2.6
+
+### Patch Changes
+
+- bacec54: fix z-index
+
 ## 1.2.5
 
 ### Patch Changes
