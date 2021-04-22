@@ -125,7 +125,7 @@ type CalculatorProps = {
 };
 
 const Calculator = (props: CalculatorProps) => {
-  const CalculatorPane = styled(Col)`
+  const CalculatorPane = styled(Col as any)`
     display: flex;
     flex-direction: column;
     justify-content: start;
