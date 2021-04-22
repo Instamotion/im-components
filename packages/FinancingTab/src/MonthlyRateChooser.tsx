@@ -31,7 +31,7 @@ const MobileWrapper = styled.div`
 `;
 
 const filterDisabledItems = (items: IMonthsSelection[]) => {
-  return items.filter((item: IMonthsSelection) => item.disabled !== true);
+  return items.filter((item: IMonthsSelection) => !item.disabled);
 };
 
 const MontlyRateChooser: React.FC<MontlyRateChooserProps> = ({ items, selected, onChange }) => {
