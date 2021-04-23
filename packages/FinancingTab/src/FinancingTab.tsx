@@ -4,8 +4,8 @@ import { FormattedMessage } from 'react-intl';
 import { IMTheme as theme } from '@im-ui/theme';
 import Label from '@im-ui/label';
 import Toggle from '@im-ui/toggle';
+import { CurrencyInput } from '@im-ui/input';
 import MonthlyRateChooser from './MonthlyRateChooser';
-import CurrencyInput from './ContentBoxRadio/CurrencyInput';
 import ContentBoxRadioButtonGroup from './ContentBoxRadio/ContentBoxRadioButtonGroup';
 
 function isNil<A>(x: A | null | undefined): boolean {
