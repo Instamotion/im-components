@@ -2,6 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
 
+import messages from '../utils/locales';
+
 import FinancingTab, { FinancingTabProps } from '../src';
 
 storiesOf('Financing Tab', module).add('Default', () => {
@@ -145,6 +147,8 @@ storiesOf('Financing Tab', module).add('Default', () => {
       onChangeDownPaynment={() => {}}
       onChangeWithBalloonRate={() => {}}
       onChangeMonths={() => {}}
-    />
+    />,
+    'de',
+    messages
   );
 });

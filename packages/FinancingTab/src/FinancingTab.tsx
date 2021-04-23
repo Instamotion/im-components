@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 import { IMTheme as theme } from '@im-ui/theme';
 import Label from '@im-ui/label';
 import Toggle from '@im-ui/toggle';
@@ -39,7 +40,7 @@ type Props = {
   openFinancingPackagesInfoModal: () => void;
 };
 
-const getMinMaxLabel = (label: string, min?: number, max?: number): string => {
+const getMinMaxLabel = (label: string = '', min?: number, max?: number): string => {
   let parts = [label];
   if (!isNil(min) || !isNil(max)) {
     parts.push(' (');
@@ -196,14 +197,24 @@ const Calculator = (props: CalculatorProps) => {
   const schlussRateLabel = () => {
     if (!props.isSchlussrateReadOnly) {
       if (props?.state?.withBalloonRate) {
-        return getMinMaxLabel(
-          'Schlussrate',
-          props.state.minBalloonAmount,
-          props.state.maxBalloonAmount
+        return (
+          <FormattedMessage
+            id="default.financing_tab.final_installment"
+            values={{
+              minMax: getMinMaxLabel('', props.state.minBalloonAmount, props.state.maxBalloonAmount)
+            }}
+          />
         );
       }
     } else {
-      return 'Schlussrate';
+      return (
+        <FormattedMessage
+          id="default.financing_tab.final_installment"
+          values={{
+            minMax: ''
+          }}
+        />
+      );
     }
   };
 
@@ -229,7 +240,7 @@ const Calculator = (props: CalculatorProps) => {
             }
           />
           <StyledLink onClick={props.openFinancingPackagesInfoModal}>
-            Mehr zu Finanzierungsarten
+            <FormattedMessage id="default.financing_tab.more_financing_info" />
           </StyledLink>
         </>
       ) : (
@@ -247,7 +258,14 @@ const Calculator = (props: CalculatorProps) => {
       <LineBreak />
 
       <div>
-        <StyledLabel text={getMinMaxLabel('Anzahlung')} />
+        <StyledLabel
+          text={
+            <FormattedMessage
+              id="default.financing_tab.deposit"
+              values={{ minMax: getMinMaxLabel() }}
+            />
+          }
+        />
         <CurrencyInput
           onChange={props?.onChangeDownPayment}
           value={props?.state?.downPayment}
@@ -275,7 +293,7 @@ const Calculator = (props: CalculatorProps) => {
         />
       </div>
       <span>
-        <StyledLabel text="Monatsraten" />
+        <StyledLabel text={<FormattedMessage id="default.financing_tab.monthly_rates" />} />
         <MonthlyRateChooser
           selected={props?.state?.months}
           onChange={months => props.onChangeMonths(months)}
