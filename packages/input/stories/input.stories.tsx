@@ -8,7 +8,7 @@ import { IntlProvider } from 'react-intl';
 // import enLocaleData from 'react-intl/locale-data/en';
 import Checkbox from '@im-ui/checkbox';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
-import Input, { InputProps, checkPhoneValidation } from '../src';
+import Input, { InputProps, checkPhoneValidation, CurrencyInput } from '../src';
 import styled from 'styled-components';
 // import translations from '../../i18n';
 
@@ -296,10 +296,28 @@ const InputCustomValidation = (): React.ReactElement => {
   );
 };
 
+const CurrencyInputDemo = (): React.ReactElement => {
+  const [downPayment, setDownPayment] = React.useState(10);
+  const carPrice = 10000;
+  const isAnzahlungError = false;
+
+  return renderWithThemeAndI18n(
+    <CurrencyInput
+      onChange={setDownPayment}
+      value={downPayment}
+      max={carPrice}
+      onCrossClick={() => setDownPayment(0)}
+      sign={'€'}
+      invalid={isAnzahlungError}
+    />
+  );
+};
+
 storiesOf('Input', module)
   .add('phone', () => <PhoneInputDemo />)
   .add('text', () => <TextInputDemo />)
   .add('text floatLabel', () => <TextInputFloatDemo />)
   .add('validation', () => <TextInputValidationDemo />)
   .add('overwrite html5 validation', () => <InputCustomValidation />)
-  .add('range', () => <RangeInputDemo />);
+  .add('range', () => <RangeInputDemo />)
+  .add('currency', () => <CurrencyInputDemo />);
