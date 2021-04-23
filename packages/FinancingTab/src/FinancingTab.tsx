@@ -22,7 +22,7 @@ type FeatureFlagsType = {
 /**
  * The "initial" data that is passed from the "outside"
  */
-type Props = {
+export type Props = {
   /**
    * Tab state
    */

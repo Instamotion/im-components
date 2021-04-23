@@ -4,10 +4,10 @@ import { renderWithThemeAndI18n } from '@im-ui/utils';
 
 import messages from '../utils/locales';
 
-import FinancingTab, { FinancingTabProps } from '../src';
+import FinancingTab from '../src';
 
 storiesOf('Financing Tab', module).add('Default', () => {
-  const props: FinancingTabProps = {
+  const props = {
     offer: {
       __typename: 'Offer',
       isTopOffer: false,
@@ -147,6 +147,7 @@ storiesOf('Financing Tab', module).add('Default', () => {
       onChangeDownPaynment={() => {}}
       onChangeWithBalloonRate={() => {}}
       onChangeMonths={() => {}}
+      openFinancingPackagesInfoModal={() => {}}
     />,
     'de',
     messages
