@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.6.6
+
+### Patch Changes
+
+- e5b37db: Add currency input
+
 ## 2.6.5
 
 ### Patch Changes
