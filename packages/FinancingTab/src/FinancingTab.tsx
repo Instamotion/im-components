@@ -160,9 +160,7 @@ const Calculator: React.FC<CalculatorProps> = ({
               { label: 'Classic', value: 'classic' }
             ]}
             selected={state?.withBalloonRate ? 'easygo' : 'classic'}
-            onChange={selected =>
-              selected === 'easygo' ? onChangeWithBalloonRate(true) : onChangeWithBalloonRate(false)
-            }
+            onChange={selected => onChangeWithBalloonRate(selected === 'easygo')}
           />
           <StyledLink onClick={openFinancingPackagesInfoModal}>
             <FormattedMessage id="default.financing_tab.more_financing_info" />
