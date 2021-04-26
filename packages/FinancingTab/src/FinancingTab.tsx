@@ -48,23 +48,12 @@ export type Props = {
 };
 
 const getMinMaxLabel = (label: string = '', min?: number, max?: number): string => {
-  let parts = [label];
-  if (!isNil(min) || !isNil(max)) {
-    parts.push(' (');
+  if (min || max) {
+    const minLabel = min ? `min: ${formatCurrency(min)}` : '';
+    const maxLabel = max ? `max: ${formatCurrency(max)}` : '';
+    return `${label} (${minLabel}${min && max ? '; ' : ''}${maxLabel})`;
   }
-  if (!isNil(min)) {
-    parts.push(`min: ${formatCurrency(min)}`);
-  }
-  if (!isNil(max)) {
-    if (!isNil(min)) {
-      parts.push('; ');
-    }
-    parts.push(`max: ${formatCurrency(max)}`);
-  }
-  if (!isNil(min) || !isNil(max)) {
-    parts.push(')');
-  }
-  return parts.join('');
+  return label;
 };
 
 export interface IMonthsSelection {
