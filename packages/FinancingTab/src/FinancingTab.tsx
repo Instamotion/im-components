@@ -147,6 +147,7 @@ const Calculator: React.FC<CalculatorProps> = ({
         />
       );
     }
+    return '';
   };
 
   return (
@@ -202,7 +203,7 @@ const Calculator: React.FC<CalculatorProps> = ({
       <div>
         <StyledLabel
           disabled={!!isSchlussrateReadOnly || !state?.withBalloonRate}
-          text={schlussRateLabel() ?? ''}
+          text={schlussRateLabel()}
         />
         <CurrencyInput
           onChange={onChangeBalloonRate}
