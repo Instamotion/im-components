@@ -1,10 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import theme from '@im-ui/theme';
-import { css as cssUtils } from '@im-ui/utils';
-
-const { px2rem } = cssUtils;
-
+import { IMTheme as theme } from '@im-ui/theme';
 export interface ButtonToggleItemProps<A> {
   label: string | JSX.Element;
   value: A;
@@ -19,34 +15,40 @@ export interface ButtonToggleItemStyledProps {
 
 export const ButtonToggleContainer = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const ButtonToggleItem = styled.div<ButtonToggleItemStyledProps>`
-  min-width: ${px2rem(20)};
-  max-width: ${px2rem(40)};
-  height: ${px2rem(40)};
-  line-height: ${px2rem(40)};
-  border: ${px2rem(0.5)} solid ${theme.color.silver};
-  border-radius: ${px2rem(4)};
+  min-width: 3rem;
+  min-height: 3rem;
+  max-width: 3rem;
+  max-height: 3rem;
+  line-height: 2.5rem;
+  border-radius: 0.5rem;
   text-align: center;
-  margin-right: ${px2rem(1)};
+  margin-right: 0.063rem;
   cursor: pointer;
-  flex: 1;
+  font-weight: bold;
+  font-size: 1.25rem;
+  box-shadow: 0rem 0rem 0.5rem 0.25rem rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${theme.color.typo};
 
   ${props =>
     props.selected &&
     css`
-      border-color: ${theme.color.downy};
-      background-color: ${theme.color.downy};
-      font-weight: 600;
+      background-color: ${theme.color.primary};
       color: ${theme.color.white};
     `}
 
   ${props =>
     props.disabled &&
     css`
-      background-color: ${theme.color.lightGrey};
-      color: ${theme.color.silver};
+      background-color: ${theme.color.whiteGrey};
+      color: ${theme.color.grey};
       cursor: default;
     `}
 `;

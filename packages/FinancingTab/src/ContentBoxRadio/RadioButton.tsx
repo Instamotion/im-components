@@ -47,7 +47,7 @@ export const RadioButtonInput = styled.input`
     width: 1.5rem;
     height: 1.5rem;
     background-color: ${theme.color.bermuda};
-    background-image: url('check.svg');
+    background-image: url('https://cdn.instamotion.com/images/check.svg');
   }
 `;
 
