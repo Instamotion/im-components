@@ -43,7 +43,7 @@ export type Props = {
   onChangeWithBalloonRate: (withBallonRate: boolean) => void;
   onChangeMonths: (month: number) => void;
   onChangeBalloonRate: (ballon: number) => void;
-  onChangeDownPaynment: (downPayment: number) => void;
+  onChangeDownPayment: (downPayment: number) => void;
   openFinancingPackagesInfoModal: () => void;
 };
 
