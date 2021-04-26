@@ -22,7 +22,7 @@ function isNil<A>(x: A | null | undefined): boolean {
 export const formatCurrency = (x: number | undefined): string =>
   `${x != undefined && x.toLocaleString('de-de')} €`;
 
-type FeatureFlagsType = {
+export type FeatureFlagsType = {
   'schlussrate-read-only': boolean;
   'content-box-radio-schlussrate': boolean;
 };
