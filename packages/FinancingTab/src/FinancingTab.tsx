@@ -100,6 +100,11 @@ const getMonthsSelection = (withBalloon: boolean): IMonthsSelection[] => {
   ];
 };
 
+const RadioEnum = {
+  easygo: 'easygo',
+  classic: 'classic'
+};
+
 export type CalculatorProps = {
   carPrice: number;
   state: FinancingTabState;
@@ -156,11 +161,11 @@ const Calculator: React.FC<CalculatorProps> = ({
         <>
           <ContentBoxRadioButtonGroup
             radioButtons={[
-              { label: 'EasyGo', value: 'easygo' },
-              { label: 'Classic', value: 'classic' }
+              { label: 'EasyGo', value: RadioEnum.easygo },
+              { label: 'Classic', value: RadioEnum.classic }
             ]}
-            selected={state?.withBalloonRate ? 'easygo' : 'classic'}
-            onChange={selected => onChangeWithBalloonRate(selected === 'easygo')}
+            selected={state?.withBalloonRate ? RadioEnum.easygo : RadioEnum.classic}
+            onChange={selected => onChangeWithBalloonRate(selected === RadioEnum.easygo)}
           />
           <StyledLink onClick={openFinancingPackagesInfoModal}>
             <FormattedMessage id="default.financing_tab.more_financing_info" />
