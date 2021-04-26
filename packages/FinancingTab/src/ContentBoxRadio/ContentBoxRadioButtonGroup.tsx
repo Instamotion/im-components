@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { IMTheme as theme } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 import ContentBoxRadioButton from './ContentBoxRadioButton';
+import { FormattedMessage } from 'react-intl';
 
 export interface RadioButtonsProps<T> {
   label: JSX.Element | string;
@@ -95,11 +96,15 @@ function ContentBoxRadioButtonGroup<T>({
   // TODO fetch from contentful
   const USP_MAPPINGS = {
     easygo: [
-      'Niedrige monatliche Raten​',
-      'Bis zu 61 Monate Laufzeit​',
-      'Schlussrate oder Refinanzierung am Ende der Laufzeit​'
+      'default.financing_tab.easygo1',
+      'default.financing_tab.easygo2',
+      'default.financing_tab.easygo3'
     ],
-    classic: ['Ohne Schlussrate​', 'Bis zu 96 Monate Laufzeit​', 'Kredit nach Laufzeit getilgt​']
+    classic: [
+      'default.financing_tab.classic1',
+      'default.financing_tab.classic2',
+      'default.financing_tab.classic3'
+    ]
   };
 
   const handleOnSelect = (val: T): void => {
@@ -130,7 +135,9 @@ function ContentBoxRadioButtonGroup<T>({
                     <CheckIconWrapper>
                       <Icon icon="radioCheck" />
                     </CheckIconWrapper>
-                    <UspText>{usp}</UspText>
+                    <UspText>
+                      <FormattedMessage id={usp} />
+                    </UspText>
                   </UspItem>
                 )
               )}
