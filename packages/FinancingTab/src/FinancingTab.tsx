@@ -22,7 +22,7 @@ function isNil<A>(x: A | null | undefined): boolean {
 export const formatCurrency = (x: number | undefined): string =>
   `${x != undefined && x.toLocaleString('de-de')} €`;
 
-type FeatureFlagsType = {
+export type FeatureFlagsType = {
   'schlussrate-read-only': boolean;
   'content-box-radio-schlussrate': boolean;
 };
@@ -43,7 +43,7 @@ export type Props = {
   onChangeWithBalloonRate: (withBallonRate: boolean) => void;
   onChangeMonths: (month: number) => void;
   onChangeBalloonRate: (ballon: number) => void;
-  onChangeDownPaynment: (downPayment: number) => void;
+  onChangeDownPayment: (downPayment: number) => void;
   openFinancingPackagesInfoModal: () => void;
 };
 
@@ -239,7 +239,7 @@ const FinancingTab: React.FC<Props> = ({
   onChangeWithBalloonRate,
   onChangeMonths,
   onChangeBalloonRate,
-  onChangeDownPaynment
+  onChangeDownPayment
 }) => {
   const isSchlussrateReadOnly = useMemo(() => !!featureFlags['schlussrate-read-only'], [
     featureFlags
@@ -264,7 +264,7 @@ const FinancingTab: React.FC<Props> = ({
             onChangeWithBalloonRate={onChangeWithBalloonRate}
             onChangeMonths={onChangeMonths}
             onChangeBalloonRate={onChangeBalloonRate}
-            onChangeDownPayment={onChangeDownPaynment}
+            onChangeDownPayment={onChangeDownPayment}
           />
         </FinancingTabWrap>
       </FinancingTabContainer>

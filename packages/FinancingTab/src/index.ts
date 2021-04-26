@@ -1,2 +1,1 @@
-export { default } from './FinancingTab';
-export { Props } from './FinancingTab';
+export { default, Props, FeatureFlagsType } from './FinancingTab';
