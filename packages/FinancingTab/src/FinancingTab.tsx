@@ -1,12 +1,19 @@
 import React, { useMemo } from 'react';
-import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
-import { IMTheme as theme } from '@im-ui/theme';
-import Label from '@im-ui/label';
 import Toggle from '@im-ui/toggle';
 import { CurrencyInput } from '@im-ui/input';
 import MonthlyRateChooser from './MonthlyRateChooser';
 import ContentBoxRadioButtonGroup from './ContentBoxRadio/ContentBoxRadioButtonGroup';
+import {
+  FinancingTabContainer,
+  TabPanel,
+  ToggleWrapper,
+  LineBreak,
+  StyledLabel,
+  StyledLink,
+  CalculatorPane,
+  FinancingTabWrap
+} from './styles';
 
 function isNil<A>(x: A | null | undefined): boolean {
   return x === null || x === undefined;
@@ -60,14 +67,6 @@ const getMinMaxLabel = (label: string = '', min?: number, max?: number): string 
   return parts.join('');
 };
 
-const Col = styled.div`
-  flex: 1;
-`;
-
-const FinancingTabWrap = styled.div`
-  flex: 50%;
-`;
-
 export interface IMonthsSelection {
   label: string;
   value: number;
@@ -112,7 +111,7 @@ const getMonthsSelection = (withBalloon: boolean): IMonthsSelection[] => {
   ];
 };
 
-type CalculatorProps = {
+export type CalculatorProps = {
   carPrice: number;
   state: FinancingTabState;
   isSchlussrateReadOnly: boolean;
@@ -126,74 +125,6 @@ type CalculatorProps = {
 };
 
 const Calculator = (props: CalculatorProps) => {
-  const CalculatorPane = styled(Col as any)`
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-
-    label {
-      display: block;
-      margin: 0 0 0.4rem !important;
-    }
-
-    > div {
-      padding-bottom: 1.5rem;
-    }
-
-    #schlussrate label span {
-      text-transform: none;
-      font-weight: normal;
-      font-size: 1rem;
-    }
-
-    ${theme.mediaQueries.whenDesktop} {
-      > div {
-        padding-bottom: 2rem;
-      }
-      > div:first-child {
-        padding-bottom: 0.2rem;
-      }
-      > div:nth-last-child {
-        padding-bottom: 0;
-      }
-    }
-  `;
-
-  const LineBreak = styled.span`
-    display: none;
-    ${theme.mediaQueries.whenDesktop} {
-      display: block;
-      height: 0.125rem;
-      background: #f3f3f3;
-      margin-bottom: 1.5rem;
-    }
-  `;
-
-  const StyledLabel = styled(Label)`
-    font-family: ${theme.font.bentonBold.family} !important;
-    font-weight: bold !important;
-    font-size: 1em !important;
-    line-height: 1.625rem !important;
-    text-transform: capitalize !important;
-    color: ${theme.color.typo} !important;
-  `;
-
-  const StyledLink = styled.span`
-    font-family: ${theme.font.bentonBold.family};
-    font-weight: ${theme.font.bentonBold.weight};
-    font-size: 1em;
-    line-height: 1.625rem;
-    text-transform: initial;
-    color: ${theme.color.typo};
-    text-decoration: underline;
-    padding-bottom: 2rem;
-    cursor: pointer;
-    width: fit-content;
-    ${theme.mediaQueries.whenDesktop} {
-      padding-bottom: 1rem;
-    }
-  `;
-
   const schlussRateLabel = () => {
     if (!props.isSchlussrateReadOnly) {
       if (props?.state?.withBalloonRate) {
@@ -217,11 +148,6 @@ const Calculator = (props: CalculatorProps) => {
       );
     }
   };
-
-  const ToggleWrapper = styled.div`
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  `;
 
   return (
     <CalculatorPane>
@@ -303,18 +229,6 @@ const Calculator = (props: CalculatorProps) => {
     </CalculatorPane>
   );
 };
-
-const FinancingTabContainer = styled.div`
-  display: flex;
-  background-color: ${theme.color.white};
-`;
-
-const TabPanel = styled.div`
-  padding: 0rem 1.5rem;
-  ${theme.mediaQueries.whenDesktop} {
-    padding: unset;
-  }
-`;
 
 const FinancingTab = (props: Props) => {
   const {
