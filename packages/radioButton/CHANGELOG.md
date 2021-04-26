@@ -1,5 +1,11 @@
 # @im-ui/radio-button
 
+## 0.2.3
+
+### Patch Changes
+
+- b66f33a: Minor updates
+
 ## 0.2.2
 
 ### Patch Changes

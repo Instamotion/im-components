@@ -1,5 +1,11 @@
 # @im-ui/button-toggle
 
+## 1.1.2
+
+### Patch Changes
+
+- b66f33a: Minor updates
+
 ## 1.1.1
 
 ### Patch Changes

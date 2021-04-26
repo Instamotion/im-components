@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/financing-tab",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "types": "dist/cjs/index.d.ts",
   "module": "dist/esm/index.js",
   "main": "dist/cjs/index.js",
@@ -20,20 +20,18 @@
     "compile:cjs": "tsc -p build/tsconfig.cjs.json",
     "prepublishOnly": "bolt build"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "dependencies": {
     "@im-ui/theme": "^2.0.8",
     "@im-ui/utils": "^0.5.6",
     "@im-ui/icon": "^0.6.11",
     "@im-ui/button": "^0.6.0",
     "@im-ui/dropdown": "^1.2.0",
-    "@im-ui/button-toggle": "^1.0.0",
+    "@im-ui/button-toggle": "^1.1.2",
     "@im-ui/toggle": "^1.0.0",
     "@im-ui/label": "^1.0.0",
-    "@im-ui/radio-button": "^0.2.0",
-    "@im-ui/input" : "^2.6.6"
+    "@im-ui/radio-button": "^0.2.3",
+    "@im-ui/input": "^2.6.6"
   },
   "devDependencies": {
     "@types/jest": "^24.0.21",
