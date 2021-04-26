@@ -239,7 +239,7 @@ const FinancingTab: React.FC<Props> = ({
   onChangeWithBalloonRate,
   onChangeMonths,
   onChangeBalloonRate,
-  onChangeDownPaynment
+  onChangeDownPayment
 }) => {
   const isSchlussrateReadOnly = useMemo(() => !!featureFlags['schlussrate-read-only'], [
     featureFlags
@@ -264,7 +264,7 @@ const FinancingTab: React.FC<Props> = ({
             onChangeWithBalloonRate={onChangeWithBalloonRate}
             onChangeMonths={onChangeMonths}
             onChangeBalloonRate={onChangeBalloonRate}
-            onChangeDownPayment={onChangeDownPaynment}
+            onChangeDownPayment={onChangeDownPayment}
           />
         </FinancingTabWrap>
       </FinancingTabContainer>
