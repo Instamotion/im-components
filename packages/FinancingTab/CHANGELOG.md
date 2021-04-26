@@ -1,6 +1,13 @@
 # @im-ui/financing-tab
 
+## 0.0.3
+
+### Patch Changes
+
+- af48598: Export feature flags type
+
 ## 0.0.2
+
 ### Patch Changes
 
 - b66f33a: First version
