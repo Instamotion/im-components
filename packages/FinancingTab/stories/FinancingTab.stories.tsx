@@ -67,6 +67,7 @@ storiesOf('Financing Tab', module).add('Default', () => {
       deliveryTime: null,
       cms: null
     },
+
     state: {
       withBalloonRate: true,
       downPayment: 1313,

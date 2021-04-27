@@ -76,7 +76,7 @@ type FinancingTabState = {
   downPayment: number;
   maxDownPayment: number;
   months: number;
-  balloonAmount: number | null;
+  balloonAmount: number;
   minBalloonAmount: number | undefined;
   maxBalloonAmount: number | undefined;
   monthlyInstallment: number;
@@ -119,10 +119,16 @@ export type CalculatorProps = {
   calculatorIsOpen: boolean;
   onChangeCalulatorIsOpen: () => void;
   carPrice: number;
-  state: FinancingTabState;
   isSchlussrateReadOnly: boolean;
   isContentBoxRadioSchlussrateOn: boolean;
   isAnzahlungError: boolean;
+  withBalloonRate: boolean;
+  downPayment: number;
+  months: number;
+  balloonAmount: number;
+  minBalloonAmount: number | undefined;
+  maxBalloonAmount: number | undefined;
+  monthlyInstallment: number;
   onChangeWithBalloonRate: (withBalloonRate: boolean) => void;
   onChangeDownPayment: (downPayment: number) => void;
   onChangeMonths: (months: number) => void;
@@ -135,25 +141,30 @@ const Calculator: React.FC<CalculatorProps> = ({
   calculatorIsOpen,
   onChangeCalulatorIsOpen,
   carPrice,
-  state,
   isSchlussrateReadOnly,
   isContentBoxRadioSchlussrateOn,
   isAnzahlungError,
+  withBalloonRate,
+  downPayment,
+  months,
+  monthlyInstallment,
+  balloonAmount,
+  minBalloonAmount,
+  maxBalloonAmount,
   onChangeWithBalloonRate,
   onChangeDownPayment,
   onChangeMonths,
   onChangeBalloonRate,
   openFinancingPackagesInfoModal
 }) => {
-  console.log(state);
   const schlussRateLabel = () => {
     if (!isSchlussrateReadOnly) {
-      if (state?.withBalloonRate) {
+      if (withBalloonRate) {
         return (
           <FormattedMessage
             id="default.financing_tab.final_installment"
             values={{
-              minMax: getMinMaxLabel('', state.minBalloonAmount, state.maxBalloonAmount)
+              minMax: getMinMaxLabel('', minBalloonAmount, maxBalloonAmount)
             }}
           />
         );
@@ -182,7 +193,7 @@ const Calculator: React.FC<CalculatorProps> = ({
                   { label: 'EasyGo', value: RadioEnum.easygo },
                   { label: 'Classic', value: RadioEnum.classic }
                 ]}
-                selected={state?.withBalloonRate ? RadioEnum.easygo : RadioEnum.classic}
+                selected={withBalloonRate ? RadioEnum.easygo : RadioEnum.classic}
                 onChange={selected => onChangeWithBalloonRate(selected === RadioEnum.easygo)}
               />
               <StyledLink onClick={openFinancingPackagesInfoModal}>
@@ -194,7 +205,7 @@ const Calculator: React.FC<CalculatorProps> = ({
               <Toggle
                 id="schlussrate"
                 label="mit Schlussrate"
-                checked={state?.withBalloonRate}
+                checked={withBalloonRate}
                 fullWidth={true}
                 onChange={onChangeWithBalloonRate}
               />
@@ -214,34 +225,34 @@ const Calculator: React.FC<CalculatorProps> = ({
             />
             <CurrencyInput
               onChange={onChangeDownPayment}
-              value={state?.downPayment}
+              value={downPayment}
               max={carPrice}
-              {...(state?.downPayment > 0 ? { onCrossClick: () => onChangeDownPayment(0) } : {})}
+              {...(downPayment > 0 ? { onCrossClick: () => onChangeDownPayment(0) } : {})}
               sign={'€'}
               invalid={isAnzahlungError}
             />
           </div>
           <div>
             <StyledLabel
-              disabled={!!isSchlussrateReadOnly || !state?.withBalloonRate}
+              disabled={!!isSchlussrateReadOnly || !withBalloonRate}
               text={schlussRateLabel()}
             />
             <CurrencyInput
               onChange={onChangeBalloonRate}
-              value={state?.withBalloonRate ? state?.balloonAmount || 0 : 0}
-              max={state?.maxBalloonAmount}
-              min={state?.minBalloonAmount}
+              value={withBalloonRate ? balloonAmount : 0}
+              max={maxBalloonAmount}
+              min={minBalloonAmount}
               sign={'€'}
-              onCrossClick={() => onChangeBalloonRate(state?.minBalloonAmount ?? 0)}
-              disabled={!!isSchlussrateReadOnly || !state?.withBalloonRate}
+              onCrossClick={() => onChangeBalloonRate(minBalloonAmount ?? 0)}
+              disabled={!!isSchlussrateReadOnly || !withBalloonRate}
             />
           </div>
           <span>
             <StyledLabel text={<FormattedMessage id="default.financing_tab.monthly_rates" />} />
             <MonthlyRateChooser
-              selected={state?.months}
+              selected={months}
               onChange={months => onChangeMonths(months)}
-              items={getMonthsSelection(state?.withBalloonRate)}
+              items={getMonthsSelection(withBalloonRate)}
             />
           </span>
         </>
@@ -255,7 +266,7 @@ const Calculator: React.FC<CalculatorProps> = ({
                 <FormattedMessage
                   id="default.financing_tab.rates"
                   values={{
-                    rates: state.months
+                    rates: months
                   }}
                 />
               </AdjustFinancingTitle>
@@ -271,7 +282,7 @@ const Calculator: React.FC<CalculatorProps> = ({
                 <FormattedMessage
                   id="default.financing_tab.monthly_rate"
                   values={{
-                    rate: state.monthlyInstallment
+                    rate: monthlyInstallment
                   }}
                 />
               </AdjustFinancingTitle>
@@ -310,6 +321,16 @@ const FinancingTab: React.FC<Props> = ({
     [featureFlags]
   );
 
+  const {
+    balloonAmount = 0,
+    withBalloonRate,
+    downPayment,
+    maxBalloonAmount,
+    minBalloonAmount,
+    months,
+    monthlyInstallment
+  } = state;
+
   return (
     <TabPanel>
       <FinancingTabContainer>
@@ -319,7 +340,13 @@ const FinancingTab: React.FC<Props> = ({
             calculatorIsOpen={calculatorIsOpen}
             onChangeCalulatorIsOpen={onChangeCalulatorIsOpen}
             carPrice={offer?.price ?? 0}
-            state={state}
+            balloonAmount={balloonAmount}
+            withBalloonRate={withBalloonRate}
+            downPayment={downPayment}
+            maxBalloonAmount={maxBalloonAmount}
+            minBalloonAmount={minBalloonAmount}
+            months={months}
+            monthlyInstallment={monthlyInstallment}
             isSchlussrateReadOnly={isSchlussrateReadOnly}
             isContentBoxRadioSchlussrateOn={isContentBoxRadioSchlussrateOn}
             isAnzahlungError={isAnzahlungError}
