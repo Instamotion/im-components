@@ -331,6 +331,8 @@ const FinancingTab: React.FC<Props> = ({
     monthlyInstallment
   } = state;
 
+  const { price = 0 } = offer;
+
   return (
     <TabPanel>
       <FinancingTabContainer>
@@ -339,7 +341,7 @@ const FinancingTab: React.FC<Props> = ({
             showFinancingAdjust={showFinancingAdjust}
             calculatorIsOpen={calculatorIsOpen}
             onChangeCalulatorIsOpen={onChangeCalulatorIsOpen}
-            carPrice={offer?.price ?? 0}
+            carPrice={price}
             balloonAmount={balloonAmount}
             withBalloonRate={withBalloonRate}
             downPayment={downPayment}
