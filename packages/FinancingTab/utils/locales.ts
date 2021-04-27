@@ -8,7 +8,11 @@ const de = {
   'default.financing_tab.easygo3': 'Schlussrate oder Refinanzierung am Ende der Laufzeit​',
   'default.financing_tab.classic1': 'Ohne Schlussrate​',
   'default.financing_tab.classic2': 'Bis zu 96 Monate Laufzeit​',
-  'default.financing_tab.classic3': 'Kredit nach Laufzeit getilgt​'
+  'default.financing_tab.classic3': 'Kredit nach Laufzeit getilgt​',
+  'default.financing_tab.details': 'Einzelheiten',
+  'default.financing_tab.rates': '{rates} monatliche Raten á',
+  'default.financing_tab.monthly_rate': '{rate} € / Monat',
+  'default.financing_tab.adjust_financing': 'Finanzierung anpassen'
 };
 
 export default { de };

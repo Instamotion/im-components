@@ -23,4 +23,8 @@ default.financing_tab.easygo3
 default.financing_tab.classic1
 default.financing_tab.classic2
 default.financing_tab.classic3
+default.financing_tab.details
+default.financing_tab.rates
+default.financing_tab.monthly_rate
+default.financing_tab.adjust_financing
 ```

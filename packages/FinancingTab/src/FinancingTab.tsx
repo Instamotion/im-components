@@ -12,7 +12,13 @@ import {
   StyledLabel,
   StyledLink,
   CalculatorPane,
-  FinancingTabWrap
+  FinancingTabWrap,
+  AdjustFinancingWrapper,
+  AdjustFinancingTitle,
+  AdjustFinancingDivider,
+  AdjustFinancingLink,
+  AdjustFinancingRight,
+  AdjustLineBreak
 } from './styles';
 
 function isNil<A>(x: A | null | undefined): boolean {
@@ -37,6 +43,9 @@ export type Props = {
   /**
    * Offer that represents the car
    */
+  showFinancingAdjust: boolean;
+  calculatorIsOpen: boolean;
+  onChangeCalulatorIsOpen: () => void;
   offer: Offer;
   featureFlags: FeatureFlagsType;
   isAnzahlungError: boolean;
@@ -106,6 +115,9 @@ const RadioEnum = {
 };
 
 export type CalculatorProps = {
+  showFinancingAdjust: boolean;
+  calculatorIsOpen: boolean;
+  onChangeCalulatorIsOpen: () => void;
   carPrice: number;
   state: FinancingTabState;
   isSchlussrateReadOnly: boolean;
@@ -119,6 +131,9 @@ export type CalculatorProps = {
 };
 
 const Calculator: React.FC<CalculatorProps> = ({
+  showFinancingAdjust,
+  calculatorIsOpen,
+  onChangeCalulatorIsOpen,
   carPrice,
   state,
   isSchlussrateReadOnly,
@@ -157,80 +172,124 @@ const Calculator: React.FC<CalculatorProps> = ({
 
   return (
     <CalculatorPane>
-      {isContentBoxRadioSchlussrateOn ? (
+      {calculatorIsOpen && (
         <>
-          <ContentBoxRadioButtonGroup
-            radioButtons={[
-              { label: 'EasyGo', value: RadioEnum.easygo },
-              { label: 'Classic', value: RadioEnum.classic }
-            ]}
-            selected={state?.withBalloonRate ? RadioEnum.easygo : RadioEnum.classic}
-            onChange={selected => onChangeWithBalloonRate(selected === RadioEnum.easygo)}
-          />
-          <StyledLink onClick={openFinancingPackagesInfoModal}>
-            <FormattedMessage id="default.financing_tab.more_financing_info" />
-          </StyledLink>
-        </>
-      ) : (
-        <ToggleWrapper>
-          <Toggle
-            id="schlussrate"
-            label="mit Schlussrate"
-            checked={state?.withBalloonRate}
-            fullWidth={true}
-            onChange={onChangeWithBalloonRate}
-          />
-        </ToggleWrapper>
-      )}
+          {isContentBoxRadioSchlussrateOn ? (
+            <>
+              <ContentBoxRadioButtonGroup
+                radioButtons={[
+                  { label: 'EasyGo', value: RadioEnum.easygo },
+                  { label: 'Classic', value: RadioEnum.classic }
+                ]}
+                selected={state?.withBalloonRate ? RadioEnum.easygo : RadioEnum.classic}
+                onChange={selected => onChangeWithBalloonRate(selected === RadioEnum.easygo)}
+              />
+              <StyledLink onClick={openFinancingPackagesInfoModal}>
+                <FormattedMessage id="default.financing_tab.more_financing_info" />
+              </StyledLink>
+            </>
+          ) : (
+            <ToggleWrapper>
+              <Toggle
+                id="schlussrate"
+                label="mit Schlussrate"
+                checked={state?.withBalloonRate}
+                fullWidth={true}
+                onChange={onChangeWithBalloonRate}
+              />
+            </ToggleWrapper>
+          )}
 
-      <LineBreak />
+          <LineBreak />
 
-      <div>
-        <StyledLabel
-          text={
-            <FormattedMessage
-              id="default.financing_tab.deposit"
-              values={{ minMax: getMinMaxLabel() }}
+          <div>
+            <StyledLabel
+              text={
+                <FormattedMessage
+                  id="default.financing_tab.deposit"
+                  values={{ minMax: getMinMaxLabel() }}
+                />
+              }
             />
-          }
-        />
-        <CurrencyInput
-          onChange={onChangeDownPayment}
-          value={state?.downPayment}
-          max={carPrice}
-          {...(state?.downPayment > 0 ? { onCrossClick: () => onChangeDownPayment(0) } : {})}
-          sign={'€'}
-          invalid={isAnzahlungError}
-        />
-      </div>
-      <div>
-        <StyledLabel
-          disabled={!!isSchlussrateReadOnly || !state?.withBalloonRate}
-          text={schlussRateLabel()}
-        />
-        <CurrencyInput
-          onChange={onChangeBalloonRate}
-          value={state?.withBalloonRate ? state?.balloonAmount || 0 : 0}
-          max={state?.maxBalloonAmount}
-          min={state?.minBalloonAmount}
-          sign={'€'}
-          onCrossClick={() => onChangeBalloonRate(state?.minBalloonAmount ?? 0)}
-          disabled={!!isSchlussrateReadOnly || !state?.withBalloonRate}
-        />
-      </div>
-      <span>
-        <StyledLabel text={<FormattedMessage id="default.financing_tab.monthly_rates" />} />
-        <MonthlyRateChooser
-          selected={state?.months}
-          onChange={months => onChangeMonths(months)}
-          items={getMonthsSelection(state?.withBalloonRate)}
-        />
-      </span>
+            <CurrencyInput
+              onChange={onChangeDownPayment}
+              value={state?.downPayment}
+              max={carPrice}
+              {...(state?.downPayment > 0 ? { onCrossClick: () => onChangeDownPayment(0) } : {})}
+              sign={'€'}
+              invalid={isAnzahlungError}
+            />
+          </div>
+          <div>
+            <StyledLabel
+              disabled={!!isSchlussrateReadOnly || !state?.withBalloonRate}
+              text={schlussRateLabel()}
+            />
+            <CurrencyInput
+              onChange={onChangeBalloonRate}
+              value={state?.withBalloonRate ? state?.balloonAmount || 0 : 0}
+              max={state?.maxBalloonAmount}
+              min={state?.minBalloonAmount}
+              sign={'€'}
+              onCrossClick={() => onChangeBalloonRate(state?.minBalloonAmount ?? 0)}
+              disabled={!!isSchlussrateReadOnly || !state?.withBalloonRate}
+            />
+          </div>
+          <span>
+            <StyledLabel text={<FormattedMessage id="default.financing_tab.monthly_rates" />} />
+            <MonthlyRateChooser
+              selected={state?.months}
+              onChange={months => onChangeMonths(months)}
+              items={getMonthsSelection(state?.withBalloonRate)}
+            />
+          </span>
+        </>
+      )}
+      {showFinancingAdjust && (
+        <>
+          <AdjustLineBreak top={true} />
+          <AdjustFinancingWrapper>
+            <div>
+              <AdjustFinancingTitle>
+                <FormattedMessage
+                  id="default.financing_tab.rates"
+                  values={{
+                    rates: 60
+                  }}
+                />
+              </AdjustFinancingTitle>
+              {!calculatorIsOpen && (
+                <AdjustFinancingLink onClick={onChangeCalulatorIsOpen}>
+                  <FormattedMessage id="default.financing_tab.adjust_financing" />
+                </AdjustFinancingLink>
+              )}
+            </div>
+            <AdjustFinancingDivider />
+            <AdjustFinancingRight>
+              <AdjustFinancingTitle>
+                <FormattedMessage
+                  id="default.financing_tab.monthly_rate"
+                  values={{
+                    rate: 124
+                  }}
+                />
+              </AdjustFinancingTitle>
+              <AdjustFinancingLink>
+                <FormattedMessage id="default.financing_tab.details" />
+              </AdjustFinancingLink>
+            </AdjustFinancingRight>
+          </AdjustFinancingWrapper>
+          <AdjustLineBreak top={false} />
+        </>
+      )}
     </CalculatorPane>
   );
 };
 
 const FinancingTab: React.FC<Props> = ({
+  showFinancingAdjust,
+  calculatorIsOpen,
+  onChangeCalulatorIsOpen,
   state,
   offer,
   featureFlags,
@@ -255,6 +314,9 @@ const FinancingTab: React.FC<Props> = ({
       <FinancingTabContainer>
         <FinancingTabWrap>
           <Calculator
+            showFinancingAdjust={showFinancingAdjust}
+            calculatorIsOpen={calculatorIsOpen}
+            onChangeCalulatorIsOpen={onChangeCalulatorIsOpen}
             carPrice={offer?.price ?? 0}
             state={state}
             isSchlussrateReadOnly={isSchlussrateReadOnly}

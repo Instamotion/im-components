@@ -63,10 +63,18 @@ export const CalculatorPane = styled(Col as any)`
 export const LineBreak = styled.span`
   display: none;
   ${theme.mediaQueries.whenDesktop} {
+    width: 100%;
     display: block;
     height: 0.125rem;
     background: #f3f3f3;
     margin-bottom: 1.5rem;
+  }
+`;
+
+export const AdjustLineBreak = styled(LineBreak as any)<{ top: boolean }>`
+  ${theme.mediaQueries.whenDesktop} {
+    margin-top: ${props => (props.top ? '1.5' : '1')}rem;
+    margin-bottom: ${props => (props.top ? '1' : '0')}rem;
   }
 `;
 
@@ -92,5 +100,48 @@ export const StyledLink = styled.span`
   width: fit-content;
   ${theme.mediaQueries.whenDesktop} {
     padding-bottom: 1rem;
+  }
+`;
+
+export const AdjustFinancingWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0rem !important;
+
+  div:nth-child(3) {
+    margin-left: auto;
+  }
+`;
+
+export const AdjustFinancingTitle = styled.p`
+  font-size: 1rem;
+  line-height: 1rem;
+  color: ${theme.color.typography};
+  font-family: ${theme.font.bentonMedium.family};
+  font-weight: ${theme.font.bentonMedium.weight};
+  margin: 0;
+`;
+
+export const AdjustFinancingDivider = styled.div`
+  display: flex;
+  flex: 1;
+`;
+
+export const AdjustFinancingLink = styled.span`
+  margin-top: 0.5rem;
+  font-family: ${theme.font.bentonRegular.family};
+  font-weight: ${theme.font.bentonRegular.weight};
+  font-size: 0.75rem;
+  line-height: 0.7575rem;
+  color: ${theme.color.primary};
+  cursor: pointer;
+`;
+
+export const AdjustFinancingRight = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  span {
+    margin-left: auto;
   }
 `;
