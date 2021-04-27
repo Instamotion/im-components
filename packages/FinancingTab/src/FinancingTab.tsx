@@ -145,6 +145,7 @@ const Calculator: React.FC<CalculatorProps> = ({
   onChangeBalloonRate,
   openFinancingPackagesInfoModal
 }) => {
+  console.log(state);
   const schlussRateLabel = () => {
     if (!isSchlussrateReadOnly) {
       if (state?.withBalloonRate) {
@@ -254,7 +255,7 @@ const Calculator: React.FC<CalculatorProps> = ({
                 <FormattedMessage
                   id="default.financing_tab.rates"
                   values={{
-                    rates: 60
+                    rates: state.months
                   }}
                 />
               </AdjustFinancingTitle>
@@ -270,7 +271,7 @@ const Calculator: React.FC<CalculatorProps> = ({
                 <FormattedMessage
                   id="default.financing_tab.monthly_rate"
                   values={{
-                    rate: 124
+                    rate: state.monthlyInstallment
                   }}
                 />
               </AdjustFinancingTitle>
