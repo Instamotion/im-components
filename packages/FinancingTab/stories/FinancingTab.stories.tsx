@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
 
@@ -67,6 +67,7 @@ storiesOf('Financing Tab', module).add('Default', () => {
       deliveryTime: null,
       cms: null
     },
+
     state: {
       withBalloonRate: true,
       downPayment: 1313,
@@ -140,11 +141,16 @@ storiesOf('Financing Tab', module).add('Default', () => {
     isAnzahlungError: false
   };
 
+  const [calculatorIsOpen, setCalculatorIsOpen] = useState(false);
+
   return renderWithThemeAndI18n(
     <FinancingTab
       {...props}
+      showFinancingAdjust={true}
+      calculatorIsOpen={calculatorIsOpen}
+      onChangeCalulatorIsOpen={() => setCalculatorIsOpen(calculatorIsOpen => !calculatorIsOpen)}
       onChangeBalloonRate={() => {}}
-      onChangeDownPaynment={() => {}}
+      onChangeDownPayment={() => {}}
       onChangeWithBalloonRate={() => {}}
       onChangeMonths={() => {}}
       openFinancingPackagesInfoModal={() => {}}
