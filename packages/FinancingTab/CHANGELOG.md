@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.4
+
+### Patch Changes
+
+- 7cff5c9: Add colapsed view for checkout
+
 ## 0.0.3
 
 ### Patch Changes
