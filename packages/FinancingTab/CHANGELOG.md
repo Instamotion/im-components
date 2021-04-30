@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.5
+
+### Patch Changes
+
+- 8a67d43: Update input version
+
 ## 0.0.4
 
 ### Patch Changes
