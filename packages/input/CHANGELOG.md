@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.6.7
+
+### Patch Changes
+
+- 606269c: Fix issue of currency input not updating
+
 ## 2.6.6
 
 ### Patch Changes
