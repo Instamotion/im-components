@@ -31,7 +31,7 @@
     "@im-ui/toggle": "^1.0.0",
     "@im-ui/label": "^1.0.0",
     "@im-ui/radio-button": "^0.2.3",
-    "@im-ui/input": "^2.6.6"
+    "@im-ui/input": "^2.6.7"
   },
   "devDependencies": {
     "@types/jest": "^24.0.21",
