@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { IMTheme as theme } from '@im-ui/theme';
 import { StyledIcon } from './styles';
@@ -74,6 +74,10 @@ export const CurrencyInput = (props: CurrencyInputProps) => {
 
   const [state, setState] = useState<string>(String(value));
   const [isFocused, setIsFocused] = useState(false);
+
+  useEffect(() => {
+    setState(String(value));
+  }, [value]);
 
   if ((min && min > value) || (max && max < value)) {
     console.warn(`[currency input]: min (${min}); max (${max}); value (${value})`);
