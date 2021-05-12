@@ -75,7 +75,7 @@ export interface FaqProps {
 
 const FAQ: React.FC<FaqProps> = ({ getTrackingEvent = () => {}, faqSections }) => (
   <FaqSection>
-    <SectionTitle>FAQ</SectionTitle>
+    <SectionTitle>Häufige Fragen</SectionTitle>
     <AccordionWrapper>
       {faqSections &&
         faqSections.length &&
