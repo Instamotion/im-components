@@ -38,7 +38,7 @@ const Footer: React.FC<FooterProps> = props => {
         event: 'assigned',
         schema: 'experiment',
         experiment: {
-          id: 'UT-932',
+          id: 'UT-972',
           name: `${props.abTestFlagName}`,
           variant: `${props.abTestFlagValue}`,
           slot: 0
