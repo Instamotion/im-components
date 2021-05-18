@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.7
+
+### Patch Changes
+
+- 42df2ec: Add ability to open Financial Info Modal
+
 ## 0.0.6
 
 ### Patch Changes
