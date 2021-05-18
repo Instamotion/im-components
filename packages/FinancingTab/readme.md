@@ -27,4 +27,5 @@ default.financing_tab.details
 default.financing_tab.rates
 default.financing_tab.monthly_rate
 default.financing_tab.adjust_financing
+default.financing_tab.reset_financing
 ```
