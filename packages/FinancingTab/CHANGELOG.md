@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.6
+
+### Patch Changes
+
+- 3d51662: Add financing reset button
+
 ## 0.0.5
 
 ### Patch Changes
