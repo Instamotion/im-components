@@ -270,11 +270,14 @@ const Calculator: React.FC<CalculatorProps> = ({
                   }}
                 />
               </AdjustFinancingTitle>
-              {!calculatorIsOpen && (
-                <AdjustFinancingLink onClick={onChangeCalulatorIsOpen}>
+
+              <AdjustFinancingLink onClick={onChangeCalulatorIsOpen}>
+                {!calculatorIsOpen ? (
                   <FormattedMessage id="default.financing_tab.adjust_financing" />
-                </AdjustFinancingLink>
-              )}
+                ) : (
+                  <FormattedMessage id="default.financing_tab.reset_financing" />
+                )}
+              </AdjustFinancingLink>
             </div>
             <AdjustFinancingDivider />
             <AdjustFinancingRight>

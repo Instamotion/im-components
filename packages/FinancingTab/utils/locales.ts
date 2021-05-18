@@ -12,7 +12,8 @@ const de = {
   'default.financing_tab.details': 'Einzelheiten',
   'default.financing_tab.rates': '{rates} monatliche Raten á',
   'default.financing_tab.monthly_rate': '{rate} € / Monat',
-  'default.financing_tab.adjust_financing': 'Finanzierung anpassen'
+  'default.financing_tab.adjust_financing': 'Finanzierung anpassen',
+  'default.financing_tab.reset_financing': 'Finanzierung zurücksetzen'
 };
 
 export default { de };
