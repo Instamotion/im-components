@@ -54,6 +54,7 @@ export type Props = {
   onChangeBalloonRate: (ballon: number) => void;
   onChangeDownPayment: (downPayment: number) => void;
   openFinancingPackagesInfoModal: () => void;
+  openFinancialInfoModal?: () => void;
 };
 
 const getMinMaxLabel = (label: string = '', min?: number, max?: number): string => {
@@ -134,6 +135,7 @@ export type CalculatorProps = {
   onChangeMonths: (months: number) => void;
   onChangeBalloonRate: (balloonAmount: number) => void;
   openFinancingPackagesInfoModal: () => void;
+  openFinancialInfoModal?: () => void;
 };
 
 const Calculator: React.FC<CalculatorProps> = ({
@@ -155,7 +157,8 @@ const Calculator: React.FC<CalculatorProps> = ({
   onChangeDownPayment,
   onChangeMonths,
   onChangeBalloonRate,
-  openFinancingPackagesInfoModal
+  openFinancingPackagesInfoModal,
+  openFinancialInfoModal
 }) => {
   const schlussRateLabel = () => {
     if (!isSchlussrateReadOnly) {
@@ -289,7 +292,7 @@ const Calculator: React.FC<CalculatorProps> = ({
                   }}
                 />
               </AdjustFinancingTitle>
-              <AdjustFinancingLink>
+              <AdjustFinancingLink onClick={openFinancialInfoModal}>
                 <FormattedMessage id="default.financing_tab.details" />
               </AdjustFinancingLink>
             </AdjustFinancingRight>
@@ -310,6 +313,7 @@ const FinancingTab: React.FC<Props> = ({
   featureFlags,
   isAnzahlungError,
   openFinancingPackagesInfoModal,
+  openFinancialInfoModal,
   onChangeWithBalloonRate,
   onChangeMonths,
   onChangeBalloonRate,
@@ -356,6 +360,7 @@ const FinancingTab: React.FC<Props> = ({
             isContentBoxRadioSchlussrateOn={isContentBoxRadioSchlussrateOn}
             isAnzahlungError={isAnzahlungError}
             openFinancingPackagesInfoModal={openFinancingPackagesInfoModal}
+            openFinancialInfoModal={openFinancialInfoModal}
             onChangeWithBalloonRate={onChangeWithBalloonRate}
             onChangeMonths={onChangeMonths}
             onChangeBalloonRate={onChangeBalloonRate}
