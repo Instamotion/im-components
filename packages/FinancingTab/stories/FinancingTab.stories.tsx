@@ -149,11 +149,12 @@ storiesOf('Financing Tab', module).add('Default', () => {
       showFinancingAdjust={true}
       calculatorIsOpen={calculatorIsOpen}
       onChangeCalulatorIsOpen={() => setCalculatorIsOpen(calculatorIsOpen => !calculatorIsOpen)}
-      onChangeBalloonRate={() => {}}
-      onChangeDownPayment={() => {}}
-      onChangeWithBalloonRate={() => {}}
-      onChangeMonths={() => {}}
-      openFinancingPackagesInfoModal={() => {}}
+      onChangeBalloonRate={() => console.log('onChangeBalloonRate triggered')}
+      onChangeDownPayment={() => console.log('onChangeDownPayment triggered')}
+      onChangeWithBalloonRate={() => console.log('onChangeWithBalloonRate triggered')}
+      onChangeMonths={() => console.log('onChangeMonths triggered')}
+      openFinancingPackagesInfoModal={() => console.log('openFinancingPackagesInfoModal triggered')}
+      openFinancialInfoModal={() => console.log('openFinancialInfoModal triggered')}
     />,
     'de',
     messages

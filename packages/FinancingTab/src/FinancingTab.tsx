@@ -54,7 +54,7 @@ export type Props = {
   onChangeBalloonRate: (ballon: number) => void;
   onChangeDownPayment: (downPayment: number) => void;
   openFinancingPackagesInfoModal: () => void;
-  openFinancialInfoModal: () => void;
+  openFinancialInfoModal?: () => void;
 };
 
 const getMinMaxLabel = (label: string = '', min?: number, max?: number): string => {
@@ -135,7 +135,7 @@ export type CalculatorProps = {
   onChangeMonths: (months: number) => void;
   onChangeBalloonRate: (balloonAmount: number) => void;
   openFinancingPackagesInfoModal: () => void;
-  openFinancialInfoModal: () => void;
+  openFinancialInfoModal?: () => void;
 };
 
 const Calculator: React.FC<CalculatorProps> = ({
