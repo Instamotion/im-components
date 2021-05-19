@@ -1,11 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import Modal from '../src';
+import { ModalStyle } from '../src';
 
 describe('Modal', () => {
   it('renders', () => {
-    const wrapper = mount(<Modal />);
+    const wrapper = mount(<ModalStyle />);
 
     expect(wrapper).toBeDefined();
   });
