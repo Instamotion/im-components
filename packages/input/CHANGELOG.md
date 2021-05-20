@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.7.0
+
+### Minor Changes
+
+- db705ad: allowed the 0 on the phone input to be typed and deleting it when saving
+
 ## 2.6.7
 
 ### Patch Changes
