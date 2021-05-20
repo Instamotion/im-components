@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.9
+
+### Patch Changes
+
+- 8332eed: Export modals
+
 ## 0.0.8
 
 ### Patch Changes
