@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
-
 import messages from '../utils/locales';
-
+import Modal from 'react-modal';
 import FinancingTab from '../src';
+import { ModalFinancingPackagesInfo, ModalFinancingInfo } from '../src/Modals';
+import { ModalStyle } from '@im-ui/modal';
 
 storiesOf('Financing Tab', module).add('Default', () => {
   const props = {
@@ -141,21 +142,59 @@ storiesOf('Financing Tab', module).add('Default', () => {
     isAnzahlungError: false
   };
 
+  const modalData = {
+    effectiveInterestRate: 1,
+    nominalInterestRate: 2,
+    netLoanAmount: 3,
+    totalAmount: 4,
+    balloonAmount: 5
+  };
+
   const [calculatorIsOpen, setCalculatorIsOpen] = useState(false);
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [packagesInfoModalIsOpen, setPackagesInfoModalIsOpen] = useState(false);
+  const [financialInfoModalIsOpen, setFinancialInfoModalIsOpen] = useState(false);
+
+  const closeAllModals = () => {
+    setModalIsOpen(false);
+    setPackagesInfoModalIsOpen(false);
+  };
+
+  const openFinancingPackagesInfoModal = () => {
+    closeAllModals();
+    setModalIsOpen(true);
+    setPackagesInfoModalIsOpen(true);
+  };
+
+  const openFinancialInfoModal = () => {
+    closeAllModals();
+    setModalIsOpen(true);
+    setFinancialInfoModalIsOpen(true);
+  };
+
   return renderWithThemeAndI18n(
-    <FinancingTab
-      {...props}
-      showFinancingAdjust={true}
-      calculatorIsOpen={calculatorIsOpen}
-      onChangeCalulatorIsOpen={() => setCalculatorIsOpen(calculatorIsOpen => !calculatorIsOpen)}
-      onChangeBalloonRate={() => console.log('onChangeBalloonRate triggered')}
-      onChangeDownPayment={() => console.log('onChangeDownPayment triggered')}
-      onChangeWithBalloonRate={() => console.log('onChangeWithBalloonRate triggered')}
-      onChangeMonths={() => console.log('onChangeMonths triggered')}
-      openFinancingPackagesInfoModal={() => console.log('openFinancingPackagesInfoModal triggered')}
-      openFinancialInfoModal={() => console.log('openFinancialInfoModal triggered')}
-    />,
+    <>
+      <FinancingTab
+        {...props}
+        showFinancingAdjust={true}
+        calculatorIsOpen={calculatorIsOpen}
+        onChangeCalulatorIsOpen={() => setCalculatorIsOpen(calculatorIsOpen => !calculatorIsOpen)}
+        onChangeBalloonRate={() => console.log('onChangeBalloonRate triggered')}
+        onChangeDownPayment={() => console.log('onChangeDownPayment triggered')}
+        onChangeWithBalloonRate={() => console.log('onChangeWithBalloonRate triggered')}
+        onChangeMonths={() => console.log('onChangeMonths triggered')}
+        openFinancingPackagesInfoModal={openFinancingPackagesInfoModal}
+        openFinancialInfoModal={openFinancialInfoModal}
+      />
+      <Modal isOpen={modalIsOpen}>
+        <ModalStyle />
+        {packagesInfoModalIsOpen && <ModalFinancingPackagesInfo closeModal={closeAllModals} />}
+        {financialInfoModalIsOpen && (
+          <ModalFinancingInfo closeModal={closeAllModals} modalData={modalData} />
+        )}
+      </Modal>
+    </>,
     'de',
     messages
   );

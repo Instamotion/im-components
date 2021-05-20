@@ -6,10 +6,7 @@
   "main": "dist/cjs/index.js",
   "author": "InstaMotion Retail GmbH",
   "maintainers": [
-    "Dmytro B",
-    "Ivan D",
-    "Oleg P",
-    "Alex S"
+    "Karlo S."
   ],
   "repository": "git@github.com:Instamotion/im-components.git",
   "license": "MIT",
@@ -31,7 +28,8 @@
     "@im-ui/toggle": "^1.0.0",
     "@im-ui/label": "^1.0.0",
     "@im-ui/radio-button": "^0.2.3",
-    "@im-ui/input": "^2.6.7"
+    "@im-ui/input": "^2.6.7",
+    "@im-ui/modal": "^0.0.2"
   },
   "devDependencies": {
     "@types/jest": "^24.0.21",
