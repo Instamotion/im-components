@@ -93,15 +93,14 @@ export const Input: React.FC<InputProps> = ({
   }, [formattedValue]);
 
   useEffect(() => {
-    const value = phoneCode.value + inputValue;
+    const value = phoneCode.value + removeZeroFromPhoneStart(inputValue as string);
     onChange?.(value);
     onCountryCodeChange?.(phoneCode.value);
   }, [isPhone, phoneCode, inputValue]);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setCaretPosition(e.target.selectionStart);
-    const withoutStartZero = removeZeroFromPhoneStart(e.target.value as string);
-    setInputValue(withoutStartZero);
+    setInputValue(e.target.value as string);
   };
 
   const handleOnBlur = (): void => {
@@ -150,7 +149,7 @@ export const Input: React.FC<InputProps> = ({
           onBlur={handleOnBlur}
           onFocus={handleFocus}
           type={type}
-          value={formattedValue}
+          value={inputValue}
           maxLength={maxLength}
           minLength={minLength}
           ref={inputRef}
