@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.8
+
+### Patch Changes
+
+- b2a0a8f: Add modals
+
 ## 0.0.7
 
 ### Patch Changes
