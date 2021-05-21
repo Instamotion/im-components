@@ -3,8 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
 import messages from '../utils/locales';
 import Modal from 'react-modal';
-import FinancingTab from '../src';
-import { ModalFinancingPackagesInfo, ModalFinancingInfo } from '../src/Modals';
+import FinancingTab, { ModalFinancingPackagesInfo, ModalFinancingInfo } from '../src';
 import { ModalStyle } from '@im-ui/modal';
 
 storiesOf('Financing Tab', module).add('Default', () => {
