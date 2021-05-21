@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import ButtonToggle, { ButtonToggleItemProps, ButtonToggleProps } from '../src/buttonToggle';
+import { IMTheme as theme } from '@im-ui/theme';
 
 storiesOf('Button toggle', module)
   .add('default', () => {
@@ -32,6 +33,7 @@ storiesOf('Button toggle', module)
 
     return (
       <ButtonToggle<number>
+        color={theme.color.secondary}
         items={items}
         selected={selectedItem}
         onChange={selected => {
