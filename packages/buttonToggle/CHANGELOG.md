@@ -1,5 +1,11 @@
 # @im-ui/button-toggle
 
+## 1.1.3
+
+### Patch Changes
+
+- ad4886a: Add ability to send button color
+
 ## 1.1.2
 
 ### Patch Changes
