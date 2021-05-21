@@ -41,12 +41,12 @@ export type Props = {
    */
   state: FinancingTabState;
   /**
-   * Offer that represents the car
+   * CarDetails that represents the car
    */
   showFinancingAdjust: boolean;
   calculatorIsOpen: boolean;
   onChangeCalulatorIsOpen: () => void;
-  offer: Offer;
+  carDetails: CarDetails;
   featureFlags: FeatureFlagsType;
   isAnzahlungError: boolean;
   onChangeWithBalloonRate: (withBallonRate: boolean) => void;
@@ -93,7 +93,7 @@ type FinancingTabState = {
   openFinancialInfoModal?: () => void;
 };
 
-interface Offer {
+interface CarDetails {
   price: number;
 }
 
@@ -309,7 +309,7 @@ const FinancingTab: React.FC<Props> = ({
   calculatorIsOpen,
   onChangeCalulatorIsOpen,
   state,
-  offer,
+  carDetails,
   featureFlags,
   isAnzahlungError,
   openFinancingPackagesInfoModal,
@@ -338,7 +338,7 @@ const FinancingTab: React.FC<Props> = ({
     monthlyInstallment
   } = state;
 
-  const { price = 0 } = offer;
+  const { price = 0 } = carDetails;
 
   return (
     <TabPanel>

@@ -8,7 +8,7 @@ import { ModalStyle } from '@im-ui/modal';
 
 storiesOf('Financing Tab', module).add('Default', () => {
   const props = {
-    offer: {
+    carDetails: {
       __typename: 'Offer',
       isTopOffer: false,
       offerID: 'Z8MF1WS25FYPB6VU33CPPC1ZH77CMZC4PA37CQ9HP6SQQCR2UY7FJWF35',
