@@ -50,7 +50,7 @@ const ContentBoxRadioButtonWrapper = styled.div<ContentBoxWrapperProps>`
   ${props =>
     props.selected &&
     css`
-      border: 0.063rem solid ${theme.color.downy};
+      border: 0.063rem solid ${theme.color.secondary};
 
       border-radius: 0.75rem;
     `};
