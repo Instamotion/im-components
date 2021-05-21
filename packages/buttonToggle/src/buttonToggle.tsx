@@ -10,6 +10,7 @@ export interface ButtonToggleItemProps<A> {
 export interface ButtonToggleItemStyledProps {
   selected: boolean;
   disabled: boolean;
+  color: string;
   onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
@@ -40,7 +41,7 @@ export const ButtonToggleItem = styled.div<ButtonToggleItemStyledProps>`
   ${props =>
     props.selected &&
     css`
-      background-color: ${theme.color.primary};
+      background-color: ${props.color};
       color: ${theme.color.white};
     `}
 
@@ -56,11 +57,12 @@ export const ButtonToggleItem = styled.div<ButtonToggleItemStyledProps>`
 export interface ButtonToggleProps<A> {
   items: ButtonToggleItemProps<A>[];
   selected: A;
+  color?: string;
   onChange: (selected: A) => void;
 }
 
 function ButtonToggle<A>(props: ButtonToggleProps<A>) {
-  const { items, selected, onChange } = props;
+  const { items, selected, onChange, color = theme.color.primary } = props;
   const handleClick = (
     _e: React.MouseEvent<HTMLDivElement, MouseEvent>,
     item: ButtonToggleItemProps<A>
@@ -82,6 +84,7 @@ function ButtonToggle<A>(props: ButtonToggleProps<A>) {
           onClick={e => {
             handleClick(e, item);
           }}
+          color={color}
         >
           {item.label}
         </ButtonToggleItem>
