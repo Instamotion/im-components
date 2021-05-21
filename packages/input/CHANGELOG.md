@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.8.0
+
+### Minor Changes
+
+- 2e7431e: adopted new version of label
+
 ## 2.7.0
 
 ### Minor Changes
