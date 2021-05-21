@@ -25,7 +25,12 @@ const ContentBoxRadioButton: React.FC<ContentBoxRadioButtonProps> = ({
   checked,
   onChange = () => {}
 }: ContentBoxRadioButtonProps) => (
-  <FlexColumnContainer onClick={() => onChange(value)}>
+  <FlexColumnContainer
+    onClick={e => {
+      e.stopPropagation();
+      onChange(value);
+    }}
+  >
     <RadioButton
       key={value}
       label={label}
