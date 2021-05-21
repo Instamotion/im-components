@@ -44,10 +44,6 @@ const LabelComponent = styled.label<LabelProps>`
     color: ${theme.color.typography};
     opacity: 0.6;
 
-    .asterisk {
-      display: none;
-    }
-
     ${theme.mediaQueries.whenTablet} {
       ${!haveValue && 'transform: translate(1.375rem, 0.812rem) scale(1);'}
     }
