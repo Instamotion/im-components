@@ -69,26 +69,25 @@ storiesOf('Financing Tab', module).add('Default', () => {
       cms: null
     },
 
-    state: {
-      withBalloonRate: true,
-      downPayment: 1313,
-      maxDownPayment: 6114,
-      months: 60,
-      balloonAmount: null,
-      minBalloonAmount: 0,
-      maxBalloonAmount: 0,
-      monthlyInstallment: 36,
-      totalPrice: 6563,
-      totalAdditionalCosts: 449,
-      terms: {
-        __typename: 'FinancingTerms',
-        effectiveInterestRate: 3.99,
-        nominalInterestRate: 3.91884045058788,
-        netLoanAmount: 5250,
-        totalAmount: 6174.23,
-        finalInstallment: 4003.43
-      }
+    withBalloonRate: true,
+    downPayment: 1313,
+    maxDownPayment: 6114,
+    months: 60,
+    balloonAmount: null,
+    minBalloonAmount: 0,
+    maxBalloonAmount: 0,
+    monthlyInstallment: 36,
+    totalPrice: 6563,
+    totalAdditionalCosts: 449,
+    terms: {
+      __typename: 'FinancingTerms',
+      effectiveInterestRate: 3.99,
+      nominalInterestRate: 3.91884045058788,
+      netLoanAmount: 5250,
+      totalAmount: 6174.23,
+      finalInstallment: 4003.43
     },
+
     featureFlags: {
       'advanced-filters': true,
       'advanced-filters-2': true,

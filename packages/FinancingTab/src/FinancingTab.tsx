@@ -35,7 +35,23 @@ export type Props = {
   /**
    * Tab state
    */
-  state: FinancingTabState;
+  withBalloonRate: boolean;
+  downPayment: number;
+  maxDownPayment: number;
+  months: number;
+  balloonAmount: number;
+  minBalloonAmount: number | undefined;
+  maxBalloonAmount: number | undefined;
+  monthlyInstallment: number;
+  totalPrice: number;
+  totalAdditionalCosts: number;
+  terms: {
+    effectiveInterestRate: number;
+    nominalInterestRate: number;
+    netLoanAmount: number;
+    totalAmount: number;
+    finalInstallment: number;
+  };
   /**
    * CarDetails that represents the car
    */
@@ -68,27 +84,6 @@ export interface IMonthsSelection {
   value: number;
   disabled?: boolean;
 }
-
-type FinancingTabState = {
-  withBalloonRate: boolean;
-  downPayment: number;
-  maxDownPayment: number;
-  months: number;
-  balloonAmount: number;
-  minBalloonAmount: number | undefined;
-  maxBalloonAmount: number | undefined;
-  monthlyInstallment: number;
-  totalPrice: number;
-  totalAdditionalCosts: number;
-  terms: {
-    effectiveInterestRate: number;
-    nominalInterestRate: number;
-    netLoanAmount: number;
-    totalAmount: number;
-    finalInstallment: number;
-  };
-  openFinancialInfoModal?: () => void;
-};
 
 interface CarDetails {
   price: number;
@@ -309,7 +304,13 @@ const FinancingTab: React.FC<Props> = ({
   calculatorIsOpen = true,
   onChangeCalulatorIsOpen,
   monthlyRateColor,
-  state,
+  balloonAmount = 0,
+  withBalloonRate,
+  downPayment,
+  maxBalloonAmount,
+  minBalloonAmount,
+  months,
+  monthlyInstallment,
   carDetails,
   featureFlags,
   isAnzahlungError,
@@ -328,16 +329,6 @@ const FinancingTab: React.FC<Props> = ({
     () => !!featureFlags['content-box-radio-schlussrate'],
     [featureFlags]
   );
-
-  const {
-    balloonAmount = 0,
-    withBalloonRate,
-    downPayment,
-    maxBalloonAmount,
-    minBalloonAmount,
-    months,
-    monthlyInstallment
-  } = state;
 
   const { price = 0 } = carDetails;
 
