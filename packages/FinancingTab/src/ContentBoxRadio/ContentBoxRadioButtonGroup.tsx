@@ -77,6 +77,7 @@ const UspText = styled.span`
   color: ${theme.color.typo};
   max-width: 13.75rem;
   padding-top: 0.2rem;
+  letter-spacing: -0.010625rem;
 `;
 
 const CheckIconWrapper = styled.span`
