@@ -13,6 +13,7 @@ export interface IMonthsSelection {
 interface MontlyRateChooserProps {
   items: IMonthsSelection[];
   selected: number;
+  color?: string;
   onChange: (selected: number) => void;
 }
 
@@ -34,7 +35,12 @@ const filterDisabledItems = (items: IMonthsSelection[]) => {
   return items.filter((item: IMonthsSelection) => !item.disabled);
 };
 
-const MontlyRateChooser: React.FC<MontlyRateChooserProps> = ({ items, selected, onChange }) => {
+const MontlyRateChooser: React.FC<MontlyRateChooserProps> = ({
+  items,
+  selected,
+  color,
+  onChange
+}) => {
   const handleDropdownSelect = (e: { target: { value: string } }) => {
     onChange(Number(e.target.value));
   };
@@ -42,7 +48,7 @@ const MontlyRateChooser: React.FC<MontlyRateChooserProps> = ({ items, selected, 
   return (
     <>
       <DesktopWrapper>
-        <ButtonToggle selected={selected} onChange={onChange} items={items} />
+        <ButtonToggle selected={selected} onChange={onChange} items={items} color={color} />
       </DesktopWrapper>
       <MobileWrapper>
         <IMDropdown

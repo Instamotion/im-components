@@ -5,6 +5,7 @@ import messages from '../utils/locales';
 import Modal from 'react-modal';
 import FinancingTab, { ModalFinancingPackagesInfo, ModalFinancingInfo } from '../src';
 import { ModalStyle } from '@im-ui/modal';
+import { IMTheme as theme } from '@im-ui/theme';
 
 storiesOf('Financing Tab', module).add('Default', () => {
   const props = {
@@ -176,15 +177,17 @@ storiesOf('Financing Tab', module).add('Default', () => {
     <>
       <FinancingTab
         {...props}
-        showFinancingAdjust={true}
-        calculatorIsOpen={calculatorIsOpen}
-        onChangeCalulatorIsOpen={() => setCalculatorIsOpen(calculatorIsOpen => !calculatorIsOpen)}
         onChangeBalloonRate={() => console.log('onChangeBalloonRate triggered')}
         onChangeDownPayment={() => console.log('onChangeDownPayment triggered')}
         onChangeWithBalloonRate={() => console.log('onChangeWithBalloonRate triggered')}
         onChangeMonths={() => console.log('onChangeMonths triggered')}
         openFinancingPackagesInfoModal={openFinancingPackagesInfoModal}
         openFinancialInfoModal={openFinancialInfoModal}
+        // optional props, it will default to PDP configuration if nothing is set:
+        showFinancingAdjust={true}
+        calculatorIsOpen={calculatorIsOpen}
+        onChangeCalulatorIsOpen={() => setCalculatorIsOpen(calculatorIsOpen => !calculatorIsOpen)}
+        monthlyRateColor={theme.color.secondary}
       />
       <Modal isOpen={modalIsOpen}>
         <ModalStyle />

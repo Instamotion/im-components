@@ -21,10 +21,6 @@ import {
   AdjustLineBreak
 } from './styles';
 
-function isNil<A>(x: A | null | undefined): boolean {
-  return x === null || x === undefined;
-}
-
 export const formatCurrency = (x: number | undefined): string =>
   `${x != undefined && x.toLocaleString('de-de')} €`;
 
@@ -43,9 +39,10 @@ export type Props = {
   /**
    * CarDetails that represents the car
    */
-  showFinancingAdjust: boolean;
-  calculatorIsOpen: boolean;
-  onChangeCalulatorIsOpen: () => void;
+  showFinancingAdjust?: boolean;
+  calculatorIsOpen?: boolean;
+  onChangeCalulatorIsOpen?: () => void;
+  monthlyRateColor?: string;
   carDetails: CarDetails;
   featureFlags: FeatureFlagsType;
   isAnzahlungError: boolean;
@@ -118,7 +115,8 @@ const RadioEnum = {
 export type CalculatorProps = {
   showFinancingAdjust: boolean;
   calculatorIsOpen: boolean;
-  onChangeCalulatorIsOpen: () => void;
+  onChangeCalulatorIsOpen?: () => void;
+  monthlyRateColor?: string;
   carPrice: number;
   isSchlussrateReadOnly: boolean;
   isContentBoxRadioSchlussrateOn: boolean;
@@ -142,6 +140,7 @@ const Calculator: React.FC<CalculatorProps> = ({
   showFinancingAdjust,
   calculatorIsOpen,
   onChangeCalulatorIsOpen,
+  monthlyRateColor,
   carPrice,
   isSchlussrateReadOnly,
   isContentBoxRadioSchlussrateOn,
@@ -253,6 +252,7 @@ const Calculator: React.FC<CalculatorProps> = ({
           <span>
             <StyledLabel text={<FormattedMessage id="default.financing_tab.monthly_rates" />} />
             <MonthlyRateChooser
+              color={monthlyRateColor}
               selected={months}
               onChange={months => onChangeMonths(months)}
               items={getMonthsSelection(withBalloonRate)}
@@ -305,9 +305,10 @@ const Calculator: React.FC<CalculatorProps> = ({
 };
 
 const FinancingTab: React.FC<Props> = ({
-  showFinancingAdjust,
-  calculatorIsOpen,
+  showFinancingAdjust = false,
+  calculatorIsOpen = true,
   onChangeCalulatorIsOpen,
+  monthlyRateColor,
   state,
   carDetails,
   featureFlags,
@@ -348,6 +349,7 @@ const FinancingTab: React.FC<Props> = ({
             showFinancingAdjust={showFinancingAdjust}
             calculatorIsOpen={calculatorIsOpen}
             onChangeCalulatorIsOpen={onChangeCalulatorIsOpen}
+            monthlyRateColor={monthlyRateColor}
             carPrice={price}
             balloonAmount={balloonAmount}
             withBalloonRate={withBalloonRate}
