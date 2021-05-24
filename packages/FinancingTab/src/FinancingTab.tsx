@@ -60,7 +60,7 @@ export type Props = {
   onChangeCalulatorIsOpen?: () => void;
   monthlyRateColor?: string;
   carDetails: CarDetails;
-  featureFlags: FeatureFlagsType;
+  featureFlags?: FeatureFlagsType;
   isAnzahlungError: boolean;
   onChangeWithBalloonRate: (withBallonRate: boolean) => void;
   onChangeMonths: (month: number) => void;
@@ -68,6 +68,11 @@ export type Props = {
   onChangeDownPayment: (downPayment: number) => void;
   openFinancingPackagesInfoModal: () => void;
   openFinancialInfoModal?: () => void;
+};
+
+const FeatureFlagsDefault: FeatureFlagsType = {
+  'schlussrate-read-only': false,
+  'content-box-radio-schlussrate': false
 };
 
 const getMinMaxLabel = (label: string = '', min?: number, max?: number): string => {
@@ -312,7 +317,7 @@ const FinancingTab: React.FC<Props> = ({
   months,
   monthlyInstallment,
   carDetails,
-  featureFlags,
+  featureFlags = FeatureFlagsDefault,
   isAnzahlungError,
   openFinancingPackagesInfoModal,
   openFinancialInfoModal,
