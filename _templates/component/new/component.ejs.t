@@ -3,7 +3,7 @@ to: packages/<%= name %>/src/<%= name %>.tsx
 ---
 import React from 'react';
 import styled from 'styled-components';
-import theme from '@im-ui/theme';
+import { IMTheme as theme } from '@im-ui/theme';
 
 export interface <%= h.changeCase.pascalCase(name) %>Props {
   className?: string;

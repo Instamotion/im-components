@@ -27,7 +27,7 @@ to: packages/<%= name %>/package.json
     "dist"
   ],
   "dependencies": {
-    "@im-ui/theme": "^1.0.1",
+    "@im-ui/theme": "^2.0.8",
     "@im-ui/utils": "^0.5.5"
   },
   "devDependencies": {
