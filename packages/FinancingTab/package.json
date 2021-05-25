@@ -1,6 +1,6 @@
 {
   "name": "@im-ui/financing-tab",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "types": "dist/cjs/index.d.ts",
   "module": "dist/esm/index.js",
   "main": "dist/cjs/index.js",
@@ -28,7 +28,7 @@
     "@im-ui/toggle": "^1.0.0",
     "@im-ui/label": "^1.0.0",
     "@im-ui/radio-button": "^0.2.3",
-    "@im-ui/input": "^2.6.7",
+    "@im-ui/input": "^2.8.1",
     "@im-ui/modal": "^0.0.2"
   },
   "devDependencies": {

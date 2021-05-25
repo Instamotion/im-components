@@ -1,5 +1,13 @@
 # @im-ui/financing-tab
 
+## 0.0.10
+
+### Patch Changes
+
+- 09f1e06: Multiple minor tweaks
+- Updated dependencies [09f1e06]
+  - @im-ui/input@2.8.1
+
 ## 0.0.9
 
 ### Patch Changes

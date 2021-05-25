@@ -1,5 +1,11 @@
 # @im-ui/input
 
+## 2.8.1
+
+### Patch Changes
+
+- 09f1e06: Remove console.log
+
 ## 2.8.0
 
 ### Minor Changes
