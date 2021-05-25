@@ -34,7 +34,7 @@ export const CalculatorPane = styled(Col as any)`
 
   label {
     display: block;
-    margin: 1.5rem 0 0.4rem !important;
+    margin: 1.5rem 0 0.4rem;
   }
 
   #schlussrate label span {
@@ -74,12 +74,12 @@ export const AdjustLineBreak = styled(LineBreak as any)<{ top: boolean }>`
 `;
 
 export const StyledLabel = styled(Label)`
-  font-family: ${theme.font.bentonBold.family} !important;
-  font-weight: bold !important;
-  font-size: 1em !important;
-  line-height: 1.625rem !important;
-  text-transform: capitalize !important;
-  color: ${theme.color.typo} !important;
+  font-family: ${theme.font.bentonBold.family};
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.625rem;
+  text-transform: capitalize;
+  color: ${theme.color.typo};
 `;
 
 export const StyledLink = styled.span`
@@ -145,7 +145,7 @@ export const FinancingCalcPane = styled.div<{ open: boolean }>`
   padding: ${props => (props.open ? '0.5rem' : '0')};
   max-height: ${props => (props.open ? '50rem' : '0')};
   transition: max-height 0.25s ${props => (props.open ? 'ease-in' : 'ease-out')},
-    padding 1s ${props => (props.open ? 'ease-in' : 'ease-out')};
+    padding 0.25s ${props => (props.open ? 'ease-in' : 'ease-out')};
 
   overflow: hidden;
 `;
