@@ -82,7 +82,6 @@ export const Input: React.FC<InputProps> = ({
       enterDown?.(e);
     }
   };
-  console.log(inputProps);
   return (
     <InputComponentWrapper style={{ width }} className={className}>
       <StyledInput
