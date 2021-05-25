@@ -81,7 +81,7 @@ storiesOf('Financing Tab', module).add('Default', () => {
         openFinancingPackagesInfoModal={openFinancingPackagesInfoModal}
         openFinancialInfoModal={openFinancialInfoModal}
         // optional props, it will default to PDP configuration if nothing is set:
-        showFinancingAdjust={true}
+        showCalculatorSummary={true}
         calculatorIsOpen={calculatorIsOpen}
         onChangeCalulatorIsOpen={() => setCalculatorIsOpen(calculatorIsOpen => !calculatorIsOpen)}
         monthlyRateColor={theme.color.secondary}

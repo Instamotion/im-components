@@ -56,7 +56,7 @@ export type Props = {
   /**
    * CarDetails that represents the car
    */
-  showFinancingAdjust?: boolean;
+  showCalculatorSummary?: boolean;
   calculatorIsOpen?: boolean;
   onChangeCalulatorIsOpen?: () => void;
   monthlyRateColor?: string;
@@ -114,7 +114,7 @@ const RadioEnum = {
 };
 
 export type CalculatorProps = {
-  showFinancingAdjust: boolean;
+  showCalculatorSummary: boolean;
   calculatorIsOpen: boolean;
   onChangeCalulatorIsOpen?: () => void;
   monthlyRateColor?: string;
@@ -138,7 +138,7 @@ export type CalculatorProps = {
 };
 
 const Calculator: React.FC<CalculatorProps> = ({
-  showFinancingAdjust,
+  showCalculatorSummary,
   calculatorIsOpen,
   onChangeCalulatorIsOpen,
   monthlyRateColor,
@@ -260,7 +260,7 @@ const Calculator: React.FC<CalculatorProps> = ({
         </span>
       </FinancingCalcPane>
 
-      {showFinancingAdjust && (
+      {showCalculatorSummary && (
         <>
           <AdjustLineBreak top={true} />
           <AdjustFinancingWrapper>
@@ -305,7 +305,7 @@ const Calculator: React.FC<CalculatorProps> = ({
 };
 
 const FinancingTab: React.FC<Props> = ({
-  showFinancingAdjust = false,
+  showCalculatorSummary = false,
   calculatorIsOpen = true,
   onChangeCalulatorIsOpen,
   monthlyRateColor,
@@ -342,7 +342,7 @@ const FinancingTab: React.FC<Props> = ({
       <FinancingTabContainer>
         <FinancingTabWrap>
           <Calculator
-            showFinancingAdjust={showFinancingAdjust}
+            showCalculatorSummary={showCalculatorSummary}
             calculatorIsOpen={calculatorIsOpen}
             onChangeCalulatorIsOpen={onChangeCalulatorIsOpen}
             monthlyRateColor={monthlyRateColor}
