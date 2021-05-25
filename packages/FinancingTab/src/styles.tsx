@@ -34,11 +34,7 @@ export const CalculatorPane = styled(Col as any)`
 
   label {
     display: block;
-    margin: 0 0 0.4rem !important;
-  }
-
-  > div {
-    padding-bottom: 1.5rem;
+    margin: 1.5rem 0 0.4rem;
   }
 
   #schlussrate label span {
@@ -52,7 +48,7 @@ export const CalculatorPane = styled(Col as any)`
       padding-bottom: 2rem;
     }
     > div:first-child {
-      padding-bottom: 0.2rem;
+      padding-bottom: 0.4rem;
     }
     > div:nth-last-child {
       padding-bottom: 0;
@@ -67,7 +63,6 @@ export const LineBreak = styled.span`
     display: block;
     height: 0.125rem;
     background: #f3f3f3;
-    margin-bottom: 1.5rem;
   }
 `;
 
@@ -79,12 +74,12 @@ export const AdjustLineBreak = styled(LineBreak as any)<{ top: boolean }>`
 `;
 
 export const StyledLabel = styled(Label)`
-  font-family: ${theme.font.bentonBold.family} !important;
-  font-weight: bold !important;
-  font-size: 1em !important;
-  line-height: 1.625rem !important;
-  text-transform: capitalize !important;
-  color: ${theme.color.typo} !important;
+  font-family: ${theme.font.bentonBold.family};
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.625rem;
+  text-transform: capitalize;
+  color: ${theme.color.typo};
 `;
 
 export const StyledLink = styled.span`
@@ -144,4 +139,13 @@ export const AdjustFinancingRight = styled.div`
   span {
     margin-left: auto;
   }
+`;
+
+export const FinancingCalcPane = styled.div<{ open: boolean }>`
+  padding: ${props => (props.open ? '0.5rem' : '0')};
+  max-height: ${props => (props.open ? '50rem' : '0')};
+  transition: max-height 0.25s ${props => (props.open ? 'ease-in' : 'ease-out')},
+    padding 0.25s ${props => (props.open ? 'ease-in' : 'ease-out')};
+
+  overflow: hidden;
 `;
