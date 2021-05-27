@@ -57,7 +57,15 @@ export const Checkbox: React.FC<CheckboxProps> = ({
           required={required}
         />
         <Checkmark error={!!errorMessage} htmlFor={id} />
-        {label && <Label text={label} disabled={disabled} htmlFor={id} placement={'inline'} />}
+        {label && (
+          <Label
+            required={required}
+            text={label}
+            disabled={disabled}
+            htmlFor={id}
+            placement={'inline'}
+          />
+        )}
       </CheckboxWrapper>
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </CheckboxControl>
