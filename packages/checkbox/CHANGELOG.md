@@ -1,5 +1,13 @@
 # @im-ui/checkbox
 
+## 2.2.0
+
+### Minor Changes
+
+- 00487a0: prop fix
+- 00487a0: prop fix
+- 00487a0: passed required from the checkbox to its label
+
 ## 2.1.1
 
 ### Patch Changes
