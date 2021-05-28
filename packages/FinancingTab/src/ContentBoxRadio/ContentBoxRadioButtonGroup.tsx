@@ -91,7 +91,6 @@ function ContentBoxRadioButtonGroup<T>({
   selected,
   onChange
 }: ContentBoxRadioButtonGroupProps<T>): React.ReactElement<ContentBoxRadioButtonGroupProps<T>> {
-  const [selectedOption, setSelectedOption] = useState(selected);
   const numberOfRadioButtons = useMemo(() => radioButtons.length, [radioButtons]);
 
   // TODO fetch from contentful
@@ -109,7 +108,6 @@ function ContentBoxRadioButtonGroup<T>({
   };
 
   const handleOnSelect = (val: T): void => {
-    setSelectedOption(val);
     onChange(val);
   };
 
@@ -120,14 +118,14 @@ function ContentBoxRadioButtonGroup<T>({
           <ContentBoxRadioButtonWrapper
             buttonsNumber={numberOfRadioButtons}
             key={String(item.value)}
-            selected={selectedOption === item.value}
+            selected={selected === item.value}
             onClick={() => handleOnSelect(item.value)}
           >
             <ContentBoxRadioButton
               key={String(item.value)}
               label={item.label}
               value={String(item.value)}
-              checked={selectedOption === item.value}
+              checked={selected === item.value}
               onChange={() => handleOnSelect(item.value)}
             >
               {USP_MAPPINGS[String(item.value) === 'classic' ? 'classic' : 'easygo'].map(

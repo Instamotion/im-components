@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { storiesOf } from '@storybook/react';
 import { renderWithThemeAndI18n } from '@im-ui/utils';
 import messages from '../utils/locales';
@@ -8,12 +8,14 @@ import { ModalStyle } from '@im-ui/modal';
 import { IMTheme as theme } from '@im-ui/theme';
 
 storiesOf('Financing Tab', module).add('Default', () => {
+  const [withBalloonRateState, setWithBalloonRateState] = useState(true);
+
   const props = {
     carDetails: {
       price: 6114
     },
 
-    withBalloonRate: true,
+    withBalloonRate: withBalloonRateState,
     downPayment: 1313,
     maxDownPayment: 6114,
     months: 60,
@@ -53,6 +55,10 @@ storiesOf('Financing Tab', module).add('Default', () => {
   const [packagesInfoModalIsOpen, setPackagesInfoModalIsOpen] = useState(false);
   const [financialInfoModalIsOpen, setFinancialInfoModalIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (!calculatorIsOpen) setWithBalloonRateState(true);
+  }, [calculatorIsOpen]);
+
   const closeAllModals = () => {
     setModalIsOpen(false);
     setPackagesInfoModalIsOpen(false);
@@ -76,7 +82,7 @@ storiesOf('Financing Tab', module).add('Default', () => {
         {...props}
         onChangeBalloonRate={() => console.log('onChangeBalloonRate triggered')}
         onChangeDownPayment={() => console.log('onChangeDownPayment triggered')}
-        onChangeWithBalloonRate={() => console.log('onChangeWithBalloonRate triggered')}
+        onChangeWithBalloonRate={value => setWithBalloonRateState(value)}
         onChangeMonths={() => console.log('onChangeMonths triggered')}
         openFinancingPackagesInfoModal={openFinancingPackagesInfoModal}
         openFinancialInfoModal={openFinancialInfoModal}
