@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.11
+
+### Patch Changes
+
+- c0a00c1: Fix bug that caused wrong balloon option to be selected
+
 ## 0.0.10
 
 ### Patch Changes
