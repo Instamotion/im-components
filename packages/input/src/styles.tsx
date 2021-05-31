@@ -133,11 +133,11 @@ export const InputElements = styled.input<{ type: string }>`
     margin-left: 5rem;
     width: calc(100% - 8rem);
     padding-left: .5rem;
-    
+
     &+svg {
       z-index: 1;
     }
-    
+
     ${theme.mediaQueries.whenTablet} {
       margin-left: 5.5rem;
     }
@@ -156,7 +156,7 @@ export const ErrorMessage = styled.span<{ isFloatLabel?: boolean; isAbsoluteErro
   font-family: ${theme.font.bentonRegular.family};
   font-weight: ${theme.font.bentonRegular.weight};
   color: ${theme.color.signal};
-  font-size: 0.625rem;
+  font-size: 1rem;
   margin: 0.5rem 0 0 0.5rem;
   ${({ isAbsoluteError, isFloatLabel }) =>
     isAbsoluteError &&
