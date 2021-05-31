@@ -6,7 +6,7 @@ export const ErrorMessage = styled.span`
   font-family: ${theme.font.bentonRegular.family};
   font-weight: ${theme.font.bentonRegular.weight};
   color: ${theme.color.signal};
-  font-size: 0.625rem;
+  font-size: 1rem;
   margin-top: 0.5rem;
 `;
 
