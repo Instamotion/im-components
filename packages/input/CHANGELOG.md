@@ -1,5 +1,16 @@
 # @im-ui/input
 
+## 2.9.0
+
+### Minor Changes
+
+- 1e8e3d1: changed font size of errors label
+
+### Patch Changes
+
+- Updated dependencies [1e8e3d1]
+  - @im-ui/styled-dropdown@1.3.0
+
 ## 2.8.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @im-ui/styled-dropdown
 
+## 1.3.0
+
+### Minor Changes
+
+- 1e8e3d1: changed font size of errors label
+
 ## 1.2.6
 
 ### Patch Changes
