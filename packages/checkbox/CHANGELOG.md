@@ -1,5 +1,11 @@
 # @im-ui/checkbox
 
+## 2.2.1
+
+### Patch Changes
+
+- 1672d6a: changed font size of the checkbox error label
+
 ## 2.2.0
 
 ### Minor Changes
