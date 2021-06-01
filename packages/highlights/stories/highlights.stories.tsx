@@ -33,7 +33,7 @@ stories.add('checkout', () => {
     power: 60,
     consumption: 10,
     preOwners: 3,
-    displayWithShadow: true
+    displayOnPdp: true
   };
 
   return renderWithThemeAndI18n(<Highlights {...props} />);

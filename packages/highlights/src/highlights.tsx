@@ -3,53 +3,46 @@ import styled from 'styled-components';
 import { IMTheme as theme } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 
-const HighlightsWrap = styled.div<{ displayWithShadow?: boolean }>`
+const HighlightsWrap = styled.div<{ displayOnPdp?: boolean }>`
   width: 100%;
-  display: inline-block;
-  background: ${props =>
-    !props.displayWithShadow
-      ? `linear-gradient(180deg,${theme.color.lightGreyBG} 50%,${theme.color.white} 50%)`
-      : ''};
-
   ${theme.mediaQueries.whenDesktop} {
+    background: ${props =>
+      !props.displayOnPdp
+        ? `linear-gradient(180deg,${theme.color.lightGreyBG} 50%,${theme.color.white} 50%)`
+        : ''};
     display: block;
     box-sizing: border-box;
   }
 `;
 
-const HighlightsContainer = styled.div<{ displayWithShadow?: boolean }>`
+const HighlightsContainer = styled.div<{ displayOnPdp?: boolean }>`
   display: flex;
   flex-direction: row;
-  max-width: ${props => (props.displayWithShadow ? `` : '67.25rem')};
+  max-width: ${props => (props.displayOnPdp ? `` : '67.25rem')};
   font-size: 1.125rem;
-  overflow-x: scroll;
+  flex-wrap: wrap;
 
   ${theme.mediaQueries.whenDesktop} {
-    overflow-x: hidden;
     margin: auto;
-    justify-content: ${props => (props.displayWithShadow ? `flex-start` : 'space-between')};
-    padding: ${props => (props.displayWithShadow ? `0rem` : '0.4rem 3rem')};
-    flex-wrap: ${props => (props.displayWithShadow ? `wrap` : 'no-wrap')};
+    justify-content: ${props => (props.displayOnPdp ? `flex-start` : 'space-between')};
+    padding: ${props => (props.displayOnPdp ? `0rem` : '0.4rem 3rem')};
   }
 `;
 
-const Highlight = styled.div<{ displayWithShadow?: boolean }>`
-  margin: 1rem;
+const Highlight = styled.div<{ displayOnPdp?: boolean }>`
+  margin: 0.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: ${props =>
-    props.displayWithShadow ? theme.color.lightGreyBG : theme.color.white};
-  border: 1px solid
-    ${props => (props.displayWithShadow ? theme.color.lightGreyBG : theme.color.oil)};
+  background-color: ${theme.color.lightGreyBG};
+  border: 1px solid ${theme.color.lightGreyBG};
   border-radius: 0.5rem;
   padding: 0.3rem 1rem 0.4rem;
-  box-shadow: ${props =>
-    props.displayWithShadow ? '0.05rem 0.1rem 0.3rem rgb(0 0 0 / 5%)' : 'none'};
+  box-shadow: 0rem 0.07rem 0.5rem rgb(0 0 0 / 11%);
 
   ${theme.mediaQueries.whenDesktop} {
-    margin: ${props => (props.displayWithShadow ? 0.8 : 0)} 'rem';
+    margin: ${props => (props.displayOnPdp ? 0.8 : 0)} 'rem';
   }
 `;
 
@@ -57,15 +50,13 @@ const IconWrap = styled.span`
   margin-right: 0.875rem;
 `;
 
-const Text = styled.span<{ displayWithShadow?: boolean }>`
+const Text = styled.span`
   margin-top: 0.2rem;
   font-size: 0.75rem;
   line-height: 1rem;
   color: ${theme.color.oil};
-  font-family: ${props =>
-    props.displayWithShadow ? theme.font.bentonRegular.family : theme.font.bentonMedium.family};
-  font-weight: ${props =>
-    props.displayWithShadow ? theme.font.bentonRegular.weight : theme.font.bentonMedium.weight};
+  font-family: ${theme.font.bentonRegular.family};
+  font-weight: ${theme.font.bentonRegular.weight};
   white-space: nowrap;
   overflow: hidden;
 `;
@@ -148,9 +139,9 @@ const renderHighlights = (offer: HighlightsProps) => {
     .slice(0, 6);
 
   return highlights.map(elem => (
-    <Highlight key={elem.type} displayWithShadow={offer.displayWithShadow}>
+    <Highlight key={elem.type} displayOnPdp={offer.displayOnPdp}>
       <IconWrap>{elem.icon}</IconWrap>
-      <Text displayWithShadow={offer.displayWithShadow}>{elem.value}</Text>
+      <Text>{elem.value}</Text>
     </Highlight>
   ));
 };
@@ -165,7 +156,7 @@ export interface HighlightsProps {
   power: number;
   consumption: number;
   preOwners: number;
-  displayWithShadow?: boolean;
+  displayOnPdp?: boolean;
 }
 
 const HighlightsComponent: React.FC<HighlightsProps> = ({
@@ -178,10 +169,10 @@ const HighlightsComponent: React.FC<HighlightsProps> = ({
   power,
   consumption,
   preOwners,
-  displayWithShadow
+  displayOnPdp
 }) => (
-  <HighlightsWrap displayWithShadow={displayWithShadow}>
-    <HighlightsContainer displayWithShadow={displayWithShadow}>
+  <HighlightsWrap displayOnPdp={displayOnPdp}>
+    <HighlightsContainer displayOnPdp={displayOnPdp}>
       {renderHighlights({
         order,
         condition,
@@ -192,7 +183,7 @@ const HighlightsComponent: React.FC<HighlightsProps> = ({
         power,
         consumption,
         preOwners,
-        displayWithShadow
+        displayOnPdp
       })}
     </HighlightsContainer>
   </HighlightsWrap>
