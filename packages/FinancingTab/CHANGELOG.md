@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.12
+
+### Patch Changes
+
+- 7001ec8: Export modalData interface
+
 ## 0.0.11
 
 ### Patch Changes
