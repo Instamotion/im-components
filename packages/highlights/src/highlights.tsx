@@ -42,7 +42,7 @@ const Highlight = styled.div<{ isPdp?: boolean }>`
   box-shadow: 0rem 0.07rem 0.5rem rgb(0 0 0 / 11%);
 
   ${theme.mediaQueries.whenDesktop} {
-    margin: ${props => (props.isPdp ? 0.8 : 0)} 'rem';
+    margin: ${props => (props.isPdp ? 0.8 : 0)}rem;
   }
 `;
 
