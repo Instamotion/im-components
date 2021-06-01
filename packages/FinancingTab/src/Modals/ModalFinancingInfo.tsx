@@ -6,7 +6,7 @@ import Icon from '@im-ui/icon';
 import { IMTheme as theme } from '@im-ui/theme';
 import { IMButton as Button } from '@im-ui/button';
 
-interface ModalData {
+export interface ModalData {
   effectiveInterestRate: number;
   nominalInterestRate: number;
   netLoanAmount: number;
