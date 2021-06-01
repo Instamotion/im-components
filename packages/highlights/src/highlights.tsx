@@ -3,33 +3,33 @@ import styled from 'styled-components';
 import { IMTheme as theme } from '@im-ui/theme';
 import Icon from '@im-ui/icon';
 
-const HighlightsWrap = styled.div<{ isPdp?: boolean }>`
+const HighlightsWrap = styled.div<{ isCheckout?: boolean }>`
   width: 100%;
   ${theme.mediaQueries.whenDesktop} {
     background: ${props =>
-      !props.isPdp
-        ? `linear-gradient(180deg,${theme.color.lightGreyBG} 50%,${theme.color.white} 50%)`
-        : ''};
+      props.isCheckout
+        ? ''
+        : `linear-gradient(180deg,${theme.color.lightGreyBG} 50%,${theme.color.white} 50%)`};
     display: block;
     box-sizing: border-box;
   }
 `;
 
-const HighlightsContainer = styled.div<{ isPdp?: boolean }>`
+const HighlightsContainer = styled.div<{ isCheckout?: boolean }>`
   display: flex;
   flex-direction: row;
-  max-width: ${props => (props.isPdp ? `` : '67.25rem')};
+  max-width: ${props => (props.isCheckout ? `` : '67.25rem')};
   font-size: 1.125rem;
   flex-wrap: wrap;
 
   ${theme.mediaQueries.whenDesktop} {
     margin: auto;
-    justify-content: ${props => (props.isPdp ? `flex-start` : 'space-between')};
-    padding: ${props => (props.isPdp ? `0rem` : '0.4rem 3rem')};
+    justify-content: ${props => (props.isCheckout ? `flex-start` : 'space-between')};
+    padding: ${props => (props.isCheckout ? `0rem` : '0.4rem 3rem')};
   }
 `;
 
-const Highlight = styled.div<{ isPdp?: boolean }>`
+const Highlight = styled.div<{ isCheckout?: boolean }>`
   margin: 0.5rem;
   display: flex;
   flex-direction: row;
@@ -42,7 +42,7 @@ const Highlight = styled.div<{ isPdp?: boolean }>`
   box-shadow: 0rem 0.07rem 0.5rem rgb(0 0 0 / 11%);
 
   ${theme.mediaQueries.whenDesktop} {
-    margin: ${props => (props.isPdp ? 0.8 : 0)}rem;
+    margin: ${props => (props.isCheckout ? 0.8 : 0)}rem;
   }
 `;
 
@@ -139,7 +139,7 @@ const renderHighlights = (offer: HighlightsProps) => {
     .slice(0, 6);
 
   return highlights.map(elem => (
-    <Highlight key={elem.type} isPdp={offer.isPdp}>
+    <Highlight key={elem.type} isCheckout={offer.isCheckout}>
       <IconWrap>{elem.icon}</IconWrap>
       <Text>{elem.value}</Text>
     </Highlight>
@@ -156,7 +156,7 @@ export interface HighlightsProps {
   power: number;
   consumption: number;
   preOwners: number;
-  isPdp?: boolean;
+  isCheckout?: boolean;
 }
 
 const HighlightsComponent: React.FC<HighlightsProps> = ({
@@ -169,10 +169,10 @@ const HighlightsComponent: React.FC<HighlightsProps> = ({
   power,
   consumption,
   preOwners,
-  isPdp
+  isCheckout
 }) => (
-  <HighlightsWrap isPdp={isPdp}>
-    <HighlightsContainer isPdp={isPdp}>
+  <HighlightsWrap isCheckout={isCheckout}>
+    <HighlightsContainer isCheckout={isCheckout}>
       {renderHighlights({
         order,
         condition,
@@ -183,7 +183,7 @@ const HighlightsComponent: React.FC<HighlightsProps> = ({
         power,
         consumption,
         preOwners,
-        isPdp
+        isCheckout
       })}
     </HighlightsContainer>
   </HighlightsWrap>
