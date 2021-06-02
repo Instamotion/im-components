@@ -5,7 +5,9 @@ import { RadioButtonCard } from '../src';
 
 describe('radioButtonCard', () => {
   it('renders', () => {
-    const wrapper = mount(<RadioButtonCard onChange={undefined} value={''} label={''} />);
+    const wrapper = mount(
+      <RadioButtonCard onChange={() => console.log('Test')} value={''} label={''} />
+    );
 
     expect(wrapper).toBeDefined();
   });
