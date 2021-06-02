@@ -11,17 +11,19 @@ export interface RadioButtonCardProps {
   onChange: (value: string) => void;
 }
 
-const FlexColumnContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+const RadioButtonCardWrapper = styled.div`
   background: ${theme.color.white};
   border: 2px solid ${theme.color.secondary};
   border-radius: 0.375rem;
-  padding: 1.5rem;
   cursor: pointer;
 
+  padding: 1.125rem 1rem 1.125rem 1rem;
   > label {
-    margin-left: 2.5rem;
+    margin-left: 0.3rem;
+  }
+
+  ${theme.mediaQueries.whenDesktop} {
+    padding: 1.75rem 1.5rem 1.75rem 1.5rem;
   }
 `;
 
@@ -32,14 +34,14 @@ const RadioButtonCard: React.FC<RadioButtonCardProps> = ({
   checked,
   onChange
 }) => (
-  <FlexColumnContainer
+  <RadioButtonCardWrapper
     onClick={e => {
       e.stopPropagation();
       onChange(value);
     }}
   >
     <RadioButton key={value} label={label} value={value} checked={checked} />
-  </FlexColumnContainer>
+  </RadioButtonCardWrapper>
 );
 
 export default RadioButtonCard;
