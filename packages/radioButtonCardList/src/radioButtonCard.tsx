@@ -38,13 +38,7 @@ const RadioButtonCard: React.FC<RadioButtonCardProps> = ({
       onChange(value);
     }}
   >
-    <RadioButton
-      key={value}
-      label={label}
-      value={value}
-      checked={checked}
-      onChange={() => console.log(value)}
-    />
+    <RadioButton key={value} label={label} value={value} checked={checked} />
   </FlexColumnContainer>
 );
 
