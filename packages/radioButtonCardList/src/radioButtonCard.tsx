@@ -7,13 +7,13 @@ export interface RadioButtonCardProps {
   className?: string;
   checked?: boolean;
   label: JSX.Element | string;
-  value: string;
-  onChange: (value: string) => void;
+  value: any;
+  onChange: (value: any) => void;
 }
 
-const RadioButtonCardWrapper = styled.div`
+const RadioButtonCardWrapper = styled.div<{ checked: boolean }>`
   background: ${theme.color.white};
-  border: 2px solid ${theme.color.secondary};
+  border: 2px solid ${({ checked }) => (checked ? theme.color.secondary : theme.input.border.color)};
   border-radius: 0.375rem;
   cursor: pointer;
 
@@ -39,6 +39,7 @@ const RadioButtonCard: React.FC<RadioButtonCardProps> = ({
       e.stopPropagation();
       onChange(value);
     }}
+    checked={!!checked}
   >
     <RadioButton key={value} label={label} value={value} checked={checked} />
   </RadioButtonCardWrapper>

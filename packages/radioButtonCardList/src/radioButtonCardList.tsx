@@ -10,7 +10,7 @@ interface RadioButtonsProps<T> {
 export interface RadioButtonCardListProps<T> {
   className?: string;
   radioButtons: RadioButtonsProps<T>[];
-  selected: T;
+  value: T;
   onChange: (selected: T) => void;
 }
 const FlexColumnContainer = styled.div`
@@ -22,30 +22,21 @@ const FlexColumnContainer = styled.div`
   }
 `;
 
-function RadioButtonCardList<T>({
+const RadioButtonCardList = <T extends unknown>({
   radioButtons,
-  selected,
+  value,
   onChange
-}: RadioButtonCardListProps<T>): React.ReactElement<RadioButtonCardListProps<T>> {
-  const [selectedOption, setSelectedOption] = useState(selected);
-
-  const handleOnChange = (val: any): void => {
-    setSelectedOption(val);
-    onChange(val);
-  };
-
-  return (
-    <FlexColumnContainer>
-      {radioButtons.map(item => (
-        <RadioButtonCard
-          label={item.label}
-          value={String(item.value)}
-          checked={selectedOption === item.value}
-          onChange={handleOnChange}
-        />
-      ))}
-    </FlexColumnContainer>
-  );
-}
+}: RadioButtonCardListProps<T>): React.ReactElement<RadioButtonCardListProps<T>> => (
+  <FlexColumnContainer>
+    {radioButtons.map(item => (
+      <RadioButtonCard
+        label={item.label}
+        value={item.value}
+        checked={value === item.value}
+        onChange={onChange}
+      />
+    ))}
+  </FlexColumnContainer>
+);
 
 export default RadioButtonCardList;
