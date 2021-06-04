@@ -24,7 +24,7 @@
   "dependencies": {
     "@im-ui/theme": "^2.0.8",
     "@im-ui/utils": "^0.5.5",
-    "@im-ui/radio-button": "^0.2.2"
+    "@im-ui/radio-button": "^0.2.4"
   },
   "devDependencies": {
     "@types/jest": "^24.0.21",
