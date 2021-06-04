@@ -1,5 +1,11 @@
 # @im-ui/highlights
 
+## 0.1.1
+
+### Patch Changes
+
+- 62680be: Right and left padding for mobile on highlights
+
 ## 0.1.0
 
 ### Minor Changes
