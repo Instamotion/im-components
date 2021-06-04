@@ -38,10 +38,11 @@ const Highlight = styled.div<{ isCheckout?: boolean }>`
   background-color: ${theme.color.lightGreyBG};
   border: 1px solid ${theme.color.lightGreyBG};
   border-radius: 0.5rem;
-  padding: 0.3rem 1rem 0.4rem;
+  padding: 0.3rem 0.625rem 0.4rem;
   box-shadow: 0rem 0.07rem 0.5rem rgb(0 0 0 / 11%);
 
   ${theme.mediaQueries.whenDesktop} {
+    padding: 0.3rem 1rem 0.4rem;
     margin: ${props => (props.isCheckout ? 0.8 : 0)}rem;
   }
 `;
