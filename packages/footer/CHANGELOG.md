@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.8.6
+
+### Patch Changes
+
+- 7a6ca59: change experiment schema id for AB testing
+
 ## 2.8.5
 
 ### Patch Changes
