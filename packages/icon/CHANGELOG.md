@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.12
+
+### Patch Changes
+
+- ce71359: add bank icon
+
 ## 0.6.11
 
 ### Patch Changes
