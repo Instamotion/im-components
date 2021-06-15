@@ -1,5 +1,11 @@
 # @im-ui/accordion
 
+## 0.5.1
+
+### Patch Changes
+
+- 5fb1017: add handle click
+
 ## 0.5.0
 
 ### Minor Changes
