@@ -1,5 +1,11 @@
 # @im-ui/accordion
 
+## 0.5.0
+
+### Minor Changes
+
+- b132fb2: add icons to accordion
+
 ## 0.4.4
 
 ### Patch Changes
