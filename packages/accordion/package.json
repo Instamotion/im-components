@@ -33,6 +33,7 @@
     "styled-components": "^4.4.1"
   },
   "dependencies": {
+    "@im-ui/icon": "0.6.12",
     "@im-ui/theme": "2.0.8",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@fortawesome/fontawesome-pro": "^5.13.0",

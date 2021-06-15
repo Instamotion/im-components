@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 import Accordion from '../src';
 import { AccordionItem } from '../src';
+import Icon from '@im-ui/icon';
 
 storiesOf('Accordion', module).add('default', () => {
   const props = {
@@ -14,8 +15,21 @@ storiesOf('Accordion', module).add('default', () => {
   return (
     <Accordion>
       <AccordionItem
+        icon={'newEuro'}
         title={text('The title (title)', 'Section 1 title')}
         open={boolean('Open the section 1 (open)', true)}
+        {...props}
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </AccordionItem>
+      <AccordionItem
+        icon={<Icon icon="newPhone" />}
+        title={text('The title (title)', 'Section 2 title')}
+        open={boolean('Open the section 2 (open)', false)}
         {...props}
       >
         <p>
