@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.8.7
+
+### Patch Changes
+
+- 8d33c83: chenge ab test id
+
 ## 2.8.6
 
 ### Patch Changes
