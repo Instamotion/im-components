@@ -9,13 +9,21 @@ export interface AccordionItemProps {
   icon?: JSX.Element | AvailableIcons;
   title?: JSX.Element | string;
   open?: boolean;
+  clickEvent?: () => void;
 }
 
-const AccordionItem: React.FC<AccordionItemProps> = ({ icon, title, open = false, children }) => {
+const AccordionItem: React.FC<AccordionItemProps> = ({
+  icon,
+  title,
+  open = false,
+  children,
+  clickEvent
+}) => {
   const [isOpen, setIsOpen] = React.useState(open);
 
   const handleClick = (): void => {
     setIsOpen(!isOpen);
+    clickEvent && clickEvent();
   };
 
   const getIcon = () => {
@@ -90,7 +98,7 @@ export const AccordionIcon = styled(FontAwesomeIcon)<{ open: boolean }>`
 `;
 
 export const AccordionItemContent = styled.div`
-  padding: 0 2.25rem 0 0.625rem;
+  padding: 0 2.25rem 1rem 0.625rem;
 `;
 
 export default AccordionItem;
