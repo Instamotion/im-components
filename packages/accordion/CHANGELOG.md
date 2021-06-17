@@ -1,5 +1,11 @@
 # @im-ui/accordion
 
+## 0.5.3
+
+### Patch Changes
+
+- a46e17a: add align
+
 ## 0.5.2
 
 ### Patch Changes
