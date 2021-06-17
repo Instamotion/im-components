@@ -1,8 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { IMTheme as theme } from '@im-ui/theme';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/pro-light-svg-icons';
 import Icon, { AvailableIcons } from '@im-ui/icon';
 
 export interface AccordionItemProps {
@@ -40,7 +38,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
           {getIcon()}
           <AccordionTitle>{!!title && title}</AccordionTitle>
         </IconSection>
-        <AccordionIcon icon={faChevronDown} open={isOpen} />
+        <AccordionIcon icon="chevronRight" open={isOpen} />
       </AccordionHeader>
       {isOpen && <AccordionItemContent>{children}</AccordionItemContent>}
     </AccordionItemWrapper>
@@ -82,9 +80,9 @@ export const AccordionTitle = styled.div`
   font-size: 1rem;
 `;
 
-export const AccordionIcon = styled(FontAwesomeIcon)<{ open: boolean }>`
+export const AccordionIcon = styled(Icon)<{ open: boolean }>`
   user-select: none;
-  transform: rotate(0);
+  transform: rotate(90deg);
   transition: transform 0.3s;
   font-size: 1rem;
   ${theme.mediaQueries.whenDesktop} {
@@ -93,7 +91,7 @@ export const AccordionIcon = styled(FontAwesomeIcon)<{ open: boolean }>`
   ${(props: { open: boolean }) =>
     props.open &&
     css`
-      transform: rotate(-180deg);
+      transform: rotate(-90deg);
     `}
 `;
 
