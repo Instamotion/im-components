@@ -1,5 +1,11 @@
 # @im-ui/accordion
 
+## 0.5.2
+
+### Patch Changes
+
+- eb181a4: replace accordion icon
+
 ## 0.5.1
 
 ### Patch Changes
