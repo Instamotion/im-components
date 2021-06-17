@@ -61,6 +61,7 @@ export const AccordionItemWrapper = styled.div`
 
 export const AccordionHeader = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   cursor: pointer;
   padding: 1rem 2.25rem 1rem 0.625rem;
