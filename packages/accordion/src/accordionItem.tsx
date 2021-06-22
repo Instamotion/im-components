@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled, { css } from 'styled-components';
 import { IMTheme as theme } from '@im-ui/theme';
 import Icon, { AvailableIcons } from '@im-ui/icon';
@@ -24,23 +24,23 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
     clickEvent && clickEvent();
   };
 
-  const getIcon = () => {
+  const leftIcon: JSX.Element | null = useMemo(() => {
     if (typeof icon === 'string') {
       return <Icon icon={icon} color={theme.color.black} />;
     }
-    return icon;
-  };
+    return icon || null;
+  }, [icon]);
 
   return (
     <AccordionItemWrapper>
       <AccordionHeader aria-expanded={isOpen} onClick={handleClick}>
         <IconSection>
-          {getIcon()}
+          {leftIcon}
           <AccordionTitle>{!!title && title}</AccordionTitle>
         </IconSection>
         <AccordionIcon icon="chevronRight" open={isOpen} />
       </AccordionHeader>
-      {isOpen && <AccordionItemContent>{children}</AccordionItemContent>}
+      {isOpen && <AccordionItemContent withIcon={!!leftIcon}>{children}</AccordionItemContent>}
     </AccordionItemWrapper>
   );
 };
@@ -52,6 +52,7 @@ export const AccordionItemWrapper = styled.div`
   font-family: ${theme.font.bentonMedium.family};
   font-weight: ${theme.font.bentonMedium.weight};
   font-size: 0.875rem;
+  line-height: 1.6;
   color: ${theme.color.typography};
 
   &:last-child {
@@ -86,6 +87,11 @@ export const AccordionIcon = styled(Icon)<{ open: boolean }>`
   transform: rotate(90deg);
   transition: transform 0.3s;
   font-size: 1rem;
+
+  svg {
+    font-size: 1rem;
+  }
+
   ${theme.mediaQueries.whenDesktop} {
     font-size: 1.5rem;
   }
@@ -96,8 +102,9 @@ export const AccordionIcon = styled(Icon)<{ open: boolean }>`
     `}
 `;
 
-export const AccordionItemContent = styled.div`
-  padding: 0 2.25rem 1rem 0.625rem;
+export const AccordionItemContent = styled.div<{ withIcon: boolean }>`
+  ${props =>
+    props.withIcon ? 'padding: 0 3.25rem 1rem 2.625rem;' : 'padding: 0 3.25rem 1rem 0.625rem;'}
 `;
 
 export default AccordionItem;
