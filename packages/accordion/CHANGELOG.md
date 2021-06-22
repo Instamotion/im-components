@@ -1,5 +1,11 @@
 # @im-ui/accordion
 
+## 0.5.4
+
+### Patch Changes
+
+- 1423b64: fix small design comments
+
 ## 0.5.3
 
 ### Patch Changes
