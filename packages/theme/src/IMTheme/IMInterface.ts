@@ -86,6 +86,9 @@ export type ColorLibrary = {
   orange: HexColor;
   bermuda: HexColor;
   alabaster: HexColor;
+  turquoise: HexColor;
+  turquoiseText: HexColor;
+  turquoiseOpacity: HexColor;
 };
 
 export type FontSizes = {
@@ -127,6 +130,7 @@ export default interface IMTheme {
     grayscaleDark: Button;
     grayscale: Button;
     outlined: Button;
+    ternary: Button;
   };
   input: {
     border: Border;

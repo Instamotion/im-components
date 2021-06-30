@@ -6,7 +6,8 @@ const AvailableButtonTypes = {
   secondary: 'secondary',
   grayscale: 'grayscale',
   grayscaleDark: 'grayscaleDark',
-  outlined: 'outlined'
+  outlined: 'outlined',
+  ternary: 'ternary'
 };
 
 const AvailableFontSizes = {
