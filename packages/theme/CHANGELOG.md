@@ -1,5 +1,11 @@
 # @im-ui/theme
 
+## 2.0.9
+
+### Patch Changes
+
+- 77a2677: adding ternary button, adding new colors
+
 ## 2.0.8
 
 ### Patch Changes

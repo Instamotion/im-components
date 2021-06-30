@@ -1,5 +1,16 @@
 # @im-ui/button
 
+## 0.7.0
+
+### Minor Changes
+
+- 77a2677: adding ternary button, adding new colors
+
+### Patch Changes
+
+- Updated dependencies [77a2677]
+  - @im-ui/theme@2.0.9
+
 ## 0.6.0
 
 ### Minor Changes

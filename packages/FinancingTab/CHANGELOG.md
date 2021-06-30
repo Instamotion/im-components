@@ -1,5 +1,13 @@
 # @im-ui/financing-tab
 
+## 0.0.13
+
+### Patch Changes
+
+- Updated dependencies [77a2677]
+  - @im-ui/button@0.7.0
+  - @im-ui/theme@2.0.9
+
 ## 0.0.12
 
 ### Patch Changes
