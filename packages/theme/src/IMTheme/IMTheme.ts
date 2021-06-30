@@ -286,7 +286,7 @@ export const imTheme: IMTheme = {
         width: 0
       },
       color: colors.primary,
-      background: 'rgba(110, 196, 206, 0.4)',
+      background: colors.turquoiseOpacity,
       padding: '0.8125rem 3rem',
       font: {
         ...sansSerifFont,
