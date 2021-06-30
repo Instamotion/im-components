@@ -84,7 +84,13 @@ const colors = {
   // turquoise, used in radio buttons, very similar to niagara
   bermuda: '#76DFBF',
   // one more shade of light grey
-  alabaster: '#F7F7F7'
+  alabaster: '#F7F7F7',
+  //turqoise
+  turquoise: '#6EC4CE',
+  //turqoise text
+  turquoiseText: '#29929e',
+  //turqoise opacity
+  turquoiseOpacity: 'rgba(110, 196, 206, 0.4)'
 };
 
 export type IMAvailableColors = keyof typeof colors;
@@ -257,6 +263,30 @@ export const imTheme: IMTheme = {
       },
       color: colors.oil,
       background: colors.white,
+      padding: '0.8125rem 3rem',
+      font: {
+        ...sansSerifFont,
+        size: 1,
+        weight: 600,
+        spacing: 0
+      },
+      hover: {
+        shadow: '0 0.25rem 0.25rem rgba(0, 0 ,0, 0.1)'
+      },
+      active: {
+        shadow: 'inset 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.05);'
+      },
+      disabled: {
+        opacity: 0.5
+      }
+    },
+    ternary: {
+      border: {
+        color: colors.primary,
+        width: 0
+      },
+      color: colors.primary,
+      background: colors.turquoiseOpacity,
       padding: '0.8125rem 3rem',
       font: {
         ...sansSerifFont,

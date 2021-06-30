@@ -71,6 +71,12 @@ storiesOf('Button', module)
           {text('Label', 'Hello World')}
           <Icon icon="bars" />
         </IMButton>
+
+        <div>Ternary:</div>
+        <IMButton buttonType="ternary">
+          {text('Label', 'Hello World')}
+          <Icon icon="bars" />
+        </IMButton>
       </>
     );
   });
