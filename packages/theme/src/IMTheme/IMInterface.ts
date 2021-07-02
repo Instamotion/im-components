@@ -89,6 +89,7 @@ export type ColorLibrary = {
   turquoise: HexColor;
   turquoiseText: HexColor;
   turquoiseOpacity: HexColor;
+  java: HexColor;
 };
 
 export type FontSizes = {
