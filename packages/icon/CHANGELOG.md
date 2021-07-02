@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.13
+
+### Patch Changes
+
+- 3832bf5: FAQ changes and new icon
+
 ## 0.6.12
 
 ### Patch Changes

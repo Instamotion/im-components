@@ -1,5 +1,12 @@
 # @im-ui/accordion
 
+## 0.5.6
+
+### Patch Changes
+
+- Updated dependencies [3832bf5]
+  - @im-ui/icon@0.6.13
+
 ## 0.5.5
 
 ### Patch Changes
