@@ -1609,6 +1609,18 @@ export const Icons = {
         fill="#67259F"
       />
     </IconStyled>
+  ),
+  circleFilled: (props: IconProps) => (
+    <IconStyled viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path
+        d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0Z"
+        fill="#6DC4CD"
+      />
+      <path
+        d="M8.33333 11.5966L13.825 6L15 7.20594L8.33333 14L5 10.603L6.175 9.40552L8.33333 11.5966Z"
+        fill="white"
+      />
+    </IconStyled>
   )
 };
 

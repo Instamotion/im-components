@@ -70,7 +70,7 @@ export interface FaqSection {
 }
 
 export interface FaqProps {
-  sectionTitleText: string;
+  sectionTitleText?: string;
   faqSections: FaqSection[];
   getTrackingEvent?: (n: number | string) => void;
 }
