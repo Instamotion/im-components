@@ -70,18 +70,18 @@ export interface FaqSection {
 }
 
 export interface FaqProps {
-  sectionTitle: string;
+  sectionTitleText: string;
   faqSections: FaqSection[];
   getTrackingEvent?: (n: number | string) => void;
 }
 
 const FAQ: React.FC<FaqProps> = ({
-  sectionTitle = 'Häufige Fragen',
+  sectionTitleText = 'Häufige Fragen',
   getTrackingEvent = () => {},
   faqSections
 }) => (
   <FaqSection>
-    <SectionTitle>{sectionTitle}</SectionTitle>
+    <SectionTitle>{sectionTitleText}</SectionTitle>
     <AccordionWrapper>
       {faqSections &&
         faqSections.length &&
