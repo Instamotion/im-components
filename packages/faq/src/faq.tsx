@@ -65,17 +65,23 @@ const FaqSection = styled.div`
 export interface FaqSection {
   title: string;
   text: string;
+  trackEvent?: string;
   open?: boolean;
 }
 
 export interface FaqProps {
+  sectionTitleText?: string;
   faqSections: FaqSection[];
-  getTrackingEvent?: (n: number) => void;
+  getTrackingEvent?: (n: number | string) => void;
 }
 
-const FAQ: React.FC<FaqProps> = ({ getTrackingEvent = () => {}, faqSections }) => (
+const FAQ: React.FC<FaqProps> = ({
+  sectionTitleText = 'Häufige Fragen',
+  getTrackingEvent = () => {},
+  faqSections
+}) => (
   <FaqSection>
-    <SectionTitle>Häufige Fragen</SectionTitle>
+    <SectionTitle>{sectionTitleText}</SectionTitle>
     <AccordionWrapper>
       {faqSections &&
         faqSections.length &&
@@ -83,10 +89,12 @@ const FAQ: React.FC<FaqProps> = ({ getTrackingEvent = () => {}, faqSections }) =
           <Accordion
             key={`item-${item.title}`}
             title={item.title}
-            getTrackingEvent={() => getTrackingEvent(i + 1)}
+            getTrackingEvent={() =>
+              item.trackEvent ? getTrackingEvent(item.trackEvent) : getTrackingEvent(i + 1)
+            }
             open={item.open ? item.open : false}
           >
-            <p>{item.text}</p>
+            <p dangerouslySetInnerHTML={{ __html: item.text }} />
           </Accordion>
         ))}
     </AccordionWrapper>
