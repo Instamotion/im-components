@@ -90,7 +90,9 @@ const colors = {
   //turqoise text
   turquoiseText: '#29929e',
   //turqoise opacity
-  turquoiseOpacity: 'rgba(110, 196, 206, 0.4)'
+  turquoiseOpacity: 'rgba(110, 196, 206, 0.4)',
+  //java
+  java: '#21939f'
 };
 
 export type IMAvailableColors = keyof typeof colors;
