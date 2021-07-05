@@ -1,5 +1,11 @@
 # @im-ui/theme
 
+## 2.0.10
+
+### Patch Changes
+
+- bb4be54: add new java color
+
 ## 2.0.9
 
 ### Patch Changes
