@@ -1,5 +1,11 @@
 # @im-ui/icon
 
+## 0.6.14
+
+### Patch Changes
+
+- 40a0eff: Changed color of radio check icon
+
 ## 0.6.13
 
 ### Patch Changes
