@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.14
+
+### Patch Changes
+
+- be2f311: Update icon library
+
 ## 0.0.13
 
 ### Patch Changes
