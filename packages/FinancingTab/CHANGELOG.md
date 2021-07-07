@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.15
+
+### Patch Changes
+
+- 7ca3d7a: Update icon version
+
 ## 0.0.14
 
 ### Patch Changes
