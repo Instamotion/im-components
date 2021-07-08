@@ -16,6 +16,9 @@ const RadioButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  label {
+    margin: 0 0 0.4rem;
+  }
 `;
 
 export const RadioButtonLabel = styled.label`
