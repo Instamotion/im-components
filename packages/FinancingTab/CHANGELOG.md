@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.16
+
+### Patch Changes
+
+- 63108a4: Fix spacings
+
 ## 0.0.15
 
 ### Patch Changes
