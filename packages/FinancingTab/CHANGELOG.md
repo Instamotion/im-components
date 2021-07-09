@@ -1,5 +1,11 @@
 # @im-ui/financing-tab
 
+## 0.0.17
+
+### Patch Changes
+
+- 091af98: Fix label priority
+
 ## 0.0.16
 
 ### Patch Changes
