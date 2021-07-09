@@ -1,5 +1,11 @@
 # @im-ui/highlights
 
+## 0.1.2
+
+### Patch Changes
+
+- 6a5dce8: Show both kW and PS in power highlight
+
 ## 0.1.1
 
 ### Patch Changes
