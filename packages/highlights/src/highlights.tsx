@@ -116,7 +116,7 @@ const renderHighlights = (offer: HighlightsProps) => {
       icon: <Icon icon="date" color="primary" />
     },
     power: {
-      value: `${convertKwToPs(offer.power)} PS`,
+      value: `${offer.power} kW (${convertKwToPs(offer.power)} PS)`,
       icon: <Icon icon="newPower" color="primary" style={{ fontSize: '1rem' }} />
     },
     consumption: {
