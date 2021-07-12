@@ -210,7 +210,7 @@ const menus: {
       id: 'default.footer.delivery',
       type: 'item',
       title: <FormattedMessage id="default.footer.delivery" />,
-      link: '/deine-vorteile/so-funktionierts',
+      link: '/zulassung-und-lieferung',
       isHidden: (menuOptions: MenuOptions) => menuOptions.showDeliveryLink !== true
     },
     {
