@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.8.8
+
+### Patch Changes
+
+- 26c34ce: Update delivery link
+
 ## 2.8.7
 
 ### Patch Changes
