@@ -1,5 +1,11 @@
 # @im-ui/footer
 
+## 2.8.9
+
+### Patch Changes
+
+- 17c737c: Force update because of npm problems
+
 ## 2.8.8
 
 ### Patch Changes
